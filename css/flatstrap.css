@@ -230,6 +230,7 @@
 .icon_world:before {
   content: "\e02f"; }
 
+/*$bg-color: #f0f0f0;*/
 /* line 1, ../scss/flatstrap/_base.scss */
 html {
   font-family: "Open Sans", "Helvetica Neue"; }
@@ -705,6 +706,30 @@ a.label:hover, a.label:focus {
   margin: 0 9px;
   border-left: 1px solid #38393a; }
 
+/* line 125, ../scss/flatstrap/_navbar.scss */
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0;
+  /*remove 18px margin for default navbar*/ }
+
+/* line 134, ../scss/flatstrap/_navbar.scss */
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+  /*remove 18px margin for default navbar*/ }
+
+/* line 143, ../scss/flatstrap/_navbar.scss */
+.navbar-fixed-top {
+  top: 0; }
+
+/* line 148, ../scss/flatstrap/_navbar.scss */
+.navbar-fixed-bottom {
+  bottom: 0; }
+
 /*------------------------------------*\
     $VERTICAL NAVBAR
 \*------------------------------------*/
@@ -755,3 +780,125 @@ a.label:hover, a.label:focus {
 /* line 50, ../scss/flatstrap/_vrt_navbar.scss */
 .secundary-navbar {
   top: 47px; }
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/**
+ * Basic textfield structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/flatstrap/_forms.scss */
+form {
+  margin: 0 0 20px; }
+
+/* line 15, ../scss/flatstrap/_forms.scss */
+label {
+  display: block;
+  margin-bottom: 5px; }
+
+/* line 36, ../scss/flatstrap/_forms.scss */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #34495e;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  vertical-align: middle; }
+
+/* line 49, ../scss/flatstrap/_forms.scss */
+textarea {
+  height: auto; }
+
+/* line 69, ../scss/flatstrap/_forms.scss */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: white;
+  border: 1px solid #cccccc;
+  /*Focus state*/ }
+  /* line 74, ../scss/flatstrap/_forms.scss */
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus {
+    border-color: rgba(52, 152, 219, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-transition: border 0.2s linear;
+    -moz-transition: border 0.2s linear;
+    -o-transition: border 0.2s linear;
+    transition: border 0.2s linear; }
+
+/* line 83, ../scss/flatstrap/_forms.scss */
+.input-mini {
+  width: 60px; }
+
+/* line 87, ../scss/flatstrap/_forms.scss */
+.input-small {
+  width: 90px; }
+
+/* line 91, ../scss/flatstrap/_forms.scss */
+.input-medium {
+  width: 150px; }
+
+/* line 95, ../scss/flatstrap/_forms.scss */
+.input-large {
+  width: 210px; }
+
+/* line 99, ../scss/flatstrap/_forms.scss */
+.input-xlarge {
+  width: 270px; }
+
+/* line 103, ../scss/flatstrap/_forms.scss */
+.input-xxlarge {
+  width: 530px; }
