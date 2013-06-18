@@ -1,0 +1,328 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext);
+/* line 2, ../scss/flatstrap/_helpers.scss */
+.pull-right {
+  float: right; }
+
+/* line 6, ../scss/flatstrap/_helpers.scss */
+.pull-left {
+  float: left; }
+
+/* line 11, ../scss/flatstrap/_helpers.scss */
+clearfix {
+  *zoom: 1; }
+  /* line 14, ../scss/flatstrap/_helpers.scss */
+  clearfix:before, clearfix:after {
+    display: table;
+    content: ""; }
+  /* line 19, ../scss/flatstrap/_helpers.scss */
+  clearfix:after {
+    clear: both; }
+
+/* line 1, ../scss/flatstrap/_base.scss */
+html {
+  font-family: "Open Sans", "Helvetica Neue"; }
+
+/* line 5, ../scss/flatstrap/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; }
+
+/* line 9, ../scss/flatstrap/_base.scss */
+a {
+  text-decoration: none; }
+
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/flatstrap/_buttons.scss */
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #FFF;
+  background-color: #7f8c8d;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  margin: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px; }
+  /* line 26, ../scss/flatstrap/_buttons.scss */
+  .btn:hover, .btn:focus {
+    zoom: 1;
+    text-decoration: none;
+    background: #95a5a6; }
+  /* line 32, ../scss/flatstrap/_buttons.scss */
+  .btn.disabled, .btn[disabled] {
+    cursor: default;
+    background-color: #7f8c8d;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+    opacity: 0.65; }
+  /* line 38, ../scss/flatstrap/_buttons.scss */
+  .btn.active, .btn:active {
+    outline: 0; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-primary {
+  background-color: #2980b9; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: #3498db; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-primary.disabled, .btn-primary[disabled] {
+    background-color: #2980b9; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-success {
+  background-color: #27ae60; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-success:hover, .btn-success:focus {
+    background-color: #2ecc71; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-success.disabled, .btn-success[disabled] {
+    background-color: #27ae60; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-danger {
+  background-color: #c0392b; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-danger:hover, .btn-danger:focus {
+    background-color: #e74c3c; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-danger.disabled, .btn-danger[disabled] {
+    background-color: #c0392b; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-warning {
+  background-color: #f39c12; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-warning:hover, .btn-warning:focus {
+    background-color: #f1c40f; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-warning.disabled, .btn-warning[disabled] {
+    background-color: #f39c12; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-inverse {
+  background-color: #2c3e50; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-inverse:hover, .btn-inverse:focus {
+    background-color: #34495e; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-inverse.disabled, .btn-inverse[disabled] {
+    background-color: #2c3e50; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-info {
+  background-color: #16a085; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-info:hover, .btn-info:focus {
+    background-color: #1abc9c; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-info.disabled, .btn-info[disabled] {
+    background-color: #16a085; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-default {
+  background-color: #7f8c8d; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-default:hover, .btn-default:focus {
+    background-color: #95a5a6; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-default.disabled, .btn-default[disabled] {
+    background-color: #7f8c8d; }
+
+/* line 45, ../scss/flatstrap/_buttons.scss */
+.btn-funky {
+  background-color: #8e44ad; }
+  /* line 48, ../scss/flatstrap/_buttons.scss */
+  .btn-funky:hover, .btn-funky:focus {
+    background-color: #9b59b6; }
+  /* line 52, ../scss/flatstrap/_buttons.scss */
+  .btn-funky.disabled, .btn-funky[disabled] {
+    background-color: #8e44ad; }
+
+/* line 60, ../scss/flatstrap/_buttons.scss */
+.btn-large {
+  padding: 11px 19px;
+  font-size: 20px; }
+
+/* line 65, ../scss/flatstrap/_buttons.scss */
+.btn-small {
+  padding: 2px 10px;
+  font-size: 13.6px; }
+
+/* line 70, ../scss/flatstrap/_buttons.scss */
+.btn-mini {
+  padding: 0 6px;
+  font-size: 12px; }
+
+/* line 75, ../scss/flatstrap/_buttons.scss */
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+/* line 83, ../scss/flatstrap/_buttons.scss */
+.btn-block + .btn-block {
+  margin-top: 5px; }
+
+/*------------------------------------*\
+    $LABELS
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/flatstrap/_labels.scss */
+.label, .badge {
+  display: inline-block;
+  padding: 2px 4px;
+  font-size: 13.536px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #FFF;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background: #95a5a6; }
+
+/* line 24, ../scss/flatstrap/_labels.scss */
+.badge {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  padding: 5px 8px; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-primary, .badge-primary {
+  background-color: #2980b9; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-success, .badge-success {
+  background-color: #27ae60; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-danger, .badge-danger {
+  background-color: #c0392b; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-warning, .badge-warning {
+  background-color: #f39c12; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-inverse, .badge-inverse {
+  background-color: #2c3e50; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-info, .badge-info {
+  background-color: #16a085; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-default, .badge-default {
+  background-color: #7f8c8d; }
+
+/* line 31, ../scss/flatstrap/_labels.scss */
+.label-funky, .badge-funky {
+  background-color: #8e44ad; }
+
+/* line 38, ../scss/flatstrap/_labels.scss */
+a.label:hover, a.label:focus {
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer; }
+
+/*------------------------------------*\
+    $ALERTS
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/flatstrap/_alerts.scss */
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  background-color: #f1c40f;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  color: #d38305;
+  font-size: 16px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); }
+  /* line 19, ../scss/flatstrap/_alerts.scss */
+  .alert .header, .alert strong {
+    color: #cc6633;
+    font-weight: 600;
+    font-size: 16px; }
+  /* line 25, ../scss/flatstrap/_alerts.scss */
+  .alert .header {
+    margin: 0; }
+  /* line 29, ../scss/flatstrap/_alerts.scss */
+  .alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: 20px;
+    color: #f39c12;
+    float: right;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600; }
+
+/* line 44, ../scss/flatstrap/_alerts.scss */
+.alert-success {
+  background-color: #2ecc71;
+  color: #006633; }
+  /* line 48, ../scss/flatstrap/_alerts.scss */
+  .alert-success .header {
+    color: #006633; }
+  /* line 52, ../scss/flatstrap/_alerts.scss */
+  .alert-success .close {
+    color: #27ae60; }
+
+/* line 57, ../scss/flatstrap/_alerts.scss */
+.alert-info {
+  background-color: #3498db;
+  color: #195999; }
+  /* line 61, ../scss/flatstrap/_alerts.scss */
+  .alert-info .header, .alert-info strong {
+    color: #195999; }
+  /* line 65, ../scss/flatstrap/_alerts.scss */
+  .alert-info .close {
+    color: #2980b9; }
+
+/* line 70, ../scss/flatstrap/_alerts.scss */
+.alert-danger {
+  background-color: #e74c3c;
+  color: #993333; }
+  /* line 74, ../scss/flatstrap/_alerts.scss */
+  .alert-danger .header, .alert-danger strong {
+    color: #993333; }
+  /* line 78, ../scss/flatstrap/_alerts.scss */
+  .alert-danger .close {
+    color: #c0392b; }
