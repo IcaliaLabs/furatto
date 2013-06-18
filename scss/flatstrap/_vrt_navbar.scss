@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $VERTICAL NAVBAR
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+.vrt-navbar {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: $vrt-navbar-background;
+
+    li {
+      a {
+        display: block;
+        font-size: 20px;
+        height: $vrt-navbar-height;
+        width: $vrt-navbar-width;
+        line-height: $vrt-navbar-lineheight;
+        text-align: center;
+        color: #999;
+        position: relative;
+        border-bottom: 1px solid rgba($vrt-navbar-border, 0.05);
+        @include single-transition(background, 0.1s, ease-in-out);
+      }
+    }
+}
+
+.vrt-navbar li:hover {
+    background: $vrt-navbar-links-bg;
+
+    a {
+      color: $vrt-navbar-links-color;
+    }
+}
+
+/* class for current item */
+.vrt-navbar li.active {
+    border-right: 3px solid $vrt-navbar-links-bg;
+}
+
+.secundary-navbar {
+  top: $navbar-height + 7;
+}
