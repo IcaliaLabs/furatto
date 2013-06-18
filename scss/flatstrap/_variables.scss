@@ -3,6 +3,7 @@
 //----------------------------------------------------
 
 //Body
+/*$bg-color: #f0f0f0;*/
 $bg-color: #ebe7df;
 
 // Fonts
@@ -97,3 +98,10 @@ $vrt-navbar-lineheight: $vrt-navbar-width;
 $vrt-navbar-border: #000;
 $vrt-navbar-links-bg: $blue;
 $vrt-navbar-links-color: #FFF;
+
+//Inputs
+$input-color: #34495e;
+$input-border-radius: 2px;
+$input-bg: #FFF;
+$input-border-color: #CCC;
+$input-focus-color: $blue;
