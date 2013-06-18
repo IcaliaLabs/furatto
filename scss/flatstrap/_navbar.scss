@@ -120,3 +120,31 @@
   margin: 0 9px;
   border-left: 1px solid $navbar-border;
 }
+
+//Static Navbar
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0; /*remove 18px margin for default navbar*/
+}
+
+//Fixed navbar
+
+//Navbar fixed top/bottom shared styles
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0; /*remove 18px margin for default navbar*/
+}
+
+//Fixed to top
+.navbar-fixed-top {
+  top: 0;
+}
+
+//Fixed to bottom
+.navbar-fixed-bottom {
+  bottom: 0;
+}
