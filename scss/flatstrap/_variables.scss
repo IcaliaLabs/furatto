@@ -2,6 +2,9 @@
 // Variables
 //----------------------------------------------------
 
+//Body
+$bg-color: #ebe7df;
+
 // Fonts
 $font-family: 'Open Sans', 'Helvetica Neue';
 $base-font-size: 16px;
@@ -31,6 +34,7 @@ $blue: #3498DB;
 //Grays
 $dark-gray: #7F8C8D;
 $gray: #95a5a6;
+$light-gray: #ecf0f1;
 
 //Purples
 $purple: #9B59B6;
@@ -77,3 +81,10 @@ $info-header-color: #195999;
 $danger-alert-color: #993333;
 $danger-header-color: #993333;
 
+//Navbar
+$navbar-height: 40px;
+$navbar-bg-color: #232323;
+$navbar-border: #38393a;
+$navbar-text: #eaeaea;
+$navbar-brand-color: $navbar-text;
+$navbar-link-color-active: #FFF;

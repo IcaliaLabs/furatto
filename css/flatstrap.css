@@ -8,17 +8,6 @@
 .pull-left {
   float: left; }
 
-/* line 11, ../scss/flatstrap/_helpers.scss */
-clearfix {
-  *zoom: 1; }
-  /* line 14, ../scss/flatstrap/_helpers.scss */
-  clearfix:before, clearfix:after {
-    display: table;
-    content: ""; }
-  /* line 19, ../scss/flatstrap/_helpers.scss */
-  clearfix:after {
-    clear: both; }
-
 /* line 1, ../scss/flatstrap/_base.scss */
 html {
   font-family: "Open Sans", "Helvetica Neue"; }
@@ -30,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
 /* line 9, ../scss/flatstrap/_base.scss */
 a {
   text-decoration: none; }
+
+/* line 13, ../scss/flatstrap/_base.scss */
+html, body {
+  background-color: #ebe7df; }
 
 /*------------------------------------*\
     $BUTTONS
@@ -326,3 +319,162 @@ a.label:hover, a.label:focus {
   /* line 78, ../scss/flatstrap/_alerts.scss */
   .alert-danger .close {
     color: #c0392b; }
+
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/flatstrap/_nav.scss */
+.nav {
+  margin-left: 0;
+  margin-bottom: 20px;
+  list-style: none; }
+
+/* line 17, ../scss/flatstrap/_nav.scss */
+.nav > li > a {
+  display: block; }
+
+/* line 22, ../scss/flatstrap/_nav.scss */
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none; }
+
+/* line 28, ../scss/flatstrap/_nav.scss */
+.nav > li > a > img {
+  max-width: none; }
+
+/* line 33, ../scss/flatstrap/_nav.scss */
+.nav > .pull-right {
+  float: right; }
+
+/* line 41, ../scss/flatstrap/_nav.scss */
+.nav > .disabled > a {
+  color: #ecf0f1; }
+
+/* line 46, ../scss/flatstrap/_nav.scss */
+.nav > .disabled > a:hover,
+.nav > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: default; }
+
+/*------------------------------------*\
+    $NAVBAR
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/flatstrap/_navbar.scss */
+.navbar {
+  overflow: visible;
+  margin-bottom: 20px;
+  /*Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar*/
+  *position: relative;
+  *z-index: 2; }
+
+/* line 21, ../scss/flatstrap/_navbar.scss */
+.navbar-inner {
+  min-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #232323;
+  /*Prevent floats from breaking the navbar*/
+  *zoom: 1; }
+  /* line 14, ../scss/flatstrap/_helpers.scss */
+  .navbar-inner:before, .navbar-inner:after {
+    display: table;
+    content: ""; }
+  /* line 19, ../scss/flatstrap/_helpers.scss */
+  .navbar-inner:after {
+    clear: both; }
+
+/* line 32, ../scss/flatstrap/_navbar.scss */
+.nav-collapse.collapse {
+  height: auto;
+  overflow: visible; }
+
+/* line 39, ../scss/flatstrap/_navbar.scss */
+.navbar .container {
+  width: auto; }
+
+/* line 43, ../scss/flatstrap/_navbar.scss */
+.navbar .brand {
+  float: left;
+  display: block;
+  /*Vertically center the text given $navbar-height*/
+  padding: 10px 20px 10px;
+  margin-left: -20px;
+  /*negative indent to left-align the text down the page*/
+  font-size: 20px;
+  font-weight: 200;
+  color: #eaeaea; }
+  /* line 56, ../scss/flatstrap/_navbar.scss */
+  .navbar .brand:hover, .navbar .brand:focus {
+    text-decoration: none; }
+
+/* line 62, ../scss/flatstrap/_navbar.scss */
+.navbar-text {
+  margin-bottom: 0;
+  line-height: 40px;
+  color: #eaeaea; }
+
+/* line 69, ../scss/flatstrap/_navbar.scss */
+.navbar .nav > li > a {
+  float: none;
+  /*Vertically center the text given @navbarHeight*/
+  padding: 10px 15px 10px;
+  color: #eaeaea;
+  text-decoration: none; }
+
+/* line 80, ../scss/flatstrap/_navbar.scss */
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: white;
+  text-decoration: none;
+  border-top: 2px solid #2ecc71; }
+  /* line 85, ../scss/flatstrap/_navbar.scss */
+  .navbar .nav > .active > a:after,
+  .navbar .nav > .active > a:hover:after,
+  .navbar .nav > .active > a:focus:after {
+    content: '';
+    position: relative;
+    width: 0;
+    height: 0;
+    left: -22px;
+    top: -6px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #2ecc71; }
+
+/* line 99, ../scss/flatstrap/_navbar.scss */
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0; }
+
+/* line 108, ../scss/flatstrap/_navbar.scss */
+.navbar .nav.pull-right {
+  float: right;
+  /*redeclare due to specificity*/
+  margin-right: 0;
+  /*remove margin on float right nav*/ }
+
+/* line 113, ../scss/flatstrap/_navbar.scss */
+.navbar .nav > li {
+  float: left; }
+
+/* line 118, ../scss/flatstrap/_navbar.scss */
+.divider-vertical {
+  height: 47px;
+  /*Fix for the navbar*/
+  margin: 0 9px;
+  border-left: 1px solid #38393a; }

@@ -8,7 +8,7 @@
 }
 
 //Clears the float from any element
-clearfix {
+@mixin clearfix {
   *zoom: 1;
 
   &:before, &:after {
