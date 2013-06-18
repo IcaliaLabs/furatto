@@ -1,0 +1,28 @@
+//Make sure the charset is set correctly
+@charset "UTF-8";
+
+//Compass Utilities
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
+@import "compass/css3/border-radius";
+
+//Helpers
+@import "flatstrap/helpers";
+
+//Import the font file for the site
+@import "flatstrap/fonts";
+
+//Variables
+@import "flatstrap/variables";
+
+//General css for layout
+@import 'flatstrap/base';
+
+//Buttons
+@import 'flatstrap/buttons';
+
+//Labels
+@import 'flatstrap/labels';
+
+//Alerts
+@import 'flatstrap/alerts';
