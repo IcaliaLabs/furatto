@@ -902,3 +902,83 @@ input[type="color"],
 /* line 103, ../scss/flatstrap/_forms.scss */
 .input-xxlarge {
   width: 530px; }
+
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 11, ../scss/flatstrap/_tables.scss */
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none; }
+
+/* line 19, ../scss/flatstrap/_tables.scss */
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  /*Cells */ }
+  /* line 24, ../scss/flatstrap/_tables.scss */
+  .table th, .table td {
+    padding: 10px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #d2d2d2; }
+  /* line 32, ../scss/flatstrap/_tables.scss */
+  .table th {
+    font-weight: bold;
+    border-bottom: 1px solid #d2d2d2; }
+  /* line 37, ../scss/flatstrap/_tables.scss */
+  .table thead th {
+    vertical-align: bottom; }
+  /* line 47, ../scss/flatstrap/_tables.scss */
+  .table caption + thead tr:first-child th,
+  .table caption + thead tr:first-child td,
+  .table colgroup + thead tr:first-child th,
+  .table colgroup + thead tr:first-child td,
+  .table thead:first-child tr:first-child th,
+  .table thead:first-child tr:first-child td {
+    border-top: 0; }
+  /* line 52, ../scss/flatstrap/_tables.scss */
+  .table tbody + tbody {
+    border-top: 2px solid #d2d2d2; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .primary {
+    background-color: #3498db; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .success {
+    background-color: #2ecc71; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .danger {
+    background-color: #e74c3c; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .warning {
+    background-color: #f1c40f; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .inverse {
+    background-color: #34495e; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .info {
+    background-color: #1abc9c; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .default {
+    background-color: #95a5a6; }
+  /* line 58, ../scss/flatstrap/_tables.scss */
+  .table .funky {
+    background-color: #9b59b6; }
+
+/* line 66, ../scss/flatstrap/_tables.scss */
+.table-condensed th, .table-condensed td {
+  padding: 4px 5px; }
+
+/* line 75, ../scss/flatstrap/_tables.scss */
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9; }
