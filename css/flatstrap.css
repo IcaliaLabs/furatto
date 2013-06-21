@@ -9,8 +9,20 @@
   float: left; }
 
 @font-face {
+  font-family: 'MeteoconsRegular';
+  src: url("../fonts/meteocons-webfont.eot");
+  src: url("../fonts/meteocons-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/meteocons-webfont.woff") format("woff"), url("../fonts/meteocons-webfont.ttf") format("truetype"), url("../fonts/meteocons-webfont.svg#MeteoconsRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 14, ../scss/flatstrap/_fonts.scss */
+.meteocon:before {
+  font-family: 'MeteoconsRegular';
+  content: attr(data-meteocon); }
+
+@font-face {
   font-family: 'linecons';
-  src: url("fonts/linecons.eot"); }
+  src: url("../fonts/linecons.eot"); }
 
 @font-face {
   font-family: 'linecons';
@@ -19,7 +31,7 @@
   font-style: normal; }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 16, ../scss/flatstrap/_fonts.scss */
+/* line 32, ../scss/flatstrap/_fonts.scss */
 [data-icon]:before {
   font-family: 'linecons';
   content: attr(data-icon);
@@ -29,7 +41,7 @@
   -webkit-font-smoothing: antialiased; }
 
 /* Use the following CSS code if you want to have a class per icon */
-/* line 26, ../scss/flatstrap/_fonts.scss */
+/* line 42, ../scss/flatstrap/_fonts.scss */
 [class^="icon_"]:before, [class*=" icon_"]:before {
   font-family: 'linecons';
   font-style: normal;
@@ -38,195 +50,195 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
-/* line 35, ../scss/flatstrap/_fonts.scss */
+/* line 51, ../scss/flatstrap/_fonts.scss */
 .icon_heart:before {
   content: "\e000"; }
 
-/* line 38, ../scss/flatstrap/_fonts.scss */
+/* line 54, ../scss/flatstrap/_fonts.scss */
 .icon_cloud:before {
   content: "\e001"; }
 
-/* line 41, ../scss/flatstrap/_fonts.scss */
+/* line 57, ../scss/flatstrap/_fonts.scss */
 .icon_star:before {
   content: "\e002"; }
 
-/* line 44, ../scss/flatstrap/_fonts.scss */
+/* line 60, ../scss/flatstrap/_fonts.scss */
 .icon_tv:before {
   content: "\e003"; }
 
-/* line 47, ../scss/flatstrap/_fonts.scss */
+/* line 63, ../scss/flatstrap/_fonts.scss */
 .icon_sound:before {
   content: "\e004"; }
 
-/* line 50, ../scss/flatstrap/_fonts.scss */
+/* line 66, ../scss/flatstrap/_fonts.scss */
 .icon_video:before {
   content: "\e005"; }
 
-/* line 53, ../scss/flatstrap/_fonts.scss */
+/* line 69, ../scss/flatstrap/_fonts.scss */
 .icon_trash:before {
   content: "\e006"; }
 
-/* line 56, ../scss/flatstrap/_fonts.scss */
+/* line 72, ../scss/flatstrap/_fonts.scss */
 .icon_user:before {
   content: "\e007"; }
 
-/* line 59, ../scss/flatstrap/_fonts.scss */
+/* line 75, ../scss/flatstrap/_fonts.scss */
 .icon_key:before {
   content: "\e008"; }
 
-/* line 62, ../scss/flatstrap/_fonts.scss */
+/* line 78, ../scss/flatstrap/_fonts.scss */
 .icon_search:before {
   content: "\e009"; }
 
-/* line 65, ../scss/flatstrap/_fonts.scss */
+/* line 81, ../scss/flatstrap/_fonts.scss */
 .icon_settings:before {
   content: "\e00a"; }
 
-/* line 68, ../scss/flatstrap/_fonts.scss */
+/* line 84, ../scss/flatstrap/_fonts.scss */
 .icon_camera:before {
   content: "\e00b"; }
 
-/* line 71, ../scss/flatstrap/_fonts.scss */
+/* line 87, ../scss/flatstrap/_fonts.scss */
 .icon_tag:before {
   content: "\e00c"; }
 
-/* line 74, ../scss/flatstrap/_fonts.scss */
+/* line 90, ../scss/flatstrap/_fonts.scss */
 .icon_lock:before {
   content: "\e00d"; }
 
-/* line 77, ../scss/flatstrap/_fonts.scss */
+/* line 93, ../scss/flatstrap/_fonts.scss */
 .icon_bulb:before {
   content: "\e00e"; }
 
-/* line 80, ../scss/flatstrap/_fonts.scss */
+/* line 96, ../scss/flatstrap/_fonts.scss */
 .icon_pen:before {
   content: "\e00f"; }
 
-/* line 83, ../scss/flatstrap/_fonts.scss */
+/* line 99, ../scss/flatstrap/_fonts.scss */
 .icon_diamond:before {
   content: "\e010"; }
 
-/* line 86, ../scss/flatstrap/_fonts.scss */
+/* line 102, ../scss/flatstrap/_fonts.scss */
 .icon_display:before {
   content: "\e011"; }
 
-/* line 89, ../scss/flatstrap/_fonts.scss */
+/* line 105, ../scss/flatstrap/_fonts.scss */
 .icon_location:before {
   content: "\e012"; }
 
-/* line 92, ../scss/flatstrap/_fonts.scss */
+/* line 108, ../scss/flatstrap/_fonts.scss */
 .icon_eye:before {
   content: "\e013"; }
 
-/* line 95, ../scss/flatstrap/_fonts.scss */
+/* line 111, ../scss/flatstrap/_fonts.scss */
 .icon_bubble:before {
   content: "\e014"; }
 
-/* line 98, ../scss/flatstrap/_fonts.scss */
+/* line 114, ../scss/flatstrap/_fonts.scss */
 .icon_stack:before {
   content: "\e015"; }
 
-/* line 101, ../scss/flatstrap/_fonts.scss */
+/* line 117, ../scss/flatstrap/_fonts.scss */
 .icon_cup:before {
   content: "\e016"; }
 
-/* line 104, ../scss/flatstrap/_fonts.scss */
+/* line 120, ../scss/flatstrap/_fonts.scss */
 .icon_phone:before {
   content: "\e017"; }
 
-/* line 107, ../scss/flatstrap/_fonts.scss */
+/* line 123, ../scss/flatstrap/_fonts.scss */
 .icon_news:before {
   content: "\e018"; }
 
-/* line 110, ../scss/flatstrap/_fonts.scss */
+/* line 126, ../scss/flatstrap/_fonts.scss */
 .icon_mail:before {
   content: "\e019"; }
 
-/* line 113, ../scss/flatstrap/_fonts.scss */
+/* line 129, ../scss/flatstrap/_fonts.scss */
 .icon_like:before {
   content: "\e01a"; }
 
-/* line 116, ../scss/flatstrap/_fonts.scss */
+/* line 132, ../scss/flatstrap/_fonts.scss */
 .icon_photo:before {
   content: "\e01b"; }
 
-/* line 119, ../scss/flatstrap/_fonts.scss */
+/* line 135, ../scss/flatstrap/_fonts.scss */
 .icon_note:before {
   content: "\e01c"; }
 
-/* line 122, ../scss/flatstrap/_fonts.scss */
+/* line 138, ../scss/flatstrap/_fonts.scss */
 .icon_clock:before {
   content: "\e01d"; }
 
-/* line 125, ../scss/flatstrap/_fonts.scss */
+/* line 141, ../scss/flatstrap/_fonts.scss */
 .icon_paperplane:before {
   content: "\e01e"; }
 
-/* line 128, ../scss/flatstrap/_fonts.scss */
+/* line 144, ../scss/flatstrap/_fonts.scss */
 .icon_params:before {
   content: "\e01f"; }
 
-/* line 131, ../scss/flatstrap/_fonts.scss */
+/* line 147, ../scss/flatstrap/_fonts.scss */
 .icon_banknote:before {
   content: "\e020"; }
 
-/* line 134, ../scss/flatstrap/_fonts.scss */
+/* line 150, ../scss/flatstrap/_fonts.scss */
 .icon_data:before {
   content: "\e021"; }
 
-/* line 137, ../scss/flatstrap/_fonts.scss */
+/* line 153, ../scss/flatstrap/_fonts.scss */
 .icon_music:before {
   content: "\e022"; }
 
-/* line 140, ../scss/flatstrap/_fonts.scss */
+/* line 156, ../scss/flatstrap/_fonts.scss */
 .icon_megaphone:before {
   content: "\e023"; }
 
-/* line 143, ../scss/flatstrap/_fonts.scss */
+/* line 159, ../scss/flatstrap/_fonts.scss */
 .icon_study:before {
   content: "\e024"; }
 
-/* line 146, ../scss/flatstrap/_fonts.scss */
+/* line 162, ../scss/flatstrap/_fonts.scss */
 .icon_lab:before {
   content: "\e025"; }
 
-/* line 149, ../scss/flatstrap/_fonts.scss */
+/* line 165, ../scss/flatstrap/_fonts.scss */
 .icon_food:before {
   content: "\e026"; }
 
-/* line 152, ../scss/flatstrap/_fonts.scss */
+/* line 168, ../scss/flatstrap/_fonts.scss */
 .icon_t-shirt:before {
   content: "\e027"; }
 
-/* line 155, ../scss/flatstrap/_fonts.scss */
+/* line 171, ../scss/flatstrap/_fonts.scss */
 .icon_fire:before {
   content: "\e028"; }
 
-/* line 158, ../scss/flatstrap/_fonts.scss */
+/* line 174, ../scss/flatstrap/_fonts.scss */
 .icon_clip:before {
   content: "\e029"; }
 
-/* line 161, ../scss/flatstrap/_fonts.scss */
+/* line 177, ../scss/flatstrap/_fonts.scss */
 .icon_shop:before {
   content: "\e02a"; }
 
-/* line 164, ../scss/flatstrap/_fonts.scss */
+/* line 180, ../scss/flatstrap/_fonts.scss */
 .icon_calendar:before {
   content: "\e02b"; }
 
-/* line 167, ../scss/flatstrap/_fonts.scss */
+/* line 183, ../scss/flatstrap/_fonts.scss */
 .icon_vallet:before {
   content: "\e02c"; }
 
-/* line 170, ../scss/flatstrap/_fonts.scss */
+/* line 186, ../scss/flatstrap/_fonts.scss */
 .icon_vynil:before {
   content: "\e02d"; }
 
-/* line 173, ../scss/flatstrap/_fonts.scss */
+/* line 189, ../scss/flatstrap/_fonts.scss */
 .icon_truck:before {
   content: "\e02e"; }
 
-/* line 176, ../scss/flatstrap/_fonts.scss */
+/* line 192, ../scss/flatstrap/_fonts.scss */
 .icon_world:before {
   content: "\e02f"; }
 
@@ -604,8 +616,11 @@ a.label:hover, a.label:focus {
   /*Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar*/
   *position: relative;
   *z-index: 2; }
+  /* line 14, ../scss/flatstrap/_navbar.scss */
+  .navbar .menu-trigger {
+    display: none; }
 
-/* line 21, ../scss/flatstrap/_navbar.scss */
+/* line 25, ../scss/flatstrap/_navbar.scss */
 .navbar-inner {
   min-height: 40px;
   padding-left: 20px;
@@ -621,19 +636,24 @@ a.label:hover, a.label:focus {
   .navbar-inner:after {
     clear: both; }
 
-/* line 32, ../scss/flatstrap/_navbar.scss */
+/* line 36, ../scss/flatstrap/_navbar.scss */
 .nav-collapse.collapse {
   height: auto;
   overflow: visible; }
 
-/* line 39, ../scss/flatstrap/_navbar.scss */
+/* line 43, ../scss/flatstrap/_navbar.scss */
 .navbar .container {
   width: auto; }
 
-/* line 43, ../scss/flatstrap/_navbar.scss */
+/* line 47, ../scss/flatstrap/_navbar.scss */
+.navbar .nav {
+  padding-left: 0px; }
+
+/* line 51, ../scss/flatstrap/_navbar.scss */
 .navbar .brand {
   float: left;
   display: block;
+  margin-right: 20px;
   /*Vertically center the text given $navbar-height*/
   padding: 10px 20px 10px;
   margin-left: -20px;
@@ -641,17 +661,17 @@ a.label:hover, a.label:focus {
   font-size: 20px;
   font-weight: 200;
   color: #eaeaea; }
-  /* line 56, ../scss/flatstrap/_navbar.scss */
+  /* line 65, ../scss/flatstrap/_navbar.scss */
   .navbar .brand:hover, .navbar .brand:focus {
     text-decoration: none; }
 
-/* line 62, ../scss/flatstrap/_navbar.scss */
+/* line 71, ../scss/flatstrap/_navbar.scss */
 .navbar-text {
   margin-bottom: 0;
   line-height: 40px;
   color: #eaeaea; }
 
-/* line 69, ../scss/flatstrap/_navbar.scss */
+/* line 78, ../scss/flatstrap/_navbar.scss */
 .navbar .nav > li > a {
   float: none;
   /*Vertically center the text given @navbarHeight*/
@@ -659,14 +679,14 @@ a.label:hover, a.label:focus {
   color: #eaeaea;
   text-decoration: none; }
 
-/* line 80, ../scss/flatstrap/_navbar.scss */
+/* line 89, ../scss/flatstrap/_navbar.scss */
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
   color: white;
   text-decoration: none;
   border-top: 2px solid #2ecc71; }
-  /* line 85, ../scss/flatstrap/_navbar.scss */
+  /* line 94, ../scss/flatstrap/_navbar.scss */
   .navbar .nav > .active > a:after,
   .navbar .nav > .active > a:hover:after,
   .navbar .nav > .active > a:focus:after {
@@ -680,7 +700,30 @@ a.label:hover, a.label:focus {
     border-right: 4px solid transparent;
     border-top: 4px solid #2ecc71; }
 
-/* line 99, ../scss/flatstrap/_navbar.scss */
+/* line 109, ../scss/flatstrap/_navbar.scss */
+.navbar .btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  /*.buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));*/
+  /*.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");*/ }
+
+/* line 118, ../scss/flatstrap/_navbar.scss */
+.navbar .btn-navbar .icon_cloud {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  /*.border-radius(1px);*/
+  /*.box-shadow(0 1px 0 rgba(0,0,0,.25));*/ }
+
+/* line 126, ../scss/flatstrap/_navbar.scss */
+.btn-navbar .icon_cloud + .icon_cloud {
+  margin-top: 3px; }
+
+/* line 131, ../scss/flatstrap/_navbar.scss */
 .navbar .nav {
   position: relative;
   left: 0;
@@ -688,31 +731,31 @@ a.label:hover, a.label:focus {
   float: left;
   margin: 0 10px 0 0; }
 
-/* line 108, ../scss/flatstrap/_navbar.scss */
+/* line 140, ../scss/flatstrap/_navbar.scss */
 .navbar .nav.pull-right {
   float: right;
   /*redeclare due to specificity*/
   margin-right: 0;
   /*remove margin on float right nav*/ }
 
-/* line 113, ../scss/flatstrap/_navbar.scss */
+/* line 145, ../scss/flatstrap/_navbar.scss */
 .navbar .nav > li {
   float: left; }
 
-/* line 118, ../scss/flatstrap/_navbar.scss */
+/* line 150, ../scss/flatstrap/_navbar.scss */
 .divider-vertical {
   height: 47px;
   /*Fix for the navbar*/
   margin: 0 9px;
   border-left: 1px solid #38393a; }
 
-/* line 125, ../scss/flatstrap/_navbar.scss */
+/* line 157, ../scss/flatstrap/_navbar.scss */
 .navbar-static-top {
   position: static;
   margin-bottom: 0;
   /*remove 18px margin for default navbar*/ }
 
-/* line 134, ../scss/flatstrap/_navbar.scss */
+/* line 166, ../scss/flatstrap/_navbar.scss */
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -722,11 +765,11 @@ a.label:hover, a.label:focus {
   margin-bottom: 0;
   /*remove 18px margin for default navbar*/ }
 
-/* line 143, ../scss/flatstrap/_navbar.scss */
+/* line 175, ../scss/flatstrap/_navbar.scss */
 .navbar-fixed-top {
   top: 0; }
 
-/* line 148, ../scss/flatstrap/_navbar.scss */
+/* line 180, ../scss/flatstrap/_navbar.scss */
 .navbar-fixed-bottom {
   bottom: 0; }
 
@@ -901,7 +944,7 @@ input[type="color"],
 
 /* line 103, ../scss/flatstrap/_forms.scss */
 .input-xxlarge {
-  width: 530px; }
+  width: 350px; }
 
 /*------------------------------------*\
     $TABLES
@@ -1235,3 +1278,177 @@ table {
   /* line 64, ../scss/flatstrap/_grid_responsive.scss */
   .visible-desktop {
     display: none; } }
+/*------------------------------------*\
+    $RESPONSIVE NAVBAR
+\*------------------------------------*/
+/**
+ * Responsive navbar strcucture. 
+ * 
+ * Designed and built @kurenn  
+ */
+@media (max-width: 979px) {
+  /*Unfix top navbar*/
+  /*Remove any padding from the body */
+  /* line 18, ../scss/flatstrap/_responsive_navbar.scss */
+  body {
+    padding: 0px; }
+
+  /* line 23, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar .menu-trigger {
+    float: left;
+    display: block;
+    /*width: 18px;*/
+    /*padding: 7px 10px;*/
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #eaeaea;
+    font-size: 50px;
+    line-height: 20px;
+    padding-top: 15px;
+    margin-bottom: 7px;
+    /*compensate the navbar height*/ }
+
+  /* line 39, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar .navbar-inner {
+    padding-left: 0px; }
+
+  /* line 46, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    position: static; }
+
+  /* line 50, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar-fixed-top {
+    margin-bottom: 20px; }
+
+  /* line 54, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar-fixed-bottom {
+    margin-top: 20px; }
+
+  /* line 59, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar-fixed-top .navbar-inner,
+  .navbar-fixed-bottom .navbar-inner {
+    padding: 5px; }
+
+  /* line 63, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar .container {
+    width: auto;
+    padding: 0; }
+
+  /* line 69, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar .nav .brand {
+    display: block;
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+    /*margin: 0 0 0 -5px;*/ }
+
+  /* line 79, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse {
+    clear: both; }
+
+  /* line 83, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav {
+    float: none;
+    margin: 0 0 10px;
+    display: none; }
+
+  /* line 88, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav > li {
+    float: none; }
+
+  /* line 92, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav > li > a {
+    margin-bottom: 2px; }
+
+  /* line 95, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav > .divider-vertical {
+    display: none; }
+
+  /* line 98, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav .nav-header {
+    color: #eaeaea;
+    text-shadow: none; }
+
+  /* line 104, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    padding: 9px 15px;
+    font-weight: bold;
+    color: #eaeaea;
+    /*.border-radius(3px);*/ }
+
+  /* line 112, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .btn {
+    padding: 4px 10px 4px;
+    font-weight: normal;
+    /*.border-radius(@baseBorderRadius);*/ }
+
+  /* line 117, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .dropdown-menu li + li a {
+    margin-bottom: 2px; }
+
+  /* line 123, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .dropdown-menu a:hover,
+  .nav-collapse .dropdown-menu a:focus {
+    background-color: #232323; }
+
+  /* line 128, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar-inverse .nav-collapse .nav > li > a,
+  .navbar-inverse .nav-collapse .dropdown-menu a {
+    /*color: @navbarInverseLinkColor;*/ }
+
+  /* line 134, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar-inverse .nav-collapse .nav > li > a:hover,
+  .navbar-inverse .nav-collapse .nav > li > a:focus,
+  .navbar-inverse .nav-collapse .dropdown-menu a:hover,
+  .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+    /*background-color: @navbarInverseBackground;*/ }
+
+  /* line 138, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse.in .btn-group {
+    margin-top: 5px;
+    padding: 0; }
+
+  /* line 144, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    float: none;
+    display: none;
+    max-width: none;
+    margin: 0 15px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    /*.border-radius(0);*/
+    /*.box-shadow(none);*/ }
+
+  /* line 158, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .open > .dropdown-menu {
+    display: block; }
+
+  /* line 163, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .dropdown-menu:before,
+  .nav-collapse .dropdown-menu:after {
+    display: none; }
+
+  /* line 166, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .dropdown-menu .divider {
+    display: none; }
+
+  /* line 171, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse .nav > li > .dropdown-menu:before, .nav-collapse .nav > li > .dropdown-menu:after {
+    display: none; }
+
+  /* line 178, ../scss/flatstrap/_responsive_navbar.scss */
+  .navbar-static .navbar-inner {
+    padding-left: 10px;
+    padding-right: 10px; } }
+@media (min-width: 980px) {
+  /* line 188, ../scss/flatstrap/_responsive_navbar.scss */
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important; } }
