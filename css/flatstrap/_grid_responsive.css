@@ -1,0 +1,55 @@
+/* line 1, ../../scss/flatstrap/_grid_responsive.scss */
+.furatto-responsive {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em; }
+
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+/* line 12, ../../scss/flatstrap/_grid_responsive.scss */
+.opera-only :-o-prefocus,
+.furatto-responsive {
+  word-spacing: -0.43em; }
+
+/* line 16, ../../scss/flatstrap/_grid_responsive.scss */
+.furatto-responsive img {
+  max-width: 100%; }
+
+@media (min-width: 980px) {
+  /* line 21, ../../scss/flatstrap/_grid_responsive.scss */
+  .visible-phone {
+    display: none; }
+
+  /* line 24, ../../scss/flatstrap/_grid_responsive.scss */
+  .visible-tablet {
+    display: none; }
+
+  /* line 27, ../../scss/flatstrap/_grid_responsive.scss */
+  .hidden-desktop {
+    display: none; } }
+@media (max-width: 480px) {
+  /* line 32, ../../scss/flatstrap/_grid_responsive.scss */
+  .furatto-responsive > [class^="furatto-col"] {
+    width: 100%; } }
+@media (max-width: 767px) {
+  /* line 37, ../../scss/flatstrap/_grid_responsive.scss */
+  .furatto-responsive > [class^="furatto-col"] {
+    width: 100%; }
+
+  /* line 40, ../../scss/flatstrap/_grid_responsive.scss */
+  .hidden-phone {
+    display: none; }
+
+  /* line 43, ../../scss/flatstrap/_grid_responsive.scss */
+  .visible-desktop {
+    display: none; } }
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 48, ../../scss/flatstrap/_grid_responsive.scss */
+  .hidden-tablet {
+    display: none; }
+
+  /* line 51, ../../scss/flatstrap/_grid_responsive.scss */
+  .visible-desktop {
+    display: none; } }
