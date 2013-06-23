@@ -1568,3 +1568,202 @@ table {
   padding: 4px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #FFF; }
+
+/*------------------------------------*\
+    $SELECT
+\*------------------------------------*/
+/**
+ * Basic select structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 11, ../scss/flatstrap/_select.scss */
+.dk_container {
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+  outline: none;
+  width: 220px; }
+
+/* line 20, ../scss/flatstrap/_select.scss */
+.dk_toggle {
+  background-color: #16a085;
+  color: white;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 11px 45px 11px 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s; }
+  /* line 31, ../scss/flatstrap/_select.scss */
+  .dk_toggle:hover, .dk_toggle:focus, .dk_focus .dk_toggle {
+    background-color: #18ac8f;
+    color: white;
+    outline: none; }
+  /* line 36, ../scss/flatstrap/_select.scss */
+  .dk_toggle:active {
+    background-color: #159a80;
+    outline: none; }
+    /* line 39, ../scss/flatstrap/_select.scss */
+    .dk_toggle:active .select-icon {
+      border-left-color: transparent; }
+
+/* line 46, ../scss/flatstrap/_select.scss */
+.select-icon {
+  background: #16a085 url("../img/toggle.png") no-repeat right center;
+  border-left: 2px solid rgba(52, 73, 94, 0.15);
+  border-radius: 0 6px 6px 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s; }
+
+/* line 59, ../scss/flatstrap/_select.scss */
+.dk_open {
+  z-index: 10; }
+  /* line 62, ../scss/flatstrap/_select.scss */
+  .dk_open .dk_toggle {
+    background-color: #16a085; }
+    /* line 64, ../scss/flatstrap/_select.scss */
+    .dk_open .dk_toggle .select-icon {
+      background-color: #159a80;
+      border-left-color: transparent; }
+
+/* line 72, ../scss/flatstrap/_select.scss */
+.dk_options {
+  padding-top: 14px; }
+  /* line 32, ../scss/flatstrap/_helpers.scss */
+  .dk_options:before {
+    content: '';
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #34495e transparent;
+    height: 0px;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    width: 0px;
+    -webkit-transform: rotate(360deg); }
+  /* line 76, ../scss/flatstrap/_select.scss */
+  .dk_options:before {
+    left: auto;
+    right: 12px; }
+  /* line 80, ../scss/flatstrap/_select.scss */
+  .dk_options li {
+    padding-bottom: 3px; }
+  /* line 83, ../scss/flatstrap/_select.scss */
+  .dk_options a {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    color: white;
+    display: block;
+    padding: 5px 9px;
+    text-decoration: none; }
+    /* line 89, ../scss/flatstrap/_select.scss */
+    .dk_options a:hover {
+      background-color: #16a085; }
+
+/* line 95, ../scss/flatstrap/_select.scss */
+.dk_option_current a {
+  background-color: #16a085; }
+
+/* line 100, ../scss/flatstrap/_select.scss */
+.dk_options_inner {
+  background-color: #34495e;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0;
+  max-height: 244px;
+  padding: 3px 3px 0; }
+
+/* line 109, ../scss/flatstrap/_select.scss */
+.dk_touch .dk_options {
+  max-height: 250px; }
+
+/* line 116, ../scss/flatstrap/_select.scss */
+.dk_container {
+  display: none;
+  position: relative;
+  vertical-align: middle; }
+  /* line 120, ../scss/flatstrap/_select.scss */
+  .dk_container.dk_shown {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+
+/* line 125, ../scss/flatstrap/_select.scss */
+.dk_toggle {
+  display: block;
+  position: relative; }
+
+/* line 130, ../scss/flatstrap/_select.scss */
+.dk_open {
+  position: relative; }
+  /* line 132, ../scss/flatstrap/_select.scss */
+  .dk_open .dk_options {
+    margin-top: -1px;
+    opacity: 1;
+    z-index: 10;
+    display: block\9; }
+  /* line 139, ../scss/flatstrap/_select.scss */
+  .dk_open .dk_label {
+    color: inherit; }
+
+/* line 144, ../scss/flatstrap/_select.scss */
+.dk_options {
+  margin-top: -21px;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  width: 220px;
+  z-index: -100;
+  display: none\9;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  /* line 155, ../scss/flatstrap/_select.scss */
+  .select-right .dk_options {
+    left: auto;
+    right: 0; }
+  /* line 159, ../scss/flatstrap/_select.scss */
+  .dk_options a {
+    display: block; }
+
+/* line 164, ../scss/flatstrap/_select.scss */
+.dk_options_inner {
+  overflow: auto;
+  outline: none;
+  position: relative; }
+
+/* line 171, ../scss/flatstrap/_select.scss */
+.dk_touch .dk_options {
+  overflow: hidden; }
+/* line 174, ../scss/flatstrap/_select.scss */
+.dk_touch .dk_options_inner {
+  max-height: none;
+  overflow: visible; }
+
+/* line 180, ../scss/flatstrap/_select.scss */
+.dk_fouc select {
+  position: relative;
+  top: -99999em;
+  visibility: hidden; }
