@@ -263,6 +263,10 @@ html, body {
 .with-left-navbar {
   padding-left: 5em; }
 
+/* line 21, ../scss/flatstrap/_base.scss */
+.main-container {
+  padding-left: 15px; }
+
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
@@ -293,125 +297,126 @@ html, body {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  border-radius: 2px; }
-  /* line 26, ../scss/flatstrap/_buttons.scss */
+  border-radius: 2px;
+  margin-bottom: 5px; }
+  /* line 27, ../scss/flatstrap/_buttons.scss */
   .btn:hover, .btn:focus {
     zoom: 1;
     text-decoration: none;
     background: #95a5a6; }
-  /* line 32, ../scss/flatstrap/_buttons.scss */
+  /* line 33, ../scss/flatstrap/_buttons.scss */
   .btn.disabled, .btn[disabled] {
     cursor: default;
     background-color: #7f8c8d;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
     opacity: 0.65; }
-  /* line 38, ../scss/flatstrap/_buttons.scss */
+  /* line 39, ../scss/flatstrap/_buttons.scss */
   .btn.active, .btn:active {
     outline: 0; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-primary {
   background-color: #2980b9; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-primary:hover, .btn-primary:focus {
     background-color: #3498db; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-primary.disabled, .btn-primary[disabled] {
     background-color: #2980b9; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-success {
   background-color: #27ae60; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-success:hover, .btn-success:focus {
     background-color: #2ecc71; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-success.disabled, .btn-success[disabled] {
     background-color: #27ae60; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-danger {
   background-color: #c0392b; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-danger:hover, .btn-danger:focus {
     background-color: #e74c3c; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-danger.disabled, .btn-danger[disabled] {
     background-color: #c0392b; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-warning {
   background-color: #f39c12; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-warning:hover, .btn-warning:focus {
     background-color: #f1c40f; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-warning.disabled, .btn-warning[disabled] {
     background-color: #f39c12; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-inverse {
   background-color: #2c3e50; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-inverse:hover, .btn-inverse:focus {
     background-color: #34495e; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-inverse.disabled, .btn-inverse[disabled] {
     background-color: #2c3e50; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-info {
   background-color: #16a085; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-info:hover, .btn-info:focus {
     background-color: #1abc9c; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-info.disabled, .btn-info[disabled] {
     background-color: #16a085; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-default {
   background-color: #7f8c8d; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-default:hover, .btn-default:focus {
     background-color: #95a5a6; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-default.disabled, .btn-default[disabled] {
     background-color: #7f8c8d; }
 
-/* line 45, ../scss/flatstrap/_buttons.scss */
+/* line 46, ../scss/flatstrap/_buttons.scss */
 .btn-funky {
   background-color: #8e44ad; }
-  /* line 48, ../scss/flatstrap/_buttons.scss */
+  /* line 49, ../scss/flatstrap/_buttons.scss */
   .btn-funky:hover, .btn-funky:focus {
     background-color: #9b59b6; }
-  /* line 52, ../scss/flatstrap/_buttons.scss */
+  /* line 53, ../scss/flatstrap/_buttons.scss */
   .btn-funky.disabled, .btn-funky[disabled] {
     background-color: #8e44ad; }
 
-/* line 60, ../scss/flatstrap/_buttons.scss */
+/* line 61, ../scss/flatstrap/_buttons.scss */
 .btn-large {
   padding: 11px 19px;
   font-size: 20px; }
 
-/* line 65, ../scss/flatstrap/_buttons.scss */
+/* line 66, ../scss/flatstrap/_buttons.scss */
 .btn-small {
   padding: 2px 10px;
   font-size: 13.6px; }
 
-/* line 70, ../scss/flatstrap/_buttons.scss */
+/* line 71, ../scss/flatstrap/_buttons.scss */
 .btn-mini {
   padding: 0 6px;
   font-size: 12px; }
 
-/* line 75, ../scss/flatstrap/_buttons.scss */
+/* line 76, ../scss/flatstrap/_buttons.scss */
 .btn-block {
   display: block;
   width: 100%;
   padding-left: 0px;
   padding-right: 0px; }
 
-/* line 83, ../scss/flatstrap/_buttons.scss */
+/* line 84, ../scss/flatstrap/_buttons.scss */
 .btn-block + .btn-block {
   margin-top: 5px; }
 
@@ -1452,3 +1457,58 @@ table {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important; } }
+/*------------------------------------*\
+    $LEFT NAVBAR
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/flatstrap/_left_navbar.scss */
+#jPanelMenu-menu {
+  background-color: #232323; }
+  /* line 15, ../scss/flatstrap/_left_navbar.scss */
+  #jPanelMenu-menu .nav {
+    overflow: hidden;
+    padding-left: 0;
+    color: #eaeaea;
+    font-size: 16px;
+    margin-top: 0px; }
+  /* line 25, ../scss/flatstrap/_left_navbar.scss */
+  #jPanelMenu-menu .nav > li {
+    padding: 9px 10px; }
+  /* line 32, ../scss/flatstrap/_left_navbar.scss */
+  #jPanelMenu-menu .nav > .active,
+  #jPanelMenu-menu .nav > .active,
+  #jPanelMenu-menu .nav > .active {
+    color: white;
+    text-decoration: none;
+    border-left: 2px solid #2ecc71;
+    padding-left: 7px; }
+    /* line 38, ../scss/flatstrap/_left_navbar.scss */
+    #jPanelMenu-menu .nav > .active:before,
+    #jPanelMenu-menu .nav > .active:before,
+    #jPanelMenu-menu .nav > .active:before {
+      content: ' ';
+      position: relative;
+      width: 0;
+      height: 0px; }
+  /* line 47, ../scss/flatstrap/_left_navbar.scss */
+  #jPanelMenu-menu .nav > li > a {
+    text-decoration: none;
+    color: #eaeaea; }
+  /* line 53, ../scss/flatstrap/_left_navbar.scss */
+  #jPanelMenu-menu .nav > li > a.brand {
+    font-size: 20px; }
+  /* line 58, ../scss/flatstrap/_left_navbar.scss */
+  #jPanelMenu-menu .nav > li:first-child {
+    border-bottom: 10px solid #38393a; }
+  /* line 63, ../scss/flatstrap/_left_navbar.scss */
+  #jPanelMenu-menu .nav > li.divider-vertical {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #38393a;
+    border-left: none;
+    margin: 0;
+    padding: 0; }
