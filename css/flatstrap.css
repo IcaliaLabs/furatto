@@ -1767,3 +1767,91 @@ table {
   position: relative;
   top: -99999em;
   visibility: hidden; }
+
+/* line 3, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+.checkbox,
+.radio {
+  margin-bottom: 12px;
+  padding-left: 32px;
+  position: relative;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s; }
+  /* line 8, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+  .checkbox:hover,
+  .radio:hover {
+    color: #16a085; }
+  /* line 11, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+  .checkbox input,
+  .radio input {
+    outline: none !important;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+  /* line 16, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+  .checkbox.checked .icon,
+  .radio.checked .icon {
+    background-position: -60px -30px;
+    opacity: 1;
+    display: block\9; }
+  /* line 21, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+  .checkbox.checked .icon-to-fade,
+  .radio.checked .icon-to-fade {
+    opacity: 0;
+    display: none\9; }
+  /* line 27, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+  .checkbox.disabled,
+  .radio.disabled {
+    color: #d7dddd;
+    cursor: default; }
+    /* line 30, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+    .checkbox.disabled .icon,
+    .radio.disabled .icon {
+      opacity: 0;
+      display: none\9; }
+    /* line 34, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+    .checkbox.disabled .icon-to-fade,
+    .radio.disabled .icon-to-fade {
+      background-position: -30px -60px;
+      opacity: 1;
+      display: block\9; }
+    /* line 40, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+    .checkbox.disabled.checked .icon,
+    .radio.disabled.checked .icon {
+      background-position: 0 -90px;
+      opacity: 1;
+      display: block\9; }
+    /* line 45, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+    .checkbox.disabled.checked .icon-to-fade,
+    .radio.disabled.checked .icon-to-fade {
+      opacity: 0;
+      display: none\9; }
+  /* line 53, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+  .checkbox .icon,
+  .checkbox .icon-to-fade,
+  .radio .icon,
+  .radio .icon-to-fade {
+    background: url("../img/checkbox.png") -90px 0 no-repeat;
+    display: block;
+    height: 20px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: -1px;
+    width: 20px;
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear; }
+  /* line 64, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+  .checkbox .icon,
+  .radio .icon {
+    opacity: 0;
+    top: 0;
+    z-index: 2;
+    display: none\9; }
+
+/* line 75, ../scss/flatstrap/_checkbox-radiobuttons.scss */
+.radio .icon,
+.radio .icon-to-fade {
+  background-image: url("../img/radio.png"); }
