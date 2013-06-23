@@ -22,6 +22,7 @@
   margin: 0;
   @include single-transition(opacity, 0.2s, ease-in-out);
   @include border-radius($base-radius);
+  margin-bottom: 5px;
 
   &:hover, &:focus {
     zoom: 1;
@@ -83,3 +84,4 @@
 .btn-block + .btn-block {
   margin-top: 5px;
 }
+
