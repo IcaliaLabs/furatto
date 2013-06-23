@@ -5,6 +5,7 @@
 @import "compass/css3/transition";
 @import "compass/css3/opacity";
 @import "compass/css3/border-radius";
+@import "compass/css3/box-sizing";
 
 //Helpers
 @import "flatstrap/helpers";
@@ -49,4 +50,7 @@
 //Responsive navbar
 @import 'flatstrap/responsive_navbar';
 @import 'flatstrap/left_navbar';
+
+//Images
+@import 'flatstrap/images';
 

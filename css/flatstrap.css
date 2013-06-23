@@ -1512,3 +1512,59 @@ table {
     border-left: none;
     margin: 0;
     padding: 0; }
+
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+/**
+ * Images definition. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 11, ../scss/flatstrap/_images.scss */
+.img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10px; }
+
+/* line 20, ../scss/flatstrap/_images.scss */
+.img-hover {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  /* line 22, ../scss/flatstrap/_images.scss */
+  .img-hover:hover {
+    border: 1px solid #27ae60; }
+
+/* line 27, ../scss/flatstrap/_images.scss */
+.img-circular {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
+
+/* line 31, ../scss/flatstrap/_images.scss */
+.img-well {
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  -ms-border-radius: 2%;
+  -o-border-radius: 2%;
+  border-radius: 2%; }
+
+/* line 35, ../scss/flatstrap/_images.scss */
+.img-selected {
+  border: 3px solid rgba(39, 174, 96, 0.8);
+  opacity: .9; }
+
+/* line 40, ../scss/flatstrap/_images.scss */
+.img-polaroid {
+  padding: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #FFF; }
