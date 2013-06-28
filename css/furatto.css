@@ -2022,39 +2022,42 @@ html, body {
   background-color: white; }
 
 /* line 17, ../scss/furatto/_base.scss */
+body {
+  padding-top: 70px; }
+
+/* line 21, ../scss/furatto/_base.scss */
 .with-left-navbar {
   padding-left: 6em; }
 
-/* line 21, ../scss/furatto/_base.scss */
+/* line 25, ../scss/furatto/_base.scss */
 .main-container {
   padding-left: 15px; }
 
-/* line 26, ../scss/furatto/_base.scss */
+/* line 30, ../scss/furatto/_base.scss */
 .furatto-jumbo-header {
-  /*background: url('../img/jumbo-pattern-header.png');*/
   min-height: 300px;
   width: 100%;
   display: block;
   text-align: center;
-  color: #232323;
-  padding-top: 50px; }
-  /* line 35, ../scss/furatto/_base.scss */
+  color: #232323; }
+  /* line 37, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .furatto-jumbo-container {
     width: 80%;
     margin: 0 auto; }
-  /* line 41, ../scss/furatto/_base.scss */
+  /* line 43, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .jumbo-header {
     font-size: 100px;
     text-align: center;
     margin: 0;
-    color: #232323; }
-  /* line 48, ../scss/furatto/_base.scss */
+    color: #232323;
+    font-weight: lighter; }
+  /* line 51, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .motto {
     font-size: 40px;
     font-weight: lighter;
     margin: 0 0 8px 0; }
 
-/* line 61, ../scss/furatto/_base.scss */
+/* line 64, ../scss/furatto/_base.scss */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -2067,7 +2070,7 @@ html, body {
   .container:after {
     clear: both; }
 
-/* line 66, ../scss/furatto/_base.scss */
+/* line 69, ../scss/furatto/_base.scss */
 .container-fluid {
   padding-right: 20px;
   padding-left: 20px;
@@ -2080,17 +2083,18 @@ html, body {
   .container-fluid:after {
     clear: both; }
 
-/* line 72, ../scss/furatto/_base.scss */
+/* line 75, ../scss/furatto/_base.scss */
 .furatto-steps {
   text-align: center;
   width: 80%;
   margin: 0 auto; }
-  /* line 77, ../scss/furatto/_base.scss */
+  /* line 80, ../scss/furatto/_base.scss */
   .furatto-steps .furatto-steps-header {
-    color: #34495e;
-    font-size: 50px; }
+    color: #232323;
+    font-size: 50px;
+    font-weight: lighter; }
 
-/* line 83, ../scss/furatto/_base.scss */
+/* line 87, ../scss/furatto/_base.scss */
 hr {
   width: 80%;
   border-top: 0px;

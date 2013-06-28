@@ -14,6 +14,10 @@ html, body {
   background-color: $bg-color;
 }
 
+body {
+  padding-top: $navbar-height + 15px;
+}
+
 .with-left-navbar {
   padding-left: $vrt-navbar-width + 2em;
 }
@@ -24,13 +28,11 @@ html, body {
 
 //Jumbo Header
 .furatto-jumbo-header {
-  /*background: url('../img/jumbo-pattern-header.png');*/
   min-height: 300px;
   width: 100%;
   display: block;
   text-align: center;
   color: #232323;
-  padding-top: 50px;
 
   .furatto-jumbo-container {
     width: 80%;
@@ -43,6 +45,7 @@ html, body {
     text-align: center;
     margin: 0;
     color: #232323;
+    font-weight: lighter;
   }
 
   .motto {
@@ -75,8 +78,9 @@ html, body {
   margin: 0 auto;
 
   .furatto-steps-header {
-    color: $inverse;
+    color: #232323;
     font-size: 50px;
+    font-weight: lighter;
   }
 }
 
