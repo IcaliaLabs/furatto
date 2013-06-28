@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/**
+ * Basic footer structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+.footer {
+  background: $footer-bg;
+  color: $footer-text-color;
+  font-size: $base-font-size - 1;
+  line-height: $base-line-height;
+  margin-top: 30px;
+
+  a {
+    color: $footer-text-color;
+  }
+
+  .footer-wrapper {
+    width: 60%;
+    margin: 0 auto; 
+
+    .hrz-nav {
+      margin: 15px auto;
+
+      li {
+        a {
+          color: $footer-text-color;
+        }
+      }
+    }
+  }
+}

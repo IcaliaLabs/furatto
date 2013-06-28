@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+/*$bg-color: #ebe7df;*/
 /* line 2, ../scss/furatto/_helpers.scss */
 .pull-right {
   float: right; }
@@ -260,1731 +261,1750 @@
   font-style: normal; }
 
 /* line 220, ../scss/furatto/_fonts.scss */
-.glyphicons {
-  display: inline-block;
-  position: relative;
-  padding: 5px 0 5px 35px;
-  color: #1d1d1b;
-  text-decoration: none;
-  *display: inline;
-  *zoom: 1; }
-
-/* line 229, ../scss/furatto/_fonts.scss */
 [class^="icon-"], [class*=" icon-"] {
-  display: inline-block;
-  position: relative;
-  padding: 5px 0 5px 35px;
   color: #1d1d1b;
   text-decoration: none;
   *display: inline;
-  *zoom: 1; }
-
-/* line 239, ../scss/furatto/_fonts.scss */
-.glyphicons i:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  /*font: 24px/1em 'Glyphicons';*/
-  font-style: normal;
-  color: #1d1d1b; }
+  *zoom: 1;
+  font-size: 1em;
+  display: inline-block; }
 
 /* Use the following CSS code if you want to have a class per icon */
-/* line 248, ../scss/furatto/_fonts.scss */
+/* line 230, ../scss/furatto/_fonts.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  /*font: 24px/1em 'Glyphicons';*/
   font-family: 'Glyphicons';
   font-style: normal;
-  color: #1d1d1b;
+  color: #2c3e50;
   -webkit-font-smoothing: antialiased; }
 
-/* line 258, ../scss/furatto/_fonts.scss */
-.glyphicons.white i:before {
-  color: #fff; }
+/* line 239, ../scss/furatto/_fonts.scss */
+.icon-small {
+  font-size: 2em; }
 
-/* line 261, ../scss/furatto/_fonts.scss */
+/* line 243, ../scss/furatto/_fonts.scss */
+.icon-medium {
+  font-size: 4em; }
+
+/* line 247, ../scss/furatto/_fonts.scss */
+.icon-large {
+  font-size: 6em; }
+
+/* line 251, ../scss/furatto/_fonts.scss */
+.icon-xlarge {
+  font-size: 8em; }
+
+/* line 255, ../scss/furatto/_fonts.scss */
+.icon-xlarge {
+  font-size: 10em; }
+
+/* line 260, ../scss/furatto/_fonts.scss */
+.icon-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+/* line 264, ../scss/furatto/_fonts.scss */
+.icon-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+/* line 268, ../scss/furatto/_fonts.scss */
+.icon-270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+/* line 275, ../scss/furatto/_fonts.scss */
+.icon-white:before {
+  color: white; }
+
+/* line 278, ../scss/furatto/_fonts.scss */
 .icon-glass:before {
   content: "\e001"; }
 
-/* line 264, ../scss/furatto/_fonts.scss */
-.glyphicons.leaf i:before {
+/* line 281, ../scss/furatto/_fonts.scss */
+.icon-leaf:before {
   content: "\e002"; }
 
-/* line 267, ../scss/furatto/_fonts.scss */
-.glyphicons.dog i:before {
+/* line 284, ../scss/furatto/_fonts.scss */
+.icon-dog:before {
   content: "\e003"; }
 
-/* line 270, ../scss/furatto/_fonts.scss */
-.glyphicons.user i:before {
+/* line 287, ../scss/furatto/_fonts.scss */
+.icon-user:before {
   content: "\e004"; }
 
-/* line 273, ../scss/furatto/_fonts.scss */
-.glyphicons.girl i:before {
+/* line 290, ../scss/furatto/_fonts.scss */
+.icon-girl:before {
   content: "\e005"; }
 
-/* line 276, ../scss/furatto/_fonts.scss */
-.glyphicons.car i:before {
+/* line 293, ../scss/furatto/_fonts.scss */
+.icon-car:before {
   content: "\e006"; }
 
-/* line 279, ../scss/furatto/_fonts.scss */
-.glyphicons.user_add i:before {
+/* line 296, ../scss/furatto/_fonts.scss */
+.icon-user_add:before {
   content: "\e007"; }
 
-/* line 282, ../scss/furatto/_fonts.scss */
-.glyphicons.user_remove i:before {
+/* line 299, ../scss/furatto/_fonts.scss */
+.icon-user_remove:before {
   content: "\e008"; }
 
-/* line 285, ../scss/furatto/_fonts.scss */
-.glyphicons.film i:before {
+/* line 302, ../scss/furatto/_fonts.scss */
+.icon-film:before {
   content: "\e009"; }
 
-/* line 288, ../scss/furatto/_fonts.scss */
-.glyphicons.magic i:before {
+/* line 305, ../scss/furatto/_fonts.scss */
+.icon-magic:before {
   content: "\e010"; }
 
-/* line 291, ../scss/furatto/_fonts.scss */
-.glyphicons.envelope i:before {
+/* line 308, ../scss/furatto/_fonts.scss */
+.icon-envelope:before {
   content: "\2709"; }
 
-/* line 294, ../scss/furatto/_fonts.scss */
-.glyphicons.camera i:before {
+/* line 311, ../scss/furatto/_fonts.scss */
+.icon-camera:before {
   content: "\e012"; }
 
-/* line 297, ../scss/furatto/_fonts.scss */
-.glyphicons.heart i:before {
+/* line 314, ../scss/furatto/_fonts.scss */
+.icon-heart:before {
   content: "\e013"; }
 
-/* line 300, ../scss/furatto/_fonts.scss */
-.glyphicons.beach_umbrella i:before {
+/* line 317, ../scss/furatto/_fonts.scss */
+.icon-beach_umbrella:before {
   content: "\e014"; }
 
-/* line 303, ../scss/furatto/_fonts.scss */
-.glyphicons.train i:before {
+/* line 320, ../scss/furatto/_fonts.scss */
+.icon-train:before {
   content: "\e015"; }
 
-/* line 306, ../scss/furatto/_fonts.scss */
-.glyphicons.print i:before {
+/* line 323, ../scss/furatto/_fonts.scss */
+.icon-print:before {
   content: "\e016"; }
 
-/* line 309, ../scss/furatto/_fonts.scss */
-.glyphicons.bin i:before {
+/* line 326, ../scss/furatto/_fonts.scss */
+.icon-bin:before {
   content: "\e017"; }
 
-/* line 312, ../scss/furatto/_fonts.scss */
-.glyphicons.music i:before {
+/* line 329, ../scss/furatto/_fonts.scss */
+.icon-music:before {
   content: "\e018"; }
 
-/* line 315, ../scss/furatto/_fonts.scss */
-.glyphicons.note i:before {
+/* line 332, ../scss/furatto/_fonts.scss */
+.icon-note:before {
   content: "\e019"; }
 
-/* line 318, ../scss/furatto/_fonts.scss */
-.glyphicons.heart_empty i:before {
+/* line 335, ../scss/furatto/_fonts.scss */
+.icon-heart_empty:before {
   content: "\e020"; }
 
-/* line 321, ../scss/furatto/_fonts.scss */
-.glyphicons.home i:before {
+/* line 338, ../scss/furatto/_fonts.scss */
+.icon-home:before {
   content: "\e021"; }
 
-/* line 324, ../scss/furatto/_fonts.scss */
-.glyphicons.snowflake i:before {
+/* line 341, ../scss/furatto/_fonts.scss */
+.icon-snowflake:before {
   content: "\2744"; }
 
-/* line 327, ../scss/furatto/_fonts.scss */
-.glyphicons.fire i:before {
+/* line 344, ../scss/furatto/_fonts.scss */
+.icon-fire:before {
   content: "\e023"; }
 
-/* line 330, ../scss/furatto/_fonts.scss */
-.glyphicons.magnet i:before {
+/* line 347, ../scss/furatto/_fonts.scss */
+.icon-magnet:before {
   content: "\e024"; }
 
-/* line 333, ../scss/furatto/_fonts.scss */
-.glyphicons.parents i:before {
+/* line 350, ../scss/furatto/_fonts.scss */
+.icon-parents:before {
   content: "\e025"; }
 
-/* line 336, ../scss/furatto/_fonts.scss */
-.glyphicons.binoculars i:before {
+/* line 353, ../scss/furatto/_fonts.scss */
+.icon-binoculars:before {
   content: "\e026"; }
 
-/* line 339, ../scss/furatto/_fonts.scss */
-.glyphicons.road i:before {
+/* line 356, ../scss/furatto/_fonts.scss */
+.icon-road:before {
   content: "\e027"; }
 
-/* line 342, ../scss/furatto/_fonts.scss */
-.glyphicons.search i:before {
+/* line 359, ../scss/furatto/_fonts.scss */
+.icon-search:before {
   content: "\e028"; }
 
-/* line 345, ../scss/furatto/_fonts.scss */
-.glyphicons.cars i:before {
+/* line 362, ../scss/furatto/_fonts.scss */
+.icon-cars:before {
   content: "\e029"; }
 
-/* line 348, ../scss/furatto/_fonts.scss */
-.glyphicons.notes_2 i:before {
+/* line 365, ../scss/furatto/_fonts.scss */
+.icon-notes_2:before {
   content: "\e030"; }
 
-/* line 351, ../scss/furatto/_fonts.scss */
-.glyphicons.pencil i:before {
+/* line 368, ../scss/furatto/_fonts.scss */
+.icon-pencil:before {
   content: "\270F"; }
 
-/* line 354, ../scss/furatto/_fonts.scss */
-.glyphicons.bus i:before {
+/* line 371, ../scss/furatto/_fonts.scss */
+.icon-bus:before {
   content: "\e032"; }
 
-/* line 357, ../scss/furatto/_fonts.scss */
-.glyphicons.wifi_alt i:before {
+/* line 374, ../scss/furatto/_fonts.scss */
+.icon-wifi_alt:before {
   content: "\e033"; }
 
-/* line 360, ../scss/furatto/_fonts.scss */
-.glyphicons.luggage i:before {
+/* line 377, ../scss/furatto/_fonts.scss */
+.icon-luggage:before {
   content: "\e034"; }
 
-/* line 363, ../scss/furatto/_fonts.scss */
-.glyphicons.old_man i:before {
+/* line 380, ../scss/furatto/_fonts.scss */
+.icon-old_man:before {
   content: "\e035"; }
 
-/* line 366, ../scss/furatto/_fonts.scss */
-.glyphicons.woman i:before {
+/* line 383, ../scss/furatto/_fonts.scss */
+.icon-woman:before {
   content: "\e036"; }
 
-/* line 369, ../scss/furatto/_fonts.scss */
-.glyphicons.file i:before {
+/* line 386, ../scss/furatto/_fonts.scss */
+.icon-file:before {
   content: "\e037"; }
 
-/* line 372, ../scss/furatto/_fonts.scss */
-.glyphicons.coins i:before {
+/* line 389, ../scss/furatto/_fonts.scss */
+.icon-coins:before {
   content: "\e038"; }
 
-/* line 375, ../scss/furatto/_fonts.scss */
-.glyphicons.airplane i:before {
+/* line 392, ../scss/furatto/_fonts.scss */
+.icon-airplane:before {
   content: "\2708"; }
 
-/* line 378, ../scss/furatto/_fonts.scss */
-.glyphicons.notes i:before {
+/* line 395, ../scss/furatto/_fonts.scss */
+.icon-notes:before {
   content: "\e040"; }
 
-/* line 381, ../scss/furatto/_fonts.scss */
-.glyphicons.stats i:before {
+/* line 398, ../scss/furatto/_fonts.scss */
+.icon-stats:before {
   content: "\e041"; }
 
-/* line 384, ../scss/furatto/_fonts.scss */
-.glyphicons.charts i:before {
+/* line 401, ../scss/furatto/_fonts.scss */
+.icon-charts:before {
   content: "\e042"; }
 
-/* line 387, ../scss/furatto/_fonts.scss */
-.glyphicons.pie_chart i:before {
+/* line 404, ../scss/furatto/_fonts.scss */
+.icon-pie_chart:before {
   content: "\e043"; }
 
-/* line 390, ../scss/furatto/_fonts.scss */
-.glyphicons.group i:before {
+/* line 407, ../scss/furatto/_fonts.scss */
+.icon-group:before {
   content: "\e044"; }
 
-/* line 393, ../scss/furatto/_fonts.scss */
-.glyphicons.keys i:before {
+/* line 410, ../scss/furatto/_fonts.scss */
+.icon-keys:before {
   content: "\e045"; }
 
-/* line 396, ../scss/furatto/_fonts.scss */
-.glyphicons.calendar i:before {
+/* line 413, ../scss/furatto/_fonts.scss */
+.icon-calendar:before {
   content: "\e046"; }
 
-/* line 399, ../scss/furatto/_fonts.scss */
-.glyphicons.router i:before {
+/* line 416, ../scss/furatto/_fonts.scss */
+.icon-router:before {
   content: "\e047"; }
 
-/* line 402, ../scss/furatto/_fonts.scss */
-.glyphicons.camera_small i:before {
+/* line 419, ../scss/furatto/_fonts.scss */
+.icon-camera_small:before {
   content: "\e048"; }
 
-/* line 405, ../scss/furatto/_fonts.scss */
-.glyphicons.dislikes i:before {
+/* line 422, ../scss/furatto/_fonts.scss */
+.icon-dislikes:before {
   content: "\e049"; }
 
-/* line 408, ../scss/furatto/_fonts.scss */
-.glyphicons.star i:before {
+/* line 425, ../scss/furatto/_fonts.scss */
+.icon-star:before {
   content: "\e050"; }
 
-/* line 411, ../scss/furatto/_fonts.scss */
-.glyphicons.link i:before {
+/* line 428, ../scss/furatto/_fonts.scss */
+.icon-link:before {
   content: "\e051"; }
 
-/* line 414, ../scss/furatto/_fonts.scss */
-.glyphicons.eye_open i:before {
+/* line 431, ../scss/furatto/_fonts.scss */
+.icon-eye_open:before {
   content: "\e052"; }
 
-/* line 417, ../scss/furatto/_fonts.scss */
-.glyphicons.eye_close i:before {
+/* line 434, ../scss/furatto/_fonts.scss */
+.icon-eye_close:before {
   content: "\e053"; }
 
-/* line 420, ../scss/furatto/_fonts.scss */
-.glyphicons.alarm i:before {
+/* line 437, ../scss/furatto/_fonts.scss */
+.icon-alarm:before {
   content: "\e054"; }
 
-/* line 423, ../scss/furatto/_fonts.scss */
-.glyphicons.clock i:before {
+/* line 440, ../scss/furatto/_fonts.scss */
+.icon-clock:before {
   content: "\e055"; }
 
-/* line 426, ../scss/furatto/_fonts.scss */
-.glyphicons.stopwatch i:before {
+/* line 443, ../scss/furatto/_fonts.scss */
+.icon-stopwatch:before {
   content: "\e056"; }
 
-/* line 429, ../scss/furatto/_fonts.scss */
-.glyphicons.projector i:before {
+/* line 446, ../scss/furatto/_fonts.scss */
+.icon-projector:before {
   content: "\e057"; }
 
-/* line 432, ../scss/furatto/_fonts.scss */
-.glyphicons.history i:before {
+/* line 449, ../scss/furatto/_fonts.scss */
+.icon-history:before {
   content: "\e058"; }
 
-/* line 435, ../scss/furatto/_fonts.scss */
-.glyphicons.truck i:before {
+/* line 452, ../scss/furatto/_fonts.scss */
+.icon-truck:before {
   content: "\e059"; }
 
-/* line 438, ../scss/furatto/_fonts.scss */
-.glyphicons.cargo i:before {
+/* line 455, ../scss/furatto/_fonts.scss */
+.icon-cargo:before {
   content: "\e060"; }
 
-/* line 441, ../scss/furatto/_fonts.scss */
-.glyphicons.compass i:before {
+/* line 458, ../scss/furatto/_fonts.scss */
+.icon-compass:before {
   content: "\e061"; }
 
-/* line 444, ../scss/furatto/_fonts.scss */
-.glyphicons.keynote i:before {
+/* line 461, ../scss/furatto/_fonts.scss */
+.icon-keynote:before {
   content: "\e062"; }
 
-/* line 447, ../scss/furatto/_fonts.scss */
-.glyphicons.paperclip i:before {
+/* line 464, ../scss/furatto/_fonts.scss */
+.icon-paperclip:before {
   content: "\e063"; }
 
-/* line 450, ../scss/furatto/_fonts.scss */
-.glyphicons.power i:before {
+/* line 467, ../scss/furatto/_fonts.scss */
+.icon-power:before {
   content: "\e064"; }
 
-/* line 453, ../scss/furatto/_fonts.scss */
-.glyphicons.lightbulb i:before {
+/* line 470, ../scss/furatto/_fonts.scss */
+.icon-lightbulb:before {
   content: "\e065"; }
 
-/* line 456, ../scss/furatto/_fonts.scss */
-.glyphicons.tag i:before {
+/* line 473, ../scss/furatto/_fonts.scss */
+.icon-tag:before {
   content: "\e066"; }
 
-/* line 459, ../scss/furatto/_fonts.scss */
-.glyphicons.tags i:before {
+/* line 476, ../scss/furatto/_fonts.scss */
+.icon-tags:before {
   content: "\e067"; }
 
-/* line 462, ../scss/furatto/_fonts.scss */
-.glyphicons.cleaning i:before {
+/* line 479, ../scss/furatto/_fonts.scss */
+.icon-cleaning:before {
   content: "\e068"; }
 
-/* line 465, ../scss/furatto/_fonts.scss */
-.glyphicons.ruller i:before {
+/* line 482, ../scss/furatto/_fonts.scss */
+.icon-ruller:before {
   content: "\e069"; }
 
-/* line 468, ../scss/furatto/_fonts.scss */
-.glyphicons.gift i:before {
+/* line 485, ../scss/furatto/_fonts.scss */
+.icon-gift:before {
   content: "\e070"; }
 
-/* line 471, ../scss/furatto/_fonts.scss */
-.glyphicons.umbrella i:before {
+/* line 488, ../scss/furatto/_fonts.scss */
+.icon-umbrella:before {
   content: "\2602"; }
 
-/* line 474, ../scss/furatto/_fonts.scss */
-.glyphicons.book i:before {
+/* line 491, ../scss/furatto/_fonts.scss */
+.icon-book:before {
   content: "\e072"; }
 
-/* line 477, ../scss/furatto/_fonts.scss */
-.glyphicons.bookmark i:before {
+/* line 494, ../scss/furatto/_fonts.scss */
+.icon-bookmark:before {
   content: "\e073"; }
 
-/* line 480, ../scss/furatto/_fonts.scss */
-.glyphicons.wifi i:before {
+/* line 497, ../scss/furatto/_fonts.scss */
+.icon-wifi:before {
   content: "\e074"; }
 
-/* line 483, ../scss/furatto/_fonts.scss */
-.glyphicons.cup i:before {
+/* line 500, ../scss/furatto/_fonts.scss */
+.icon-cup:before {
   content: "\e075"; }
 
-/* line 486, ../scss/furatto/_fonts.scss */
-.glyphicons.stroller i:before {
+/* line 503, ../scss/furatto/_fonts.scss */
+.icon-stroller:before {
   content: "\e076"; }
 
-/* line 489, ../scss/furatto/_fonts.scss */
-.glyphicons.headphones i:before {
+/* line 506, ../scss/furatto/_fonts.scss */
+.icon-headphones:before {
   content: "\e077"; }
 
-/* line 492, ../scss/furatto/_fonts.scss */
-.glyphicons.headset i:before {
+/* line 509, ../scss/furatto/_fonts.scss */
+.icon-headset:before {
   content: "\e078"; }
 
-/* line 495, ../scss/furatto/_fonts.scss */
-.glyphicons.warning_sign i:before {
+/* line 512, ../scss/furatto/_fonts.scss */
+.icon-warning_sign:before {
   content: "\e079"; }
 
-/* line 498, ../scss/furatto/_fonts.scss */
-.glyphicons.signal i:before {
+/* line 515, ../scss/furatto/_fonts.scss */
+.icon-signal:before {
   content: "\e080"; }
 
-/* line 501, ../scss/furatto/_fonts.scss */
-.glyphicons.retweet i:before {
+/* line 518, ../scss/furatto/_fonts.scss */
+.icon-retweet:before {
   content: "\e081"; }
 
-/* line 504, ../scss/furatto/_fonts.scss */
-.glyphicons.refresh i:before {
+/* line 521, ../scss/furatto/_fonts.scss */
+.icon-refresh:before {
   content: "\e082"; }
 
-/* line 507, ../scss/furatto/_fonts.scss */
-.glyphicons.roundabout i:before {
+/* line 524, ../scss/furatto/_fonts.scss */
+.icon-roundabout:before {
   content: "\e083"; }
 
-/* line 510, ../scss/furatto/_fonts.scss */
-.glyphicons.random i:before {
+/* line 527, ../scss/furatto/_fonts.scss */
+.icon-random:before {
   content: "\e084"; }
 
-/* line 513, ../scss/furatto/_fonts.scss */
-.glyphicons.heat i:before {
+/* line 530, ../scss/furatto/_fonts.scss */
+.icon-heat:before {
   content: "\e085"; }
 
-/* line 516, ../scss/furatto/_fonts.scss */
-.glyphicons.repeat i:before {
+/* line 533, ../scss/furatto/_fonts.scss */
+.icon-repeat:before {
   content: "\e086"; }
 
-/* line 519, ../scss/furatto/_fonts.scss */
-.glyphicons.display i:before {
+/* line 536, ../scss/furatto/_fonts.scss */
+.icon-display:before {
   content: "\e087"; }
 
-/* line 522, ../scss/furatto/_fonts.scss */
-.glyphicons.log_book i:before {
+/* line 539, ../scss/furatto/_fonts.scss */
+.icon-log_book:before {
   content: "\e088"; }
 
-/* line 525, ../scss/furatto/_fonts.scss */
-.glyphicons.adress_book i:before {
+/* line 542, ../scss/furatto/_fonts.scss */
+.icon-adress_book:before {
   content: "\e089"; }
 
-/* line 528, ../scss/furatto/_fonts.scss */
-.glyphicons.building i:before {
+/* line 545, ../scss/furatto/_fonts.scss */
+.icon-building:before {
   content: "\e090"; }
 
-/* line 531, ../scss/furatto/_fonts.scss */
-.glyphicons.eyedropper i:before {
+/* line 548, ../scss/furatto/_fonts.scss */
+.icon-eyedropper:before {
   content: "\e091"; }
 
-/* line 534, ../scss/furatto/_fonts.scss */
-.glyphicons.adjust i:before {
+/* line 551, ../scss/furatto/_fonts.scss */
+.icon-adjust:before {
   content: "\e092"; }
 
-/* line 537, ../scss/furatto/_fonts.scss */
-.glyphicons.tint i:before {
+/* line 554, ../scss/furatto/_fonts.scss */
+.icon-tint:before {
   content: "\e093"; }
 
-/* line 540, ../scss/furatto/_fonts.scss */
-.glyphicons.crop i:before {
+/* line 557, ../scss/furatto/_fonts.scss */
+.icon-crop:before {
   content: "\e094"; }
 
-/* line 543, ../scss/furatto/_fonts.scss */
-.glyphicons.vector_path_square i:before {
+/* line 560, ../scss/furatto/_fonts.scss */
+.icon-vector_path_square:before {
   content: "\e095"; }
 
-/* line 546, ../scss/furatto/_fonts.scss */
-.glyphicons.vector_path_circle i:before {
+/* line 563, ../scss/furatto/_fonts.scss */
+.icon-vector_path_circle:before {
   content: "\e096"; }
 
-/* line 549, ../scss/furatto/_fonts.scss */
-.glyphicons.vector_path_polygon i:before {
+/* line 566, ../scss/furatto/_fonts.scss */
+.icon-vector_path_polygon:before {
   content: "\e097"; }
 
-/* line 552, ../scss/furatto/_fonts.scss */
-.glyphicons.vector_path_line i:before {
+/* line 569, ../scss/furatto/_fonts.scss */
+.icon-vector_path_line:before {
   content: "\e098"; }
 
-/* line 555, ../scss/furatto/_fonts.scss */
-.glyphicons.vector_path_curve i:before {
+/* line 572, ../scss/furatto/_fonts.scss */
+.icon-vector_path_curve:before {
   content: "\e099"; }
 
-/* line 558, ../scss/furatto/_fonts.scss */
-.glyphicons.vector_path_all i:before {
+/* line 575, ../scss/furatto/_fonts.scss */
+.icon-vector_path_all:before {
   content: "\e100"; }
 
-/* line 561, ../scss/furatto/_fonts.scss */
-.glyphicons.font i:before {
+/* line 578, ../scss/furatto/_fonts.scss */
+.icon-font:before {
   content: "\e101"; }
 
-/* line 564, ../scss/furatto/_fonts.scss */
-.glyphicons.italic i:before {
+/* line 581, ../scss/furatto/_fonts.scss */
+.icon-italic:before {
   content: "\e102"; }
 
-/* line 567, ../scss/furatto/_fonts.scss */
-.glyphicons.bold i:before {
+/* line 584, ../scss/furatto/_fonts.scss */
+.icon-bold:before {
   content: "\e103"; }
 
-/* line 570, ../scss/furatto/_fonts.scss */
-.glyphicons.text_underline i:before {
+/* line 587, ../scss/furatto/_fonts.scss */
+.icon-text_underline:before {
   content: "\e104"; }
 
-/* line 573, ../scss/furatto/_fonts.scss */
-.glyphicons.text_strike i:before {
+/* line 590, ../scss/furatto/_fonts.scss */
+.icon-text_strike:before {
   content: "\e105"; }
 
-/* line 576, ../scss/furatto/_fonts.scss */
-.glyphicons.text_height i:before {
+/* line 593, ../scss/furatto/_fonts.scss */
+.icon-text_height:before {
   content: "\e106"; }
 
-/* line 579, ../scss/furatto/_fonts.scss */
-.glyphicons.text_width i:before {
+/* line 596, ../scss/furatto/_fonts.scss */
+.icon-text_width:before {
   content: "\e107"; }
 
-/* line 582, ../scss/furatto/_fonts.scss */
-.glyphicons.text_resize i:before {
+/* line 599, ../scss/furatto/_fonts.scss */
+.icon-text_resize:before {
   content: "\e108"; }
 
-/* line 585, ../scss/furatto/_fonts.scss */
-.glyphicons.left_indent i:before {
+/* line 602, ../scss/furatto/_fonts.scss */
+.icon-left_indent:before {
   content: "\e109"; }
 
-/* line 588, ../scss/furatto/_fonts.scss */
-.glyphicons.right_indent i:before {
+/* line 605, ../scss/furatto/_fonts.scss */
+.icon-right_indent:before {
   content: "\e110"; }
 
-/* line 591, ../scss/furatto/_fonts.scss */
-.glyphicons.align_left i:before {
+/* line 608, ../scss/furatto/_fonts.scss */
+.icon-align_left:before {
   content: "\e111"; }
 
-/* line 594, ../scss/furatto/_fonts.scss */
-.glyphicons.align_center i:before {
+/* line 611, ../scss/furatto/_fonts.scss */
+.icon-align_center:before {
   content: "\e112"; }
 
-/* line 597, ../scss/furatto/_fonts.scss */
-.glyphicons.align_right i:before {
+/* line 614, ../scss/furatto/_fonts.scss */
+.icon-align_right:before {
   content: "\e113"; }
 
-/* line 600, ../scss/furatto/_fonts.scss */
-.glyphicons.justify i:before {
+/* line 617, ../scss/furatto/_fonts.scss */
+.icon-justify:before {
   content: "\e114"; }
 
-/* line 603, ../scss/furatto/_fonts.scss */
-.glyphicons.list i:before {
+/* line 620, ../scss/furatto/_fonts.scss */
+.icon-list:before {
   content: "\e115"; }
 
-/* line 606, ../scss/furatto/_fonts.scss */
-.glyphicons.text_smaller i:before {
+/* line 623, ../scss/furatto/_fonts.scss */
+.icon-text_smaller:before {
   content: "\e116"; }
 
-/* line 609, ../scss/furatto/_fonts.scss */
-.glyphicons.text_bigger i:before {
+/* line 626, ../scss/furatto/_fonts.scss */
+.icon-text_bigger:before {
   content: "\e117"; }
 
-/* line 612, ../scss/furatto/_fonts.scss */
-.glyphicons.embed i:before {
+/* line 629, ../scss/furatto/_fonts.scss */
+.icon-embed:before {
   content: "\e118"; }
 
-/* line 615, ../scss/furatto/_fonts.scss */
-.glyphicons.embed_close i:before {
+/* line 632, ../scss/furatto/_fonts.scss */
+.icon-embed_close:before {
   content: "\e119"; }
 
-/* line 618, ../scss/furatto/_fonts.scss */
-.glyphicons.table i:before {
+/* line 635, ../scss/furatto/_fonts.scss */
+.icon-table:before {
   content: "\e120"; }
 
-/* line 621, ../scss/furatto/_fonts.scss */
-.glyphicons.message_full i:before {
+/* line 638, ../scss/furatto/_fonts.scss */
+.icon-message_full:before {
   content: "\e121"; }
 
-/* line 624, ../scss/furatto/_fonts.scss */
-.glyphicons.message_empty i:before {
+/* line 641, ../scss/furatto/_fonts.scss */
+.icon-message_empty:before {
   content: "\e122"; }
 
-/* line 627, ../scss/furatto/_fonts.scss */
-.glyphicons.message_in i:before {
+/* line 644, ../scss/furatto/_fonts.scss */
+.icon-message_in:before {
   content: "\e123"; }
 
-/* line 630, ../scss/furatto/_fonts.scss */
-.glyphicons.message_out i:before {
+/* line 647, ../scss/furatto/_fonts.scss */
+.icon-message_out:before {
   content: "\e124"; }
 
-/* line 633, ../scss/furatto/_fonts.scss */
-.glyphicons.message_plus i:before {
+/* line 650, ../scss/furatto/_fonts.scss */
+.icon-message_plus:before {
   content: "\e125"; }
 
-/* line 636, ../scss/furatto/_fonts.scss */
-.glyphicons.message_minus i:before {
+/* line 653, ../scss/furatto/_fonts.scss */
+.icon-message_minus:before {
   content: "\e126"; }
 
-/* line 639, ../scss/furatto/_fonts.scss */
-.glyphicons.message_ban i:before {
+/* line 656, ../scss/furatto/_fonts.scss */
+.icon-message_ban:before {
   content: "\e127"; }
 
-/* line 642, ../scss/furatto/_fonts.scss */
-.glyphicons.message_flag i:before {
+/* line 659, ../scss/furatto/_fonts.scss */
+.icon-message_flag:before {
   content: "\e128"; }
 
-/* line 645, ../scss/furatto/_fonts.scss */
-.glyphicons.message_lock i:before {
+/* line 662, ../scss/furatto/_fonts.scss */
+.icon-message_lock:before {
   content: "\e129"; }
 
-/* line 648, ../scss/furatto/_fonts.scss */
-.glyphicons.message_new i:before {
+/* line 665, ../scss/furatto/_fonts.scss */
+.icon-message_new:before {
   content: "\e130"; }
 
-/* line 651, ../scss/furatto/_fonts.scss */
-.glyphicons.inbox i:before {
+/* line 668, ../scss/furatto/_fonts.scss */
+.icon-inbox:before {
   content: "\e131"; }
 
-/* line 654, ../scss/furatto/_fonts.scss */
-.glyphicons.inbox_plus i:before {
+/* line 671, ../scss/furatto/_fonts.scss */
+.icon-inbox_plus:before {
   content: "\e132"; }
 
-/* line 657, ../scss/furatto/_fonts.scss */
-.glyphicons.inbox_minus i:before {
+/* line 674, ../scss/furatto/_fonts.scss */
+.icon-inbox_minus:before {
   content: "\e133"; }
 
-/* line 660, ../scss/furatto/_fonts.scss */
-.glyphicons.inbox_lock i:before {
+/* line 677, ../scss/furatto/_fonts.scss */
+.icon-inbox_lock:before {
   content: "\e134"; }
 
-/* line 663, ../scss/furatto/_fonts.scss */
-.glyphicons.inbox_in i:before {
+/* line 680, ../scss/furatto/_fonts.scss */
+.icon-inbox_in:before {
   content: "\e135"; }
 
-/* line 666, ../scss/furatto/_fonts.scss */
-.glyphicons.inbox_out i:before {
+/* line 683, ../scss/furatto/_fonts.scss */
+.icon-inbox_out:before {
   content: "\e136"; }
 
-/* line 669, ../scss/furatto/_fonts.scss */
-.glyphicons.cogwheel i:before {
+/* line 686, ../scss/furatto/_fonts.scss */
+.icon-cogwheel:before {
   content: "\e137"; }
 
-/* line 672, ../scss/furatto/_fonts.scss */
-.glyphicons.cogwheels i:before {
+/* line 689, ../scss/furatto/_fonts.scss */
+.icon-cogwheels:before {
   content: "\e138"; }
 
-/* line 675, ../scss/furatto/_fonts.scss */
-.glyphicons.picture i:before {
+/* line 692, ../scss/furatto/_fonts.scss */
+.icon-picture:before {
   content: "\e139"; }
 
-/* line 678, ../scss/furatto/_fonts.scss */
-.glyphicons.adjust_alt i:before {
+/* line 695, ../scss/furatto/_fonts.scss */
+.icon-adjust_alt:before {
   content: "\e140"; }
 
-/* line 681, ../scss/furatto/_fonts.scss */
-.glyphicons.database_lock i:before {
+/* line 698, ../scss/furatto/_fonts.scss */
+.icon-database_lock:before {
   content: "\e141"; }
 
-/* line 684, ../scss/furatto/_fonts.scss */
-.glyphicons.database_plus i:before {
+/* line 701, ../scss/furatto/_fonts.scss */
+.icon-database_plus:before {
   content: "\e142"; }
 
-/* line 687, ../scss/furatto/_fonts.scss */
-.glyphicons.database_minus i:before {
+/* line 704, ../scss/furatto/_fonts.scss */
+.icon-database_minus:before {
   content: "\e143"; }
 
-/* line 690, ../scss/furatto/_fonts.scss */
-.glyphicons.database_ban i:before {
+/* line 707, ../scss/furatto/_fonts.scss */
+.icon-database_ban:before {
   content: "\e144"; }
 
-/* line 693, ../scss/furatto/_fonts.scss */
-.glyphicons.folder_open i:before {
+/* line 710, ../scss/furatto/_fonts.scss */
+.icon-folder_open:before {
   content: "\e145"; }
 
-/* line 696, ../scss/furatto/_fonts.scss */
-.glyphicons.folder_plus i:before {
+/* line 713, ../scss/furatto/_fonts.scss */
+.icon-folder_plus:before {
   content: "\e146"; }
 
-/* line 699, ../scss/furatto/_fonts.scss */
-.glyphicons.folder_minus i:before {
+/* line 716, ../scss/furatto/_fonts.scss */
+.icon-folder_minus:before {
   content: "\e147"; }
 
-/* line 702, ../scss/furatto/_fonts.scss */
-.glyphicons.folder_lock i:before {
+/* line 719, ../scss/furatto/_fonts.scss */
+.icon-folder_lock:before {
   content: "\e148"; }
 
-/* line 705, ../scss/furatto/_fonts.scss */
-.glyphicons.folder_flag i:before {
+/* line 722, ../scss/furatto/_fonts.scss */
+.icon-folder_flag:before {
   content: "\e149"; }
 
-/* line 708, ../scss/furatto/_fonts.scss */
-.glyphicons.folder_new i:before {
+/* line 725, ../scss/furatto/_fonts.scss */
+.icon-folder_new:before {
   content: "\e150"; }
 
-/* line 711, ../scss/furatto/_fonts.scss */
-.glyphicons.edit i:before {
+/* line 728, ../scss/furatto/_fonts.scss */
+.icon-edit:before {
   content: "\e151"; }
 
-/* line 714, ../scss/furatto/_fonts.scss */
-.glyphicons.new_window i:before {
+/* line 731, ../scss/furatto/_fonts.scss */
+.icon-new_window:before {
   content: "\e152"; }
 
-/* line 717, ../scss/furatto/_fonts.scss */
-.glyphicons.check i:before {
+/* line 734, ../scss/furatto/_fonts.scss */
+.icon-check:before {
   content: "\e153"; }
 
-/* line 720, ../scss/furatto/_fonts.scss */
-.glyphicons.unchecked i:before {
+/* line 737, ../scss/furatto/_fonts.scss */
+.icon-unchecked:before {
   content: "\e154"; }
 
-/* line 723, ../scss/furatto/_fonts.scss */
-.glyphicons.more_windows i:before {
+/* line 740, ../scss/furatto/_fonts.scss */
+.icon-more_windows:before {
   content: "\e155"; }
 
-/* line 726, ../scss/furatto/_fonts.scss */
-.glyphicons.show_big_thumbnails i:before {
+/* line 743, ../scss/furatto/_fonts.scss */
+.icon-show_big_thumbnails:before {
   content: "\e156"; }
 
-/* line 729, ../scss/furatto/_fonts.scss */
-.glyphicons.show_thumbnails i:before {
+/* line 746, ../scss/furatto/_fonts.scss */
+.icon-show_thumbnails:before {
   content: "\e157"; }
 
-/* line 732, ../scss/furatto/_fonts.scss */
-.glyphicons.show_thumbnails_with_lines i:before {
+/* line 749, ../scss/furatto/_fonts.scss */
+.icon-show_thumbnails_with_lines:before {
   content: "\e158"; }
 
-/* line 735, ../scss/furatto/_fonts.scss */
-.glyphicons.show_lines i:before {
+/* line 752, ../scss/furatto/_fonts.scss */
+.icon-show_lines:before {
   content: "\e159"; }
 
-/* line 738, ../scss/furatto/_fonts.scss */
-.glyphicons.playlist i:before {
+/* line 755, ../scss/furatto/_fonts.scss */
+.icon-playlist:before {
   content: "\e160"; }
 
-/* line 741, ../scss/furatto/_fonts.scss */
-.glyphicons.imac i:before {
+/* line 758, ../scss/furatto/_fonts.scss */
+.icon-imac:before {
   content: "\e161"; }
 
-/* line 744, ../scss/furatto/_fonts.scss */
-.glyphicons.macbook i:before {
+/* line 761, ../scss/furatto/_fonts.scss */
+.icon-macbook:before {
   content: "\e162"; }
 
-/* line 747, ../scss/furatto/_fonts.scss */
-.glyphicons.ipad i:before {
+/* line 764, ../scss/furatto/_fonts.scss */
+.icon-ipad:before {
   content: "\e163"; }
 
-/* line 750, ../scss/furatto/_fonts.scss */
-.glyphicons.iphone i:before {
+/* line 767, ../scss/furatto/_fonts.scss */
+.icon-iphone:before {
   content: "\e164"; }
 
-/* line 753, ../scss/furatto/_fonts.scss */
-.glyphicons.iphone_transfer i:before {
+/* line 770, ../scss/furatto/_fonts.scss */
+.icon-iphone_transfer:before {
   content: "\e165"; }
 
-/* line 756, ../scss/furatto/_fonts.scss */
-.glyphicons.iphone_exchange i:before {
+/* line 773, ../scss/furatto/_fonts.scss */
+.icon-iphone_exchange:before {
   content: "\e166"; }
 
-/* line 759, ../scss/furatto/_fonts.scss */
-.glyphicons.ipod i:before {
+/* line 776, ../scss/furatto/_fonts.scss */
+.icon-ipod:before {
   content: "\e167"; }
 
-/* line 762, ../scss/furatto/_fonts.scss */
-.glyphicons.ipod_shuffle i:before {
+/* line 779, ../scss/furatto/_fonts.scss */
+.icon-ipod_shuffle:before {
   content: "\e168"; }
 
-/* line 765, ../scss/furatto/_fonts.scss */
-.glyphicons.ear_plugs i:before {
+/* line 782, ../scss/furatto/_fonts.scss */
+.icon-ear_plugs:before {
   content: "\e169"; }
 
-/* line 768, ../scss/furatto/_fonts.scss */
-.glyphicons.phone i:before {
+/* line 785, ../scss/furatto/_fonts.scss */
+.icon-phone:before {
   content: "\e170"; }
 
-/* line 771, ../scss/furatto/_fonts.scss */
-.glyphicons.step_backward i:before {
+/* line 788, ../scss/furatto/_fonts.scss */
+.icon-step_backward:before {
   content: "\e171"; }
 
-/* line 774, ../scss/furatto/_fonts.scss */
-.glyphicons.fast_backward i:before {
+/* line 791, ../scss/furatto/_fonts.scss */
+.icon-fast_backward:before {
   content: "\e172"; }
 
-/* line 777, ../scss/furatto/_fonts.scss */
-.glyphicons.rewind i:before {
+/* line 794, ../scss/furatto/_fonts.scss */
+.icon-rewind:before {
   content: "\e173"; }
 
-/* line 780, ../scss/furatto/_fonts.scss */
-.glyphicons.play i:before {
+/* line 797, ../scss/furatto/_fonts.scss */
+.icon-play:before {
   content: "\e174"; }
 
-/* line 783, ../scss/furatto/_fonts.scss */
-.glyphicons.pause i:before {
+/* line 800, ../scss/furatto/_fonts.scss */
+.icon-pause:before {
   content: "\e175"; }
 
-/* line 786, ../scss/furatto/_fonts.scss */
-.glyphicons.stop i:before {
+/* line 803, ../scss/furatto/_fonts.scss */
+.icon-stop:before {
   content: "\e176"; }
 
-/* line 789, ../scss/furatto/_fonts.scss */
-.glyphicons.forward i:before {
+/* line 806, ../scss/furatto/_fonts.scss */
+.icon-forward:before {
   content: "\e177"; }
 
-/* line 792, ../scss/furatto/_fonts.scss */
-.glyphicons.fast_forward i:before {
+/* line 809, ../scss/furatto/_fonts.scss */
+.icon-fast_forward:before {
   content: "\e178"; }
 
-/* line 795, ../scss/furatto/_fonts.scss */
-.glyphicons.step_forward i:before {
+/* line 812, ../scss/furatto/_fonts.scss */
+.icon-step_forward:before {
   content: "\e179"; }
 
-/* line 798, ../scss/furatto/_fonts.scss */
-.glyphicons.eject i:before {
+/* line 815, ../scss/furatto/_fonts.scss */
+.icon-eject:before {
   content: "\e180"; }
 
-/* line 801, ../scss/furatto/_fonts.scss */
-.glyphicons.facetime_video i:before {
+/* line 818, ../scss/furatto/_fonts.scss */
+.icon-facetime_video:before {
   content: "\e181"; }
 
-/* line 804, ../scss/furatto/_fonts.scss */
-.glyphicons.download_alt i:before {
+/* line 821, ../scss/furatto/_fonts.scss */
+.icon-download_alt:before {
   content: "\e182"; }
 
-/* line 807, ../scss/furatto/_fonts.scss */
-.glyphicons.mute i:before {
+/* line 824, ../scss/furatto/_fonts.scss */
+.icon-mute:before {
   content: "\e183"; }
 
-/* line 810, ../scss/furatto/_fonts.scss */
-.glyphicons.volume_down i:before {
+/* line 827, ../scss/furatto/_fonts.scss */
+.icon-volume_down:before {
   content: "\e184"; }
 
-/* line 813, ../scss/furatto/_fonts.scss */
-.glyphicons.volume_up i:before {
+/* line 830, ../scss/furatto/_fonts.scss */
+.icon-volume_up:before {
   content: "\e185"; }
 
-/* line 816, ../scss/furatto/_fonts.scss */
-.glyphicons.screenshot i:before {
+/* line 833, ../scss/furatto/_fonts.scss */
+.icon-screenshot:before {
   content: "\e186"; }
 
-/* line 819, ../scss/furatto/_fonts.scss */
-.glyphicons.move i:before {
+/* line 836, ../scss/furatto/_fonts.scss */
+.icon-move:before {
   content: "\e187"; }
 
-/* line 822, ../scss/furatto/_fonts.scss */
-.glyphicons.more i:before {
+/* line 839, ../scss/furatto/_fonts.scss */
+.icon-more:before {
   content: "\e188"; }
 
-/* line 825, ../scss/furatto/_fonts.scss */
-.glyphicons.brightness_reduce i:before {
+/* line 842, ../scss/furatto/_fonts.scss */
+.icon-brightness_reduce:before {
   content: "\e189"; }
 
-/* line 828, ../scss/furatto/_fonts.scss */
-.glyphicons.brightness_increase i:before {
+/* line 845, ../scss/furatto/_fonts.scss */
+.icon-brightness_increase:before {
   content: "\e190"; }
 
-/* line 831, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_plus i:before {
+/* line 848, ../scss/furatto/_fonts.scss */
+.icon-circle_plus:before {
   content: "\e191"; }
 
-/* line 834, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_minus i:before {
+/* line 851, ../scss/furatto/_fonts.scss */
+.icon-circle_minus:before {
   content: "\e192"; }
 
-/* line 837, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_remove i:before {
+/* line 854, ../scss/furatto/_fonts.scss */
+.icon-circle_remove:before {
   content: "\e193"; }
 
-/* line 840, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_ok i:before {
+/* line 857, ../scss/furatto/_fonts.scss */
+.icon-circle_ok:before {
   content: "\e194"; }
 
-/* line 843, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_question_mark i:before {
+/* line 860, ../scss/furatto/_fonts.scss */
+.icon-circle_question_mark:before {
   content: "\e195"; }
 
-/* line 846, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_info i:before {
+/* line 863, ../scss/furatto/_fonts.scss */
+.icon-circle_info:before {
   content: "\e196"; }
 
-/* line 849, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_exclamation_mark i:before {
+/* line 866, ../scss/furatto/_fonts.scss */
+.icon-circle_exclamation_mark:before {
   content: "\e197"; }
 
-/* line 852, ../scss/furatto/_fonts.scss */
-.glyphicons.remove i:before {
+/* line 869, ../scss/furatto/_fonts.scss */
+.icon-remove:before {
   content: "\e198"; }
 
-/* line 855, ../scss/furatto/_fonts.scss */
-.glyphicons.ok i:before {
+/* line 872, ../scss/furatto/_fonts.scss */
+.icon-ok:before {
   content: "\e199"; }
 
-/* line 858, ../scss/furatto/_fonts.scss */
-.glyphicons.ban i:before {
+/* line 875, ../scss/furatto/_fonts.scss */
+.icon-ban:before {
   content: "\e200"; }
 
-/* line 861, ../scss/furatto/_fonts.scss */
-.glyphicons.download i:before {
+/* line 878, ../scss/furatto/_fonts.scss */
+.icon-download:before {
   content: "\e201"; }
 
-/* line 864, ../scss/furatto/_fonts.scss */
-.glyphicons.upload i:before {
+/* line 881, ../scss/furatto/_fonts.scss */
+.icon-upload:before {
   content: "\e202"; }
 
-/* line 867, ../scss/furatto/_fonts.scss */
-.glyphicons.shopping_cart i:before {
+/* line 884, ../scss/furatto/_fonts.scss */
+.icon-shopping_cart:before {
   content: "\e203"; }
 
-/* line 870, ../scss/furatto/_fonts.scss */
-.glyphicons.lock i:before {
+/* line 887, ../scss/furatto/_fonts.scss */
+.icon-lock:before {
   content: "\e204"; }
 
-/* line 873, ../scss/furatto/_fonts.scss */
-.glyphicons.unlock i:before {
+/* line 890, ../scss/furatto/_fonts.scss */
+.icon-unlock:before {
   content: "\e205"; }
 
-/* line 876, ../scss/furatto/_fonts.scss */
-.glyphicons.electricity i:before {
+/* line 893, ../scss/furatto/_fonts.scss */
+.icon-electricity:before {
   content: "\e206"; }
 
-/* line 879, ../scss/furatto/_fonts.scss */
-.glyphicons.ok_2 i:before {
+/* line 896, ../scss/furatto/_fonts.scss */
+.icon-ok_2:before {
   content: "\e207"; }
 
-/* line 882, ../scss/furatto/_fonts.scss */
-.glyphicons.remove_2 i:before {
+/* line 899, ../scss/furatto/_fonts.scss */
+.icon-remove_2:before {
   content: "\e208"; }
 
-/* line 885, ../scss/furatto/_fonts.scss */
-.glyphicons.cart_out i:before {
+/* line 902, ../scss/furatto/_fonts.scss */
+.icon-cart_out:before {
   content: "\e209"; }
 
-/* line 888, ../scss/furatto/_fonts.scss */
-.glyphicons.cart_in i:before {
+/* line 905, ../scss/furatto/_fonts.scss */
+.icon-cart_in:before {
   content: "\e210"; }
 
-/* line 891, ../scss/furatto/_fonts.scss */
-.glyphicons.left_arrow i:before {
+/* line 908, ../scss/furatto/_fonts.scss */
+.icon-left_arrow:before {
   content: "\e211"; }
 
-/* line 894, ../scss/furatto/_fonts.scss */
-.glyphicons.right_arrow i:before {
+/* line 911, ../scss/furatto/_fonts.scss */
+.icon-right_arrow:before {
   content: "\e212"; }
 
-/* line 897, ../scss/furatto/_fonts.scss */
-.glyphicons.down_arrow i:before {
+/* line 914, ../scss/furatto/_fonts.scss */
+.icon-down_arrow:before {
   content: "\e213"; }
 
-/* line 900, ../scss/furatto/_fonts.scss */
-.glyphicons.up_arrow i:before {
+/* line 917, ../scss/furatto/_fonts.scss */
+.icon-up_arrow:before {
   content: "\e214"; }
 
-/* line 903, ../scss/furatto/_fonts.scss */
-.glyphicons.resize_small i:before {
+/* line 920, ../scss/furatto/_fonts.scss */
+.icon-resize_small:before {
   content: "\e215"; }
 
-/* line 906, ../scss/furatto/_fonts.scss */
-.glyphicons.resize_full i:before {
+/* line 923, ../scss/furatto/_fonts.scss */
+.icon-resize_full:before {
   content: "\e216"; }
 
-/* line 909, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_arrow_left i:before {
+/* line 926, ../scss/furatto/_fonts.scss */
+.icon-circle_arrow_left:before {
   content: "\e217"; }
 
-/* line 912, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_arrow_right i:before {
+/* line 929, ../scss/furatto/_fonts.scss */
+.icon-circle_arrow_right:before {
   content: "\e218"; }
 
-/* line 915, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_arrow_top i:before {
+/* line 932, ../scss/furatto/_fonts.scss */
+.icon-circle_arrow_top:before {
   content: "\e219"; }
 
-/* line 918, ../scss/furatto/_fonts.scss */
-.glyphicons.circle_arrow_down i:before {
+/* line 935, ../scss/furatto/_fonts.scss */
+.icon-circle_arrow_down:before {
   content: "\e220"; }
 
-/* line 921, ../scss/furatto/_fonts.scss */
-.glyphicons.play_button i:before {
+/* line 938, ../scss/furatto/_fonts.scss */
+.icon-play_button:before {
   content: "\e221"; }
 
-/* line 924, ../scss/furatto/_fonts.scss */
-.glyphicons.unshare i:before {
+/* line 941, ../scss/furatto/_fonts.scss */
+.icon-unshare:before {
   content: "\e222"; }
 
-/* line 927, ../scss/furatto/_fonts.scss */
-.glyphicons.share i:before {
+/* line 944, ../scss/furatto/_fonts.scss */
+.icon-share:before {
   content: "\e223"; }
 
-/* line 930, ../scss/furatto/_fonts.scss */
-.glyphicons.chevron-right i:before {
+/* line 947, ../scss/furatto/_fonts.scss */
+.icon-chevron-right:before {
   content: "\e224"; }
 
-/* line 933, ../scss/furatto/_fonts.scss */
-.glyphicons.chevron-left i:before {
+/* line 950, ../scss/furatto/_fonts.scss */
+.icon-chevron-left:before {
   content: "\e225"; }
 
-/* line 936, ../scss/furatto/_fonts.scss */
-.glyphicons.bluetooth i:before {
+/* line 953, ../scss/furatto/_fonts.scss */
+.icon-bluetooth:before {
   content: "\e226"; }
 
-/* line 939, ../scss/furatto/_fonts.scss */
-.glyphicons.euro i:before {
+/* line 956, ../scss/furatto/_fonts.scss */
+.icon-euro:before {
   content: "\20AC"; }
 
-/* line 942, ../scss/furatto/_fonts.scss */
-.glyphicons.usd i:before {
+/* line 959, ../scss/furatto/_fonts.scss */
+.icon-usd:before {
   content: "\e228"; }
 
-/* line 945, ../scss/furatto/_fonts.scss */
-.glyphicons.gbp i:before {
+/* line 962, ../scss/furatto/_fonts.scss */
+.icon-gbp:before {
   content: "\e229"; }
 
-/* line 948, ../scss/furatto/_fonts.scss */
-.glyphicons.retweet_2 i:before {
+/* line 965, ../scss/furatto/_fonts.scss */
+.icon-retweet_2:before {
   content: "\e230"; }
 
-/* line 951, ../scss/furatto/_fonts.scss */
-.glyphicons.moon i:before {
+/* line 968, ../scss/furatto/_fonts.scss */
+.icon-moon:before {
   content: "\e231"; }
 
-/* line 954, ../scss/furatto/_fonts.scss */
-.glyphicons.sun i:before {
+/* line 971, ../scss/furatto/_fonts.scss */
+.icon-sun:before {
   content: "\2609"; }
 
-/* line 957, ../scss/furatto/_fonts.scss */
-.glyphicons.cloud i:before {
+/* line 974, ../scss/furatto/_fonts.scss */
+.icon-cloud:before {
   content: "\2601"; }
 
-/* line 960, ../scss/furatto/_fonts.scss */
-.glyphicons.direction i:before {
+/* line 977, ../scss/furatto/_fonts.scss */
+.icon-direction:before {
   content: "\e234"; }
 
-/* line 963, ../scss/furatto/_fonts.scss */
-.glyphicons.brush i:before {
+/* line 980, ../scss/furatto/_fonts.scss */
+.icon-brush:before {
   content: "\e235"; }
 
-/* line 966, ../scss/furatto/_fonts.scss */
-.glyphicons.pen i:before {
+/* line 983, ../scss/furatto/_fonts.scss */
+.icon-pen:before {
   content: "\e236"; }
 
-/* line 969, ../scss/furatto/_fonts.scss */
-.glyphicons.zoom_in i:before {
+/* line 986, ../scss/furatto/_fonts.scss */
+.icon-zoom_in:before {
   content: "\e237"; }
 
-/* line 972, ../scss/furatto/_fonts.scss */
-.glyphicons.zoom_out i:before {
+/* line 989, ../scss/furatto/_fonts.scss */
+.icon-zoom_out:before {
   content: "\e238"; }
 
-/* line 975, ../scss/furatto/_fonts.scss */
-.glyphicons.pin i:before {
+/* line 992, ../scss/furatto/_fonts.scss */
+.icon-pin:before {
   content: "\e239"; }
 
-/* line 978, ../scss/furatto/_fonts.scss */
-.glyphicons.albums i:before {
+/* line 995, ../scss/furatto/_fonts.scss */
+.icon-albums:before {
   content: "\e240"; }
 
-/* line 981, ../scss/furatto/_fonts.scss */
-.glyphicons.rotation_lock i:before {
+/* line 998, ../scss/furatto/_fonts.scss */
+.icon-rotation_lock:before {
   content: "\e241"; }
 
-/* line 984, ../scss/furatto/_fonts.scss */
-.glyphicons.flash i:before {
+/* line 1001, ../scss/furatto/_fonts.scss */
+.icon-flash:before {
   content: "\e242"; }
 
-/* line 987, ../scss/furatto/_fonts.scss */
-.glyphicons.google_maps i:before {
+/* line 1004, ../scss/furatto/_fonts.scss */
+.icon-google_maps:before {
   content: "\e243"; }
 
-/* line 990, ../scss/furatto/_fonts.scss */
-.glyphicons.anchor i:before {
+/* line 1007, ../scss/furatto/_fonts.scss */
+.icon-anchor:before {
   content: "\2693"; }
 
-/* line 993, ../scss/furatto/_fonts.scss */
-.glyphicons.conversation i:before {
+/* line 1010, ../scss/furatto/_fonts.scss */
+.icon-conversation:before {
   content: "\e245"; }
 
-/* line 996, ../scss/furatto/_fonts.scss */
-.glyphicons.chat i:before {
+/* line 1013, ../scss/furatto/_fonts.scss */
+.icon-chat:before {
   content: "\e246"; }
 
-/* line 999, ../scss/furatto/_fonts.scss */
-.glyphicons.male i:before {
+/* line 1016, ../scss/furatto/_fonts.scss */
+.icon-male:before {
   content: "\e247"; }
 
-/* line 1002, ../scss/furatto/_fonts.scss */
-.glyphicons.female i:before {
+/* line 1019, ../scss/furatto/_fonts.scss */
+.icon-female:before {
   content: "\e248"; }
 
-/* line 1005, ../scss/furatto/_fonts.scss */
-.glyphicons.asterisk i:before {
+/* line 1022, ../scss/furatto/_fonts.scss */
+.icon-asterisk:before {
   content: "\002A"; }
 
-/* line 1008, ../scss/furatto/_fonts.scss */
-.glyphicons.divide i:before {
+/* line 1025, ../scss/furatto/_fonts.scss */
+.icon-divide:before {
   content: "\00F7"; }
 
-/* line 1011, ../scss/furatto/_fonts.scss */
-.glyphicons.snorkel_diving i:before {
+/* line 1028, ../scss/furatto/_fonts.scss */
+.icon-snorkel_diving:before {
   content: "\e251"; }
 
-/* line 1014, ../scss/furatto/_fonts.scss */
-.glyphicons.scuba_diving i:before {
+/* line 1031, ../scss/furatto/_fonts.scss */
+.icon-scuba_diving:before {
   content: "\e252"; }
 
-/* line 1017, ../scss/furatto/_fonts.scss */
-.glyphicons.oxygen_bottle i:before {
+/* line 1034, ../scss/furatto/_fonts.scss */
+.icon-oxygen_bottle:before {
   content: "\e253"; }
 
-/* line 1020, ../scss/furatto/_fonts.scss */
-.glyphicons.fins i:before {
+/* line 1037, ../scss/furatto/_fonts.scss */
+.icon-fins:before {
   content: "\e254"; }
 
-/* line 1023, ../scss/furatto/_fonts.scss */
-.glyphicons.fishes i:before {
+/* line 1040, ../scss/furatto/_fonts.scss */
+.icon-fishes:before {
   content: "\e255"; }
 
-/* line 1026, ../scss/furatto/_fonts.scss */
-.glyphicons.boat i:before {
+/* line 1043, ../scss/furatto/_fonts.scss */
+.icon-boat:before {
   content: "\e256"; }
 
-/* line 1029, ../scss/furatto/_fonts.scss */
-.glyphicons.delete i:before {
+/* line 1046, ../scss/furatto/_fonts.scss */
+.icon-delete:before {
   content: "\e257"; }
 
-/* line 1032, ../scss/furatto/_fonts.scss */
-.glyphicons.sheriffs_star i:before {
+/* line 1049, ../scss/furatto/_fonts.scss */
+.icon-sheriffs_star:before {
   content: "\e258"; }
 
-/* line 1035, ../scss/furatto/_fonts.scss */
-.glyphicons.qrcode i:before {
+/* line 1052, ../scss/furatto/_fonts.scss */
+.icon-qrcode:before {
   content: "\e259"; }
 
-/* line 1038, ../scss/furatto/_fonts.scss */
-.glyphicons.barcode i:before {
+/* line 1055, ../scss/furatto/_fonts.scss */
+.icon-barcode:before {
   content: "\e260"; }
 
-/* line 1041, ../scss/furatto/_fonts.scss */
-.glyphicons.pool i:before {
+/* line 1058, ../scss/furatto/_fonts.scss */
+.icon-pool:before {
   content: "\e261"; }
 
-/* line 1044, ../scss/furatto/_fonts.scss */
-.glyphicons.buoy i:before {
+/* line 1061, ../scss/furatto/_fonts.scss */
+.icon-buoy:before {
   content: "\e262"; }
 
-/* line 1047, ../scss/furatto/_fonts.scss */
-.glyphicons.spade i:before {
+/* line 1064, ../scss/furatto/_fonts.scss */
+.icon-spade:before {
   content: "\e263"; }
 
-/* line 1050, ../scss/furatto/_fonts.scss */
-.glyphicons.bank i:before {
+/* line 1067, ../scss/furatto/_fonts.scss */
+.icon-bank:before {
   content: "\e264"; }
 
-/* line 1053, ../scss/furatto/_fonts.scss */
-.glyphicons.vcard i:before {
+/* line 1070, ../scss/furatto/_fonts.scss */
+.icon-vcard:before {
   content: "\e265"; }
 
-/* line 1056, ../scss/furatto/_fonts.scss */
-.glyphicons.electrical_plug i:before {
+/* line 1073, ../scss/furatto/_fonts.scss */
+.icon-electrical_plug:before {
   content: "\e266"; }
 
-/* line 1059, ../scss/furatto/_fonts.scss */
-.glyphicons.flag i:before {
+/* line 1076, ../scss/furatto/_fonts.scss */
+.icon-flag:before {
   content: "\e267"; }
 
-/* line 1062, ../scss/furatto/_fonts.scss */
-.glyphicons.credit_card i:before {
+/* line 1079, ../scss/furatto/_fonts.scss */
+.icon-credit_card:before {
   content: "\e268"; }
 
-/* line 1065, ../scss/furatto/_fonts.scss */
-.glyphicons.keyboard-wireless i:before {
+/* line 1082, ../scss/furatto/_fonts.scss */
+.icon-keyboard-wireless:before {
   content: "\e269"; }
 
-/* line 1068, ../scss/furatto/_fonts.scss */
-.glyphicons.keyboard-wired i:before {
+/* line 1085, ../scss/furatto/_fonts.scss */
+.icon-keyboard-wired:before {
   content: "\e270"; }
 
-/* line 1071, ../scss/furatto/_fonts.scss */
-.glyphicons.shield i:before {
+/* line 1088, ../scss/furatto/_fonts.scss */
+.icon-shield:before {
   content: "\e271"; }
 
-/* line 1074, ../scss/furatto/_fonts.scss */
-.glyphicons.ring i:before {
+/* line 1091, ../scss/furatto/_fonts.scss */
+.icon-ring:before {
   content: "\02DA"; }
 
-/* line 1077, ../scss/furatto/_fonts.scss */
-.glyphicons.cake i:before {
+/* line 1094, ../scss/furatto/_fonts.scss */
+.icon-cake:before {
   content: "\e273"; }
 
-/* line 1080, ../scss/furatto/_fonts.scss */
-.glyphicons.drink i:before {
+/* line 1097, ../scss/furatto/_fonts.scss */
+.icon-drink:before {
   content: "\e274"; }
 
-/* line 1083, ../scss/furatto/_fonts.scss */
-.glyphicons.beer i:before {
+/* line 1100, ../scss/furatto/_fonts.scss */
+.icon-beer:before {
   content: "\e275"; }
 
-/* line 1086, ../scss/furatto/_fonts.scss */
-.glyphicons.fast_food i:before {
+/* line 1103, ../scss/furatto/_fonts.scss */
+.icon-fast_food:before {
   content: "\e276"; }
 
-/* line 1089, ../scss/furatto/_fonts.scss */
-.glyphicons.cutlery i:before {
+/* line 1106, ../scss/furatto/_fonts.scss */
+.icon-cutlery:before {
   content: "\e277"; }
 
-/* line 1092, ../scss/furatto/_fonts.scss */
-.glyphicons.pizza i:before {
+/* line 1109, ../scss/furatto/_fonts.scss */
+.icon-pizza:before {
   content: "\e278"; }
 
-/* line 1095, ../scss/furatto/_fonts.scss */
-.glyphicons.birthday_cake i:before {
+/* line 1112, ../scss/furatto/_fonts.scss */
+.icon-birthday_cake:before {
   content: "\e279"; }
 
-/* line 1098, ../scss/furatto/_fonts.scss */
-.glyphicons.tablet i:before {
+/* line 1115, ../scss/furatto/_fonts.scss */
+.icon-tablet:before {
   content: "\e280"; }
 
-/* line 1101, ../scss/furatto/_fonts.scss */
-.glyphicons.settings i:before {
+/* line 1118, ../scss/furatto/_fonts.scss */
+.icon-settings:before {
   content: "\e281"; }
 
-/* line 1104, ../scss/furatto/_fonts.scss */
-.glyphicons.bullets i:before {
+/* line 1121, ../scss/furatto/_fonts.scss */
+.icon-bullets:before {
   content: "\e282"; }
 
-/* line 1107, ../scss/furatto/_fonts.scss */
-.glyphicons.cardio i:before {
+/* line 1124, ../scss/furatto/_fonts.scss */
+.icon-cardio:before {
   content: "\e283"; }
 
-/* line 1110, ../scss/furatto/_fonts.scss */
-.glyphicons.t-shirt i:before {
+/* line 1127, ../scss/furatto/_fonts.scss */
+.icon-t-shirt:before {
   content: "\e284"; }
 
-/* line 1113, ../scss/furatto/_fonts.scss */
-.glyphicons.pants i:before {
+/* line 1130, ../scss/furatto/_fonts.scss */
+.icon-pants:before {
   content: "\e285"; }
 
-/* line 1116, ../scss/furatto/_fonts.scss */
-.glyphicons.sweater i:before {
+/* line 1133, ../scss/furatto/_fonts.scss */
+.icon-sweater:before {
   content: "\e286"; }
 
-/* line 1119, ../scss/furatto/_fonts.scss */
-.glyphicons.fabric i:before {
+/* line 1136, ../scss/furatto/_fonts.scss */
+.icon-fabric:before {
   content: "\e287"; }
 
-/* line 1122, ../scss/furatto/_fonts.scss */
-.glyphicons.leather i:before {
+/* line 1139, ../scss/furatto/_fonts.scss */
+.icon-leather:before {
   content: "\e288"; }
 
-/* line 1125, ../scss/furatto/_fonts.scss */
-.glyphicons.scissors i:before {
+/* line 1142, ../scss/furatto/_fonts.scss */
+.icon-scissors:before {
   content: "\e289"; }
 
-/* line 1128, ../scss/furatto/_fonts.scss */
-.glyphicons.bomb i:before {
+/* line 1145, ../scss/furatto/_fonts.scss */
+.icon-bomb:before {
   content: "\e290"; }
 
-/* line 1131, ../scss/furatto/_fonts.scss */
-.glyphicons.skull i:before {
+/* line 1148, ../scss/furatto/_fonts.scss */
+.icon-skull:before {
   content: "\e291"; }
 
-/* line 1134, ../scss/furatto/_fonts.scss */
-.glyphicons.celebration i:before {
+/* line 1151, ../scss/furatto/_fonts.scss */
+.icon-celebration:before {
   content: "\e292"; }
 
-/* line 1137, ../scss/furatto/_fonts.scss */
-.glyphicons.tea_kettle i:before {
+/* line 1154, ../scss/furatto/_fonts.scss */
+.icon-tea_kettle:before {
   content: "\e293"; }
 
-/* line 1140, ../scss/furatto/_fonts.scss */
-.glyphicons.french_press i:before {
+/* line 1157, ../scss/furatto/_fonts.scss */
+.icon-french_press:before {
   content: "\e294"; }
 
-/* line 1143, ../scss/furatto/_fonts.scss */
-.glyphicons.coffe_cup i:before {
+/* line 1160, ../scss/furatto/_fonts.scss */
+.icon-coffe_cup:before {
   content: "\e295"; }
 
-/* line 1146, ../scss/furatto/_fonts.scss */
-.glyphicons.pot i:before {
+/* line 1163, ../scss/furatto/_fonts.scss */
+.icon-pot:before {
   content: "\e296"; }
 
-/* line 1149, ../scss/furatto/_fonts.scss */
-.glyphicons.grater i:before {
+/* line 1166, ../scss/furatto/_fonts.scss */
+.icon-grater:before {
   content: "\e297"; }
 
-/* line 1152, ../scss/furatto/_fonts.scss */
-.glyphicons.kettle i:before {
+/* line 1169, ../scss/furatto/_fonts.scss */
+.icon-kettle:before {
   content: "\e298"; }
 
-/* line 1155, ../scss/furatto/_fonts.scss */
-.glyphicons.hospital i:before {
+/* line 1172, ../scss/furatto/_fonts.scss */
+.icon-hospital:before {
   content: "\e299"; }
 
-/* line 1158, ../scss/furatto/_fonts.scss */
-.glyphicons.hospital_h i:before {
+/* line 1175, ../scss/furatto/_fonts.scss */
+.icon-hospital_h:before {
   content: "\e300"; }
 
-/* line 1161, ../scss/furatto/_fonts.scss */
-.glyphicons.microphone i:before {
+/* line 1178, ../scss/furatto/_fonts.scss */
+.icon-microphone:before {
   content: "\e301"; }
 
-/* line 1164, ../scss/furatto/_fonts.scss */
-.glyphicons.webcam i:before {
+/* line 1181, ../scss/furatto/_fonts.scss */
+.icon-webcam:before {
   content: "\e302"; }
 
-/* line 1167, ../scss/furatto/_fonts.scss */
-.glyphicons.temple_christianity_church i:before {
+/* line 1184, ../scss/furatto/_fonts.scss */
+.icon-temple_christianity_church:before {
   content: "\e303"; }
 
-/* line 1170, ../scss/furatto/_fonts.scss */
-.glyphicons.temple_islam i:before {
+/* line 1187, ../scss/furatto/_fonts.scss */
+.icon-temple_islam:before {
   content: "\e304"; }
 
-/* line 1173, ../scss/furatto/_fonts.scss */
-.glyphicons.temple_hindu i:before {
+/* line 1190, ../scss/furatto/_fonts.scss */
+.icon-temple_hindu:before {
   content: "\e305"; }
 
-/* line 1176, ../scss/furatto/_fonts.scss */
-.glyphicons.temple_buddhist i:before {
+/* line 1193, ../scss/furatto/_fonts.scss */
+.icon-temple_buddhist:before {
   content: "\e306"; }
 
-/* line 1179, ../scss/furatto/_fonts.scss */
-.glyphicons.bicycle i:before {
+/* line 1196, ../scss/furatto/_fonts.scss */
+.icon-bicycle:before {
   content: "\e307"; }
 
-/* line 1182, ../scss/furatto/_fonts.scss */
-.glyphicons.life_preserver i:before {
+/* line 1199, ../scss/furatto/_fonts.scss */
+.icon-life_preserver:before {
   content: "\e308"; }
 
-/* line 1185, ../scss/furatto/_fonts.scss */
-.glyphicons.share_alt i:before {
+/* line 1202, ../scss/furatto/_fonts.scss */
+.icon-share_alt:before {
   content: "\e309"; }
 
-/* line 1188, ../scss/furatto/_fonts.scss */
-.glyphicons.comments i:before {
+/* line 1205, ../scss/furatto/_fonts.scss */
+.icon-comments:before {
   content: "\e310"; }
 
-/* line 1191, ../scss/furatto/_fonts.scss */
-.glyphicons.flower i:before {
+/* line 1208, ../scss/furatto/_fonts.scss */
+.icon-flower:before {
   content: "\2698"; }
 
-/* line 1194, ../scss/furatto/_fonts.scss */
-.glyphicons.baseball i:before {
+/* line 1211, ../scss/furatto/_fonts.scss */
+.icon-baseball:before {
   content: "\e312"; }
 
-/* line 1197, ../scss/furatto/_fonts.scss */
-.glyphicons.rugby i:before {
+/* line 1214, ../scss/furatto/_fonts.scss */
+.icon-rugby:before {
   content: "\e313"; }
 
-/* line 1200, ../scss/furatto/_fonts.scss */
-.glyphicons.ax i:before {
+/* line 1217, ../scss/furatto/_fonts.scss */
+.icon-ax:before {
   content: "\e314"; }
 
-/* line 1203, ../scss/furatto/_fonts.scss */
-.glyphicons.table_tennis i:before {
+/* line 1220, ../scss/furatto/_fonts.scss */
+.icon-table_tennis:before {
   content: "\e315"; }
 
-/* line 1206, ../scss/furatto/_fonts.scss */
-.glyphicons.bowling i:before {
+/* line 1223, ../scss/furatto/_fonts.scss */
+.icon-bowling:before {
   content: "\e316"; }
 
-/* line 1209, ../scss/furatto/_fonts.scss */
-.glyphicons.tree_conifer i:before {
+/* line 1226, ../scss/furatto/_fonts.scss */
+.icon-tree_conifer:before {
   content: "\e317"; }
 
-/* line 1212, ../scss/furatto/_fonts.scss */
-.glyphicons.tree_deciduous i:before {
+/* line 1229, ../scss/furatto/_fonts.scss */
+.icon-tree_deciduous:before {
   content: "\e318"; }
 
-/* line 1215, ../scss/furatto/_fonts.scss */
-.glyphicons.more_items i:before {
+/* line 1232, ../scss/furatto/_fonts.scss */
+.icon-more_items:before {
   content: "\e319"; }
 
-/* line 1218, ../scss/furatto/_fonts.scss */
-.glyphicons.sort i:before {
+/* line 1235, ../scss/furatto/_fonts.scss */
+.icon-sort:before {
   content: "\e320"; }
 
-/* line 1221, ../scss/furatto/_fonts.scss */
-.glyphicons.filter i:before {
+/* line 1238, ../scss/furatto/_fonts.scss */
+.icon-filter:before {
   content: "\e321"; }
 
-/* line 1224, ../scss/furatto/_fonts.scss */
-.glyphicons.gamepad i:before {
+/* line 1241, ../scss/furatto/_fonts.scss */
+.icon-gamepad:before {
   content: "\e322"; }
 
-/* line 1227, ../scss/furatto/_fonts.scss */
-.glyphicons.playing_dices i:before {
+/* line 1244, ../scss/furatto/_fonts.scss */
+.icon-playing_dices:before {
   content: "\e323"; }
 
-/* line 1230, ../scss/furatto/_fonts.scss */
-.glyphicons.calculator i:before {
+/* line 1247, ../scss/furatto/_fonts.scss */
+.icon-calculator:before {
   content: "\e324"; }
 
-/* line 1233, ../scss/furatto/_fonts.scss */
-.glyphicons.tie i:before {
+/* line 1250, ../scss/furatto/_fonts.scss */
+.icon-tie:before {
   content: "\e325"; }
 
-/* line 1236, ../scss/furatto/_fonts.scss */
-.glyphicons.wallet i:before {
+/* line 1253, ../scss/furatto/_fonts.scss */
+.icon-wallet:before {
   content: "\e326"; }
 
-/* line 1239, ../scss/furatto/_fonts.scss */
-.glyphicons.piano i:before {
+/* line 1256, ../scss/furatto/_fonts.scss */
+.icon-piano:before {
   content: "\e327"; }
 
-/* line 1242, ../scss/furatto/_fonts.scss */
-.glyphicons.sampler i:before {
+/* line 1259, ../scss/furatto/_fonts.scss */
+.icon-sampler:before {
   content: "\e328"; }
 
-/* line 1245, ../scss/furatto/_fonts.scss */
-.glyphicons.podium i:before {
+/* line 1262, ../scss/furatto/_fonts.scss */
+.icon-podium:before {
   content: "\e329"; }
 
-/* line 1248, ../scss/furatto/_fonts.scss */
-.glyphicons.soccer_ball i:before {
+/* line 1265, ../scss/furatto/_fonts.scss */
+.icon-soccer_ball:before {
   content: "\e330"; }
 
-/* line 1251, ../scss/furatto/_fonts.scss */
-.glyphicons.blog i:before {
+/* line 1268, ../scss/furatto/_fonts.scss */
+.icon-blog:before {
   content: "\e331"; }
 
-/* line 1254, ../scss/furatto/_fonts.scss */
-.glyphicons.dashboard i:before {
+/* line 1271, ../scss/furatto/_fonts.scss */
+.icon-dashboard:before {
   content: "\e332"; }
 
-/* line 1257, ../scss/furatto/_fonts.scss */
-.glyphicons.certificate i:before {
+/* line 1274, ../scss/furatto/_fonts.scss */
+.icon-certificate:before {
   content: "\e333"; }
 
-/* line 1260, ../scss/furatto/_fonts.scss */
-.glyphicons.bell i:before {
+/* line 1277, ../scss/furatto/_fonts.scss */
+.icon-bell:before {
   content: "\e334"; }
 
-/* line 1263, ../scss/furatto/_fonts.scss */
-.glyphicons.candle i:before {
+/* line 1280, ../scss/furatto/_fonts.scss */
+.icon-candle:before {
   content: "\e335"; }
 
-/* line 1266, ../scss/furatto/_fonts.scss */
-.glyphicons.pushpin i:before {
+/* line 1283, ../scss/furatto/_fonts.scss */
+.icon-pushpin:before {
   content: "\e336"; }
 
-/* line 1269, ../scss/furatto/_fonts.scss */
-.glyphicons.iphone_shake i:before {
+/* line 1286, ../scss/furatto/_fonts.scss */
+.icon-iphone_shake:before {
   content: "\e337"; }
 
-/* line 1272, ../scss/furatto/_fonts.scss */
-.glyphicons.pin_flag i:before {
+/* line 1289, ../scss/furatto/_fonts.scss */
+.icon-pin_flag:before {
   content: "\e338"; }
 
-/* line 1275, ../scss/furatto/_fonts.scss */
-.glyphicons.turtle i:before {
+/* line 1292, ../scss/furatto/_fonts.scss */
+.icon-turtle:before {
   content: "\e339"; }
 
-/* line 1278, ../scss/furatto/_fonts.scss */
-.glyphicons.rabbit i:before {
+/* line 1295, ../scss/furatto/_fonts.scss */
+.icon-rabbit:before {
   content: "\e340"; }
 
-/* line 1281, ../scss/furatto/_fonts.scss */
-.glyphicons.globe i:before {
+/* line 1298, ../scss/furatto/_fonts.scss */
+.icon-globe:before {
   content: "\e341"; }
 
-/* line 1284, ../scss/furatto/_fonts.scss */
-.glyphicons.briefcase i:before {
+/* line 1301, ../scss/furatto/_fonts.scss */
+.icon-briefcase:before {
   content: "\e342"; }
 
-/* line 1287, ../scss/furatto/_fonts.scss */
-.glyphicons.hdd i:before {
+/* line 1304, ../scss/furatto/_fonts.scss */
+.icon-hdd:before {
   content: "\e343"; }
 
-/* line 1290, ../scss/furatto/_fonts.scss */
-.glyphicons.thumbs_up i:before {
+/* line 1307, ../scss/furatto/_fonts.scss */
+.icon-thumbs_up:before {
   content: "\e344"; }
 
-/* line 1293, ../scss/furatto/_fonts.scss */
-.glyphicons.thumbs_down i:before {
+/* line 1310, ../scss/furatto/_fonts.scss */
+.icon-thumbs_down:before {
   content: "\e345"; }
 
-/* line 1296, ../scss/furatto/_fonts.scss */
-.glyphicons.hand_right i:before {
+/* line 1313, ../scss/furatto/_fonts.scss */
+.icon-hand_right:before {
   content: "\e346"; }
 
-/* line 1299, ../scss/furatto/_fonts.scss */
-.glyphicons.hand_left i:before {
+/* line 1316, ../scss/furatto/_fonts.scss */
+.icon-hand_left:before {
   content: "\e347"; }
 
-/* line 1302, ../scss/furatto/_fonts.scss */
-.glyphicons.hand_up i:before {
+/* line 1319, ../scss/furatto/_fonts.scss */
+.icon-hand_up:before {
   content: "\e348"; }
 
-/* line 1305, ../scss/furatto/_fonts.scss */
-.glyphicons.hand_down i:before {
+/* line 1322, ../scss/furatto/_fonts.scss */
+.icon-hand_down:before {
   content: "\e349"; }
 
-/* line 1308, ../scss/furatto/_fonts.scss */
-.glyphicons.fullscreen i:before {
+/* line 1325, ../scss/furatto/_fonts.scss */
+.icon-fullscreen:before {
   content: "\e350"; }
 
-/* line 1311, ../scss/furatto/_fonts.scss */
-.glyphicons.shopping_bag i:before {
+/* line 1328, ../scss/furatto/_fonts.scss */
+.icon-shopping_bag:before {
   content: "\e351"; }
 
-/* line 1314, ../scss/furatto/_fonts.scss */
-.glyphicons.book_open i:before {
+/* line 1331, ../scss/furatto/_fonts.scss */
+.icon-book_open:before {
   content: "\e352"; }
 
-/* line 1317, ../scss/furatto/_fonts.scss */
-.glyphicons.nameplate i:before {
+/* line 1334, ../scss/furatto/_fonts.scss */
+.icon-nameplate:before {
   content: "\e353"; }
 
-/* line 1320, ../scss/furatto/_fonts.scss */
-.glyphicons.nameplate_alt i:before {
+/* line 1337, ../scss/furatto/_fonts.scss */
+.icon-nameplate_alt:before {
   content: "\e354"; }
 
-/* line 1323, ../scss/furatto/_fonts.scss */
-.glyphicons.vases i:before {
+/* line 1340, ../scss/furatto/_fonts.scss */
+.icon-vases:before {
   content: "\e355"; }
 
-/* line 1326, ../scss/furatto/_fonts.scss */
-.glyphicons.bullhorn i:before {
+/* line 1343, ../scss/furatto/_fonts.scss */
+.icon-bullhorn:before {
   content: "\e356"; }
 
-/* line 1329, ../scss/furatto/_fonts.scss */
-.glyphicons.dumbbell i:before {
+/* line 1346, ../scss/furatto/_fonts.scss */
+.icon-dumbbell:before {
   content: "\e357"; }
 
-/* line 1332, ../scss/furatto/_fonts.scss */
-.glyphicons.suitcase i:before {
+/* line 1349, ../scss/furatto/_fonts.scss */
+.icon-suitcase:before {
   content: "\e358"; }
 
-/* line 1335, ../scss/furatto/_fonts.scss */
-.glyphicons.file_import i:before {
+/* line 1352, ../scss/furatto/_fonts.scss */
+.icon-file_import:before {
   content: "\e359"; }
 
-/* line 1338, ../scss/furatto/_fonts.scss */
-.glyphicons.file_export i:before {
+/* line 1355, ../scss/furatto/_fonts.scss */
+.icon-file_export:before {
   content: "\e360"; }
 
-/* line 1341, ../scss/furatto/_fonts.scss */
-.glyphicons.bug i:before {
+/* line 1358, ../scss/furatto/_fonts.scss */
+.icon-bug:before {
   content: "\e361"; }
 
-/* line 1344, ../scss/furatto/_fonts.scss */
-.glyphicons.crown i:before {
+/* line 1361, ../scss/furatto/_fonts.scss */
+.icon-crown:before {
   content: "\e362"; }
 
-/* line 1347, ../scss/furatto/_fonts.scss */
-.glyphicons.smoking i:before {
+/* line 1364, ../scss/furatto/_fonts.scss */
+.icon-smoking:before {
   content: "\e363"; }
 
-/* line 1350, ../scss/furatto/_fonts.scss */
-.glyphicons.cloud-upload i:before {
+/* line 1367, ../scss/furatto/_fonts.scss */
+.icon-cloud-upload:before {
   content: "\e364"; }
 
-/* line 1353, ../scss/furatto/_fonts.scss */
-.glyphicons.cloud-download i:before {
+/* line 1370, ../scss/furatto/_fonts.scss */
+.icon-cloud-download:before {
   content: "\e365"; }
 
-/* line 1356, ../scss/furatto/_fonts.scss */
-.glyphicons.restart i:before {
+/* line 1373, ../scss/furatto/_fonts.scss */
+.icon-restart:before {
   content: "\e366"; }
 
-/* line 1359, ../scss/furatto/_fonts.scss */
-.glyphicons.security_camera i:before {
+/* line 1376, ../scss/furatto/_fonts.scss */
+.icon-security_camera:before {
   content: "\e367"; }
 
-/* line 1362, ../scss/furatto/_fonts.scss */
-.glyphicons.expand i:before {
+/* line 1379, ../scss/furatto/_fonts.scss */
+.icon-expand:before {
   content: "\e368"; }
 
-/* line 1365, ../scss/furatto/_fonts.scss */
-.glyphicons.collapse i:before {
+/* line 1382, ../scss/furatto/_fonts.scss */
+.icon-collapse:before {
   content: "\e369"; }
 
-/* line 1368, ../scss/furatto/_fonts.scss */
-.glyphicons.collapse_top i:before {
+/* line 1385, ../scss/furatto/_fonts.scss */
+.icon-collapse_top:before {
   content: "\e370"; }
 
-/* line 1371, ../scss/furatto/_fonts.scss */
-.glyphicons.globe_af i:before {
+/* line 1388, ../scss/furatto/_fonts.scss */
+.icon-globe_af:before {
   content: "\e371"; }
 
-/* line 1374, ../scss/furatto/_fonts.scss */
-.glyphicons.global i:before {
+/* line 1391, ../scss/furatto/_fonts.scss */
+.icon-global:before {
   content: "\e372"; }
 
-/* line 1377, ../scss/furatto/_fonts.scss */
-.glyphicons.spray i:before {
+/* line 1394, ../scss/furatto/_fonts.scss */
+.icon-spray:before {
   content: "\e373"; }
 
-/* line 1380, ../scss/furatto/_fonts.scss */
-.glyphicons.nails i:before {
+/* line 1397, ../scss/furatto/_fonts.scss */
+.icon-nails:before {
   content: "\e374"; }
 
-/* line 1383, ../scss/furatto/_fonts.scss */
-.glyphicons.claw_hammer i:before {
+/* line 1400, ../scss/furatto/_fonts.scss */
+.icon-claw_hammer:before {
   content: "\e375"; }
 
-/* line 1386, ../scss/furatto/_fonts.scss */
-.glyphicons.classic_hammer i:before {
+/* line 1403, ../scss/furatto/_fonts.scss */
+.icon-classic_hammer:before {
   content: "\e376"; }
 
-/* line 1389, ../scss/furatto/_fonts.scss */
-.glyphicons.hand_saw i:before {
+/* line 1406, ../scss/furatto/_fonts.scss */
+.icon-hand_saw:before {
   content: "\e377"; }
 
-/* line 1392, ../scss/furatto/_fonts.scss */
-.glyphicons.riflescope i:before {
+/* line 1409, ../scss/furatto/_fonts.scss */
+.icon-riflescope:before {
   content: "\e378"; }
 
-/* line 1395, ../scss/furatto/_fonts.scss */
-.glyphicons.electrical_socket_eu i:before {
+/* line 1412, ../scss/furatto/_fonts.scss */
+.icon-electrical_socket_eu:before {
   content: "\e379"; }
 
-/* line 1398, ../scss/furatto/_fonts.scss */
-.glyphicons.electrical_socket_us i:before {
+/* line 1415, ../scss/furatto/_fonts.scss */
+.icon-electrical_socket_us:before {
   content: "\e380"; }
 
-/* line 1401, ../scss/furatto/_fonts.scss */
-.glyphicons.pinterest i:before {
+/* line 1418, ../scss/furatto/_fonts.scss */
+.icon-pinterest:before {
   content: "\e381"; }
 
-/* line 1404, ../scss/furatto/_fonts.scss */
-.glyphicons.dropbox i:before {
+/* line 1421, ../scss/furatto/_fonts.scss */
+.icon-dropbox:before {
   content: "\e382"; }
 
-/* line 1407, ../scss/furatto/_fonts.scss */
-.glyphicons.google_plus i:before {
+/* line 1424, ../scss/furatto/_fonts.scss */
+.icon-google_plus:before {
   content: "\e383"; }
 
-/* line 1410, ../scss/furatto/_fonts.scss */
-.glyphicons.jolicloud i:before {
+/* line 1427, ../scss/furatto/_fonts.scss */
+.icon-jolicloud:before {
   content: "\e384"; }
 
-/* line 1413, ../scss/furatto/_fonts.scss */
-.glyphicons.yahoo i:before {
+/* line 1430, ../scss/furatto/_fonts.scss */
+.icon-yahoo:before {
   content: "\e385"; }
 
-/* line 1416, ../scss/furatto/_fonts.scss */
-.glyphicons.blogger i:before {
+/* line 1433, ../scss/furatto/_fonts.scss */
+.icon-blogger:before {
   content: "\e386"; }
 
-/* line 1419, ../scss/furatto/_fonts.scss */
-.glyphicons.picasa i:before {
+/* line 1436, ../scss/furatto/_fonts.scss */
+.icon-picasa:before {
   content: "\e387"; }
 
-/* line 1422, ../scss/furatto/_fonts.scss */
-.glyphicons.amazon i:before {
+/* line 1439, ../scss/furatto/_fonts.scss */
+.icon-amazon:before {
   content: "\e388"; }
 
-/* line 1425, ../scss/furatto/_fonts.scss */
-.glyphicons.tumblr i:before {
+/* line 1442, ../scss/furatto/_fonts.scss */
+.icon-tumblr:before {
   content: "\e389"; }
 
-/* line 1428, ../scss/furatto/_fonts.scss */
-.glyphicons.wordpress i:before {
+/* line 1445, ../scss/furatto/_fonts.scss */
+.icon-wordpress:before {
   content: "\e390"; }
 
-/* line 1431, ../scss/furatto/_fonts.scss */
-.glyphicons.instapaper i:before {
+/* line 1448, ../scss/furatto/_fonts.scss */
+.icon-instapaper:before {
   content: "\e391"; }
 
-/* line 1434, ../scss/furatto/_fonts.scss */
-.glyphicons.evernote i:before {
+/* line 1451, ../scss/furatto/_fonts.scss */
+.icon-evernote:before {
   content: "\e392"; }
 
-/* line 1437, ../scss/furatto/_fonts.scss */
-.glyphicons.xing i:before {
+/* line 1454, ../scss/furatto/_fonts.scss */
+.icon-xing:before {
   content: "\e393"; }
 
-/* line 1440, ../scss/furatto/_fonts.scss */
-.glyphicons.zootool i:before {
+/* line 1457, ../scss/furatto/_fonts.scss */
+.icon-zootool:before {
   content: "\e394"; }
 
-/* line 1443, ../scss/furatto/_fonts.scss */
-.glyphicons.dribbble i:before {
+/* line 1460, ../scss/furatto/_fonts.scss */
+.icon-dribbble:before {
   content: "\e395"; }
 
-/* line 1446, ../scss/furatto/_fonts.scss */
-.glyphicons.deviantart i:before {
+/* line 1463, ../scss/furatto/_fonts.scss */
+.icon-deviantart:before {
   content: "\e396"; }
 
-/* line 1449, ../scss/furatto/_fonts.scss */
-.glyphicons.read_it_later i:before {
+/* line 1466, ../scss/furatto/_fonts.scss */
+.icon-read_it_later:before {
   content: "\e397"; }
 
-/* line 1452, ../scss/furatto/_fonts.scss */
-.glyphicons.linked_in i:before {
+/* line 1469, ../scss/furatto/_fonts.scss */
+.icon-linked_in:before {
   content: "\e398"; }
 
-/* line 1455, ../scss/furatto/_fonts.scss */
-.glyphicons.forrst i:before {
+/* line 1472, ../scss/furatto/_fonts.scss */
+.icon-forrst:before {
   content: "\e399"; }
 
-/* line 1458, ../scss/furatto/_fonts.scss */
-.glyphicons.pinboard i:before {
+/* line 1475, ../scss/furatto/_fonts.scss */
+.icon-pinboard:before {
   content: "\e400"; }
 
-/* line 1461, ../scss/furatto/_fonts.scss */
-.glyphicons.behance i:before {
+/* line 1478, ../scss/furatto/_fonts.scss */
+.icon-behance:before {
   content: "\e401"; }
 
-/* line 1464, ../scss/furatto/_fonts.scss */
-.glyphicons.github i:before {
+/* line 1481, ../scss/furatto/_fonts.scss */
+.icon-github:before {
   content: "\e402"; }
 
-/* line 1467, ../scss/furatto/_fonts.scss */
-.glyphicons.youtube i:before {
+/* line 1484, ../scss/furatto/_fonts.scss */
+.icon-youtube:before {
   content: "\e403"; }
 
-/* line 1470, ../scss/furatto/_fonts.scss */
-.glyphicons.skitch i:before {
+/* line 1487, ../scss/furatto/_fonts.scss */
+.icon-skitch:before {
   content: "\e404"; }
 
-/* line 1473, ../scss/furatto/_fonts.scss */
-.glyphicons.foursquare i:before {
+/* line 1490, ../scss/furatto/_fonts.scss */
+.icon-foursquare:before {
   content: "\e405"; }
 
-/* line 1476, ../scss/furatto/_fonts.scss */
-.glyphicons.quora i:before {
+/* line 1493, ../scss/furatto/_fonts.scss */
+.icon-quora:before {
   content: "\e406"; }
 
-/* line 1479, ../scss/furatto/_fonts.scss */
-.glyphicons.badoo i:before {
+/* line 1496, ../scss/furatto/_fonts.scss */
+.icon-badoo:before {
   content: "\e407"; }
 
-/* line 1482, ../scss/furatto/_fonts.scss */
-.glyphicons.spotify i:before {
+/* line 1499, ../scss/furatto/_fonts.scss */
+.icon-spotify:before {
   content: "\e408"; }
 
-/* line 1485, ../scss/furatto/_fonts.scss */
-.glyphicons.stumbleupon i:before {
+/* line 1502, ../scss/furatto/_fonts.scss */
+.icon-stumbleupon:before {
   content: "\e409"; }
 
-/* line 1488, ../scss/furatto/_fonts.scss */
-.glyphicons.readability i:before {
+/* line 1505, ../scss/furatto/_fonts.scss */
+.icon-readability:before {
   content: "\e410"; }
 
-/* line 1491, ../scss/furatto/_fonts.scss */
-.glyphicons.facebook i:before {
+/* line 1508, ../scss/furatto/_fonts.scss */
+.icon-facebook:before {
   content: "\e411"; }
 
-/* line 1494, ../scss/furatto/_fonts.scss */
-.glyphicons.twitter i:before {
+/* line 1511, ../scss/furatto/_fonts.scss */
+.icon-twitter:before {
   content: "\e412"; }
 
-/* line 1497, ../scss/furatto/_fonts.scss */
-.glyphicons.instagram i:before {
+/* line 1514, ../scss/furatto/_fonts.scss */
+.icon-instagram:before {
   content: "\e413"; }
 
-/* line 1500, ../scss/furatto/_fonts.scss */
-.glyphicons.posterous_spaces i:before {
+/* line 1517, ../scss/furatto/_fonts.scss */
+.icon-posterous_spaces:before {
   content: "\e414"; }
 
-/* line 1503, ../scss/furatto/_fonts.scss */
-.glyphicons.vimeo i:before {
+/* line 1520, ../scss/furatto/_fonts.scss */
+.icon-vimeo:before {
   content: "\e415"; }
 
-/* line 1506, ../scss/furatto/_fonts.scss */
-.glyphicons.flickr i:before {
+/* line 1523, ../scss/furatto/_fonts.scss */
+.icon-flickr:before {
   content: "\e416"; }
 
-/* line 1509, ../scss/furatto/_fonts.scss */
-.glyphicons.last_fm i:before {
+/* line 1526, ../scss/furatto/_fonts.scss */
+.icon-last_fm:before {
   content: "\e417"; }
 
-/* line 1512, ../scss/furatto/_fonts.scss */
-.glyphicons.rss i:before {
+/* line 1529, ../scss/furatto/_fonts.scss */
+.icon-rss:before {
   content: "\e418"; }
 
-/* line 1515, ../scss/furatto/_fonts.scss */
-.glyphicons.skype i:before {
+/* line 1532, ../scss/furatto/_fonts.scss */
+.icon-skype:before {
   content: "\e419"; }
 
-/* line 1518, ../scss/furatto/_fonts.scss */
-.glyphicons.e-mail i:before {
+/* line 1535, ../scss/furatto/_fonts.scss */
+.icon-e-mail:before {
   content: "\e420"; }
 
-/*$bg-color: #ebe7df;*/
 /* line 1, ../scss/furatto/_base.scss */
 html {
   font-family: "Lato", "Open Sans", "Helvetica Neue"; }
@@ -2498,9 +2518,16 @@ a.label:hover, a.label:focus {
   .navbar .menu-trigger {
     display: none; }
 
-/* line 26, ../scss/furatto/_navbar.scss */
+/* line 24, ../scss/furatto/_navbar.scss */
+.navbar-alpha {
+  background: rgba(35, 35, 35, 0.75); }
+  /* line 27, ../scss/furatto/_navbar.scss */
+  .navbar-alpha .navbar-inner {
+    background: rgba(35, 35, 35, 0.75); }
+
+/* line 34, ../scss/furatto/_navbar.scss */
 .navbar-inner {
-  min-height: 40px;
+  min-height: 55px;
   padding-left: 20px;
   padding-right: 20px;
   background: #232323;
@@ -2514,60 +2541,60 @@ a.label:hover, a.label:focus {
   .navbar-inner:after {
     clear: both; }
 
-/* line 37, ../scss/furatto/_navbar.scss */
+/* line 45, ../scss/furatto/_navbar.scss */
 .nav-collapse.collapse {
   height: auto;
   overflow: visible; }
 
-/* line 44, ../scss/furatto/_navbar.scss */
+/* line 52, ../scss/furatto/_navbar.scss */
 .navbar .container {
   width: auto; }
 
-/* line 48, ../scss/furatto/_navbar.scss */
+/* line 56, ../scss/furatto/_navbar.scss */
 .navbar .nav {
   padding-left: 0px; }
-  /* line 51, ../scss/furatto/_navbar.scss */
+  /* line 59, ../scss/furatto/_navbar.scss */
   .navbar .nav [class^="icon_"], .navbar .nav [class*=" icon_"] {
     margin-right: 5px; }
 
-/* line 56, ../scss/furatto/_navbar.scss */
+/* line 64, ../scss/furatto/_navbar.scss */
 .navbar .brand {
   float: left;
   display: block;
   margin-right: 20px;
   /*Vertically center the text given $navbar-height*/
-  padding: 10px 20px 10px;
+  padding: 17.5px 20px 17.5px;
   margin-left: -20px;
   /*negative indent to left-align the text down the page*/
   font-size: 20px;
   font-weight: 200;
   color: #eaeaea; }
-  /* line 70, ../scss/furatto/_navbar.scss */
+  /* line 78, ../scss/furatto/_navbar.scss */
   .navbar .brand:hover, .navbar .brand:focus {
     text-decoration: none; }
 
-/* line 76, ../scss/furatto/_navbar.scss */
+/* line 84, ../scss/furatto/_navbar.scss */
 .navbar-text {
   margin-bottom: 0;
-  line-height: 40px;
+  line-height: 55px;
   color: #eaeaea; }
 
-/* line 83, ../scss/furatto/_navbar.scss */
+/* line 91, ../scss/furatto/_navbar.scss */
 .navbar .nav > li > a {
   float: none;
   /*Vertically center the text given @navbarHeight*/
-  padding: 10px 15px 10px;
+  padding: 17.5px 15px 17.5px;
   color: #eaeaea;
   text-decoration: none; }
 
-/* line 94, ../scss/furatto/_navbar.scss */
+/* line 102, ../scss/furatto/_navbar.scss */
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
   color: white;
   text-decoration: none;
   border-top: 2px solid #2ecc71; }
-  /* line 99, ../scss/furatto/_navbar.scss */
+  /* line 107, ../scss/furatto/_navbar.scss */
   .navbar .nav > .active > a:after,
   .navbar .nav > .active > a:hover:after,
   .navbar .nav > .active > a:focus:after {
@@ -2576,12 +2603,12 @@ a.label:hover, a.label:focus {
     width: 0;
     height: 0;
     left: -22px;
-    top: -6px;
+    top: -15px;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid #2ecc71; }
 
-/* line 114, ../scss/furatto/_navbar.scss */
+/* line 122, ../scss/furatto/_navbar.scss */
 .navbar .btn-navbar {
   display: none;
   float: right;
@@ -2591,7 +2618,7 @@ a.label:hover, a.label:focus {
   /*.buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));*/
   /*.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");*/ }
 
-/* line 123, ../scss/furatto/_navbar.scss */
+/* line 131, ../scss/furatto/_navbar.scss */
 .navbar .btn-navbar .icon_cloud {
   display: block;
   width: 18px;
@@ -2600,11 +2627,11 @@ a.label:hover, a.label:focus {
   /*.border-radius(1px);*/
   /*.box-shadow(0 1px 0 rgba(0,0,0,.25));*/ }
 
-/* line 131, ../scss/furatto/_navbar.scss */
+/* line 139, ../scss/furatto/_navbar.scss */
 .btn-navbar .icon_cloud + .icon_cloud {
   margin-top: 3px; }
 
-/* line 136, ../scss/furatto/_navbar.scss */
+/* line 144, ../scss/furatto/_navbar.scss */
 .navbar .nav {
   position: relative;
   left: 0;
@@ -2612,31 +2639,31 @@ a.label:hover, a.label:focus {
   float: left;
   margin: 0 10px 0 0; }
 
-/* line 145, ../scss/furatto/_navbar.scss */
+/* line 153, ../scss/furatto/_navbar.scss */
 .navbar .nav.pull-right {
   float: right;
   /*redeclare due to specificity*/
   margin-right: 0;
   /*remove margin on float right nav*/ }
 
-/* line 150, ../scss/furatto/_navbar.scss */
+/* line 158, ../scss/furatto/_navbar.scss */
 .navbar .nav > li {
   float: left; }
 
-/* line 155, ../scss/furatto/_navbar.scss */
+/* line 163, ../scss/furatto/_navbar.scss */
 .divider-vertical {
-  height: 47px;
+  height: 62px;
   /*Fix for the navbar*/
   margin: 0 9px;
   border-left: 1px solid #38393a; }
 
-/* line 162, ../scss/furatto/_navbar.scss */
+/* line 170, ../scss/furatto/_navbar.scss */
 .navbar-static-top {
   position: static;
   margin-bottom: 0;
   /*remove 18px margin for default navbar*/ }
 
-/* line 171, ../scss/furatto/_navbar.scss */
+/* line 179, ../scss/furatto/_navbar.scss */
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -2646,11 +2673,11 @@ a.label:hover, a.label:focus {
   margin-bottom: 0;
   /*remove 18px margin for default navbar*/ }
 
-/* line 180, ../scss/furatto/_navbar.scss */
+/* line 188, ../scss/furatto/_navbar.scss */
 .navbar-fixed-top {
   top: 0; }
 
-/* line 185, ../scss/furatto/_navbar.scss */
+/* line 193, ../scss/furatto/_navbar.scss */
 .navbar-fixed-bottom {
   bottom: 0; }
 
@@ -2703,7 +2730,7 @@ a.label:hover, a.label:focus {
 
 /* line 50, ../scss/furatto/_vrt_navbar.scss */
 .secundary-navbar {
-  top: 47px; }
+  top: 62px; }
 
 /*------------------------------------*\
     $FORMS
@@ -4094,7 +4121,7 @@ table {
   /* line 46, ../scss/furatto/_responsive_navbar.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom {
-    /*position: static;*/ }
+    position: static; }
 
   /* line 50, ../scss/furatto/_responsive_navbar.scss */
   .navbar-fixed-top {

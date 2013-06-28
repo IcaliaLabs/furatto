@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  line-height: 20px;
+  font-size: $base-font-size;
+  color: #FFF;
+  background-color: $dark-gray;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  margin: 0;
+  @include single-transition(opacity, 0.2s, ease-in-out);
+  @include border-radius($base-radius);
+  margin-bottom: 5px;
+
+  &:hover, &:focus {
+    zoom: 1;
+    text-decoration: none;
+    background: $gray;
+  }
+
+  &.disabled, &[disabled] {
+    cursor: default;
+    background-color: $dark-gray;
+    @include opacity(0.65);
+  }
+
+  &.active, &:active {
+    outline: 0;
+  }
+}
+
+//Button colors definition
+@each $color in $colors {
+  .btn-#{nth($color, 1)} {
+    background-color: nth($color, 2);
+
+    &:hover, &:focus {
+      background-color: nth($color, 3);
+    }
+
+    &.disabled, &[disabled] {
+      background-color: nth($color, 2);
+    }
+  }
+}
+
+//Button sizes
+
+.btn-large {
+  padding: $padding-large;
+  font-size: $font-size-large;
+}
+
+.btn-xlarge {
+  padding: $padding-xlarge;
+  font-size: $font-size-xlarge;
+}
+
+.btn-small {
+  padding: $padding-small;
+  font-size: $font-size-small;
+}
+
+.btn-mini {
+  padding: $padding-mini;
+  font-size: $font-size-mini;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+//Vertical separation
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+

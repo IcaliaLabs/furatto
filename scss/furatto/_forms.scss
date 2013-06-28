@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/**
+ * Basic textfield structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+form {
+  margin: 0 0 $base-line-height;
+}
+
+//Labels
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+//Inputs
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: $base-line-height;
+  padding: 4px 6px;
+  margin-bottom: $base-line-height / 2;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $input-color;
+  @include border-radius($input-border-radius);
+  vertical-align: middle;
+}
+
+//Reset textarea height because of the rows
+textarea {
+  height: auto;
+}
+
+//Text inputs
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: $input-bg;
+  border: 1px solid $input-border-color;
+
+  /*Focus state*/
+  &:focus {
+    border-color: rgba($input-focus-color,.8);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    @include single-transition(border, 0.2s, linear)
+  }
+}
+
+//Input sizes
+.input-mini { 
+  width: 60px; 
+}
+
+.input-small { 
+  width: 90px; 
+}
+
+.input-medium { 
+  width: 150px; 
+}
+
+.input-large { 
+  width: 210px; 
+}
+
+.input-xlarge {
+  width: 270px; 
+}
+
+.input-xxlarge { 
+  width: 350px; 
+}

@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    $LEFT NAVBAR
+\*------------------------------------*/
+/**
+ * Basic button structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+#jPanelMenu-menu {
+
+  background-color: $navbar-bg-color;
+
+  // Nav style
+  .nav {
+    overflow: hidden;
+    padding-left: 0;
+    color: $navbar-text;
+    font-size: $base-font-size;
+    margin-top: 0px;
+    
+    [class^="icon_"], [class*=" icon_"] {
+      margin-right: 5px;
+    }
+  }
+
+
+  //list items
+  .nav > li {
+    padding: 9px 10px;
+  }
+
+  // Active nav items
+  .nav > .active,
+  .nav > .active,
+  .nav > .active {
+    color: $navbar-link-color-active;
+    text-decoration: none;
+    border-left: 2px solid $green;
+    padding-left: 7px;
+
+    &:before {
+      content: ' ';
+      position: relative;
+      width: 0;
+      height: 0px;
+    }
+  }
+
+  //Links
+  .nav > li > a {
+    text-decoration: none;
+    color: $navbar-text;
+  }
+  
+  //Brand
+  .nav > li > a.brand {
+    font-size: 20px;
+  }
+
+  //Give a bigger separation for navbar
+  .nav > li:first-child {
+    border-bottom: 10px solid $navbar-border;
+  }
+
+  //Divider
+  .nav > li.divider-vertical {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid $navbar-border;
+    border-left: none;
+    margin: 0;
+    padding: 0;
+  }
+
+}
