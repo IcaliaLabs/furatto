@@ -31,7 +31,7 @@
   }
 
   &.disabled, &[disabled] {
-    cursor: default;
+    cursor: no-drop;
     background-color: $dark-gray;
     @include opacity(0.65);
   }

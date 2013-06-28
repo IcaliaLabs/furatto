@@ -2031,7 +2031,7 @@ body {
 
 /* line 25, ../scss/furatto/_base.scss */
 .main-container {
-  padding-left: 15px; }
+  /*padding-left: 15px;*/ }
 
 /* line 30, ../scss/furatto/_base.scss */
 .furatto-jumbo-header {
@@ -2106,7 +2106,7 @@ body {
 
 /* line 98, ../scss/furatto/_base.scss */
 hr {
-  width: 80%;
+  width: 100%;
   border-top: 0px;
   border-bottom: 1px solid #CCC; }
 
@@ -2117,6 +2117,37 @@ hr {
 /* line 108, ../scss/furatto/_base.scss */
 .center {
   text-align: center; }
+
+/* line 114, ../scss/furatto/_base.scss */
+.furatto-large-header {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #232323;
+  padding-bottom: 15px;
+  padding-top: 15px; }
+  /* line 122, ../scss/furatto/_base.scss */
+  .furatto-large-header .furatto-large-container {
+    width: 100%;
+    margin: 0 auto; }
+  /* line 127, ../scss/furatto/_base.scss */
+  .furatto-large-header .large-header {
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #4b4b4b; }
+  /* line 135, ../scss/furatto/_base.scss */
+  .furatto-large-header .motto {
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin: 0 0 15px 0;
+    color: #ccc; }
+
+/* line 143, ../scss/furatto/_base.scss */
+.container-center {
+  width: 80%;
+  margin: 0 auto; }
 
 /*------------------------------------*\
     $BUTTONS
@@ -2157,7 +2188,7 @@ hr {
     background: #95a5a6; }
   /* line 33, ../scss/furatto/_buttons.scss */
   .btn.disabled, .btn[disabled] {
-    cursor: default;
+    cursor: no-drop;
     background-color: #7f8c8d;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
     opacity: 0.65; }
@@ -4720,3 +4751,152 @@ table {
         /* line 38, ../scss/furatto/_footer.scss */
         .footer .footer-wrapper .hrz-nav li a {
           color: white; }
+
+/*------------------------------------*\
+    $CODE
+\*------------------------------------*/
+/**
+ * Basic code structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/**
+ * GitHub theme
+ *
+ * @author Craig Campbell
+ * @version 1.0.4
+ */
+/**
+ * Baby Blue theme for RainbowJS
+ *
+ * @author tilomitra
+ */
+/* line 23, ../scss/furatto/_code.scss */
+pre {
+  word-wrap: break-word;
+  padding: 6px 10;
+  line-height: 1.3em;
+  margin-bottom: 20;
+  border: 1px solid #eee; }
+
+/* line 31, ../scss/furatto/_code.scss */
+code {
+  border: none;
+  margin: 0 2px;
+  font-size: 0.8em;
+  padding: 0.4em 0.6em;
+  white-space: nowrap; }
+
+/* line 39, ../scss/furatto/_code.scss */
+pre code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.95em;
+  white-space: pre-wrap; }
+
+/* line 46, ../scss/furatto/_code.scss */
+pre, code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  color: #333;
+  background: #fafafa; }
+
+/* line 53, ../scss/furatto/_code.scss */
+pre .comment {
+  color: #999; }
+
+/* line 58, ../scss/furatto/_code.scss */
+pre .tag, pre .tag-name, pre .support.tag-name {
+  color: #555555; }
+
+/* line 62, ../scss/furatto/_code.scss */
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+  font-weight: bold; }
+
+/* line 66, ../scss/furatto/_code.scss */
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+  color: #333; }
+
+/* line 70, ../scss/furatto/_code.scss */
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+  font-weight: normal;
+  color: #099; }
+
+/* line 75, ../scss/furatto/_code.scss */
+pre .attribute, pre .variable, pre .support {
+  color: #757575;
+  /* skinbuilder block-page-text-normal with #1f8dd6 as primary */ }
+
+/* line 79, ../scss/furatto/_code.scss */
+pre .string, pre .support.value {
+  font-weight: normal;
+  color: #3b8bba;
+  /* skinbuilder block-mine-text-low with #1f8dd6 as primary */ }
+
+/*pre {*/
+/*border: 1px solid #eee;*/
+/*word-wrap: break-word;*/
+/*padding: 6px 10px;*/
+/*line-height: 19px;*/
+/*margin-bottom: 20px;*/
+/*}*/
+/*code {*/
+/*border: 1px solid #eaeaea;*/
+/*margin: 0px 2px;*/
+/*padding: 0px 5px;*/
+/*}*/
+/*pre code {*/
+/*border: 0px;*/
+/*padding: 0px;*/
+/*margin: 0px;*/
+/*-moz-border-radius: 0px;*/
+/*-webkit-border-radius: 0px;*/
+/*border-radius: 0px;*/
+/*font-size: .95em;*/
+/*white-space: pre-wrap;*/
+/*}*/
+/*pre, code {*/
+/*font-family: Consolas, 'Liberation Mono', Courier, monospace;*/
+/*color: #333;*/
+/*background: #fafafa;*/
+/*-moz-border-radius: 3px;*/
+/*-webkit-border-radius: 3px;*/
+/*border-radius: 3px;*/
+/*}*/
+/*pre, pre code {*/
+/*font-size: .95em;*/
+/*}*/
+/*pre .comment {*/
+/*color: #998;*/
+/*}*/
+/*pre .support {*/
+/*color: #0086B3;*/
+/*}*/
+/*pre .tag, pre .tag-name {*/
+/*color: navy;*/
+/*}*/
+/*pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {*/
+/*font-weight: bold;*/
+/*}*/
+/*pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {*/
+/*color: #333;*/
+/*}*/
+/*pre .constant.numeric, pre .keyword.unit, pre .hex-color {*/
+/*font-weight: normal;*/
+/*color: #099;*/
+/*}*/
+/*pre .entity.class {*/
+/*color: #458;*/
+/*}*/
+/*pre .entity.id, pre .entity.function {*/
+/*color: #900;*/
+/*}*/
+/*pre .attribute, pre .variable {*/
+/*color: teal;*/
+/*}*/
+/*pre .string, pre .support.value  {*/
+/*font-weight: normal;*/
+/*color: #d14;*/
+/*}*/
+/*pre .regexp {*/
+/*color: #009926;*/
+/*}*/

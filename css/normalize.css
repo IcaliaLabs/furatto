@@ -162,26 +162,28 @@ samp {
  */
 /* line 179, ../scss/normalize.scss */
 pre {
-  white-space: pre-wrap; }
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
 
 /**
  * Set consistent quote types.
  */
-/* line 187, ../scss/normalize.scss */
+/* line 189, ../scss/normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 195, ../scss/normalize.scss */
+/* line 197, ../scss/normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 204, ../scss/normalize.scss */
+/* line 206, ../scss/normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -189,11 +191,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 211, ../scss/normalize.scss */
+/* line 213, ../scss/normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 215, ../scss/normalize.scss */
+/* line 217, ../scss/normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -203,14 +205,14 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-/* line 227, ../scss/normalize.scss */
+/* line 229, ../scss/normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 235, ../scss/normalize.scss */
+/* line 237, ../scss/normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -220,7 +222,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 247, ../scss/normalize.scss */
+/* line 249, ../scss/normalize.scss */
 figure {
   margin: 0; }
 
@@ -230,7 +232,7 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 259, ../scss/normalize.scss */
+/* line 261, ../scss/normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -240,7 +242,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 270, ../scss/normalize.scss */
+/* line 272, ../scss/normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -252,7 +254,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 284, ../scss/normalize.scss */
+/* line 286, ../scss/normalize.scss */
 button,
 input,
 select,
@@ -268,7 +270,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 296, ../scss/normalize.scss */
+/* line 298, ../scss/normalize.scss */
 button,
 input {
   line-height: normal; }
@@ -279,7 +281,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 308, ../scss/normalize.scss */
+/* line 310, ../scss/normalize.scss */
 button,
 select {
   text-transform: none; }
@@ -291,7 +293,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 323, ../scss/normalize.scss */
+/* line 325, ../scss/normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -304,7 +306,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 333, ../scss/normalize.scss */
+/* line 335, ../scss/normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -313,7 +315,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-/* line 343, ../scss/normalize.scss */
+/* line 345, ../scss/normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -326,7 +328,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 354, ../scss/normalize.scss */
+/* line 356, ../scss/normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -339,7 +341,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 367, ../scss/normalize.scss */
+/* line 369, ../scss/normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -347,7 +349,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 376, ../scss/normalize.scss */
+/* line 378, ../scss/normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -357,7 +359,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 386, ../scss/normalize.scss */
+/* line 388, ../scss/normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -370,7 +372,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 399, ../scss/normalize.scss */
+/* line 401, ../scss/normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }

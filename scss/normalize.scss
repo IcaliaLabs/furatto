@@ -177,7 +177,9 @@ samp {
  */
 
 pre {
+  white-space: pre;
     white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 /**

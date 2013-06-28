@@ -23,7 +23,7 @@ body {
 }
 
 .main-container {
-  padding-left: 15px;
+  /*padding-left: 15px;*/
 }
 
 //Jumbo Header
@@ -96,7 +96,7 @@ body {
 }
 
 hr {
-  width: 80%;
+  width: 100%;
   border-top: 0px;
   border-bottom: 1px solid #CCC;
 }
@@ -107,4 +107,40 @@ hr {
 
 .center {
   text-align: center;
+}
+
+//Furatto Headers
+//-------------------------
+.furatto-large-header {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #232323;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+  .furatto-large-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .large-header {
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #4b4b4b;
+  }
+
+  .motto {
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin: 0 0 15px 0;
+    color: #ccc;
+  }
+}
+
+.container-center {
+  width: 80%;
+  margin: 0 auto;
 }
