@@ -10,9 +10,16 @@
 .footer {
   background: $footer-bg;
   color: $footer-text-color;
-  font-size: $base-font-size - 1;
+  font-size: $base-font-size;
+  font-weight: lighter;
   line-height: $base-line-height;
-  margin-top: 30px;
+  margin-top: 50px;
+  height: $footer-height;
+
+  .copyright {
+    margin: 0;
+    padding: (($footer-height - $base-line-height) / 2) 20px (($footer-height - $base-line-height) / 2);
+  }
 
   a {
     color: $footer-text-color;
@@ -23,9 +30,11 @@
     margin: 0 auto; 
 
     .hrz-nav {
-      margin: 15px auto;
+      margin: 0;
 
       li {
+        display: inline-block;
+        padding: (($footer-height - $base-line-height) / 2) 10px (($footer-height - $base-line-height) / 2);
         a {
           color: $footer-text-color;
         }

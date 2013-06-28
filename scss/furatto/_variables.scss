@@ -172,6 +172,7 @@ $inputHeight: $base-line-height + 10px; // base line-height + 8px vertical paddi
 //Footer
 $footer-bg: lighten($navbar-bg-color, 0.5);
 $footer-text-color: #FFF;
+$footer-height: 80px;
 
 //Icons
 $icon-base-color: $dark-inverse;
@@ -181,3 +182,7 @@ $icon-medium-size: 4em;
 $icon-large-size: 6em;
 $icon-xlarge-size: 8em;
 $icon-xxlarge-size: 10em;
+
+
+//Links
+$link-color: #0088cc;
