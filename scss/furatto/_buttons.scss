@@ -39,6 +39,11 @@
   &.active, &:active {
     outline: 0;
   }
+
+  [class^="icon-"], [class*=" icon-"] {
+    margin-right: 5px;
+  }
+
 }
 
 //Button colors definition
