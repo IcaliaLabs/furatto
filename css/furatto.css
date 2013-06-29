@@ -2957,39 +2957,111 @@ table {
   .table tbody + tbody {
     border-top: 2px solid #d2d2d2; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .primary {
-    background-color: #3498db; }
+  .table .tr-primary {
+    background-color: #389adc;
+    color: #FFF; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .success {
-    background-color: #2ecc71; }
+  .table .tr-success {
+    background-color: #2fd073;
+    color: #FFF; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .danger {
-    background-color: #e74c3c; }
+  .table .tr-danger {
+    background-color: #e85040;
+    color: #FFF; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .warning {
-    background-color: #f1c40f; }
+  .table .tr-warning {
+    background-color: #f1c513;
+    color: #FFF; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .inverse {
-    background-color: #34495e; }
+  .table .tr-inverse {
+    background-color: #364b61;
+    color: #FFF; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .info {
-    background-color: #1abc9c; }
+  .table .tr-info {
+    background-color: #1bc09f;
+    color: #FFF; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .default {
-    background-color: #95a5a6; }
+  .table .tr-default {
+    background-color: #97a7a8;
+    color: #FFF; }
   /* line 58, ../scss/furatto/_tables.scss */
-  .table .funky {
-    background-color: #9b59b6; }
+  .table .tr-funky {
+    background-color: #9d5cb7;
+    color: #FFF; }
 
-/* line 66, ../scss/furatto/_tables.scss */
+/* line 67, ../scss/furatto/_tables.scss */
 .table-condensed th, .table-condensed td {
   padding: 4px 5px; }
 
-/* line 75, ../scss/furatto/_tables.scss */
+/* line 76, ../scss/furatto/_tables.scss */
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9; }
 
+/* line 84, ../scss/furatto/_tables.scss */
+.table-bordered {
+  border: 1px solid #d2d2d2; }
+  /* line 87, ../scss/furatto/_tables.scss */
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #d2d2d2; }
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  /* line 4, ../scss/furatto/_responsive_tables.scss */
+  table.responsive {
+    margin-bottom: 0; }
+
+  /* line 6, ../scss/furatto/_responsive_tables.scss */
+  .pinned {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 35%;
+    overflow: hidden;
+    overflow-x: scroll;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc; }
+
+  /* line 7, ../scss/furatto/_responsive_tables.scss */
+  .pinned table {
+    border-right: none;
+    border-left: none;
+    width: 100%; }
+
+  /* line 8, ../scss/furatto/_responsive_tables.scss */
+  .pinned table th, .pinned table td {
+    white-space: nowrap; }
+
+  /* line 9, ../scss/furatto/_responsive_tables.scss */
+  .pinned td:last-child {
+    border-bottom: 0; }
+
+  /* line 11, ../scss/furatto/_responsive_tables.scss */
+  div.table-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-right: 1px solid #ccc; }
+
+  /* line 12, ../scss/furatto/_responsive_tables.scss */
+  div.table-wrapper div.scrollable {
+    margin-left: 35%; }
+
+  /* line 13, ../scss/furatto/_responsive_tables.scss */
+  div.table-wrapper div.scrollable {
+    overflow: scroll;
+    overflow-y: hidden; }
+
+  /* line 15, ../scss/furatto/_responsive_tables.scss */
+  table.responsive td, table.responsive th {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden; }
+
+  /* line 16, ../scss/furatto/_responsive_tables.scss */
+  table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td {
+    display: none; } }
 /*------------------------------------*\
     $GRID
 \*------------------------------------*/

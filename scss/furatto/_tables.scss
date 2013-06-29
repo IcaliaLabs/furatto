@@ -55,8 +55,9 @@ table {
 
   //Table backgrounds
   @each $color in $colors {
-    .#{nth($color, 1)} {
-      background-color: nth($color, 3);
+    .tr-#{nth($color, 1)} {
+      background-color: lighten(nth($color, 3), 0.9);
+      color: #FFF;
     }
   }
 }
@@ -76,5 +77,14 @@ table {
       background-color: $table-striped-color;
     }
 
+  }
+}
+
+//Table bordered
+.table-bordered {
+  border: 1px solid $table-border-color;
+
+  th, td {
+    border: 1px solid $table-border-color;
   }
 }
