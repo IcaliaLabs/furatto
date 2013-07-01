@@ -2051,9 +2051,9 @@ body {
   .furatto-jumbo-header .jumbo-header {
     font-size: 100px;
     text-align: center;
-    margin: 0;
+    /*margin: 0;*/
     font-weight: 200;
-    margin-bottom: 10px; }
+    /*margin-bottom: 10px;*/ }
   /* line 53, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .motto {
     font-size: 40px;
@@ -4261,58 +4261,49 @@ table {
     position: static; }
 
   /* line 50, ../scss/furatto/_responsive_navbar.scss */
-  .navbar-fixed-top {
-    margin-bottom: 20px; }
-
-  /* line 54, ../scss/furatto/_responsive_navbar.scss */
   .navbar-fixed-bottom {
     margin-top: 20px; }
 
-  /* line 59, ../scss/furatto/_responsive_navbar.scss */
-  .navbar-fixed-top .navbar-inner,
-  .navbar-fixed-bottom .navbar-inner {
-    padding: 5px; }
-
-  /* line 63, ../scss/furatto/_responsive_navbar.scss */
+  /* line 54, ../scss/furatto/_responsive_navbar.scss */
   .navbar .container {
     width: auto;
     padding: 0; }
 
-  /* line 69, ../scss/furatto/_responsive_navbar.scss */
+  /* line 60, ../scss/furatto/_responsive_navbar.scss */
   .navbar .nav .brand {
     display: block;
     /*padding-left: 10px;*/
     /*padding-right: 10px;*/
     /*margin: 0 0 0 -5px;*/ }
 
-  /* line 79, ../scss/furatto/_responsive_navbar.scss */
+  /* line 70, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse {
     clear: both; }
 
-  /* line 83, ../scss/furatto/_responsive_navbar.scss */
+  /* line 74, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav {
     float: none;
     margin: 0 0 10px;
     display: none; }
 
-  /* line 88, ../scss/furatto/_responsive_navbar.scss */
+  /* line 79, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav > li {
     float: none; }
 
-  /* line 92, ../scss/furatto/_responsive_navbar.scss */
+  /* line 83, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav > li > a {
     margin-bottom: 2px; }
 
-  /* line 95, ../scss/furatto/_responsive_navbar.scss */
+  /* line 86, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav > .divider-vertical {
     display: none; }
 
-  /* line 98, ../scss/furatto/_responsive_navbar.scss */
+  /* line 89, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav .nav-header {
     color: #eaeaea;
     text-shadow: none; }
 
-  /* line 104, ../scss/furatto/_responsive_navbar.scss */
+  /* line 95, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     padding: 9px 15px;
@@ -4320,41 +4311,41 @@ table {
     color: #eaeaea;
     /*.border-radius(3px);*/ }
 
-  /* line 112, ../scss/furatto/_responsive_navbar.scss */
+  /* line 103, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .btn {
     padding: 4px 10px 4px;
     font-weight: normal;
     /*.border-radius(@baseBorderRadius);*/ }
 
-  /* line 117, ../scss/furatto/_responsive_navbar.scss */
+  /* line 108, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .dropdown-menu li + li a {
     margin-bottom: 2px; }
 
-  /* line 123, ../scss/furatto/_responsive_navbar.scss */
+  /* line 114, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .nav > li > a:focus,
   .nav-collapse .dropdown-menu a:hover,
   .nav-collapse .dropdown-menu a:focus {
     background-color: #232323; }
 
-  /* line 128, ../scss/furatto/_responsive_navbar.scss */
+  /* line 119, ../scss/furatto/_responsive_navbar.scss */
   .navbar-inverse .nav-collapse .nav > li > a,
   .navbar-inverse .nav-collapse .dropdown-menu a {
     /*color: @navbarInverseLinkColor;*/ }
 
-  /* line 134, ../scss/furatto/_responsive_navbar.scss */
+  /* line 125, ../scss/furatto/_responsive_navbar.scss */
   .navbar-inverse .nav-collapse .nav > li > a:hover,
   .navbar-inverse .nav-collapse .nav > li > a:focus,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:focus {
     /*background-color: @navbarInverseBackground;*/ }
 
-  /* line 138, ../scss/furatto/_responsive_navbar.scss */
+  /* line 129, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse.in .btn-group {
     margin-top: 5px;
     padding: 0; }
 
-  /* line 144, ../scss/furatto/_responsive_navbar.scss */
+  /* line 135, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .dropdown-menu {
     position: static;
     top: auto;
@@ -4369,29 +4360,29 @@ table {
     /*.border-radius(0);*/
     /*.box-shadow(none);*/ }
 
-  /* line 158, ../scss/furatto/_responsive_navbar.scss */
+  /* line 149, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .open > .dropdown-menu {
     display: block; }
 
-  /* line 163, ../scss/furatto/_responsive_navbar.scss */
+  /* line 154, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .dropdown-menu:before,
   .nav-collapse .dropdown-menu:after {
     display: none; }
 
-  /* line 166, ../scss/furatto/_responsive_navbar.scss */
+  /* line 157, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .dropdown-menu .divider {
     display: none; }
 
-  /* line 171, ../scss/furatto/_responsive_navbar.scss */
+  /* line 162, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse .nav > li > .dropdown-menu:before, .nav-collapse .nav > li > .dropdown-menu:after {
     display: none; }
 
-  /* line 178, ../scss/furatto/_responsive_navbar.scss */
+  /* line 169, ../scss/furatto/_responsive_navbar.scss */
   .navbar-static .navbar-inner {
     padding-left: 10px;
     padding-right: 10px; } }
 @media (min-width: 980px) {
-  /* line 188, ../scss/furatto/_responsive_navbar.scss */
+  /* line 179, ../scss/furatto/_responsive_navbar.scss */
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important; } }
@@ -5028,7 +5019,7 @@ cite {
 
 /* line 52, ../scss/furatto/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
+  margin: 20px 0;
   font-family: inherit;
   font-weight: 500;
   line-height: 20px;
