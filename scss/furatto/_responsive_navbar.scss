@@ -47,17 +47,8 @@
     position: static;
   }
 
-  .navbar-fixed-top {
-    margin-bottom: $base-line-height;
-  }
-
   .navbar-fixed-bottom {
     margin-top: $base-line-height;
-  }
-
-  .navbar-fixed-top .navbar-inner,
-  .navbar-fixed-bottom .navbar-inner {
-    padding: 5px;
   }
 
   .navbar .container {
