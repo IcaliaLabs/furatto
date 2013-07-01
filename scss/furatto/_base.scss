@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
+  color: $link-color;
 }
 
 html, body {
@@ -143,4 +144,14 @@ hr {
 .container-center {
   width: 80%;
   margin: 0 auto;
+}
+
+//Blockquote
+
+.content-quote {
+  color: #666;
+  font-style: italic;
+  line-height: 1.8em;
+  border-left: 5px solid #ddd;
+  padding-left: 1.5em
 }
