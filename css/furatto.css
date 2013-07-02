@@ -4997,27 +4997,23 @@ strong {
 em {
   font-style: italic; }
 
-/* line 27, ../scss/furatto/_typography.scss */
-cite {
-  font-style: normal; }
-
-/* line 33, ../scss/furatto/_typography.scss */
+/* line 29, ../scss/furatto/_typography.scss */
 .muted {
   color: #ecf0f1; }
 
-/* line 37, ../scss/furatto/_typography.scss */
+/* line 33, ../scss/furatto/_typography.scss */
 .text-left {
   text-align: left; }
 
-/* line 41, ../scss/furatto/_typography.scss */
+/* line 37, ../scss/furatto/_typography.scss */
 .text-right {
   text-align: right; }
 
-/* line 45, ../scss/furatto/_typography.scss */
+/* line 41, ../scss/furatto/_typography.scss */
 .text-center {
   text-align: center; }
 
-/* line 52, ../scss/furatto/_typography.scss */
+/* line 48, ../scss/furatto/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 20px 0;
   font-family: inherit;
@@ -5025,100 +5021,100 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 20px;
   color: #4b4b4b;
   text-rendering: optimizelegibility; }
-  /* line 60, ../scss/furatto/_typography.scss */
+  /* line 56, ../scss/furatto/_typography.scss */
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-weight: normal;
     line-height: 1;
     color: #ecf0f1; }
 
-/* line 67, ../scss/furatto/_typography.scss */
+/* line 63, ../scss/furatto/_typography.scss */
 .light {
   font-weight: 200; }
 
-/* line 71, ../scss/furatto/_typography.scss */
+/* line 67, ../scss/furatto/_typography.scss */
 h1, h2, h3 {
   line-height: 40px; }
 
-/* line 75, ../scss/furatto/_typography.scss */
+/* line 71, ../scss/furatto/_typography.scss */
 h5, h6 {
   text-transform: uppercase; }
 
-/* line 79, ../scss/furatto/_typography.scss */
+/* line 75, ../scss/furatto/_typography.scss */
 h1 {
   font-size: 44px; }
 
-/* line 83, ../scss/furatto/_typography.scss */
+/* line 79, ../scss/furatto/_typography.scss */
 h2 {
   font-size: 36px; }
 
-/* line 87, ../scss/furatto/_typography.scss */
+/* line 83, ../scss/furatto/_typography.scss */
 h3 {
   font-size: 28px; }
 
-/* line 91, ../scss/furatto/_typography.scss */
+/* line 87, ../scss/furatto/_typography.scss */
 h4 {
   font-size: 20px; }
 
-/* line 95, ../scss/furatto/_typography.scss */
+/* line 91, ../scss/furatto/_typography.scss */
 h5 {
   font-size: 16px; }
 
-/* line 99, ../scss/furatto/_typography.scss */
+/* line 95, ../scss/furatto/_typography.scss */
 h6 {
   font-size: 13.6px; }
 
-/* line 107, ../scss/furatto/_typography.scss */
+/* line 103, ../scss/furatto/_typography.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 10px 25px; }
 
-/* line 114, ../scss/furatto/_typography.scss */
+/* line 110, ../scss/furatto/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0; }
 
-/* line 117, ../scss/furatto/_typography.scss */
+/* line 113, ../scss/furatto/_typography.scss */
 li {
   line-height: 20px; }
 
-/* line 123, ../scss/furatto/_typography.scss */
+/* line 119, ../scss/furatto/_typography.scss */
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none; }
 
-/* line 130, ../scss/furatto/_typography.scss */
+/* line 126, ../scss/furatto/_typography.scss */
 ul.inline,
 ol.inline {
   margin-left: 0;
   list-style: none; }
-  /* line 133, ../scss/furatto/_typography.scss */
+  /* line 129, ../scss/furatto/_typography.scss */
   ul.inline > li,
   ol.inline > li {
     display: inline-block;
     padding-left: 5px;
     padding-right: 5px; }
 
-/* line 141, ../scss/furatto/_typography.scss */
+/* line 137, ../scss/furatto/_typography.scss */
 dl {
   margin-bottom: 20px; }
 
-/* line 145, ../scss/furatto/_typography.scss */
+/* line 141, ../scss/furatto/_typography.scss */
 dt,
 dd {
   line-height: 20px; }
 
-/* line 148, ../scss/furatto/_typography.scss */
+/* line 144, ../scss/furatto/_typography.scss */
 dt {
   font-weight: bold; }
 
-/* line 151, ../scss/furatto/_typography.scss */
+/* line 147, ../scss/furatto/_typography.scss */
 dd {
   margin-left: 10px; }
 
-/* line 155, ../scss/furatto/_typography.scss */
+/* line 151, ../scss/furatto/_typography.scss */
 .dl-horizontal {
   *zoom: 1; }
   /* line 14, ../scss/furatto/_helpers.scss */
@@ -5128,7 +5124,7 @@ dd {
   /* line 19, ../scss/furatto/_helpers.scss */
   .dl-horizontal:after {
     clear: both; }
-  /* line 157, ../scss/furatto/_typography.scss */
+  /* line 153, ../scss/furatto/_typography.scss */
   .dl-horizontal dt {
     float: left;
     clear: left;
