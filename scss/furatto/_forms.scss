@@ -15,6 +15,7 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 //Inputs
@@ -103,3 +104,180 @@ input[type="color"],
 .input-xxlarge { 
   width: 350px; 
 }
+
+//Inline Forms
+.inline-form,
+.horizontal-form {
+  input,
+  textarea,
+  select {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  // Re-hide hidden elements due to specifity
+  .hide {
+    display: none;
+  }
+}
+
+.horizontal-form {
+  .furatto-controls {
+    display: block;
+    margin-bottom: 10px;
+
+    label {
+      width: 160px;
+      margin-right: 20px;
+      text-align: right;
+    }
+  }
+
+  .furatto-actions {
+    margin-left: 184px;
+  }
+}
+
+//Login form
+.login-form {
+  width: 30%;
+  text-align: center;
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    display: block;
+    width: 96%;
+    height: 35px;
+    padding: 0px 0px 0px 10px;
+    height: 42px;
+    background: #fcfcfc;
+  }
+
+  .furatto-login-icon {
+    margin-bottom: 20px;
+  }
+
+  .login-header {
+    font-size: $base-font-size + 10;
+    margin: 0;
+    color: $dark-gray;
+  }
+}
+
+//Center forms
+.centered-form {
+  margin: 0 auto;
+}
+
+//Checkboxes and radiobuttons
+label.checkbox {
+  position: relative;
+  top: -4px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+label {
+  @include touch-callout;
+}
+
+// Uneditable inputs
+// -------------------------
+
+input[disabled],
+textarea[disabled] {
+  color: $light-gray;
+  cursor: not-allowed;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #EEE;
+}
+
+//Input states
+.info {
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    color: $dark-blue;
+    border: 1px solid $dark-blue;
+  }
+}
+.success{
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"]  {
+    color: $dark-green;
+    border: 1px solid $dark-green;
+  }
+}
+.warning{
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"]  {
+    color: $dark-orange;
+    border: 1px solid $dark-orange;
+  }
+}
+.error{
+   textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"]  {
+    color: $dark-red;
+    border: 1px solid $dark-red;
+  }
+}
+

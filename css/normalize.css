@@ -306,16 +306,15 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 335, ../scss/normalize.scss */
-button[disabled],
-html input[disabled] {
+/* line 334, ../scss/normalize.scss */
+button[disabled] {
   cursor: default; }
 
 /**
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-/* line 345, ../scss/normalize.scss */
+/* line 344, ../scss/normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -328,7 +327,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 356, ../scss/normalize.scss */
+/* line 355, ../scss/normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -341,7 +340,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 369, ../scss/normalize.scss */
+/* line 368, ../scss/normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -349,7 +348,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 378, ../scss/normalize.scss */
+/* line 377, ../scss/normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -359,7 +358,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 388, ../scss/normalize.scss */
+/* line 387, ../scss/normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -372,7 +371,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 401, ../scss/normalize.scss */
+/* line 400, ../scss/normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }

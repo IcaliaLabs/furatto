@@ -149,6 +149,55 @@ ol.inline {
   }
 }
 
+//Color Lists
+.color-list {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    height: $color-list-item-height;
+    width: $color-list-item-width;
+    background: #222;
+    cursor: pointer;
+
+    &.red {
+      background: #ec7063;
+    }
+
+    &.green {
+      background: #1abc9c;
+    }
+
+    &.blue {
+      background: #3498db;
+    }
+
+    &.aero {
+      background: #9cc2cb;
+    }
+
+    &.grey {
+      background: #95a5a6;
+    }
+
+    &.orange {
+      background: #f39c12;
+    }
+
+    &.yellow {
+      background: #f1c40f;
+    }
+
+    &.pink {
+      background: #af7ac5;
+    }
+
+    &.purple {
+      background: #8677a7;
+    }
+  }
+}
+
 // Description Lists
 dl {
   margin-bottom: $base-line-height;
@@ -171,4 +220,25 @@ dd {
     clear: left;
     text-align: right;
   }
+}
+
+.inline {
+  display: inline-block;
+}
+
+//Color states
+.info {
+  color: $dark-blue;
+}
+
+.success {
+  color: $dark-green;
+}
+
+.warning {
+  color: $dark-orange;
+}
+
+.error {
+  color: $dark-red;
 }

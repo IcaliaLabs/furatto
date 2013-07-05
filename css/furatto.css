@@ -2020,7 +2020,7 @@ a {
 
 /* line 14, ../scss/furatto/_base.scss */
 html, body {
-  background-color: white; }
+  background-color: #fefefe; }
 
 /* line 18, ../scss/furatto/_base.scss */
 body {
@@ -2115,7 +2115,11 @@ hr {
 .link {
   color: #0088cc !important; }
 
-/* line 111, ../scss/furatto/_base.scss */
+/* line 109, ../scss/furatto/_base.scss */
+.block {
+  display: block; }
+
+/* line 115, ../scss/furatto/_base.scss */
 .furatto-large-header {
   width: 100%;
   display: block;
@@ -2123,30 +2127,30 @@ hr {
   color: #232323;
   padding-bottom: 15px;
   padding-top: 15px; }
-  /* line 119, ../scss/furatto/_base.scss */
+  /* line 123, ../scss/furatto/_base.scss */
   .furatto-large-header .furatto-large-container {
     width: 100%;
     margin: 0 auto; }
-  /* line 124, ../scss/furatto/_base.scss */
+  /* line 128, ../scss/furatto/_base.scss */
   .furatto-large-header .large-header {
     font-size: 3em;
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
     color: #4b4b4b; }
-  /* line 132, ../scss/furatto/_base.scss */
+  /* line 136, ../scss/furatto/_base.scss */
   .furatto-large-header .motto {
     font-size: 1.5em;
     font-weight: lighter;
     margin: 0 0 15px 0;
     color: #ccc; }
 
-/* line 140, ../scss/furatto/_base.scss */
+/* line 144, ../scss/furatto/_base.scss */
 .container-center {
   width: 80%;
   margin: 0 auto; }
 
-/* line 147, ../scss/furatto/_base.scss */
+/* line 151, ../scss/furatto/_base.scss */
 .content-quote {
   color: #666;
   font-style: italic;
@@ -2808,9 +2812,10 @@ form {
 /* line 15, ../scss/furatto/_forms.scss */
 label {
   display: block;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  cursor: pointer; }
 
-/* line 36, ../scss/furatto/_forms.scss */
+/* line 37, ../scss/furatto/_forms.scss */
 textarea,
 input[type="text"],
 input[type="password"],
@@ -2841,11 +2846,11 @@ input[type="color"],
   border-radius: 2px;
   vertical-align: middle; }
 
-/* line 49, ../scss/furatto/_forms.scss */
+/* line 50, ../scss/furatto/_forms.scss */
 textarea {
   height: auto; }
 
-/* line 69, ../scss/furatto/_forms.scss */
+/* line 70, ../scss/furatto/_forms.scss */
 textarea,
 input[type="text"],
 input[type="password"],
@@ -2865,7 +2870,7 @@ input[type="color"],
   background-color: white;
   border: 1px solid #cccccc;
   /*Focus state*/ }
-  /* line 74, ../scss/furatto/_forms.scss */
+  /* line 75, ../scss/furatto/_forms.scss */
   textarea:focus,
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -2891,29 +2896,189 @@ input[type="color"],
     -o-transition: border 0.2s linear;
     transition: border 0.2s linear; }
 
-/* line 83, ../scss/furatto/_forms.scss */
+/* line 84, ../scss/furatto/_forms.scss */
 .input-mini {
   width: 60px; }
 
-/* line 87, ../scss/furatto/_forms.scss */
+/* line 88, ../scss/furatto/_forms.scss */
 .input-small {
   width: 90px; }
 
-/* line 91, ../scss/furatto/_forms.scss */
+/* line 92, ../scss/furatto/_forms.scss */
 .input-medium {
   width: 150px; }
 
-/* line 95, ../scss/furatto/_forms.scss */
+/* line 96, ../scss/furatto/_forms.scss */
 .input-large {
   width: 210px; }
 
-/* line 99, ../scss/furatto/_forms.scss */
+/* line 100, ../scss/furatto/_forms.scss */
 .input-xlarge {
   width: 270px; }
 
-/* line 103, ../scss/furatto/_forms.scss */
+/* line 104, ../scss/furatto/_forms.scss */
 .input-xxlarge {
   width: 350px; }
+
+/* line 113, ../scss/furatto/_forms.scss */
+.inline-form input,
+.inline-form textarea,
+.inline-form select,
+.horizontal-form input,
+.horizontal-form textarea,
+.horizontal-form select {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle; }
+/* line 119, ../scss/furatto/_forms.scss */
+.inline-form label,
+.horizontal-form label {
+  display: inline-block; }
+/* line 124, ../scss/furatto/_forms.scss */
+.inline-form .hide,
+.horizontal-form .hide {
+  display: none; }
+
+/* line 130, ../scss/furatto/_forms.scss */
+.horizontal-form .furatto-controls {
+  display: block;
+  margin-bottom: 10px; }
+  /* line 134, ../scss/furatto/_forms.scss */
+  .horizontal-form .furatto-controls label {
+    width: 160px;
+    margin-right: 20px;
+    text-align: right; }
+/* line 141, ../scss/furatto/_forms.scss */
+.horizontal-form .furatto-actions {
+  margin-left: 184px; }
+
+/* line 147, ../scss/furatto/_forms.scss */
+.login-form {
+  width: 30%;
+  text-align: center; }
+  /* line 153, ../scss/furatto/_forms.scss */
+  .login-form input[type="text"],
+  .login-form input[type="password"],
+  .login-form input[type="email"] {
+    display: block;
+    width: 96%;
+    height: 35px;
+    padding: 0px 0px 0px 10px;
+    height: 42px;
+    background: #fcfcfc; }
+  /* line 162, ../scss/furatto/_forms.scss */
+  .login-form .furatto-login-icon {
+    margin-bottom: 20px; }
+  /* line 166, ../scss/furatto/_forms.scss */
+  .login-form .login-header {
+    font-size: 26px;
+    margin: 0;
+    color: #7f8c8d; }
+
+/* line 174, ../scss/furatto/_forms.scss */
+.centered-form {
+  margin: 0 auto; }
+
+/* line 179, ../scss/furatto/_forms.scss */
+label.checkbox {
+  position: relative;
+  top: -4px;
+  margin-left: 5px;
+  margin-right: 5px; }
+
+/* line 186, ../scss/furatto/_forms.scss */
+label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 194, ../scss/furatto/_forms.scss */
+input[disabled],
+textarea[disabled] {
+  color: #ecf0f1;
+  cursor: not-allowed;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #EEE; }
+
+/* line 218, ../scss/furatto/_forms.scss */
+.info textarea,
+.info input[type="text"],
+.info input[type="password"],
+.info input[type="datetime"],
+.info input[type="datetime-local"],
+.info input[type="date"],
+.info input[type="month"],
+.info input[type="time"],
+.info input[type="week"],
+.info input[type="number"],
+.info input[type="email"],
+.info input[type="url"],
+.info input[type="search"],
+.info input[type="tel"],
+.info input[type="color"] {
+  color: #2980b9;
+  border: 1px solid #2980b9; }
+
+/* line 238, ../scss/furatto/_forms.scss */
+.success textarea,
+.success input[type="text"],
+.success input[type="password"],
+.success input[type="datetime"],
+.success input[type="datetime-local"],
+.success input[type="date"],
+.success input[type="month"],
+.success input[type="time"],
+.success input[type="week"],
+.success input[type="number"],
+.success input[type="email"],
+.success input[type="url"],
+.success input[type="search"],
+.success input[type="tel"],
+.success input[type="color"] {
+  color: #27ae60;
+  border: 1px solid #27ae60; }
+
+/* line 258, ../scss/furatto/_forms.scss */
+.warning textarea,
+.warning input[type="text"],
+.warning input[type="password"],
+.warning input[type="datetime"],
+.warning input[type="datetime-local"],
+.warning input[type="date"],
+.warning input[type="month"],
+.warning input[type="time"],
+.warning input[type="week"],
+.warning input[type="number"],
+.warning input[type="email"],
+.warning input[type="url"],
+.warning input[type="search"],
+.warning input[type="tel"],
+.warning input[type="color"] {
+  color: #f39c12;
+  border: 1px solid #f39c12; }
+
+/* line 278, ../scss/furatto/_forms.scss */
+.error textarea,
+.error input[type="text"],
+.error input[type="password"],
+.error input[type="datetime"],
+.error input[type="datetime-local"],
+.error input[type="date"],
+.error input[type="month"],
+.error input[type="time"],
+.error input[type="week"],
+.error input[type="number"],
+.error input[type="email"],
+.error input[type="url"],
+.error input[type="search"],
+.error input[type="tel"],
+.error input[type="color"] {
+  color: #c0392b;
+  border: 1px solid #c0392b; }
 
 /*------------------------------------*\
     $TABLES
@@ -4511,9 +4676,10 @@ table {
   font-size: 14px;
   margin-bottom: 10px;
   outline: none;
-  width: 220px; }
+  width: 220px;
+  margin-left: 0; }
 
-/* line 20, ../scss/furatto/_select.scss */
+/* line 21, ../scss/furatto/_select.scss */
 .dk_toggle {
   background-color: #16a085;
   color: white;
@@ -4530,20 +4696,20 @@ table {
   -moz-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s; }
-  /* line 31, ../scss/furatto/_select.scss */
+  /* line 32, ../scss/furatto/_select.scss */
   .dk_toggle:hover, .dk_toggle:focus, .dk_focus .dk_toggle {
     background-color: #18ac8f;
     color: white;
     outline: none; }
-  /* line 36, ../scss/furatto/_select.scss */
+  /* line 37, ../scss/furatto/_select.scss */
   .dk_toggle:active {
     background-color: #159a80;
     outline: none; }
-    /* line 39, ../scss/furatto/_select.scss */
+    /* line 40, ../scss/furatto/_select.scss */
     .dk_toggle:active .select-icon {
       border-left-color: transparent; }
 
-/* line 46, ../scss/furatto/_select.scss */
+/* line 47, ../scss/furatto/_select.scss */
 .select-icon {
   background: #16a085 url("../img/toggle.png") no-repeat right center;
   border-left: 2px solid rgba(52, 73, 94, 0.15);
@@ -4558,18 +4724,18 @@ table {
   -o-transition: 0.25s;
   transition: 0.25s; }
 
-/* line 59, ../scss/furatto/_select.scss */
+/* line 60, ../scss/furatto/_select.scss */
 .dk_open {
   z-index: 10; }
-  /* line 62, ../scss/furatto/_select.scss */
+  /* line 63, ../scss/furatto/_select.scss */
   .dk_open .dk_toggle {
     background-color: #16a085; }
-    /* line 64, ../scss/furatto/_select.scss */
+    /* line 65, ../scss/furatto/_select.scss */
     .dk_open .dk_toggle .select-icon {
       background-color: #159a80;
       border-left-color: transparent; }
 
-/* line 72, ../scss/furatto/_select.scss */
+/* line 73, ../scss/furatto/_select.scss */
 .dk_options {
   padding-top: 14px; }
   /* line 43, ../scss/furatto/_helpers.scss */
@@ -4584,14 +4750,14 @@ table {
     top: 5px;
     width: 0px;
     -webkit-transform: rotate(360deg); }
-  /* line 76, ../scss/furatto/_select.scss */
+  /* line 77, ../scss/furatto/_select.scss */
   .dk_options:before {
     left: auto;
     right: 12px; }
-  /* line 80, ../scss/furatto/_select.scss */
+  /* line 81, ../scss/furatto/_select.scss */
   .dk_options li {
     padding-bottom: 3px; }
-  /* line 83, ../scss/furatto/_select.scss */
+  /* line 84, ../scss/furatto/_select.scss */
   .dk_options a {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -4602,15 +4768,15 @@ table {
     display: block;
     padding: 5px 9px;
     text-decoration: none; }
-    /* line 89, ../scss/furatto/_select.scss */
+    /* line 90, ../scss/furatto/_select.scss */
     .dk_options a:hover {
       background-color: #16a085; }
 
-/* line 95, ../scss/furatto/_select.scss */
+/* line 96, ../scss/furatto/_select.scss */
 .dk_option_current a {
   background-color: #16a085; }
 
-/* line 100, ../scss/furatto/_select.scss */
+/* line 101, ../scss/furatto/_select.scss */
 .dk_options_inner {
   background-color: #34495e;
   -webkit-border-radius: 5px;
@@ -4622,40 +4788,40 @@ table {
   max-height: 244px;
   padding: 3px 3px 0; }
 
-/* line 109, ../scss/furatto/_select.scss */
+/* line 110, ../scss/furatto/_select.scss */
 .dk_touch .dk_options {
   max-height: 250px; }
 
-/* line 116, ../scss/furatto/_select.scss */
+/* line 117, ../scss/furatto/_select.scss */
 .dk_container {
   display: none;
   position: relative;
   vertical-align: middle; }
-  /* line 120, ../scss/furatto/_select.scss */
+  /* line 121, ../scss/furatto/_select.scss */
   .dk_container.dk_shown {
     display: inline-block;
     zoom: 1;
     *display: inline; }
 
-/* line 125, ../scss/furatto/_select.scss */
+/* line 126, ../scss/furatto/_select.scss */
 .dk_toggle {
   display: block;
   position: relative; }
 
-/* line 130, ../scss/furatto/_select.scss */
+/* line 131, ../scss/furatto/_select.scss */
 .dk_open {
   position: relative; }
-  /* line 132, ../scss/furatto/_select.scss */
+  /* line 133, ../scss/furatto/_select.scss */
   .dk_open .dk_options {
     margin-top: -1px;
     opacity: 1;
     z-index: 10;
     display: block\9; }
-  /* line 139, ../scss/furatto/_select.scss */
+  /* line 140, ../scss/furatto/_select.scss */
   .dk_open .dk_label {
     color: inherit; }
 
-/* line 144, ../scss/furatto/_select.scss */
+/* line 145, ../scss/furatto/_select.scss */
 .dk_options {
   margin-top: -21px;
   position: absolute;
@@ -4668,122 +4834,598 @@ table {
   -moz-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out; }
-  /* line 155, ../scss/furatto/_select.scss */
+  /* line 156, ../scss/furatto/_select.scss */
   .select-right .dk_options {
     left: auto;
     right: 0; }
-  /* line 159, ../scss/furatto/_select.scss */
+  /* line 160, ../scss/furatto/_select.scss */
   .dk_options a {
     display: block; }
 
-/* line 164, ../scss/furatto/_select.scss */
+/* line 165, ../scss/furatto/_select.scss */
 .dk_options_inner {
   overflow: auto;
   outline: none;
   position: relative; }
 
-/* line 171, ../scss/furatto/_select.scss */
+/* line 172, ../scss/furatto/_select.scss */
 .dk_touch .dk_options {
   overflow: hidden; }
-/* line 174, ../scss/furatto/_select.scss */
+/* line 175, ../scss/furatto/_select.scss */
 .dk_touch .dk_options_inner {
   max-height: none;
   overflow: visible; }
 
-/* line 180, ../scss/furatto/_select.scss */
-.dk_fouc select {
+/* line 181, ../scss/furatto/_select.scss */
+.dk_fouc select[data-furatto='select'] {
   position: relative;
   top: -99999em;
   visibility: hidden; }
 
-/* line 3, ../scss/furatto/_checkbox-radiobuttons.scss */
-.checkbox,
-.radio {
-  margin-bottom: 12px;
-  padding-left: 32px;
-  position: relative;
-  -webkit-transition: 0.25s;
-  -moz-transition: 0.25s;
-  -o-transition: 0.25s;
-  transition: 0.25s; }
-  /* line 8, ../scss/furatto/_checkbox-radiobuttons.scss */
-  .checkbox:hover,
-  .radio:hover {
-    color: #16a085; }
-  /* line 11, ../scss/furatto/_checkbox-radiobuttons.scss */
-  .checkbox input,
-  .radio input {
-    outline: none !important;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0; }
-  /* line 16, ../scss/furatto/_checkbox-radiobuttons.scss */
-  .checkbox.checked .icon,
-  .radio.checked .icon {
-    background-position: -60px -30px;
-    opacity: 1;
-    display: block\9; }
-  /* line 21, ../scss/furatto/_checkbox-radiobuttons.scss */
-  .checkbox.checked .icon-to-fade,
-  .radio.checked .icon-to-fade {
-    opacity: 0;
-    display: none\9; }
-  /* line 27, ../scss/furatto/_checkbox-radiobuttons.scss */
-  .checkbox.disabled,
-  .radio.disabled {
-    color: #d7dddd;
-    cursor: default; }
-    /* line 30, ../scss/furatto/_checkbox-radiobuttons.scss */
-    .checkbox.disabled .icon,
-    .radio.disabled .icon {
-      opacity: 0;
-      display: none\9; }
-    /* line 34, ../scss/furatto/_checkbox-radiobuttons.scss */
-    .checkbox.disabled .icon-to-fade,
-    .radio.disabled .icon-to-fade {
-      background-position: -30px -60px;
-      opacity: 1;
-      display: block\9; }
-    /* line 40, ../scss/furatto/_checkbox-radiobuttons.scss */
-    .checkbox.disabled.checked .icon,
-    .radio.disabled.checked .icon {
-      background-position: 0 -90px;
-      opacity: 1;
-      display: block\9; }
-    /* line 45, ../scss/furatto/_checkbox-radiobuttons.scss */
-    .checkbox.disabled.checked .icon-to-fade,
-    .radio.disabled.checked .icon-to-fade {
-      opacity: 0;
-      display: none\9; }
-  /* line 53, ../scss/furatto/_checkbox-radiobuttons.scss */
-  .checkbox .icon,
-  .checkbox .icon-to-fade,
-  .radio .icon,
-  .radio .icon-to-fade {
-    background: url("../img/checkbox.png") -90px 0 no-repeat;
-    display: block;
-    height: 20px;
-    left: 0;
-    opacity: 1;
-    position: absolute;
-    top: -1px;
-    width: 20px;
-    -webkit-transition: opacity 0.1s linear;
-    -moz-transition: opacity 0.1s linear;
-    -o-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear; }
-  /* line 64, ../scss/furatto/_checkbox-radiobuttons.scss */
-  .checkbox .icon,
-  .radio .icon {
-    opacity: 0;
-    top: 0;
-    z-index: 2;
-    display: none\9; }
+/* line 188, ../scss/furatto/_select.scss */
+select {
+  margin-bottom: 8px; }
 
-/* line 75, ../scss/furatto/_checkbox-radiobuttons.scss */
-.radio .icon,
-.radio .icon-to-fade {
-  background-image: url("../img/radio.png"); }
+/* iCheck plugin Flat skin, aero
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_aero.scss */
+.icheckbox_flat-aero,
+.iradio_flat-aero {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/aero.png) no-repeat;
+  border: none;
+  cursor: pointer; }
 
+/* line 15, ../scss/furatto/icheck/_aero.scss */
+.icheckbox_flat-aero {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_aero.scss */
+.icheckbox_flat-aero.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_aero.scss */
+.icheckbox_flat-aero.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_aero.scss */
+.icheckbox_flat-aero.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_aero.scss */
+.iradio_flat-aero {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_aero.scss */
+.iradio_flat-aero.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_aero.scss */
+.iradio_flat-aero.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_aero.scss */
+.iradio_flat-aero.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_aero.scss */
+  .icheckbox_flat-aero,
+  .iradio_flat-aero {
+    background-image: url(../img/icheck/aero@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, blue
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_blue.scss */
+.icheckbox_flat-blue,
+.iradio_flat-blue {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/blue.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_blue.scss */
+.icheckbox_flat-blue {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_blue.scss */
+.icheckbox_flat-blue.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_blue.scss */
+.icheckbox_flat-blue.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_blue.scss */
+.icheckbox_flat-blue.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_blue.scss */
+.iradio_flat-blue {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_blue.scss */
+.iradio_flat-blue.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_blue.scss */
+.iradio_flat-blue.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_blue.scss */
+.iradio_flat-blue.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_blue.scss */
+  .icheckbox_flat-blue,
+  .iradio_flat-blue {
+    background-image: url(../img/icheck/blue@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin flat skin, black
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_flat.scss */
+.icheckbox_flat-dark,
+.iradio_flat-dark {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/flat.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_flat.scss */
+.icheckbox_flat-dark {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_flat.scss */
+.icheckbox_flat-dark.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_flat.scss */
+.icheckbox_flat-dark.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_flat.scss */
+.icheckbox_flat-dark.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_flat.scss */
+.iradio_flat-dark {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_flat.scss */
+.iradio_flat-dark.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_flat.scss */
+.iradio_flat-dark.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_flat.scss */
+.iradio_flat-dark.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_flat.scss */
+  .icheckbox_flat-dark,
+  .iradio_flat-dark {
+    background-image: url(../img/icheck/flat@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, green
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_green.scss */
+.icheckbox_flat-green,
+.iradio_flat-green {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/green.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_green.scss */
+.icheckbox_flat-green {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_green.scss */
+.icheckbox_flat-green.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_green.scss */
+.icheckbox_flat-green.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_green.scss */
+.icheckbox_flat-green.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_green.scss */
+.iradio_flat-green {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_green.scss */
+.iradio_flat-green.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_green.scss */
+.iradio_flat-green.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_green.scss */
+.iradio_flat-green.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_green.scss */
+  .icheckbox_flat-green,
+  .iradio_flat-green {
+    background-image: url(../img/icheck/green@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, grey
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_grey.scss */
+.icheckbox_flat-grey,
+.iradio_flat-grey {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/grey.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_grey.scss */
+.icheckbox_flat-grey {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_grey.scss */
+.icheckbox_flat-grey.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_grey.scss */
+.icheckbox_flat-grey.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_grey.scss */
+.icheckbox_flat-grey.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_grey.scss */
+.iradio_flat-grey {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_grey.scss */
+.iradio_flat-grey.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_grey.scss */
+.iradio_flat-grey.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_grey.scss */
+.iradio_flat-grey.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_grey.scss */
+  .icheckbox_flat-grey,
+  .iradio_flat-grey {
+    background-image: url(../img/icheck/grey@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, orange
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_orange.scss */
+.icheckbox_flat-orange,
+.iradio_flat-orange {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/orange.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_orange.scss */
+.icheckbox_flat-orange {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_orange.scss */
+.icheckbox_flat-orange.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_orange.scss */
+.icheckbox_flat-orange.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_orange.scss */
+.icheckbox_flat-orange.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_orange.scss */
+.iradio_flat-orange {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_orange.scss */
+.iradio_flat-orange.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_orange.scss */
+.iradio_flat-orange.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_orange.scss */
+.iradio_flat-orange.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_orange.scss */
+  .icheckbox_flat-orange,
+  .iradio_flat-orange {
+    background-image: url(../img/icheck/orange@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, pink
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_pink.scss */
+.icheckbox_flat-pink,
+.iradio_flat-pink {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/pink.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_pink.scss */
+.icheckbox_flat-pink {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_pink.scss */
+.icheckbox_flat-pink.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_pink.scss */
+.icheckbox_flat-pink.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_pink.scss */
+.icheckbox_flat-pink.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_pink.scss */
+.iradio_flat-pink {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_pink.scss */
+.iradio_flat-pink.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_pink.scss */
+.iradio_flat-pink.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_pink.scss */
+.iradio_flat-pink.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_pink.scss */
+  .icheckbox_flat-pink,
+  .iradio_flat-pink {
+    background-image: url(../img/icheck/pink@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, purple
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_purple.scss */
+.icheckbox_flat-purple,
+.iradio_flat-purple {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/purple.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_purple.scss */
+.icheckbox_flat-purple {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_purple.scss */
+.icheckbox_flat-purple.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_purple.scss */
+.icheckbox_flat-purple.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_purple.scss */
+.icheckbox_flat-purple.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_purple.scss */
+.iradio_flat-purple {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_purple.scss */
+.iradio_flat-purple.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_purple.scss */
+.iradio_flat-purple.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_purple.scss */
+.iradio_flat-purple.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_purple.scss */
+  .icheckbox_flat-purple,
+  .iradio_flat-purple {
+    background-image: url(../img/icheck/purple@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, red
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_red.scss */
+.icheckbox_flat-red,
+.iradio_flat-red {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/red.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_red.scss */
+.icheckbox_flat-red {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_red.scss */
+.icheckbox_flat-red.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_red.scss */
+.icheckbox_flat-red.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_red.scss */
+.icheckbox_flat-red.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_red.scss */
+.iradio_flat-red {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_red.scss */
+.iradio_flat-red.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_red.scss */
+.iradio_flat-red.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_red.scss */
+.iradio_flat-red.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_red.scss */
+  .icheckbox_flat-red,
+  .iradio_flat-red {
+    background-image: url(../img/icheck/red@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
+/* iCheck plugin Flat skin, yellow
+----------------------------------- */
+/* line 4, ../scss/furatto/icheck/_yellow.scss */
+.icheckbox_flat-yellow,
+.iradio_flat-yellow {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icheck/yellow.png) no-repeat;
+  border: none;
+  cursor: pointer; }
+
+/* line 15, ../scss/furatto/icheck/_yellow.scss */
+.icheckbox_flat-yellow {
+  background-position: 0 0; }
+
+/* line 18, ../scss/furatto/icheck/_yellow.scss */
+.icheckbox_flat-yellow.checked {
+  background-position: -22px 0; }
+
+/* line 21, ../scss/furatto/icheck/_yellow.scss */
+.icheckbox_flat-yellow.disabled {
+  background-position: -44px 0;
+  cursor: default; }
+
+/* line 25, ../scss/furatto/icheck/_yellow.scss */
+.icheckbox_flat-yellow.checked.disabled {
+  background-position: -66px 0; }
+
+/* line 29, ../scss/furatto/icheck/_yellow.scss */
+.iradio_flat-yellow {
+  background-position: -88px 0; }
+
+/* line 32, ../scss/furatto/icheck/_yellow.scss */
+.iradio_flat-yellow.checked {
+  background-position: -110px 0; }
+
+/* line 35, ../scss/furatto/icheck/_yellow.scss */
+.iradio_flat-yellow.disabled {
+  background-position: -132px 0;
+  cursor: default; }
+
+/* line 39, ../scss/furatto/icheck/_yellow.scss */
+.iradio_flat-yellow.checked.disabled {
+  background-position: -154px 0; }
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 49, ../scss/furatto/icheck/_yellow.scss */
+  .icheckbox_flat-yellow,
+  .iradio_flat-yellow {
+    background-image: url(../img/icheck/yellow@2x.png);
+    -webkit-background-size: 176px 22px;
+    background-size: 176px 22px; } }
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
@@ -5110,23 +5752,62 @@ ol.inline {
     padding-right: 5px; }
 
 /* line 153, ../scss/furatto/_typography.scss */
+.color-list {
+  margin-left: 0;
+  list-style: none; }
+  /* line 156, ../scss/furatto/_typography.scss */
+  .color-list > li {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: #222;
+    cursor: pointer; }
+    /* line 163, ../scss/furatto/_typography.scss */
+    .color-list > li.red {
+      background: #ec7063; }
+    /* line 167, ../scss/furatto/_typography.scss */
+    .color-list > li.green {
+      background: #1abc9c; }
+    /* line 171, ../scss/furatto/_typography.scss */
+    .color-list > li.blue {
+      background: #3498db; }
+    /* line 175, ../scss/furatto/_typography.scss */
+    .color-list > li.aero {
+      background: #9cc2cb; }
+    /* line 179, ../scss/furatto/_typography.scss */
+    .color-list > li.grey {
+      background: #95a5a6; }
+    /* line 183, ../scss/furatto/_typography.scss */
+    .color-list > li.orange {
+      background: #f39c12; }
+    /* line 187, ../scss/furatto/_typography.scss */
+    .color-list > li.yellow {
+      background: #f1c40f; }
+    /* line 191, ../scss/furatto/_typography.scss */
+    .color-list > li.pink {
+      background: #af7ac5; }
+    /* line 195, ../scss/furatto/_typography.scss */
+    .color-list > li.purple {
+      background: #8677a7; }
+
+/* line 202, ../scss/furatto/_typography.scss */
 dl {
   margin-bottom: 20px; }
 
-/* line 157, ../scss/furatto/_typography.scss */
+/* line 206, ../scss/furatto/_typography.scss */
 dt,
 dd {
   line-height: 20px; }
 
-/* line 160, ../scss/furatto/_typography.scss */
+/* line 209, ../scss/furatto/_typography.scss */
 dt {
   font-weight: bold; }
 
-/* line 163, ../scss/furatto/_typography.scss */
+/* line 212, ../scss/furatto/_typography.scss */
 dd {
   margin-left: 10px; }
 
-/* line 167, ../scss/furatto/_typography.scss */
+/* line 216, ../scss/furatto/_typography.scss */
 .dl-horizontal {
   *zoom: 1; }
   /* line 14, ../scss/furatto/_helpers.scss */
@@ -5136,8 +5817,28 @@ dd {
   /* line 19, ../scss/furatto/_helpers.scss */
   .dl-horizontal:after {
     clear: both; }
-  /* line 169, ../scss/furatto/_typography.scss */
+  /* line 218, ../scss/furatto/_typography.scss */
   .dl-horizontal dt {
     float: left;
     clear: left;
     text-align: right; }
+
+/* line 225, ../scss/furatto/_typography.scss */
+.inline {
+  display: inline-block; }
+
+/* line 230, ../scss/furatto/_typography.scss */
+.info {
+  color: #2980b9; }
+
+/* line 234, ../scss/furatto/_typography.scss */
+.success {
+  color: #27ae60; }
+
+/* line 238, ../scss/furatto/_typography.scss */
+.warning {
+  color: #f39c12; }
+
+/* line 242, ../scss/furatto/_typography.scss */
+.error {
+  color: #c0392b; }
