@@ -2115,11 +2115,7 @@ hr {
 .link {
   color: #0088cc !important; }
 
-/* line 109, ../scss/furatto/_base.scss */
-.center {
-  text-align: center; }
-
-/* line 115, ../scss/furatto/_base.scss */
+/* line 111, ../scss/furatto/_base.scss */
 .furatto-large-header {
   width: 100%;
   display: block;
@@ -2127,30 +2123,30 @@ hr {
   color: #232323;
   padding-bottom: 15px;
   padding-top: 15px; }
-  /* line 123, ../scss/furatto/_base.scss */
+  /* line 119, ../scss/furatto/_base.scss */
   .furatto-large-header .furatto-large-container {
     width: 100%;
     margin: 0 auto; }
-  /* line 128, ../scss/furatto/_base.scss */
+  /* line 124, ../scss/furatto/_base.scss */
   .furatto-large-header .large-header {
     font-size: 3em;
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
     color: #4b4b4b; }
-  /* line 136, ../scss/furatto/_base.scss */
+  /* line 132, ../scss/furatto/_base.scss */
   .furatto-large-header .motto {
     font-size: 1.5em;
     font-weight: lighter;
     margin: 0 0 15px 0;
     color: #ccc; }
 
-/* line 144, ../scss/furatto/_base.scss */
+/* line 140, ../scss/furatto/_base.scss */
 .container-center {
   width: 80%;
   margin: 0 auto; }
 
-/* line 151, ../scss/furatto/_base.scss */
+/* line 147, ../scss/furatto/_base.scss */
 .content-quote {
   color: #666;
   font-style: italic;
@@ -5002,18 +4998,34 @@ em {
   color: #ecf0f1; }
 
 /* line 33, ../scss/furatto/_typography.scss */
+.text-warning {
+  color: #f39c12; }
+
+/* line 37, ../scss/furatto/_typography.scss */
+.text-error {
+  color: #c0392b; }
+
+/* line 41, ../scss/furatto/_typography.scss */
+.text-success {
+  color: #27ae60; }
+
+/* line 45, ../scss/furatto/_typography.scss */
+.text-info {
+  color: #2980b9; }
+
+/* line 49, ../scss/furatto/_typography.scss */
 .text-left {
   text-align: left; }
 
-/* line 37, ../scss/furatto/_typography.scss */
+/* line 53, ../scss/furatto/_typography.scss */
 .text-right {
   text-align: right; }
 
-/* line 41, ../scss/furatto/_typography.scss */
+/* line 57, ../scss/furatto/_typography.scss */
 .text-center {
   text-align: center; }
 
-/* line 48, ../scss/furatto/_typography.scss */
+/* line 64, ../scss/furatto/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 20px 0;
   font-family: inherit;
@@ -5021,100 +5033,100 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 20px;
   color: #4b4b4b;
   text-rendering: optimizelegibility; }
-  /* line 56, ../scss/furatto/_typography.scss */
+  /* line 72, ../scss/furatto/_typography.scss */
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-weight: normal;
     line-height: 1;
     color: #ecf0f1; }
 
-/* line 63, ../scss/furatto/_typography.scss */
+/* line 79, ../scss/furatto/_typography.scss */
 .light {
   font-weight: 200; }
 
-/* line 67, ../scss/furatto/_typography.scss */
+/* line 83, ../scss/furatto/_typography.scss */
 h1, h2, h3 {
   line-height: 40px; }
 
-/* line 71, ../scss/furatto/_typography.scss */
+/* line 87, ../scss/furatto/_typography.scss */
 h5, h6 {
   text-transform: uppercase; }
 
-/* line 75, ../scss/furatto/_typography.scss */
+/* line 91, ../scss/furatto/_typography.scss */
 h1 {
   font-size: 44px; }
 
-/* line 79, ../scss/furatto/_typography.scss */
+/* line 95, ../scss/furatto/_typography.scss */
 h2 {
   font-size: 36px; }
 
-/* line 83, ../scss/furatto/_typography.scss */
+/* line 99, ../scss/furatto/_typography.scss */
 h3 {
   font-size: 28px; }
 
-/* line 87, ../scss/furatto/_typography.scss */
+/* line 103, ../scss/furatto/_typography.scss */
 h4 {
   font-size: 20px; }
 
-/* line 91, ../scss/furatto/_typography.scss */
+/* line 107, ../scss/furatto/_typography.scss */
 h5 {
   font-size: 16px; }
 
-/* line 95, ../scss/furatto/_typography.scss */
+/* line 111, ../scss/furatto/_typography.scss */
 h6 {
   font-size: 13.6px; }
 
-/* line 103, ../scss/furatto/_typography.scss */
+/* line 119, ../scss/furatto/_typography.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 10px 25px; }
 
-/* line 110, ../scss/furatto/_typography.scss */
+/* line 126, ../scss/furatto/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0; }
 
-/* line 113, ../scss/furatto/_typography.scss */
+/* line 129, ../scss/furatto/_typography.scss */
 li {
   line-height: 20px; }
 
-/* line 119, ../scss/furatto/_typography.scss */
+/* line 135, ../scss/furatto/_typography.scss */
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none; }
 
-/* line 126, ../scss/furatto/_typography.scss */
+/* line 142, ../scss/furatto/_typography.scss */
 ul.inline,
 ol.inline {
   margin-left: 0;
   list-style: none; }
-  /* line 129, ../scss/furatto/_typography.scss */
+  /* line 145, ../scss/furatto/_typography.scss */
   ul.inline > li,
   ol.inline > li {
     display: inline-block;
     padding-left: 5px;
     padding-right: 5px; }
 
-/* line 137, ../scss/furatto/_typography.scss */
+/* line 153, ../scss/furatto/_typography.scss */
 dl {
   margin-bottom: 20px; }
 
-/* line 141, ../scss/furatto/_typography.scss */
+/* line 157, ../scss/furatto/_typography.scss */
 dt,
 dd {
   line-height: 20px; }
 
-/* line 144, ../scss/furatto/_typography.scss */
+/* line 160, ../scss/furatto/_typography.scss */
 dt {
   font-weight: bold; }
 
-/* line 147, ../scss/furatto/_typography.scss */
+/* line 163, ../scss/furatto/_typography.scss */
 dd {
   margin-left: 10px; }
 
-/* line 151, ../scss/furatto/_typography.scss */
+/* line 167, ../scss/furatto/_typography.scss */
 .dl-horizontal {
   *zoom: 1; }
   /* line 14, ../scss/furatto/_helpers.scss */
@@ -5124,7 +5136,7 @@ dd {
   /* line 19, ../scss/furatto/_helpers.scss */
   .dl-horizontal:after {
     clear: both; }
-  /* line 153, ../scss/furatto/_typography.scss */
+  /* line 169, ../scss/furatto/_typography.scss */
   .dl-horizontal dt {
     float: left;
     clear: left;

@@ -46,7 +46,7 @@
   <div class="container-center">
     <p class="text-center"><a href="http://necolas.github.io/normalize.css/">Normalize.css</a> is an open-source project by <a href="https://twitter.com/necolas">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal">Jonathan Neal</a>, in their words:</p>
     <blockquote class="content-quote">
-      Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It’s a modern, HTML5-ready, alternative to the traditional CSS reset."
+      <p>Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It’s a modern, HTML5-ready, alternative to the traditional CSS reset."</p>    
     </blockquote>
     <div class="furatto-block">
       <h3 class="light">Headings</h3>
@@ -117,25 +117,77 @@
       </div>
     </div>
     <div class="furatto-block">
+       <div class="row-fluid">
+         <h3 class="light">Alignment classes</h3>
+         <p>In Furatto is really easy to align text with the alignment classes.</p>
+         <p class="text-left">Left align text</p>
+         <p class="text-center">Center align text</p>
+         <p class="text-right">Right align text</p>
+         <pre data-language="html">
+           <code>
+             <p class="text-left">Left align text</p>
+             <p class="text-center">Center align text</p>
+             <p class="text-right">Right align text</p>
+           </code>
+         </pre>
+       </div>
+    </div>
+    <div class="furatto-block">
+       <div class="row-fluid">
+         <h3 class="light">Emphasis classes</h3>
+         <p>Convenient emphasis classes for a more meaningful end.</p>
+         <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+         <p class="text-warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+         <p class="text-error">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+         <p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+         <p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+         <pre data-language="html">
+           <code>
+             <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+             <p class="text-warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+             <p class="text-error">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+             <p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+             <p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+           </code>
+         </pre>
+       </div>
+    </div>
+    <div class="furatto-block">
+       <div class="row-fluid">
+         <h3 class="light">Blockquotes</h3>
+         <p>For quoting content you can use use the blockquoute with the 'content-quote' classname.</p>
+          <blockquote class="content-quote">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>            
+          </blockquote>
+         <pre data-language="html">
+           <code>
+              <blockquote class="content-quote">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>            
+              </blockquote>
+           </code>
+         </pre>
+       </div>
+    </div>
+    <div class="furatto-block">
       <div class="row-fluid">
-         <h3 class="light">Inline styles</h3>
-         <p>Furatto comes with a bunch inline styles for you, check it out!</p>
-         <div class="span6">
-           <p><cite>The cite!</cite> example</p>
-           <p>The <code>code example</code> example</p>
-           <p>The <del>del tag</del> example</p>
-           <p>The <em>em tag</em> example</p>
-           <p>The <i>i tag</i> example</p>
-           <p>The img tag <img src="http://lorempixel.com/24/24"> example</p>
-           <p>The <ins>ins tag</ins> example</p>
-           <p>The <kbd>kbd tag</kbd> example</p>
-           <p>The <mark>mark tag</mark> example</p>
-         </div>
-         <div class="span6">
-           
-         </div>
+        <h3 class="light">Inline lists</h3>
+        <ul class="inline">
+           <li>First item</li>
+           <li>Second item</li>
+           <li>Third item</li>
+        </ul>
+        <pre data-language="html">
+          <code>
+            <ul class="inline">
+               <li>First item</li>
+               <li>Second item</li>
+               <li>Third item</li>
+            </ul>
+          </code>
+        </pre>
       </div>
-      
     </div>
   </div>
 </div>
