@@ -38,3 +38,9 @@ jQuery ->
     input.pickadate
       selectYears: input.data('select-years') || false
       selectMonths: input.data('select-months') || false
+
+  $('[data-toolbar]').each ->
+    $(@).toolbar
+      content: $(@).data('content')
+      position: $(@).data('position') || 'top'
+      hideOnClick: true

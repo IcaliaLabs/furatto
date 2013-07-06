@@ -49,6 +49,10 @@ $dark-green: #27AE60;
 $dark-orange: #f39c12;
 $orange: #f1c40f;
 
+//Black
+$dark-black: #232323;
+$black: lighten($dark-black, 10%);
+
 //White
 $white: #FFF;
 
@@ -60,7 +64,8 @@ $colors: primary $dark-blue $blue, //class name, bg color, hover bg color
          inverse $dark-inverse $inverse,
          info $dark-info $info,
          default $dark-gray $gray,
-         funky $dark-purple $purple;
+         funky $dark-purple $purple,
+         dark $dark-black $black;
 
 //Buttons
 
@@ -199,3 +204,6 @@ $color-list-item-width: $color-list-item-height;
 
 //Pagination 
 $pagination-color: desaturate(lighten($inverse, 57.5%), 17%);
+
+//Toolbars
+$toolbar-bg-color: #232323;

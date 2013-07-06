@@ -254,3 +254,7 @@ dd {
   font-size: $base-font-size;
   @include border-radius(3px);
 }
+
+i.nomargin {
+  margin-right: 0 !important;
+}

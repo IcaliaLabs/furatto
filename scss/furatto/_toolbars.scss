@@ -1,0 +1,109 @@
+.tool-container {
+	background-color: $toolbar-bg-color;
+	position: absolute;				
+  @include border-radius(3px);
+}
+
+.tool-container.tool-top, .tool-container.tool-bottom {
+	height: 34px;
+	border-bottom: 1px solid $white;
+}
+
+.tool-items {
+	height: 100%;	
+}
+
+.tool-top .tool-item, .tool-bottom .tool-item {
+	float: left;
+	border-right: 1px solid $white;
+}
+
+.tool-left .tool-item, .tool-right .tool-item {
+	height: 34px;
+  border-bottom: 1px solid $white;
+}
+
+
+.tool-item {
+	height: 100%;
+	display: block;				
+	width: 44px;
+	text-align: center;
+
+  i {
+    line-height: 34px;
+  }
+}
+
+.tool-item:first-child {
+	border-left: none;
+}
+
+.tool-left .tool-item:first-child, .tool-right .tool-item:first-child {
+	border-top: 1px solid transparent;
+}
+
+.tool-item:last-child {
+	border-right: none;
+	border-bottom: none;
+}
+
+.tool-item.selected, .tool-item:hover  {
+	background: darken($toolbar-bg-color, 5%);
+}
+
+.tool-top .tool-item:last-child:hover, .tool-bottom .tool-item:last-child:hover {
+	@include border-top-right-radius(4px);
+	@include border-bottom-right-radius(4px);
+}
+
+.tool-top  .tool-item:first-child:hover, .tool-bottom  .tool-item:first-child:hover {
+	@include border-top-left-radius(4px);
+	@include border-bottom-left-radius(4px);
+}
+
+.tool-left .tool-item:last-child:hover, .tool-right .tool-item:last-child:hover {
+	@include border-bottom-right-radius(4px);
+	@include border-bottom-left-radius(4px);
+}
+
+.tool-left .tool-item:first-child:hover, .tool-right .tool-item:first-child:hover {
+	@include border-top-right-radius(4px);
+	@include border-top-left-radius(4px);
+}
+
+.tool-container .arrow {
+	width:0;
+	height:0;
+	position: absolute;	
+	border-width:7px;
+	border-style:solid;
+}
+
+.tool-container.tool-top .arrow {
+	border-color: $toolbar-bg-color transparent transparent; 
+	left: 50%;  
+	bottom: -14px;
+	margin-left: -7px;
+}
+
+.tool-container.tool-bottom .arrow {
+	border-color: transparent transparent $toolbar-bg-color; 
+	left: 50%;  
+	top: -14px;
+	margin-left: -7px;
+}
+
+.tool-container.tool-left .arrow {
+	border-color: transparent transparent transparent $toolbar-bg-color;
+	top: 50%;
+	right: -14px;
+	margin-top: -7px;
+}
+
+.tool-container.tool-right .arrow {
+	border-color: transparent $toolbar-bg-color transparent transparent;
+	top: 50%;
+	left: -14px;
+	margin-top: -7px;
+}
