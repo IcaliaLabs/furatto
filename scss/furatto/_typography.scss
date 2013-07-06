@@ -242,3 +242,15 @@ dd {
 .error {
   color: $dark-red;
 }
+
+
+//Inline code
+.code {
+  padding: 2px 4px;
+  color: #d14;
+  white-space: nowrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  font-size: $base-font-size;
+  @include border-radius(3px);
+}

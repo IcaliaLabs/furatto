@@ -1,0 +1,148 @@
+.pagination {
+  margin: 20px 0;
+}
+
+.pagination ul {
+  display: inline-block;
+  *display: inline;
+  margin-bottom: 0;
+  margin-left: 0;
+  @include border-radius(4px);
+  *zoom: 1;
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+}
+
+.pagination ul > li {
+  display: inline;
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-left-width: 0;
+}
+
+.pagination ul > li > a:hover,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  background-color: #f5f5f5;
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  color: #999999;
+  cursor: default;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover {
+  color: #999999;
+  cursor: default;
+  background-color: transparent;
+}
+
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+  border-left-width: 1px;
+  @include border-bottom-left-radius(4px);
+  @include border-top-left-radius(4px);
+}
+
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+  @include border-top-right-radius(4px);
+  @include border-bottom-right-radius(4px);
+}
+
+.pagination-centered {
+  text-align: center;
+}
+
+.pagination-right {
+  text-align: right;
+}
+
+.pagination {
+  ul {
+    background: $pagination-color;
+    @include border-radius(6px);
+    @include box-shadow(none);
+    > li {
+      &:first-child {
+        @include border-radius(6px 0 0 6px);
+      }
+      &:last-child {
+        @include border-radius(0 6px 6px 0);
+      }
+      &.previous,
+      &.next {
+        > a, > span {
+          background: transparent;
+          border: none;
+          border-right: 2px solid $white !important;
+          margin: 0 9px 0 0;
+          padding: 11px 17px 12px 17px;
+          @include border-radius(6px 0 0 6px);
+          @include box-shadow(none !important);
+        }
+      }
+      &.next {
+        > a, > span {
+          border-left: 2px solid $white !important;
+          margin-left: 9px;
+          margin-right: 0;
+          @include border-radius(0 6px 6px 0);
+        }
+      }
+      &.active {
+        > a, > span {
+          background-color: $dark-blue;
+          border-color: $dark-blue;
+          border-width: 2px;
+          color: $white;
+          margin: 10px 5px 9px;
+          padding: 0 4px;
+          &:hover, &:focus {
+            background-color: $dark-blue;
+            border-color: $dark-blue;
+            color: $white;
+            @include box-shadow(none);
+          }
+        }
+      }
+      > a, > span {
+        background: $white;
+        border: 5px solid $pagination-color;
+        border-radius: 50px;
+        color: $white;
+        line-height: 16px;
+        margin: 7px 2px 6px;
+        padding: 0 4px;
+        @include transition((background 0.2s ease-out, border-color 0s ease-out, color 0.2s ease-out));
+        &:hover, :focus {
+          background-color: $dark-blue;
+          border-color: $dark-blue;
+          color: $white;
+          @include transition((background 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out));
+        }
+        &:active {
+          background-color: scale-color($dark-blue, $lightness: -15%);
+          border-color: scale-color($dark-blue, $lightness: -15%);
+        }
+      }
+    }
+    img {
+      // For retina 2x image that is scaled down to 14px for all common screens
+      height: 14px;
+      margin-top: -1px;
+      vertical-align: middle;
+      width: 13px;
+    }
+  }
+}

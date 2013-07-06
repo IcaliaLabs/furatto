@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Furatto :: Components</title>
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/furatto.css" />
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top navbar-alpha">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+      <div class="nav-collapse collapse">
+        <nav id="menu">
+          <ul class="nav">
+            <li><a class="brand" href="index.html">Furatto</a></li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="base.html">Base</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li class="active"><a href="components.html">Components</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="furatto-block">
+        <div class="furatto-large-header">
+          <div class="furatto-large-container">
+            <h1 class="large-header">Components</h1>
+            <p class="motto">
+            A collection of useful components.
+            </p>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-center">
+    <div class="furatto-block">
+      <h3 class="light">Navbar</h3>
+      <p>Based on the <a href="http://twitter.github.io/bootstrap/components.html#navbar">Bootstrap</a> filosophy navbars are static and not fixed on the top </p>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+            <div class="nav-collapse collapse">
+              <nav id="menu">
+                <ul class="nav">
+                  <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
+                  <li><a href="javascript:void(0)">Buttons</a></li>
+                  <li><a href="javascript:void(0)">Images</a></li>
+                  <li><a href="javascript:void(0)">Tables</a></li>
+                  <li><a href="javascript:void(0)">Base</a></li>
+                  <li><a href="javascript:void(0)">Forms</a></li>
+                  <li class="active"><a href="javascript:void(0)">Components</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre data-language="html">
+         <code>
+           <div class="navbar">
+             <div class="navbar-inner">
+               <div class="container">
+                 <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+                 <div class="nav-collapse collapse">
+                   <nav id="menu">
+                     <ul class="nav">
+                       <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
+                       <li><a href="javascript:void(0)">Base</a></li>
+                     </ul>
+                   </nav>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </code>
+      </pre>
+      <h4>Optional Navbar variations</h4>
+      <p>Fix the navbar to the top or to the bottom, or perhaps add transparency</p>
+      <h5>Fixed Top</h5>
+      <pre data-language="html">
+        <code>
+           <div class="navbar navbar-fixed-top">
+              ...
+           </div>
+        </code>
+      </pre>
+      <h5>Fixed Bottom</h5>
+      <pre data-language="html">
+        <code>
+           <div class="navbar navbar-fixed-bottom">
+              ...
+           </div>
+        </code>
+      </pre>
+      <h5>Transparency</h5>
+      <pre data-language="html">
+        <code>
+           <div class="navbar navbar-alpha">
+              ...
+           </div>
+        </code>
+      </pre>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Pagination</h3>
+      <p>Simple and sleek pagination. Great for apps and search results.</p>
+      <div class="pagination">
+        <ul>
+          <li class="previous"><a href="#"><img src="img/previous.png" /></a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li class="next"><a href="#"><img src="img/next.png" /></a></li>
+        </ul>
+      </div>
+      <pre data-language="html">
+        <code>
+          <div class="pagination">
+            <ul>
+              <li class="previous"><a href="#"><img src="img/previous.png" /></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li class="next"><a href="#"><img src="img/next.png" /></a></li>
+            </ul>
+          </div>
+        </code>
+      </pre>
+      <h4>Alignment</h4>
+      <p>Add one of two optional classes to align the pagination.</p>
+      <h5>Center 'pagination-centered'</h5>
+          <div class="pagination pagination-centered">
+            <ul>
+              <li class="previous"><a href="#"><img src="img/previous.png" /></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li class="next"><a href="#"><img src="img/next.png" /></a></li>
+            </ul>
+          </div>
+      <pre data-language="html">
+      <code>
+          <div class="pagination pagination-centered">
+            ...
+          </div>
+      </code>
+      </pre>
+      <h5>Right 'pagination-right'</h5>
+          <div class="pagination pagination-right">
+            <ul>
+              <li class="previous"><a href="#"><img src="img/previous.png" /></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li class="next"><a href="#"><img src="img/next.png" /></a></li>
+            </ul>
+          </div>
+      <pre data-language="html">
+      <code>
+          <div class="pagination pagination-right">
+            ...
+          </div>
+      </code>
+      </pre>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Labels and badges</h3>
+      <h4>Labels</h4>
+      <table class="table table-bordered table-striped">
+         <thead>
+           <tr>
+             <th>Label</th>
+             <th>Markup</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td><span class="label">Default</span></td>
+             <td><span class="code">&lt;span class="label"&gt;Default&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="label label-primary">Primary</span></td>
+             <td><span class="code">&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="label label-success">Success</span></td>
+             <td><span class="code">&lt;span class="label label-success"&gt;Success&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="label label-danger">Danger</span></td>
+             <td><span class="code">&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="label label-warning">Warning</span></td>
+             <td><span class="code">&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="label label-inverse">Inverse</span></td>
+             <td><span class="code">&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="label label-info">Info</span></td>
+             <td><span class="code">&lt;span class="label label-info"&gt;Info&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="label label-funky">Funky</span></td>
+             <td><span class="code">&lt;span class="label label-funky"&gt;Funky&lt;/span&gt;</span></td>
+           </tr>
+         </tbody>
+      </table>   
+      <h4>Badges</h4>
+      <table class="table table-bordered table-striped">
+         <thead>
+           <tr>
+             <th>badge</th>
+             <th>Markup</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td><span class="badge">1</span></td>
+             <td><span class="code">&lt;span class="badge"&gt;1&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="badge badge-primary">2</span></td>
+             <td><span class="code">&lt;span class="badge badge-primary"&gt;2&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="badge badge-success">3</span></td>
+             <td><span class="code">&lt;span class="badge badge-success"&gt;3&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="badge badge-danger">4</span></td>
+             <td><span class="code">&lt;span class="badge badge-danger"&gt;4&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="badge badge-warning">5</span></td>
+             <td><span class="code">&lt;span class="badge badge-warning"&gt;5&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="badge badge-inverse">6</span></td>
+             <td><span class="code">&lt;span class="badge badge-inverse"&gt;6&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="badge badge-info">7</span></td>
+             <td><span class="code">&lt;span class="badge badge-info"&gt;7&lt;/span&gt;</span></td>
+           </tr>
+           <tr>
+             <td><span class="badge badge-funky">8</span></td>
+             <td><span class="code">&lt;span class="badge badge-funky"&gt;8&lt;/span&gt;</span></td>
+           </tr>
+         </tbody>
+      </table>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Alerts</h3>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Tooltips</h3>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Tags</h3>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Helper classes</h3>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+<div class="footer-wrapper">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="span6">
+          <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="link">Apache License v2.0</a></p>
+        </div>
+        <div class="span6">
+          <ul class="hrz-nav pull-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Rails</a></li>
+            <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+            <li><a href="http://glyphicons.com/">Glyphicons</a></li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+</div>
+
+ <script src="js/jquery.js"></script>
+ <script src="js/jpanel.js"></script>
+ <script src="js/jquery.dropkick-1.0.0.js"></script>
+ <script src="js/rainbow-custom.min.js"></script>
+ <script src="js/manifest.js"></script>
+
+
+</body>
+</html>

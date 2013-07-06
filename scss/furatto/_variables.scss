@@ -49,6 +49,9 @@ $dark-green: #27AE60;
 $dark-orange: #f39c12;
 $orange: #f1c40f;
 
+//White
+$white: #FFF;
+
 //All colors
 $colors: primary $dark-blue $blue, //class name, bg color, hover bg color
          success $dark-green $green,
@@ -193,3 +196,6 @@ $headings-color: #4b4b4b;
 //Color Lists
 $color-list-item-height: 16px;
 $color-list-item-width: $color-list-item-height;
+
+//Pagination 
+$pagination-color: desaturate(lighten($inverse, 57.5%), 17%);
