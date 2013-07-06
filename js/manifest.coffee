@@ -32,3 +32,9 @@ jQuery ->
   #Tags
   $("[data-tags]").tagsInput()
 
+  #Datepicker
+  $("[data-datepicker]").each ->
+    input = $(@)
+    input.pickadate
+      selectYears: input.data('select-years') || false
+      selectMonths: input.data('select-months') || false
