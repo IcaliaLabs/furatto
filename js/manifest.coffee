@@ -19,3 +19,9 @@ jQuery ->
     if (!$(this).parent().hasClass("previous") && !$(this).parent().hasClass("next"))
       $(this).parent().siblings("li").removeClass("active")
       $(this).parent().addClass("active")
+
+  #Closing buttons
+  $('.close').each ->
+    $(@).click (e) ->
+      e.preventDefault()
+      $(@).parent().fadeOut();
