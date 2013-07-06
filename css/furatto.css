@@ -2158,6 +2158,17 @@ hr {
   border-left: 5px solid #ddd;
   padding-left: 1.5em; }
 
+/* line 159, ../scss/furatto/_base.scss */
+.clearfix {
+  *zoom: 1; }
+  /* line 14, ../scss/furatto/_helpers.scss */
+  .clearfix:before, .clearfix:after {
+    display: table;
+    content: ""; }
+  /* line 19, ../scss/furatto/_helpers.scss */
+  .clearfix:after {
+    clear: both; }
+
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
@@ -6039,3 +6050,254 @@ dd {
     margin-top: -1px;
     vertical-align: middle;
     width: 13px; }
+
+/* line 1, ../scss/furatto/_tooltips.scss */
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  padding: 5px;
+  font-size: 11px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: visible; }
+
+/* line 12, ../scss/furatto/_tooltips.scss */
+.tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+/* line 17, ../scss/furatto/_tooltips.scss */
+.tooltip.top {
+  margin-top: -3px; }
+
+/* line 21, ../scss/furatto/_tooltips.scss */
+.tooltip.right {
+  margin-left: 3px; }
+
+/* line 25, ../scss/furatto/_tooltips.scss */
+.tooltip.bottom {
+  margin-top: 3px; }
+
+/* line 29, ../scss/furatto/_tooltips.scss */
+.tooltip.left {
+  margin-left: -3px; }
+
+/* line 33, ../scss/furatto/_tooltips.scss */
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 45, ../scss/furatto/_tooltips.scss */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid; }
+
+/* line 53, ../scss/furatto/_tooltips.scss */
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #000000;
+  border-width: 5px 5px 0; }
+
+/* line 61, ../scss/furatto/_tooltips.scss */
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-right-color: #000000;
+  border-width: 5px 5px 5px 0; }
+
+/* line 69, ../scss/furatto/_tooltips.scss */
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-left-color: #000000;
+  border-width: 5px 0 5px 5px; }
+
+/* line 77, ../scss/furatto/_tooltips.scss */
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #000000;
+  border-width: 0 5px 5px; }
+
+/* line 85, ../scss/furatto/_tooltips.scss */
+.tooltip {
+  font-size: 13px; }
+  /* line 87, ../scss/furatto/_tooltips.scss */
+  .tooltip.in {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    opacity: 0.9; }
+  /* line 90, ../scss/furatto/_tooltips.scss */
+  .tooltip.top {
+    padding-bottom: 9px; }
+    /* line 92, ../scss/furatto/_tooltips.scss */
+    .tooltip.top .tooltip-arrow {
+      border-top-color: #34495e;
+      border-width: 9px 9px 0;
+      bottom: 0;
+      margin-left: -9px; }
+  /* line 100, ../scss/furatto/_tooltips.scss */
+  .tooltip.right .tooltip-arrow {
+    border-right-color: #34495e;
+    border-width: 9px 9px 9px 0;
+    margin-top: -9px;
+    left: -3px; }
+  /* line 107, ../scss/furatto/_tooltips.scss */
+  .tooltip.bottom {
+    padding-top: 8px; }
+    /* line 109, ../scss/furatto/_tooltips.scss */
+    .tooltip.bottom .tooltip-arrow {
+      border-bottom-color: #34495e;
+      border-width: 0 9px 9px;
+      margin-left: -9px;
+      top: -1px; }
+  /* line 117, ../scss/furatto/_tooltips.scss */
+  .tooltip.left .tooltip-arrow {
+    border-left-color: #34495e;
+    border-width: 9px 0px 9px 9px;
+    margin-top: -9px;
+    right: -3px; }
+
+/* line 126, ../scss/furatto/_tooltips.scss */
+.tooltip-inner {
+  background-color: #34495e;
+  line-height: 18px;
+  padding: 12px 5px;
+  text-align: center;
+  width: 180px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px; }
+
+/* line 1, ../scss/furatto/_tags.scss */
+.tagsinput {
+  background: white;
+  border: 1px solid #CCC;
+  padding: 4px 1px 0px 4px;
+  overflow-y: auto;
+  text-align: left; }
+  /* line 7, ../scss/furatto/_tags.scss */
+  .tagsinput .tag {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    background: #2980b9;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 6px 13px 6px 19px;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    -webkit-transition: 0.14s linear;
+    -moz-transition: 0.14s linear;
+    -o-transition: 0.14s linear;
+    transition: 0.14s linear; }
+    /* line 20, ../scss/furatto/_tags.scss */
+    .tagsinput .tag:hover {
+      background-color: #236d9d;
+      padding-left: 12px;
+      padding-right: 20px; }
+      /* line 24, ../scss/furatto/_tags.scss */
+      .tagsinput .tag:hover .tagsinput-remove-link {
+        color: #34495e;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+        display: block\9; }
+  /* line 32, ../scss/furatto/_tags.scss */
+  .tagsinput input {
+    background: transparent;
+    border: none;
+    color: #34495e;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0 0 0 5px;
+    outline: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: auto; }
+
+/* line 46, ../scss/furatto/_tags.scss */
+.tagsinput-remove-link {
+  bottom: 0;
+  color: #34495e;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0;
+  padding: 9px 7px 3px 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  text-decoration: none;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  display: none\9; }
+  /* line 62, ../scss/furatto/_tags.scss */
+  .tagsinput-remove-link:before {
+    color: #34495e; }
+
+/* line 67, ../scss/furatto/_tags.scss */
+.tagsinput-add-container {
+  vertical-align: middle;
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
+
+/* line 72, ../scss/furatto/_tags.scss */
+.tagsinput-add {
+  background-color: #bbc3cb;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  color: #34495e;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 6px 9px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s; }
+  /* line 82, ../scss/furatto/_tags.scss */
+  .tagsinput-add:hover {
+    background-color: #2980b9;
+    color: #FFF; }
+
+/* line 88, ../scss/furatto/_tags.scss */
+.tags_clear {
+  clear: both;
+  width: 100%;
+  height: 0px; }
+
+/* line 94, ../scss/furatto/_tags.scss */
+.not_valid {
+  background: #fbd8db !important;
+  color: #90111a !important; }

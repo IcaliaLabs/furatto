@@ -24,4 +24,11 @@ jQuery ->
   $('.close').each ->
     $(@).click (e) ->
       e.preventDefault()
-      $(@).parent().fadeOut();
+      $(@).parent().fadeOut()
+
+  #Tooltips
+  $("[data-toggle=tooltip]").tooltip()
+
+  #Tags
+  $("[data-tags]").tagsInput()
+

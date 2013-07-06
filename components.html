@@ -352,12 +352,59 @@
     </div>
     <div class="furatto-block">
       <h3 class="light">Tooltips</h3>
+      <p>Based on the tooltips from <a href="http://twitter.github.io/bootstrap/javascript.html#tooltips">Bootstrap</a>. Hover over the links below to see tooltips.</p>
+      <p>Tooltips can be place in four different positions: Top, Bottom, Right, Left.</p>
+        <ul class="color-list">
+          <li class="aero"  data-toggle="tooltip" data-placement="left" title="#9cc2cb"></li>
+          <li class="red" data-toggle="tooltip" data-placement="bottom" title="#ec7063"></li>
+          <li class="green"  data-toggle="tooltip" data-placement="top" title="#1abc9c"></li>
+          <li class="blue" data-toggle="tooltip" data-placement="right" title="#3498db"></li>
+        </ul>
+        <pre data-language="html">
+          <code>
+            <ul class="color-list">
+              <li class="aero"  data-toggle="tooltip" data-placement="left" title="#9cc2cb"></li>
+              <li class="red" data-toggle="tooltip" data-placement="bottom" title="#ec7063"></li>
+              <li class="green"  data-toggle="tooltip" data-placement="top" title="#1abc9c"></li>
+              <li class="blue" data-toggle="tooltip" data-placement="right" title="#3498db"></li>
+            </ul>
+          </code>
+        </pre>
     </div>
     <div class="furatto-block">
       <h3 class="light">Tags</h3>
+      <p>Furatto integrates the tags jquery input plugin from <a href="http://xoxco.com/projects/code/tagsinput/">XOXCO</a>. Just add the data attribute tags.</p>
+      <input name="tagsinput" id="tagsinput" class="tagsinput" value="Clean,Fresh,Modern,Unique" data-tags />
+      <pre data-language="html">
+         <code>
+          &lt;input name="tagsinput" id="tagsinput" class="tagsinput" value="Clean,Fresh,Modern,Unique" data-tags /&gt;
+         </code>
+      </pre>
     </div>
     <div class="furatto-block">
       <h3 class="light">Helper classes</h3>
+      <p>Simple and functional classes on behavior tweaks.</p>
+      <h4>.pull-left</h4>
+      <p>Float an element to the left.</p>
+      <pre data-language="html">
+         <code>
+            class="pull-left"
+         </code>
+      </pre>
+      <h4>.pull-right</h4>
+      <p>Float an element to the right.</p>
+      <pre data-language="html">
+         <code>
+            class="pull-right"
+         </code>
+      </pre>
+      <h4>.clearfix</h4>
+      <p>Clear the float on any element.</p>
+      <pre data-language="html">
+         <code>
+            class="clearfix"
+         </code>
+      </pre>
     </div>
   </div>
 </div>
@@ -390,6 +437,8 @@
  <script src="js/jpanel.js"></script>
  <script src="js/jquery.dropkick-1.0.0.js"></script>
  <script src="js/rainbow-custom.min.js"></script>
+ <script src="js/tooltip.js"></script>
+ <script src="js/jquery.tagsinput.js"></script>
  <script src="js/manifest.js"></script>
 
 

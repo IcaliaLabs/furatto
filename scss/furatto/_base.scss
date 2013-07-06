@@ -155,3 +155,7 @@ hr {
   border-left: 5px solid #ddd;
   padding-left: 1.5em
 }
+
+.clearfix {
+  @include clearfix;
+}
