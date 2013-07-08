@@ -23,10 +23,6 @@ body {
   padding-left: $vrt-navbar-width + 2em;
 }
 
-.main-container {
-  /*padding-left: 15px;*/
-}
-
 //Jumbo Header
 .furatto-jumbo-header {
   min-height: 300px;
@@ -45,9 +41,8 @@ body {
   .jumbo-header {
     font-size: 100px;
     text-align: center;
-    /*margin: 0;*/
+    margin-bottom: 40px;
     font-weight: 200;
-    /*margin-bottom: 10px;*/
   }
 
   .motto {

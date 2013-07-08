@@ -2030,11 +2030,7 @@ body {
 .with-left-navbar {
   padding-left: 6em; }
 
-/* line 26, ../scss/furatto/_base.scss */
-.main-container {
-  /*padding-left: 15px;*/ }
-
-/* line 31, ../scss/furatto/_base.scss */
+/* line 27, ../scss/furatto/_base.scss */
 .furatto-jumbo-header {
   min-height: 300px;
   width: 100%;
@@ -2043,24 +2039,23 @@ body {
   color: #232323;
   padding-bottom: 15px;
   padding-top: 15px; }
-  /* line 40, ../scss/furatto/_base.scss */
+  /* line 36, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .furatto-jumbo-container {
     width: 80%;
     margin: 0 auto; }
-  /* line 45, ../scss/furatto/_base.scss */
+  /* line 41, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .jumbo-header {
     font-size: 100px;
     text-align: center;
-    /*margin: 0;*/
-    font-weight: 200;
-    /*margin-bottom: 10px;*/ }
-  /* line 53, ../scss/furatto/_base.scss */
+    margin-bottom: 40px;
+    font-weight: 200; }
+  /* line 48, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .motto {
     font-size: 40px;
     font-weight: lighter;
     margin: 0 0 15px 0; }
 
-/* line 66, ../scss/furatto/_base.scss */
+/* line 61, ../scss/furatto/_base.scss */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -2073,7 +2068,7 @@ body {
   .container:after {
     clear: both; }
 
-/* line 71, ../scss/furatto/_base.scss */
+/* line 66, ../scss/furatto/_base.scss */
 .container-fluid {
   padding-right: 20px;
   padding-left: 20px;
@@ -2086,40 +2081,40 @@ body {
   .container-fluid:after {
     clear: both; }
 
-/* line 77, ../scss/furatto/_base.scss */
+/* line 72, ../scss/furatto/_base.scss */
 .furatto-steps {
   text-align: center;
   width: 80%;
   margin: 0 auto; }
-  /* line 82, ../scss/furatto/_base.scss */
+  /* line 77, ../scss/furatto/_base.scss */
   .furatto-steps .furatto-steps-header {
     color: #232323;
     font-size: 50px;
     font-weight: lighter; }
-  /* line 88, ../scss/furatto/_base.scss */
+  /* line 83, ../scss/furatto/_base.scss */
   .furatto-steps .step-header {
     color: #666; }
-  /* line 92, ../scss/furatto/_base.scss */
+  /* line 87, ../scss/furatto/_base.scss */
   .furatto-steps .step-desc {
     color: #5a5a5a;
     width: 80%;
     margin: 0 auto; }
 
-/* line 99, ../scss/furatto/_base.scss */
+/* line 94, ../scss/furatto/_base.scss */
 hr {
   width: 100%;
   border-top: 0px;
   border-bottom: 1px solid #CCC; }
 
-/* line 105, ../scss/furatto/_base.scss */
+/* line 100, ../scss/furatto/_base.scss */
 .link {
   color: #0088cc !important; }
 
-/* line 109, ../scss/furatto/_base.scss */
+/* line 104, ../scss/furatto/_base.scss */
 .block {
   display: block; }
 
-/* line 115, ../scss/furatto/_base.scss */
+/* line 110, ../scss/furatto/_base.scss */
 .furatto-large-header {
   width: 100%;
   display: block;
@@ -2127,30 +2122,30 @@ hr {
   color: #232323;
   padding-bottom: 15px;
   padding-top: 15px; }
-  /* line 123, ../scss/furatto/_base.scss */
+  /* line 118, ../scss/furatto/_base.scss */
   .furatto-large-header .furatto-large-container {
     width: 100%;
     margin: 0 auto; }
-  /* line 128, ../scss/furatto/_base.scss */
+  /* line 123, ../scss/furatto/_base.scss */
   .furatto-large-header .large-header {
     font-size: 3em;
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
     color: #4b4b4b; }
-  /* line 136, ../scss/furatto/_base.scss */
+  /* line 131, ../scss/furatto/_base.scss */
   .furatto-large-header .motto {
     font-size: 1.5em;
     font-weight: lighter;
     margin: 0 0 15px 0;
     color: #ccc; }
 
-/* line 144, ../scss/furatto/_base.scss */
+/* line 139, ../scss/furatto/_base.scss */
 .container-center {
   width: 80%;
   margin: 0 auto; }
 
-/* line 151, ../scss/furatto/_base.scss */
+/* line 146, ../scss/furatto/_base.scss */
 .content-quote {
   color: #666;
   font-style: italic;
@@ -2158,7 +2153,7 @@ hr {
   border-left: 5px solid #ddd;
   padding-left: 1.5em; }
 
-/* line 159, ../scss/furatto/_base.scss */
+/* line 154, ../scss/furatto/_base.scss */
 .clearfix {
   *zoom: 1; }
   /* line 14, ../scss/furatto/_helpers.scss */
