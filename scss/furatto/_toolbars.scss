@@ -6,7 +6,6 @@
 
 .tool-container.tool-top, .tool-container.tool-bottom {
 	height: 34px;
-	border-bottom: 1px solid $white;
 }
 
 .tool-items {
@@ -15,12 +14,10 @@
 
 .tool-top .tool-item, .tool-bottom .tool-item {
 	float: left;
-	border-right: 1px solid $white;
 }
 
 .tool-left .tool-item, .tool-right .tool-item {
 	height: 34px;
-  border-bottom: 1px solid $white;
 }
 
 
