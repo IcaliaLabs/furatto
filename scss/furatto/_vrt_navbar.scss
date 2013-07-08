@@ -19,15 +19,24 @@
     background: $vrt-navbar-background;
 
     li {
-      a {
-        display: block;
+      display: block;
+      /*width: $vrt-navbar-width;*/
+      /*height: $vrt-navbar-height;*/
+      text-align: center;
+      padding: 13px 16px;
+
+      [class*="icon"], [class^="icon-"], [class*="icon-"] {
         font-size: 20px;
-        height: $vrt-navbar-height;
-        width: $vrt-navbar-width;
-        line-height: $vrt-navbar-lineheight;
         text-align: center;
+
+        &:before {
+          color: #999;
+        }
+      } 
+      a {
+        text-transform: uppercase;
+        font-size: 10px;
         color: #999;
-        position: relative;
         border-bottom: 1px solid rgba($vrt-navbar-border, 0.05);
         @include single-transition(background, 0.1s, ease-in-out);
       }
@@ -37,7 +46,7 @@
 .vrt-navbar li:hover {
     background: $vrt-navbar-li-hover;
 
-    a {
+    a, [class*='icon'] {
       color: $vrt-navbar-links-color;
     }
 }

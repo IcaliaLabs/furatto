@@ -2777,35 +2777,44 @@ a.label:hover, a.label:focus {
   margin: 0;
   padding: 0;
   background: #232323; }
-  /* line 22, ../scss/furatto/_vrt_navbar.scss */
-  .vrt-navbar li a {
+  /* line 21, ../scss/furatto/_vrt_navbar.scss */
+  .vrt-navbar li {
     display: block;
-    font-size: 20px;
-    height: 4em;
-    width: 4em;
-    line-height: 4em;
+    /*width: $vrt-navbar-width;*/
+    /*height: $vrt-navbar-height;*/
     text-align: center;
-    color: #999;
-    position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    -webkit-transition: background 0.1s ease-in-out;
-    -moz-transition: background 0.1s ease-in-out;
-    -o-transition: background 0.1s ease-in-out;
-    transition: background 0.1s ease-in-out; }
+    padding: 13px 16px; }
+    /* line 28, ../scss/furatto/_vrt_navbar.scss */
+    .vrt-navbar li [class*="icon"], .vrt-navbar li [class^="icon-"], .vrt-navbar li [class*="icon-"] {
+      font-size: 20px;
+      text-align: center; }
+      /* line 32, ../scss/furatto/_vrt_navbar.scss */
+      .vrt-navbar li [class*="icon"]:before, .vrt-navbar li [class^="icon-"]:before, .vrt-navbar li [class*="icon-"]:before {
+        color: #999; }
+    /* line 36, ../scss/furatto/_vrt_navbar.scss */
+    .vrt-navbar li a {
+      text-transform: uppercase;
+      font-size: 10px;
+      color: #999;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      -webkit-transition: background 0.1s ease-in-out;
+      -moz-transition: background 0.1s ease-in-out;
+      -o-transition: background 0.1s ease-in-out;
+      transition: background 0.1s ease-in-out; }
 
-/* line 37, ../scss/furatto/_vrt_navbar.scss */
+/* line 46, ../scss/furatto/_vrt_navbar.scss */
 .vrt-navbar li:hover {
   background: #3498db; }
-  /* line 40, ../scss/furatto/_vrt_navbar.scss */
-  .vrt-navbar li:hover a {
+  /* line 49, ../scss/furatto/_vrt_navbar.scss */
+  .vrt-navbar li:hover a, .vrt-navbar li:hover [class*='icon'] {
     color: white; }
 
 /* class for current item */
-/* line 46, ../scss/furatto/_vrt_navbar.scss */
+/* line 55, ../scss/furatto/_vrt_navbar.scss */
 .vrt-navbar li.active {
   border-right: 3px solid #3498db; }
 
-/* line 50, ../scss/furatto/_vrt_navbar.scss */
+/* line 59, ../scss/furatto/_vrt_navbar.scss */
 .secundary-navbar {
   top: 62px; }
 
