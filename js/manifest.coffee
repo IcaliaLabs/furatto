@@ -44,3 +44,12 @@ jQuery ->
       content: $(@).data('content')
       position: $(@).data('position') || 'top'
       hideOnClick: true
+
+  $('[data-toggle="modal"]').each ->
+    modal = $(@).data('target')
+    $(@).avgrund
+      showClose: true
+      showCloseText: 'close'
+      template: $(modal).html()
+    
+

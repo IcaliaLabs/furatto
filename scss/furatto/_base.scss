@@ -154,3 +154,7 @@ hr {
 .clearfix {
   @include clearfix;
 }
+
+.hide {
+  display: none;
+}

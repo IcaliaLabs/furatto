@@ -2164,6 +2164,10 @@ hr {
   .clearfix:after {
     clear: both; }
 
+/* line 158, ../scss/furatto/_base.scss */
+.hide {
+  display: none; }
+
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
@@ -7249,3 +7253,129 @@ i.nomargin {
   top: 50%;
   left: -14px;
   margin-top: -7px; }
+
+/* line 1, ../scss/furatto/_avgrund.scss */
+html, body {
+  height: 100%;
+  overflow: auto; }
+
+/* line 6, ../scss/furatto/_avgrund.scss */
+html {
+  background: url(http://subtlepatterns.com/patterns/dark_dotted.png) repeat #222222; }
+
+/* line 10, ../scss/furatto/_avgrund.scss */
+.avgrund-popin {
+  position: absolute;
+  background: #fff;
+  padding: 10px;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8); }
+
+/* line 30, ../scss/furatto/_avgrund.scss */
+.avgrund-overlay {
+  background: #000;
+  width: 100%;
+  position: relative;
+  top: -1500px;
+  left: 0;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+/* line 44, ../scss/furatto/_avgrund.scss */
+body.avgrund-ready,
+.avgrund-ready .avgrund-popin,
+.avgrund-ready .avgrund-overlay {
+  -webkit-transition: 0.3s all ease-out;
+  -moz-transition: 0.3s all ease-out;
+  -ms-transition: 0.3s all ease-out;
+  -o-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out; }
+
+/* line 52, ../scss/furatto/_avgrund.scss */
+body.avgrund-active {
+  overflow: hidden; }
+
+/* line 56, ../scss/furatto/_avgrund.scss */
+.avgrund-active .avgrund-popin {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1); }
+
+/* line 68, ../scss/furatto/_avgrund.scss */
+.avgrund-active .avgrund-overlay {
+  visibility: visible;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  height: 20000px; }
+
+/* line 75, ../scss/furatto/_avgrund.scss */
+.avgrund-popin.stack {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5); }
+
+/* line 83, ../scss/furatto/_avgrund.scss */
+.avgrund-active .avgrund-popin.stack {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1); }
+
+/* line 91, ../scss/furatto/_avgrund.scss */
+.avgrund-active .avgrund-blur {
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  -o-filter: blur(1px);
+  filter: blur(1px); }
+
+/* Optional close button styles */
+/* line 100, ../scss/furatto/_avgrund.scss */
+.avgrund-close {
+  display: block;
+  color: #555;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  top: 6px;
+  right: 10px; }
+
+/* line 113, ../scss/furatto/_avgrund.scss */
+.modal-header {
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 10px; }
+  /* line 117, ../scss/furatto/_avgrund.scss */
+  .modal-header .header {
+    margin: 10px 0px;
+    text-align: center; }
+
+/* line 123, ../scss/furatto/_avgrund.scss */
+.modal-footer {
+  position: absolute;
+  bottom: 5px;
+  right: 15px; }
+  /* line 128, ../scss/furatto/_avgrund.scss */
+  .modal-footer .btn + .btn {
+    margin-right: 6px; }
