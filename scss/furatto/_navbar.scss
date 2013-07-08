@@ -104,17 +104,6 @@
   text-decoration: none;
   border-top: 2px solid $green;
 
-  &:after {
-    content: '';
-    position: relative;
-    width: 0;
-    height: 0;
-    left: -22px;
-    @include active-navbar-link-arrow($navbar-height);
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid $green;
-  }
 }
 
 // Navbar button for toggling navbar items in responsive layouts
