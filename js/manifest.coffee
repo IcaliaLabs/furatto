@@ -52,4 +52,5 @@ jQuery ->
       showCloseText: 'close'
       template: $(modal).html()
     
+  $(".rslides").responsiveSlides()
 
