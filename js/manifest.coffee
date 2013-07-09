@@ -52,5 +52,10 @@ jQuery ->
       showCloseText: 'close'
       template: $(modal).html()
     
-  $(".rslides").responsiveSlides()
+  $(".rslides").responsiveSlides
+    auto: true
+    pager: true
+    nav: true
+    speed: 500
+    namespace: "centered-btns"
 

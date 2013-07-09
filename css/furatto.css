@@ -2168,6 +2168,17 @@ hr {
 .hide {
   display: none; }
 
+/* line 162, ../scss/furatto/_base.scss */
+.furatto-block {
+  *zoom: 1; }
+  /* line 14, ../scss/furatto/_helpers.scss */
+  .furatto-block:before, .furatto-block:after {
+    display: table;
+    content: ""; }
+  /* line 19, ../scss/furatto/_helpers.scss */
+  .furatto-block:after {
+    clear: both; }
+
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
@@ -7380,8 +7391,7 @@ body.avgrund-active {
   .modal-footer .btn + .btn {
     margin-right: 6px; }
 
-/* http://responsiveslides.com v1.54 by @viljamis */
-/* line 3, ../scss/furatto/_responsiveslides.scss */
+/* line 1, ../scss/furatto/_responsiveslides.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -7390,7 +7400,7 @@ body.avgrund-active {
   padding: 0;
   margin: 0; }
 
-/* line 12, ../scss/furatto/_responsiveslides.scss */
+/* line 10, ../scss/furatto/_responsiveslides.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -7399,16 +7409,176 @@ body.avgrund-active {
   left: 0;
   top: 0; }
 
-/* line 21, ../scss/furatto/_responsiveslides.scss */
+/* line 19, ../scss/furatto/_responsiveslides.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left; }
 
-/* line 27, ../scss/furatto/_responsiveslides.scss */
+/* line 25, ../scss/furatto/_responsiveslides.scss */
 .rslides img {
   display: block;
   height: auto;
   float: left;
   width: 100%;
   border: 0; }
+
+/* line 33, ../scss/furatto/_responsiveslides.scss */
+.rslides {
+  margin: 0 auto; }
+
+/* line 37, ../scss/furatto/_responsiveslides.scss */
+.rslides_container {
+  /*margin-bottom: 50px;*/
+  position: relative;
+  float: left;
+  /*width: 100%;*/ }
+
+/* line 44, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  top: 50%;
+  left: 0;
+  opacity: 0.7;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("../img/themes.gif") no-repeat left top;
+  margin-top: -45px; }
+
+/* line 60, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_nav:active {
+  opacity: 1.0; }
+
+/* line 64, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0; }
+
+/* line 70, ../scss/furatto/_responsiveslides.scss */
+.transparent-btns_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  display: block;
+  background: #fff;
+  /* Fix for IE6-9 */
+  opacity: 0;
+  filter: alpha(opacity=1);
+  width: 48%;
+  text-indent: -9999px;
+  overflow: hidden;
+  height: 91%; }
+
+/* line 86, ../scss/furatto/_responsiveslides.scss */
+.transparent-btns_nav.next {
+  left: auto;
+  right: 0; }
+
+/* line 91, ../scss/furatto/_responsiveslides.scss */
+.large-btns_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0.6;
+  text-indent: -9999px;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: black url("../img/themes.gif") no-repeat left 50%;
+  width: 38px; }
+
+/* line 105, ../scss/furatto/_responsiveslides.scss */
+.large-btns_nav:active {
+  opacity: 1.0; }
+
+/* line 109, ../scss/furatto/_responsiveslides.scss */
+.large-btns_nav.next {
+  left: auto;
+  background-position: right 50%;
+  right: 0; }
+
+/* line 117, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_nav:focus,
+.transparent-btns_nav:focus,
+.large-btns_nav:focus {
+  outline: none; }
+
+/* line 123, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_tabs,
+.transparent-btns_tabs,
+.large-btns_tabs {
+  margin-top: 10px;
+  text-align: center; }
+
+/* line 130, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_tabs li,
+.transparent-btns_tabs li,
+.large-btns_tabs li {
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin-right: 5px; }
+
+/* line 140, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_tabs a,
+.transparent-btns_tabs a,
+.large-btns_tabs a {
+  text-indent: -9999px;
+  overflow: hidden;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: #ccc;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  _display: block;
+  *display: block;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  width: 9px;
+  height: 9px; }
+
+/* line 160, ../scss/furatto/_responsiveslides.scss */
+.centered-btns_here a,
+.transparent-btns_here a,
+.large-btns_here a {
+  background: #222;
+  background: rgba(0, 0, 0, 0.8); }
+
+/* line 165, ../scss/furatto/_responsiveslides.scss */
+.rslides .caption {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  text-shadow: none;
+  color: #fff !important;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  margin: 0;
+  max-width: none;
+  line-height: 20px; }
+  /* line 181, ../scss/furatto/_responsiveslides.scss */
+  .rslides .caption .caption-header {
+    color: #FFF;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 25px; }
+  /* line 188, ../scss/furatto/_responsiveslides.scss */
+  .rslides .caption .caption-text {
+    color: #FFF;
+    font-size: 15px; }
