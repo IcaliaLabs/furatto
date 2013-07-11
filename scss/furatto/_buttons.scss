@@ -46,7 +46,8 @@
 
 }
 
-//Button colors definition
+/* Button colors definition */
+/*---------------------------*/
 @each $color in $colors {
   .btn-#{nth($color, 1)} {
     background-color: nth($color, 2);
@@ -61,7 +62,8 @@
   }
 }
 
-//Button sizes
+/* Button sizes */
+/*-----------------------------*/
 
 .btn-large {
   padding: $padding-large;
@@ -90,7 +92,8 @@
   padding-right: 0px;
 }
 
-//Vertical separation
+/* Vertical separation */
+/*----------------------*/
 .btn-block + .btn-block {
   margin-top: 5px;
 }
