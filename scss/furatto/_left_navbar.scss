@@ -18,9 +18,33 @@
     color: $navbar-text;
     font-size: $base-font-size;
     margin-top: 0px;
+    float: none;
     
     [class^="icon_"], [class*=" icon_"] {
       margin-right: 5px;
+    }
+
+    .dropdown-menu {
+      position: static;
+      /*display: block;*/
+      background: none;
+      border: none;
+      @include box-shadow(0 0px 0px $navbar-bg-color);
+      * {
+        color: #eaeaea;
+      }
+
+      li.divider {
+        border-bottom: 1px solid #CCC; 
+      }
+
+      li {
+        a {
+          &:hover {
+            background: none;
+          }
+        }
+      }
     }
   }
 

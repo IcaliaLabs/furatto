@@ -4599,14 +4599,33 @@ table {
     padding-left: 0;
     color: #eaeaea;
     font-size: 16px;
-    margin-top: 0px; }
-    /* line 22, ../scss/furatto/_left_navbar.scss */
+    margin-top: 0px;
+    float: none; }
+    /* line 23, ../scss/furatto/_left_navbar.scss */
     #jPanelMenu-menu .nav [class^="icon_"], #jPanelMenu-menu .nav [class*=" icon_"] {
       margin-right: 5px; }
-  /* line 29, ../scss/furatto/_left_navbar.scss */
+    /* line 27, ../scss/furatto/_left_navbar.scss */
+    #jPanelMenu-menu .nav .dropdown-menu {
+      position: static;
+      /*display: block;*/
+      background: none;
+      border: none;
+      -webkit-box-shadow: 0 0px 0px #232323;
+      -moz-box-shadow: 0 0px 0px #232323;
+      box-shadow: 0 0px 0px #232323; }
+      /* line 33, ../scss/furatto/_left_navbar.scss */
+      #jPanelMenu-menu .nav .dropdown-menu * {
+        color: #eaeaea; }
+      /* line 37, ../scss/furatto/_left_navbar.scss */
+      #jPanelMenu-menu .nav .dropdown-menu li.divider {
+        border-bottom: 1px solid #CCC; }
+      /* line 43, ../scss/furatto/_left_navbar.scss */
+      #jPanelMenu-menu .nav .dropdown-menu li a:hover {
+        background: none; }
+  /* line 53, ../scss/furatto/_left_navbar.scss */
   #jPanelMenu-menu .nav > li {
     padding: 9px 10px; }
-  /* line 36, ../scss/furatto/_left_navbar.scss */
+  /* line 60, ../scss/furatto/_left_navbar.scss */
   #jPanelMenu-menu .nav > .active,
   #jPanelMenu-menu .nav > .active,
   #jPanelMenu-menu .nav > .active {
@@ -4614,7 +4633,7 @@ table {
     text-decoration: none;
     border-left: 2px solid #2ecc71;
     padding-left: 7px; }
-    /* line 42, ../scss/furatto/_left_navbar.scss */
+    /* line 66, ../scss/furatto/_left_navbar.scss */
     #jPanelMenu-menu .nav > .active:before,
     #jPanelMenu-menu .nav > .active:before,
     #jPanelMenu-menu .nav > .active:before {
@@ -4622,17 +4641,17 @@ table {
       position: relative;
       width: 0;
       height: 0px; }
-  /* line 51, ../scss/furatto/_left_navbar.scss */
+  /* line 75, ../scss/furatto/_left_navbar.scss */
   #jPanelMenu-menu .nav > li > a {
     text-decoration: none;
     color: #eaeaea; }
-  /* line 57, ../scss/furatto/_left_navbar.scss */
+  /* line 81, ../scss/furatto/_left_navbar.scss */
   #jPanelMenu-menu .nav > li > a.brand {
     font-size: 20px; }
-  /* line 62, ../scss/furatto/_left_navbar.scss */
+  /* line 86, ../scss/furatto/_left_navbar.scss */
   #jPanelMenu-menu .nav > li:first-child {
     border-bottom: 10px solid #38393a; }
-  /* line 67, ../scss/furatto/_left_navbar.scss */
+  /* line 91, ../scss/furatto/_left_navbar.scss */
   #jPanelMenu-menu .nav > li.divider-vertical {
     height: 1px;
     width: 100%;
@@ -7582,3 +7601,212 @@ body.avgrund-active {
   .rslides .caption .caption-text {
     color: #FFF;
     font-size: 15px; }
+
+/* line 7, ../scss/furatto/_dropdown.scss */
+.dropdown {
+  position: relative; }
+
+/* line 10, ../scss/furatto/_dropdown.scss */
+.dropdown-toggle {
+  *margin-bottom: -3px; }
+
+/* line 15, ../scss/furatto/_dropdown.scss */
+.dropdown-toggle:active,
+.open .dropdown-toggle {
+  outline: 0; }
+
+/* line 21, ../scss/furatto/_dropdown.scss */
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid white;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: ""; }
+
+/* line 33, ../scss/furatto/_dropdown.scss */
+.dropdown .caret {
+  margin-top: 8px;
+  margin-left: 2px; }
+
+/* line 40, ../scss/furatto/_dropdown.scss */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  /* line 62, ../scss/furatto/_dropdown.scss */
+  .dropdown-menu.pull-right {
+    right: 0;
+    left: auto; }
+  /* line 68, ../scss/furatto/_dropdown.scss */
+  .dropdown-menu .divider {
+    *width: 100%;
+    height: 1px;
+    margin: 9px 1px;
+    *margin: -5px 0 5px;
+    overflow: hidden;
+    padding: 0 5px;
+    border-bottom: 1px dashed #e5e5e5; }
+  /* line 79, ../scss/furatto/_dropdown.scss */
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: #7f8c8d;
+    white-space: nowrap; }
+
+/* line 95, ../scss/furatto/_dropdown.scss */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  text-decoration: none;
+  color: white;
+  background: #5faee3; }
+
+/* line 105, ../scss/furatto/_dropdown.scss */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  /*color: $dropdownLinkColorActive;*/
+  text-decoration: none;
+  outline: 0;
+  /*@include gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));*/ }
+
+/* line 117, ../scss/furatto/_dropdown.scss */
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #ecf0f1; }
+
+/* line 122, ../scss/furatto/_dropdown.scss */
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  cursor: default; }
+
+/* line 132, ../scss/furatto/_dropdown.scss */
+.open {
+  *z-index: 1000; }
+  /* line 137, ../scss/furatto/_dropdown.scss */
+  .open > .dropdown-menu {
+    display: block; }
+
+/* line 144, ../scss/furatto/_dropdown.scss */
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990; }
+
+/* line 155, ../scss/furatto/_dropdown.scss */
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto; }
+
+/* line 167, ../scss/furatto/_dropdown.scss */
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px solid #3d3d3d;
+  content: ""; }
+/* line 173, ../scss/furatto/_dropdown.scss */
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px; }
+
+/* line 182, ../scss/furatto/_dropdown.scss */
+.dropdown-submenu {
+  position: relative; }
+
+/* line 186, ../scss/furatto/_dropdown.scss */
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  /*@include border-radius(0 6px 6px 6px);*/ }
+
+/* line 193, ../scss/furatto/_dropdown.scss */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block; }
+
+/* line 198, ../scss/furatto/_dropdown.scss */
+.dropup .dropdown-submenu > .dropdown-menu {
+  top: auto;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: -2px;
+  /*@include border-radius(5px 5px 5px 0);*/ }
+
+/* line 207, ../scss/furatto/_dropdown.scss */
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px; }
+
+/* line 220, ../scss/furatto/_dropdown.scss */
+.dropdown-submenu:hover > a:after {
+  border-left-color: white; }
+
+/* line 225, ../scss/furatto/_dropdown.scss */
+.dropdown-submenu.pull-left {
+  float: none; }
+  /* line 231, ../scss/furatto/_dropdown.scss */
+  .dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    /*@include border-radius(6px 0 6px 6px);*/ }
+
+/* line 241, ../scss/furatto/_dropdown.scss */
+.dropdown .dropdown-menu .nav-header {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+/* line 249, ../scss/furatto/_dropdown.scss */
+.navbar .dropdown-menu:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #FFF;
+  position: absolute;
+  top: -6px;
+  right: 10px; }

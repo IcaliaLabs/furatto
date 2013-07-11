@@ -207,3 +207,11 @@ $pagination-color: desaturate(lighten($inverse, 57.5%), 17%);
 
 //Toolbars
 $toolbar-bg-color: #232323;
+
+//Dropdown
+$zindex-dropdown: 1000 !default;
+$dropdown-bg: $white !default;
+$dropdown-border: rgba(0,0,0,0.2);
+$dropdown-link-color: $dark-gray !default;
+$dropdown-link-color-hover: $white !default;
+$dropdown-link-color-hover-bg: lighten($blue, 10%);
