@@ -1,42 +1,13 @@
-/* ==========================================================================
-   $BASE-DATE-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
+/*------------------------------------*\
+    $DATEPICKER
+\*------------------------------------*/
 /**
- * Base colors
+ * Basic date picker structural styling. 
+ * 
+ * Designed and built @kurenn based on picakdate.js jquery plugin
+ * http://amsul.ca/pickadate.js/
  */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
+
 /**
  * The picker box.
  */
@@ -113,7 +84,7 @@
   content: " ";
   border-top: .5em solid transparent;
   border-bottom: .5em solid transparent;
-  border-right: 0.75em solid #000000;
+  border-right: 0.75em solid $dark-black;
   width: 0;
   height: 0;
   display: block;
@@ -121,7 +92,7 @@
 }
 .picker__nav--next:before {
   border-right: 0;
-  border-left: 0.75em solid #000000;
+  border-left: 0.75em solid $dark-black;
 }
 .picker__nav--prev:hover,
 .picker__nav--next:hover {
@@ -151,6 +122,8 @@
   margin-top: .75em;
   margin-bottom: .5em;
 }
+/* Responsive calendar styling */
+/*-----------------------------*/
 @media (min-height: 33.875em) {
   .picker__table {
     margin-bottom: .75em;
@@ -177,6 +150,7 @@
     padding-bottom: .5em;
   }
 }
+
 /**
  * The days on the calendar
  */
@@ -204,7 +178,7 @@
   border-color: #0089ec;
 }
 .picker__day--highlighted {
-  background: #b1dcfb;
+  background: $calendar-highlight-color;
 }
 .picker__day--disabled:before {
   border-top-color: #aaaaaa;
@@ -220,12 +194,12 @@
 .picker__day--outfocus:hover {
   cursor: pointer;
   color: #000000;
-  background: #b1dcfb;
+  background: $calendar-highlight-color;
 }
 .picker__day--highlighted:hover,
 .picker--focused .picker__day--highlighted {
-  background: #0089ec;
-  color: #ffffff;
+  background: $calendar-highlighted-color;
+  color: $white;
 }
 .picker__day--disabled,
 .picker__day--disabled:hover {
@@ -246,8 +220,8 @@
 }
 .picker__button--today,
 .picker__button--clear {
-  border: 1px solid #ffffff;
-  background: #ffffff;
+  border: 1px solid $white;
+  background: $white;
   font-size: .8em;
   padding: .66em 0;
   font-weight: bold;
@@ -259,13 +233,13 @@
 .picker__button--clear:hover {
   cursor: pointer;
   color: #000000;
-  background: #b1dcfb;
-  border-bottom-color: #b1dcfb;
+  background: $calendar-highlight-color;
+  border-bottom-color: $calendar-highlight-color;
 }
 .picker__button--today:focus,
 .picker__button--clear:focus {
-  background: #b1dcfb;
-  border-color: #0089ec;
+  background: $calendar-highlight-color;
+  border-color: $calendar-highlighted-color;
   outline: none;
 }
 .picker__button--today:before,
@@ -290,43 +264,3 @@
   vertical-align: top;
   font-size: 1.1em;
 }
-
-/* ==========================================================================
-   $DEFAULT-DATE-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
-/**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */

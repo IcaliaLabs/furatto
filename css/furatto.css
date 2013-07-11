@@ -5,6 +5,8 @@
 /*$bg-color: #ebe7df;*/
 /* Code */
 /*---------------------*/
+/* Calendar */
+/*---------------------*/
 /* line 2, ../scss/furatto/_helpers.scss */
 .pull-right {
   float: right; }
@@ -6544,56 +6546,26 @@ i.nomargin {
 /**
  * For `large` screens, transform into an inline picker.
  */
-/* ==========================================================================
-   $BASE-DATE-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
+/*------------------------------------*\
+    $DATEPICKER
+\*------------------------------------*/
 /**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
+ * Basic date picker structural styling. 
+ * 
+ * Designed and built @kurenn based on picakdate.js jquery plugin
+ * http://amsul.ca/pickadate.js/
  */
 /**
  * The picker box.
  */
-/* line 43, ../scss/furatto/_date_picker.date.scss */
+/* line 14, ../scss/furatto/_date_picker.date.scss */
 .picker__box {
   padding: 0 1em; }
 
 /**
  * The header containing the month and year stuff.
  */
-/* line 49, ../scss/furatto/_date_picker.date.scss */
+/* line 20, ../scss/furatto/_date_picker.date.scss */
 .picker__header {
   text-align: center;
   position: relative;
@@ -6602,7 +6574,7 @@ i.nomargin {
 /**
  * The month and year labels.
  */
-/* line 58, ../scss/furatto/_date_picker.date.scss */
+/* line 29, ../scss/furatto/_date_picker.date.scss */
 .picker__month,
 .picker__year {
   font-weight: 500;
@@ -6610,7 +6582,7 @@ i.nomargin {
   margin-left: .25em;
   margin-right: .25em; }
 
-/* line 64, ../scss/furatto/_date_picker.date.scss */
+/* line 35, ../scss/furatto/_date_picker.date.scss */
 .picker__year {
   color: #999999;
   font-size: .8em;
@@ -6619,7 +6591,7 @@ i.nomargin {
 /**
  * The month and year selectors.
  */
-/* line 73, ../scss/furatto/_date_picker.date.scss */
+/* line 44, ../scss/furatto/_date_picker.date.scss */
 .picker__select--month,
 .picker__select--year {
   font-size: .8em;
@@ -6630,15 +6602,15 @@ i.nomargin {
   margin-right: .25em;
   margin-top: -0.5em; }
 
-/* line 82, ../scss/furatto/_date_picker.date.scss */
+/* line 53, ../scss/furatto/_date_picker.date.scss */
 .picker__select--month {
   width: 35%; }
 
-/* line 85, ../scss/furatto/_date_picker.date.scss */
+/* line 56, ../scss/furatto/_date_picker.date.scss */
 .picker__select--year {
   width: 22.5%; }
 
-/* line 89, ../scss/furatto/_date_picker.date.scss */
+/* line 60, ../scss/furatto/_date_picker.date.scss */
 .picker__select--month:focus,
 .picker__select--year:focus {
   border-color: #0089ec; }
@@ -6646,7 +6618,7 @@ i.nomargin {
 /**
  * The month navigation buttons.
  */
-/* line 96, ../scss/furatto/_date_picker.date.scss */
+/* line 67, ../scss/furatto/_date_picker.date.scss */
 .picker__nav--prev,
 .picker__nav--next {
   position: absolute;
@@ -6655,41 +6627,41 @@ i.nomargin {
   width: 1em;
   height: 1em; }
 
-/* line 103, ../scss/furatto/_date_picker.date.scss */
+/* line 74, ../scss/furatto/_date_picker.date.scss */
 .picker__nav--prev {
   left: -1em;
   padding-right: 1.5em; }
 
-/* line 107, ../scss/furatto/_date_picker.date.scss */
+/* line 78, ../scss/furatto/_date_picker.date.scss */
 .picker__nav--next {
   right: -1em;
   padding-left: 1.5em; }
 
-/* line 112, ../scss/furatto/_date_picker.date.scss */
+/* line 83, ../scss/furatto/_date_picker.date.scss */
 .picker__nav--prev:before,
 .picker__nav--next:before {
   content: " ";
   border-top: .5em solid transparent;
   border-bottom: .5em solid transparent;
-  border-right: 0.75em solid #000000;
+  border-right: 0.75em solid #232323;
   width: 0;
   height: 0;
   display: block;
   margin: 0 auto; }
 
-/* line 122, ../scss/furatto/_date_picker.date.scss */
+/* line 93, ../scss/furatto/_date_picker.date.scss */
 .picker__nav--next:before {
   border-right: 0;
-  border-left: 0.75em solid #000000; }
+  border-left: 0.75em solid #232323; }
 
-/* line 127, ../scss/furatto/_date_picker.date.scss */
+/* line 98, ../scss/furatto/_date_picker.date.scss */
 .picker__nav--prev:hover,
 .picker__nav--next:hover {
   cursor: pointer;
   color: #000000;
   background: #b1dcfb; }
 
-/* line 135, ../scss/furatto/_date_picker.date.scss */
+/* line 106, ../scss/furatto/_date_picker.date.scss */
 .picker__nav--disabled,
 .picker__nav--disabled:hover,
 .picker__nav--disabled:before,
@@ -6702,7 +6674,7 @@ i.nomargin {
 /**
  * The calendar table of dates
  */
-/* line 144, ../scss/furatto/_date_picker.date.scss */
+/* line 115, ../scss/furatto/_date_picker.date.scss */
 .picker__table {
   text-align: center;
   border-collapse: collapse;
@@ -6713,11 +6685,13 @@ i.nomargin {
   margin-top: .75em;
   margin-bottom: .5em; }
 
+/* Responsive calendar styling */
+/*-----------------------------*/
 @media (min-height: 33.875em) {
-  /* line 155, ../scss/furatto/_date_picker.date.scss */
+  /* line 128, ../scss/furatto/_date_picker.date.scss */
   .picker__table {
     margin-bottom: .75em; } }
-/* line 159, ../scss/furatto/_date_picker.date.scss */
+/* line 132, ../scss/furatto/_date_picker.date.scss */
 .picker__table td {
   margin: 0;
   padding: 0; }
@@ -6725,7 +6699,7 @@ i.nomargin {
 /**
  * The weekday labels
  */
-/* line 166, ../scss/furatto/_date_picker.date.scss */
+/* line 139, ../scss/furatto/_date_picker.date.scss */
 .picker__weekday {
   width: 14.285714286%;
   font-size: .75em;
@@ -6735,24 +6709,24 @@ i.nomargin {
   /* Increase the spacing a tad */ }
 
 @media (min-height: 33.875em) {
-  /* line 176, ../scss/furatto/_date_picker.date.scss */
+  /* line 149, ../scss/furatto/_date_picker.date.scss */
   .picker__weekday {
     padding-bottom: .5em; } }
 /**
  * The days on the calendar
  */
-/* line 183, ../scss/furatto/_date_picker.date.scss */
+/* line 157, ../scss/furatto/_date_picker.date.scss */
 .picker__day {
   padding: .3125em 0;
   font-weight: 200;
   border: 1px solid transparent; }
 
-/* line 188, ../scss/furatto/_date_picker.date.scss */
+/* line 162, ../scss/furatto/_date_picker.date.scss */
 .picker__day--today {
   color: #0089ec;
   position: relative; }
 
-/* line 192, ../scss/furatto/_date_picker.date.scss */
+/* line 166, ../scss/furatto/_date_picker.date.scss */
 .picker__day--today:before {
   content: " ";
   position: absolute;
@@ -6763,20 +6737,20 @@ i.nomargin {
   border-top: 0.5em solid #0059bc;
   border-left: .5em solid transparent; }
 
-/* line 203, ../scss/furatto/_date_picker.date.scss */
+/* line 177, ../scss/furatto/_date_picker.date.scss */
 .picker__day--selected,
 .picker__day--selected:hover {
   border-color: #0089ec; }
 
-/* line 206, ../scss/furatto/_date_picker.date.scss */
+/* line 180, ../scss/furatto/_date_picker.date.scss */
 .picker__day--highlighted {
   background: #b1dcfb; }
 
-/* line 209, ../scss/furatto/_date_picker.date.scss */
+/* line 183, ../scss/furatto/_date_picker.date.scss */
 .picker__day--disabled:before {
   border-top-color: #aaaaaa; }
 
-/* line 212, ../scss/furatto/_date_picker.date.scss */
+/* line 186, ../scss/furatto/_date_picker.date.scss */
 .picker__day--outfocus {
   color: #dddddd;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=66)";
@@ -6784,20 +6758,20 @@ i.nomargin {
   -moz-opacity: 0.66;
   opacity: 0.66; }
 
-/* line 220, ../scss/furatto/_date_picker.date.scss */
+/* line 194, ../scss/furatto/_date_picker.date.scss */
 .picker__day--infocus:hover,
 .picker__day--outfocus:hover {
   cursor: pointer;
   color: #000000;
   background: #b1dcfb; }
 
-/* line 226, ../scss/furatto/_date_picker.date.scss */
+/* line 200, ../scss/furatto/_date_picker.date.scss */
 .picker__day--highlighted:hover,
 .picker--focused .picker__day--highlighted {
   background: #0089ec;
-  color: #ffffff; }
+  color: white; }
 
-/* line 231, ../scss/furatto/_date_picker.date.scss */
+/* line 205, ../scss/furatto/_date_picker.date.scss */
 .picker__day--disabled,
 .picker__day--disabled:hover {
   background: #f5f5f5;
@@ -6805,7 +6779,7 @@ i.nomargin {
   color: #dddddd;
   cursor: default; }
 
-/* line 238, ../scss/furatto/_date_picker.date.scss */
+/* line 212, ../scss/furatto/_date_picker.date.scss */
 .picker__day--highlighted.picker__day--disabled,
 .picker__day--highlighted.picker__day--disabled:hover {
   background: #bbbbbb; }
@@ -6813,15 +6787,15 @@ i.nomargin {
 /**
  * The footer containing the "today" and "clear" buttons.
  */
-/* line 244, ../scss/furatto/_date_picker.date.scss */
+/* line 218, ../scss/furatto/_date_picker.date.scss */
 .picker__footer {
   text-align: center; }
 
-/* line 248, ../scss/furatto/_date_picker.date.scss */
+/* line 222, ../scss/furatto/_date_picker.date.scss */
 .picker__button--today,
 .picker__button--clear {
-  border: 1px solid #ffffff;
-  background: #ffffff;
+  border: 1px solid white;
+  background: white;
   font-size: .8em;
   padding: .66em 0;
   font-weight: bold;
@@ -6829,7 +6803,7 @@ i.nomargin {
   display: inline-block;
   vertical-align: bottom; }
 
-/* line 259, ../scss/furatto/_date_picker.date.scss */
+/* line 233, ../scss/furatto/_date_picker.date.scss */
 .picker__button--today:hover,
 .picker__button--clear:hover {
   cursor: pointer;
@@ -6837,21 +6811,21 @@ i.nomargin {
   background: #b1dcfb;
   border-bottom-color: #b1dcfb; }
 
-/* line 266, ../scss/furatto/_date_picker.date.scss */
+/* line 240, ../scss/furatto/_date_picker.date.scss */
 .picker__button--today:focus,
 .picker__button--clear:focus {
   background: #b1dcfb;
   border-color: #0089ec;
   outline: none; }
 
-/* line 272, ../scss/furatto/_date_picker.date.scss */
+/* line 246, ../scss/furatto/_date_picker.date.scss */
 .picker__button--today:before,
 .picker__button--clear:before {
   position: relative;
   display: inline-block;
   height: 0; }
 
-/* line 277, ../scss/furatto/_date_picker.date.scss */
+/* line 251, ../scss/furatto/_date_picker.date.scss */
 .picker__button--today:before {
   content: " ";
   margin-right: .45em;
@@ -6860,7 +6834,7 @@ i.nomargin {
   border-top: 0.66em solid #0059bc;
   border-left: .66em solid transparent; }
 
-/* line 285, ../scss/furatto/_date_picker.date.scss */
+/* line 259, ../scss/furatto/_date_picker.date.scss */
 .picker__button--clear:before {
   content: "\D7";
   margin-right: .35em;
@@ -6869,45 +6843,6 @@ i.nomargin {
   vertical-align: top;
   font-size: 1.1em; }
 
-/* ==========================================================================
-   $DEFAULT-DATE-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
-/**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
 /* ==========================================================================
    $BASE-TIME-PICKER
    ========================================================================== */
