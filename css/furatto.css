@@ -2005,32 +2005,42 @@
 .icon-e-mail:before {
   content: "\e420"; }
 
-/* line 1, ../scss/furatto/_base.scss */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Basic site structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 10, ../scss/furatto/_base.scss */
 html {
   font-family: "Lato", "Open Sans", "Helvetica Neue"; }
 
-/* line 5, ../scss/furatto/_base.scss */
+/* line 14, ../scss/furatto/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
-/* line 9, ../scss/furatto/_base.scss */
+/* line 18, ../scss/furatto/_base.scss */
 a {
   text-decoration: none;
   color: #0088cc; }
 
-/* line 14, ../scss/furatto/_base.scss */
+/* line 23, ../scss/furatto/_base.scss */
 html, body {
   background-color: #fefefe; }
 
-/* line 18, ../scss/furatto/_base.scss */
+/* line 27, ../scss/furatto/_base.scss */
 body {
   padding-top: 55px; }
 
-/* line 22, ../scss/furatto/_base.scss */
+/* line 31, ../scss/furatto/_base.scss */
 .with-left-navbar {
   padding-left: 6em; }
 
-/* line 27, ../scss/furatto/_base.scss */
+/* Jumbo Header */
+/*--------------------------------------*/
+/* line 37, ../scss/furatto/_base.scss */
 .furatto-jumbo-header {
   min-height: 300px;
   width: 100%;
@@ -2039,23 +2049,27 @@ body {
   color: #232323;
   padding-bottom: 15px;
   padding-top: 15px; }
-  /* line 36, ../scss/furatto/_base.scss */
+  /* line 46, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .furatto-jumbo-container {
     width: 80%;
     margin: 0 auto; }
-  /* line 41, ../scss/furatto/_base.scss */
+  /* line 51, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .jumbo-header {
     font-size: 100px;
     text-align: center;
     margin-bottom: 40px;
     font-weight: 200; }
-  /* line 48, ../scss/furatto/_base.scss */
+  /* line 58, ../scss/furatto/_base.scss */
   .furatto-jumbo-header .motto {
     font-size: 40px;
     font-weight: lighter;
     margin: 0 0 15px 0; }
 
-/* line 61, ../scss/furatto/_base.scss */
+/* Layouts */
+/*---------------------------------*/
+/* Container (centered, fixed-width layouts) */
+/*-----------------------------*/
+/* line 70, ../scss/furatto/_base.scss */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -2068,7 +2082,9 @@ body {
   .container:after {
     clear: both; }
 
-/* line 66, ../scss/furatto/_base.scss */
+/* Fluid layouts (left aligned, with sidebar, min- & max-width content) */
+/*-----------------------------*/
+/* line 76, ../scss/furatto/_base.scss */
 .container-fluid {
   padding-right: 20px;
   padding-left: 20px;
@@ -2081,40 +2097,44 @@ body {
   .container-fluid:after {
     clear: both; }
 
-/* line 72, ../scss/furatto/_base.scss */
+/* Steps for definining furatto */
+/*-----------------------------*/
+/* line 84, ../scss/furatto/_base.scss */
 .furatto-steps {
   text-align: center;
   width: 80%;
   margin: 0 auto; }
-  /* line 77, ../scss/furatto/_base.scss */
+  /* line 89, ../scss/furatto/_base.scss */
   .furatto-steps .furatto-steps-header {
     color: #232323;
     font-size: 50px;
     font-weight: lighter; }
-  /* line 83, ../scss/furatto/_base.scss */
+  /* line 95, ../scss/furatto/_base.scss */
   .furatto-steps .step-header {
     color: #666; }
-  /* line 87, ../scss/furatto/_base.scss */
+  /* line 99, ../scss/furatto/_base.scss */
   .furatto-steps .step-desc {
     color: #5a5a5a;
     width: 80%;
     margin: 0 auto; }
 
-/* line 94, ../scss/furatto/_base.scss */
+/* line 106, ../scss/furatto/_base.scss */
 hr {
   width: 100%;
   border-top: 0px;
   border-bottom: 1px solid #CCC; }
 
-/* line 100, ../scss/furatto/_base.scss */
+/* line 112, ../scss/furatto/_base.scss */
 .link {
   color: #0088cc !important; }
 
-/* line 104, ../scss/furatto/_base.scss */
+/* line 116, ../scss/furatto/_base.scss */
 .block {
   display: block; }
 
-/* line 110, ../scss/furatto/_base.scss */
+/* Furatto Headers */
+/*-------------------------*/
+/* line 122, ../scss/furatto/_base.scss */
 .furatto-large-header {
   width: 100%;
   display: block;
@@ -2122,30 +2142,32 @@ hr {
   color: #232323;
   padding-bottom: 15px;
   padding-top: 15px; }
-  /* line 118, ../scss/furatto/_base.scss */
+  /* line 130, ../scss/furatto/_base.scss */
   .furatto-large-header .furatto-large-container {
     width: 100%;
     margin: 0 auto; }
-  /* line 123, ../scss/furatto/_base.scss */
+  /* line 135, ../scss/furatto/_base.scss */
   .furatto-large-header .large-header {
     font-size: 3em;
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
     color: #4b4b4b; }
-  /* line 131, ../scss/furatto/_base.scss */
+  /* line 143, ../scss/furatto/_base.scss */
   .furatto-large-header .motto {
     font-size: 1.5em;
     font-weight: lighter;
     margin: 0 0 15px 0;
     color: #ccc; }
 
-/* line 139, ../scss/furatto/_base.scss */
+/* line 151, ../scss/furatto/_base.scss */
 .container-center {
   width: 80%;
   margin: 0 auto; }
 
-/* line 146, ../scss/furatto/_base.scss */
+/* Blockquote */
+/*----------------------------*/
+/* line 158, ../scss/furatto/_base.scss */
 .content-quote {
   color: #666;
   font-style: italic;
@@ -2153,7 +2175,9 @@ hr {
   border-left: 5px solid #ddd;
   padding-left: 1.5em; }
 
-/* line 154, ../scss/furatto/_base.scss */
+/* Helper classes */
+/*----------------------------*/
+/* line 168, ../scss/furatto/_base.scss */
 .clearfix {
   *zoom: 1; }
   /* line 14, ../scss/furatto/_helpers.scss */
@@ -2164,11 +2188,11 @@ hr {
   .clearfix:after {
     clear: both; }
 
-/* line 158, ../scss/furatto/_base.scss */
+/* line 172, ../scss/furatto/_base.scss */
 .hide {
   display: none; }
 
-/* line 162, ../scss/furatto/_base.scss */
+/* line 176, ../scss/furatto/_base.scss */
 .furatto-block {
   *zoom: 1; }
   /* line 14, ../scss/furatto/_helpers.scss */

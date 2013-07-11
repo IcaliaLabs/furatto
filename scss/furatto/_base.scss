@@ -1,9 +1,18 @@
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Basic site structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
 html {
   font-family: $font-family;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: $base-font-weight;
 }
 
 a {
@@ -23,13 +32,14 @@ body {
   padding-left: $vrt-navbar-width + 2em;
 }
 
-//Jumbo Header
+/* Jumbo Header */
+/*--------------------------------------*/
 .furatto-jumbo-header {
   min-height: 300px;
   width: 100%;
   display: block;
   text-align: center;
-  color: #232323;
+  color: $dark-black;
   padding-bottom: 15px;
   padding-top: 15px;
 
@@ -52,23 +62,25 @@ body {
   }
 }
 
-//
-// Layouts
-// --------------------------------------------------
+/* Layouts */
+/*---------------------------------*/
 
-
-// Container (centered, fixed-width layouts)
+/* Container (centered, fixed-width layouts) */
+/*-----------------------------*/
 .container {
   @include container-fixed();
 }
 
-// Fluid layouts (left aligned, with sidebar, min- & max-width content)
+/* Fluid layouts (left aligned, with sidebar, min- & max-width content) */
+/*-----------------------------*/
 .container-fluid {
   padding-right: $gridGutterWidth;
   padding-left: $gridGutterWidth;
   @include clearfix();
 }
 
+/* Steps for definining furatto */
+/*-----------------------------*/
 .furatto-steps {
   text-align: center;
   width: 80%;
@@ -105,8 +117,8 @@ hr {
   display: block; 
 }
 
-//Furatto Headers
-//-------------------------
+/* Furatto Headers */
+/*-------------------------*/
 .furatto-large-header {
   width: 100%;
   display: block;
@@ -141,8 +153,8 @@ hr {
   margin: 0 auto;
 }
 
-//Blockquote
-
+/* Blockquote */
+/*----------------------------*/
 .content-quote {
   color: #666;
   font-style: italic;
@@ -151,6 +163,8 @@ hr {
   padding-left: 1.5em
 }
 
+/* Helper classes */
+/*----------------------------*/
 .clearfix {
   @include clearfix;
 }
