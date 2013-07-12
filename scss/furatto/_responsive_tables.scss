@@ -1,4 +1,13 @@
-/* Mobile */
+/*------------------------------------*\
+    $RESPONSIVE TABLES
+\*------------------------------------*/
+/**
+ * Responsive tables strcucture from Zurb Foundation.
+ * http://zurb.com/playground/responsive-tables
+ *
+ * Designed and built @kurenn  
+ */
+
 @media only screen and (max-width: 767px) {
 	
 	table.responsive { margin-bottom: 0; }
@@ -14,7 +23,6 @@
 	
 	table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
 	table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
-	
 	
 }
 

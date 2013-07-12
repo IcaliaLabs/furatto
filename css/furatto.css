@@ -4562,13 +4562,21 @@ table {
   .table-bordered th, .table-bordered td {
     border: 1px solid #d2d2d2; }
 
-/* Mobile */
+/*------------------------------------*\
+    $RESPONSIVE TABLES
+\*------------------------------------*/
+/**
+ * Responsive tables strcucture from Zurb Foundation.
+ * http://zurb.com/playground/responsive-tables
+ *
+ * Designed and built @kurenn  
+ */
 @media only screen and (max-width: 767px) {
-  /* line 4, ../scss/furatto/_responsive_tables.scss */
+  /* line 13, ../scss/furatto/_responsive_tables.scss */
   table.responsive {
     margin-bottom: 0; }
 
-  /* line 6, ../scss/furatto/_responsive_tables.scss */
+  /* line 15, ../scss/furatto/_responsive_tables.scss */
   .pinned {
     position: absolute;
     left: 0;
@@ -4580,43 +4588,43 @@ table {
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc; }
 
-  /* line 7, ../scss/furatto/_responsive_tables.scss */
+  /* line 16, ../scss/furatto/_responsive_tables.scss */
   .pinned table {
     border-right: none;
     border-left: none;
     width: 100%; }
 
-  /* line 8, ../scss/furatto/_responsive_tables.scss */
+  /* line 17, ../scss/furatto/_responsive_tables.scss */
   .pinned table th, .pinned table td {
     white-space: nowrap; }
 
-  /* line 9, ../scss/furatto/_responsive_tables.scss */
+  /* line 18, ../scss/furatto/_responsive_tables.scss */
   .pinned td:last-child {
     border-bottom: 0; }
 
-  /* line 11, ../scss/furatto/_responsive_tables.scss */
+  /* line 20, ../scss/furatto/_responsive_tables.scss */
   div.table-wrapper {
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
     border-right: 1px solid #ccc; }
 
-  /* line 12, ../scss/furatto/_responsive_tables.scss */
+  /* line 21, ../scss/furatto/_responsive_tables.scss */
   div.table-wrapper div.scrollable {
     margin-left: 35%; }
 
-  /* line 13, ../scss/furatto/_responsive_tables.scss */
+  /* line 22, ../scss/furatto/_responsive_tables.scss */
   div.table-wrapper div.scrollable {
     overflow: scroll;
     overflow-y: hidden; }
 
-  /* line 15, ../scss/furatto/_responsive_tables.scss */
+  /* line 24, ../scss/furatto/_responsive_tables.scss */
   table.responsive td, table.responsive th {
     position: relative;
     white-space: nowrap;
     overflow: hidden; }
 
-  /* line 16, ../scss/furatto/_responsive_tables.scss */
+  /* line 25, ../scss/furatto/_responsive_tables.scss */
   table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td {
     display: none; } }
 /*------------------------------------*\
