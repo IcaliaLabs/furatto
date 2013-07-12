@@ -2,6 +2,9 @@
     $TYPOGRAPHY
 \*------------------------------------*/
 /**
+ * Basic typograhy structural styling 
+ * 
+ * Designed and built @kurenn  
  */
 
 p {
@@ -9,8 +12,8 @@ p {
   color: #777;
 }
 
-//Emphasis & miscelaneous
-//----------------------------------
+/* Emphasis & miscelaneous */
+/* ----------------------- */
 
 small { 
   font-size: 85%; 
@@ -80,6 +83,9 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 200;
 }
 
+/* Headers definition */
+/* ------------------ */
+
 h1, h2, h3 { 
   line-height: $base-line-height * 2;
 }
@@ -112,8 +118,8 @@ h6 {
   font-size: $base-font-size * 0.85; // ~13.6px
 } 
 
-// Lists
-// --------------------------------------------------
+/* Lists */
+/* ----- */
 
 // Unordered and Ordered lists
 ul, ol {
