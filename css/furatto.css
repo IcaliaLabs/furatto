@@ -1,10 +1,70 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * Variables for manage the different styles
+ * 
+ * Designed and built @kurenn  
+ */
+/* Body */
+/* ---- */
 /*$bg-color: #ebe7df;*/
+/* Fonts */
+/* ----- */
+/* Border */
+/* ------ */
+/* Colors */
+/* ------ */
+/* Buttons */
+/* ------- */
+/* Alerts */
+/* ------ */
+/* Navbar */
+/* ------ */
+/* Vertical Navbar */
+/* --------------- */
+/* Inputs */
+/* ------ */
+/* Tables */
+/* ------ */
+/* Responsive Navbar */
+/* ----------------- */
+/* Images */
+/* ------ */
+/* Select */
+/* ------ */
+/* Checkbox and radio buttons */
+/* -------------------------- */
+/* Grid */
+/* ---- */
+/* Fluid grid */
+/* ---------- */
+/* Forms */
+/* ----- */
+/* Footer */
+/* ------ */
+/* Icons */
+/* ----- */
+/* Links */
+/* ----- */
+/* Headings */
+/* -------- */
+/* Color Lists */
+/* ----------- */
+/* Pagination */
+/* ---------- */
+/* Toolbars */
+/* -------- */
+/* Dropdown */
+/* -------- */
 /* Code */
 /*---------------------*/
 /* Calendar */
 /*---------------------*/
+/* Font Awesome Icons */
+/* ------------------ */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/

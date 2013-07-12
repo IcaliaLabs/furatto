@@ -1,21 +1,30 @@
-//
-// Variables
-//----------------------------------------------------
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * Variables for manage the different styles
+ * 
+ * Designed and built @kurenn  
+ */
 
-//Body
+/* Body */
+/* ---- */
 $bg-color: #fefefe;
 /*$bg-color: #ebe7df;*/
 
-// Fonts
+/* Fonts */
+/* ----- */
 $font-family: 'Lato', 'Helvetica Neue';
 $base-font-size: 16px;
 $base-line-height: 20px;
 $base-font-weight: 500;
 
-//Border
+/* Border */
+/* ------ */
 $base-radius: 2px;
 
-//Colors
+/* Colors */
+/* ------ */
 
 //Reds
 $red: #e74c3c;
@@ -68,7 +77,8 @@ $colors: primary $dark-blue $blue, //class name, bg color, hover bg color
          funky $dark-purple $purple,
          dark $dark-black $black;
 
-//Buttons
+/* Buttons */
+/* ------- */
 
 $font-size-large: $base-font-size * 1.25; // ~18px
 $font-size-xlarge: $base-font-size * 1.50; // ~24px
@@ -80,7 +90,8 @@ $padding-small:  2px 10px;  // 26px
 $padding-mini:   0 6px;   // 22px
 $padding-xlarge: 20px 30px; // 44px
 
-//Alerts
+/* Alerts */
+/* ------ */
 $warning-alert-color: #d38305;
 $warning-header-color: #cc6633;
 
@@ -93,7 +104,8 @@ $info-header-color: #195999;
 $danger-alert-color: #993333;
 $danger-header-color: #993333;
 
-//Navbar
+/* Navbar */
+/* ------ */
 $navbar-height: 55px;
 $navbar-bg-color: #232323;
 $navbar-border: #38393a;
@@ -102,7 +114,8 @@ $navbar-brand-color: $navbar-text;
 $navbar-link-color-active: #FFF;
 $navbar-alpha: 0.75;
 
-//Vrt Navbar
+/* Vertical Navbar */
+/* --------------- */
 $vrt-navbar-background: #232323;
 $vrt-navbar-width: 4em;
 $vrt-navbar-height: $vrt-navbar-width;
@@ -112,37 +125,42 @@ $vrt-navbar-links-bg: $blue;
 $vrt-navbar-links-color: #FFF;
 $vrt-navbar-li-hover: $blue;
 
-//Inputs
+/* Inputs */
+/* ------ */
 $input-color: #34495e;
 $input-border-radius: 2px;
 $input-bg: #FFF;
 $input-border-color: #CCC;
 $input-focus-color: $blue;
 
-//Tables
+/* Tables */
+/* ------ */
 $table-color: #FFF;
 $table-header-primary: $dark-blue;
 $table-border-color: #d2d2d2;
 $table-striped-color: #f9f9f9;
 
-//Responsive Navbar
+/* Responsive Navbar */
+/* ----------------- */
 $nav-bar-collapse-width: 979px;
 $nav-bar-collapse-width-desktop: $nav-bar-collapse-width + 1;
 
-//Images
+/* Images */
+/* ------ */
 $img-border: $dark-green;
 
-//Select
+/* Select */
+/* ------ */
 $select-bg: $dark-info;
 $select-text-color: #FFF;
 $select-options-bg: $inverse;
 
-//Check box/Radio buttons
+/* Checkbox and radio buttons */
+/* -------------------------- */
 $ch-rb-color: $dark-info;
 
-// GRID
-// --------------------------------------------------
-
+/* Grid */
+/* ---- */
 
 // Default 940px grid
 // -------------------------
@@ -162,8 +180,8 @@ $gridGutterWidth768:      20px !default;
 $gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) !default;
 
 
-// Fluid grid
-// -------------------------
+/* Fluid grid */
+/* ---------- */
 $fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth) !default;
 $fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth) !default;
 
@@ -175,15 +193,18 @@ $fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200
 $fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768) !default;
 $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768) !default;
 
-//Forms
+/* Forms */
+/* ----- */
 $inputHeight: $base-line-height + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
-//Footer
+/* Footer */
+/* ------ */
 $footer-bg: lighten($navbar-bg-color, 0.5);
 $footer-text-color: #FFF;
 $footer-height: 80px;
 
-//Icons
+/* Icons */
+/* ----- */
 $icon-base-color: $dark-inverse;
 $icon-base-inverse-color: #FFF;
 $icon-small-size: 2em;
@@ -193,23 +214,29 @@ $icon-xlarge-size: 8em;
 $icon-xxlarge-size: 10em;
 
 
-//Links
+/* Links */
+/* ----- */
 $link-color: #0088cc;
 
-//Headings
+/* Headings */
+/* -------- */
 $headings-color: #4b4b4b;
 
-//Color Lists
+/* Color Lists */
+/* ----------- */
 $color-list-item-height: 16px;
 $color-list-item-width: $color-list-item-height;
 
-//Pagination 
+/* Pagination */
+/* ---------- */
 $pagination-color: desaturate(lighten($inverse, 57.5%), 17%);
 
-//Toolbars
+/* Toolbars */
+/* -------- */
 $toolbar-bg-color: #232323;
 
-//Dropdown
+/* Dropdown */
+/* -------- */
 $zindex-dropdown: 1000 !default;
 $dropdown-bg: $white !default;
 $dropdown-border: rgba(0,0,0,0.2);
@@ -227,10 +254,8 @@ $code-font-size: 0.8em;
 $calendar-highlight-color: #b1dcfb;
 $calendar-highlighted-color: #0089ec;
 
-// Font Awesome Icons
-
-// Variables
-// --------------------------
+/* Font Awesome Icons */
+/* ------------------ */
 
 $FontAwesomePath: "../fonts/fontawesome" !default;
 $FontAwesomeVersion: "3.2.1" !default;
