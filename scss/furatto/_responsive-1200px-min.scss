@@ -1,3 +1,13 @@
+/*------------------------------------*\
+    $RESPONSIVE - 1200
+\*------------------------------------*/
+/**
+ * Responsive structural styling based on bootstrap. 
+ * http://twitter.github.io/bootstrap/
+ * 
+ * Designed and built @kurenn  
+ */
+
 @media (min-width: 1200px) {
 
   // Fixed grid
@@ -8,16 +18,4 @@
 
   // Input grid
   @include grid-input($gridColumnWidth1200, $gridGutterWidth1200);
-
-  // Thumbnails
-  .thumbnails {
-    margin-left: -$gridGutterWidth1200;
-  }
-  .thumbnails > li {
-    margin-left: $gridGutterWidth1200;
-  }
-  .row-fluid .thumbnails {
-    margin-left: 0;
-  }
-
 }

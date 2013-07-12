@@ -3939,7 +3939,7 @@ a.label:hover, a.label:focus {
     $NAVBAR
 \*------------------------------------*/
 /**
- * Basic button structural styling based on bootstrap. 
+ * Basic navbar structural styling based on bootstrap. 
  * http://twitter.github.io/bootstrap/components.html#navbar
  * 
  * Designed and built @kurenn  
@@ -4928,6 +4928,15 @@ table {
 .row-fluid [class*="span"].pull-right {
   float: right; }
 
+/*------------------------------------*\
+    $RESPONSIVE - 1200
+\*------------------------------------*/
+/**
+ * Responsive structural styling based on bootstrap. 
+ * http://twitter.github.io/bootstrap/
+ * 
+ * Designed and built @kurenn  
+ */
 @media (min-width: 1200px) {
   /* line 103, ../scss/furatto/_mixins.scss */
   .row {
@@ -5299,65 +5308,62 @@ table {
   input.span12,
   textarea.span12,
   .uneditable-input.span12 {
-    width: 1156px; }
-
-  /* line 13, ../scss/furatto/_responsive-1200px-min.scss */
-  .thumbnails {
-    margin-left: -30px; }
-
-  /* line 16, ../scss/furatto/_responsive-1200px-min.scss */
-  .thumbnails > li {
-    margin-left: 30px; }
-
-  /* line 19, ../scss/furatto/_responsive-1200px-min.scss */
-  .row-fluid .thumbnails {
-    margin-left: 0; } }
+    width: 1156px; } }
+/*------------------------------------*\
+    $RESPONSIVE - 767
+\*------------------------------------*/
+/**
+ * Responsive structural styling based on bootstrap. 
+ * http://twitter.github.io/bootstrap/
+ * 
+ * Designed and built @kurenn  
+ */
 @media (max-width: 767px) {
-  /* line 4, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 14, ../scss/furatto/_responsive-767px-max.scss */
   body {
     padding-left: 20px;
     padding-right: 20px; }
 
-  /* line 11, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 21, ../scss/furatto/_responsive-767px-max.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
     /*margin-left: -20px;*/
     margin-right: -20px; }
 
-  /* line 16, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 26, ../scss/furatto/_responsive-767px-max.scss */
   .container-fluid {
     padding: 0; }
 
-  /* line 24, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 34, ../scss/furatto/_responsive-767px-max.scss */
   .dl-horizontal dt {
     float: none;
     clear: none;
     width: auto;
     text-align: left; }
-  /* line 30, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 40, ../scss/furatto/_responsive-767px-max.scss */
   .dl-horizontal dd {
     margin-left: 0; }
 
-  /* line 38, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 48, ../scss/furatto/_responsive-767px-max.scss */
   .container {
     width: auto; }
 
-  /* line 42, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 52, ../scss/furatto/_responsive-767px-max.scss */
   .row-fluid {
     width: 100%; }
 
-  /* line 47, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 57, ../scss/furatto/_responsive-767px-max.scss */
   .row,
   .thumbnails {
     margin-left: 0; }
 
-  /* line 50, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 60, ../scss/furatto/_responsive-767px-max.scss */
   .thumbnails > li {
     float: none;
     margin-left: 0; }
 
-  /* line 57, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 67, ../scss/furatto/_responsive-767px-max.scss */
   [class*="span"],
   .uneditable-input[class*="span"],
   .row-fluid [class*="span"] {
@@ -5369,7 +5375,7 @@ table {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-  /* line 65, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 75, ../scss/furatto/_responsive-767px-max.scss */
   .span12,
   .row-fluid .span12 {
     width: 100%;
@@ -5377,9 +5383,18 @@ table {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-  /* line 69, ../scss/furatto/_responsive-767px-max.scss */
+  /* line 79, ../scss/furatto/_responsive-767px-max.scss */
   .row-fluid [class*="offset"]:first-child {
     margin-left: 0; } }
+/*------------------------------------*\
+    $RESPONSIVE - 767/979
+\*------------------------------------*/
+/**
+ * Responsive structural styling based on bootstrap. 
+ * http://twitter.github.io/bootstrap/
+ * 
+ * Designed and built @kurenn  
+ */
 @media (min-width: 768px) and (max-width: 979px) {
   /* line 103, ../scss/furatto/_mixins.scss */
   .row {
