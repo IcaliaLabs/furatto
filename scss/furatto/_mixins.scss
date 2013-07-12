@@ -1,11 +1,11 @@
-//Floats
-.pull-right {
-  float: right;
-}
-
-.pull-left {
-  float: left;
-}
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * MIXINS COLLECTION
+ * 
+ * Designed and built @kurenn  
+ */
 
 //Clears the float from any element
 @mixin clearfix {
@@ -111,14 +111,6 @@
     margin-left: $gridGutterWidth;
   }
 
-  // Set the container width, and override it for fixed navbars in media queries
-  /*.container,*/
-  /*.navbar-static-top .container,*/
-  /*.navbar-fixed-top .container,*/
-  /*.navbar-fixed-bottom .container {*/
-    /*@include grid-core-span($gridColumns, $gridColumnWidth, $gridGutterWidth);*/
-  /*}*/
-
   // generate .spanX and .offsetX
   @include grid-core-span-x($gridColumns, $gridColumnWidth, $gridGutterWidth);
   @include grid-core-offset-x($gridColumns, $gridColumnWidth, $gridGutterWidth);
@@ -201,8 +193,6 @@
   margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) + ($fluidGridGutterWidth);
   *margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%) + $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
 }
-
-
 
 @mixin grid-input($gridColumnWidth, $gridGutterWidth) {
   input,
