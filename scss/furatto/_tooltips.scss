@@ -1,3 +1,12 @@
+/*------------------------------------*\
+    $TOOLTIPS
+\*------------------------------------*/
+/**
+ * Basic tooltip structural styling 
+ * 
+ * Designed and built @kurenn  
+ */
+
 .tooltip {
   position: absolute;
   z-index: 1030;
@@ -33,7 +42,7 @@
 .tooltip-inner {
   max-width: 200px;
   padding: 3px 8px;
-  color: #ffffff;
+  color: $white;
   text-align: center;
   text-decoration: none;
   background-color: #000000;
