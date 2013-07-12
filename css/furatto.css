@@ -4170,7 +4170,7 @@ a.label:hover, a.label:focus {
     $VERTICAL NAVBAR
 \*------------------------------------*/
 /**
- * Basic button structural styling. 
+ * Basic vertcial navbar structural styling. 
  * 
  * Designed and built @kurenn  
  */
@@ -6339,9 +6339,27 @@ table {
 select {
   margin-bottom: 8px; }
 
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS SKINS
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS AERO
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, aero
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_aero.scss */
+/* line 14, ../scss/furatto/icheck/_aero.scss */
 .icheckbox_flat-aero,
 .iradio_flat-aero {
   display: inline-block;
@@ -6353,51 +6371,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_aero.scss */
+/* line 25, ../scss/furatto/icheck/_aero.scss */
 .icheckbox_flat-aero {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_aero.scss */
+/* line 28, ../scss/furatto/icheck/_aero.scss */
 .icheckbox_flat-aero.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_aero.scss */
+/* line 31, ../scss/furatto/icheck/_aero.scss */
 .icheckbox_flat-aero.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_aero.scss */
+/* line 35, ../scss/furatto/icheck/_aero.scss */
 .icheckbox_flat-aero.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_aero.scss */
+/* line 39, ../scss/furatto/icheck/_aero.scss */
 .iradio_flat-aero {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_aero.scss */
+/* line 42, ../scss/furatto/icheck/_aero.scss */
 .iradio_flat-aero.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_aero.scss */
+/* line 45, ../scss/furatto/icheck/_aero.scss */
 .iradio_flat-aero.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_aero.scss */
+/* line 49, ../scss/furatto/icheck/_aero.scss */
 .iradio_flat-aero.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_aero.scss */
+  /* line 59, ../scss/furatto/icheck/_aero.scss */
   .icheckbox_flat-aero,
   .iradio_flat-aero {
     background-image: url(../img/icheck/aero@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS BLUE
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, blue
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_blue.scss */
+/* line 14, ../scss/furatto/icheck/_blue.scss */
 .icheckbox_flat-blue,
 .iradio_flat-blue {
   display: inline-block;
@@ -6409,51 +6436,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_blue.scss */
+/* line 25, ../scss/furatto/icheck/_blue.scss */
 .icheckbox_flat-blue {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_blue.scss */
+/* line 28, ../scss/furatto/icheck/_blue.scss */
 .icheckbox_flat-blue.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_blue.scss */
+/* line 31, ../scss/furatto/icheck/_blue.scss */
 .icheckbox_flat-blue.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_blue.scss */
+/* line 35, ../scss/furatto/icheck/_blue.scss */
 .icheckbox_flat-blue.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_blue.scss */
+/* line 39, ../scss/furatto/icheck/_blue.scss */
 .iradio_flat-blue {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_blue.scss */
+/* line 42, ../scss/furatto/icheck/_blue.scss */
 .iradio_flat-blue.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_blue.scss */
+/* line 45, ../scss/furatto/icheck/_blue.scss */
 .iradio_flat-blue.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_blue.scss */
+/* line 49, ../scss/furatto/icheck/_blue.scss */
 .iradio_flat-blue.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_blue.scss */
+  /* line 59, ../scss/furatto/icheck/_blue.scss */
   .icheckbox_flat-blue,
   .iradio_flat-blue {
     background-image: url(../img/icheck/blue@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS FLAT
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin flat skin, black
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_flat.scss */
+/* line 14, ../scss/furatto/icheck/_flat.scss */
 .icheckbox_flat-dark,
 .iradio_flat-dark {
   display: inline-block;
@@ -6465,51 +6501,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_flat.scss */
+/* line 25, ../scss/furatto/icheck/_flat.scss */
 .icheckbox_flat-dark {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_flat.scss */
+/* line 28, ../scss/furatto/icheck/_flat.scss */
 .icheckbox_flat-dark.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_flat.scss */
+/* line 31, ../scss/furatto/icheck/_flat.scss */
 .icheckbox_flat-dark.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_flat.scss */
+/* line 35, ../scss/furatto/icheck/_flat.scss */
 .icheckbox_flat-dark.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_flat.scss */
+/* line 39, ../scss/furatto/icheck/_flat.scss */
 .iradio_flat-dark {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_flat.scss */
+/* line 42, ../scss/furatto/icheck/_flat.scss */
 .iradio_flat-dark.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_flat.scss */
+/* line 45, ../scss/furatto/icheck/_flat.scss */
 .iradio_flat-dark.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_flat.scss */
+/* line 49, ../scss/furatto/icheck/_flat.scss */
 .iradio_flat-dark.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_flat.scss */
+  /* line 59, ../scss/furatto/icheck/_flat.scss */
   .icheckbox_flat-dark,
   .iradio_flat-dark {
     background-image: url(../img/icheck/flat@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS GREEN
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, green
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_green.scss */
+/* line 14, ../scss/furatto/icheck/_green.scss */
 .icheckbox_flat-green,
 .iradio_flat-green {
   display: inline-block;
@@ -6521,51 +6566,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_green.scss */
+/* line 25, ../scss/furatto/icheck/_green.scss */
 .icheckbox_flat-green {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_green.scss */
+/* line 28, ../scss/furatto/icheck/_green.scss */
 .icheckbox_flat-green.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_green.scss */
+/* line 31, ../scss/furatto/icheck/_green.scss */
 .icheckbox_flat-green.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_green.scss */
+/* line 35, ../scss/furatto/icheck/_green.scss */
 .icheckbox_flat-green.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_green.scss */
+/* line 39, ../scss/furatto/icheck/_green.scss */
 .iradio_flat-green {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_green.scss */
+/* line 42, ../scss/furatto/icheck/_green.scss */
 .iradio_flat-green.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_green.scss */
+/* line 45, ../scss/furatto/icheck/_green.scss */
 .iradio_flat-green.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_green.scss */
+/* line 49, ../scss/furatto/icheck/_green.scss */
 .iradio_flat-green.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_green.scss */
+  /* line 59, ../scss/furatto/icheck/_green.scss */
   .icheckbox_flat-green,
   .iradio_flat-green {
     background-image: url(../img/icheck/green@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS GREY
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, grey
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_grey.scss */
+/* line 14, ../scss/furatto/icheck/_grey.scss */
 .icheckbox_flat-grey,
 .iradio_flat-grey {
   display: inline-block;
@@ -6577,51 +6631,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_grey.scss */
+/* line 25, ../scss/furatto/icheck/_grey.scss */
 .icheckbox_flat-grey {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_grey.scss */
+/* line 28, ../scss/furatto/icheck/_grey.scss */
 .icheckbox_flat-grey.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_grey.scss */
+/* line 31, ../scss/furatto/icheck/_grey.scss */
 .icheckbox_flat-grey.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_grey.scss */
+/* line 35, ../scss/furatto/icheck/_grey.scss */
 .icheckbox_flat-grey.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_grey.scss */
+/* line 39, ../scss/furatto/icheck/_grey.scss */
 .iradio_flat-grey {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_grey.scss */
+/* line 42, ../scss/furatto/icheck/_grey.scss */
 .iradio_flat-grey.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_grey.scss */
+/* line 45, ../scss/furatto/icheck/_grey.scss */
 .iradio_flat-grey.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_grey.scss */
+/* line 49, ../scss/furatto/icheck/_grey.scss */
 .iradio_flat-grey.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_grey.scss */
+  /* line 59, ../scss/furatto/icheck/_grey.scss */
   .icheckbox_flat-grey,
   .iradio_flat-grey {
     background-image: url(../img/icheck/grey@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS ORANGE
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, orange
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_orange.scss */
+/* line 14, ../scss/furatto/icheck/_orange.scss */
 .icheckbox_flat-orange,
 .iradio_flat-orange {
   display: inline-block;
@@ -6633,51 +6696,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_orange.scss */
+/* line 25, ../scss/furatto/icheck/_orange.scss */
 .icheckbox_flat-orange {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_orange.scss */
+/* line 28, ../scss/furatto/icheck/_orange.scss */
 .icheckbox_flat-orange.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_orange.scss */
+/* line 31, ../scss/furatto/icheck/_orange.scss */
 .icheckbox_flat-orange.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_orange.scss */
+/* line 35, ../scss/furatto/icheck/_orange.scss */
 .icheckbox_flat-orange.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_orange.scss */
+/* line 39, ../scss/furatto/icheck/_orange.scss */
 .iradio_flat-orange {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_orange.scss */
+/* line 42, ../scss/furatto/icheck/_orange.scss */
 .iradio_flat-orange.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_orange.scss */
+/* line 45, ../scss/furatto/icheck/_orange.scss */
 .iradio_flat-orange.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_orange.scss */
+/* line 49, ../scss/furatto/icheck/_orange.scss */
 .iradio_flat-orange.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_orange.scss */
+  /* line 59, ../scss/furatto/icheck/_orange.scss */
   .icheckbox_flat-orange,
   .iradio_flat-orange {
     background-image: url(../img/icheck/orange@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS PINK
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, pink
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_pink.scss */
+/* line 14, ../scss/furatto/icheck/_pink.scss */
 .icheckbox_flat-pink,
 .iradio_flat-pink {
   display: inline-block;
@@ -6689,51 +6761,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_pink.scss */
+/* line 25, ../scss/furatto/icheck/_pink.scss */
 .icheckbox_flat-pink {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_pink.scss */
+/* line 28, ../scss/furatto/icheck/_pink.scss */
 .icheckbox_flat-pink.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_pink.scss */
+/* line 31, ../scss/furatto/icheck/_pink.scss */
 .icheckbox_flat-pink.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_pink.scss */
+/* line 35, ../scss/furatto/icheck/_pink.scss */
 .icheckbox_flat-pink.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_pink.scss */
+/* line 39, ../scss/furatto/icheck/_pink.scss */
 .iradio_flat-pink {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_pink.scss */
+/* line 42, ../scss/furatto/icheck/_pink.scss */
 .iradio_flat-pink.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_pink.scss */
+/* line 45, ../scss/furatto/icheck/_pink.scss */
 .iradio_flat-pink.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_pink.scss */
+/* line 49, ../scss/furatto/icheck/_pink.scss */
 .iradio_flat-pink.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_pink.scss */
+  /* line 59, ../scss/furatto/icheck/_pink.scss */
   .icheckbox_flat-pink,
   .iradio_flat-pink {
     background-image: url(../img/icheck/pink@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS PURPLE
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, purple
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_purple.scss */
+/* line 14, ../scss/furatto/icheck/_purple.scss */
 .icheckbox_flat-purple,
 .iradio_flat-purple {
   display: inline-block;
@@ -6745,51 +6826,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_purple.scss */
+/* line 25, ../scss/furatto/icheck/_purple.scss */
 .icheckbox_flat-purple {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_purple.scss */
+/* line 28, ../scss/furatto/icheck/_purple.scss */
 .icheckbox_flat-purple.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_purple.scss */
+/* line 31, ../scss/furatto/icheck/_purple.scss */
 .icheckbox_flat-purple.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_purple.scss */
+/* line 35, ../scss/furatto/icheck/_purple.scss */
 .icheckbox_flat-purple.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_purple.scss */
+/* line 39, ../scss/furatto/icheck/_purple.scss */
 .iradio_flat-purple {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_purple.scss */
+/* line 42, ../scss/furatto/icheck/_purple.scss */
 .iradio_flat-purple.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_purple.scss */
+/* line 45, ../scss/furatto/icheck/_purple.scss */
 .iradio_flat-purple.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_purple.scss */
+/* line 49, ../scss/furatto/icheck/_purple.scss */
 .iradio_flat-purple.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_purple.scss */
+  /* line 59, ../scss/furatto/icheck/_purple.scss */
   .icheckbox_flat-purple,
   .iradio_flat-purple {
     background-image: url(../img/icheck/purple@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS RED
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, red
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_red.scss */
+/* line 14, ../scss/furatto/icheck/_red.scss */
 .icheckbox_flat-red,
 .iradio_flat-red {
   display: inline-block;
@@ -6801,51 +6891,60 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_red.scss */
+/* line 25, ../scss/furatto/icheck/_red.scss */
 .icheckbox_flat-red {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_red.scss */
+/* line 28, ../scss/furatto/icheck/_red.scss */
 .icheckbox_flat-red.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_red.scss */
+/* line 31, ../scss/furatto/icheck/_red.scss */
 .icheckbox_flat-red.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_red.scss */
+/* line 35, ../scss/furatto/icheck/_red.scss */
 .icheckbox_flat-red.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_red.scss */
+/* line 39, ../scss/furatto/icheck/_red.scss */
 .iradio_flat-red {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_red.scss */
+/* line 42, ../scss/furatto/icheck/_red.scss */
 .iradio_flat-red.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_red.scss */
+/* line 45, ../scss/furatto/icheck/_red.scss */
 .iradio_flat-red.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_red.scss */
+/* line 49, ../scss/furatto/icheck/_red.scss */
 .iradio_flat-red.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_red.scss */
+  /* line 59, ../scss/furatto/icheck/_red.scss */
   .icheckbox_flat-red,
   .iradio_flat-red {
     background-image: url(../img/icheck/red@2x.png);
     -webkit-background-size: 176px 22px;
     background-size: 176px 22px; } }
+/*------------------------------------*\
+    $CHECKBOX AND RADIO BUTTONS YELLOW
+\*------------------------------------*/
+/**
+ * Skins for radio buttons and checkboxes based on:
+ * http://damirfoy.com/iCheck/
+ * 
+ * Designed and built @kurenn  
+ */
 /* iCheck plugin Flat skin, yellow
 ----------------------------------- */
-/* line 4, ../scss/furatto/icheck/_yellow.scss */
+/* line 14, ../scss/furatto/icheck/_yellow.scss */
 .icheckbox_flat-yellow,
 .iradio_flat-yellow {
   display: inline-block;
@@ -6857,43 +6956,43 @@ select {
   border: none;
   cursor: pointer; }
 
-/* line 15, ../scss/furatto/icheck/_yellow.scss */
+/* line 25, ../scss/furatto/icheck/_yellow.scss */
 .icheckbox_flat-yellow {
   background-position: 0 0; }
 
-/* line 18, ../scss/furatto/icheck/_yellow.scss */
+/* line 28, ../scss/furatto/icheck/_yellow.scss */
 .icheckbox_flat-yellow.checked {
   background-position: -22px 0; }
 
-/* line 21, ../scss/furatto/icheck/_yellow.scss */
+/* line 31, ../scss/furatto/icheck/_yellow.scss */
 .icheckbox_flat-yellow.disabled {
   background-position: -44px 0;
   cursor: default; }
 
-/* line 25, ../scss/furatto/icheck/_yellow.scss */
+/* line 35, ../scss/furatto/icheck/_yellow.scss */
 .icheckbox_flat-yellow.checked.disabled {
   background-position: -66px 0; }
 
-/* line 29, ../scss/furatto/icheck/_yellow.scss */
+/* line 39, ../scss/furatto/icheck/_yellow.scss */
 .iradio_flat-yellow {
   background-position: -88px 0; }
 
-/* line 32, ../scss/furatto/icheck/_yellow.scss */
+/* line 42, ../scss/furatto/icheck/_yellow.scss */
 .iradio_flat-yellow.checked {
   background-position: -110px 0; }
 
-/* line 35, ../scss/furatto/icheck/_yellow.scss */
+/* line 45, ../scss/furatto/icheck/_yellow.scss */
 .iradio_flat-yellow.disabled {
   background-position: -132px 0;
   cursor: default; }
 
-/* line 39, ../scss/furatto/icheck/_yellow.scss */
+/* line 49, ../scss/furatto/icheck/_yellow.scss */
 .iradio_flat-yellow.checked.disabled {
   background-position: -154px 0; }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 49, ../scss/furatto/icheck/_yellow.scss */
+  /* line 59, ../scss/furatto/icheck/_yellow.scss */
   .icheckbox_flat-yellow,
   .iradio_flat-yellow {
     background-image: url(../img/icheck/yellow@2x.png);
