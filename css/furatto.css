@@ -3939,11 +3939,12 @@ a.label:hover, a.label:focus {
     $NAVBAR
 \*------------------------------------*/
 /**
- * Basic button structural styling. 
+ * Basic button structural styling based on bootstrap. 
+ * http://twitter.github.io/bootstrap/components.html#navbar
  * 
  * Designed and built @kurenn  
  */
-/* line 10, ../scss/furatto/_navbar.scss */
+/* line 11, ../scss/furatto/_navbar.scss */
 .navbar {
   overflow: visible;
   margin-bottom: 20px;
@@ -3951,18 +3952,18 @@ a.label:hover, a.label:focus {
   /*Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar*/
   *position: relative;
   *z-index: 2; }
-  /* line 15, ../scss/furatto/_navbar.scss */
+  /* line 16, ../scss/furatto/_navbar.scss */
   .navbar .menu-trigger {
     display: none; }
 
-/* line 24, ../scss/furatto/_navbar.scss */
+/* line 25, ../scss/furatto/_navbar.scss */
 .navbar-alpha {
   background: rgba(35, 35, 35, 0.75); }
-  /* line 27, ../scss/furatto/_navbar.scss */
+  /* line 28, ../scss/furatto/_navbar.scss */
   .navbar-alpha .navbar-inner {
     background: rgba(35, 35, 35, 0.75); }
 
-/* line 34, ../scss/furatto/_navbar.scss */
+/* line 35, ../scss/furatto/_navbar.scss */
 .navbar-inner {
   min-height: 55px;
   padding-left: 20px;
@@ -3978,23 +3979,23 @@ a.label:hover, a.label:focus {
   .navbar-inner:after {
     clear: both; }
 
-/* line 45, ../scss/furatto/_navbar.scss */
+/* line 46, ../scss/furatto/_navbar.scss */
 .nav-collapse.collapse {
   height: auto;
   overflow: visible; }
 
-/* line 52, ../scss/furatto/_navbar.scss */
+/* line 53, ../scss/furatto/_navbar.scss */
 .navbar .container {
   width: auto; }
 
-/* line 56, ../scss/furatto/_navbar.scss */
+/* line 57, ../scss/furatto/_navbar.scss */
 .navbar .nav {
   padding-left: 0px; }
-  /* line 59, ../scss/furatto/_navbar.scss */
+  /* line 60, ../scss/furatto/_navbar.scss */
   .navbar .nav [class^="icon_"], .navbar .nav [class*=" icon_"] {
     margin-right: 5px; }
 
-/* line 64, ../scss/furatto/_navbar.scss */
+/* line 65, ../scss/furatto/_navbar.scss */
 .navbar .brand {
   float: left;
   display: block;
@@ -4006,17 +4007,17 @@ a.label:hover, a.label:focus {
   font-size: 20px;
   font-weight: 200;
   color: #eaeaea; }
-  /* line 78, ../scss/furatto/_navbar.scss */
+  /* line 79, ../scss/furatto/_navbar.scss */
   .navbar .brand:hover, .navbar .brand:focus {
     text-decoration: none; }
 
-/* line 84, ../scss/furatto/_navbar.scss */
+/* line 85, ../scss/furatto/_navbar.scss */
 .navbar-text {
   margin-bottom: 0;
   line-height: 55px;
   color: #eaeaea; }
 
-/* line 91, ../scss/furatto/_navbar.scss */
+/* line 92, ../scss/furatto/_navbar.scss */
 .navbar .nav > li > a {
   float: none;
   /*Vertically center the text given @navbarHeight*/
@@ -4024,7 +4025,7 @@ a.label:hover, a.label:focus {
   color: #eaeaea;
   text-decoration: none; }
 
-/* line 102, ../scss/furatto/_navbar.scss */
+/* line 103, ../scss/furatto/_navbar.scss */
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
@@ -4032,7 +4033,7 @@ a.label:hover, a.label:focus {
   text-decoration: none;
   border-top: 2px solid #2ecc71; }
 
-/* line 111, ../scss/furatto/_navbar.scss */
+/* line 112, ../scss/furatto/_navbar.scss */
 .navbar .btn-navbar {
   display: none;
   float: right;
@@ -4042,7 +4043,7 @@ a.label:hover, a.label:focus {
   /*.buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));*/
   /*.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");*/ }
 
-/* line 120, ../scss/furatto/_navbar.scss */
+/* line 121, ../scss/furatto/_navbar.scss */
 .navbar .btn-navbar .icon_cloud {
   display: block;
   width: 18px;
@@ -4051,11 +4052,11 @@ a.label:hover, a.label:focus {
   /*.border-radius(1px);*/
   /*.box-shadow(0 1px 0 rgba(0,0,0,.25));*/ }
 
-/* line 128, ../scss/furatto/_navbar.scss */
+/* line 129, ../scss/furatto/_navbar.scss */
 .btn-navbar .icon_cloud + .icon_cloud {
   margin-top: 3px; }
 
-/* line 133, ../scss/furatto/_navbar.scss */
+/* line 134, ../scss/furatto/_navbar.scss */
 .navbar .nav {
   position: relative;
   left: 0;
@@ -4063,31 +4064,31 @@ a.label:hover, a.label:focus {
   float: left;
   margin: 0 10px 0 0; }
 
-/* line 142, ../scss/furatto/_navbar.scss */
+/* line 143, ../scss/furatto/_navbar.scss */
 .navbar .nav.pull-right {
   float: right;
   /*redeclare due to specificity*/
   margin-right: 0;
   /*remove margin on float right nav*/ }
 
-/* line 147, ../scss/furatto/_navbar.scss */
+/* line 148, ../scss/furatto/_navbar.scss */
 .navbar .nav > li {
   float: left; }
 
-/* line 152, ../scss/furatto/_navbar.scss */
+/* line 153, ../scss/furatto/_navbar.scss */
 .divider-vertical {
   height: 62px;
   /*Fix for the navbar*/
   margin: 0 9px;
   border-left: 1px solid #38393a; }
 
-/* line 159, ../scss/furatto/_navbar.scss */
+/* line 160, ../scss/furatto/_navbar.scss */
 .navbar-static-top {
   position: static;
   margin-bottom: 0;
   /*remove 18px margin for default navbar*/ }
 
-/* line 168, ../scss/furatto/_navbar.scss */
+/* line 169, ../scss/furatto/_navbar.scss */
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -4097,11 +4098,11 @@ a.label:hover, a.label:focus {
   margin-bottom: 0;
   /*remove 18px margin for default navbar*/ }
 
-/* line 177, ../scss/furatto/_navbar.scss */
+/* line 178, ../scss/furatto/_navbar.scss */
 .navbar-fixed-top {
   top: 0; }
 
-/* line 182, ../scss/furatto/_navbar.scss */
+/* line 183, ../scss/furatto/_navbar.scss */
 .navbar-fixed-bottom {
   bottom: 0; }
 
