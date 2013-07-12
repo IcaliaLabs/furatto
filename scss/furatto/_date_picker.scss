@@ -1,42 +1,13 @@
-/* ==========================================================================
-   $BASE-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
+/*------------------------------------*\
+    $DATEPICKER BASE
+\*------------------------------------*/
 /**
- * Base colors
+ * Base date picker structural styling. 
+ * 
+ * Designed and built @kurenn based on picakdate.js jquery plugin
+ * http://amsul.ca/pickadate.js/
  */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
+
 /**
  * Note: the root picker element should __NOT__ be styled
  * more than what’s here. Style the `.picker__holder` instead.
@@ -59,7 +30,7 @@
  * When the picker is opened, the input element is “activated”.
  */
 .picker__input.picker__input--active {
-  border-color: #0089ec;
+  border-color: $calendar-highlighted-color;
 }
 /**
  * The holder is the only “scrollable” top-level container element.
@@ -70,49 +41,6 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/*!
- * Default mobile-first, responsive styling for pickadate.js
- * Demo: http://amsul.github.io/pickadate.js/themes.htm#default
- */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
-/**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
-/**
- * Make the holder and frame fullscreen.
- */
 .picker__holder,
 .picker__frame {
   bottom: 0;
@@ -125,9 +53,7 @@
  */
 .picker__holder {
   position: fixed;
-  -webkit-transition: background 0.15s ease-out, top 0s 0.15s;
-  -moz-transition: background 0.15s ease-out, top 0s 0.15s;
-  transition: background 0.15s ease-out, top 0s 0.15s;
+  @include transition(background 0.15s ease-out, top 0s 0.15s);
 }
 /**
  * The frame that bounds the box contents of the picker.
@@ -142,9 +68,7 @@
   filter: alpha(opacity=0);
   -moz-opacity: 0;
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+  @include transition(all 0.15s ease-out);
 }
 @media (min-height: 33.875em) {
   .picker__frame {
@@ -176,10 +100,15 @@
  * The box contains all the picker contents.
  */
 .picker__box {
-  background: #ffffff;
+  background: $white;
   display: table-cell;
   vertical-align: middle;
 }
+
+/**
+ *
+ * Media queries for responsive
+ */
 @media (min-height: 26.5em) {
   .picker__box {
     font-size: 1.25em;
@@ -192,21 +121,15 @@
     border: 1px solid #777777;
     border-top-color: #898989;
     border-bottom-width: 0;
-    -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    border-radius: 5px 5px 0 0;
-    -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-    -moz-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-    box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
+    @include border-radius(5px 5px 0 0);
+    @include box-shadow(0 12px 36px 16px rgba(0, 0, 0, 0.24));
   }
 }
 @media (min-height: 40.125em) {
   .picker__box {
     font-size: 1.5em;
     border-bottom-width: 1px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    @include border-radius(5px);
   }
 }
 /**
@@ -218,9 +141,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#1E000000,endColorstr=#1E000000)";
   zoom: 1;
   background: rgba(0, 0, 0, 0.32);
-  -webkit-transition: background 0.15s ease-out;
-  -moz-transition: background 0.15s ease-out;
-  transition: background 0.15s ease-out;
+  @include transition(background 0.15s ease-out)
 }
 .picker--opened .picker__frame {
   top: 0;
@@ -235,6 +156,3 @@
     bottom: 0;
   }
 }
-/**
- * For `large` screens, transform into an inline picker.
- */

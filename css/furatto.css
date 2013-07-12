@@ -6303,50 +6303,20 @@ i.nomargin {
   background: #fbd8db !important;
   color: #90111a !important; }
 
-/* ==========================================================================
-   $BASE-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
+/*------------------------------------*\
+    $DATEPICKER BASE
+\*------------------------------------*/
 /**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
+ * Base date picker structural styling. 
+ * 
+ * Designed and built @kurenn based on picakdate.js jquery plugin
+ * http://amsul.ca/pickadate.js/
  */
 /**
  * Note: the root picker element should __NOT__ be styled
  * more than what’s here. Style the `.picker__holder` instead.
  */
-/* line 44, ../scss/furatto/_date_picker.scss */
+/* line 15, ../scss/furatto/_date_picker.scss */
 .picker {
   font-size: 16px;
   text-align: left;
@@ -6358,70 +6328,27 @@ i.nomargin {
 /**
  * The picker input element.
  */
-/* line 55, ../scss/furatto/_date_picker.scss */
+/* line 26, ../scss/furatto/_date_picker.scss */
 .picker__input {
   cursor: default; }
 
 /**
  * When the picker is opened, the input element is “activated”.
  */
-/* line 61, ../scss/furatto/_date_picker.scss */
+/* line 32, ../scss/furatto/_date_picker.scss */
 .picker__input.picker__input--active {
   border-color: #0089ec; }
 
 /**
  * The holder is the only “scrollable” top-level container element.
  */
-/* line 67, ../scss/furatto/_date_picker.scss */
+/* line 38, ../scss/furatto/_date_picker.scss */
 .picker__holder {
   width: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
 
-/*
- * Default mobile-first, responsive styling for pickadate.js
- * Demo: http://amsul.github.io/pickadate.js/themes.htm#default
- */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
-/**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
-/**
- * Make the holder and frame fullscreen.
- */
-/* line 117, ../scss/furatto/_date_picker.scss */
+/* line 45, ../scss/furatto/_date_picker.scss */
 .picker__holder,
 .picker__frame {
   bottom: 0;
@@ -6432,17 +6359,19 @@ i.nomargin {
 /**
  * The holder should overlay the entire screen.
  */
-/* line 126, ../scss/furatto/_date_picker.scss */
+/* line 54, ../scss/furatto/_date_picker.scss */
 .picker__holder {
   position: fixed;
-  -webkit-transition: background 0.15s ease-out, top 0s 0.15s;
+  -webkit-transition: background 0.15s ease-out, top 0s;
+  -webkit-transition-delay: 0s, 0.15s;
   -moz-transition: background 0.15s ease-out, top 0s 0.15s;
+  -o-transition: background 0.15s ease-out, top 0s 0.15s;
   transition: background 0.15s ease-out, top 0s 0.15s; }
 
 /**
  * The frame that bounds the box contents of the picker.
  */
-/* line 135, ../scss/furatto/_date_picker.scss */
+/* line 61, ../scss/furatto/_date_picker.scss */
 .picker__frame {
   position: absolute;
   margin: 0 auto;
@@ -6455,47 +6384,52 @@ i.nomargin {
   opacity: 0;
   -webkit-transition: all 0.15s ease-out;
   -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out; }
 
 @media (min-height: 33.875em) {
-  /* line 150, ../scss/furatto/_date_picker.scss */
+  /* line 74, ../scss/furatto/_date_picker.scss */
   .picker__frame {
     overflow: visible;
     top: auto;
     bottom: -100%;
     max-height: 80%; } }
 @media (min-height: 40.125em) {
-  /* line 158, ../scss/furatto/_date_picker.scss */
+  /* line 82, ../scss/furatto/_date_picker.scss */
   .picker__frame {
     margin-bottom: 7.5%; } }
 /**
  * The wrapper sets the stage to vertically align the box contents.
  */
-/* line 165, ../scss/furatto/_date_picker.scss */
+/* line 89, ../scss/furatto/_date_picker.scss */
 .picker__wrap {
   display: table;
   width: 100%;
   height: 100%; }
 
 @media (min-height: 33.875em) {
-  /* line 171, ../scss/furatto/_date_picker.scss */
+  /* line 95, ../scss/furatto/_date_picker.scss */
   .picker__wrap {
     display: block; } }
 /**
  * The box contains all the picker contents.
  */
-/* line 178, ../scss/furatto/_date_picker.scss */
+/* line 102, ../scss/furatto/_date_picker.scss */
 .picker__box {
-  background: #ffffff;
+  background: white;
   display: table-cell;
   vertical-align: middle; }
 
+/**
+ *
+ * Media queries for responsive
+ */
 @media (min-height: 26.5em) {
-  /* line 184, ../scss/furatto/_date_picker.scss */
+  /* line 113, ../scss/furatto/_date_picker.scss */
   .picker__box {
     font-size: 1.25em; } }
 @media (min-height: 33.875em) {
-  /* line 189, ../scss/furatto/_date_picker.scss */
+  /* line 118, ../scss/furatto/_date_picker.scss */
   .picker__box {
     display: block;
     font-size: 1.33em;
@@ -6504,22 +6438,26 @@ i.nomargin {
     border-bottom-width: 0;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
     -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
     box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24); } }
 @media (min-height: 40.125em) {
-  /* line 204, ../scss/furatto/_date_picker.scss */
+  /* line 129, ../scss/furatto/_date_picker.scss */
   .picker__box {
     font-size: 1.5em;
     border-bottom-width: 1px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     border-radius: 5px; } }
 /**
  * When the picker opens...
  */
-/* line 215, ../scss/furatto/_date_picker.scss */
+/* line 138, ../scss/furatto/_date_picker.scss */
 .picker--opened .picker__holder {
   top: 0;
   background: transparent;
@@ -6528,9 +6466,10 @@ i.nomargin {
   background: rgba(0, 0, 0, 0.32);
   -webkit-transition: background 0.15s ease-out;
   -moz-transition: background 0.15s ease-out;
+  -o-transition: background 0.15s ease-out;
   transition: background 0.15s ease-out; }
 
-/* line 225, ../scss/furatto/_date_picker.scss */
+/* line 146, ../scss/furatto/_date_picker.scss */
 .picker--opened .picker__frame {
   top: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -6539,13 +6478,10 @@ i.nomargin {
   opacity: 1; }
 
 @media (min-height: 33.875em) {
-  /* line 233, ../scss/furatto/_date_picker.scss */
+  /* line 154, ../scss/furatto/_date_picker.scss */
   .picker--opened .picker__frame {
     top: auto;
     bottom: 0; } }
-/**
- * For `large` screens, transform into an inline picker.
- */
 /*------------------------------------*\
     $DATEPICKER
 \*------------------------------------*/
