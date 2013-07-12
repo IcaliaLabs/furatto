@@ -98,7 +98,7 @@
 				if (value !='' && skipTag != true) { 
                     $('<span>').addClass('tag').append(
                         $('<span>').text(value).append('&nbsp;&nbsp;'),
-                        $('<a class="tagsinput-remove-link icon-remove_2">', {
+                        $('<a class="tagsinput-remove-link icon-remove">', {
                             href  : '#',
                             title : 'Remove tag',
                             text  : ''
@@ -218,7 +218,7 @@
 				tags_callbacks[id]['onChange'] = settings.onChange;
 			}
 	
-			var markup = '<div id="'+id+'_tagsinput" class="tagsinput"><div class="tagsinput-add-container" id="'+id+'_addTag"><div class="tagsinput-add icon-circle_plus"></div>';
+			var markup = '<div id="'+id+'_tagsinput" class="tagsinput"><div class="tagsinput-add-container" id="'+id+'_addTag"><div class="tagsinput-add icon-plus"></div>';
 			
 			if (settings.interactive) {
 				markup = markup + '<input id="'+id+'_tag" value="" data-default="'+settings.defaultText+'" />';
