@@ -6079,10 +6079,11 @@ table {
 \*------------------------------------*/
 /**
  * Basic select structural styling. 
+ * http://robdel12.github.io/DropKick/
  * 
  * Designed and built @kurenn  
  */
-/* line 11, ../scss/furatto/_select.scss */
+/* line 12, ../scss/furatto/_select.scss */
 .dk_container {
   cursor: pointer;
   font-size: 14px;
@@ -6091,7 +6092,7 @@ table {
   width: 220px;
   margin-left: 0; }
 
-/* line 21, ../scss/furatto/_select.scss */
+/* line 22, ../scss/furatto/_select.scss */
 .dk_toggle {
   background-color: #16a085;
   color: white;
@@ -6108,20 +6109,20 @@ table {
   -moz-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s; }
-  /* line 32, ../scss/furatto/_select.scss */
+  /* line 33, ../scss/furatto/_select.scss */
   .dk_toggle:hover, .dk_toggle:focus, .dk_focus .dk_toggle {
     background-color: #18ac8f;
     color: white;
     outline: none; }
-  /* line 37, ../scss/furatto/_select.scss */
+  /* line 38, ../scss/furatto/_select.scss */
   .dk_toggle:active {
     background-color: #159a80;
     outline: none; }
-    /* line 40, ../scss/furatto/_select.scss */
+    /* line 41, ../scss/furatto/_select.scss */
     .dk_toggle:active .select-icon {
       border-left-color: transparent; }
 
-/* line 47, ../scss/furatto/_select.scss */
+/* line 48, ../scss/furatto/_select.scss */
 .select-icon {
   background: #16a085 url("../img/toggle.png") no-repeat right center;
   border-left: 2px solid rgba(52, 73, 94, 0.15);
@@ -6136,18 +6137,18 @@ table {
   -o-transition: 0.25s;
   transition: 0.25s; }
 
-/* line 60, ../scss/furatto/_select.scss */
+/* line 61, ../scss/furatto/_select.scss */
 .dk_open {
   z-index: 10; }
-  /* line 63, ../scss/furatto/_select.scss */
+  /* line 64, ../scss/furatto/_select.scss */
   .dk_open .dk_toggle {
     background-color: #16a085; }
-    /* line 65, ../scss/furatto/_select.scss */
+    /* line 66, ../scss/furatto/_select.scss */
     .dk_open .dk_toggle .select-icon {
       background-color: #159a80;
       border-left-color: transparent; }
 
-/* line 73, ../scss/furatto/_select.scss */
+/* line 74, ../scss/furatto/_select.scss */
 .dk_options {
   padding-top: 14px; }
   /* line 43, ../scss/furatto/_mixins.scss */
@@ -6162,14 +6163,14 @@ table {
     top: 5px;
     width: 0px;
     -webkit-transform: rotate(360deg); }
-  /* line 77, ../scss/furatto/_select.scss */
+  /* line 78, ../scss/furatto/_select.scss */
   .dk_options:before {
     left: auto;
     right: 12px; }
-  /* line 81, ../scss/furatto/_select.scss */
+  /* line 82, ../scss/furatto/_select.scss */
   .dk_options li {
     padding-bottom: 3px; }
-  /* line 84, ../scss/furatto/_select.scss */
+  /* line 85, ../scss/furatto/_select.scss */
   .dk_options a {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -6180,15 +6181,15 @@ table {
     display: block;
     padding: 5px 9px;
     text-decoration: none; }
-    /* line 90, ../scss/furatto/_select.scss */
+    /* line 91, ../scss/furatto/_select.scss */
     .dk_options a:hover {
       background-color: #16a085; }
 
-/* line 96, ../scss/furatto/_select.scss */
+/* line 97, ../scss/furatto/_select.scss */
 .dk_option_current a {
   background-color: #16a085; }
 
-/* line 101, ../scss/furatto/_select.scss */
+/* line 102, ../scss/furatto/_select.scss */
 .dk_options_inner {
   background-color: #34495e;
   -webkit-border-radius: 5px;
@@ -6200,40 +6201,40 @@ table {
   max-height: 244px;
   padding: 3px 3px 0; }
 
-/* line 110, ../scss/furatto/_select.scss */
+/* line 111, ../scss/furatto/_select.scss */
 .dk_touch .dk_options {
   max-height: 250px; }
 
-/* line 117, ../scss/furatto/_select.scss */
+/* line 118, ../scss/furatto/_select.scss */
 .dk_container {
   display: none;
   position: relative;
   vertical-align: middle; }
-  /* line 121, ../scss/furatto/_select.scss */
+  /* line 122, ../scss/furatto/_select.scss */
   .dk_container.dk_shown {
     display: inline-block;
     zoom: 1;
     *display: inline; }
 
-/* line 126, ../scss/furatto/_select.scss */
+/* line 127, ../scss/furatto/_select.scss */
 .dk_toggle {
   display: block;
   position: relative; }
 
-/* line 131, ../scss/furatto/_select.scss */
+/* line 132, ../scss/furatto/_select.scss */
 .dk_open {
   position: relative; }
-  /* line 133, ../scss/furatto/_select.scss */
+  /* line 134, ../scss/furatto/_select.scss */
   .dk_open .dk_options {
     margin-top: -1px;
     opacity: 1;
     z-index: 10;
     display: block\9; }
-  /* line 140, ../scss/furatto/_select.scss */
+  /* line 141, ../scss/furatto/_select.scss */
   .dk_open .dk_label {
     color: inherit; }
 
-/* line 145, ../scss/furatto/_select.scss */
+/* line 146, ../scss/furatto/_select.scss */
 .dk_options {
   margin-top: -21px;
   position: absolute;
@@ -6246,35 +6247,35 @@ table {
   -moz-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out; }
-  /* line 156, ../scss/furatto/_select.scss */
+  /* line 157, ../scss/furatto/_select.scss */
   .select-right .dk_options {
     left: auto;
     right: 0; }
-  /* line 160, ../scss/furatto/_select.scss */
+  /* line 161, ../scss/furatto/_select.scss */
   .dk_options a {
     display: block; }
 
-/* line 165, ../scss/furatto/_select.scss */
+/* line 166, ../scss/furatto/_select.scss */
 .dk_options_inner {
   overflow: auto;
   outline: none;
   position: relative; }
 
-/* line 172, ../scss/furatto/_select.scss */
+/* line 173, ../scss/furatto/_select.scss */
 .dk_touch .dk_options {
   overflow: hidden; }
-/* line 175, ../scss/furatto/_select.scss */
+/* line 176, ../scss/furatto/_select.scss */
 .dk_touch .dk_options_inner {
   max-height: none;
   overflow: visible; }
 
-/* line 181, ../scss/furatto/_select.scss */
+/* line 182, ../scss/furatto/_select.scss */
 .dk_fouc select[data-furatto='select'] {
   position: relative;
   top: -99999em;
   visibility: hidden; }
 
-/* line 188, ../scss/furatto/_select.scss */
+/* line 189, ../scss/furatto/_select.scss */
 select {
   margin-bottom: 8px; }
 
