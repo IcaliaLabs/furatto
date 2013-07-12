@@ -1,42 +1,13 @@
-/* ==========================================================================
-   $BASE-TIME-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
+/*------------------------------------*\
+    $DATEPICKER TIME
+\*------------------------------------*/
 /**
- * Base colors
+ * Base date picker structural styling. 
+ * 
+ * Designed and built @kurenn based on picakdate.js jquery plugin
+ * http://amsul.ca/pickadate.js/
  */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
+
 /**
  * The list of times.
  */
@@ -53,7 +24,7 @@
   border-top: 1px solid #dddddd;
   margin-bottom: -1px;
   position: relative;
-  background: #ffffff;
+  background: $white;
   padding: .75em 1.25em;
 }
 @media (min-height: 46.75em) {
@@ -65,25 +36,25 @@
 .picker__list-item:hover {
   cursor: pointer;
   color: #000000;
-  background: #b1dcfb;
-  border-color: #0089ec;
+  background: $calendar-highlight-color;
+  border-color: $calendar-highlighted-color;
   z-index: 10;
 }
 /* Selected time */
 .picker__list-item--selected,
 .picker__list-item--selected:hover {
-  border-color: #0089ec;
+  border-color: $calendar-highlighted-color;
   z-index: 10;
 }
 /* Highlighted time */
 .picker__list-item--highlighted {
-  background: #b1dcfb;
+  background: $calendar-highlight-color;
 }
 /* Highlighted and hovered/focused time */
 .picker__list-item--highlighted:hover,
 .picker--focused .picker__list-item--highlighted {
-  background: #0089ec;
-  color: #ffffff;
+  background: $calendar-highlighted-color;
+  color: $white;
 }
 /* Disabled time */
 .picker__list-item--disabled,
@@ -114,7 +85,7 @@
 .picker--time .picker__button--clear:hover,
 .picker--time .picker__button--clear:focus {
   color: #000000;
-  background: #b1dcfb;
+  background: $calendar-highlight-color;
   background: #ee2200;
   border-color: #ee2200;
   cursor: pointer;
@@ -129,51 +100,9 @@
 }
 .picker--time .picker__button--clear:hover:before,
 .picker--time .picker__button--clear:focus:before {
-  color: #ffffff;
+  color: $white;
 }
 
-/* ==========================================================================
-   $DEFAULT-TIME-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
-/**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
-/**
- * The frame the bounds the time picker.
- */
 .picker--time .picker__frame {
   min-width: 256px;
   max-width: 320px;

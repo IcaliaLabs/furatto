@@ -6779,49 +6779,19 @@ i.nomargin {
   vertical-align: top;
   font-size: 1.1em; }
 
-/* ==========================================================================
-   $BASE-TIME-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
+/*------------------------------------*\
+    $DATEPICKER TIME
+\*------------------------------------*/
 /**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
+ * Base date picker structural styling. 
+ * 
+ * Designed and built @kurenn based on picakdate.js jquery plugin
+ * http://amsul.ca/pickadate.js/
  */
 /**
  * The list of times.
  */
-/* line 43, ../scss/furatto/_date_picker.time.scss */
+/* line 14, ../scss/furatto/_date_picker.time.scss */
 .picker__list {
   list-style: none;
   padding: 0.75em 0 4.2em;
@@ -6830,21 +6800,21 @@ i.nomargin {
 /**
  * The times on the clock.
  */
-/* line 51, ../scss/furatto/_date_picker.time.scss */
+/* line 22, ../scss/furatto/_date_picker.time.scss */
 .picker__list-item {
   border-bottom: 1px solid #dddddd;
   border-top: 1px solid #dddddd;
   margin-bottom: -1px;
   position: relative;
-  background: #ffffff;
+  background: white;
   padding: .75em 1.25em; }
 
 @media (min-height: 46.75em) {
-  /* line 60, ../scss/furatto/_date_picker.time.scss */
+  /* line 31, ../scss/furatto/_date_picker.time.scss */
   .picker__list-item {
     padding: .5em 1em; } }
 /* Hovered time */
-/* line 65, ../scss/furatto/_date_picker.time.scss */
+/* line 36, ../scss/furatto/_date_picker.time.scss */
 .picker__list-item:hover {
   cursor: pointer;
   color: #000000;
@@ -6853,26 +6823,26 @@ i.nomargin {
   z-index: 10; }
 
 /* Selected time */
-/* line 74, ../scss/furatto/_date_picker.time.scss */
+/* line 45, ../scss/furatto/_date_picker.time.scss */
 .picker__list-item--selected,
 .picker__list-item--selected:hover {
   border-color: #0089ec;
   z-index: 10; }
 
 /* Highlighted time */
-/* line 79, ../scss/furatto/_date_picker.time.scss */
+/* line 50, ../scss/furatto/_date_picker.time.scss */
 .picker__list-item--highlighted {
   background: #b1dcfb; }
 
 /* Highlighted and hovered/focused time */
-/* line 84, ../scss/furatto/_date_picker.time.scss */
+/* line 55, ../scss/furatto/_date_picker.time.scss */
 .picker__list-item--highlighted:hover,
 .picker--focused .picker__list-item--highlighted {
   background: #0089ec;
-  color: #ffffff; }
+  color: white; }
 
 /* Disabled time */
-/* line 90, ../scss/furatto/_date_picker.time.scss */
+/* line 61, ../scss/furatto/_date_picker.time.scss */
 .picker__list-item--disabled,
 .picker__list-item--disabled:hover {
   background: #f5f5f5;
@@ -6885,7 +6855,7 @@ i.nomargin {
 /**
  * The clear button
  */
-/* line 101, ../scss/furatto/_date_picker.time.scss */
+/* line 72, ../scss/furatto/_date_picker.time.scss */
 .picker--time .picker__button--clear {
   display: block;
   width: 80%;
@@ -6899,7 +6869,7 @@ i.nomargin {
   text-transform: uppercase;
   color: #666; }
 
-/* line 115, ../scss/furatto/_date_picker.time.scss */
+/* line 86, ../scss/furatto/_date_picker.time.scss */
 .picker--time .picker__button--clear:hover,
 .picker--time .picker__button--clear:focus {
   color: #000000;
@@ -6910,61 +6880,19 @@ i.nomargin {
   color: #ffffff;
   outline: none; }
 
-/* line 124, ../scss/furatto/_date_picker.time.scss */
+/* line 95, ../scss/furatto/_date_picker.time.scss */
 .picker--time .picker__button--clear:before {
   top: -0.25em;
   color: #666;
   font-size: 1.25em;
   font-weight: bold; }
 
-/* line 131, ../scss/furatto/_date_picker.time.scss */
+/* line 102, ../scss/furatto/_date_picker.time.scss */
 .picker--time .picker__button--clear:hover:before,
 .picker--time .picker__button--clear:focus:before {
-  color: #ffffff; }
+  color: white; }
 
-/* ==========================================================================
-   $DEFAULT-TIME-PICKER
-   ========================================================================== */
-/* ==========================================================================
-   $VARIABLES
-   ========================================================================== */
-/**
- * Base colors
- */
-/**
- * Backgrounds
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * Picker base
- */
-/**
- * Date picker options
- */
-/**
- * Theme configurations
- */
-/* ==========================================================================
-   $MIXINS
-   ========================================================================== */
-/**
- * Common picker item states
- */
-/**
- * Opacity
- */
-/**
- * Vendor prefixes
- */
-/**
- * The frame the bounds the time picker.
- */
-/* line 177, ../scss/furatto/_date_picker.time.scss */
+/* line 106, ../scss/furatto/_date_picker.time.scss */
 .picker--time .picker__frame {
   min-width: 256px;
   max-width: 320px; }
@@ -6972,14 +6900,14 @@ i.nomargin {
 /**
  * The picker box.
  */
-/* line 184, ../scss/furatto/_date_picker.time.scss */
+/* line 113, ../scss/furatto/_date_picker.time.scss */
 .picker--time .picker__box {
   font-size: 1em;
   background: #f2f2f2;
   padding: 0; }
 
 @media (min-height: 40.125em) {
-  /* line 190, ../scss/furatto/_date_picker.time.scss */
+  /* line 119, ../scss/furatto/_date_picker.time.scss */
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 /* line 1, ../scss/furatto/_toolbars.scss */
