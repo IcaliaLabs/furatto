@@ -4467,7 +4467,7 @@ textarea[disabled] {
     $TABLES
 \*------------------------------------*/
 /**
- * Basic button structural styling. 
+ * Basic table structural styling. 
  * 
  * Designed and built @kurenn  
  */
@@ -7521,14 +7521,23 @@ i.nomargin {
   -o-border-radius: 6px;
   border-radius: 6px; }
 
-/* line 1, ../scss/furatto/_tags.scss */
+/*------------------------------------*\
+    $TAGS
+\*------------------------------------*/
+/**
+ * Basic tags structural styling based on XOXCO plugin
+ * http://xoxco.com/projects/code/tagsinput/ 
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 11, ../scss/furatto/_tags.scss */
 .tagsinput {
   background: white;
   border: 1px solid #CCC;
   padding: 4px 1px 0px 4px;
   overflow-y: auto;
   text-align: left; }
-  /* line 7, ../scss/furatto/_tags.scss */
+  /* line 17, ../scss/furatto/_tags.scss */
   .tagsinput .tag {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -7551,18 +7560,18 @@ i.nomargin {
     -moz-transition: 0.14s linear;
     -o-transition: 0.14s linear;
     transition: 0.14s linear; }
-    /* line 20, ../scss/furatto/_tags.scss */
+    /* line 30, ../scss/furatto/_tags.scss */
     .tagsinput .tag:hover {
       background-color: #236d9d;
       padding-left: 12px;
       padding-right: 20px; }
-      /* line 24, ../scss/furatto/_tags.scss */
+      /* line 34, ../scss/furatto/_tags.scss */
       .tagsinput .tag:hover .tagsinput-remove-link {
         color: #34495e;
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1;
         display: block\9; }
-  /* line 32, ../scss/furatto/_tags.scss */
+  /* line 42, ../scss/furatto/_tags.scss */
   .tagsinput input {
     background: transparent;
     border: none;
@@ -7575,7 +7584,7 @@ i.nomargin {
     margin-bottom: 5px;
     width: auto; }
 
-/* line 46, ../scss/furatto/_tags.scss */
+/* line 56, ../scss/furatto/_tags.scss */
 .tagsinput-remove-link {
   bottom: 0;
   color: #34495e;
@@ -7591,18 +7600,18 @@ i.nomargin {
   width: 100%;
   z-index: 2;
   display: none\9; }
-  /* line 62, ../scss/furatto/_tags.scss */
+  /* line 72, ../scss/furatto/_tags.scss */
   .tagsinput-remove-link:before {
     color: #34495e; }
 
-/* line 67, ../scss/furatto/_tags.scss */
+/* line 77, ../scss/furatto/_tags.scss */
 .tagsinput-add-container {
   vertical-align: middle;
   display: inline-block;
   zoom: 1;
   *display: inline; }
 
-/* line 72, ../scss/furatto/_tags.scss */
+/* line 82, ../scss/furatto/_tags.scss */
 .tagsinput-add {
   background-color: #bbc3cb;
   -webkit-border-radius: 2px;
@@ -7621,18 +7630,18 @@ i.nomargin {
   -moz-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s; }
-  /* line 82, ../scss/furatto/_tags.scss */
+  /* line 92, ../scss/furatto/_tags.scss */
   .tagsinput-add:hover {
     background-color: #2980b9;
     color: #FFF; }
 
-/* line 88, ../scss/furatto/_tags.scss */
+/* line 98, ../scss/furatto/_tags.scss */
 .tags_clear {
   clear: both;
   width: 100%;
   height: 0px; }
 
-/* line 94, ../scss/furatto/_tags.scss */
+/* line 104, ../scss/furatto/_tags.scss */
 .not_valid {
   background: #fbd8db !important;
   color: #90111a !important; }
@@ -8244,7 +8253,16 @@ i.nomargin {
   /* line 119, ../scss/furatto/_date_picker.time.scss */
   .picker--time .picker__box {
     margin-bottom: 5em; } }
-/* line 1, ../scss/furatto/_toolbars.scss */
+/*------------------------------------*\
+    $TOOLBARS
+\*------------------------------------*/
+/**
+ * Basic toolbars structural styling 
+ * http://paulkinzett.github.com/toolbar/
+ * 
+ * Designed and built @kurenn  
+ */
+/* line 11, ../scss/furatto/_toolbars.scss */
 .tool-container {
   background-color: #232323;
   position: absolute;
@@ -8254,50 +8272,50 @@ i.nomargin {
   -o-border-radius: 3px;
   border-radius: 3px; }
 
-/* line 7, ../scss/furatto/_toolbars.scss */
+/* line 17, ../scss/furatto/_toolbars.scss */
 .tool-container.tool-top, .tool-container.tool-bottom {
   height: 34px; }
 
-/* line 11, ../scss/furatto/_toolbars.scss */
+/* line 21, ../scss/furatto/_toolbars.scss */
 .tool-items {
   height: 100%; }
 
-/* line 15, ../scss/furatto/_toolbars.scss */
+/* line 25, ../scss/furatto/_toolbars.scss */
 .tool-top .tool-item, .tool-bottom .tool-item {
   float: left; }
 
-/* line 19, ../scss/furatto/_toolbars.scss */
+/* line 29, ../scss/furatto/_toolbars.scss */
 .tool-left .tool-item, .tool-right .tool-item {
   height: 34px; }
 
-/* line 24, ../scss/furatto/_toolbars.scss */
+/* line 34, ../scss/furatto/_toolbars.scss */
 .tool-item {
   height: 100%;
   display: block;
   width: 44px;
   text-align: center; }
-  /* line 30, ../scss/furatto/_toolbars.scss */
+  /* line 40, ../scss/furatto/_toolbars.scss */
   .tool-item i {
     line-height: 34px; }
 
-/* line 35, ../scss/furatto/_toolbars.scss */
+/* line 45, ../scss/furatto/_toolbars.scss */
 .tool-item:first-child {
   border-left: none; }
 
-/* line 39, ../scss/furatto/_toolbars.scss */
+/* line 49, ../scss/furatto/_toolbars.scss */
 .tool-left .tool-item:first-child, .tool-right .tool-item:first-child {
   border-top: 1px solid transparent; }
 
-/* line 43, ../scss/furatto/_toolbars.scss */
+/* line 53, ../scss/furatto/_toolbars.scss */
 .tool-item:last-child {
   border-right: none;
   border-bottom: none; }
 
-/* line 48, ../scss/furatto/_toolbars.scss */
+/* line 58, ../scss/furatto/_toolbars.scss */
 .tool-item.selected, .tool-item:hover {
   background: #161616; }
 
-/* line 52, ../scss/furatto/_toolbars.scss */
+/* line 62, ../scss/furatto/_toolbars.scss */
 .tool-top .tool-item:last-child:hover, .tool-bottom .tool-item:last-child:hover {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
@@ -8306,7 +8324,7 @@ i.nomargin {
   -webkit-border-bottom-right-radius: 4px;
   border-bottom-right-radius: 4px; }
 
-/* line 57, ../scss/furatto/_toolbars.scss */
+/* line 67, ../scss/furatto/_toolbars.scss */
 .tool-top .tool-item:first-child:hover, .tool-bottom .tool-item:first-child:hover {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -8315,7 +8333,7 @@ i.nomargin {
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-/* line 62, ../scss/furatto/_toolbars.scss */
+/* line 72, ../scss/furatto/_toolbars.scss */
 .tool-left .tool-item:last-child:hover, .tool-right .tool-item:last-child:hover {
   -moz-border-radius-bottomright: 4px;
   -webkit-border-bottom-right-radius: 4px;
@@ -8324,7 +8342,7 @@ i.nomargin {
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-/* line 67, ../scss/furatto/_toolbars.scss */
+/* line 77, ../scss/furatto/_toolbars.scss */
 .tool-left .tool-item:first-child:hover, .tool-right .tool-item:first-child:hover {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
@@ -8333,7 +8351,7 @@ i.nomargin {
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px; }
 
-/* line 72, ../scss/furatto/_toolbars.scss */
+/* line 82, ../scss/furatto/_toolbars.scss */
 .tool-container .arrow {
   width: 0;
   height: 0;
@@ -8341,28 +8359,28 @@ i.nomargin {
   border-width: 7px;
   border-style: solid; }
 
-/* line 80, ../scss/furatto/_toolbars.scss */
+/* line 90, ../scss/furatto/_toolbars.scss */
 .tool-container.tool-top .arrow {
   border-color: #232323 transparent transparent;
   left: 50%;
   bottom: -14px;
   margin-left: -7px; }
 
-/* line 87, ../scss/furatto/_toolbars.scss */
+/* line 97, ../scss/furatto/_toolbars.scss */
 .tool-container.tool-bottom .arrow {
   border-color: transparent transparent #232323;
   left: 50%;
   top: -14px;
   margin-left: -7px; }
 
-/* line 94, ../scss/furatto/_toolbars.scss */
+/* line 104, ../scss/furatto/_toolbars.scss */
 .tool-container.tool-left .arrow {
   border-color: transparent transparent transparent #232323;
   top: 50%;
   right: -14px;
   margin-top: -7px; }
 
-/* line 101, ../scss/furatto/_toolbars.scss */
+/* line 111, ../scss/furatto/_toolbars.scss */
 .tool-container.tool-right .arrow {
   border-color: transparent #232323 transparent transparent;
   top: 50%;
