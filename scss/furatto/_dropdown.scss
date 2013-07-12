@@ -1,7 +1,11 @@
-//
-// Dropdown menus
-// --------------------------------------------------
-
+/*------------------------------------*\
+    $DROPDOWN
+\*------------------------------------*/
+/**
+ * Basic dropdown structural styling. 
+ * 
+ * Designed and built @kurenn, based on http://twitter.github.io/bootstrap/javascript.html#dropdowns
+ */
 
 // Use the .menu class on any <li> element within the topbar or ul.tabs and you'll get some superfancy dropdowns
 .dropdown {
@@ -103,10 +107,8 @@
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  /*color: $dropdownLinkColorActive;*/
   text-decoration: none;
   outline: 0;
-  /*@include gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));*/
 }
 
 // Disabled state
@@ -251,7 +253,7 @@
     display: inline-block;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 6px solid #FFF;
+    border-bottom: 6px solid $white;
     position: absolute;
     top: -6px;
     right: 10px;
