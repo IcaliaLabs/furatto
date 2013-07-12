@@ -8478,7 +8478,16 @@ body.avgrund-active {
   .modal-footer .btn + .btn {
     margin-right: 6px; }
 
-/* line 1, ../scss/furatto/_responsiveslides.scss */
+/*------------------------------------*\
+    $RESPONSIVE SLIDER
+\*------------------------------------*/
+/**
+ * Responsive slider strcucture.
+ * http://responsiveslides.com/
+ *
+ * Designed and built @kurenn  
+ */
+/* line 11, ../scss/furatto/_responsiveslides.scss */
 .rslides {
   position: relative;
   list-style: none;
@@ -8487,7 +8496,7 @@ body.avgrund-active {
   padding: 0;
   margin: 0; }
 
-/* line 10, ../scss/furatto/_responsiveslides.scss */
+/* line 20, ../scss/furatto/_responsiveslides.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -8496,13 +8505,13 @@ body.avgrund-active {
   left: 0;
   top: 0; }
 
-/* line 19, ../scss/furatto/_responsiveslides.scss */
+/* line 29, ../scss/furatto/_responsiveslides.scss */
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left; }
 
-/* line 25, ../scss/furatto/_responsiveslides.scss */
+/* line 35, ../scss/furatto/_responsiveslides.scss */
 .rslides img {
   display: block;
   height: auto;
@@ -8510,18 +8519,18 @@ body.avgrund-active {
   width: 100%;
   border: 0; }
 
-/* line 33, ../scss/furatto/_responsiveslides.scss */
+/* line 43, ../scss/furatto/_responsiveslides.scss */
 .rslides {
   margin: 0 auto; }
 
-/* line 37, ../scss/furatto/_responsiveslides.scss */
+/* line 47, ../scss/furatto/_responsiveslides.scss */
 .rslides_container {
   /*margin-bottom: 50px;*/
   position: relative;
   float: left;
   /*width: 100%;*/ }
 
-/* line 44, ../scss/furatto/_responsiveslides.scss */
+/* line 54, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_nav {
   z-index: 3;
   position: absolute;
@@ -8537,17 +8546,17 @@ body.avgrund-active {
   background: transparent url("../img/themes.gif") no-repeat left top;
   margin-top: -45px; }
 
-/* line 60, ../scss/furatto/_responsiveslides.scss */
+/* line 70, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_nav:active {
   opacity: 1.0; }
 
-/* line 64, ../scss/furatto/_responsiveslides.scss */
+/* line 74, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_nav.next {
   left: auto;
   background-position: right top;
   right: 0; }
 
-/* line 70, ../scss/furatto/_responsiveslides.scss */
+/* line 80, ../scss/furatto/_responsiveslides.scss */
 .transparent-btns_nav {
   z-index: 3;
   position: absolute;
@@ -8555,7 +8564,7 @@ body.avgrund-active {
   top: 0;
   left: 0;
   display: block;
-  background: #fff;
+  background: white;
   /* Fix for IE6-9 */
   opacity: 0;
   filter: alpha(opacity=1);
@@ -8564,12 +8573,12 @@ body.avgrund-active {
   overflow: hidden;
   height: 91%; }
 
-/* line 86, ../scss/furatto/_responsiveslides.scss */
+/* line 96, ../scss/furatto/_responsiveslides.scss */
 .transparent-btns_nav.next {
   left: auto;
   right: 0; }
 
-/* line 91, ../scss/furatto/_responsiveslides.scss */
+/* line 101, ../scss/furatto/_responsiveslides.scss */
 .large-btns_nav {
   z-index: 3;
   position: absolute;
@@ -8583,30 +8592,30 @@ body.avgrund-active {
   background: black url("../img/themes.gif") no-repeat left 50%;
   width: 38px; }
 
-/* line 105, ../scss/furatto/_responsiveslides.scss */
+/* line 115, ../scss/furatto/_responsiveslides.scss */
 .large-btns_nav:active {
   opacity: 1.0; }
 
-/* line 109, ../scss/furatto/_responsiveslides.scss */
+/* line 119, ../scss/furatto/_responsiveslides.scss */
 .large-btns_nav.next {
   left: auto;
   background-position: right 50%;
   right: 0; }
 
-/* line 117, ../scss/furatto/_responsiveslides.scss */
+/* line 127, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_nav:focus,
 .transparent-btns_nav:focus,
 .large-btns_nav:focus {
   outline: none; }
 
-/* line 123, ../scss/furatto/_responsiveslides.scss */
+/* line 133, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_tabs,
 .transparent-btns_tabs,
 .large-btns_tabs {
   margin-top: 10px;
   text-align: center; }
 
-/* line 130, ../scss/furatto/_responsiveslides.scss */
+/* line 140, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_tabs li,
 .transparent-btns_tabs li,
 .large-btns_tabs li {
@@ -8616,7 +8625,7 @@ body.avgrund-active {
   *float: left;
   margin-right: 5px; }
 
-/* line 140, ../scss/furatto/_responsiveslides.scss */
+/* line 150, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_tabs a,
 .transparent-btns_tabs a,
 .large-btns_tabs a {
@@ -8636,20 +8645,20 @@ body.avgrund-active {
   width: 9px;
   height: 9px; }
 
-/* line 160, ../scss/furatto/_responsiveslides.scss */
+/* line 170, ../scss/furatto/_responsiveslides.scss */
 .centered-btns_here a,
 .transparent-btns_here a,
 .large-btns_here a {
   background: #222;
   background: rgba(0, 0, 0, 0.8); }
 
-/* line 165, ../scss/furatto/_responsiveslides.scss */
+/* line 175, ../scss/furatto/_responsiveslides.scss */
 .rslides .caption {
   display: block;
   position: absolute;
   z-index: 2;
   text-shadow: none;
-  color: #fff !important;
+  color: white !important;
   background: #000;
   background: rgba(0, 0, 0, 0.8);
   left: 0;
@@ -8659,15 +8668,15 @@ body.avgrund-active {
   margin: 0;
   max-width: none;
   line-height: 20px; }
-  /* line 181, ../scss/furatto/_responsiveslides.scss */
+  /* line 191, ../scss/furatto/_responsiveslides.scss */
   .rslides .caption .caption-header {
-    color: #FFF;
+    color: white;
     margin: 0;
     margin-bottom: 10px;
     font-size: 25px; }
-  /* line 188, ../scss/furatto/_responsiveslides.scss */
+  /* line 198, ../scss/furatto/_responsiveslides.scss */
   .rslides .caption .caption-text {
-    color: #FFF;
+    color: white;
     font-size: 15px; }
 
 /*------------------------------------*\

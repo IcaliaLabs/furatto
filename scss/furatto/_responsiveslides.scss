@@ -1,3 +1,13 @@
+/*------------------------------------*\
+    $RESPONSIVE SLIDER
+\*------------------------------------*/
+/**
+ * Responsive slider strcucture.
+ * http://responsiveslides.com/
+ *
+ * Designed and built @kurenn  
+ */
+
 .rslides {
   position: relative;
   list-style: none;
@@ -74,7 +84,7 @@
   top: 0;
   left: 0;
   display: block;
-  background: #fff; /* Fix for IE6-9 */
+  background: $white; /* Fix for IE6-9 */
   opacity: 0;
   filter: alpha(opacity=1);
   width: 48%;
@@ -167,7 +177,7 @@
     position: absolute;
     z-index: 2;
     text-shadow: none;
-    color: #fff !important;
+    color: $white !important;
     background: #000;
     background: rgba(0,0,0, .8);
     left: 0;
@@ -179,14 +189,14 @@
     line-height: 20px;
 
     .caption-header {
-      color: #FFF;
+      color: $white;
       margin: 0;
       margin-bottom: 10px;
       font-size: 25px;
     }
 
     .caption-text {
-      color: #FFF;
+      color: $white;
       font-size: 15px;
     }
   }
