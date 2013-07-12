@@ -105,7 +105,8 @@ input[type="color"],
   width: 350px; 
 }
 
-//Inline Forms
+/* Inline Forms */
+/* ------------ */
 .inline-form,
 .horizontal-form {
   input,
@@ -126,6 +127,8 @@ input[type="color"],
   }
 }
 
+/* Horizontal form */
+/* --------------- */
 .horizontal-form {
   .furatto-controls {
     display: block;
@@ -143,7 +146,8 @@ input[type="color"],
   }
 }
 
-//Login form
+/* Login Form */
+/* ------------ */
 .login-form {
   width: 30%;
   text-align: center;
@@ -170,12 +174,14 @@ input[type="color"],
   }
 }
 
-//Center forms
+/* Centered forms */
+/* -------------- */
 .centered-form {
   margin: 0 auto;
 }
 
-//Checkboxes and radiobuttons
+/* Level up the label on for checkboxes */
+/* ------------------------------------ */
 label.checkbox {
   position: relative;
   top: -4px;
@@ -187,8 +193,8 @@ label {
   @include touch-callout;
 }
 
-// Uneditable inputs
-// -------------------------
+/* Uneditable inputs */
+/* ----------------- */
 
 input[disabled],
 textarea[disabled] {
@@ -199,7 +205,8 @@ textarea[disabled] {
   background: #EEE;
 }
 
-//Input states
+/* Input states */
+/* ------------ */
 .info {
   textarea,
   input[type="text"],

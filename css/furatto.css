@@ -4280,7 +4280,9 @@ input[type="color"],
 .input-xxlarge {
   width: 350px; }
 
-/* line 113, ../scss/furatto/_forms.scss */
+/* Inline Forms */
+/* ------------ */
+/* line 114, ../scss/furatto/_forms.scss */
 .inline-form input,
 .inline-form textarea,
 .inline-form select,
@@ -4290,33 +4292,37 @@ input[type="color"],
   display: inline-block;
   margin-bottom: 0;
   vertical-align: middle; }
-/* line 119, ../scss/furatto/_forms.scss */
+/* line 120, ../scss/furatto/_forms.scss */
 .inline-form label,
 .horizontal-form label {
   display: inline-block; }
-/* line 124, ../scss/furatto/_forms.scss */
+/* line 125, ../scss/furatto/_forms.scss */
 .inline-form .hide,
 .horizontal-form .hide {
   display: none; }
 
-/* line 130, ../scss/furatto/_forms.scss */
+/* Horizontal form */
+/* --------------- */
+/* line 133, ../scss/furatto/_forms.scss */
 .horizontal-form .furatto-controls {
   display: block;
   margin-bottom: 10px; }
-  /* line 134, ../scss/furatto/_forms.scss */
+  /* line 137, ../scss/furatto/_forms.scss */
   .horizontal-form .furatto-controls label {
     width: 160px;
     margin-right: 20px;
     text-align: right; }
-/* line 141, ../scss/furatto/_forms.scss */
+/* line 144, ../scss/furatto/_forms.scss */
 .horizontal-form .furatto-actions {
   margin-left: 184px; }
 
-/* line 147, ../scss/furatto/_forms.scss */
+/* Login Form */
+/* ------------ */
+/* line 151, ../scss/furatto/_forms.scss */
 .login-form {
   width: 30%;
   text-align: center; }
-  /* line 153, ../scss/furatto/_forms.scss */
+  /* line 157, ../scss/furatto/_forms.scss */
   .login-form input[type="text"],
   .login-form input[type="password"],
   .login-form input[type="email"] {
@@ -4326,27 +4332,31 @@ input[type="color"],
     padding: 0px 0px 0px 10px;
     height: 42px;
     background: #fcfcfc; }
-  /* line 162, ../scss/furatto/_forms.scss */
+  /* line 166, ../scss/furatto/_forms.scss */
   .login-form .furatto-login-icon {
     margin-bottom: 20px; }
-  /* line 166, ../scss/furatto/_forms.scss */
+  /* line 170, ../scss/furatto/_forms.scss */
   .login-form .login-header {
     font-size: 26px;
     margin: 0;
     color: #7f8c8d; }
 
-/* line 174, ../scss/furatto/_forms.scss */
+/* Centered forms */
+/* -------------- */
+/* line 179, ../scss/furatto/_forms.scss */
 .centered-form {
   margin: 0 auto; }
 
-/* line 179, ../scss/furatto/_forms.scss */
+/* Level up the label on for checkboxes */
+/* ------------------------------------ */
+/* line 185, ../scss/furatto/_forms.scss */
 label.checkbox {
   position: relative;
   top: -4px;
   margin-left: 5px;
   margin-right: 5px; }
 
-/* line 186, ../scss/furatto/_forms.scss */
+/* line 192, ../scss/furatto/_forms.scss */
 label {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -4355,7 +4365,9 @@ label {
   -ms-user-select: none;
   user-select: none; }
 
-/* line 194, ../scss/furatto/_forms.scss */
+/* Uneditable inputs */
+/* ----------------- */
+/* line 200, ../scss/furatto/_forms.scss */
 input[disabled],
 textarea[disabled] {
   color: #ecf0f1;
@@ -4364,7 +4376,9 @@ textarea[disabled] {
   white-space: nowrap;
   background: #EEE; }
 
-/* line 218, ../scss/furatto/_forms.scss */
+/* Input states */
+/* ------------ */
+/* line 225, ../scss/furatto/_forms.scss */
 .info textarea,
 .info input[type="text"],
 .info input[type="password"],
@@ -4383,7 +4397,7 @@ textarea[disabled] {
   color: #2980b9;
   border: 1px solid #2980b9; }
 
-/* line 238, ../scss/furatto/_forms.scss */
+/* line 245, ../scss/furatto/_forms.scss */
 .success textarea,
 .success input[type="text"],
 .success input[type="password"],
@@ -4402,7 +4416,7 @@ textarea[disabled] {
   color: #27ae60;
   border: 1px solid #27ae60; }
 
-/* line 258, ../scss/furatto/_forms.scss */
+/* line 265, ../scss/furatto/_forms.scss */
 .warning textarea,
 .warning input[type="text"],
 .warning input[type="password"],
@@ -4421,7 +4435,7 @@ textarea[disabled] {
   color: #f39c12;
   border: 1px solid #f39c12; }
 
-/* line 278, ../scss/furatto/_forms.scss */
+/* line 285, ../scss/furatto/_forms.scss */
 .error textarea,
 .error input[type="text"],
 .error input[type="password"],
