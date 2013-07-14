@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Furatto :: Grid</title>
+<link rel="stylesheet" href="../css/normalize.css" />
+<link rel="stylesheet" href="../css/furatto.css" />
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top navbar-alpha">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+      <div class="nav-collapse collapse">
+        <nav id="menu">
+          <ul class="nav">
+            <li><a class="brand" href="index.html">Furatto</a></li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="base.html">Base</a></li>
+            <li class="active"><a href="grid.html">Grid</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="javascript.html">Javascript</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="furatto-block">
+        <div class="furatto-large-header">
+          <div class="furatto-large-container">
+            <h1 class="large-header">Grid</h1>
+            <p class="motto">
+            A twelve column grid
+            </p>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-center">
+    <div class="furatto-block">
+      <h3 class="light">Grid Layout</h3>
+      <p>Furatto comes with a 12-column grid based on the one from <a href="http://twitter.github.io/bootstrap/scaffolding.html#gridSystem">Bootstrap</a>. Below 767px viewports, the columns become fluid and stack vertically.</p>
+      <div class="grid-demo">
+        <div class="row-fluid">
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span1">
+            1
+          </div>
+          <div class="span1">
+            1 
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="row-fluid">
+          <div class="span2">
+            2 
+          </div>
+          <div class="span4">
+            4 
+          </div>
+          <div class="span1">
+            1 
+          </div>
+          <div class="span3">
+            3 
+          </div>
+          <div class="span2">
+            2 
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="row-fluid">
+          <div class="span4">
+            4 
+          </div>
+          <div class="span8">
+            8
+          </div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="row-fluid">
+          <div class="span6">
+            6 
+          </div>
+          <div class="span6">
+            6
+          </div>
+        </div>
+      </div>
+      <h3 class="light">Grid HTML</h3>
+      <p>For a simple three column layout just add the <span class="code html">.row-fluid</span> class name and add the correct number of <span class="code html">.span*</span> columns. The span class name for the columns comes from the 1 to the 12 as is a 12 column grid.</p>
+      <pre data-language="html">
+        <code>
+          <div class="row-fluid">
+             <div class="span4">...</div>
+             <div class="span4">...</div>
+             <div class="span4">...</div>
+          </div>
+        </code>
+      </pre>
+      <p>Given the last example the three div elements with <span class="code html">.span</span> class name make a total of 12.</p>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Nesting columns</h3>
+      <p>When comes to nesting Furatto helps you add multiple span class elements. You just have to add a <span class="code html">.row-fluid</span> class into an existing <span class="code html">.span*</span> column. The nested rows should also match a 12, you can see it as if is another <span class="code html">.row-fluid</span> element.</p>
+      <div class="nested-grid-demo">
+        <div class="row-fluid">
+          <div class="span9">
+            <p>I'm a span9 class column</p>
+            <div class="row-fluid">
+              <div class="span6">
+                I'm a span6 column 
+              </div>
+              <div class="span6">
+                I'm a span6 column 
+              </div>
+            </div>
+          </div>
+          <div class="span3 text-center">
+            <p>I'm a span3 class column</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+<div class="footer-wrapper">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="span6">
+          <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="link">Apache License v2.0</a></p>
+        </div>
+        <div class="span6">
+          <ul class="hrz-nav pull-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Rails</a></li>
+            <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+            <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jpanel.js"></script>
+<script src="../js/jquery.dropkick-1.0.0.js"></script>
+<script src="../js/rainbow-custom.min.js"></script>
+<script src="../js/tooltip.js"></script>
+<script src="../js/jquery.tagsinput.js"></script>
+<script src="../js/picker.js"></script>
+<script src="../js/picker.date.js"></script>
+<script src="../js/picker.time.js"></script>
+<script src="../js/legacy.js"></script>
+<script src="../js/jquery.toolbar.js"></script>
+<script src="../js/jquery.avgrund.js"></script>
+<script src="../js/responsiveslides.js"></script>
+<script src="../js/dropdown.js"></script>
+<script src="../js/manifest.js"></script>
+</body>
+</html>

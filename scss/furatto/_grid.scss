@@ -25,3 +25,32 @@
 .row-fluid [class*="span"].pull-right {
   float: right;
 }
+
+//Adds a background to the columns for demo purposes
+.grid-demo {
+  margin-bottom: 10px;
+
+  [class*="span"] {
+    background: $light-gray;
+    @include border-radius(3px);
+    text-align: center;
+    line-height: $base-line-height;
+  }
+}
+
+.nested-grid-demo {
+  background: $light-gray;
+  [class*="span"] {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .row-fluid {
+    .row-fluid {
+      [class*="span"] {
+        background: darken($light-gray, 15%);
+        @include border-radius(3px);
+      }
+    }
+  }
+}
