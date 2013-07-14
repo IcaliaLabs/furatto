@@ -4996,6 +4996,36 @@ table {
 .row-fluid [class*="span"].pull-right {
   float: right; }
 
+/* line 30, ../scss/furatto/_grid.scss */
+.grid-demo {
+  margin-bottom: 10px; }
+  /* line 33, ../scss/furatto/_grid.scss */
+  .grid-demo [class*="span"] {
+    background: #ecf0f1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 20px; }
+
+/* line 41, ../scss/furatto/_grid.scss */
+.nested-grid-demo {
+  background: #ecf0f1; }
+  /* line 43, ../scss/furatto/_grid.scss */
+  .nested-grid-demo [class*="span"] {
+    padding-bottom: 10px;
+    text-align: center; }
+  /* line 50, ../scss/furatto/_grid.scss */
+  .nested-grid-demo .row-fluid .row-fluid [class*="span"] {
+    background: #c0cdd1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+
 /*------------------------------------*\
     $RESPONSIVE - 1200
 \*------------------------------------*/
