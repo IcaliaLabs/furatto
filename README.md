@@ -3,8 +3,10 @@
 Furatto is a flat, fast and powerful front-end framework for 
 rapid web development, created and maintained by [Abraham Kuri](https://twitter.com/kurenn) from [Icalia Labs](http://twitter.com/icalialabs). It is based on other frameworks as a start point, such as [Twitter Bootstrap](http://twitter.github.io/bootstrap/), [Foundation](http://foundation.zurb.com/).
 
-To get started, checkout [https://github.com/IcaliaLabs/furatto](https://github.com/IcaliaLabs/furatto)!
 
+To get started, checkout:
+
+### [http://icalialabs.github.io/furatto/](http://icalialabs.github.io/furatto/) !
 
 
 ## Quick start
