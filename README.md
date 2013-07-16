@@ -13,7 +13,7 @@ To get started, checkout:
 
 Three quick start options are available:
 
-* [Download the latest release](https://github.com/IcaliaLabs/furatto).
+* [Download the latest release](http://icalialabs.github.io/furatto/).
 * Clone the repo: `git clone git@github.com:IcaliaLabs/furatto.git`.
 
 
@@ -21,26 +21,35 @@ Three quick start options are available:
 
 Have a bug or a feature request? [Please open a new issue](https://github.com/IcaliaLabs/furatto/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines].
 
+##Community
+
+Keep track of new feautres, development issues and community news.
+
+* Follow [@ifuratto](https://twitter.com/ifuratto)
+* Have a question about anything, email us at weare@icalialabs.com
+
 
 ## Compiling CSS and JavaScript
 
-Furatto was built using Sass and compiled with [CodeKit](http://incident57.com/codekit/).
-
-If you don't have CodeKit, you can just watch files with the following:
+Furatto includes a makefile to compile all the Sass code and start working with the framework. Before getting started you need to add the necessary dependencies:
 
 ```console
-	gem install sass 
+	$ gem install compass
 ```
+
+More information about [Compass](http://compass-style.org/install/)
+
+As furatto uses node.js to compile the assets, you need to add the locally:
 
 ```console
-	mv style.css style.scss 
+	$ npm install
 ```
 
-```console 
-	sass --watch style.scss:style.css
-```
+When you are done, you should be able to run the makefile provided:
 
-Or refer to the official [Sass](http://sass-lang.com/) site.
+####build - `make`
+
+We decided to switch from [CodeKit](http://incident57.com/codekit/) as some people would not want to pay for it, and just use open source.
 
 
 ## Contributing
