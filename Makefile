@@ -18,6 +18,8 @@ build:
 	@cat documentation/assets/js/furatto.min.tmp.js > documentation/assets/js/furatto.min.js
 	@rm documentation/assets/js/furatto.min.tmp.js
 	@echo "Compiling and minifiying JS...               ${CHECK}"
+	@cp -r fonts documentation/assets/
+	@echo "Copying fonts to assets...                   ${CHECK}"
 	@echo "\n${HR}"
 	@echo "Furatto was successfully built at ${DATE}"
 	@echo "${HR}\n"

@@ -1,7 +1,3 @@
 .sass-cache/*
 .DS_Store
 node_modules
-furatto.min.js
-furatto.js
-furatto.css
-normalize.css
