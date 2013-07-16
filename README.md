@@ -51,6 +51,9 @@ When you are done, you should be able to run the makefile provided:
 
 We decided to switch from [CodeKit](http://incident57.com/codekit/) as some people would not want to pay for it, and just use open source.
 
+## Using Rails?
+
+Thanks to [@kurenn](https://twitter.com/kurenn) the [furatto-rails](https://github.com/IcaliaLabs/furatto-rails) gem makes it easy to integrate Furatto with a Rails app.
 
 ## Contributing
 
