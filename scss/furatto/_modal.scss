@@ -7,17 +7,10 @@
  * Designed and built @kurenn based on http://labs.voronianski.com/jquery.avgrund.js/
  */
 
-/* html and body styling */
-/*--------------------*/
-html, body {
-	height: 100%;
-	overflow: auto;
-}
-
 /* Popin window style */
 /*--------------------*/
 .avgrund-popin {
-	position: absolute;
+	position: fixed;
 	background: $white;
 	padding: 10px;
 	overflow: hidden;
