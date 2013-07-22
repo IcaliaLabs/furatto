@@ -167,19 +167,13 @@
     <div class="furatto-block">
       <h3 class="light">Checkboxes and radios</h3>
       <p>Furatto helps you build beautiful checboxes and radio buttons by just adding the data attribute furatto and set it to the input type to style checkbox/radio. It uses the <a href="http://damirfoy.com/iCheck/">iCheck</a> plugin by <a href="https://twitter.com/damirfoy/">@damirfoy</a>.</p>
+      <span class="label label-primary">Heads up!</span>
+      <p>In order to loose some weight we remove the extra colors and left just the black and blue skins. But don't worry you can add more colors, just follow the recipe steps on the wiki.</p>
       <p>
       The color scheme for the checkboxes are:
       <ul class="color-list">
-        <li title="Black"></li>
-        <li class="red active" title="Red"></li>
-        <li class="green" title="Green"></li>
-        <li class="blue" title="Blue"></li>
-        <li class="aero" title="Aero"></li>
-        <li class="grey" title="Grey"></li>
-        <li class="orange" title="Orange"></li>
-        <li class="yellow" title="Yellow"></li>
-        <li class="pink" title="Pink"></li>
-        <li class="purple" title="Purple"></li>
+        <li class="black"></li>
+        <li class="blue" data-toggle="tooltip" data-placement="top" title="blue"></li>
       </ul>
       </p>
       <div class="row-fluid">
@@ -229,10 +223,10 @@
       <pre data-language="html">
          <code>
             &lt;input type="checkbox" id="checkbox2" checked data-furatto='checkbox' data-color="dark"&gt;
-            &lt;label for="checkbox2" class="checkbox inline"&gt;Checkbox 2&lt;/label&gt;
+            &lt;label for="checkbox2" class="checkbox-label inline"&gt;Checkbox 2&lt;/label&gt;
 
             &lt;input type="radio" name="iCheck" id="radiobutton1" data-furatto='radio' data-color="orange"&gt;
-            &lt;label for="radiobutton1" class="checkbox inline"&gt;Radiobutton 1&lt;/label&gt;
+            &lt;label for="radiobutton1" class="radiobutton-label inline"&gt;Radiobutton 1&lt;/label&gt;
         </code>
       </pre>
     </div>
