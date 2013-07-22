@@ -42,3 +42,27 @@
   border: 1px solid rgba(#000, 0.2);
   background: #FFF;
 }
+
+.img-frame {
+  display: inline-block;
+  border: 1px solid #ccc;
+
+  img {
+    @extend .img;
+    margin: 5px;
+  }
+
+  &.img-circular {
+    img {
+      @extend .img-circular;
+    }
+  }
+
+  &.img-selected {
+    @extend .img-selected;
+    img {
+      margin: 0;
+    }
+  }
+
+}

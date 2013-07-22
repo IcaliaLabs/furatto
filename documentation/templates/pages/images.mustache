@@ -34,36 +34,51 @@
          </code>
       </pre>
       <br />
+      <span class="label label-warning">Heads up!</span>
+      <p>Now whenever you want to display the polaroid or selected version for an image, you have to wrap the <span class="code">img</span> element into a div with the <span class="code">img-frame</span> class name and then the other class names, such as <span class="code">img-circular</span>.</p>
+      <p>The decision was made because iOS devices does not render correctly the border on circular or selected elements.</p>
       <h2>Polaroid Image</h2>
-      <p>Old times never pass out, to get the polaroid effect on any image add the 'img-polaroid' class</p>
+      <p>Old times never pass out, to get the polaroid effect on any image add the 'img-polaroid' class.</p>
       <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid" />
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid" />
+      <div class="img-frame img-circular">
+        <img src="http://lorempixel.com/200/200/" alt="" />
+      </div>
       <pre data-language="html">
          <code>
           <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid" />
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid" />
+          <div class="img-frame img-circular">
+            <img src="http://lorempixel.com/200/200/" alt="" />
+          </div>
          </code>
       </pre>
       <br />
       <h2>Selected Image</h2>
       <p>Whenever you want to highlight an image as if it were selected, you just need to add the 'img-selected' class</p>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-selected" />
       <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-selected" />
+      <div class="img-frame img-circular img-selected">
+        <img src="http://lorempixel.com/200/200/" alt="" />
+      </div>
       <pre data-language="html">
          <code>
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-selected" />
           <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-selected" />
+          <div class="img-frame img-circular img-selected">
+            <img src="http://lorempixel.com/200/200/" alt="" />
+          </div>
          </code>
       </pre>
       <br />
       <h2>Hover Image</h2>
       <p>Furatto makes it very easy to add a hover effect on images with the class 'img-hover'</p>
       <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid img-hover" />
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid img-hover" />
+      <div class="img-frame img-circular img-hover">
+        <img src="http://lorempixel.com/200/200/" alt="" />
+      </div>
       <pre data-language="html">
          <code>
           <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid img-hover" />
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid img-hover" />
+          <div class="img-frame img-circular img-hover">
+            <img src="http://lorempixel.com/200/200/" alt="" />
+          </div>
          </code>
       </pre>
       <br />
@@ -78,11 +93,15 @@
       <br />
       <h2>All together, or at least many!</h2>
       <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-polaroid img-hover" />
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid img-hover" />
+      <div class="img-frame img-circular img-hover">
+        <img src="http://lorempixel.com/200/200/" alt="" />
+      </div>
       <pre data-language="html">
          <code>
           <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid img-hover" />
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid img-hover" />
+          <div class="img-frame img-circular img-hover">
+            <img src="http://lorempixel.com/200/200/" alt="" />
+          </div>
          </code>
       </pre>
     </div>
