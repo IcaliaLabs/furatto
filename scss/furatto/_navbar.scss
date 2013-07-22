@@ -118,17 +118,6 @@
   /*.buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));*/
   /*.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");*/
 }
-.navbar .btn-navbar .icon_cloud {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: #f5f5f5;
-  /*.border-radius(1px);*/
-  /*.box-shadow(0 1px 0 rgba(0,0,0,.25));*/
-}
-.btn-navbar .icon_cloud + .icon_cloud {
-  margin-top: 3px;
-}
 
 //Navigation
 .navbar .nav {
@@ -137,7 +126,6 @@
   display: block;
   float: left;
   margin: 0 10px 0 0;
-
 }
 
 .navbar .nav.pull-right {
