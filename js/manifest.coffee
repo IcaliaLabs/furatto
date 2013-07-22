@@ -59,3 +59,8 @@ jQuery ->
     speed: 500
     namespace: "centered-btns"
 
+  $('#js-show-left-navbar').click (e) ->
+    $('.vrt-navbar').toggleClass 'hide'
+    $('.navbar:first').toggleClass 'hide'
+    false
+
