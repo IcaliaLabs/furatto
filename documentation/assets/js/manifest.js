@@ -6,12 +6,16 @@
     jPM.on();
     $("select[data-furatto='select']").dropkick();
     $("input[data-furatto='checkbox'], input[data-furatto='radio']").each(function() {
-      var color, input;
+      var checkbox_color, color, input, radiobutton_color;
       input = $(this);
-      color = $(this).data('color') || 'blue';
+      color = $(this).data('color');
+      if (color !== '') {
+        checkbox_color = "checkbox-" + color;
+        radiobutton_color = "radiobutton-" + color;
+      }
       return input.iCheck({
-        checkboxClass: "icheckbox_flat-" + color,
-        radioClass: "iradio_flat-" + color
+        checkboxClass: "checkbox " + checkbox_color,
+        radioClass: "radiobutton " + radiobutton_color
       });
     });
     $(".pagination a").click(function(e) {

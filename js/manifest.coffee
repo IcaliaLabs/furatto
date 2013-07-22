@@ -8,10 +8,13 @@ jQuery ->
   #Custom checkboxes
   $("input[data-furatto='checkbox'], input[data-furatto='radio']").each ->
     input = $(@)
-    color = $(@).data('color') || 'blue'
+    color = $(@).data('color')
+    if color isnt ''
+      checkbox_color = "checkbox-#{color}"
+      radiobutton_color = "radiobutton-#{color}"
     input.iCheck
-      checkboxClass: "icheckbox_flat-#{color}"
-      radioClass: "iradio_flat-#{color}"
+      checkboxClass: "checkbox #{checkbox_color}"
+      radioClass: "radiobutton #{radiobutton_color}"
 
   #Pagination Demo
   $(".pagination a").click (e) ->

@@ -182,11 +182,15 @@ input[type="color"],
 
 /* Level up the label on for checkboxes */
 /* ------------------------------------ */
-label.checkbox {
+label.checkbox-label {
   position: relative;
   top: -4px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+label.radiobutton-label {
+  @extend .checkbox-label;
 }
 
 label {
