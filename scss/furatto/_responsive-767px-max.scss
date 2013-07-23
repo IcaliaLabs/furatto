@@ -15,10 +15,6 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  // Remove padding on container given explicit padding set on body
-  .container-fluid {
-    padding: 0;
-  }
 
   // TYPOGRAPHY
   // ----------
@@ -37,22 +33,9 @@
 
   // GRID & CONTAINERS
   // -----------------
-  // Remove width from containers
-  .container {
-    width: auto;
-  }
   // Fluid rows
   .row-fluid {
     width: 100%;
-  }
-  // Undo negative margin on rows and thumbnails
-  .row,
-  .thumbnails {
-    margin-left: 0;
-  }
-  .thumbnails > li {
-    float: none;
-    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
   }
   // Make all grid-sized elements block level again
   [class*="span"],
