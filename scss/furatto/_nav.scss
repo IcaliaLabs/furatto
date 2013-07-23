@@ -81,26 +81,3 @@
 .nav-list .divider {
   @include nav-divider();
 }
-
-.hrz-nav {
-  margin: 10px 0px 20px 0px;
-
-  li {
-    display: inline;
-    padding: 0 10px;
-    color: #232323;
-
-    a { 
-      color: #232323;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .disabled {
-    color: $gray;
-  }
-}
-
