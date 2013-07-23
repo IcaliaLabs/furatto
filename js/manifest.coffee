@@ -74,3 +74,7 @@ jQuery ->
     $(@).blur ->
       $(@).animate({ width: current_width }, 'slow')
     
+  $('.dropdown-toggle').dropdown()
+ 
+  $('.dropdown input, .dropdown label').click (e) ->
+    e.stopPropagation()

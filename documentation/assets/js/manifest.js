@@ -69,7 +69,7 @@
       $('.navbar:first').toggleClass('hide');
       return false;
     });
-    return $('.navbar [data-furatto="search"]').each(function() {
+    $('.navbar [data-furatto="search"]').each(function() {
       var current_width;
       current_width = $(this).width();
       $(this).focus(function() {
@@ -82,6 +82,10 @@
           width: current_width
         }, 'slow');
       });
+    });
+    $('.dropdown-toggle').dropdown();
+    return $('.dropdown input, .dropdown label').click(function(e) {
+      return e.stopPropagation();
     });
   });
 

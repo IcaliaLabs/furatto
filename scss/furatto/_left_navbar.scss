@@ -20,16 +20,45 @@
     margin-top: 0px;
     float: none;
     
-    [class^="icon_"], [class*=" icon_"] {
+    [class^="icon-"], [class*=" icon-"] {
       margin-right: 5px;
+    }
+
+    .dropdown-toggle {
+      .caret {
+        display: none;
+      }
+    }
+
+    div.dropdown-menu {
+      padding: 0;
+      width: 100%;
+      display: block;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="datetime"],
+      input[type="datetime-local"],
+      input[type="date"],
+      input[type="month"],
+      input[type="time"],
+      input[type="week"],
+      input[type="number"],
+      input[type="email"],
+      input[type="url"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="color"] {
+        width: 94%;
+      }
     }
 
     .dropdown-menu {
       position: static;
-      /*display: block;*/
       background: none;
       border: none;
       @include box-shadow(0 0px 0px $navbar-bg-color);
+
       * {
         color: #eaeaea;
       }

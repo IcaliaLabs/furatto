@@ -31,6 +31,23 @@
                <input type="text" name="" id="" value="" placeholder="Search" class="search-text-input" />
             </form>
           {{/components}}
+          {{#javascript}}
+            <ul class="nav pull-right">
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Sign in<b class="caret bottom-up"></b></a>
+              <div class="dropdown-menu bottom-up pull-right" >
+                <form action="#" method="post" accept-charset="UTF-8">
+                  <input id="user_username" type="text" placeholder="username" />
+                  <input id="user_password" type="password" placeholder="***********" />
+                  <input type="checkbox" id="checkbox1" data-furatto='checkbox' data-color="blue">
+                  <label for="checkbox1" class="checkbox-label inline">Remember Me</label>
+                  <input class="btn btn-primary btn-block" type="submit" name="commit" value="Sign In" />
+                </form>
+              </div>
+              </li>
+            </ul>
+          {{/javascript}}
         </nav>
       </div>
     </div>

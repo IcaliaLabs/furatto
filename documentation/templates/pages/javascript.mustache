@@ -256,6 +256,45 @@
       </div>
       <!-- Close DropDown menu -->
     </div>
+    <div class="furatto-block">
+      <h3 class="light">Dropdown Forms</h3>
+      <p>Furatto makes it easy to integrate a form into the navbar, for example a Sign In form...</p>
+      <span class="label label-inverse">Watch out!</span>
+      <p>The only gotcha here is that insted of adding a <span class="code">ul</span> element with class name <span class="code">dropdown-menu</span>, you just have to change it to a <span class="code">div</span> element.</p>
+      <!-- The drop down menu -->
+      <pre data-language="html">
+        <code>
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+                <div class="nav-collapse collapse">
+                  <nav id="menu">
+                    ...
+                    <ul class="nav pull-right">
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Sign in<b class="caret bottom-up"></b></a>
+                      <div class="dropdown-menu bottom-up pull-right">
+                        <form action="#" method="post" accept-charset="UTF-8">
+                          <input id="user_username" type="text" placeholder="username" />
+                          <input id="user_password" type="password" placeholder="***********" />
+                          <input type="checkbox" id="checkbox1" data-furatto='checkbox' data-color="blue">
+                          <label for="checkbox1" class="checkbox-label inline">Remember Me</label>
+                          <input class="btn btn-primary btn-block" type="submit" name="commit" value="Sign In" />
+                        </form>
+                      </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </code>
+      </pre>
+      <!-- Close DropDown menu -->
+    </div>
   </div>
 </div>
 
