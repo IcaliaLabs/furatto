@@ -64,10 +64,24 @@
       speed: 500,
       namespace: "centered-btns"
     });
-    return $('#js-show-left-navbar').click(function(e) {
+    $('#js-show-left-navbar').click(function(e) {
       $('.vrt-navbar').toggleClass('hide');
       $('.navbar:first').toggleClass('hide');
       return false;
+    });
+    return $('.navbar [data-furatto="search"]').each(function() {
+      var current_width;
+      current_width = $(this).width();
+      $(this).focus(function() {
+        return $(this).animate({
+          width: current_width + 20
+        }, 'slow');
+      });
+      return $(this).blur(function() {
+        return $(this).animate({
+          width: current_width
+        }, 'slow');
+      });
     });
   });
 

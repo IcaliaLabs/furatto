@@ -76,6 +76,9 @@
     margin: 0 0 ($base-line-height / 2);
     display: none;
   }
+  .nav-collapse .search-navbar-form {
+    display: none;
+  }
   .nav-collapse .nav > li {
     float: none;
   }

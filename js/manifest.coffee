@@ -67,3 +67,10 @@ jQuery ->
     $('.navbar:first').toggleClass 'hide'
     false
 
+  $('.navbar [data-furatto="search"]').each ->
+    current_width = $(@).width()
+    $(@).focus ->
+      $(@).animate({ width: current_width + 20}, 'slow')
+    $(@).blur ->
+      $(@).animate({ width: current_width }, 'slow')
+    

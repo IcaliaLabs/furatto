@@ -172,4 +172,20 @@
   bottom: 0;
 }
 
+//Search navbar form
+.search-navbar-form {
+  position: relative;
+  margin-top: ($navbar-height - 30px) / 2;
+  margin-bottom: 0;
+
+  input[type=submit] {
+    margin-bottom: 0;
+  }
+
+  .search-text-input {
+    @include border-radius(15px);
+    margin-bottom: 0;
+    padding: 4px 14px;
+  }
+}
 

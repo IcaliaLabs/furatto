@@ -57,6 +57,61 @@
            </div>
          </code>
       </pre>
+      <h4 class="light">Navbar with search form</h4>
+      <span class="label label-funky">Heads up!</span>
+      <p>When adding a search form to the navbar, just have in mind that is has to be inside the element with the id <span class="code">#menu</span>.</p>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+            <div class="nav-collapse collapse">
+              <nav id="menu">
+                <ul class="nav">
+                  <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
+                  <li><a href="javascript:void(0)">Buttons</a></li>
+                  <li><a href="javascript:void(0)">Images</a></li>
+                  <li><a href="javascript:void(0)">Tables</a></li>
+                  <li><a href="javascript:void(0)">Base</a></li>
+                  <li><a href="javascript:void(0)">Forms</a></li>
+                  <li class="active"><a href="javascript:void(0)">Components</a></li>
+                </ul>
+                <form action="" method="get" accept-charset="utf-8" class="search-navbar-form pull-right">
+                   <input type="text" name="" id="" value="" placeholder="I'm a search form" class="search-text-input" />
+                </form>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="label label-success">Psst over here!</span>
+      <p>If you want a growing effect for the search input on the navbar, just add <span class="code">data-furatto="search"</span> and let the magic begins.</p>
+      <pre data-language="html">
+         <code>
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+                <div class="nav-collapse collapse">
+                  <nav id="menu">
+                    <ul class="nav">
+                      <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
+                      <li><a href="javascript:void(0)">Buttons</a></li>
+                      <li><a href="javascript:void(0)">Images</a></li>
+                      <li><a href="javascript:void(0)">Tables</a></li>
+                      <li><a href="javascript:void(0)">Base</a></li>
+                      <li><a href="javascript:void(0)">Forms</a></li>
+                      <li class="active"><a href="javascript:void(0)">Components</a></li>
+                    </ul>
+                    <form action="" method="get" accept-charset="utf-8" class="search-navbar-form pull-right">
+                       <input type="text" name="" id="" value="" placeholder="I'm a search form" class="search-text-input" />
+                    </form>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+         </code>
+      </pre>
       <h4>Optional Navbar variations</h4>
       <p>Fix the navbar to the top or to the bottom, or perhaps add transparency</p>
       <h5>Fixed Top</h5>
@@ -173,7 +228,7 @@
     <div class="furatto-block">
       <h3 class="light">Labels and badges</h3>
       <h4>Labels</h4>
-      <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped responsive">
         <thead>
           <tr>
             <th>Label</th>
@@ -216,7 +271,7 @@
         </tbody>
       </table>   
       <h4>Badges</h4>
-      <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped responsive">
         <thead>
           <tr>
             <th>badge</th>
