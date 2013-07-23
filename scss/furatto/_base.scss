@@ -62,23 +62,6 @@ body {
   }
 }
 
-/* Layouts */
-/*---------------------------------*/
-
-/* Container (centered, fixed-width layouts) */
-/*-----------------------------*/
-.container {
-  @include container-fixed();
-}
-
-/* Fluid layouts (left aligned, with sidebar, min- & max-width content) */
-/*-----------------------------*/
-.container-fluid {
-  padding-right: $gridGutterWidth;
-  padding-left: $gridGutterWidth;
-  @include clearfix();
-}
-
 /* Steps for definining furatto */
 /*-----------------------------*/
 .furatto-steps {
@@ -148,7 +131,7 @@ hr {
 }
 
 .container-center {
-  width: 80%;
+  width: $container-center-width;
   margin: 0 auto;
 }
 
