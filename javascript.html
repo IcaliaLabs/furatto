@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
 <div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
   <div class="navbar-inner">
     <div class="container">
@@ -26,6 +25,21 @@
             <li class=""><a href="components.html">Components</a></li>
             <li class="active"><a href="javascript.html">Javascript</a></li>
           </ul>
+            <ul class="nav pull-right">
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">DropDown Form<b class="caret bottom-up"></b></a>
+              <div class="dropdown-menu bottom-up pull-right" >
+                <form action="#" method="post" accept-charset="UTF-8">
+                  <input id="user_username" type="text" placeholder="username" />
+                  <input id="user_password" type="password" placeholder="***********" />
+                  <input type="checkbox" id="checkbox1" data-furatto='checkbox' data-color="blue">
+                  <label for="checkbox1" class="checkbox-label inline">Remember Me</label>
+                  <input class="btn btn-primary btn-block" type="submit" name="commit" value="Sign In" />
+                </form>
+              </div>
+              </li>
+            </ul>
         </nav>
       </div>
     </div>
@@ -261,18 +275,11 @@
               <nav id="menu">
                 <ul class="nav">
                   <li><a class="brand" href="index.html">Furatto</a></li>
-                  <li><a href="buttons.html">Buttons</a></li>
-                  <li><a href="images.html">Images</a></li>
-                  <li><a href="tables.html">Tables</a></li>
-                  <li><a href="base.html">Base</a></li>
-                  <li><a href="forms.html">Forms</a></li>
-                  <li><a href="components.html">Components</a></li>
-                  <li class="active"><a href="javascript.html">Javascript</a></li>
                 </ul>
                 <ul class="nav pull-right">
                   <li class="divider-vertical"></li>
                   <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cogwheel icon-white"></i> Settings<b class="caret bottom-up"></b></a>
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
                   <ul class="dropdown-menu bottom-up pull-right">
                     <li><a href="#">Graphic Design</a></li>
                     <li><a href="#">Software</a></li>
@@ -288,6 +295,78 @@
           </div>
         </div>
       </div>
+      <!-- Close DropDown menu -->
+    <pre data-language="html">
+    <code>
+      <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+              <div class="nav-collapse collapse">
+                <nav id="menu">
+                  <ul class="nav">
+                    <li><a class="brand" href="index.html">Furatto</a></li>
+                    <li class="active"><a href="javascript.html">Javascript</a></li>
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+                    <ul class="dropdown-menu bottom-up pull-right">
+                      <li><a href="#">Graphic Design</a></li>
+                      <li><a href="#">Software</a></li>
+                      <li><a href="#">Industrial Design</a></li>
+                      <li><a href="#">Business Planning</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Development and Research</a></li>
+                    </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+    </code>
+    </pre>
+    </div>
+    <div class="furatto-block">
+      <h3 class="light">Dropdown Forms</h3>
+      <p>Furatto makes it easy to integrate a form into the navbar, for example a Sign In form...</p>
+      <span class="label label-inverse">Watch out!</span>
+      <p>The only gotcha here is that insted of adding a <span class="code">ul</span> element with class name <span class="code">dropdown-menu</span>, you just have to change it to a <span class="code">div</span> element.</p>
+      <!-- The drop down menu -->
+      <pre data-language="html">
+        <code>
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
+                <div class="nav-collapse collapse">
+                  <nav id="menu">
+                    ...
+                    <ul class="nav pull-right">
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Sign in<b class="caret bottom-up"></b></a>
+                      <div class="dropdown-menu bottom-up pull-right">
+                        <form action="#" method="post" accept-charset="UTF-8">
+                          <input id="user_username" type="text" placeholder="username" />
+                          <input id="user_password" type="password" placeholder="***********" />
+                          <input type="checkbox" id="checkbox1" data-furatto='checkbox' data-color="blue">
+                          <label for="checkbox1" class="checkbox-label inline">Remember Me</label>
+                          <input class="btn btn-primary btn-block" type="submit" name="commit" value="Sign In" />
+                        </form>
+                      </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </code>
+      </pre>
       <!-- Close DropDown menu -->
     </div>
   </div>
@@ -305,7 +384,7 @@
           <div class="span6">
             <ul class="hrz-nav pull-right">
               <li><a href="index.html">Home</a></li>
-              <li><a href="#">Download</a></li>
+              <li><a href="assets/furatto.zip">Download</a></li>
               <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
               <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
             </ul>
@@ -315,6 +394,17 @@
     </div>
   </div>
 </div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-32608013-3', 'icalialabs.github.io');
+    ga('send', 'pageview');
+
+  </script>
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/jpanel.js"></script>

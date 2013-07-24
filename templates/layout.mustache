@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
 <div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
   <div class="navbar-inner">
     <div class="container">
@@ -26,6 +25,28 @@
             <li class="{{components}}"><a href="components.html">{{_i}}Components{{/i}}</a></li>
             <li class="{{javascript}}"><a href="javascript.html">{{_i}}Javascript{{/i}}</a></li>
           </ul>
+          {{#components}}
+            <form action="" method="get" accept-charset="utf-8" class="search-navbar-form pull-right">
+               <input type="text" name="" id="" value="" placeholder="Search" class="search-text-input" />
+            </form>
+          {{/components}}
+          {{#javascript}}
+            <ul class="nav pull-right">
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">DropDown Form<b class="caret bottom-up"></b></a>
+              <div class="dropdown-menu bottom-up pull-right" >
+                <form action="#" method="post" accept-charset="UTF-8">
+                  <input id="user_username" type="text" placeholder="username" />
+                  <input id="user_password" type="password" placeholder="***********" />
+                  <input type="checkbox" id="checkbox1" data-furatto='checkbox' data-color="blue">
+                  <label for="checkbox1" class="checkbox-label inline">Remember Me</label>
+                  <input class="btn btn-primary btn-block" type="submit" name="commit" value="Sign In" />
+                </form>
+              </div>
+              </li>
+            </ul>
+          {{/javascript}}
         </nav>
       </div>
     </div>
@@ -45,7 +66,7 @@
           <div class="span6">
             <ul class="hrz-nav pull-right">
               <li><a href="index.html">Home</a></li>
-              <li><a href="#">Download</a></li>
+              <li><a href="assets/furatto.zip">Download</a></li>
               <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
               <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
             </ul>
@@ -55,6 +76,19 @@
     </div>
   </div>
 </div>
+
+{{#production}}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-32608013-3', 'icalialabs.github.io');
+    ga('send', 'pageview');
+
+  </script>
+{{/production}}
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/jpanel.js"></script>
