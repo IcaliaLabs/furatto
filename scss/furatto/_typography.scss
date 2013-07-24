@@ -148,6 +148,8 @@ ul.inline,
 ol.inline {
   margin-left: 0;
   list-style: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
 
    li {
     display: inline-block;
@@ -215,10 +217,6 @@ dd {
     clear: left;
     text-align: right;
   }
-}
-
-.inline {
-  display: inline-block;
 }
 
 //Color states
