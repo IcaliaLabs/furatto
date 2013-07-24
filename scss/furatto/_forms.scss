@@ -183,6 +183,7 @@ input[type="color"],
 /* Level up the label on for checkboxes */
 /* ------------------------------------ */
 label.checkbox-label {
+  display: inline-block;
   position: relative;
   top: -4px;
   margin-left: 5px;
