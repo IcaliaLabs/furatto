@@ -21,6 +21,10 @@
 	left: 50%;
 	z-index: 1000;
   @include box-shadow(0 1px 10px 0 rgba(0, 0, 0, .5));
+  width: $modal-width;
+  height: $modal-height;
+  margin-left: -($modal-width / 2 + 10);
+  margin-top: -($modal-height / 2 + 10);
 }
 
 .avgrund-overlay {
@@ -68,14 +72,14 @@ body.avgrund-active {
 	font-size: 13px;
 	text-decoration: none;
 	text-transform: uppercase;
-	position: absolute;
-	top: 6px;
-	right: 10px;
+  float:right;
+  font-size: 18px;
 }
 
 /* Modal header and footer styling */
 /*--------------------*/
 .modal-header {
+  @include clearfix;
   border-bottom: 1px solid #CCC;
   margin-bottom: 10px;
 
@@ -85,10 +89,16 @@ body.avgrund-active {
   }
 }
 
+.modal-body {
+  height: $modal-height - 85;
+  max-height: $modal-height - 85;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .modal-footer {
-  position: absolute;
-  bottom: 5px;
-  right: 15px;
+  @include clearfix;
+  padding-top: 6px;
 
   .btn + .btn {
     margin-right: 6px;

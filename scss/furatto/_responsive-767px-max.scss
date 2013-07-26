@@ -10,10 +10,10 @@
 
 @media (max-width: 767px) {
 
-  // Padding to set content in a bit
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
+  .avgrund-popin {
+    width: 80% !important;
+    margin-left: -40%;
+    left: 48%;
   }
 
   // TYPOGRAPHY

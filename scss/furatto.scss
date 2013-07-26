@@ -46,11 +46,6 @@
 @import 'furatto/tables';
 @import 'furatto/_responsive_tables';
 
-//Grid
-@import 'furatto/grid';
-@import 'furatto/responsive-1200px-min';
-@import 'furatto/responsive-767px-max';
-@import 'furatto/responsive-768px-979px';
 
 //Responsive navbar
 @import 'furatto/responsive_navbar';
@@ -95,7 +90,13 @@
 @import 'furatto/modal';
 
 //Slider
-@import 'furatto/_responsiveslides';
+@import 'furatto/responsiveslides';
 
 //Drowpdowns
 @import 'furatto/dropdown';
+
+//Grid
+@import 'furatto/grid';
+@import 'furatto/responsive-1200px-min';
+@import 'furatto/responsive-767px-max';
+@import 'furatto/responsive-768px-979px';

@@ -48,12 +48,12 @@ jQuery ->
       position: $(@).data('position') || 'top'
       hideOnClick: true
 
-  $('[data-toggle="modal"]').each ->
-    modal = $(@).data('target')
-    $(@).avgrund
-      showClose: true
-      showCloseText: 'close'
-      template: $(modal).html()
+  #$('[data-toggle="modal"]').each ->
+    #modal = $(@).data('target')
+    #$(@).avgrund
+      #showClose: true
+      #showCloseText: 'close'
+      #template: $(modal).html()
     
   $(".rslides").responsiveSlides
     auto: true
@@ -78,3 +78,4 @@ jQuery ->
  
   $('.dropdown input, .dropdown label').click (e) ->
     e.stopPropagation()
+

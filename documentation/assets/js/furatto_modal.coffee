@@ -1,86 +1,66 @@
 (($, window) ->
 
   class Modal
-    defaults:
-      width: 380,
-      height: 280,
-      showClose: true,
-      showCloseText: 'Close',
-      closeByEscape: true,
-      closeByDocument: true,
-      holderClass: '',
-      overlayClass: '',
-      enableStackAnimation: false,
-      onBlurContainer: '',
-      openOnEvent: true,
-      setEvent: 'click',
-      onLoad: false,
-      onUnload: false,
-      template: '<p>This is test popin content!</p>'
-
     constructor: (el, options) ->
       @options = $.extend {}, @defaults, options
       @$el = $(el)
       @body = $('body')
+      @isShown = false
+
+    toggle: ->
+      @[(if not @isShown then @.activate() else @.deactivate())]
     
-    onDocumentKeyup: (event) ->
-      if @options.closeByEscape
-        if event.keyCode is 27
-          @.deactivate()
+    onDocumentKeyup: (event) =>
+      console.log  'esc'
+      if event.keyCode is 27
+        @.deactivate()
 
     onDocumentClick: (event) =>
-      if @options.closeByDocument
-        if $(event.target).is('.avgrund-overlay, .avgrund-close')
-          event.preventDefault()
-          @.deactivate()
-      else
-        if $(event.target).is('.avgrund-close')
-          event.preventDefault()
-          @.deactivate()
+      @.deactivate()
 
     activate: ->
-      console.log @body
-      @options.onLoad(@$el) if typeof @options.onLoad is 'function'
+      @isShown = true
 
       setTimeout (=>
         @body.addClass('avgrund-active')
       ), 100
 
-      @body.append "<div class='avgrund-popin #{@options.holderClass}'>#{@options.template}</div>"
+      @body.append "<div class='avgrund-popin'>#{@$el.html()}</div>"
 
-      $('.avgrund-popin').css
-        'width': "#{@options.width}px"
-        'height': "#{@options.height}px"
-        'margin-left': "-#{@options.width / 2 + 10}px"
-        'margin-top': "-#{@options.height / 2 + 10}px"
-
-      if @options.showClose
-        $('.avgrund-popin').append("<a href='javascript:void(0)' class='avgrund-close'>#{@options.showCloseText}</a>")
-    
       @body.bind 'keyup', @.onDocumentKeyup
       @body.bind 'click', @.onDocumentClick
 
     deactivate: ->
+      @isShown = false
       @body.unbind 'keyup', @.onDocumentKeyup
       @body.unbind 'click', @.onDocumentClick
 
       @body.removeClass 'avgrund-active'
+      $('.avgrund-overlay').remove()
 
       setTimeout (->
         $('.avgrund-popin').remove()
       ), 500
 
-      if typeof @options.onUnload is 'function'
-        @options.onUnload(@$el)
 
-  $.fn.extend Modal: (option, args...) ->
+  $.fn.extend modal: (option, args...) ->
     @each ->
       $this = $(this)
-      data = $this.data('Modal')
+      data = $this.data('modal')
 
       if !data
-        $this.data 'Modal', (data = new Modal(this, option))
+        $this.data 'modal', (data = new Modal(this, option))
       if typeof option == 'string'
         data[option].apply(data, args)
+
+      $('body').addClass('avgrund-ready')
+      $('body').append('<div class="avgrund-overlay"></div>')
+
+  $(document).on 'click', '[data-furatto="modal"]', (e) ->
+    $this = $(this)
+    $target = $($this.data('target'))
+    $target.modal('toggle')
+
+    e.preventDefault()
 
 ) window.jQuery, window
