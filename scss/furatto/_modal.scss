@@ -4,12 +4,12 @@
 /**
  * Basic modal structural styling. 
  * 
- * Designed and built @kurenn based on http://labs.voronianski.com/jquery.avgrund.js/
+ * Designed and built @kurenn based on http://labs.voronianski.com/jquery.modal.js/
  */
 
 /* Popin window style */
 /*--------------------*/
-.avgrund-popin {
+.modal-popin {
 	position: fixed;
 	background: $white;
 	padding: 10px;
@@ -27,7 +27,7 @@
   margin-top: -($modal-height / 2 + 10);
 }
 
-.avgrund-overlay {
+.modal-overlay {
 	background: #000;
 	opacity: .5;
 	filter: alpha(opacity=50);
@@ -40,24 +40,24 @@
 	visibility: hidden;
 }
 
-body.avgrund-ready,
-.avgrund-ready .avgrund-popin,
-.avgrund-ready .avgrund-overlay {
+body.modal-ready,
+.modal-ready .modal-popin,
+.modal-ready .modal-overlay {
   @include transition(0.3s all ease-out);
 }
 
-body.avgrund-active {
+body.modal-active {
 	overflow: hidden;
 }
 
-.avgrund-active .avgrund-popin {
+.modal-active .modal-popin {
 	visibility: visible;
 	opacity: 1;
 	filter: alpha(opacity=100);
   @include scale(1.1);
 }
 
-.avgrund-active .avgrund-overlay {
+.modal-active .modal-overlay {
 	visibility: visible;
 	opacity: .5;
 	filter: alpha(opacity=50);
@@ -66,12 +66,9 @@ body.avgrund-active {
 
 /* Optional close button styles */
 /*--------------------*/
-.avgrund-close {
-	display: block;
+.modal-close {
 	color: #555;
-	font-size: 13px;
 	text-decoration: none;
-	text-transform: uppercase;
   float:right;
   font-size: 18px;
 }
