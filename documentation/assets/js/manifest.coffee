@@ -1,7 +1,4 @@
 jQuery ->
-  jPM = $.jPanelMenu()
-  jPM.on()
-
   # Custom selects
   $("select[data-furatto='select']").dropkick()
 

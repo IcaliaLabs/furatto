@@ -167,680 +167,82 @@
     .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
 }(window.jQuery);
-/**
-  *
-  * jPanelMenu 1.3.0 (http://jpanelmenu.com)
-  * By Anthony Colangelo (http://acolangelo.com)
-  *
-* */
-
-(function($){
-	$.jPanelMenu = function(options) {
-		if ( typeof(options) == "undefined" || options == null ) { options = {}; };
-
-		var jP = {
-			options: $.extend({
-				menu: '#menu',
-				trigger: '.menu-trigger',
-				excludedPanelContent: 'style, script',
-
-				direction: 'left',
-				openPosition: '250px',
-				animated: true,
-				closeOnContentClick: true,
-
-				keyboardShortcuts: [
-					{
-						code: 27,
-						open: false,
-						close: true 
-					},
-					{
-						code: 37,
-						open: false,
-						close: true 
-					},
-					{
-						code: 39,
-						open: true,
-						close: true 
-					},
-					{
-						code: 77,
-						open: true,
-						close: true 
-					}
-				],
-
-				duration: 150,
-				openDuration: options.duration || 150,
-				closeDuration: options.duration || 150,
-
-				easing: 'ease-in-out',
-				openEasing: options.easing || 'ease-in-out',
-				closeEasing: options.easing || 'ease-in-out',
-
-				before: function(){ },
-				beforeOpen: function(){ },
-				beforeClose: function(){ },
-
-				after: function(){ },
-				afterOpen: function(){ },
-				afterClose: function(){ },
-
-				beforeOn: function(){ },
-				afterOn: function(){ },
-
-				beforeOff: function(){ },
-				afterOff: function(){ }
-			},options),
-
-			settings: {
-				transitionsSupported:	'WebkitTransition' in document.body.style ||
-										'MozTransition' in document.body.style ||
-										'msTransition' in document.body.style ||
-										'OTransition' in document.body.style ||
-										'Transition' in document.body.style
-				,
-				shiftFixedChildren: false,
-				panelPosition: 'relative',
-				positionUnits: 'px'
-			},
-
-			menu: '#jPanelMenu-menu',
-
-			panel: '.jPanelMenu-panel',
-
-			fixedChildren: [],
-
-			timeouts: {},
-
-			clearTimeouts: function() {
-				clearTimeout(jP.timeouts.open);
-				clearTimeout(jP.timeouts.afterOpen);
-				clearTimeout(jP.timeouts.afterClose);
-			},
-
-			setPositionUnits: function() {
-				var foundUnit = false,
-					allowedUnits = ['%','px','em']
-				;
-
-				for ( unitID in allowedUnits ) {
-					var unit = allowedUnits[unitID];
-					if ( jP.options.openPosition.toString().substr(-unit.length) == unit )
-					{
-						foundUnit = true;
-						jP.settings.positionUnits = unit;
-					}
-				}
-
-				if ( !foundUnit ) { jP.options.openPosition = parseInt(jP.options.openPosition) + jP.settings.positionUnits }
-			},
-
-			checkFixedChildren: function() {
-				jP.disableTransitions();
-
-				var defaultPanelStyle = { position: $(jP.panel).css('position') };
-
-				defaultPanelStyle[jP.options.direction] = ($(jP.panel).css(jP.options.direction) == 'auto')?0:$(jP.panel).css(jP.options.direction);
-
-				$(jP.panel).find('> *').each(function(){
-					if ( $(this).css('position') == 'fixed' && $(this).css(jP.options.direction) == 'auto' ) { jP.fixedChildren.push(this); }
-				});
-				
-				if ( jP.fixedChildren.length > 0 )
-				{
-					var newPanelStyle = { position: 'relative' };
-					newPanelStyle[jP.options.direction] = '1px';
-					jP.setPanelStyle(newPanelStyle);
-
-					if ( parseInt($(jP.fixedChildren[0]).offset().left) == 0 ) { jP.settings.shiftFixedChildren = true; }
-				}
-
-				jP.setPanelStyle(defaultPanelStyle);
-			},
-
-			setjPanelMenuStyles: function() {
-				var bgColor = '#fff';
-				var htmlBG = $('html').css('background-color');
-				var bodyBG = $('body').css('background-color');
-
-				if ( bodyBG != 'transparent' && bodyBG != "rgba(0, 0, 0, 0)") { bgColor = bodyBG; }
-				else if ( htmlBG != 'transparent' && htmlBG != "rgba(0, 0, 0, 0)") { bgColor = htmlBG; }
-				else { bgColor = '#fff'; }
-
-				if ( $('#jPanelMenu-style-master').length == 0 )
-				{
-					$('body').append('<style id="jPanelMenu-style-master">body{width:100%}.jPanelMenu{overflow-x:hidden}#jPanelMenu-menu{display:block;position:fixed;top:0;'+jP.options.direction+':0;height:100%;z-index:-1;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch}.jPanelMenu-panel{position:static;'+jP.options.direction+':0;top:0;z-index:2;width:100%;min-height:100%;background:' + bgColor + '}</style>');
-				}
-			},
-
-			setMenuState: function(open) {
-				var position = (open)?'open':'closed';
-				$('body').attr('data-menu-position', position);
-			},
-
-			getMenuState: function() {
-				return $('body').attr('data-menu-position');
-			},
-
-			menuIsOpen: function() {
-				if ( jP.getMenuState() == 'open' ) return true;
-				else return false;
-			},
-
-			setMenuStyle: function(styles) {
-				$(jP.menu).css(styles);
-			},
-
-			setPanelStyle: function(styles) {
-				$(jP.panel).css(styles);
-			},
-
-			showMenu: function() {
-				jP.setMenuStyle({
-					display: 'block'
-				});
-				jP.setMenuStyle({
-					'z-index': '1'
-				});
-			},
-
-			hideMenu: function() {
-				jP.setMenuStyle({
-					'z-index': '-1'
-				});
-				jP.setMenuStyle({
-					display: 'none'
-				});
-			},
-
-			enableTransitions: function(duration, easing) {
-				var formattedDuration = duration/1000;
-				var formattedEasing = jP.getCSSEasingFunction(easing);
-				jP.disableTransitions();
-				$('body').append('<style id="jPanelMenu-style-transitions">.jPanelMenu-panel{-webkit-transition: all ' + formattedDuration + 's ' + formattedEasing + '; -moz-transition: all ' + formattedDuration + 's ' + formattedEasing + '; -o-transition: all ' + formattedDuration + 's ' + formattedEasing + '; transition: all ' + formattedDuration + 's ' + formattedEasing + ';}</style>');
-			},
-
-			disableTransitions: function() {
-				$('#jPanelMenu-style-transitions').remove();
-			},
-
-			enableFixedTransitions: function(selector, id, duration, easing) {
-				var formattedDuration = duration/1000;
-				var formattedEasing = jP.getCSSEasingFunction(easing);
-				jP.disableFixedTransitions(id);
-				$('body').append('<style id="jPanelMenu-style-fixed-' + id + '">' + selector + '{-webkit-transition: all ' + formattedDuration + 's ' + formattedEasing + '; -moz-transition: all ' + formattedDuration + 's ' + formattedEasing + '; -o-transition: all ' + formattedDuration + 's ' + formattedEasing + '; transition: all ' + formattedDuration + 's ' + formattedEasing + ';}</style>');
-			},
-
-			disableFixedTransitions: function(id) {
-				$('#jPanelMenu-style-fixed-' + id).remove();
-			},
-
-			getCSSEasingFunction: function(name) {
-				switch ( name )
-				{
-					case 'linear':
-						return name;
-						break;
-
-					case 'ease':
-						return name;
-						break;
-
-					case 'ease-in':
-						return name;
-						break;
-
-					case 'ease-out':
-						return name;
-						break;
-
-					case 'ease-in-out':
-						return name;
-						break;
-
-					default:
-						return 'ease-in-out';
-						break;
-				}
-			},
-
-			getJSEasingFunction: function(name) {
-				switch ( name )
-				{
-					case 'linear':
-						return name;
-						break;
-
-					default:
-						return 'swing';
-						break;
-				}
-			},
-
-			openMenu: function(animated) {
-				if ( typeof(animated) == "undefined" || animated == null ) { animated = jP.options.animated };
-				
-				jP.clearTimeouts();
-
-				jP.options.before();
-				jP.options.beforeOpen();
-
-				jP.setMenuState(true);
-
-				jP.setPanelStyle({ position: 'relative' });
-				
-				jP.showMenu();
-
-				var animationChecks = {
-					none: (!animated)?true:false,
-					transitions: (animated && jP.settings.transitionsSupported)?true:false
-				};
-
-				if ( animationChecks.transitions || animationChecks.none ) {
-					if ( animationChecks.none ) jP.disableTransitions();
-					if ( animationChecks.transitions ) jP.enableTransitions(jP.options.openDuration, jP.options.openEasing);
-
-					var newPanelStyle = {};
-					newPanelStyle[jP.options.direction] = jP.options.openPosition;
-					jP.setPanelStyle(newPanelStyle);
-
-					if ( jP.settings.shiftFixedChildren )
-					{
-						$(jP.fixedChildren).each(function(){
-							var id = $(this).prop("tagName").toLowerCase() + ' ' + $(this).attr('class'),
-								selector = id.replace(' ','.'),
-								id = id.replace(' ','-')
-							;
-
-							if ( animationChecks.none ) jP.disableFixedTransitions(id);
-							if ( animationChecks.transitions ) jP.enableFixedTransitions(selector, id, jP.options.openDuration, jP.options.openEasing);
-
-							var newChildrenStyle = {};
-							newChildrenStyle[jP.options.direction] = jP.options.openPosition;
-							$(this).css(newChildrenStyle);
-						});
-					}
-
-					jP.timeouts.afterOpen = setTimeout(function(){
-						jP.disableTransitions();
-						if ( jP.settings.shiftFixedChildren )
-						{
-							$(jP.fixedChildren).each(function(){
-								var id = $(this).prop("tagName").toLowerCase() + ' ' + $(this).attr('class'),
-									id = id.replace(' ','-')
-								;
-
-								jP.disableFixedTransitions(id);
-							});
-						}
-
-						jP.options.after();
-						jP.options.afterOpen();
-						jP.initiateContentClickListeners();
-					}, jP.options.openDuration);
-				}
-				else {
-					var formattedEasing = jP.getJSEasingFunction(jP.options.openEasing);
-
-					var animationOptions = {};
-					animationOptions[jP.options.direction] = jP.options.openPosition;
-					$(jP.panel).stop().animate(animationOptions, jP.options.openDuration, formattedEasing, function(){
-						jP.options.after();
-						jP.options.afterOpen();
-						jP.initiateContentClickListeners();
-					});
-
-					if ( jP.settings.shiftFixedChildren )
-					{
-						$(jP.fixedChildren).each(function(){
-							var childrenAnimationOptions = {};
-							childrenAnimationOptions[jP.options.direction] = jP.options.openPosition;
-							$(this).stop().animate(childrenAnimationOptions, jP.options.openDuration, formattedEasing);
-						});
-					}
-				}
-			},
-
-			closeMenu: function(animated) {
-				if ( typeof(animated) == "undefined" || animated == null ) { animated = jP.options.animated };
-
-				jP.clearTimeouts();
-
-				jP.options.before();
-				jP.options.beforeClose();
-
-				jP.setMenuState(false);
-
-				var animationChecks = {
-					none: (!animated)?true:false,
-					transitions: (animated && jP.settings.transitionsSupported)?true:false
-				};
-
-				if ( animationChecks.transitions || animationChecks.none ) {
-					if ( animationChecks.none ) jP.disableTransitions();
-					if ( animationChecks.transitions ) jP.enableTransitions(jP.options.closeDuration, jP.options.closeEasing);
-
-					var newPanelStyle = {};
-					newPanelStyle[jP.options.direction] = 0 + jP.settings.positionUnits;
-					jP.setPanelStyle(newPanelStyle);
-
-					if ( jP.settings.shiftFixedChildren )
-					{
-						$(jP.fixedChildren).each(function(){
-							var id = $(this).prop("tagName").toLowerCase() + ' ' + $(this).attr('class'),
-								selector = id.replace(' ','.'),
-								id = id.replace(' ','-')
-							;
-
-							if ( animationChecks.none ) jP.disableFixedTransitions(id);
-							if ( animationChecks.transitions ) jP.enableFixedTransitions(selector, id, jP.options.closeDuration, jP.options.closeEasing);
-
-							var newChildrenStyle = {};
-							newChildrenStyle[jP.options.direction] = 0 + jP.settings.positionUnits;
-							$(this).css(newChildrenStyle);
-						});
-					}
-
-					jP.timeouts.afterClose = setTimeout(function(){
-						jP.setPanelStyle({ position: jP.settings.panelPosition });
-
-						jP.disableTransitions();
-						if ( jP.settings.shiftFixedChildren )
-						{
-							$(jP.fixedChildren).each(function(){
-								var id = $(this).prop("tagName").toLowerCase() + ' ' + $(this).attr('class'),
-									id = id.replace(' ','-')
-								;
-
-								jP.disableFixedTransitions(id);
-							});
-						}
-
-						jP.hideMenu();
-						jP.options.after();
-						jP.options.afterClose();
-						jP.destroyContentClickListeners();
-					}, jP.options.closeDuration);
-				}
-				else {
-					var formattedEasing = jP.getJSEasingFunction(jP.options.closeEasing);
-
-					var animationOptions = {};
-					animationOptions[jP.options.direction] = 0 + jP.settings.positionUnits;
-					$(jP.panel).stop().animate(animationOptions, jP.options.closeDuration, formattedEasing, function(){
-						jP.setPanelStyle({ position: jP.settings.panelPosition });
-
-						jP.hideMenu();
-						jP.options.after();
-						jP.options.afterClose();
-						jP.destroyContentClickListeners();
-					});
-
-					if ( jP.settings.shiftFixedChildren )
-					{
-						$(jP.fixedChildren).each(function(){
-							var childrenAnimationOptions = {};
-							childrenAnimationOptions[jP.options.direction] = 0 + jP.settings.positionUnits;
-							$(this).stop().animate(childrenAnimationOptions, jP.options.closeDuration, formattedEasing);
-						});
-					}
-				}
-			},
-
-			triggerMenu: function(animated) {
-				if ( jP.menuIsOpen() ) jP.closeMenu(animated);
-				else jP.openMenu(animated);
-			},
-
-			initiateClickListeners: function() {
-				$(document).on('click',jP.options.trigger,function(){ jP.triggerMenu(jP.options.animated); return false; });
-			},
-
-			destroyClickListeners: function() {
-				$(document).off('click',jP.options.trigger,null);
-			},
-
-			initiateContentClickListeners: function() {
-				if ( !jP.options.closeOnContentClick ) return false;
-
-				$(document).on('click',jP.panel,function(e){
-					if ( jP.menuIsOpen() ) jP.closeMenu(jP.options.animated);
-				});
-				
-				$(document).on('touchend',jP.panel,function(e){
-					if ( jP.menuIsOpen() ) jP.closeMenu(jP.options.animated);
-				});
-			},
-
-			destroyContentClickListeners: function() {
-				if ( !jP.options.closeOnContentClick ) return false;
-
-				$(document).off('click',jP.panel,null);
-				$(document).off('touchend',jP.panel,null);
-			},
-
-			initiateKeyboardListeners: function() {
-				var preventKeyListeners = ['input', 'textarea'];
-				$(document).on('keydown',function(e){
-					var target = $(e.target),
-					prevent = false;
-					$.each(preventKeyListeners, function(){
-						if (target.is(this.toString())) { prevent = true; }
-					});
-					if ( prevent ) { return true; }
-
-					for ( mapping in jP.options.keyboardShortcuts ) {
-						if ( e.which == jP.options.keyboardShortcuts[mapping].code )
-						{
-							var key = jP.options.keyboardShortcuts[mapping];
-
-							if ( key.open && key.close ) { jP.triggerMenu(jP.options.animated); }
-							else if ( (key.open && !key.close) && !jP.menuIsOpen() ) { jP.openMenu(jP.options.animated); }
-							else if ( (!key.open && key.close) && jP.menuIsOpen() ) { jP.closeMenu(jP.options.animated); }
-
-							return false;
-						}
-					}
-				});
-			},
-
-			destroyKeyboardListeners: function() {
-				$(document).off('keydown',null);
-			},
-
-			setupMarkup: function() {
-				$('html').addClass('jPanelMenu');
-				$('body > *').not(jP.menu + ', ' + jP.options.excludedPanelContent).wrapAll('<div class="' + jP.panel.replace('.','') + '"/>');
-				$(jP.options.menu).clone().attr('id', jP.menu.replace('#','')).insertAfter('body > ' + jP.panel);
-			},
-
-			resetMarkup: function() {
-				$('html').removeClass('jPanelMenu');
-				$('body > ' + jP.panel + ' > *').unwrap();
-				$(jP.menu).remove();
-			},
-
-			init: function() {
-				jP.options.beforeOn();
-
-				jP.initiateClickListeners();
-				if ( Object.prototype.toString.call(jP.options.keyboardShortcuts) === '[object Array]' ) { jP.initiateKeyboardListeners(); }
-
-				jP.setjPanelMenuStyles();
-				jP.setMenuState(false);
-				jP.setupMarkup();
-
-				jP.setMenuStyle({ width: jP.options.openPosition });
-
-				jP.checkFixedChildren();
-				jP.setPositionUnits();
-
-				jP.closeMenu(false);
-
-				jP.options.afterOn();
-			},
-
-			destroy: function() {
-				jP.options.beforeOff();
-
-				jP.closeMenu();
-				jP.destroyClickListeners();
-				if ( Object.prototype.toString.call(jP.options.keyboardShortcuts) === '[object Array]' ) { jP.destroyKeyboardListeners(); }
-
-				jP.resetMarkup();
-				var childrenStyles = {};
-				childrenStyles[jP.options.direction] = 'auto';
-				$(jP.fixedChildren).each(function(){ $(this).css(childrenStyles); });
-				jP.fixedChildren = [];
-
-				jP.options.afterOff();
-			}
-		};
-
-		return {
-			on: jP.init,
-			off: jP.destroy,
-			trigger: jP.triggerMenu,
-			open: jP.openMenu,
-			close: jP.closeMenu,
-			isOpen: jP.menuIsOpen,
-			menu: jP.menu,
-			getMenu: function() { return $(jP.menu); },
-			panel: jP.panel,
-			getPanel: function() { return $(jP.panel); }
-		};
-	};
-})(jQuery);
-/**
- *  jQuery Avgrund Popin Plugin
- *  http://github.com/voronianski/jquery.avgrund.js/
- *
- *  (c) 2012-2013 http://pixelhunter.me/
- *  MIT licensed
- */
-
-(function ($) {
-	$.fn.avgrund = function (options) {
-		var defaults = {
-			width: 380, // max = 640
-			height: 280, // max = 350
-			showClose: false,
-			showCloseText: '',
-			closeByEscape: true,
-			closeByDocument: true,
-			holderClass: '',
-			overlayClass: '',
-			enableStackAnimation: false,
-			onBlurContainer: '',
-			openOnEvent: true,
-			setEvent: 'click',
-			onLoad: false,
-			onUnload: false,
-			template: '<p>This is test popin content!</p>'
-		};
-
-		options = $.extend(defaults, options);
-
-		return this.each(function() {
-			var self = $(this),
-				body = $('body'),
-				maxWidth = options.width > 640 ? 640 : options.width,
-				maxHeight = options.height > 350 ? 350 : options.height,
-				template = typeof options.template === 'function' ? options.template(self) : options.template;
-
-			body.addClass('avgrund-ready');
-			body.append('<div class="avgrund-overlay ' + options.overlayClass + '"></div>');
-
-			if (options.onBlurContainer !== '') {
-				$(options.onBlurContainer).addClass('avgrund-blur');
-			}
-
-			function onDocumentKeyup (e) {
-				if (options.closeByEscape) {
-					if (e.keyCode === 27) {
-						deactivate();
-					}
-				}
-			}
-
-			function onDocumentClick (e) {
-				if (options.closeByDocument) {
-					if ($(e.target).is('.avgrund-overlay, .avgrund-close')) {
-						e.preventDefault();
-						deactivate();
-					}
-				} else {
-					if ($(e.target).is('.avgrund-close')) {
-						e.preventDefault();
-						deactivate();
-					}
-				}
-			}
-
-			function activate () {
-				if (typeof options.onLoad === 'function') {
-					options.onLoad(self);
-				}
-
-				setTimeout(function() {
-					body.addClass('avgrund-active');
-				}, 100);
-
-				body.append('<div class="avgrund-popin ' + options.holderClass + '">' + template + '</div>');
-
-				$('.avgrund-popin').css({
-					'width': maxWidth + 'px',
-					'height': maxHeight + 'px',
-					'margin-left': '-' + (maxWidth / 2 + 10) + 'px',
-					'margin-top': '-' + (maxHeight / 2 + 10) + 'px'
-				});
-
-				if (options.showClose) {
-					$('.avgrund-popin').append('<a href="#" class="avgrund-close">' + options.showCloseText + '</a>');
-				}
-
-				if (options.enableStackAnimation) {
-					$('.avgrund-popin').addClass('stack');
-				}
-
-				body.bind('keyup', onDocumentKeyup);
-				body.bind('click', onDocumentClick);
-			}
-
-			function deactivate () {
-				body.unbind('keyup', onDocumentKeyup);
-				body.unbind('click', onDocumentClick);
-
-				body.removeClass('avgrund-active');
-
-				setTimeout(function() {
-					$('.avgrund-popin').remove();
-				}, 500);
-
-				if (typeof options.onUnload === 'function') {
-					options.onUnload(self);
-				}
-			}
-
-			if (options.openOnEvent) {
-				self.bind(options.setEvent, function (e) {
-					e.stopPropagation();
-
-					if ($(e.target).is('a')) {
-						e.preventDefault();
-					}
-
-					activate();
-				});
-			} else {
-				activate();
-			}
-		});
-	};
-})(jQuery);
+// Generated by CoffeeScript 1.6.3
+(function($, window) {
+  "user strict";
+  var Panel;
+  Panel = (function() {
+    Panel.DEFAULTS = {
+      element: null,
+      dragger: null,
+      disable: 'right',
+      addBodyClasses: true,
+      hyperextensible: true,
+      resistance: 0.5,
+      flickThreshold: 50,
+      transitionSpeed: 0.3,
+      easing: 'ease',
+      maxPosition: 266,
+      minPosition: -266,
+      tapToClose: true,
+      touchToDrag: false,
+      slideIntent: 40,
+      minDragDistance: 5
+    };
+
+    function Panel(el, options) {
+      this.options = $.extend(options, {
+        element: el
+      });
+      this.snapper = new Snap(this.options);
+      this.menu = $($('[data-toggle="panel"]').data('target'));
+      this.append_menu_to_panel();
+    }
+
+    Panel.prototype.toggle_scroll = function() {
+      return this.snapper.on('close', function() {
+        return $('html, body').toggleClass('noscroll');
+      });
+    };
+
+    Panel.prototype.append_menu_to_panel = function() {
+      return $('.panel-left').html(this.menu.html());
+    };
+
+    Panel.prototype.toggle = function() {
+      if (this.snapper.state().state === "left") {
+        return this.snapper.close();
+      } else {
+        return this.snapper.open('left');
+      }
+    };
+
+    return Panel;
+
+  })();
+  $.fn.panel = function(option) {
+    return this.each(function() {
+      var $this, data, options;
+      $this = $(this);
+      data = $this.data('Panel');
+      options = $.extend({}, Panel.DEFAULTS, $this.data(), typeof option === 'object' && option);
+      if (!data) {
+        $this.data('Panel', (data = new Panel(this, options)));
+      }
+      if (typeof option === 'string') {
+        return data[option]();
+      }
+    });
+  };
+  $(document).on('click', '[data-toggle="panel"]', function(e) {
+    e.preventDefault();
+    $('.panel-content').panel('toggle');
+    return $('html, body').toggleClass('noscroll');
+  });
+  return $(document).ready(function() {
+    return $('.panel-content').panel('toggle_scroll');
+  });
+})(window.jQuery, window);
 /**
  * DropKick
  *

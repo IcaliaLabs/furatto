@@ -12,6 +12,14 @@
 
 @media (max-width: $nav-bar-collapse-width) {
 
+  .panels {
+    display: block;
+  }
+
+  .panel-content {
+    padding-top: 0;
+  }
+
   /*Unfix top navbar*/
   /*Remove any padding from the body */
   

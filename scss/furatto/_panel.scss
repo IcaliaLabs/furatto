@@ -1,0 +1,248 @@
+.panel-content {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  -webkit-overflow-scrolling: touch;
+  padding-top: $navbar-height;
+}
+
+.panels {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 265px;
+  height: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  @include transition(width 0.3s ease);
+}
+
+.panel-left {
+  left: 0;
+  z-index: 1;
+}
+
+.paneljs-left .panel-right,
+.paneljs-right .panel-left {
+  display: none;
+}
+
+.paneljs-expand-left .panel-left,
+.paneljs-expand-right .panel-right {
+  width: 100%;
+}
+
+/* Show "Left" drawer for the "Right" drawer in the demo */
+.paneljs-right .panel-left {
+	display: block;
+	right: 0;
+	left: auto;
+}
+
+/* Hide the actual "Right" drawer in the demo */
+.paneljs-right .panel-right {
+	display: none;
+}
+
+#open-left {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+/* Show the translucent white "Toggle" boxes in the demo */
+.toggler {
+	width: 80%;
+	background: rgba(255,255,255,0.5);
+	margin: 0 auto;
+	position: relative;
+	top: 70px;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Styles for fading out the drawer content in the "Expanding" demo */
+.drawer-inner {
+	-webkit-transition: opacity 0.3s ease; 
+	   -moz-transition: opacity 0.3s ease; 
+	    -ms-transition: opacity 0.3s ease; 
+	     -o-transition: opacity 0.3s ease; 
+	        transition: opacity 0.3s ease; 
+}
+
+.paneljs-expand-left .drawer-inner,
+.paneljs-expand-right .drawer-inner {
+	opacity: 0;
+}
+
+.panel-content {
+  background: $white;
+}
+
+.panels, .panel {
+	background: $navbar-bg-color;
+}
+
+.panel {
+
+  .nav:first-child {
+    margin-bottom: 0;
+  }
+
+  .nav + .nav {
+    margin-bottom: 0;
+  }
+
+  .nav {
+    overflow: hidden;
+    padding-left: 0;
+    color: $navbar-text;
+    font-size: $base-font-size;
+    margin-top: 0px;
+    float: none;
+
+    [class^="icon-"], [class*=" icon-"] {
+      margin-right: 5px;
+    }
+
+    .dropdown-toggle {
+      .caret {
+        display: none;
+      }
+    }
+
+    div.dropdown-menu {
+      padding: 0;
+      width: 100%;
+      display: block;
+      margin-left: 13px;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="datetime"],
+      input[type="datetime-local"],
+      input[type="date"],
+      input[type="month"],
+      input[type="time"],
+      input[type="week"],
+      input[type="number"],
+      input[type="email"],
+      input[type="url"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="color"] {
+        width: 80%;
+        display: block;
+
+      }
+
+      input[type="submit"] {
+        width: 85%; 
+      }
+      
+    }
+
+    .dropdown-menu {
+      position: static;
+      background: none;
+      border: none;
+      @include box-shadow(0 0px 0px $navbar-bg-color);
+      width: 100%;
+
+      * {
+        color: #eaeaea;
+      }
+
+      li.divider {
+        border-bottom: 1px solid #CCC; 
+      }
+
+      li {
+        a {
+          &:hover {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .nav > .active,
+  .nav > .active,
+  .nav > .active {
+    color: $navbar-link-color-active;
+    text-decoration: none;
+    border-left: 2px solid $green;
+
+    &:before {
+      content: ' ';
+      position: relative;
+      width: 0;
+      height: 0px;
+    }
+  }
+  
+
+  li.dropdown {
+    .dropdown-toggle {
+      display: none;
+    }
+  }
+
+  ul.dropdown-menu {
+    display: block;
+
+
+    .divider {
+      display: none;
+    }
+  }
+
+   //Form
+  .search-navbar-form {
+    float: none;
+    margin-bottom: 10px;
+
+    .search-text-input {
+      margin: 0 auto;
+      display: block;
+      width: 80%;
+    }
+  }
+}
+
+// Divider
+.nav > li.divider-vertical {
+  display: none;
+}
+
+
+.panel li > a {
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #000;
+  text-decoration: none;
+  color: #ccc;
+  text-indent: 20px;
+}

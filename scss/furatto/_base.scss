@@ -20,12 +20,12 @@ a {
   color: $link-color;
 }
 
-html, body {
-  background-color: $bg-color;
+.noscroll {
+  overflow: hidden;
 }
 
-body {
-  padding-top: $navbar-height;
+html, body {
+  background-color: $bg-color;
 }
 
 .with-left-navbar {

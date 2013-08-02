@@ -44,12 +44,7 @@
 
 //Tables
 @import 'furatto/tables';
-@import 'furatto/_responsive_tables';
-
-
-//Responsive navbar
-@import 'furatto/responsive_navbar';
-@import 'furatto/left_navbar';
+@import 'furatto/responsive_tables';
 
 //Images
 @import 'furatto/images';
@@ -95,8 +90,13 @@
 //Drowpdowns
 @import 'furatto/dropdown';
 
+//Panel Menu
+@import 'furatto/panel';
+
 //Grid
 @import 'furatto/grid';
 @import 'furatto/responsive-1200px-min';
 @import 'furatto/responsive-767px-max';
 @import 'furatto/responsive-768px-979px';
+@import 'furatto/responsive_navbar';
+

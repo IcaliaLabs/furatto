@@ -8,29 +8,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
-  <div class="navbar-inner">
-    <div class="container">
-      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-      <div class="nav-collapse collapse">
-        <nav id="menu">
-          <ul class="nav">
-            <li><a class="brand" href="index.html">Furatto</a></li>
-            <li class="{{buttons}}"><a href="buttons.html">{{_i}}Buttons{{/i}}</a></li>
-            <li class="{{images}}"><a href="images.html">{{_i}}Images{{/i}}</a></li>
-            <li class="{{tables}}"><a href="tables.html">{{_i}}Tables{{/i}}</a></li>
-            <li class="{{base}}"><a href="base.html">{{_i}}Base{{/i}}</a></li>
-            <li class="{{grid}}"><a href="grid.html">{{_i}}Grid{{/i}}</a></li>
-            <li class="{{forms}}"><a href="forms.html">{{_i}}Forms{{/i}}</a></li>
-            <li class="{{components}}"><a href="components.html">{{_i}}Components{{/i}}</a></li>
-            <li class="{{javascript}}"><a href="javascript.html">{{_i}}Javascript{{/i}}</a></li>
-          </ul>
-          {{#components}}
+
+<div class="panels">
+  <div class="panel panel-left">
+  </div>
+</div>
+
+<div class="panel-content">
+  <div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav">
+              <li><a class="brand" href="index.html">Furatto</a></li>
+              <li class="{{buttons}}"><a href="buttons.html">{{_i}}Buttons{{/i}}</a></li>
+              <li class="{{images}}"><a href="images.html">{{_i}}Images{{/i}}</a></li>
+              <li class="{{tables}}"><a href="tables.html">{{_i}}Tables{{/i}}</a></li>
+              <li class="{{base}}"><a href="base.html">{{_i}}Base{{/i}}</a></li>
+              <li class="{{grid}}"><a href="grid.html">{{_i}}Grid{{/i}}</a></li>
+              <li class="{{forms}}"><a href="forms.html">{{_i}}Forms{{/i}}</a></li>
+              <li class="{{components}}"><a href="components.html">{{_i}}Components{{/i}}</a></li>
+              <li class="{{javascript}}"><a href="javascript.html">{{_i}}Javascript{{/i}}</a></li>
+            </ul>
+            {{#components}}
             <form action="" method="get" accept-charset="utf-8" class="search-navbar-form pull-right">
-               <input type="text" name="" id="" value="" placeholder="Search" class="search-text-input" />
+              <input type="text" name="" id="" value="" placeholder="Search" class="search-text-input" />
             </form>
-          {{/components}}
-          {{#javascript}}
+            <ul class="nav pull-right">
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+              <ul class="dropdown-menu bottom-up pull-right">
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Software</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Business Planning</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Development and Research</a></li>
+              </ul>
+              </li>
+            </ul>
+            {{/components}}
+            {{#javascript}}
             <ul class="nav pull-right">
               <li class="divider-vertical"></li>
               <li class="dropdown">
@@ -46,15 +67,13 @@
               </div>
               </li>
             </ul>
-          {{/javascript}}
-        </nav>
+            {{/javascript}}
+          </nav>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-{{>body}}
-
+  {{>body}}
 <div class="footer">
   <div class="footer-wrapper">
     <div class="container">
@@ -76,6 +95,8 @@
     </div>
   </div>
 </div>
+</div>
+
 
 {{#production}}
   <script>
@@ -91,7 +112,8 @@
 {{/production}}
 
 <script src="assets/js/jquery.js"></script>
-<script src="assets/js/jpanel.js"></script>
+<script src="assets/js/snap.js"></script>
+<script src="assets/js/panel.js"></script>
 <script src="assets/js/jquery.dropkick-1.0.0.js"></script>
 <script src="assets/js/jquery.icheck.js"></script>
 <script src="assets/js/rainbow-custom.min.js"></script>
