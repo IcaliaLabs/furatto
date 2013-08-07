@@ -80,20 +80,6 @@
 	text-align: center;
 }
 
-/* Styles for fading out the drawer content in the "Expanding" demo */
-.drawer-inner {
-	-webkit-transition: opacity 0.3s ease; 
-	   -moz-transition: opacity 0.3s ease; 
-	    -ms-transition: opacity 0.3s ease; 
-	     -o-transition: opacity 0.3s ease; 
-	        transition: opacity 0.3s ease; 
-}
-
-.paneljs-expand-left .drawer-inner,
-.paneljs-expand-right .drawer-inner {
-	opacity: 0;
-}
-
 .panel-content {
   background: $white;
 }
@@ -115,12 +101,6 @@
     font-size: $base-font-size;
     margin-top: 0px;
     float: none;
-
-    li {
-      a:last-child {
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-      }
-    }
 
     [class^="icon-"], [class*=" icon-"] {
       margin-right: 5px;
@@ -240,7 +220,7 @@
 
 .panel li > a {
   display: block;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px;
   font-weight: bold;
   text-shadow: 0 1px 0 #000;
