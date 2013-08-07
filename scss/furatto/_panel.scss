@@ -104,12 +104,8 @@
 
 .panel {
 
-  .nav:first-child {
-    margin-bottom: 0;
-  }
-
   .nav + .nav {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   .nav {
@@ -119,6 +115,12 @@
     font-size: $base-font-size;
     margin-top: 0px;
     float: none;
+
+    li {
+      a:last-child {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+    }
 
     [class^="icon-"], [class*=" icon-"] {
       margin-right: 5px;
