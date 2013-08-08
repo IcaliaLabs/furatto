@@ -460,3 +460,19 @@
     };
   };
 })(jQuery);
+
+$(document).ready(function(){
+  $("input[data-furatto='checkbox'], input[data-furatto='radio']").each(function() {
+    var checkbox_color, color, input, radiobutton_color;
+    input = $(this);
+    color = $(this).data('color');
+    if (color !== '') {
+      checkbox_color = "checkbox-" + color;
+      radiobutton_color = "radiobutton-" + color;
+    }
+    return input.iCheck({
+      checkboxClass: "checkbox " + checkbox_color,
+      radioClass: "radiobutton " + radiobutton_color
+    });
+  });
+})
