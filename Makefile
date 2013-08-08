@@ -11,11 +11,11 @@ build:
 	@echo "${HR}\n"
 	@compass compile -c production_config.rb --force
 	@echo "Spicing things with Compass...               ${CHECK}"
-	@cat js/dropdown.js js/panel.js js/jquery.dropkick-1.0.0.js js/jquery.icheck.js js/jquery.tagsinput.js js/jquery.toolbar.js js/legacy.js js/picker.js js/picker.date.js js/picker.time.js js/rainbow-custom.min.js js/responsive-tables.js js/responsiveslides.js js/tooltip.js > js/furatto.js
+	@cat js/jquery.js js/snap.js js/panel.js js/jquery.toolbar.js js/toolbar.js js/jquery.dropkick-1.0.0.js js/jquery.icheck.js js/rainbow-custom.min.js js/tooltip.js js/jquery.tagsinput.js js/picker.js js/picker.date.js js/picker.time.js js/legacy.js js/responsive-tables.js js/dropdown.js js/furatto-modal.js js/responsiveslides.js js/manifest.js > js/furatto.js
 	@./node_modules/.bin/uglifyjs -nc js/furatto.js > documentation/assets/js/furatto.min.tmp.js
 	@cat documentation/assets/js/furatto.min.tmp.js > documentation/assets/js/furatto.min.js
 	@rm documentation/assets/js/furatto.min.tmp.js
-	@cp -r js/* documentation/assets/js
+	@cp -r js/furatto.js documentation/assets/js
 	@echo "Compiling and minifiying JS...               ${CHECK}"
 	@cp -r fonts documentation/assets/
 	@cp -r img documentation/assets/
@@ -27,14 +27,14 @@ build:
 	@echo "Lov @kurenn and @icalialabs\n"
 
 # Build Furatto directory #
-furatto: furatto-img furatto-css furatto-js furatto-font
+furatto: furatto-img furatto-js furatto-css furatto-font
 
 # JS #
 furatto-js: furatto/js/*.js
 
 furatto/js/*.js: js/*.js
 	mkdir -p furatto/js
-	cp js/furatto.min.js furatto/js/
+	cp documentation/assets/js/*js furatto/js/
 
 # CSS #
 furatto-css: furatto/css/*.css
