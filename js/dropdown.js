@@ -165,5 +165,13 @@
     .on('click.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
     .on('click.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
     .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
+  
+  $(document).ready(function() {
+    $('.dropdown-toggle').dropdown();
+   
+    $('.dropdown input, .dropdown label').click(function(e){ 
+      e.stopPropagation();
+    });
+  })
 
 }(window.jQuery);
