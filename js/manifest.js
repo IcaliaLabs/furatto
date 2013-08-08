@@ -37,13 +37,6 @@ jQuery(function() {
       selectMonths: input.data('select-months') || false
     });
   });
-  $('[data-toolbar]').each(function() {
-    return $(this).toolbar({
-      content: $(this).data('content'),
-      position: $(this).data('position') || 'top',
-      hideOnClick: true
-    });
-  });
   $(".rslides").responsiveSlides({
     auto: true,
     pager: true,
