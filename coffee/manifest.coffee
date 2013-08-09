@@ -1,12 +1,5 @@
 jQuery ->
 
-  #Pagination Demo
-  $(".pagination a").click (e) ->
-    e.preventDefault()
-    if (!$(this).parent().hasClass("previous") && !$(this).parent().hasClass("next"))
-      $(this).parent().siblings("li").removeClass("active")
-      $(this).parent().addClass("active")
-
   #Closing buttons
   $('.close').each ->
     $(@).click (e) ->
@@ -26,17 +19,12 @@ jQuery ->
       selectYears: input.data('select-years') || false
       selectMonths: input.data('select-months') || false
 
-  #$(".rslides").responsiveSlides
-    #auto: true
-    #pager: true
-    #nav: true
-    #speed: 500
-    #namespace: "centered-btns"
-
-  $('#js-show-left-navbar').click (e) ->
-    $('.vrt-navbar').toggleClass 'hide'
-    $('.navbar:first').toggleClass 'hide'
-    false
+  $("[data-furatto='slider']").responsiveSlides
+    auto: true
+    pager: true
+    nav: true
+    speed: 500
+    namespace: "centered-btns"
 
   $('.navbar [data-furatto="search"]').each ->
     current_width = $(@).width()

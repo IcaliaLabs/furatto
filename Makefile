@@ -15,7 +15,8 @@ build:
 	@./node_modules/.bin/uglifyjs -nc js/furatto.js > documentation/assets/js/furatto.min.tmp.js
 	@cat documentation/assets/js/furatto.min.tmp.js > documentation/assets/js/furatto.min.js
 	@rm documentation/assets/js/furatto.min.tmp.js
-	@cp -r js/furatto.js documentation/assets/js
+	@cp js/furatto.js documentation/assets/js
+	@cp js/furatto-demo.js documentation/assets/js
 	@echo "Compiling and minifiying JS...               ${CHECK}"
 	@cp -r fonts documentation/assets/
 	@cp -r img documentation/assets/
