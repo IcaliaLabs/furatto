@@ -22,14 +22,6 @@
   *z-index: 2;
 }
 
-.navbar-alpha {
-  background: rgba($navbar-bg-color, $navbar-alpha);
-
-  .navbar-inner {
-    background: rgba($navbar-bg-color, $navbar-alpha);
-  }
-}
-
 // Inner for background effects
 // Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
