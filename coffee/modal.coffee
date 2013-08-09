@@ -1,177 +1,65 @@
-(($) ->
-  "use strict"
+(($, window) ->
+
   class Modal
-    constructor: (element, options) ->
-      @options = options
-      @$element = $(element).on('click.dismiss.modal', '[data-dismiss="modal"]', $.proxy(@hide(), @))
-      @$backdrop = null
-      @isShown = null
-
-      if (@options.remote)
-        @$elementement.find('.modal-body').load(@options.remote)
-
-    @DEFAULTS = {
-      backdrop: true
-      keyboard: true
-      show: true
-    }
-
+    constructor: (el, options) ->
+      @options = $.extend {}, @defaults, options
+      @$el = $(el)
+      @body = $('body')
+      @isShown = false
 
     toggle: ->
-      @[(if not @isShown then 'show' else 'hide')]
+      @[(if not @isShown then @.show() else @.hide())]
+    
+    onDocumentKeyup: (event) =>
+      if event.keyCode is 27
+        @.hide()
+
+    onDocumentClick: (event) =>
+      if $(event.target).is('.modal-overlay') || $(event.target).parent().is('[data-toggle="close"]')
+        @.hide()
 
     show: ->
-      that = @
-      event = $.Event('show.furatto.modal') #register the show event for furatto modal
-      @$element.trigger(event)
+      @isShown = true
 
-      if @isShown || event.isDefaultPrevented()
-        @isShown = true
-        @escape()
-        @backdrop ->
-          transition = $.support.transition and that.$element.hasClass('fade')
+      setTimeout (=>
+        @body.addClass('modal-active')
+      ), 100
 
-          if not that.$element.parent().length
-            that.$element.appendTo(document.body)
+      @body.append "<div class='modal-popin'>#{@$el.html()}</div>"
 
-          that.$element.show()
+      @body.bind 'keyup', @.onDocumentKeyup
+      @body.bind 'click', @.onDocumentClick
 
-          if transition
-            that.$element[0].offsetWidth # force reflow
+    hide: ->
+      @isShown = false
+      @body.unbind 'keyup', @.onDocumentKeyup
+      @body.unbind 'click', @.onDocumentClick
 
-          that.$element.addClass('in').attr('aria-hidden', false)
+      @body.removeClass 'modal-active'
+      $('.modal-overlay').remove()
 
-          that.enforceFocus()
+      setTimeout (->
+        $('.modal-popin').remove()
+      ), 500
 
-          if transition
-            that.$element.one($.support.transition.end, ->
-              that.$element.focus().trigger('shown.furatto.modal')
-            )
-          else
-            that.$element.focus().trigger('shown.furatto.modal')
-
-    hide: (event) ->
-      event.preventDefault() if event
-
-      event = $.Event('hide.furatto.modal')
-  
-      @$element.trigger(event)
-
-      if not @isShown || event.isDefaultPrevented()
-        @isShown = false
-        @escape()
-
-        $(document).off('focusin.furatto.modal')
-
-        @$element.removeClass('in').attr('aria-hidden', true)
-
-        if $.support.transition and @$element.hasClass('fade')
-          @$element.one($.support.transition.end, $.proxy(@hideModal(), @)).emulateTransitionEnd(300)
-        else
-          @hideModal()
-
-    enforceFocus: ->
-      $(document)
-        .off('focusin.furatto.modal')
-        .on('focusin.furatto.modal', $.proxy (e) ->
-          if @$element[0] isnt e.target and not @$element.has(e.target).length
-            @$element.focus()
-        , @)
-
-    escape: ->
-      if @isShown and @options.keyboard
-        @$element.on('keyup.dismiss.furatto.modal', $.proxy (e) ->
-          e.which == 27 and @hide()
-        , @)
-      else if not @isShown
-        @$element.off('keyup.dismiss.furatto.modal')
-
-     hideModal: ->
-       that = @
-       @$element.hide()
-       @backdrop(->
-        that.removeBackdrop()
-        that.$element.trigger('hidden.furatto.modal')
-       )
-
-     removeBackdrop: ->
-       @$backdrop and @$backdrop.remove()
-       @$backdrop = null
-
-
-     backdrop: (callback) ->
-       that = @
-       animate = if @$element.hasClass('fade') then 'fade' else ''
-
-       if @isShown and @options.backdrop
-         doAnimate = $.support.transition and animate
-
-         @$backdrop = $("<div class='modal-backdrop #{animate}' />").appendTo(document.body)
-
-         @$element.on 'click', $.proxy (e) ->
-           if e.target isnt e.currentTarget
-             if @options.backdrop is 'static'
-               @$element[0].focus().call(@$element[0])
-             else
-               @hide.call(@)
-
-         if doAnimate then @$backdrop[0].offsetWidth
-
-         @$backdrop.addClass 'in'
-
-         if not callback
-
-           if doAnimate
-             @$backdrop
-               .one($.support.transition.end, callback)
-               .emulateTransitionEnd(150)
-             callback()
-       else if not @isShown and @$backdrop
-           @$backdrop.removeClass 'in'
-
-           if $.support.transition and @$element.hasClass 'fade'
-             @$backdrop
-               .one($.support.transition.end, callback)
-               .emulateTransitionEnd(150)
-             callback()
-       else if callback
-         callback()
-
-  old = $.fn.modal
-
-  $.fn.modal = (option) ->
+  $.fn.extend modal: (option, args...) ->
     @each ->
       $this = $(this)
-      data = $this.data('furatto.modal')
-      options = $.extend {}, Modal.DEFAULTS, $this.data(), typeof option == 'object' and option
-
-      console.log $this
+      data = $this.data('modal')
 
       if !data
-        $this.data 'furatto.modal', (data = new Modal(this, options))
+        $this.data 'modal', (data = new Modal(this, option))
       if typeof option == 'string'
-        data[option]()
-      else if options.show then data.show()
-  
-  #$.fn.modal.Constructor = Modal
+        data[option].apply(data, args)
 
-  $(document).on 'click.furatto.modal.data-api', '[data-toggle="modal"]', (e) ->
+      $('body').addClass('modal-ready')
+      $('body').append('<div class="modal-overlay"></div>')
+
+  $(document).on 'click', '[data-furatto="modal"]', (e) ->
     $this = $(this)
-    href = $this.attr('href')
-    $target = $($this.attr('data-target') or (href and href.replace(/.*(?=#[^\s]+$)/, '')))
-    option = if $target.data('modal') then 'toggle' else $.extend({ remote:!/#/.test(href) && href }, $target.data(), $this.data())
+    $target = $($this.data('target'))
+    $target.modal('toggle')
 
     e.preventDefault()
 
-    $target
-      .modal(option)
-      .one('hide', ->
-        $this.is(':visible') and $this.focus()
-      )
-
-  $body = $(document.body)
-    .on('shown.furatto.modal', '.modal', ->
-      $body.addClass('modal-open'))
-    .on('hidden.furatto.modal', '.modal', ->
-      $body.removeClass('modal-open'))
-)(window.jQuery)
+) window.jQuery, window
