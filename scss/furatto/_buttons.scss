@@ -13,8 +13,8 @@
   padding: 4px 12px;
   line-height: 20px;
   font-size: $base-font-size;
-  color: #FFF;
-  background-color: $dark-gray;
+  color: $white;
+  background-color: $inverse;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
@@ -23,11 +23,12 @@
   @include single-transition(opacity, 0.2s, ease-in-out);
   @include border-radius($base-radius);
   margin-bottom: 5px;
+  font-weight: 300;
 
   &:hover, &:focus {
     zoom: 1;
     text-decoration: none;
-    background: $gray;
+    background: $dark-inverse;
   }
 
   &.disabled, &[disabled] {
@@ -51,6 +52,11 @@
 @each $color in $colors {
   .btn-#{nth($color, 1)} {
     background-color: nth($color, 2);
+
+    @if nth($color, 1) == warning {
+      color: rgba(0,0,0,0.6);
+      font-weight: 500;
+    }
 
     &:hover, &:focus {
       background-color: nth($color, 3);

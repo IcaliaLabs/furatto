@@ -4,7 +4,7 @@
 /**
  * Variables for manage the different styles
  * 
- * Designed and built @kurenn  
+ * Designed and built @kurenn and @eldelentes  
  */
 
 /* Body */
@@ -28,19 +28,23 @@ $base-radius: 2px;
 
 //Reds
 $red: #e74c3c;
-$dark-red: #C0392B;
+$dark-red: #c0392b;
+
+//Oranges
+$orange: #F26522;
+$orange-red: #D1582C;
 
 //Hipsters
 $info: #1ABC9C;
 $dark-info: #16A085;
 
 //Inverse
-$dark-inverse: #2C3E50;
-$inverse: #34495E;
+$dark-inverse: #242730;
+$inverse: #2E323E;
 
 //Blues
-$dark-blue: #2980B9;
-$blue: #3498DB;
+$dark-blue: #328ED0;
+$blue: #38A4E3;
 
 //Grays
 $dark-gray: #7F8C8D;
@@ -52,30 +56,32 @@ $purple: #9B59B6;
 $dark-purple: #8E44AD;
 
 //Greens
-$green: #2ECC71;
-$dark-green: #27AE60;
+$green: #39C446;
+$dark-green: #33A94B;
+
+//Yellows
+$yellow: #FFD02C;
+$dark-yellow: #DCB334;
 
 //Orange
 $dark-orange: #f39c12;
 $orange: #f1c40f;
 
-//Black
-$dark-black: #232323;
-$black: lighten($dark-black, 10%);
+//Blacks
+$black: #191C20;
+$dark-black: #262626;
 
 //White
 $white: #FFF;
 
 //All colors
-$colors: primary $dark-blue $blue, //class name, bg color, hover bg color
-         success $dark-green $green,
-         danger $dark-red $red,
-         warning $dark-orange $orange,
-         inverse $dark-inverse $inverse,
-         info $dark-info $info,
-         default $dark-gray $gray,
-         funky $dark-purple $purple,
-         dark $dark-black $black;
+$colors: primary $blue $dark-blue, //class name, bg color, hover bg color
+         success $green $dark-green,
+         danger $red $dark-red,
+         warning $yellow $dark-yellow,
+         info $info $dark-info,
+         funky $purple $dark-purple,
+         dark $black $dark-black;
 
 /* Buttons */
 /* ------- */
@@ -89,6 +95,7 @@ $padding-large: 11px 19px; // 44px
 $padding-small:  2px 10px;  // 26px
 $padding-mini:   0 6px;   // 22px
 $padding-xlarge: 20px 30px; // 44px
+
 
 /* Alerts */
 /* ------ */
