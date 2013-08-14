@@ -100,7 +100,7 @@
 
 // The Grid
 @mixin grid-core($gridColumnWidth, $gridGutterWidth) {
-  .row {
+  .row-fixed {
     margin-left: $gridGutterWidth * -1;
     @include clearfix();
   }
@@ -126,7 +126,7 @@
 }
 
 @mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth) {
-  .row-fluid {
+  .row {
     width: 100%;
     @include clearfix();
     [class*="span"] {

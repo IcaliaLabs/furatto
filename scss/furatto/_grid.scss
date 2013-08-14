@@ -17,12 +17,12 @@
 
 // Reset utility classes due to specificity
 [class*="span"].hide,
-.row-fluid [class*="span"].hide {
+.row [class*="span"].hide {
   display: none;
 }
 
 [class*="span"].pull-right,
-.row-fluid [class*="span"].pull-right {
+.row [class*="span"].pull-right {
   float: right;
 }
 
@@ -45,8 +45,8 @@
     text-align: center;
   }
 
-  .row-fluid {
-    .row-fluid {
+  .row {
+    .row {
       [class*="span"] {
         background: darken($light-gray, 15%);
         @include border-radius(3px);
