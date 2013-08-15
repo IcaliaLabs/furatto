@@ -9,70 +9,70 @@
 
 /* Body */
 /* ---- */
-$bg-color: #fefefe;
+$bg-color: #fefefe !default;
 /*$bg-color: #ebe7df;*/
 
 /* Fonts */
 /* ----- */
-$font-family: 'Lato', 'Helvetica Neue';
-$base-font-size: 16px;
-$base-line-height: 20px;
-$base-font-weight: 500;
+$font-family: 'Lato', 'Helvetica Neue' !default;
+$base-font-size: 16px !default;
+$base-line-height: 20px !default;
+$base-font-weight: 500 !default;
 
 /* Border */
 /* ------ */
-$base-radius: 2px;
+$base-radius: 2px !default;
 
 /* Colors */
 /* ------ */
 
 //Reds
-$red: #e74c3c;
-$dark-red: #c0392b;
+$red: #e74c3c !default;
+$dark-red: #c0392b !default;
 
 //Oranges
-$orange: #F26522;
-$orange-red: #D1582C;
+$orange: #F26522 !default;
+$orange-red: #D1582C !default;
 
 //Hipsters
-$info: #1ABC9C;
-$dark-info: #16A085;
+$info: #1ABC9C !default;
+$dark-info: #16A085 !default;
 
 //Inverse
-$dark-inverse: #242730;
-$inverse: #2E323E;
+$dark-inverse: #242730 !default;
+$inverse: #2E323E !default;
 
 //Blues
-$dark-blue: #328ED0;
-$blue: #38A4E3;
+$dark-blue: #328ED0 !default;
+$blue: #38A4E3 !default;
 
 //Grays
-$dark-gray: #7F8C8D;
-$gray: #95a5a6;
-$light-gray: #ecf0f1;
+$dark-gray: #7F8C8D !default;
+$gray: #95a5a6 !default;
+$light-gray: #ecf0f1 !default;
 
 //Purples
-$purple: #9B59B6;
-$dark-purple: #8E44AD;
+$purple: #9B59B6 !default;
+$dark-purple: #8E44AD !default;
 
 //Greens
-$green: #39C446;
-$dark-green: #33A94B;
+$green: #39C446 !default;
+$dark-green: #33A94B !default;
 
 //Yellows
-$yellow: #FFD02C;
-$dark-yellow: #DCB334;
+$yellow: #FFD02C !default;
+$dark-yellow: #DCB334 !default;
 
 //Orange
-$dark-orange: #f39c12;
-$orange: #f1c40f;
+$dark-orange: #f39c12 !default;
+$orange: #f1c40f !default;
 
 //Blacks
-$black: #191C20;
-$dark-black: #262626;
+$black: #191C20 !default;
+$dark-black: #262626 !default;
 
 //White
-$white: #FFF;
+$white: #FFF !default;
 
 //All colors
 $colors: primary $blue $dark-blue, //class name, bg color, hover bg color
@@ -86,85 +86,85 @@ $colors: primary $blue $dark-blue, //class name, bg color, hover bg color
 /* Buttons */
 /* ------- */
 
-$font-size-large: $base-font-size * 1.25; // ~18px
-$font-size-xlarge: $base-font-size * 1.50; // ~24px
-$font-size-small: $base-font-size * 0.85; // ~12px
-$font-size-mini:  $base-font-size * 0.75; // ~11px
+$font-size-large: $base-font-size * 1.25 !default; // ~18px
+$font-size-xlarge: $base-font-size * 1.50 !default; // ~24px
+$font-size-small: $base-font-size * 0.85 !default; // ~12px
+$font-size-mini:  $base-font-size * 0.75 !default; // ~11px
 
-$padding-large: 11px 19px; // 44px
-$padding-small:  2px 10px;  // 26px
-$padding-mini:   0 6px;   // 22px
-$padding-xlarge: 20px 30px; // 44px
+$padding-large: 11px 19px !default; // 44px
+$padding-small:  2px 10px !default;  // 26px
+$padding-mini:   0 6px !default;   // 22px
+$padding-xlarge: 20px 30px !default; // 44px
 
 
 /* Alerts */
 /* ------ */
-$warning-alert-color: #d38305;
-$warning-header-color: #cc6633;
+$warning-alert-color: #d38305 !default;
+$warning-header-color: #cc6633 !default;
 
-$success-alert-color: #006633;
-$success-header-color: #006633;
+$success-alert-color: #006633 !default;
+$success-header-color: #006633 !default;
 
-$info-alert-color: #195999;
-$info-header-color: #195999;
+$info-alert-color: #195999 !default;
+$info-header-color: #195999 !default;
 
-$danger-alert-color: #993333;
-$danger-header-color: #993333;
+$danger-alert-color: #993333 !default;
+$danger-header-color: #993333 !default;
 
 /* Navbar */
 /* ------ */
-$navbar-height: 55px;
-$navbar-bg-color: #232323;
-$navbar-border: #38393a;
-$navbar-text: #eaeaea;
-$navbar-brand-color: $navbar-text;
-$navbar-link-color-active: #FFF;
-$navbar-alpha: 0.75;
+$navbar-height: 55px !default;
+$navbar-bg-color: #232323 !default;
+$navbar-border: #38393a !default;
+$navbar-text: #eaeaea !default;
+$navbar-brand-color: $navbar-text !default;
+$navbar-link-color-active: #FFF !default;
+$navbar-alpha: 0.75 !default;
 
 /* Vertical Navbar */
 /* --------------- */
-$vrt-navbar-background: #232323;
-$vrt-navbar-width: 4em;
-$vrt-navbar-height: $vrt-navbar-width;
-$vrt-navbar-lineheight: 2em;
-$vrt-navbar-border: #000;
-$vrt-navbar-links-bg: $blue;
-$vrt-navbar-links-color: #FFF;
-$vrt-navbar-li-hover: $blue;
+$vrt-navbar-background: #232323 !default;
+$vrt-navbar-width: 4em !default;
+$vrt-navbar-height: $vrt-navbar-width !default;
+$vrt-navbar-lineheight: 2em !default;
+$vrt-navbar-border: #000 !default;
+$vrt-navbar-links-bg: $blue !default;
+$vrt-navbar-links-color: #FFF !default;
+$vrt-navbar-li-hover: $blue !default;
 
 /* Inputs */
 /* ------ */
-$input-color: #34495e;
-$input-border-radius: 2px;
-$input-bg: #FFF;
-$input-border-color: #CCC;
-$input-focus-color: $blue;
+$input-color: #34495e !default;
+$input-border-radius: 2px !default;
+$input-bg: #FFF !default;
+$input-border-color: #CCC !default;
+$input-focus-color: $blue !default;
 
 /* Tables */
 /* ------ */
-$table-color: #FFF;
-$table-header-primary: $dark-blue;
-$table-border-color: #d2d2d2;
-$table-striped-color: #f9f9f9;
+$table-color: #FFF !default;
+$table-header-primary: $dark-blue !default;
+$table-border-color: #d2d2d2 !default;
+$table-striped-color: #f9f9f9 !default;
 
 /* Responsive Navbar */
 /* ----------------- */
-$nav-bar-collapse-width: 979px;
-$nav-bar-collapse-width-desktop: $nav-bar-collapse-width + 1;
+$nav-bar-collapse-width: 979px !default;
+$nav-bar-collapse-width-desktop: $nav-bar-collapse-width + 1 !default;
 
 /* Images */
 /* ------ */
-$img-border: $dark-green;
+$img-border: $dark-green !default;
 
 /* Select */
 /* ------ */
-$select-bg: $dark-info;
-$select-text-color: #FFF;
+$select-bg: $dark-info !default;
+$select-text-color: #FFF !default;
 $select-options-bg: $inverse;
 
 /* Checkbox and radio buttons */
 /* -------------------------- */
-$ch-rb-color: $dark-info;
+$ch-rb-color: $dark-info !default;
 
 /* Grid */
 /* ---- */
@@ -202,74 +202,74 @@ $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768) 
 
 /* Forms */
 /* ----- */
-$inputHeight: $base-line-height + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
+$inputHeight: $base-line-height + 10px !default; // base line-height + 8px vertical padding + 2px top/bottom border
 
 /* Footer */
 /* ------ */
-$footer-bg: lighten($navbar-bg-color, 0.5);
+$footer-bg: lighten($navbar-bg-color, 0.5) !default;
 $footer-text-color: #FFF;
 $footer-height: 80px;
 
 /* Icons */
 /* ----- */
-$icon-base-color: $dark-inverse;
-$icon-base-inverse-color: #FFF;
-$icon-small-size: 2em;
-$icon-medium-size: 4em;
-$icon-large-size: 6em;
-$icon-xlarge-size: 8em;
-$icon-xxlarge-size: 10em;
+$icon-base-color: $dark-inverse !default;
+$icon-base-inverse-color: #FFF !default;
+$icon-small-size: 2em !default;
+$icon-medium-size: 4em !default;
+$icon-large-size: 6em !default;
+$icon-xlarge-size: 8em !default;
+$icon-xxlarge-size: 10em !default;
 
 
 /* Links */
 /* ----- */
-$link-color: #0088cc;
+$link-color: #0088cc !default;
 
 /* Headings */
 /* -------- */
-$headings-color: #4b4b4b;
+$headings-color: #4b4b4b !default;
 
 /* Color Lists */
 /* ----------- */
-$color-list-item-height: 16px;
-$color-list-item-width: $color-list-item-height;
+$color-list-item-height: 16px !default;
+$color-list-item-width: $color-list-item-height !default;
 
 /* Pagination */
 /* ---------- */
-$pagination-color: desaturate(lighten($inverse, 57.5%), 17%);
+$pagination-color: desaturate(lighten($inverse, 57.5%), 17%) !default;
 
 /* Toolbars */
 /* -------- */
-$toolbar-bg-color: #232323;
+$toolbar-bg-color: #232323 !default;
 
 /* Dropdown */
 /* -------- */
 $zindex-dropdown: 1000 !default;
 $dropdown-bg: $white !default;
-$dropdown-border: rgba(0,0,0,0.2);
+$dropdown-border: rgba(0,0,0,0.2) !default;
 $dropdown-link-color: $dark-gray !default;
 $dropdown-link-color-hover: $white !default;
-$dropdown-link-color-hover-bg: lighten($blue, 10%);
+$dropdown-link-color-hover-bg: lighten($blue, 10%) !default;
 
 /* Code */
 /*---------------------*/
-$code-bg: #fafafa;
-$code-font-size: 0.8em;
+$code-bg: #fafafa !default;
+$code-font-size: 0.8em !default;
 
 /* Calendar */
 /*---------------------*/
-$calendar-highlight-color: #b1dcfb;
-$calendar-highlighted-color: #0089ec;
+$calendar-highlight-color: #b1dcfb !default;
+$calendar-highlighted-color: #0089ec !default;
 
 
 /* Container center */
 /*---------------------*/
-$container-center-width: 80%;
+$container-center-width: 80% !default;
 
 /* Modal */
 /*---------------------*/
-$modal-width: 560px;
-$modal-height: 424px;
+$modal-width: 560px !default;
+$modal-height: 424px !default;
 
 /* Font Awesome Icons */
 /* ------------------ */
@@ -280,7 +280,7 @@ $borderColor: #eeeeee !default;
 $iconMuted: #eeeeee !default;
 $iconLight: white !default;
 $iconDark: #333333 !default; //1d1d1b
-$icons-li-width: (30em/14);
+$icons-li-width: (30em/14) !default;
 
 $glass: "\f000";
 $music: "\f001";
