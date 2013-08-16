@@ -95,12 +95,10 @@
 .navbar .nav > .active > a:focus {
   color: $navbar-link-color-active;
   text-decoration: none;
-  position: relative;
-  top: -2px;
 }
 
 .navbar .nav > .active {
-  border-top: 2px solid $green;
+  border-bottom: 2px solid $green;
 }
 
 // Navbar button for toggling navbar items in responsive layouts
