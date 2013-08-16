@@ -38,6 +38,9 @@ $orange-red: #D1582C !default;
 $info: #1ABC9C !default;
 $dark-info: #16A085 !default;
 
+$aqua: #00CA74;
+$dark-aqua: #03AE72;
+
 //Inverse
 $dark-inverse: #242730 !default;
 $inverse: #2E323E !default;
@@ -75,17 +78,22 @@ $dark-black: #262626 !default;
 $white: #FFF !default;
 
 //All colors
-$colors: primary $blue $dark-blue, //class name, bg color, hover bg color
+$colors: info $blue $dark-blue, //class name, bg color, hover bg color
          success $green $dark-green,
          danger $red $dark-red,
          warning $yellow $dark-yellow,
-         info $info $dark-info,
+         primary $inverse $dark-inverse,
          funky $purple $dark-purple,
-         dark $black $dark-black;
+         highlight $aqua $dark-aqua;
+
+/* Jumbo */
+/* ------- */
+
+$jumbo-container-bg-color: #3498d9;
+$jumbo-container-bg-gradient: #67b2e3;
 
 /* Buttons */
 /* ------- */
-
 $font-size-large: $base-font-size * 1.25 !default; // ~18px
 $font-size-xlarge: $base-font-size * 1.50 !default; // ~24px
 $font-size-small: $base-font-size * 0.85 !default; // ~12px
