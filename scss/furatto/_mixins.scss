@@ -252,3 +252,19 @@
     }
   }
 }
+
+@mixin btn-shadow($color, $index: 1, $limit: 100) {
+  $shadow: '';
+
+  @for $i from $index through $limit {
+    $alpha: 1 - ($i / $limit);
+    @if $i < $limit {
+      $shadow: $shadow + $i * -1 + 'px ' + $i + 'px ' + rgba($color, $alpha) + ',';
+    } @else {
+      $shadow: $shadow + $i * -1 + 'px ' + $i + 'px ' + rgba($color, $alpha);
+    }
+  }
+  $shadow: unquote($shadow);
+  @include box-shadow($shadow);
+  
+}

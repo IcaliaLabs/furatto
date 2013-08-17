@@ -34,31 +34,82 @@ html, body {
 
 /* Jumbo Header */
 /*--------------------------------------*/
-.furatto-jumbo-header {
-  min-height: 300px;
-  width: 100%;
-  display: block;
-  text-align: center;
-  color: $dark-black;
-  padding-bottom: 15px;
-  padding-top: 15px;
 
-  .furatto-jumbo-container {
-    width: 80%;
-    margin: 0 auto;
-  }
+.jumbo-container {
+  @include background-image(linear-gradient(left, $jumbo-container-bg-color, $jumbo-container-bg-gradient));
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 80px;
 
   .jumbo-header {
-    font-size: 100px;
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 300;
+    margin: 0;
+    font-size: 50px;
+    color: $navbar-bg-color;
+    margin-bottom: 60px;
+    font-weight: 700;
+
+    .jumbo-header-version {
+      color: $white;
+      font-size: 30px;
+    }
   }
 
   .motto {
-    font-size: 40px;
-    font-weight: lighter;
-    margin: 0 0 15px 0;
+    color: $white;
+    text-shadow: 0px 2px 0px rgba(0,0,0, 0.3);
+    font-size: 33px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+  }
+}
+
+/* Shadow */
+/*--------*/
+.btn-shadow {
+  @include btn-shadow(#2771a2, $index: 1, $limit: 91);
+}
+
+.row-primary {
+  background: #093857;
+  color: $white;
+
+  ul.inline {
+    li {
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+.row-info {
+  background: #3498d9;
+  padding: 10px 0px;
+
+  * {
+    color: $white;
+  }
+}
+
+.features {
+  margin-bottom: 40px;
+}
+
+.add-ons {
+  @include transform(skewY(2deg));
+
+  * {
+    @include transform(skewY(-2deg));
+  }
+}
+
+.powered {
+  span {
+    position: relative;
+    top: -10px;
+    margin-right: 8px;
   }
 }
 
@@ -69,18 +120,23 @@ html, body {
   width: 80%;
   margin: 0 auto;
 
+  .img-container {
+    height: 182px;
+  }
+
   .furatto-steps-header {
-    color: #232323;
-    font-size: 50px;
-    font-weight: lighter;
+    color: #0f0f0f;
+    font-size: 48px;
+    font-weight: 200;
+    margin: 45px 0px 70px 0px;
   }
 
   .step-header {
-    color: #666;
+    color: #093857;
   }
 
   .step-desc {
-    color: #5a5a5a;
+    color: #454545;
     width: 80%;
     margin: 0 auto;
   }
@@ -153,10 +209,6 @@ hr {
 
 .hide {
   display: none;
-}
-
-.furatto-block {
-  @include clearfix;
 }
 
 //Floats
