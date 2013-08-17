@@ -58,13 +58,13 @@
   float: left;
   display: block;
   margin-right: 20px;
+  font-weight: 500;
 
   /*Vertically center the text given $navbar-height*/
   padding: (($navbar-height - $base-line-height) / 2) 20px (($navbar-height - $base-line-height) / 2);
 
   margin-left: -20px; /*negative indent to left-align the text down the page*/
   font-size: 20px;
-  font-weight: 200;
   color: $navbar-brand-color;
 
   &:hover,
