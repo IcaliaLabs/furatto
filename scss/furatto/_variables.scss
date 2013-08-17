@@ -9,7 +9,7 @@
 
 /* Body */
 /* ---- */
-$bg-color: #fefefe !default;
+$bg-color: #f8f8f8 !default;
 /*$bg-color: #ebe7df;*/
 
 /* Fonts */
@@ -213,9 +213,10 @@ $inputHeight: $base-line-height + 10px !default; // base line-height + 8px verti
 
 /* Footer */
 /* ------ */
-$footer-bg: lighten($navbar-bg-color, 0.5) !default;
-$footer-text-color: #FFF;
+$footer-text-color: #232323;
+$footer-anchor-color: #777;
 $footer-height: 80px;
+$footer-anchor-size: 13px;
 
 /* Icons */
 /* ----- */
