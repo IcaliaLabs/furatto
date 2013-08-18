@@ -71,38 +71,9 @@ html, body {
   @include btn-shadow(#2771a2, $index: 1, $limit: 91);
 }
 
-.row-primary {
-  background: #093857;
-  color: $white;
-
-  ul.inline {
-    li {
-      a {
-        color: $white;
-      }
-    }
-  }
-}
-
-.row-info {
-  background: #3498d9;
-  padding: 10px 0px;
-
-  * {
-    color: $white;
-  }
-}
-
 .features {
   margin-bottom: 40px;
-}
-
-.add-ons {
-  @include transform(skewY(2deg));
-
-  * {
-    @include transform(skewY(-2deg));
-  }
+  margin-top: 50px;
 }
 
 .powered {
@@ -122,6 +93,26 @@ html, body {
 
   .img-container {
     height: 182px;
+    position: relative;
+
+    &.screens-img-container {
+      img {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        margin-left: -78px;
+        width: 156px;
+      }
+    }
+    &.shapes-img-container {
+      img {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        margin-left: -66px;
+        width: 132px;
+      }
+    }
   }
 
   .furatto-steps-header {
