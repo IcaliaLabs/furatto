@@ -103,6 +103,7 @@ $padding-large: 11px 19px !default; // 44px
 $padding-small:  2px 10px !default;  // 26px
 $padding-mini:   0 6px !default;   // 22px
 $padding-xlarge: 20px 30px !default; // 44px
+$padding-xxlarge: 20px 50px !default; // 44px
 
 
 /* Alerts */
@@ -272,7 +273,7 @@ $dropdown-link-color-hover-bg: lighten($blue, 10%) !default;
 
 /* Code */
 /*---------------------*/
-$code-bg: #fafafa !default;
+$code-bg: #ebebeb !default;
 $code-font-size: 0.8em !default;
 
 /* Calendar */
