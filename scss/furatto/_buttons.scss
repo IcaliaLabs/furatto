@@ -109,3 +109,6 @@
   margin-top: 5px;
 }
 
+input[type="submit"] {
+  @extend .btn;
+}

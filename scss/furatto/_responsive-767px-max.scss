@@ -55,4 +55,14 @@
   .row [class*="offset"]:first-child {
     margin-left: 0;
   }
+
+  .horizontal-form .furatto-controls {
+    label {
+      text-align: left;
+    }
+  }
+
+  .horizontal-form .furatto-actions {
+    margin-left: 0;
+  }
 }
