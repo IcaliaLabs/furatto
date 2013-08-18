@@ -211,6 +211,17 @@ $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768) 
 /* ----- */
 $inputHeight: $base-line-height + 10px !default; // base line-height + 8px vertical padding + 2px top/bottom border
 
+/* Dashboard */
+/* --------- */
+$dashboard-primary-bg-color: #3399CC;
+$dashboard-info-bg-color: #33CCCC;
+$dashboard-funky-bg-color: #996699;
+$dashboard-danger-bg-color: #C24747;
+$dashboard-warning-bg-color: #e2674a;
+$dashboard-success-bg-color: #339966;
+$dashboard-inverse-bg-color: $dark-black;
+
+
 /* Footer */
 /* ------ */
 $footer-text-color: #232323;
