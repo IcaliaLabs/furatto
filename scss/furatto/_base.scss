@@ -65,6 +65,29 @@ html, body {
   }
 }
 
+.section-jumbo-container {
+  @include background-image(linear-gradient(left, $jumbo-container-bg-color, $jumbo-container-bg-gradient));
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .jumbo-header {
+    margin: 0;
+    font-size: 50px;
+    color: #093857;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .motto {
+    color: $white;
+    font-size: 26px;
+    font-weight: 200;
+    margin: 0;
+  }
+  
+}
+
 /* Shadow */
 /*--------*/
 .btn-shadow {
@@ -126,11 +149,6 @@ html, body {
     color: #093857;
   }
 
-  .step-desc {
-    color: #454545;
-    width: 80%;
-    margin: 0 auto;
-  }
 }
 
 hr {
