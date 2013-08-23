@@ -179,6 +179,12 @@
   
 }
 
+.navbar-inverse {
+  [data-toggle="panel"] {
+    color: $navbar-inverse-text;
+  }
+}
+
 @media (min-width: $nav-bar-collapse-width-desktop) {
 
   // Required to make the collapsing navbar work on regular desktops

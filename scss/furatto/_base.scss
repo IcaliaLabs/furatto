@@ -26,6 +26,8 @@ a {
 
 html, body {
   background-color: $bg-color;
+  height: 100%;
+  overflow-x:hidden;
 }
 
 .with-left-navbar {
@@ -36,17 +38,16 @@ html, body {
 /*--------------------------------------*/
 
 .jumbo-container {
-  @include background-image(linear-gradient(left, $jumbo-container-bg-color, $jumbo-container-bg-gradient));
   text-align: center;
-  padding-top: 118px;
+  padding-top: 80px;
   padding-bottom: 80px;
 
   .jumbo-header {
     margin: 0;
-    font-size: 50px;
-    color: $navbar-bg-color;
+    font-size: 60px;
+    color: $white;
     margin-bottom: 60px;
-    font-weight: 700;
+    font-weight: 300;
 
     .jumbo-header-version {
       color: $white;
@@ -56,11 +57,8 @@ html, body {
 
   .motto {
     color: $white;
-    text-shadow: 0px 2px 0px rgba(0,0,0, 0.3);
-    font-size: 33px;
-    font-style: italic;
+    font-size: 2em;
     font-weight: 300;
-    letter-spacing: 2px;
     margin-bottom: 60px;
   }
 }

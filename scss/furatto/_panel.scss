@@ -17,8 +17,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  width: auto;
   height: auto;
+  overflow: hidden;
 }
 
 .panel {
@@ -84,7 +84,7 @@
 }
 
 .panels, .panel {
-	background: $navbar-bg-color;
+	background: $bg-color;
 }
 
 .panel {
@@ -226,4 +226,11 @@
   text-decoration: none;
   color: #ccc;
   text-indent: 20px;
+}
+
+/* Inverse panel */
+/* ------------- */
+
+.panel-inverse > li > a {
+  color: #FFF;
 }

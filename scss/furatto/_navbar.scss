@@ -183,3 +183,21 @@
   }
 }
 
+/* Navbar Inverse */
+/* -------------- */
+
+.navbar-inverse {
+  .navbar-inner {
+    background: $navbar-inverse-bg-color;
+  }
+
+  .nav > li > a {
+    font-weight: 400;
+    color: $navbar-inverse-text;
+  }
+
+  .brand {
+    color: $navbar-inverse-text;
+    font-weight: 400;
+  }
+}
