@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="{{#index}}docs-body{{/index}}">
 <head>
 <meta charset=utf-8 />
 <title>{{title}}</title>
@@ -7,15 +7,15 @@
 <link rel="stylesheet" href="assets/css/furatto.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="{{#index}}docs-body{{/index}}">
 
-<div class="panels">
-  <div class="panel panel-left">
+<div class="panels {{#index}}docs-panels{{/index}}">
+  <div class="panel panel-inverse panel-left docs-panel">
   </div>
 </div>
 
-<div class="panel-content">
-  <div class="navbar inverse-navbar navbar-fixed-top">
+<div class="panel-content {{#index}}docs-body{{/index}}">
+  <div class="navbar navbar-inverse navbar-fixed-top" style="opacity:0">
     <div class="navbar-inner">
       <div class="container">
         <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
@@ -74,13 +74,14 @@
     </div>
   </div>
   {{>body}}
-<div class="row footer">
-  <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="link">Apache License v2.0</a></p>
+  <div class="row footer {{#index}}docs-footer{{/index}}">
+  <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="docs-license">Apache License v2.0</a></p>
   <ul class="inline">
     <li><a href="index.html">Home</a></li>
     <li><a href="assets/furatto.zip">Download</a></li>
     <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
     <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+    <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
   </ul>
 </div>
 
