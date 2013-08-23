@@ -32,3 +32,11 @@ jQuery ->
       $(@).animate({ width: current_width + 20}, 'slow')
     $(@).blur ->
       $(@).animate({ width: current_width }, 'slow')
+
+  if $(window).width() > 979
+    setTimeout (->
+      $('.navbar').animate({"opacity":1}, 1000)
+    ), 800
+  else
+    $('.navbar').css
+      "opacity":1
