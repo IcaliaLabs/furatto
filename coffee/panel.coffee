@@ -29,6 +29,11 @@
     toggle_scroll: ->
       @snapper.on 'close', ->
         $('html, body').toggleClass 'noscroll'
+      @snapper.on 'open', ->
+        $('.panel').removeClass 'hide'
+      @snapper.on 'animated', =>
+        if @snapper.state().state is 'closed'
+          $('.panel').addClass 'hide'
 
     append_menu_to_panel: ->
       $('.panel-left').html(@menu.html())
@@ -57,6 +62,7 @@
 
   $(document).ready ->
     $('.panel-content').panel 'toggle_scroll'
+    $('.panel').addClass 'hide'
 
 
 ) window.jQuery, window
