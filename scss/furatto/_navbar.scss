@@ -98,7 +98,7 @@
 }
 
 .navbar .nav > .active {
-  border-bottom: 2px solid $green;
+  /*border-bottom: 2px solid $green;*/
 }
 
 // Navbar button for toggling navbar items in responsive layouts
@@ -133,7 +133,7 @@
 
 // Dividers in navbar
 .divider-vertical {
-  height: $navbar-height + 2; /*Fix for the navbar*/
+  height: $navbar-height; /*Fix for the navbar*/
   margin: 0 9px;
   border-left: 1px solid $navbar-border;
 }
@@ -187,6 +187,7 @@
 /* -------------- */
 
 .navbar-inverse {
+  border-bottom: 1px solid #BBB;
   .navbar-inner {
     background: $navbar-inverse-bg-color;
   }
@@ -200,4 +201,12 @@
     color: $navbar-inverse-text;
     font-weight: 400;
   }
+}
+
+// Active nav items
+.navbar-inverse .nav > .active > a,
+.navbar-inverse .nav > .active > a:hover,
+.navbar-inverse .nav > .active > a:focus {
+  color: #555;
+  background: #efefef;
 }
