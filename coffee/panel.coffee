@@ -24,16 +24,16 @@
       @options = $.extend options, { element: el }
       @snapper = new Snap @options
       @menu = $($('[data-toggle="panel"]').data('target'))
+      @apply_ios_devices_fix()
       @append_menu_to_panel()
+
+    apply_ios_devices_fix: ->
+      if navigator.userAgent.match(/(iPad|iPhone|iPod)/g)
+        $('.panel-content').css 'overflow':'visible'
 
     toggle_scroll: ->
       @snapper.on 'close', ->
         $('html, body').toggleClass 'noscroll'
-      @snapper.on 'open', ->
-        $('.panel').removeClass 'hide'
-      @snapper.on 'animated', =>
-        if @snapper.state().state is 'closed'
-          $('.panel').addClass 'hide'
 
     append_menu_to_panel: ->
       $('.panel-left').html(@menu.html())
@@ -62,7 +62,6 @@
 
   $(document).ready ->
     $('.panel-content').panel 'toggle_scroll'
-    $('.panel').addClass 'hide'
 
 
 ) window.jQuery, window

@@ -6,7 +6,6 @@
   left: 0;
   width: auto;
   height: auto;
-  -webkit-overflow-scrolling: touch;
   padding-top: $navbar-height;
 }
 
@@ -18,7 +17,7 @@
   bottom: 0;
   left: 0;
   height: auto;
-  overflow: hidden;
+  width: auto;
 }
 
 .panel {
@@ -30,7 +29,6 @@
   width: 265px;
   height: auto;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   @include transition(width 0.3s ease);
 }
 

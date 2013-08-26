@@ -201,6 +201,10 @@
     color: $navbar-inverse-text;
     font-weight: 400;
   }
+
+  .divider-vertical {
+    border-left: 1px solid #EEE;
+  }
 }
 
 // Active nav items

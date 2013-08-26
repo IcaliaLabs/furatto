@@ -23,16 +23,10 @@
   /*Unfix top navbar*/
   /*Remove any padding from the body */
   
-  body {
-    padding: 0px;
-  }
-
   .navbar {
     .menu-trigger {
       float: left;
       display: block;
-      /*width: 18px;*/
-      /*padding: 7px 10px;*/
       margin-left: 5px;
       margin-right: 5px;
       color: $navbar-text;
@@ -183,6 +177,23 @@
   [data-toggle="panel"] {
     color: $navbar-inverse-text;
   }
+}
+
+.panel-content, .panel-left, .panel-content {
+  position: absolute;
+}
+
+.panel-content {
+  z-index: 2;
+  overflow: auto;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.panels {
+  position: absolute;
 }
 
 @media (min-width: $nav-bar-collapse-width-desktop) {
