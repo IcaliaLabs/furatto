@@ -227,10 +227,10 @@ $dashboard-inverse-bg-color: $dark-black;
 
 /* Footer */
 /* ------ */
-$footer-text-color: #232323;
-$footer-anchor-color: #777;
-$footer-height: 80px;
-$footer-anchor-size: 13px;
+$footer-text-color: #232323 !default;
+$footer-anchor-color: #777 !default;
+$footer-height: 80px !default;
+$footer-anchor-size: 13px !default;
 
 /* Icons */
 /* ----- */
