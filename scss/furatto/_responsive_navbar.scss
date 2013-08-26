@@ -186,6 +186,11 @@
 .panel-content {
   z-index: 2;
   overflow: auto;
+
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer 10+ */
 }
 
 html, body {
