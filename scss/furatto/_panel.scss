@@ -168,9 +168,8 @@
   .nav > .active,
   .nav > .active,
   .nav > .active {
-    color: $navbar-link-color-active;
-    text-decoration: none;
-    border-left: 2px solid $green;
+    color: #555;
+    background: #efefef;
 
     &:before {
       content: ' ';
@@ -229,6 +228,8 @@
 /* Inverse panel */
 /* ------------- */
 
-.panel-inverse > li > a {
-  color: #FFF;
+.panel-inverse .nav > li > a {
+  color: #0088cc;
+  text-shadow: 0 0 0;
+  font-weight: 400;
 }
