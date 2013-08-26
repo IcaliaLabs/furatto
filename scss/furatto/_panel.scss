@@ -234,20 +234,28 @@
 /* ------------- */
 
 .panel-inverse {
-  background: #FFF;
+  background: $panel-inverse-bg;
+
+  .nav > li {
+    border-bottom: 1px solid #CCC;
+  }
 
   .nav > .active {
-    color: #555;
-    background: #efefef;
+    color: $panel-inverse-active-color;
+    background: $panel-inverse-active-bg;
+
+    a {
+      color: $panel-inverse-active-color;
+    }
   }
 
   &.panel {
-    background: #FFF;
+    background: $panel-inverse-bg;
   }
 }
 
 .panel-inverse .nav > li > a {
-  color: #0088cc;
+  color: $panel-inverse-link-color;
   text-shadow: 0 0 0;
   font-weight: 400;
 }
@@ -256,6 +264,6 @@
 .navbar-inverse .nav > .active > a,
 .navbar-inverse .nav > .active > a:hover,
 .navbar-inverse .nav > .active > a:focus {
-  color: #555;
-  background: #efefef;
+  color: $panel-inverse-active-color;
+  background: $panel-inverse-active-bg;
 }
