@@ -34,6 +34,14 @@
       line-height: $base-line-height;
       padding-top: $base-line-height - 5;
       margin-bottom: 7px; /*compensate the navbar height*/
+
+      //Prevent text selection
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: -moz-none;
+      -ms-user-select: none;
+      user-select: none;
     }
   }
 
