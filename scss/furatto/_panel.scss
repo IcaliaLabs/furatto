@@ -81,8 +81,8 @@
   background: $bg-color;
 }
 
-.panels, .panel {
-	background: $bg-color;
+.panel {
+	background: $navbar-bg-color;
 }
 
 .panel {
@@ -168,8 +168,13 @@
   .nav > .active,
   .nav > .active,
   .nav > .active {
-    color: #555;
-    background: #efefef;
+    background: #FFF;
+    color: #0088cc;
+
+    a {
+      color: #0088cc;
+      text-shadow: 0 0 0;
+    }
 
     &:before {
       content: ' ';
@@ -228,8 +233,29 @@
 /* Inverse panel */
 /* ------------- */
 
+.panel-inverse {
+  background: #FFF;
+
+  .nav > .active {
+    color: #555;
+    background: #efefef;
+  }
+
+  &.panel {
+    background: #FFF;
+  }
+}
+
 .panel-inverse .nav > li > a {
   color: #0088cc;
   text-shadow: 0 0 0;
   font-weight: 400;
+}
+
+// Active nav items
+.navbar-inverse .nav > .active > a,
+.navbar-inverse .nav > .active > a:hover,
+.navbar-inverse .nav > .active > a:focus {
+  color: #555;
+  background: #efefef;
 }
