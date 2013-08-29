@@ -9,20 +9,20 @@
  */
 
 
-// Fixed (940px)
-@include grid-core($gridColumnWidth, $gridGutterWidth);
+/*[>// Fixed (940px)<]*/
+/*[>@include grid-core($gridColumnWidth, $gridGutterWidth);<]*/
 
-// Fluid (940px)
-@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth);
+/*[>// Fluid (940px)<]*/
+/*[>@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth);<]*/
 
 // Reset utility classes due to specificity
-[class*="span"].hide,
-.row [class*="span"].hide {
+[class*="col-"].hide,
+.row [class*="col-"].hide {
   display: none;
 }
 
-[class*="span"].pull-right,
-.row [class*="span"].pull-right {
+[class*="col-"].pull-right,
+.row [class*="col-"].pull-right {
   float: right;
 }
 
@@ -30,7 +30,7 @@
 .grid-demo {
   margin-bottom: 10px;
 
-  [class*="span"] {
+  [class*="col-"] {
     background: $light-gray;
     @include border-radius(3px);
     text-align: center;
@@ -40,17 +40,54 @@
 
 .nested-grid-demo {
   background: $light-gray;
-  [class*="span"] {
+  [class*="col-"] {
     padding-bottom: 10px;
     text-align: center;
   }
 
   .row {
     .row {
-      [class*="span"] {
+      [class*="col-"] {
         background: darken($light-gray, 15%);
         @include border-radius(3px);
       }
     }
+  }
+}
+
+.row {
+  text-rendering: optimizespeed;
+  @include clearfix();
+
+  [class*="col-"]:first-child {
+    margin-left: 0px;
+  }
+
+}
+
+//Borders and paddings are applied inside the div element
+//This prevents the columns to stack by a border or padding
+[class*="col-"] {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  float: left;
+  padding: 8px;
+}
+
+@include build-column-grids;
+
+@media (max-width: 767px) {
+  .row > [class *= "col-"] {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2px;
   }
 }
