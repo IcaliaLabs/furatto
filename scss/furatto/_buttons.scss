@@ -21,7 +21,7 @@
   border: none;
   margin: 0;
   @include single-transition(opacity, 0.2s, ease-in-out);
-  @include border-radius($base-radius + 3);
+  @include border-radius($base-radius);
   margin-bottom: 5px;
   font-weight: 300;
 
@@ -121,22 +121,13 @@
   padding-right: 0px;
 }
 
-/*.btn-alpha {*/
-  /*border: 1px solid $white;*/
-  /*background: rgba(0,0,0,0.0);*/
-
-  /*&:hover {*/
-    /*background: $white;*/
-    /*color: $blue;*/
-  /*}*/
-/*}*/
-
 /* Vertical separation */
 /*----------------------*/
 .btn-block + .btn-block {
   margin-top: 5px;
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[type="reset"] {
   @extend .btn;
 }
