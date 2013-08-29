@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    $DOCS
+\*------------------------------------*/
+/**
+ * Basic documentation structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+.docs-body, .docs-panels {
+  background: #2980b9;
+  height: 100%;
+}
+
+.docs-white-text {
+  * {
+    color: #FFF !important;
+  }
+}
+
+.docs-footer {
+  * {
+    color: #FFF !important;
+  }
+
+  .docs-license { 
+    color: #BDE4FF !important;
+  }
+}
+
+.docs-navbar {
+  box-shadow: 0 1px 0 rgba(255,255,255,.1);
+  border-bottom: 1px solid $dark-blue;
+}
+
+/* Jumbo Header */
+/*--------------------------------------*/
+
+.jumbo-container {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .jumbo-header {
+    margin: 0;
+    font-size: 60px;
+    color: $white;
+    margin-bottom: 60px;
+    font-weight: 300;
+
+    .jumbo-header-version {
+      color: $white;
+      font-size: 30px;
+    }
+  }
+
+  .motto {
+    color: $white;
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 60px;
+  }
+}
+
+.section-jumbo-container {
+  @include background-image(linear-gradient(left, $jumbo-container-bg-color, $jumbo-container-bg-gradient));
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .jumbo-header {
+    margin: 0;
+    font-size: 50px;
+    color: #093857;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .motto {
+    color: $white;
+    font-size: 26px;
+    font-weight: 200;
+    margin: 0;
+  }
+  
+}
+
+.panel-content {
+  border-left: 1px solid #CCC;
+}
