@@ -67,6 +67,7 @@
   text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
+  margin-bottom: 25px;
 
   .jumbo-header {
     margin: 0;
@@ -87,4 +88,14 @@
 
 .panel-content {
   border-left: 1px solid #CCC;
+}
+
+.docs-navbar-menu {
+  float: none !important;
+  margin: 0 auto !important;
+  width: $container-center-width;
+}
+
+.docs-navbar-inner {
+  padding-left: 0px !important;
 }
