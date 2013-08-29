@@ -9,7 +9,7 @@
 
 /* Body */
 /* ---- */
-$bg-color: #f8f8f8 !default;
+$bg-color: #FFF !default;
 /*$bg-color: #ebe7df;*/
 
 /* Fonts */
@@ -184,43 +184,9 @@ $select-options-bg: $inverse;
 /* -------------------------- */
 $ch-rb-color: $dark-info !default;
 
-/* Grid */
-/* ---- */
-
-// Default 940px grid
-// -------------------------
-$gridColumns:             12 !default;
-$gridColumnWidth:         60px !default;
-$gridGutterWidth:         20px !default;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
-
-// 1200px min
-$gridColumnWidth1200:     70px !default;
-$gridGutterWidth1200:     30px !default;
-$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1)) !default;
-
-// 768px-979px
-$gridColumnWidth768:      42px !default;
-$gridGutterWidth768:      20px !default;
-$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) !default;
-
-
-/* Fluid grid */
-/* ---------- */
-$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth) !default;
-$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth) !default;
-
-// 1200px min
-$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200) !default;
-$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200) !default;
-
-// 768px-979px
-$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768) !default;
-$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768) !default;
-
 /* Forms */
 /* ----- */
-$inputHeight: $base-line-height + 10px !default; // base line-height + 8px vertical padding + 2px top/bottom border
+$input-height: $base-line-height + 10px !default; // base line-height + 8px vertical padding + 2px top/bottom border
 
 /* Dashboard */
 /* --------- */
@@ -294,7 +260,7 @@ $calendar-highlighted-color: #0089ec !default;
 
 /* Container center */
 /*---------------------*/
-$container-center-width: 80% !default;
+$container-center-width: 98% !default;
 
 /* Modal */
 /*---------------------*/
