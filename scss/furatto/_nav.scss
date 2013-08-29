@@ -81,3 +81,57 @@
 .nav-list .divider {
   @include nav-divider();
 }
+
+//Bordered navigation
+.nav {
+  &.nav-bordered {
+    background: #efefef;
+    border: 1px solid #b7b7b7;
+    font-size: 16px;
+
+    li {
+      &:hover {
+        background: #e2e2e2;
+      }
+      a {
+        padding: 0.9375em;
+        color: #666;
+      }
+
+      &.nav-header {
+        color: #666;
+        padding: 0.9375em;
+        border-bottom: 1px solid #b7b7b7;
+        font-weight: bold;
+
+        &:hover {
+          background: #efefef;
+        }
+      }
+
+      ul {
+        @extend .nav;
+        display: none;
+        background: $white;
+        margin-bottom: 0px;
+
+        li {
+          padding-left: 0.8em;
+          &:hover {
+            background: $white;
+          }
+          a {
+            color: $link-color;
+            padding: 0.6em;
+          }
+        }
+      }
+    }
+
+    li.nav-divider {
+      border-bottom: 1px solid #b7b7b7;
+      margin: 3px auto;
+      background: #b7b7b7;
+    }
+  }
+}
