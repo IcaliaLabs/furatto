@@ -22,7 +22,6 @@
 //General css for layout
 @import 'furatto/base';
 
-
 //Buttons
 @import 'furatto/buttons';
 
@@ -39,7 +38,7 @@
 @import 'furatto/navbar';
 
 //Vertical navbar
-@import 'furatto/vrt_navbar';
+/*@import 'furatto/vrt_navbar';*/
 
 //Forms
 @import 'furatto/forms';
@@ -52,7 +51,7 @@
 @import 'furatto/images';
 
 //Selects
-@import 'furatto/select';
+/*@import 'furatto/select';*/
 
 //Check box/Radio buttons
 @import 'furatto/checkbox_radio_buttons';
@@ -78,7 +77,7 @@
 //DatePicker
 @import 'furatto/date_picker';
 @import 'furatto/date_picker.date';
-@import 'furatto/date_picker.time';
+/*@import 'furatto/date_picker.time';*/
 
 //Toolbar
 @import 'furatto/toolbars';
@@ -97,9 +96,9 @@
 
 //Grid
 @import 'furatto/grid';
-@import 'furatto/responsive-1200px-min';
-@import 'furatto/responsive-768px-979px';
-@import 'furatto/responsive-767px-max';
+/*@import 'furatto/responsive-1200px-min';*/
+/*@import 'furatto/responsive-768px-979px';*/
+/*@import 'furatto/responsive-767px-max';*/
 @import 'furatto/responsive_navbar';
 @import 'furatto/dashboard';
 @import 'furatto/docs';
