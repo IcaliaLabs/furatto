@@ -9,8 +9,6 @@
 
 //Clears the float from any element
 @mixin clearfix {
-  *zoom: 1;
-
   &:before, &:after {
     display: table;
     content: "";
@@ -27,6 +25,35 @@
   *display: inline;
 }
 
+@mixin center-block {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin hyphens($mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: $mode;
+  -moz-hyphens: $mode;
+  -ms-hyphens: $mode; // IE10+
+  -o-hyphens: $mode;
+  hyphens: $mode;
+}
+
+@mixin opacity ( $opacity ) {
+  opacity: $opacity;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $opacity * 100 ")";
+  filter: alpha(opacity= $opacity* 100 );
+  zoom: 1;
+}
+
+
+@mixin img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 // FORMS
 // --------------------------------------------------
 
@@ -34,7 +61,7 @@
 @mixin input-block-level {
   display: block;
   width: 100%;
-  min-height: $inputHeight; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  min-height: $input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   @include box-sizing(border-box); // Makes inputs behave like true block-level elements
 }
 
@@ -67,138 +94,6 @@
   overflow: hidden;
   background-color: $top;
   border-bottom: 1px solid $bottom;
-}
-
-// Grid System
-// -----------
-
-// Centered container element
-@mixin container-fixed() {
-  margin-right: auto;
-  margin-left: auto;
-  @include clearfix();
-}
-
-// Table columns
-@mixin tableColumns($columnSpan: 1) {
-  float: none; // undo default grid column styles
-  width: (($gridColumnWidth) * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
-  margin-left: 0; // undo default grid column styles
-}
-
-// Make a Grid
-// Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
-@mixin makeRow() {
-  margin-left: $gridGutterWidth * -1;
-  @include clearfix();
-}
-@mixin makeColumn($columns: 1, $offset: 0) {
-  float: left;
-  margin-left: ($gridColumnWidth * $offset) + ($gridGutterWidth * ($offset - 1)) + ($gridGutterWidth * 2);
-  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
-}
-
-// The Grid
-@mixin grid-core($gridColumnWidth, $gridGutterWidth) {
-  .row-fixed {
-    margin-left: $gridGutterWidth * -1;
-    @include clearfix();
-  }
-
-  [class*="span"] {
-    float: left;
-    min-height: 1px; // prevent collapsing columns
-    margin-left: $gridGutterWidth;
-  }
-
-  // generate .spanX
-  @include grid-core-span-x($gridColumns, $gridColumnWidth, $gridGutterWidth);
-}
-
-@mixin grid-core-span-x($gridColumns, $gridColumnWidth, $gridGutterWidth) {
-  @for $i from 1 through $gridColumns {
-    .span#{$i} { @include grid-core-span($i, $gridColumnWidth, $gridGutterWidth); }
-  }
-}
-
-@mixin grid-core-span($columns, $gridColumnWidth, $gridGutterWidth) {
-  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
-}
-
-@mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth) {
-  .row {
-    width: 100%;
-    @include clearfix();
-    [class*="span"] {
-      @include input-block-level();
-      float: left;
-      margin-left: $fluidGridGutterWidth;
-      *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
-    }
-
-    [class*="span"]:nth-of-type(1) {
-      margin-left: 0px;
-    }
-
-    [class*="span"]:first-child {
-      margin-left: 0px;
-    }
-
-    // Space grid-sized controls properly if multiple per line
-    .controls-row [class*="span"] + [class*="span"] {
-      margin-left: $fluidGridGutterWidth;
-    }
-
-    // generate .spanX
-    @include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
-  }
-}
-
-@mixin grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
-  @for $i from 1 through $gridColumns {
-    .span#{$i} { @include grid-fluid-span($i, $fluidGridColumnWidth, $fluidGridGutterWidth); }
-  }
-}
-
-@mixin grid-fluid-span($columns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
-  width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
-  *width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%);
-}
-
-@mixin grid-input($gridColumnWidth, $gridGutterWidth) {
-  input,
-  textarea,
-  .uneditable-input {
-    margin-left: 0; // override margin-left from core grid system
-  }
-
-  // Space grid-sized controls properly if multiple per line
-  .controls-row [class*="span"] + [class*="span"] {
-    margin-left: $gridGutterWidth;
-  }
-
-  // generate .spanX
-  @include grid-input-span-x($gridColumns, $gridColumnWidth, $gridGutterWidth);
-}
-
-@mixin grid-input-span-x($gridColumns, $gridColumnWidth, $gridGutterWidth) {
-  @for $i from 1 through $gridColumns {
-    input.span#{$i},
-    textarea.span#{$i},
-    .uneditable-input.span#{$i} {
-      @include grid-input-span($i, $gridColumnWidth, $gridGutterWidth);
-    }
-  }
-}
-
-@mixin grid-input-span($columns, $gridColumnWidth, $gridGutterWidth) {
-  width: (($gridColumnWidth) * $columns) + ($gridGutterWidth * ($columns - 1)) - 14;
-}
-
-@mixin active-navbar-link-arrow($navbar-height: 40px) {
-    $default-position: -6px;
-    $default-navbar-height: 40px;
-    top: ((($navbar-height - $default-navbar-height) / 5) * -3) + $default-position;
 }
 
 @mixin touch-callout {
@@ -253,18 +148,19 @@
   }
 }
 
-@mixin btn-shadow($color, $index: 1, $limit: 100) {
-  $shadow: '';
+//Grid
 
-  @for $i from $index through $limit {
-    $alpha: 1 - ($i / $limit);
-    @if $i < $limit {
-      $shadow: $shadow + $i * -1 + 'px ' + $i + 'px ' + rgba($color, $alpha) + ',';
-    } @else {
-      $shadow: $shadow + $i * -1 + 'px ' + $i + 'px ' + rgba($color, $alpha);
+@mixin build-column-grids($columns: 12) {
+  $unit-width: (100 / $columns);  
+  $column-factor: 0.1833;
+
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      $current-width: ($unit-width * $i) - $column-factor;
+      width: percentage($current-width / 100);
+      margin-left: percentage($column-factor / 100);
     }
   }
-  $shadow: unquote($shadow);
-  @include box-shadow($shadow);
-  
+
 }
