@@ -99,3 +99,33 @@
 .docs-navbar-inner {
   padding-left: 0px !important;
 }
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.docs-sidebar {
+  position: fixed;
+  width: 21%;
+}
+
+@media (max-width: $nav-bar-collapse-width) {
+.docs-sidebar {
+  position: static;
+  width: 100%;
+}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+
+.docs-sidebar {
+  position: static;
+  width: 100%;
+}
+
+}
