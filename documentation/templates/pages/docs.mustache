@@ -29,10 +29,165 @@
       <div class="row"> 
         <div id="overview">
           <h2 class="header">Overview</h2>
+          <h4 class="light">Get into Furatto bare bones structure, including the Mobile First approach we took.</h4>
+          <h3>HTML 5 doctype</h3>
+          <p>Motivated by the mobile first approach as well as some HTML elements and CSS may not work as expected, it is highly recommended that you use the HTML5 doctype.</p>
+          <pre data-language="html">
+          <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+...
+&lt;/html&gt;
+          </code>
+          </pre>
+          <h3>Mobile First</h3>
+          <p>Back in version 1, we added the meta tag for adjusting the viewport width for the current device. We have added some other patterns and baked it all together in order to be mobile friendly from the start.</p>
+          <pre data-language="html">
+          <code>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          </code>
+          </pre>
+          <p>
+            You can disable the zooming capabilities on mobile devices by adding <span class="code">maximun-scale=1</span> and <span class="code">user-scalable=no</span>, this way your site will feel a bit more like a native application. Use it with care, as not always is the best approach.
+          </p>
+          <pre data-language="html">
+          <code>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1, user-scalable=no" />
+          </code>
+          </pre>
+          <h3>Global settings</h3>
+          <p>
+            Furatto applies some basic global settings for, typography, links, and body itself. Some of these:
+            <ul>
+              <li>Remove margin and padding on body.</li>
+              <li>Set a default background to the body.</li>
+              <li>Set a base font face (<a href="#">Latto</a>), font size and base line height.</li>
+              <li>Reset default link behavior via setting a color and apply underline on <span class="code">:hover</span>.</li>
+            </ul>
+          </p>
+          <p>Check out the typography and base <span class="code">SCSS</span> files for mor information.</p>
+          <h3>Normalize</h3>
+          <p>
+            In order to improve cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> which is an open-source project by <a href="https://twitter.com/necolas">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal">Jonathan Neal</a> as an alternative for HTML 5 resets.
+          </p> 
         </div>
         <hr />
         <div id="grid">
           <h2 class="header">Grid</h2>
+          <h4 class="light">Furatto comes with fully responsive frid system which scales up to 12 columns. It is generated using predefined classes for more semantic layouts, as well as mixins. Below 767px viewports, the columns become fluid and stack vertically.</h4>
+          <p>The twelve columns are distributed with a equitable width and margin, which make it very easy to build dashboard. It is important to put the columns on a row div class element.</p>
+      <div class="grid-demo">
+        <div class="row">
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="row">
+          <div class="col-2">
+            2 
+          </div>
+          <div class="col-4">
+            4 
+          </div>
+          <div class="col-1">
+            1 
+          </div>
+          <div class="col-3">
+            3 
+          </div>
+          <div class="col-2">
+            2 
+          </div>
+        </div>
+      </div>
+      <pre data-language="html">
+      <code>
+<div class="row">
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+</div>
+<div class="row">
+  <div class="col-2">col-2</div>
+  <div class="col-4">col-4</div>
+  <div class="col-1">col-1</div>
+  <div class="col-3">col-3</div>
+  <div class="col-2">col-2</div>
+</div>
+      </code>
+      </pre>
+          <h3>Building the markup</h3>
+          <p>For a simple three column layout just add the <span class="code html">row</span> class name and add the correct number of <span class="code html">col-*</span> columns. The <span class="code">col-*</span> class name for the columns comes from the 1 to the 12 as is a 12 column grid.</p>
+          <pre data-language="html">
+          <code>
+<div class="row">
+  <div class="col-4">...</div>
+  <div class="col-4">...</div>
+  <div class="col-4">...</div>
+</div>
+          </code>
+</pre>
+          <h3>Nesting columns</h3>
+          <p>When comes to nesting Furatto helps you add multiple column div elements. You just have to add a <span class="code html">row</span> class into an existing <span class="code html">col-*</span> column. The nested rows should also match 12 columns, you can see it as if is another <span class="code html">row</span> element.</p>
+          <div class="nested-grid-demo">
+            <div class="row">
+              <div class="col-9">
+                <p>I'm a col-9 class column</p>
+                <div class="row">
+                  <div class="col-6">
+                    I'm a col-6 column 
+                  </div>
+                  <div class="col-6">
+                    I'm a col-6 column 
+                  </div>
+                  </div>
+                  </div>
+                <div class="col-3 text-center">
+                <p>I'm a col-3 class column</p>
+              </div>
+            </div>
+          </div>
+        <pre data-language="html">
+          <code>
+<div class="row">
+  <div class="col-9">
+    <p>I'm a col-9 class column</p>
+    <div class="row">
+      <div class="col-6">
+        I'm a col-6 column 
+      </div>
+      <div class="col-6">
+        I'm a col-6 column 
+      </div>
+    </div>
+  </div>
+  <div class="col-3 text-center">
+    <p>I'm a col-3 class column</p>
+  </div>
+</div>
+          </code>
+        </pre>
+
         </div>
         <hr />
         <div id="navigation">
