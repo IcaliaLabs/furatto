@@ -9,7 +9,10 @@
 
 p {
   margin: 0 0 $base-line-height / 2;
-  color: #777;
+  color: #222;
+  margin-bottom: 1.25em;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
 }
 
 /* Emphasis & miscelaneous */
@@ -65,7 +68,7 @@ em {
 //--------------------------------
 
 h1,h2,h3,h4,h5,h6 {
-  margin: $base-line-height 0;
+  margin: 0 0 10px 0;
   font-family: inherit;
   font-weight: 500;
   line-height: $base-line-height;
@@ -80,7 +83,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .light {
-  font-weight: 200;
+  font-weight: 300;
+  color: #6f6f6f;
 }
 
 /* Headers definition */
@@ -88,6 +92,10 @@ h1,h2,h3,h4,h5,h6 {
 
 h1, h2, h3 { 
   line-height: $base-line-height * 2;
+}
+
+h4 {
+  line-height: $base-line-height + 10;
 }
 
 h5, h6 {
