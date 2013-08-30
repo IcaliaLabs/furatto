@@ -29,9 +29,10 @@
 //Adds a background to the columns for demo purposes
 .grid-demo {
   margin-bottom: 10px;
+  color: #333;
 
   [class*="col-"] {
-    background: $light-gray;
+    background: lighten($blue, 10%);
     @include border-radius(3px);
     text-align: center;
     line-height: $base-line-height;
@@ -39,7 +40,8 @@
 }
 
 .nested-grid-demo {
-  background: $light-gray;
+  background: lighten($blue, 10%);
+  @include border-radius(3px);
   [class*="col-"] {
     padding-bottom: 10px;
     text-align: center;
@@ -48,7 +50,7 @@
   .row {
     .row {
       [class*="col-"] {
-        background: darken($light-gray, 15%);
+        background: darken($blue, 2%);
         @include border-radius(3px);
       }
     }
