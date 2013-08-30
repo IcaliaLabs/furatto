@@ -34,8 +34,12 @@ html, body {
 /*}*/
 
 hr {
-  border-top: 0px;
-  border-bottom: 1px solid #CCC;
+  clear: both;
+  margin: 1.25em 0 1.875em;
+  height: 0;
+  @include box-sizing(content-box);
+  border: solid #DDD;
+  border-width: 1px 0 0;
 }
 
 .link {
@@ -49,6 +53,7 @@ hr {
 .container-center {
   width: $container-center-width;
   margin: 0 auto;
+  @include clearfix();
 }
 
 /* Blockquote */
