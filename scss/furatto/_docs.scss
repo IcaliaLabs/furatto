@@ -12,6 +12,58 @@
   height: 100%;
 }
 
+.docs-example {
+  border: 1px solid #e1e1e8;
+  border-bottom: none;
+  padding: 20px 20px 10px 20px;
+  @include border-top-radius(4px);
+
+  &:before {
+    content: "Example";
+    color: #BBB;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    display: block;
+  }
+
+}
+
+.docs-section {
+  padding-top: 50px;
+}
+
+.docs-code {
+  background: #f7f7f9;
+  color: #2980b9;
+  padding: 0px 20px;
+  @include border-bottom-radius(4px);
+  border-left: 1px solid #e1e1e8;
+  border-right: 1px solid #e1e1e8;
+  border-bottom: 1px solid #e1e1e8;
+  margin-bottom:20px;
+
+  pre {
+    background: none;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    code {
+      background: none;
+      margin-top: 0;
+    }
+  }
+
+  .docs-code-attribute {
+    color: #d44950;
+  }
+}
+
+.docs-focus {
+  border-color: rgba($input-focus-color,.8) !important;
+}
+
 .docs-white-text {
   * {
     color: #FFF !important;
@@ -110,11 +162,27 @@
   width: 21%;
 }
 
+.docs-visible {
+  background: lighten($green, 20%);
+  color: darken($dark-green, 20%);
+  text-align: center !important;
+}
+
+.docs-invisible {
+  background: #efefef;
+  color: #999;
+  text-align: center !important;
+}
+
 @media (max-width: $nav-bar-collapse-width) {
 .docs-sidebar {
   position: static;
   width: 100%;
 }
+}
+
+.docs-container {
+  padding: 0px 10px;
 }
 
 @media only screen 

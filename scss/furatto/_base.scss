@@ -11,6 +11,13 @@ html {
   font-family: $font-family;
 }
 
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
@@ -44,6 +51,10 @@ hr {
 
 .link {
   color: $link-color !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .block {
@@ -58,7 +69,7 @@ hr {
 
 /* Blockquote */
 /*----------------------------*/
-.content-quote {
+blockquote {
   color: #666;
   font-style: italic;
   line-height: 1.8em;
@@ -74,6 +85,11 @@ hr {
 
 .hide {
   display: none;
+}
+
+.help-block {
+  color: #666;
+  display: block;
 }
 
 //Floats

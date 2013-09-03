@@ -37,7 +37,7 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   height: $base-line-height;
-  padding: 4px 6px;
+  padding: 4px 0px 4px 8px;
   margin-bottom: $base-line-height / 2;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -82,31 +82,27 @@ input[type="color"],
 
 //Input sizes
 .input-mini { 
-  width: 60px; 
+  width: 16.667%; 
 }
 
 .input-small { 
-  width: 90px; 
+  width: 33.34%; 
 }
 
 .input-medium { 
-  width: 150px; 
+  width: 50%; 
 }
 
 .input-large { 
-  width: 210px; 
+  width: 66.668%; 
 }
 
 .input-xlarge {
-  width: 270px; 
-}
-
-.input-xxlarge { 
-  width: 350px; 
+  width: 83.335%; 
 }
 
 .input-block {
-  @include input-block-level;
+  width: 100%;
 }
 
 /* Inline Forms */
@@ -115,10 +111,16 @@ input[type="color"],
 .horizontal-form {
   input,
   textarea,
-  select {
+  select,
+  .form-fields,
+  .checkbox-fields {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
+  }
+
+  .form-fields {
+    margin-top: 4px;
   }
 
   label {
@@ -134,7 +136,7 @@ input[type="color"],
 /* Horizontal form */
 /* --------------- */
 .horizontal-form {
-  .furatto-controls {
+  .form-fields {
     display: block;
     margin-bottom: 10px;
 
@@ -145,7 +147,7 @@ input[type="color"],
     }
   }
 
-  .furatto-actions {
+  .form-actions {
     margin-left: 184px;
   }
 }
@@ -216,27 +218,12 @@ textarea[disabled] {
 
 /* Input states */
 /* ------------ */
-.info {
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="color"] {
-    color: $dark-blue;
-    border: 1px solid $dark-blue;
+.form-fields-success{
+
+  .form-fields {
+    color: $dark-green;
   }
-}
-.success{
+
   textarea,
   input[type="text"],
   input[type="password"],
@@ -256,7 +243,10 @@ textarea[disabled] {
     border: 1px solid $dark-green;
   }
 }
-.warning{
+.form-fields-warning{
+  .form-fields {
+    color: $dark-orange;
+  }
   textarea,
   input[type="text"],
   input[type="password"],
@@ -276,7 +266,11 @@ textarea[disabled] {
     border: 1px solid $dark-orange;
   }
 }
-.error{
+.form-fields-error{
+  .form-fields {
+    color: $dark-red;
+  }
+  
    textarea,
   input[type="text"],
   input[type="password"],
@@ -294,5 +288,31 @@ textarea[disabled] {
   input[type="color"]  {
     color: $dark-red;
     border: 1px solid $dark-red;
+  }
+}
+
+/* Form controls */
+/* ------------- */
+
+.form-fields {
+  margin: 8px 0;
+
+  .help-hint {
+    display: inline-block;
+  }
+
+
+  label {
+    font-weight: bold;
+  }
+}
+
+.checkbox-fields {
+  vertical-align: middle;
+  margin: 8px 0 15px 0;
+
+
+  input[type="checkbox"] {
+    margin-right: 5px;
   }
 }

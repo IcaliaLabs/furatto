@@ -40,6 +40,26 @@
   hyphens: $mode;
 }
 
+//Credits to bootstrap
+@mixin responsive-invisibility {
+  display: none !important;
+
+  tr, th, td {
+    display: none !important;
+  }
+}
+
+@mixin responsive-visibility {
+  display: block !important;
+
+  tr {
+    display: table-row !important;
+  }
+
+  th, td {
+    display: table-cell !important;
+  }
+}
 @mixin opacity ( $opacity ) {
   opacity: $opacity;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $opacity * 100 ")";

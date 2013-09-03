@@ -19,11 +19,10 @@
   text-align: center;
   vertical-align: middle;
   border: none;
-  margin: 0;
   @include single-transition(opacity, 0.2s, ease-in-out);
-  @include border-radius($base-radius);
-  margin-bottom: 5px;
+  @include border-radius(3px);
   font-weight: 300;
+  margin: 5px 0;
 
   &:hover, &:focus {
     zoom: 1;
@@ -31,7 +30,7 @@
     background: $dark-inverse;
   }
 
-  &.disabled, &[disabled] {
+  &.btn-disabled, &[disabled] {
     cursor: no-drop;
     background-color: $dark-gray;
     @include opacity(0.65);
@@ -62,6 +61,7 @@
 @each $color in $colors {
   .btn-#{nth($color, 1)} {
     background-color: nth($color, 2);
+    border: 1px solid darken(nth($color, 2), 5%);
 
     @if nth($color, 1) == warning {
       color: rgba(0,0,0,0.6);
@@ -72,7 +72,7 @@
       background-color: nth($color, 3);
     }
 
-    &.disabled, &[disabled] {
+    &.btn-disabled, &[disabled] {
       background-color: nth($color, 2);
     }
 

@@ -9,8 +9,6 @@
 
 p {
   margin: 0 0 $base-line-height / 2;
-  color: #222;
-  margin-bottom: 1.25em;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
 }
@@ -33,7 +31,7 @@ em {
 //Utility classes
 
 .muted {
-  color: $light-gray;
+  color: #666;
 }
 
 .text-warning {
@@ -72,7 +70,6 @@ h1,h2,h3,h4,h5,h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: $base-line-height;
-  color: $headings-color;
   text-rendering: optimizelegibility; // Fix the character spacing for headings
 
   small {
@@ -96,10 +93,6 @@ h1, h2, h3 {
 
 h4 {
   line-height: $base-line-height + 10;
-}
-
-h5, h6 {
-  text-transform: uppercase;
 }
 
 h1 { 
@@ -158,7 +151,6 @@ ol.inline {
   list-style: none;
   margin-bottom: 10px;
   margin-top: 10px;
-  font-weight: 300;
 
    li {
     display: inline-block;
@@ -259,4 +251,9 @@ dd {
 
 i.nomargin {
   margin-right: 0 !important;
+}
+
+//Uppercase
+.text-uppercase {
+  text-transform: uppercase;
 }
