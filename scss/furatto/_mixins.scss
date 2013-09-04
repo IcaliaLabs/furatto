@@ -168,8 +168,6 @@
   }
 }
 
-//Grid
-
 @mixin build-column-grids($columns: 12) {
   $unit-width: (100 / $columns);  
   $column-factor: 0.1833;
@@ -183,4 +181,16 @@
     }
   }
 
+}
+
+@mixin backface-visibility($property: hidden) {
+	-webkit-backface-visibility: $property;
+	-moz-backface-visibility: $property;
+	backface-visibility: $property;
+}
+
+@mixin perspective($value: 1300px) {
+	-webkit-perspective: $value;
+	-moz-perspective: $value;
+	perspective: $value;
 }

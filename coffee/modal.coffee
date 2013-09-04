@@ -2,64 +2,68 @@
 
   class Modal
     constructor: (el, options) ->
-      @options = $.extend {}, @defaults, options
+      @options = $.extend {}, options
       @$el = $(el)
-      @body = $('body')
-      @isShown = false
+      @modal = $(@$el.data('target'))
+      @close = @modal.find('.modal-close')
+      @transition = @$el.data('transition') || "1"
+      @theme = @$el.data('theme') || "default"
+      @modal.addClass "modal-effect-#{@transition}"
+      @modal.find('.modal-content').addClass "modal-content-#{@theme}"
 
-    toggle: ->
-      @[(if not @isShown then @.show() else @.hide())]
-    
-    onDocumentKeyup: (event) =>
+    init: =>
+      @$el.click @show
+      @close.click (ev) =>
+        ev.stopPropagation()
+        @hide()
+
+    show: (ev) =>
+      if @$el.is 'div'
+        @$el.addClass 'modal-show'
+      else
+        @modal.addClass 'modal-show'
+      $('.modal-overlay').addClass 'modal-show-overlay'
+
+      $('body').bind 'keyup', @hideOnEsc
+      $('body').bind 'click', @hideOnDocumentClick
+
+    hideOnEsc: (event) =>
       if event.keyCode is 27
-        @.hide()
+        @hide()
 
-    onDocumentClick: (event) =>
-      if $(event.target).is('.modal-overlay') || $(event.target).parent().is('[data-toggle="close"]')
-        @.hide()
-
-    show: ->
-      @isShown = true
-
-      setTimeout (=>
-        @body.addClass('modal-active')
-      ), 100
-
-      @body.append "<div class='modal-popin'>#{@$el.html()}</div>"
-
-      @body.bind 'keyup', @.onDocumentKeyup
-      @body.bind 'click', @.onDocumentClick
+    hideOnDocumentClick: (event) =>
+      if $(event.target).is('.modal-overlay')
+        @hide()
 
     hide: ->
-      @isShown = false
-      @body.unbind 'keyup', @.onDocumentKeyup
-      @body.unbind 'click', @.onDocumentClick
+      $('.modal-overlay').removeClass 'modal-show-overlay'
+      if @$el.is 'div'
+        @$el.removeClass 'modal-show'
+      else
+        @modal.removeClass 'modal-show'
 
-      @body.removeClass 'modal-active'
-      $('.modal-overlay').remove()
+      $('body').unbind 'keyup', @hideOnEsc
+      $('body').unbind 'click', @hideOnDocumentClick
 
-      setTimeout (->
-        $('.modal-popin').remove()
-      ), 500
-
-  $.fn.extend modal: (option, args...) ->
+  $.fn.modal = (option) ->
     @each ->
       $this = $(this)
       data = $this.data('modal')
+      options = $.extend {}, $this.data(), typeof option is 'object' and option
 
-      if !data
-        $this.data 'modal', (data = new Modal(this, option))
-      if typeof option == 'string'
-        data[option].apply(data, args)
+      if not data
+        $this.data 'modal', ( data = new Modal(this, options) )
+      if typeof option is 'string'
+        data[option]()
 
-      $('body').addClass('modal-ready')
-      $('body').append('<div class="modal-overlay"></div>')
+  $(document).ready ->
+    $('.panel-content').append('<div class="modal-overlay"></div>')
+    $('[data-furatto="modal"]').each ->
+      modal = $(@)
+      modal.modal('init')
 
   $(document).on 'click', '[data-furatto="modal"]', (e) ->
     $this = $(this)
-    $target = $($this.data('target'))
-    $target.modal('toggle')
-
-    e.preventDefault()
+    $this.modal('init')
 
 ) window.jQuery, window

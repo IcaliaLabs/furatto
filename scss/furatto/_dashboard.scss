@@ -7,40 +7,18 @@
  * Designed and built @kurenn  
  */
 
-.row-primary, .span-primary {
-  background: $dashboard-primary-bg-color;
-
-  * {
-    color: #FFF !important;
-  }
+.bg-primary {
+  background: $dashboard-inverse-bg-color;
 }
 
-.row-info, .span-info {
-  @extend .row-primary;
+.bg-info {
   background: $dashboard-info-bg-color;
 }
 
-.row-funky, .span-funky {
-  @extend .row-primary;
+.bg-funky {
   background: $dashboard-funky-bg-color;
 }
 
-.row-danger, .span-danger {
-  @extend .row-primary;
+.bg-danger {
   background: $dashboard-danger-bg-color;
-}
-
-.row-warning, .span-warning {
-  @extend .row-primary;
-  background: $dashboard-warning-bg-color;
-}
-
-.row-success, .span-success {
-  @extend .row-primary;
-  background: $dashboard-success-bg-color;
-}
-
-.row-inverse, .span-inverse {
-  @extend .row-primary;
-  background: $dashboard-inverse-bg-color;
 }

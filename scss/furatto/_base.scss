@@ -7,6 +7,12 @@
  * Designed and built @kurenn  
  */
 
+*, 
+*:after, 
+*:before { 
+  @include box-sizing(border-box);
+}
+
 html {
   font-family: $font-family;
 }
