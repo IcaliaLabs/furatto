@@ -9,11 +9,10 @@
 
 
 .img {
-  width: auto;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  @include box-sizing(border-box);
+  @include box-sizing(none);
   margin: 10px;
 }
 

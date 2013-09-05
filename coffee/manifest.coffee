@@ -19,12 +19,23 @@ jQuery ->
       selectYears: input.data('select-years') || false
       selectMonths: input.data('select-months') || false
 
-  $("[data-furatto='slider']").responsiveSlides
-    auto: true
-    pager: true
-    nav: true
-    speed: 500
-    namespace: "centered-btns"
+  swiper = new Swiper('.swiper-container',
+    pagination: '.swiper-pagination'
+    mode: 'horizontal'
+    loop: true
+    calculateHeight: true
+    grabCursor: true
+    paginationClickable: true
+    speed: 600
+  )
+
+  $('.swiper-control.left').on 'click', (e) ->
+    e.preventDefault()
+    swiper.swipePrev()
+
+  $('.swiper-control.right').on 'click', (e) ->
+    e.preventDefault()
+    swiper.swipeNext()
 
   $('.navbar [data-furatto="search"]').each ->
     current_width = $(@).width()
@@ -33,10 +44,10 @@ jQuery ->
     $(@).blur ->
       $(@).animate({ width: current_width }, 'slow')
 
-  if $(window).width() > 979
-    setTimeout (->
-      $('.navbar').animate({"opacity":1}, 1000)
-    ), 800
-  else
-    $('.navbar').css
-      "opacity":1
+  #if $(window).width() > 979
+    #setTimeout (->
+      #$('.navbar').animate({"opacity":1}, 1000)
+    #), 800
+  #else
+    #$('.navbar').css
+      #"opacity":1
