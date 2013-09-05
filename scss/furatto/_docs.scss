@@ -185,6 +185,36 @@
   padding: 0px 10px;
 }
 
+.docs-icons {
+  list-style: none; 
+  overflow: hidden;
+  margin: 0 0 20px 0;
+
+  li {
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+    width: 25%;
+    height: 115px;
+    float: left;
+    padding: 28px 10px;
+
+    @media (min-width: 768px) {
+      width: 12.5%;
+    }
+
+    &:hover {
+      background: rgba($dark-blue, 0.1);
+    }
+
+    i {
+      display: block;
+      font-size: 24px;
+    }
+
+  }
+}
+
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 

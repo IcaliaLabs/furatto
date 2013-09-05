@@ -39,18 +39,6 @@
   margin-left: -3px;
 }
 
-.tooltip-inner {
-  max-width: 200px;
-  padding: 3px 8px;
-  color: $white;
-  text-align: center;
-  text-decoration: none;
-  background-color: #000000;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
-
 .tooltip-arrow {
   position: absolute;
   width: 0;
@@ -135,9 +123,9 @@
 .tooltip-inner {
   background-color: $inverse;
   line-height: 18px;
-  padding: 12px 5px;
+  padding: 12px 14px;
   text-align: center;
-  width: 180px;
   @include border-radius(6px);
+  color: $white;
 }
 

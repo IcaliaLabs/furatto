@@ -10,11 +10,10 @@
 .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: $base-line-height;
-  background-color: $orange;
+  background-color: lighten($orange, 40%);
   @include border-radius($base-radius);
   color: $warning-alert-color;
   font-size: $base-font-size;
-  text-shadow: 0 1px 0 rgba(255,255,255,.3);
 
   .header, strong {
     color: $warning-header-color;
@@ -31,7 +30,7 @@
     top: -2px;
     right: -21px;
     line-height: $base-line-height;
-    color: $dark-orange;
+    color: darken($dark-orange, 10%);
     float: right;
     border: none;
     background: none;
@@ -42,7 +41,7 @@
 }
 
 .alert-success {
-  background-color: $green;
+  background-color: lighten($green, 40%);
   color: $success-alert-color;
 
   .header {
@@ -55,7 +54,7 @@
 }
 
 .alert-info {
-  background-color: $blue;
+  background-color: lighten($blue, 35%);
   color: $info-alert-color;
 
   .header, strong {
@@ -68,7 +67,7 @@
 }
 
 .alert-danger {
-  background-color: $red;
+  background-color: lighten($red, 35%);
   color: $danger-alert-color;
 
   .header, strong {

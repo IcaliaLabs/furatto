@@ -16,7 +16,7 @@
   color: #FFF;
   vertical-align: baseline;
   white-space: nowrap;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.20);
+  /*text-shadow: 0 -1px 0 rgba(0,0,0,.20);*/
   background: $gray;
   @include border-radius(2px);
 }
@@ -30,7 +30,7 @@
 //Labels and badges colors definitions
 @each $color in $colors {
   .label-#{nth($color, 1)}, .badge-#{nth($color, 1)} {
-    background-color: nth($color, 3);
+    background-color: nth($color, 2);
   }
 }
 
