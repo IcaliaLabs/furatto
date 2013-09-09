@@ -52,6 +52,10 @@
 @mixin responsive-visibility {
   display: block !important;
 
+  &.btn {
+    display: inline-block !important;
+  }
+
   tr {
     display: table-row !important;
   }
