@@ -199,6 +199,254 @@
          <hr />
          <div id="navbar" class="docs-section">
            <h2 class="header">Navbar</h2>
+           <h4>Navbars are responsive elements that works like navigation headers for the whole application. They collapse in mobile views, providing a side panel menu like in many native apps.</h4>
+           <h3>Default navbar</h3>
+            <blockquote class="content-quote">
+              <h4>Absolute positioned</h4>    
+              <p>Furatto brand new navbar works differently from version 1. Version 2 uses hardware acceleration to provide a better experience on panel animation, 
+              this means the content and the panel are absolute positioned. Don't worry Furatto handles that for you by following the next layout.
+              </p>
+            </blockquote>
+           <div class="docs-example">
+             
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+      <div class="nav-collapse collapse">
+        <nav id="menu">
+          <ul class="nav">
+            <li><a class="brand" href="index.html">Brand</a></li>
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+            <ul class="dropdown-menu bottom-up pull-right">
+              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#">Software</a></li>
+              <li><a href="#">Industrial Design</a></li>
+              <li><a href="#">Business Planning</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Development and Research</a></li>
+            </ul>
+            </li>
+          </ul>
+          <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right visible-lg">
+            <div class="form-fields">
+              <input type="text" name="" id="" value="" placeholder="Search" class="" />
+            </div>
+            <input type="submit" name="" id="" value="Search" class="btn btn-info btn-alpha" />
+          </form>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+           </div>
+           <div class="docs-code">
+            <pre data-language="html">
+               <code>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+      <div class="nav-collapse collapse">
+        <nav id="menu">
+          <ul class="nav">
+            <li><a class="brand" href="index.html">Brand</a></li>
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+            <ul class="dropdown-menu bottom-up pull-right">
+              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#">Software</a></li>
+              <li><a href="#">Industrial Design</a></li>
+              <li><a href="#">Business Planning</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Development and Research</a></li>
+            </ul>
+            </li>
+          </ul>
+          <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right">
+            <div class="form-fields">
+              <input type="text" name="" id="" value="" placeholder="Search" class="" />
+            </div>
+            <input type="submit" name="" id="" value="Search" class="btn btn-info btn-alpha" />
+          </form>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+               </code>
+            </pre>
+            
+           </div>
+           <h3>Navbar buttons</h3>
+           <p>For buttons not linked to a form add the <span class="code">btn-navbar</span> class name.</p>
+           <div class="docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                  <div class="nav-collapse collapse">
+                    <nav id="menu">
+                      <ul class="nav">
+                        <li><a class="brand" href="index.html">Brand</a></li>
+                      </ul>
+                      <button type="button" class="btn btn-info btn-navbar visible-lg">Sign In</button>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="docs-code">
+             <pre data-language="html">
+               <code>
+<button type="button" class="btn btn-info btn-navbar">Sign In</button>
+               </code>
+             </pre>
+           </div>
+
+          <h3>Navbar text</h3>
+          <p>Text on the navbar can be wrapped on an element with a class name of <span class="code">navbar-text</span>.</p>
+           <div class="docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                  <div class="nav-collapse collapse">
+                    <nav id="menu">
+                      <ul class="nav">
+                        <li><a class="brand" href="index.html">Brand</a></li>
+                      </ul>
+                      <p class="navbar-text visible-lg">Welcome, Abraham</p>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="docs-code">
+             <pre data-language="html">
+               <code>
+<p class="navbar-text">Welcome, Abraham</p>
+               </code>
+             </pre>
+           </div>
+          <h3>Navbar top fixed</h3>
+          <h4 class="light">Add the <span class="code">navbar-fixed-top</span> class name.</h4>
+           <div class="docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                  <div class="nav-collapse collapse">
+                    <nav id="menu">
+                      <ul class="nav">
+                        <li><a class="brand" href="index.html">Brand</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="docs-code">
+             <pre data-language="html">
+               <code>
+<div class="navbar navbar-fixed-top">
+  ... 
+</div>
+               </code>
+             </pre>
+           </div>
+            <blockquote class="content-quote">
+              <h4>A note on Fixed navbar</h4>    
+              <p>
+                For fixed top navbar you just need to add a padding on the top of <span class="code">51px</span> to the <span class="code">panel-content</span> element.
+              </p>
+            </blockquote>
+           
+          <h3>Navbar bottom fixed</h3>
+          <h4 class="light">Add the <span class="code">navbar-fixed-bottom</span> class name.</h4>
+           <div class="docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                  <div class="nav-collapse collapse">
+                    <nav id="menu">
+                      <ul class="nav">
+                        <li><a class="brand" href="index.html">Brand</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="docs-code">
+             <pre data-language="html">
+               <code>
+<div class="navbar navbar-fixed-bottom">
+  ... 
+</div>
+               </code>
+             </pre>
+           </div>
+
+          <h3>Inverse Navbar</h3>
+          <h4 class="light">Add the <span class="code">navbar-inverse</span> class name.</h4>
+           <div class="docs-example">
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+      <div class="nav-collapse collapse">
+        <nav id="menu">
+          <ul class="nav">
+            <li><a class="brand" href="index.html">Brand</a></li>
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+            <ul class="dropdown-menu bottom-up pull-right">
+              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#">Software</a></li>
+              <li><a href="#">Industrial Design</a></li>
+              <li><a href="#">Business Planning</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Development and Research</a></li>
+            </ul>
+            </li>
+          </ul>
+          <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right visible-lg">
+            <div class="form-fields">
+              <input type="text" name="" id="" value="" placeholder="Search" class="" />
+            </div>
+            <input type="submit" name="" id="" value="Search" class="btn btn-info" />
+          </form>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+           </div>
+           <div class="docs-code">
+             <pre data-language="html">
+               <code>
+<div class="navbar navbar-inverse">
+  ... 
+</div>
+               </code>
+             </pre>
+           </div>
+
          </div>
          <hr />
 

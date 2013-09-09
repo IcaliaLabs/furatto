@@ -95,6 +95,7 @@
 .navbar .nav > .active > a:focus {
   color: $navbar-link-color-active;
   text-decoration: none;
+  background: lighten($navbar-bg-color, 10%);
 }
 
 .navbar .nav > .active {
@@ -104,13 +105,14 @@
 // Navbar button for toggling navbar items in responsive layouts
 // These definitions need to come after '.navbar .btn'
 .navbar .btn-navbar {
-  display: none;
-  float: right;
   padding: 7px 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  /*.buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));*/
-  /*.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");*/
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.navbar .navbar-text {
+  margin: 0;
+  display: inline-block;
 }
 
 //Navigation
@@ -167,19 +169,22 @@
 }
 
 //Search navbar form
-.search-navbar-form {
-  position: relative;
-  margin-top: ($navbar-height - 30px) / 2;
-  margin-bottom: 0;
+.navbar-form {
+  vertical-align: middle;
+  padding: 10px 15px;
+  margin: 0;
 
-  input[type=submit] {
-    margin-bottom: 0;
+  .form-fields {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+
+    input {
+      margin: 0;
+    }
   }
-
-  .search-text-input {
-    @include border-radius(15px);
-    margin-bottom: 0;
-    padding: 4px 14px;
+  input {
+    margin: 0;
   }
 }
 
@@ -187,7 +192,8 @@
 /* -------------- */
 
 .navbar-inverse {
-  border-bottom: 1px solid #BBB;
+  border: 1px solid #BBB;
+
   .navbar-inner {
     background: $navbar-inverse-bg-color;
   }
@@ -205,5 +211,10 @@
   .divider-vertical {
     border-left: 1px solid #EEE;
   }
+
+  .navbar-text {
+    color: #0088cc;
+  }
+  
 }
 

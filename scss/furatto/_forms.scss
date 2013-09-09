@@ -37,7 +37,8 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   height: $base-line-height;
-  padding: 4px 0px 4px 8px;
+  padding-left: 8px;
+  height: 30px;
   margin-bottom: $base-line-height / 2;
   font-size: $base-font-size;
   line-height: $base-line-height;
