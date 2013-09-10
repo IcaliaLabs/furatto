@@ -7,6 +7,11 @@
  * Designed and built @kurenn  
  */
 
+.affix {
+  position: fixed;
+  top: 80px;
+}
+
 .docs-body, .docs-panels {
   background: #2980b9;
   height: 100%;
@@ -158,8 +163,8 @@
 }
 
 .docs-sidebar {
-  position: fixed;
-  width: 21%;
+  /*position: fixed;*/
+  /*width: 21%;*/
 }
 
 .docs-visible {
@@ -176,8 +181,11 @@
 
 @media (max-width: $nav-bar-collapse-width) {
 .docs-sidebar {
+  /*position: static;*/
+  /*width: 100%;*/
+}
+.affix {
   position: static;
-  width: 100%;
 }
 }
 
@@ -222,8 +230,8 @@ and (orientation : landscape) {
 /* Styles */
 
 .docs-sidebar {
-  position: static;
-  width: 100%;
+  /*position: static;*/
+  /*width: 100%;*/
 }
 
 }
