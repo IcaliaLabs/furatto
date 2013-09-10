@@ -37,9 +37,6 @@
 //Navbar
 @import 'furatto/navbar';
 
-//Vertical navbar
-/*@import 'furatto/vrt_navbar';*/
-
 //Forms
 @import 'furatto/forms';
 
@@ -50,12 +47,6 @@
 //Images
 @import 'furatto/images';
 
-//Selects
-/*@import 'furatto/select';*/
-
-//Check box/Radio buttons
-@import 'furatto/checkbox_radio_buttons';
-
 //Footer
 @import 'furatto/footer';
 
@@ -65,26 +56,21 @@
 //Base
 @import 'furatto/typography';
 
-//Pagination
-@import 'furatto/pagination';
+/*//Pagination*/
+/*@import 'furatto/pagination';*/
 
 //Tooltips
 @import 'furatto/tooltips';
 
-//Tags
-@import 'furatto/tags';
-
 //DatePicker
 @import 'furatto/date_picker';
 @import 'furatto/date_picker.date';
-/*@import 'furatto/date_picker.time';*/
 
 //Toolbar
 @import 'furatto/toolbars';
 
 //Modal
 @import 'furatto/modal';
-
 
 //Drowpdowns
 @import 'furatto/dropdown';
@@ -94,9 +80,6 @@
 
 //Grid
 @import 'furatto/grid';
-/*@import 'furatto/responsive-1200px-min';*/
-/*@import 'furatto/responsive-768px-979px';*/
-/*@import 'furatto/responsive-767px-max';*/
 @import 'furatto/responsive_navbar';
 @import 'furatto/dashboard';
 @import 'furatto/docs';
@@ -104,4 +87,3 @@
 
 //Slider
 @import 'furatto/responsiveslides';
-
