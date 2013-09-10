@@ -163,8 +163,13 @@
 }
 
 .docs-sidebar {
-  /*position: fixed;*/
-  /*width: 21%;*/
+  .nav-bordered > li > a {
+    border-bottom: 1px solid #CCC;
+  }
+
+  .nav-bordered li:last-child a {
+    border-bottom: none;
+  }
 }
 
 .docs-visible {
@@ -180,13 +185,9 @@
 }
 
 @media (max-width: $nav-bar-collapse-width) {
-.docs-sidebar {
-  /*position: static;*/
-  /*width: 100%;*/
-}
-.affix {
-  position: static;
-}
+  .affix {
+    position: static;
+  }
 }
 
 .docs-container {
