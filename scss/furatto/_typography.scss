@@ -240,11 +240,10 @@ dd {
 //Inline code
 .code {
   padding: 2px 4px;
-  color: #f32d2d;
+  color: #d44950;
   white-space: nowrap;
-  font-weight: bold;
-  background-color: #f7f0da;
-  /*border: 1px solid #e1e1e8;*/
+  background-color: #f9f2f4;
+  font-weight: normal;
   font-size: $base-font-size;
   @include border-radius(3px);
 }
