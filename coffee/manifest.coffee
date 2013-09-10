@@ -9,9 +9,6 @@ jQuery ->
   #Tooltips
   $("[data-toggle=tooltip]").tooltip()
 
-  #Tags
-  $("[data-tags]").tagsInput()
-
   #Datepicker
   $("[data-datepicker]").each ->
     input = $(@)
