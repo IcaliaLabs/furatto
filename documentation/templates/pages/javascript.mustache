@@ -10,6 +10,7 @@
 <div class="container-center">
   <div class="row">
     <div class="col-3">
+      <!-- Navigation sidebar -->
       <div class="docs-sidebar">
         <ul class="nav nav-bordered">
           <li><a href="#datepicker">Datepicker</a></li>
@@ -19,8 +20,10 @@
           <li><a href="#tooltips">Tooltips</a></li>
         </ul>
       </div>
+      <!-- Navigation sidebar -->
     </div>
     <div class="col-9">
+      <!-- Datepicker section -->
       <div id="datepicker"> 
         <h2 class="header">Datepicker</h2>
         <h4 class="light">A mobile-friendly, responsive and lightweight jquery date input picker. Based on <a href="#">Pickadate.js</a></h4>
@@ -155,7 +158,9 @@ $('#datePicker').pickadate(options)
            </tbody>
         </table>
       </div>
+      <!-- Datepicker section -->
       <hr />
+      <!-- Toolbars section -->
       <div class="docs-section" id="toolbars">
        <h2 class="header">Toolbars</h2>
        <h4 class="light">This jquery plugin from <a href="http://paulkinzett.github.io/toolbar/">@paul_kinzett</a> allows you to quickly create tooltip style toolbars for use in web applications and websites.</h4>
@@ -229,7 +234,9 @@ $('#datePicker').pickadate(options)
           </tbody>
         </table>
       </div>
+      <!-- Toolbars section -->
       <hr />
+      <!-- Modal section -->
       <div class="docs-section" id="modal">
          <h2 class="header">Modal</h2>
          <h4 class="light">Furatto modal was rebuilt and now comes better than ever, it is truly responsive and all transitions are managed via hardware acceleration.</h4>
@@ -321,7 +328,9 @@ $('#modal').modal('hide');
           </table>
 
       </div>
+      <!-- Modal section -->
       <hr />
+      <!-- Carousel section -->
       <div class="docs-section" id="carousel">
         <h2 class="header">Slider</h2>        
         <h4 class="light">Furatto comes with a better slider based on the Mobile First principle. It is built on top of <a href="#">Swiper</a> by <a href="#">iDangero.us</a>, which is a mobile touch slider & framework with hardware accelerated transitions.</h4>
@@ -484,91 +493,91 @@ var swiper = new Swiper('.swiper-container', {
         </code>
        </pre>
       </div>
+      <!-- Carousel section -->
       <hr />
-         <div id="tooltips" class="docs-section">
-            <h2 class="header">Tooltips</h2>  
-            <h4 class="light">Provide helpful messages through tooltips on icons menus, text hints with Furatto tooltips. Based on the <a href="#">Boostrap</a> tooltips. Four directions are available.</h4>
-            <div class="docs-example">
-               <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
-               <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
-               <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
-               <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
-            </div>
-            <div class="docs-code">
-               <pre data-language="html">
-                 <code>
-<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
-<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
-<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
-<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
-                 </code>
-               </pre>
-            </div>
-            <h3>Usage</h3>
-            <h4>Via data attributes</h4>
-            <p>Add the <span class="code">data-toggle="tooltip"</span> attribute to any element.</p>
+      <!-- Tooltips section -->
+       <div id="tooltips" class="docs-section">
+          <h2 class="header">Tooltips</h2>  
+          <h4 class="light">Provide helpful messages through tooltips on icons menus, text hints with Furatto tooltips. Based on the <a href="#">Boostrap</a> tooltips. Four directions are available.</h4>
+          <div class="docs-example">
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
+          </div>
+          <div class="docs-code">
              <pre data-language="html">
                <code>
-<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
+  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
+  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
                </code>
              </pre>
-            <h4>Via javascript</h4>
-            <p>You can trigger the tooltip plugin via JS like so:</p>
-             <pre data-language="html">
-               <code>
-$('#tooltip').tooltip('show');
-               </code>
-             </pre>
-             <h3>Options</h3>
-             <table class="table table-bordered table-striped responsive">
-               <thead>
-                 <tr>
-                   <th>Name</th>
-                   <th>Type</th>
-                   <th>Default</th>
-                   <th>Description</th>
-                 </tr>
-               </thead>
-               <tbody>
-                 <tr>
-                   <td>placemenet</td>
-                   <td>string</td>
-                   <td>top</td>
-                   <td>Where to display the tooltip, <span class="code">top</span>, <span class="code">bottom</span>, <span class="code">right</span>, <span class="code">left</span>.</td>
-                 </tr>
-                 <tr>
-                   <td>original-title</td>
-                   <td>string</td>
-                   <td>undefined</td>
-                   <td>Especifies the text to be displayed on the tooltip.</td>
-                 </tr>
-               </tbody>
-             </table>
-            <h3>Methods</h3>
-            <table class="table table-bordered table-striped responsive">
-               <tbody>
-                 <tr>
-                   <td>$('#example').tooltip('show')</td>
-                   <td>Displays the tooltip.</td>
-                 </tr>
-                 <tr>
-                   <td>$('#example').tooltip('hide')</td>
-                   <td>Hides the tooltip.</td>
-                 </tr>
-                 <tr>
-                   <td>$('#example').tooltip('toggle')</td>
-                   <td>Toggles the tooltip.</td>
-                 </tr>
-                 <tr>
-                   <td>$('#example').tooltip('show')</td>
-                   <td>Destroys the tooltip.</td>
-                 </tr>
-               </tbody>
-            </table>
-         </div>
-      <div class="docs-section" id="dropdown">
-         
-      </div>
+          </div>
+          <h3>Usage</h3>
+          <h4>Via data attributes</h4>
+          <p>Add the <span class="code">data-toggle="tooltip"</span> attribute to any element.</p>
+           <pre data-language="html">
+             <code>
+  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+             </code>
+           </pre>
+          <h4>Via javascript</h4>
+          <p>You can trigger the tooltip plugin via JS like so:</p>
+           <pre data-language="html">
+             <code>
+  $('#tooltip').tooltip('show');
+             </code>
+           </pre>
+           <h3>Options</h3>
+           <table class="table table-bordered table-striped responsive">
+             <thead>
+               <tr>
+                 <th>Name</th>
+                 <th>Type</th>
+                 <th>Default</th>
+                 <th>Description</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>placemenet</td>
+                 <td>string</td>
+                 <td>top</td>
+                 <td>Where to display the tooltip, <span class="code">top</span>, <span class="code">bottom</span>, <span class="code">right</span>, <span class="code">left</span>.</td>
+               </tr>
+               <tr>
+                 <td>original-title</td>
+                 <td>string</td>
+                 <td>undefined</td>
+                 <td>Especifies the text to be displayed on the tooltip.</td>
+               </tr>
+             </tbody>
+           </table>
+          <h3>Methods</h3>
+          <table class="table table-bordered table-striped responsive">
+             <tbody>
+               <tr>
+                 <td>$('#example').tooltip('show')</td>
+                 <td>Displays the tooltip.</td>
+               </tr>
+               <tr>
+                 <td>$('#example').tooltip('hide')</td>
+                 <td>Hides the tooltip.</td>
+               </tr>
+               <tr>
+                 <td>$('#example').tooltip('toggle')</td>
+                 <td>Toggles the tooltip.</td>
+               </tr>
+               <tr>
+                 <td>$('#example').tooltip('show')</td>
+                 <td>Destroys the tooltip.</td>
+               </tr>
+             </tbody>
+          </table>
+       </div>
+      <!-- Tooltips section -->
     </div>
   </div>
 </div>
