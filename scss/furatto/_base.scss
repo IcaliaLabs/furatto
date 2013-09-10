@@ -21,7 +21,6 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $base-font-color;
-  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,10 +40,6 @@ html, body {
   background-color: $bg-color;
   height: 100%;
 }
-
-/*.with-left-navbar {*/
-  /*padding-left: $vrt-navbar-width + 2em;*/
-/*}*/
 
 hr {
   clear: both;
