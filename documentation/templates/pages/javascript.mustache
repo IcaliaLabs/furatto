@@ -30,7 +30,7 @@
         <div class="docs-example">
           <input type="text" data-datepicker /> 
         </div>
-        <div class="docs-code">
+        <div class="docs-code hidden-xs">
            <pre data-language="html">
               <code>
 &lt;input type="text" data-datepicker /&gt;
@@ -40,14 +40,14 @@
         <h3>Usage</h3>
         <h4>Via data attributes</h4>
         <p>You can activate the date picker without writing any Javascript. Add the <span class="code">data-datepicker</span> to a text input.</p>
-        <pre data-language="html">
+        <pre data-language="html" class="hidden-xs">
           <code>
 &lt;input type="text" data-datepicker /&gt;
           </code>
         </pre>
         <h4>Via Javascript</h4>
         <p>You can call the date picker by attaching the pickadate function to the jQuery element.</p>
-        <pre data-language="javascript">
+        <pre data-language="javascript" class="hidden-xs">
           <code>
 $('#datePicker').pickadate(options)
           </code>
@@ -177,7 +177,7 @@ $('#datePicker').pickadate(options)
             <a href="#"><i class="icon-map-marker icon-white"></i></a>
           </div>
         </div>
-        <div class="docs-code">
+        <div class="docs-code hidden-xs">
           <pre data-language="html">
              <code>
 <a href="javascript:void(0)" class="btn btn-dark" data-furatto="toolbar" data-position="top" data-content="#user-toolbar-options-top">
@@ -196,7 +196,7 @@ $('#datePicker').pickadate(options)
         <h3>Usage</h3>
         <h4>Via data attributes</h4>
         <p>Add the <span class="code">data-furatto="toolbar"</span> to a link. You have add a a <span class="code">data-content="#idToToolbarContent"</span> for the toolbar pick up the right anchors.</p>
-        <pre data-language="html">
+        <pre data-language="html" class="hidden-xs">
            <code>
 <a href="javascript:void(0)" class="btn btn-dark" data-furatto="toolbar" data-position="top" data-content="#user-toolbar-options-top">
   <i class="icon-cog icon-white nomargin"></i>
@@ -257,7 +257,7 @@ $('#datePicker').pickadate(options)
               </div>
             </div>
          </div>
-         <div class="docs-code">
+         <div class="docs-code hidden-xs">
           <pre data-language="html">
              <code>
 &lt;button class="btn btn-info btn-large" data-furatto="modal" data-target="#modal-1" data-transition="1"&gt;Launch modal&lt;/button&gt;
@@ -281,14 +281,14 @@ $('#datePicker').pickadate(options)
          <h3>Usage</h3>
          <h4>Via data attributes</h4>
          <p>Add the <span class="code">data-furatto="modal"</span> attribute to a button or link. It is necessary that you add a <span class="code">data-target="#myModal"</span> attribute poiting to the modal.</p>
-          <pre data-language="html">
+          <pre data-language="html" class="hidden-xs">
              <code>
 &lt;button class="btn btn-info btn-large" data-furatto="modal" data-target="#modal-1" data-transition="1"&gt;Launch modal&lt;/button&gt;
             </code>
           </pre>
           <h4>Via javascript</h4>
           <p>You can show or hide a modal by calling the <span class="code">show</span> or the <span class="code">hide</span> function, like so:</p>
-          <pre data-language="javascript">
+          <pre data-language="javascript" class="hidden-xs">
              <code>
 $('#modal').modal('show');
 $('#modal').modal('hide');
@@ -395,8 +395,8 @@ $('#modal').modal('hide');
             <div class="swiper-pagination"></div>
           </div>
          </div> 
-        <div class="docs-code">
-          <pre data-language="javascript">
+        <div class="docs-code hidden-xs">
+          <pre data-language="html">
              <code>
 &lt;div class="swiper-container"&gt;
   <!--Clickable arrow controls -->
@@ -479,7 +479,7 @@ $('#modal').modal('hide');
         </tbody>
        </table>
        <p>The javascript call is provided below:</p>
-       <pre data-language="html">
+       <pre data-language="javascript" class="hidden-xs">
          <code>
 var swiper = new Swiper('.swiper-container', {
   pagination: '.swiper-pagination',
@@ -505,7 +505,7 @@ var swiper = new Swiper('.swiper-container', {
              <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
              <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
              <pre data-language="html">
                <code>
   <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
@@ -518,14 +518,14 @@ var swiper = new Swiper('.swiper-container', {
           <h3>Usage</h3>
           <h4>Via data attributes</h4>
           <p>Add the <span class="code">data-toggle="tooltip"</span> attribute to any element.</p>
-           <pre data-language="html">
+           <pre data-language="html" class="hidden-xs">
              <code>
   <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
              </code>
            </pre>
           <h4>Via javascript</h4>
           <p>You can trigger the tooltip plugin via JS like so:</p>
-           <pre data-language="javascript">
+           <pre data-language="javascript" class="hidden-xs">
              <code>
   $('#tooltip').tooltip('show');
              </code>
@@ -559,19 +559,19 @@ var swiper = new Swiper('.swiper-container', {
           <table class="table table-bordered table-striped responsive">
              <tbody>
                <tr>
-                 <td>$('#example').tooltip('show')</td>
+                 <td><span class="code">$('#example').tooltip('show')</span></td>
                  <td>Displays the tooltip.</td>
                </tr>
                <tr>
-                 <td>$('#example').tooltip('hide')</td>
+                 <td><span class="code">$('#example').tooltip('hide')</span></td>
                  <td>Hides the tooltip.</td>
                </tr>
                <tr>
-                 <td>$('#example').tooltip('toggle')</td>
+                 <td><span class="code">$('#example').tooltip('toggle')</span></td>
                  <td>Toggles the tooltip.</td>
                </tr>
                <tr>
-                 <td>$('#example').tooltip('show')</td>
+                 <td><span class="code">$('#example').tooltip('show')</span></td>
                  <td>Destroys the tooltip.</td>
                </tr>
              </tbody>

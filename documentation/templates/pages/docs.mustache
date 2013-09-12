@@ -33,30 +33,36 @@
           <h2 class="header">Overview</h2>
           <h4 class="light">Get into Furatto bare bones structure, including the Mobile First approach we took.</h4>
           <h3>HTML 5 doctype</h3>
-          <p>Motivated by the mobile first approach as well as some HTML elements and CSS may not work as expected, it is highly recommended that you use the HTML5 doctype.</p>
-          <pre data-language="html">
-          <code>
+           <div class="hidden-xs">
+            <p>Motivated by the mobile first approach as well as some HTML elements and CSS may not work as expected, it is highly recommended that you use the HTML5 doctype.</p>
+            <pre data-language="html">
+            <code>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 ...
 &lt;/html&gt;
-          </code>
-          </pre>
+            </code>
+            </pre>
+           </div>
           <h3>Mobile First</h3>
           <p>Back in version 1, we added the meta tag for adjusting the viewport width for the current device. We have added some other patterns and baked it all together in order to be mobile friendly from the start.</p>
-          <pre data-language="html">
-          <code>
+          <div class="hidden-xs">
+            <pre data-language="html">
+            <code>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          </code>
-          </pre>
+            </code>
+            </pre>
+          </div>
           <p>
             You can disable the zooming capabilities on mobile devices by adding <span class="code">maximun-scale=1</span> and <span class="code">user-scalable=no</span>, this way your site will feel a bit more like a native application. Use it with care, as not always is the best approach.
           </p>
-          <pre data-language="html">
-          <code>
+          <div class="hidden-xs">
+            <pre data-language="html">
+            <code>
 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1, user-scalable=no" /&gt;
-          </code>
-          </pre>
+            </code>
+            </pre>
+          </div>
           <h3>Global settings</h3>
           <p>
             Furatto applies some basic global settings for, typography, links, and body itself. Some of these:
@@ -115,8 +121,9 @@
           </div>
         </div>
       </div>
-      <pre data-language="html">
-      <code>
+      <div class="hidden-xs">
+        <pre data-language="html">
+        <code>
 <div class="row">
   <div class="col-1">col-1</div>
   <div class="col-1">col-1</div>
@@ -138,19 +145,22 @@
   <div class="col-3">col-3</div>
   <div class="col-2">col-2</div>
 </div>
-      </code>
-      </pre>
+        </code>
+        </pre>
+      </div>
           <h3>Building the markup</h3>
           <p>For a simple three column layout just add the <span class="code html">row</span> class name and add the correct number of <span class="code html">col-*</span> columns. The <span class="code">col-*</span> class name for the columns comes from the 1 to the 12 as is a 12 column grid.</p>
-          <pre data-language="html">
-          <code>
+          <div class="hidden-xs">
+            <pre data-language="html">
+              <code>
 <div class="row">
   <div class="col-4">...</div>
   <div class="col-4">...</div>
   <div class="col-4">...</div>
 </div>
-          </code>
-</pre>
+              </code>
+            </pre>
+          </div>
           <h3>Nesting columns</h3>
           <p>When comes to nesting Furatto helps you add multiple column div elements. You just have to add a <span class="code html">row</span> class into an existing <span class="code html">col-*</span> column. The nested rows should also match 12 columns, you can see it as if is another <span class="code html">row</span> element.</p>
           <div class="nested-grid-demo">
@@ -171,8 +181,9 @@
               </div>
             </div>
           </div>
-        <pre data-language="html">
-          <code>
+        <div class="hidden-xs">
+          <pre data-language="html">
+            <code>
 <div class="row">
   <div class="col-9">
     <p>I'm a col-9 class column</p>
@@ -189,8 +200,9 @@
     <p>I'm a col-3 class column</p>
   </div>
 </div>
-          </code>
-        </pre>
+           </code>
+          </pre>
+       </div>
 
         </div>
         <!-- Grid section -->
@@ -255,6 +267,7 @@
             </div>
             <hr />
           </div>
+          <div class="hidden-xs">
           <pre data-language="html">
             <code>
 <h1>...</h1>
@@ -265,13 +278,14 @@
 <h6>...</h6>
             </code>
           </pre>
+        </div>
           <h3>Body copy</h3>
           <p>Furatto comes with global default settings <span class="code">font-size</span> is 16px with a <span class="code">line-height</span> of 20px. In addition to that the body receives a 10px <span class="code">margin-bottom</span>.</p>
           <div class="row docs-example">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
              <pre data-language="html">
                <code>
 &lt;p&gt;...&lt;/p&gt;
@@ -283,7 +297,7 @@
           <div class="row docs-example">
             <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <p class="light">...</p>
@@ -297,7 +311,7 @@
           <div class="row docs-example">
             <small>This is a small text, probably a good use is to highlight text.</small>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <small>This is a small text, probably a good use is to highlight text.</small>
@@ -309,7 +323,7 @@
           <div class="row docs-example">
             This is a snippet to <strong>bold this chunk of text.</strong>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 This is a snippet to <strong>bold this chunk of text.</strong>
@@ -321,7 +335,7 @@ This is a snippet to <strong>bold this chunk of text.</strong>
           <div class="row docs-example">
             This is a snippet to <em>emphasize a text.</em>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 This is a snippet to <em>emphasize a text.</em>
@@ -335,7 +349,7 @@ This is a snippet to <em>emphasize a text.</em>
             <p class="text-center">Center text</p>
             <p class="text-right">Right text</p>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <p class="text-left">Left text</p>
@@ -353,7 +367,7 @@ This is a snippet to <em>emphasize a text.</em>
             <p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
             <p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
@@ -386,7 +400,7 @@ This is a snippet to <em>emphasize a text.</em>
               </li>
             </ul>  
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <ul>
@@ -415,7 +429,7 @@ This is a snippet to <em>emphasize a text.</em>
               </li>
             </ol>  
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <ol>
@@ -439,7 +453,7 @@ This is a snippet to <em>emphasize a text.</em>
               </li>
             </ul>  
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <ul class="unstyled">
@@ -457,7 +471,7 @@ This is a snippet to <em>emphasize a text.</em>
               <li>List item 3</li>
             </ul>  
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <ul class="inline">
@@ -482,7 +496,7 @@ This is a snippet to <em>emphasize a text.</em>
               <dd>Definition description</dd>
             </dl>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <dl>
@@ -500,7 +514,7 @@ This is a snippet to <em>emphasize a text.</em>
               </p>            
             </blockquote>          
          </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <blockquote>
@@ -544,7 +558,7 @@ This is a snippet to <em>emphasize a text.</em>
                 </tbody>
             </table>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <table class="table"></table>
@@ -581,7 +595,7 @@ This is a snippet to <em>emphasize a text.</em>
                 </tbody>
             </table>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <table class="table table-condensed"></table>
@@ -618,7 +632,7 @@ This is a snippet to <em>emphasize a text.</em>
                 </tbody>
             </table>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <table class="table table-striped"></table>
@@ -655,7 +669,7 @@ This is a snippet to <em>emphasize a text.</em>
                 </tbody>
             </table>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <table class="table table-bordered"></table>
@@ -692,7 +706,7 @@ This is a snippet to <em>emphasize a text.</em>
                 </tbody>
             </table>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
                <code>
 <table class="table table-bordered responsive"></table>
@@ -764,7 +778,7 @@ This is a snippet to <em>emphasize a text.</em>
               <input type="submit">
             </form>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <form>
@@ -805,7 +819,7 @@ This is a snippet to <em>emphasize a text.</em>
               <input type="submit" value="Search" />
             </form>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <form class="inline-form">  
@@ -834,7 +848,7 @@ This is a snippet to <em>emphasize a text.</em>
               </div>
             </form>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <form class="horizontal-form">  
@@ -862,7 +876,7 @@ This is a snippet to <em>emphasize a text.</em>
           <div class="row docs-example">
             <input type="text" placeholder="A text input" class="input-block"/>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <input type="text" placeholder="A text input" class="input-block"/>
@@ -876,7 +890,7 @@ This is a snippet to <em>emphasize a text.</em>
           <div class="row docs-example">
             <input type="text" class="docs-focus input-block", value="This is a focused input...">
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <input type="text" class="docs-focus input-block" value="This is a focused input...">
@@ -888,7 +902,7 @@ This is a snippet to <em>emphasize a text.</em>
           <div class="row docs-example">
             <input type="text" class="input-block", placeholder="This is a disabled input..." disabled />
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <input type="text" class="input-block", value="This is a disabled input..." disabled />
@@ -920,7 +934,7 @@ This is a snippet to <em>emphasize a text.</em>
               </div>
             </div>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <div class="form-fields-success">
@@ -968,7 +982,7 @@ This is a snippet to <em>emphasize a text.</em>
             <input type="text" class="input-large" placeholder="input-large - 66.668% width" /><br /> 
             <input type="text" class="input-xlarge" placeholder="input-xlarge - 83.335% width" /><br />
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html"> 
               <code>
 <input type="text" class="input-mini" placeholder="input-mini - 16.667% width"/><br />
@@ -985,7 +999,7 @@ This is a snippet to <em>emphasize a text.</em>
             <input type="text" class="input-block" /><br />
             <span class="help-block">This is a helping block for an input, which breaks into a new line.</span>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html"> 
               <code>
 <input type="text" class="input-mini" placeholder="input-mini - 16.667% width"/><br />
@@ -1015,7 +1029,7 @@ This is a snippet to <em>emphasize a text.</em>
             <a href="javascript:void(0)" class="btn btn-highlight">Button</a> 
             <a href="javascript:void(0)" class="link">Link</a> 
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
               <code>
 <a href="javascript:void(0)" class="btn">Button</a> 
@@ -1039,7 +1053,7 @@ This is a snippet to <em>emphasize a text.</em>
             <button class="btn btn-primary btn-xlarge">Extra large</button>
             <button class="btn btn-primary btn-xxlarge">Extra extra large</button>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
               <code>
 <button class="btn btn-primary btn-mini">Mini</button>
@@ -1055,7 +1069,7 @@ This is a snippet to <em>emphasize a text.</em>
             <button class="btn btn-info btn-block">Block level button</button>
             <button class="btn btn-success btn-block">Block level button</button>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
               <code>
 <button class="btn btn-info btn-block">Block level button</button>
@@ -1071,7 +1085,7 @@ This is a snippet to <em>emphasize a text.</em>
               <button class="btn btn-success btn-large" disabled>Disabled button</button>
             </p>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
               <code>
 <button class="btn btn-info btn-large btn-disabled">Disabled button</button>
@@ -1092,7 +1106,7 @@ This is a snippet to <em>emphasize a text.</em>
               <a class="btn btn-highlight btn-alpha">Alpha highlight button</a>
             </div>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
 <a class="btn btn-alpha">Alpha default button</a>
 <a class="btn btn-success btn-alpha">Alpha success button</a>
@@ -1116,7 +1130,7 @@ This is a snippet to <em>emphasize a text.</em>
                </a>
             </p>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
            <pre data-language="html"> 
             <code>
 <a href="javascript:void(0)" class="btn btn-primary">
@@ -1142,7 +1156,7 @@ This is a snippet to <em>emphasize a text.</em>
               <img src="http://placehold.it/200x200" alt="" class="img img-circular" />
               <img src="http://placehold.it/200x200" alt="" class="img img-polaroid" />
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
             <code>
 <img src="http://placehold.it/200x200" alt="" class="img" />
@@ -1158,7 +1172,7 @@ This is a snippet to <em>emphasize a text.</em>
               <img src="http://placehold.it/200x200" alt="">
             </div>
           </div>
-          <div class="docs-code">
+          <div class="docs-code hidden-xs">
             <pre data-language="html">
               <code>
 <div class="img-frame img-circular">
@@ -1174,28 +1188,28 @@ This is a snippet to <em>emphasize a text.</em>
           <h4 class="light">Simple and functional classes on behavior tweaks.</h4>
           <h3>.pull-left</h3>
           <p>Floats an element to the left.</p>
-          <pre data-language="html">
+          <pre data-language="html" class="hidden-xs">
             <code>
 <div class="pull-left">...</div>
             </code>
           </pre>
           <h3>.pull-right</h3>
           <p>Floats an element to the right.</p>
-          <pre data-language="html">
+          <pre data-language="html" class="hidden-xs">
             <code>
 <div class="pull-right">...</div>
             </code>
           </pre>
           <h3>.clearfix</h3>
           <p>Clears the float on any element.</p>
-          <pre data-language="html">
+          <pre data-language="html" class="hidden-xs">
             <code>
 <div class="clearfix">...</div>
             </code>
           </pre>
           <h3>.text-uppercase</h3>
           <p>Transforms the text to uppercase.</p>
-          <pre data-language="html">
+          <pre data-language="html" class="hidden-xs">
             <code>
 <div class="text-uppercase">...</div>
             </code>

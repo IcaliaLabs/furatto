@@ -64,7 +64,9 @@
   [class*="col-"]:first-child {
     margin-left: 0px;
   }
-
+}
+.row + .row {
+  margin-top: 2px;
 }
 
 //Borders and paddings are applied inside the div element

@@ -8,7 +8,7 @@
  */
 
 .bg-primary {
-  background: $dashboard-inverse-bg-color;
+  background: $dashboard-primary-bg-color;
 }
 
 .bg-info {
@@ -21,4 +21,20 @@
 
 .bg-danger {
   background: $dashboard-danger-bg-color;
+}
+
+.bg-warning {
+  background: $dashboard-warning-bg-color;
+}
+
+.bg-success {
+  background: $dashboard-success-bg-color;
+}
+
+.bg-inverse {
+  background: $dashboard-inverse-bg-color;
+}
+
+.bg-dark {
+  background: #34495e;
 }

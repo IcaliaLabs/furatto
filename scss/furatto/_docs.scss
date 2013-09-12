@@ -224,6 +224,47 @@
   }
 }
 
+.docs-example-header {
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.docs-example-description {
+  font-size: 14px;
+}
+
+//Add-ons
+.add-on {
+  background: #efefef;
+}
+
+.add-on-title {
+  font-weight: bolder;
+
+  a {
+    color: #000;
+  }
+}
+
+.add-on-image {
+  float: left;
+  margin-right: 5px;
+}
+
+.add-on-details {
+  font-size: 11px;
+  font-style: italic;
+  color: #666;
+
+  a {
+    font-style: normal;
+  }
+}
+
+.add-on-description {
+  font-size: 14px;
+}
+
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 

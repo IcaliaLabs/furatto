@@ -15,6 +15,10 @@
   @include box-sizing(none);
 }
 
+.img-block {
+  width: 100%;
+}
+
 .img-hover {
   @include transition(all .4s ease);
   &:hover {

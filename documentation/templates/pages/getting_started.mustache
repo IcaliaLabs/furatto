@@ -90,11 +90,12 @@ furatto/
         <div id="basic_setup" class="docs-section">
           <h2 class="header">Basic Setup</h2>
           <h4 class="light">Our markup layout is pretty straight forward, and the example below shows a basic HTML template for you to start. We encourage you to go to the <a href="examples.html">Examples</a> section and look at some we provided.</h4>
-          <p>
-            You can copy and paste the HTML below to get started:
-          </p>
-          <pre data-language="html">
-          <code>
+           <div class="hidden-xs">
+            <p>
+              You can copy and paste the HTML below to get started:
+            </p>
+            <pre data-language="html">
+            <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -104,12 +105,24 @@ furatto/
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   &lt;/head&gt;
   &lt;body&gt;
-    <h1>Hello Furatto!</h1>
+    <!-- You better not move this -->
+    &lt;div class="panels"&gt;
+      &lt;div class="panel panel-inverse panel-left"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    <!-- Seriously don't move the code above -->
+    &lt;div class="panel-content"&gt;
+      <!-- All your content goes here -->
+      <h1>Hello Furatto!</h1>
+    &lt;/div&gt;
+    &lt;script src="assets/js/jquery.js"&gt;&lt;/script&gt;
     &lt;script src="assets/js/furatto.min.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-          </code>
-          </pre>
+            </code>
+            </pre>
+           </div>
+          <!-- basic setup headlines -->
           <div class="row">
             <div class="col-4">
               <h5 class="text-error"><strong>Meta Viewport tag</strong></h5>
@@ -130,6 +143,27 @@ furatto/
               </p>
             </div>
           </div>
+          <div class="row">
+             <div class="col-4">
+              <h5 class="text-error"><strong>Absolute positioned</strong></h5>
+              <p>The layout is built using two main absolute elements <span class="code">panels</span> and <span class="code">panel-content</span> in order to
+              provide the left drawer slide effect on small devices.
+              </p>
+             </div>
+             <div class="col-4">
+              <h5 class="text-error"><strong>Plugins</strong></h5>
+              <p>The javascript plugins provided by Furatto use jQuery, so it is necessary for you to include jQuery in your layout. jQuery v2.0.2 is located under the 
+               <span class="code">assets/js</span> directory.
+              </p>
+             </div>
+             <div class="col-4">
+              <h5 class="text-error"><strong>Assets</strong></h5>
+              <p>An assets directory with the necessary <span class="code">css</span>, <span class="code">js</span>, <span class="code">fonts</span>
+                and <span class="code">images</span> is included in the <span class="code">furatto.zip</span> file you downloaded.
+              </p>
+             </div>
+          </div>
+          <!-- basic setup headlines -->
         </div>
         <!-- Basic setup section -->
         <hr />
@@ -160,40 +194,42 @@ furatto/
         <!-- Using rails section -->
         <div id="using_rails" class="docs-section">
           <h2 class="header">Using rails</h2>
-          <h4 class="light">We provided a gem which plays well with any Rails app, you can check it out at <a href="https://github.com/IcaliaLabs/furatto-rails" target="_blank">https://github.com/IcaliaLabs/furatto-rails</a>, it includes all the styling and jQuery plugins for a full integration. A quick tutorial is provided below:</h4>
-          <p>1. Add the compass-rails gem to the Gemfile</p>
-          <pre data-language="shell">
-          <code>
-group :assets do
+          <h4 class="light">We provide a gem which plays well with any Rails app, you can check it out at <a href="https://github.com/IcaliaLabs/furatto-rails" target="_blank">https://github.com/IcaliaLabs/furatto-rails</a>, it includes all the styling and jQuery plugins for a full integration. A quick tutorial is provided below:</h4>
+          <div class="hidden-xs">
+            <p>1. Add the compass-rails gem to the Gemfile</p>
+            <pre data-language="shell">
+            <code>
+  group :assets do
+    gem 'compass-rails'
+  end 
+            </code>
+            </pre>
+            <p>2. After including the compass-rails gem, you need to add the furatto gem to your application's Gemfile</p>
+            <pre data-language="shell">
+            <code>
   gem 'compass-rails'
-end 
-          </code>
-          </pre>
-          <p>2. After including the compass-rails gem, you need to add the furatto gem to your application's Gemfile</p>
-          <pre data-language="shell">
-          <code>
-gem 'compass-rails'
-          </code>
-          </pre>
-          <p>3. Run the bundle command to install it</p>
-          <pre data-language="shell">
-          <code>
-bundle instatl
-          </code>
-          </pre>
-          <p>4. Add Furatto to your asset pipeline</p>
-          <span class="code">app/assets/stylesheets/application.css</span>
-          <pre data-language="shell">
-          <code>
-*= require furatto
-          </code>
-          </pre>
-          <span class="code">app/assets/javascripts/application.js</span>
-          <pre data-language="shell">
-          <code>
-//= require furatto
-          </code>
-          </pre>
+            </code>
+            </pre>
+            <p>3. Run the bundle command to install it</p>
+            <pre data-language="shell">
+            <code>
+  bundle instatl
+            </code>
+            </pre>
+            <p>4. Add Furatto to your asset pipeline</p>
+            <span class="code">app/assets/stylesheets/application.css</span>
+            <pre data-language="shell">
+            <code>
+  *= require furatto
+            </code>
+            </pre>
+            <span class="code">app/assets/javascripts/application.js</span>
+            <pre data-language="shell">
+            <code>
+  //= require furatto
+            </code>
+            </pre>
+          </div>
         </div>
         <!-- Using rails section -->
         <hr />

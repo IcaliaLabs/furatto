@@ -157,8 +157,16 @@ ol.inline {
     padding-left: 8px;
     padding-right: 8px;
 
+    a.btn {
+      color: #FFF;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     a { 
-      color: #232323;
+      color: $link-color;
 
       &:hover {
         text-decoration: underline;
