@@ -1,0 +1,159 @@
+/*******************************/
+/*       BASIC SETUP           */
+/*******************************/
+
+.basic-setup {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+/*******************************/
+/*       LANDING               */
+/*******************************/
+
+.step {
+  padding: 20px;
+}
+
+/*******************************/
+/*       LOGIN                 */
+/*******************************/
+
+.login {
+  width: 30%;
+  margin: 30px auto;
+}
+
+@media (max-width: 767px) {
+  .login {
+    width: 70%;
+  }
+}
+
+/*******************************/
+/*       CAROUSEL              */
+/*******************************/
+
+.swiper-container {
+  margin-bottom: 50px;
+}
+
+.swiper-slide {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color: #FFF;
+}
+
+.swiper-pagination {
+  margin-top: 10px;
+}
+
+.carousel-step {
+  padding: 30px;
+  text-align: center;
+}
+
+.features {
+ margin-top: 50px; 
+}
+
+.features .feature-description {
+  font-size: 20px;
+}
+
+.features .row {
+  margin-bottom: 40px;
+}
+
+/*******************************/
+/*       Dashboard             */
+/*******************************/
+
+.dashboard {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.dashboard .dashboard-container {
+  color: #FFF;
+  padding: 20px 20px 0 20px;
+  position: relative;
+  height: 190px;
+}
+
+.dashboard [class^="icon-"], .dashboard [class*="icon-"] {
+  font-size: 6em;
+}
+
+.dashboard .dashboard-container .dashboard-header-bottom {
+  font-weight: 300;
+  font-size: 2.5em;
+  margin-top: 25px;
+}
+
+.dashboard .dashboard-container .dashboard-header-top {
+  font-weight: 300;
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+
+.dashboard .dashboard-container .dashboard-number {
+  font-size: 2em;
+  position: absolute;
+  top: 20px;
+}
+
+.temperature {
+  margin-bottom: 0;
+  font-size: 2em;
+  opacity: 0.5;
+}
+
+/*******************************/
+/*       Thumbnails            */
+/*******************************/
+
+.thumbnail {
+  position: relative;
+}
+
+.thumbnail .count {
+  position: absolute;
+  bottom: 65px;
+  right: 5px;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.thumbnail-header {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.thumbnail-description {
+  color: #666;
+  display: block;
+  text-align: center;
+  font-weight: 300;
+}
+
+.thumbnails-row {
+  margin-bottom: 20px;
+}
+
+.thumbnail-footer {
+  margin-top: 50px;
+  height: 170px;
+  padding-top: 30px;
+}
+
+.thumbnail-footer a {
+  color: #FFF; 
+}
+
