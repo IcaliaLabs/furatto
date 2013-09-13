@@ -7,9 +7,17 @@ jQuery(function() {
       return $(this).parent().addClass("active");
     }
   });
-  return $('#js-show-left-navbar').click(function(e) {
-    $('.vrt-navbar').toggleClass('hide');
-    $('.navbar:first').toggleClass('hide');
-    return false;
+  return $('.panel-content').scroll(function() {
+    var sidebar;
+    sidebar = $('.docs-sidebar');
+    if ($(window).width() > 767) {
+      console.log($(window).width());
+      if ($('.panel-content').scrollTop() >= 320) {
+        sidebar.addClass("affix");
+      }
+      if ($('.panel-content').scrollTop() < 320) {
+        return sidebar.removeClass("affix");
+      }
+    }
   });
 });

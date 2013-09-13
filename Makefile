@@ -29,7 +29,7 @@ build:
 	@echo "Lov @kurenn and @icalialabs\n"
 
 # Build Furatto directory #
-furatto: furatto-img furatto-js furatto-css furatto-font
+furatto: furatto-img furatto-js furatto-css furatto-font furatto-examples
 
 # JS #
 furatto-js: furatto/js/*.js
@@ -58,6 +58,10 @@ furatto-font: furatto/fonts/*
 furatto/fonts/*: fonts/*
 	mkdir -p furatto/fonts
 	cp -r fonts/* furatto/fonts/
+
+# EXAMPLES #
+furatto-examples: 
+	cp -r documentation/examples furatto
 
 # Make for gh-pages, intended just for @kurenn #
 
