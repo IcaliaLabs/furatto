@@ -45,8 +45,7 @@ hr {
   clear: both;
   margin: 1.25em 0 1.875em;
   height: 0;
-  @include box-sizing(content-box);
-  border: solid #DDD;
+  border: solid $hr-color;
   border-width: 1px 0 0;
 }
 
@@ -58,10 +57,6 @@ hr {
   }
 }
 
-.block {
-  display: block; 
-}
-
 .container-center {
   width: $container-center-width;
   margin: 0 auto;
@@ -71,10 +66,10 @@ hr {
 /* Blockquote */
 /*----------------------------*/
 blockquote {
-  color: #666;
+  color: $blockquote-color;
   font-style: italic;
   line-height: 1.8em;
-  border-left: 5px solid #ddd;
+  border-left: 5px solid $blockquote-border-color;
   padding-left: 1.5em
 }
 
