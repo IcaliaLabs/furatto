@@ -31,10 +31,6 @@ $base-radius: 2px !default;
 $red: #e74c3c !default;
 $dark-red: #c0392b !default;
 
-//Oranges
-$orange: #f1c40f !default;
-$orange-red: #D1582C !default;
-
 //Hipsters
 $info: #1ABC9C !default;
 $dark-info: #16A085 !default;
@@ -47,8 +43,8 @@ $dark-inverse: #242730 !default;
 $inverse: #2E323E !default;
 
 //Blues
-$dark-blue: #328ED0 !default;
-$blue: #38A4E3 !default;
+$dark-blue: #2980b9 !default;
+$blue: #3498db !default;
 
 //Grays
 $dark-gray: #7F8C8D !default;
@@ -60,16 +56,16 @@ $purple: #9B59B6 !default;
 $dark-purple: #8E44AD !default;
 
 //Greens
-$green: #39C446 !default;
-$dark-green: #33A94B !default;
+$green: #2ecc71 !default;
+$dark-green: #27ae60 !default;
 
 //Yellows
 $yellow: #FFD02C !default;
 $dark-yellow: #DCB334 !default;
 
 //Orange
-$dark-orange: #f39c12 !default;
-$orange: #f1c40f !default;
+$dark-orange: #d35400 !default;
+$orange: #e67e22 !default;
 
 //Blacks
 $black: #191C20 !default;
@@ -109,17 +105,17 @@ $padding-xxlarge: 20px 50px !default; // 44px
 
 /* Alerts */
 /* ------ */
-$warning-alert-color: #d38305 !default;
-$warning-header-color: #cc6633 !default;
+$warning-alert-color: $orange !default;
+$warning-header-color: $dark-orange !default;
 
-$success-alert-color: #006633 !default;
-$success-header-color: #006633 !default;
+$success-alert-color: $dark-green !default;
+$success-header-color: $dark-green !default;
 
-$info-alert-color: #195999 !default;
-$info-header-color: #195999 !default;
+$info-alert-color: $dark-blue !default;
+$info-header-color: $dark-blue !default;
 
-$danger-alert-color: #993333 !default;
-$danger-header-color: #993333 !default;
+$danger-alert-color: $dark-red !default;
+$danger-header-color: $dark-red !default;
 
 /* Navbar */
 /* ------ */
