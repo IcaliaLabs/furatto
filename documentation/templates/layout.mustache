@@ -5,6 +5,7 @@
 <title>{{title}}</title>
 <link rel="stylesheet" href="assets/css/normalize.css" />
 <link rel="stylesheet" href="assets/css/furatto.css" />
+<link rel="stylesheet" href="assets/css/docs.css" />
 <link rel="stylesheet" href="assets/add-ons/loadingEffect/css/component.css" />
 <link rel="shortcut icon" href="assets/img/favicon.ico" />
 <script src="assets/add-ons/loadingEffect/js/modernizr.custom.js"></script>
@@ -43,7 +44,7 @@
   <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="docs-license">Apache License v2.0</a></p>
   <ul class="inline">
     <li><a href="index.html">Home</a></li>
-    <li><a href="assets/furatto.zip">Download</a></li>
+    <li><a href="assets/furatto.zip" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V2']);">Download</a></li>
     <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
     <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
     <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
@@ -69,6 +70,7 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/furatto.min.js"></script>
 <script src="assets/js/furatto-demo.js"></script>
+{{#add_ons}}
 <script src="assets/add-ons/loadingEffect/js/masonry.pkgd.min.js"></script>
 <script src="assets/add-ons/loadingEffect/js/imagesloaded.js"></script>
 <script src="assets/add-ons/loadingEffect/js/classie.js"></script>
@@ -80,5 +82,6 @@
     viewportFactor : 0.2
   } );
 </script>
+{{/add_ons}}
 </body>
 </html>
