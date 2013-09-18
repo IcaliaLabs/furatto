@@ -276,6 +276,38 @@
   font-size: 14px;
 }
 
+//Adds a background to the columns for demo purposes
+.grid-demo {
+  margin-bottom: 10px;
+  color: #333;
+
+  [class*="col-"] {
+    background: lighten($blue, 10%);
+    @include border-radius(3px);
+    text-align: center;
+    line-height: $base-line-height;
+  }
+}
+
+.nested-grid-demo {
+  background: lighten($blue, 10%);
+  @include border-radius(3px);
+  [class*="col-"] {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .row {
+    .row {
+      [class*="col-"] {
+        background: darken($blue, 2%);
+        @include border-radius(3px);
+      }
+    }
+  }
+}
+
+
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
