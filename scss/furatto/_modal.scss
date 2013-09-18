@@ -63,12 +63,12 @@ perspective effects (not including the modals and the overlay).
 
 .modal-content-primary {
   color: $white;
-	background: $blue;
+	background: $dashboard-primary-bg-color;
 }
 
 .modal-content-danger {
   color: $white;
-	background: #e74c3c;
+	background: $dashboard-danger-bg-color;
 }
 
 .modal-content-info {

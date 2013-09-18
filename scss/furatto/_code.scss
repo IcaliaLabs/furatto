@@ -37,11 +37,11 @@ pre, code {
 }
 
 pre .comment {
-    color: #999;
+    color: $code-comment-color;
 }
 
 pre .tag, pre .tag-name, pre .support.tag-name {
-    color: #2f6f9f;
+    color: $code-tag-color;
 }
 
 pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
@@ -49,7 +49,7 @@ pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre 
 }
 
 pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
-    color: #333;
+    color: $code-css-property-color;
 }
 
 pre .constant.numeric, pre .keyword.unit, pre .hex-color {

@@ -196,13 +196,13 @@ $input-height: $base-line-height + 10px !default; // base line-height + 8px vert
 
 /* Dashboard */
 /* --------- */
-$dashboard-primary-bg-color: #3498db;
-$dashboard-info-bg-color: #33CCCC;
-$dashboard-funky-bg-color: #9b59b6;
-$dashboard-danger-bg-color: #e74c3c;
-$dashboard-warning-bg-color: #e67e22;
-$dashboard-success-bg-color: #2ecc71;
-$dashboard-inverse-bg-color: #7f8c8d;
+$dashboard-primary-bg-color: $inverse;
+$dashboard-info-bg-color: $blue;
+$dashboard-funky-bg-color: $purple;
+$dashboard-danger-bg-color: $red;
+$dashboard-warning-bg-color: $orange;
+$dashboard-success-bg-color: $green;
+$dashboard-inverse-bg-color: #34495e;
 
 
 /* Footer */
@@ -257,6 +257,9 @@ $dropdown-link-color-hover-bg: lighten($blue, 10%) !default;
 /*---------------------*/
 $code-bg: #f7f7f9 !default;
 $code-font-size: 0.8em !default;
+$code-comment-color: #999;
+$code-tag-color: #2f6f9f;
+$code-css-property-color: #333;
 
 /* Calendar */
 /*---------------------*/
