@@ -98,10 +98,6 @@
   background: lighten($navbar-bg-color, 10%);
 }
 
-.navbar .nav > .active {
-  /*border-bottom: 2px solid $green;*/
-}
-
 // Navbar button for toggling navbar items in responsive layouts
 // These definitions need to come after '.navbar .btn'
 .navbar .btn-navbar {
