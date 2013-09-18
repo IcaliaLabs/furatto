@@ -6,7 +6,6 @@
   left: 0;
   width: auto;
   height: auto;
-  padding-top: $navbar-height;
 }
 
 .panels {
@@ -57,24 +56,6 @@
 /* Hide the actual "Right" drawer in the demo */
 .paneljs-right .panel-right {
 	display: none;
-}
-
-#open-left {
-  display: block;
-  width: 44px;
-  height: 44px;
-}
-
-/* Show the translucent white "Toggle" boxes in the demo */
-.toggler {
-	width: 80%;
-	background: rgba(255,255,255,0.5);
-	margin: 0 auto;
-	position: relative;
-	top: 70px;
-	padding: 20px;
-	margin-bottom: 20px;
-	text-align: center;
 }
 
 .panel-content {
@@ -224,7 +205,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px;
   font-weight: bold;
-  /*text-shadow: 0 1px 0 #000;*/
   text-decoration: none;
   color: #ccc;
   text-indent: 20px;
