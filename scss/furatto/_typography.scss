@@ -16,14 +16,6 @@ p {
 /* Emphasis & miscelaneous */
 /* ----------------------- */
 
-small { 
-  font-size: 85%; 
-}
-
-strong { 
-  font-weight: bold; 
-}
-
 em { 
   font-style: italic; 
 }
@@ -31,7 +23,7 @@ em {
 //Utility classes
 
 .muted {
-  color: #666;
+  color: $muted-color;
 }
 
 .text-warning {
@@ -81,7 +73,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .light {
   font-weight: 300;
-  color: #6f6f6f;
+  color: $light-color;
 }
 
 /* Headers definition */
@@ -133,6 +125,7 @@ ol ol,
 ol ul {
   margin-bottom: 0;
 }
+
 li {
   line-height: $base-line-height;
 }
@@ -168,38 +161,20 @@ ol.inline {
     a { 
       color: $link-color;
 
+      &.active {
+        background: #efefef;
+        color: $muted-color;
+        padding: 10px;
+        @include border-radius(3px);
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
       &:hover {
         text-decoration: underline;
       }
-    }
-  }
-}
-
-//Color Lists
-.color-list {
-  margin-left: 0;
-  list-style: none;
-  > li {
-    display: inline-block;
-    height: $color-list-item-height;
-    width: $color-list-item-width;
-    background: #222;
-    cursor: pointer;
-
-    &.red {
-      background: #ec7063;
-    }
-
-    &.green {
-      background: #1abc9c;
-    }
-
-    &.blue {
-      background: #3498db;
-    }
-
-    &.aero {
-      background: #9cc2cb;
     }
   }
 }
@@ -228,29 +203,12 @@ dd {
   }
 }
 
-//Color states
-.info {
-  color: $dark-blue;
-}
-
-.success {
-  color: $dark-green;
-}
-
-.warning {
-  color: $dark-orange;
-}
-
-.error {
-  color: $dark-red;
-}
-
 //Inline code
 .code {
   padding: 2px 4px;
-  color: #d44950;
+  color: $code-color;
   white-space: nowrap;
-  background-color: #f9f2f4;
+  background-color: $code-bg;
   font-weight: normal;
   font-size: $base-font-size;
   @include border-radius(3px);
