@@ -26,7 +26,7 @@
       <!-- Datepicker section -->
       <div id="datepicker"> 
         <h2 class="header">Datepicker</h2>
-        <h4 class="light">A mobile-friendly, responsive and lightweight jquery date input picker. Based on <a href="#">Pickadate.js</a></h4>
+        <h4 class="light">A mobile-friendly, responsive and lightweight jquery date input picker. Based on <a href="http://amsul.ca/pickadate.js/">Pickadate.js</a></h4>
         <div class="docs-example">
           <input type="text" data-datepicker /> 
         </div>
@@ -54,7 +54,7 @@ $('#datePicker').pickadate(options)
         </pre>
         <blockquote>
           <h4>Heads up!</h4>  
-          <p>Furatto covers some of this plugin features, but if you need a higher level of customization, refer to the official <a href="#">site</a>.</p>
+          <p>Furatto covers some of this plugin features, but if you need a higher level of customization, refer to the official <a href="http://amsul.ca/pickadate.js/">site</a>.</p>
         </blockquote>
         <h4>Options</h4>
         <p>There are several options you can pass via data attributes to the date picker plugin, just by appending the option name to <span class="code">data-</span>, as in <span class="code">data-format</span>.</p>
@@ -205,7 +205,7 @@ $('#datePicker').pickadate(options)
         </pre>
         <blockquote>
           <h4>Heads up!</h4>  
-          <p>Furatto covers the basics, which should be enough to get up and running, but you are free to checkout the official site <a href="#">documentation</a>.</p>
+          <p>Furatto covers the basics, which should be enough to get up and running, but you are free to checkout the official site <a href="http://paulkinzett.github.io/toolbar/">documentation</a>.</p>
         </blockquote>
         <h4>Options</h4>
         <p>There are several options you can pass via data attributes to the date picker plugin, just by appending the option name to <span class="code">data-</span>, as in <span class="code">data-position</span>.</p>
@@ -241,10 +241,10 @@ $('#datePicker').pickadate(options)
          <h2 class="header">Modal</h2>
          <h4 class="light">Furatto modal was rebuilt and now comes better than ever, it is truly responsive and all transitions are managed via hardware acceleration.</h4>
          <div class="docs-example">
-           <button class="btn btn-info btn-large" data-furatto="modal" data-target="#modal-1" data-transition="1" data-theme="primary">Launch modal</button>
+           <button class="btn btn-info btn-large" data-furatto="modal" data-target="#modal-1" data-transition="8" data-theme="info">Launch modal</button>
             <div class="modal" id="modal-1">
               <div class="modal-content">
-                <h3>Modal Dialog</h3>
+                <h3 class="modal-header">Modal Dialog</h3>
                 <div>
                   <p>This is a modal window. You can do the following things with it:</p>
                   <ul>
@@ -333,7 +333,7 @@ $('#modal').modal('hide');
       <!-- Carousel section -->
       <div class="docs-section" id="carousel">
         <h2 class="header">Slider</h2>        
-        <h4 class="light">Furatto comes with a better slider based on the Mobile First principle. It is built on top of <a href="#">Swiper</a> by <a href="#">iDangero.us</a>, which is a mobile touch slider & framework with hardware accelerated transitions.</h4>
+        <h4 class="light">Furatto comes with a better slider based on the Mobile First principle. It is built on top of <a href="http://www.idangero.us/sliders/swiper/">Swiper</a> by <a href="http://www.idangero.us/">iDangero.us</a>, which is a mobile touch slider & framework with hardware accelerated transitions.</h4>
         <div class="docs-example">
           <div class="swiper-container">
             <a href="#" class="swiper-control left visible-lg">
@@ -427,7 +427,7 @@ $('#modal').modal('hide');
        <h4>Via data attributes</h4>
        <p>Currently there is no support for the swiper via data attributes, but don't worry we are working on it. Sorry for any trouble.</p>
        <h4>Via javascript</h4>
-       <p>You can call the swiper as described in the official plugin site, check it out at: <a href="#">Swiper</a>. An initializer is provided by default in the compiled JS version of Furatto, it takes the <span class="code">swiper-container</span> class element, as in the example <a href="carousel">above</a>.</p>
+       <p>You can call the swiper as described in the official plugin site, check it out at: <a href="http://www.idangero.us/sliders/swiper/">Swiper</a>. An initializer is provided by default in the compiled JS version of Furatto, it takes the <span class="code">swiper-container</span> class element, as in the example <a href="#carousel">above</a>.</p>
        <h4>Options</h4>
        <p>The default values used to invoke the swiper are described below.</p>
        <table class="table table-bordered table-striped responsive">
@@ -498,7 +498,7 @@ var swiper = new Swiper('.swiper-container', {
       <!-- Tooltips section -->
        <div id="tooltips" class="docs-section">
           <h2 class="header">Tooltips</h2>  
-          <h4 class="light">Provide helpful messages through tooltips on icons menus, text hints with Furatto tooltips. Based on the <a href="#">Boostrap</a> tooltips. Four directions are available.</h4>
+          <h4 class="light">Provide helpful messages through tooltips on icons menus, text hints with Furatto tooltips. Based on the <a href="http://getbootstrap.com/">Boostrap</a> tooltips. Four directions are available.</h4>
           <div class="docs-example">
              <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
              <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
@@ -508,10 +508,10 @@ var swiper = new Swiper('.swiper-container', {
           <div class="docs-code hidden-xs">
              <pre data-language="html">
                <code>
-  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
-  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
-  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
-  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
                </code>
              </pre>
           </div>
@@ -520,7 +520,7 @@ var swiper = new Swiper('.swiper-container', {
           <p>Add the <span class="code">data-toggle="tooltip"</span> attribute to any element.</p>
            <pre data-language="html" class="hidden-xs">
              <code>
-  <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
              </code>
            </pre>
           <h4>Via javascript</h4>
