@@ -310,16 +310,3 @@
 .panel-content {
   padding-top: $navbar-height;
 }
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-
-.docs-sidebar {
-  /*position: static;*/
-  /*width: 100%;*/
-}
-
-}
