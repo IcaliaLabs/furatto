@@ -307,6 +307,9 @@
   }
 }
 
+.panel-content {
+  padding-top: $navbar-height;
+}
 
 @media only screen 
 and (min-device-width : 768px) 
