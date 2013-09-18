@@ -49,39 +49,6 @@
   cursor: default;
 }
 
-// NAV LIST
-// --------
-
-.nav-list {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 0;
-}
-.nav-list > li > a,
-.nav-list .nav-header {
-  margin-left:  -15px;
-  margin-right: -15px;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
-.nav-list > li > a {
-  padding: 3px 15px;
-}
-.nav-list > .active > a,
-.nav-list > .active > a:hover,
-.nav-list > .active > a:focus {
-  color: $white;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  background-color: $blue;
-}
-.nav-list [class^="icon_"],
-.nav-list [class*=" icon_"] {
-  margin-right: 2px;
-}
-// Dividers (basically an hr) within the dropdown
-.nav-list .divider {
-  @include nav-divider();
-}
-
 //Bordered navigation
 .nav {
   &.nav-bordered {
