@@ -21,8 +21,8 @@ perspective effects (not including the modals and the overlay).
 	top: 50%;
 	left: 50%;
 	width: 50%;
-	max-width: 630px;
-	min-width: 320px;
+	max-width: $modal-max-width;
+	min-width: $modal-min-width;
 	height: auto;
 	z-index: 2000;
 	visibility: hidden;
@@ -59,44 +59,38 @@ perspective effects (not including the modals and the overlay).
 	position: relative;
   @include border-radius(3px);
 	margin: 0 auto;
+  color: $white;
 }
 
 .modal-content-primary {
-  color: $white;
 	background: $dashboard-primary-bg-color;
 }
 
 .modal-content-danger {
-  color: $white;
 	background: $dashboard-danger-bg-color;
 }
 
 .modal-content-info {
-  color: $white;
   background: $dashboard-info-bg-color;
 }
 
 .modal-content-funky {
-  color: $white;
   background: $dashboard-funky-bg-color;
 }
 
 .modal-content-warning {
-  color: $white;
   background: $dashboard-warning-bg-color;
 }
 
 .modal-content-success {
-  color: $white;
   background: $dashboard-success-bg-color;
 }
 
 .modal-content-inverse {
   background: $dashboard-inverse-bg-color;
-  color: $white;
 }
 
-.modal-content h3 {
+.modal-content .modal-header {
 	margin: 0;
 	padding: 0.4em;
 	text-align: center;
@@ -126,12 +120,6 @@ perspective effects (not including the modals and the overlay).
 
 .modal-content > div ul li {
 	padding: 5px 0;
-}
-
-.modal-content button {
-	display: block;
-	margin: 0 auto;
-	font-size: 0.8em;
 }
 
 /* Individual modal styles with animations/transitions */
@@ -374,74 +362,4 @@ perspective effects (not including the modals and the overlay).
 @keyframes slit {
 	50% { transform: translateZ(-250px) rotateY(89deg); opacity: 1; animation-timing-function: ease-in;}
 	100% { transform: translateZ(0) rotateY(0deg); opacity: 1; }
-}
-
-/* Effect 14:  3D Rotate from bottom */
-.modal-effect-14.modal-modal {
-  @include perspective();
-}
-
-.modal-effect-14 .modal-content {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-  @include transform(translateY(100%) rotateX(90deg));
-	-webkit-transform-origin: 0 100%;
-	-moz-transform-origin: 0 100%;
-	transform-origin: 0 100%;
-	opacity: 0;
-  @include transition(all 0.3s ease-out);
-}
-
-.modal-show.modal-effect-14 .modal-content {
-  @include transform(translateY(0%) rotateX(0deg));
-	opacity: 1;
-}
-
-/* Effect 15:  3D Rotate in from left */
-.modal-effect-15.modal-modal {
-  @include perspective();
-}
-
-.modal-effect-15 .modal-content {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-  @include transform(translateZ(100px) translateX(-30%) rotateY(90deg));
-	-webkit-transform-origin: 0 100%;
-	-moz-transform-origin: 0 100%;
-	transform-origin: 0 100%;
-	opacity: 0;
-  @include transition(all 0.3);
-}
-
-.modal-show.modal-effect-15 .modal-content {
-  @include transform(translateZ(0px) translateX(0%) rotateY(0deg));
-	opacity: 1;
-}
-
-/* Effect 16:  Blur */
-.modal-show.modal-effect-16 ~ .modal-overlay {
-	background: rgba(0,0,0,0.5);
-}
-
-.modal-show.modal-effect-16 ~ .container {
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-	filter: blur(3px);
-}
-
-.modal-effect-16 .modal-content {
-  @include transform(translateY(-5%));
-	opacity: 0;
-}
-
-.modal-show.modal-effect-16 ~ .container,
-.modal-effect-16 .modal-content {
-  @include transition(all 0.3s);
-}
-
-.modal-show.modal-effect-16 .modal-content {
-  @include transform(translateY(0));
-	opacity: 1;
 }

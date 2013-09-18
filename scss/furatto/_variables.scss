@@ -273,8 +273,8 @@ $container-center-width: 90% !default;
 
 /* Modal */
 /*---------------------*/
-$modal-header-bg: $dark-blue;
-$modal-bg: $blue;
+$modal-max-width: 630px;
+$modal-min-width: 320px;
 
 /* Responsive widths */
 /*---------------------*/
