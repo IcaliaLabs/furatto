@@ -74,6 +74,12 @@ $dark-black: #262626 !default;
 //White
 $white: #FFF !default;
 
+//Muted
+$muted-color: #555 !default;
+
+//Light
+$light-color: #6F6F6F;
+
 //All colors
 $colors: info $blue $dark-blue, //class name, bg color, hover bg color
          success $green $dark-green,
@@ -231,10 +237,6 @@ $link-color: #0088cc !default;
 /* -------- */
 $headings-color: #222 !default;
 
-/* Color Lists */
-/* ----------- */
-$color-list-item-height: 16px !default;
-$color-list-item-width: $color-list-item-height !default;
 
 /* Pagination */
 /* ---------- */
@@ -260,6 +262,7 @@ $code-font-size: 0.8em !default;
 $code-comment-color: #999;
 $code-tag-color: #2f6f9f;
 $code-css-property-color: #333;
+$code-color: #d44950;
 
 /* Calendar */
 /*---------------------*/
