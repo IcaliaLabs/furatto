@@ -58,9 +58,6 @@
   // Account for brand name
   .navbar .nav .brand {
     display: block;
-    /*padding-left: 10px;*/
-    /*padding-right: 10px;*/
-    /*margin: 0 0 0 -5px;*/
   }
 
   // COLLAPSIBLE NAVBAR
@@ -117,16 +114,6 @@
     background-color: $navbar-bg-color;
   }
 
-  .navbar-inverse .nav-collapse .nav > li > a,
-  .navbar-inverse .nav-collapse .dropdown-menu a {
-    /*color: @navbarInverseLinkColor;*/
-  }
-  .navbar-inverse .nav-collapse .nav > li > a:hover,
-  .navbar-inverse .nav-collapse .nav > li > a:focus,
-  .navbar-inverse .nav-collapse .dropdown-menu a:hover,
-  .navbar-inverse .nav-collapse .dropdown-menu a:focus {
-    /*background-color: @navbarInverseBackground;*/
-  }
   // Buttons in the navbar
   .nav-collapse.in .btn-group {
     margin-top: 5px;
@@ -145,8 +132,6 @@
     padding: 0;
     background-color: transparent;
     border: none;
-    /*.border-radius(0);*/
-    /*.box-shadow(none);*/
   }
   .nav-collapse .open > .dropdown-menu { 
     display: block; 
