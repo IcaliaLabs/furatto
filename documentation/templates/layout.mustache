@@ -6,9 +6,7 @@
 <link rel="stylesheet" href="assets/css/normalize.css" />
 <link rel="stylesheet" href="assets/css/furatto.css" />
 <link rel="stylesheet" href="assets/css/docs.css" />
-<link rel="stylesheet" href="assets/add-ons/loadingEffect/css/component.css" />
 <link rel="shortcut icon" href="assets/img/favicon.ico" />
-<script src="assets/add-ons/loadingEffect/js/modernizr.custom.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 </head>
 <body class="{{#index}}docs-body{{/index}}">
@@ -31,7 +29,6 @@
               <li class="{{docs}}"><a href="docs.html">{{_i}}Docs{{/i}}</a></li>
               <li class="{{javascript}}"><a href="javascript.html">{{_i}}Javascript{{/i}}</a></li>
               <li class="{{components}}"><a href="components.html">{{_i}}Components{{/i}}</a></li>
-              <li class="{{add_ons}}"><a href="add_ons.html">{{_i}}Add-ons{{/i}}</a></li>
               <li class="{{examples}}"><a href="examples.html">{{_i}}Examples{{/i}}</a></li>
             </ul>
           </nav>
@@ -70,18 +67,5 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/furatto.min.js"></script>
 <script src="assets/js/furatto-demo.js"></script>
-{{#add_ons}}
-<script src="assets/add-ons/loadingEffect/js/masonry.pkgd.min.js"></script>
-<script src="assets/add-ons/loadingEffect/js/imagesloaded.js"></script>
-<script src="assets/add-ons/loadingEffect/js/classie.js"></script>
-<script src="assets/add-ons/loadingEffect/js/AnimOnScroll.js"></script>
-<script>
-  new AnimOnScroll( document.getElementById( 'grid' ), {
-    minDuration : 0.4,
-    maxDuration : 0.7,
-    viewportFactor : 0.2
-  } );
-</script>
-{{/add_ons}}
 </body>
 </html>
