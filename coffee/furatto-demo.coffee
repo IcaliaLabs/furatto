@@ -10,7 +10,6 @@ jQuery ->
   $('.panel-content').scroll ->
     sidebar = $('.docs-sidebar')
     if $(window).width() > 767
-      console.log $(window).width()
       if $('.panel-content').scrollTop() >= 320
         sidebar.addClass("affix")
       if $('.panel-content').scrollTop() < 320
