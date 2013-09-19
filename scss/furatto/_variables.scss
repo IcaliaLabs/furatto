@@ -7,81 +7,76 @@
  * Designed and built @kurenn and @eldelentes  
  */
 
-/* Body */
-/* ---- */
+// Body
 $bg-color: #FFF !default;
-/*$bg-color: #ebe7df;*/
 
-/* Fonts */
-/* ----- */
+// Fonts
 $font-family: 'Lato', 'Helvetica Neue' !default;
 $base-font-size: 16px !default;
 $base-line-height: 20px !default;
 $base-font-weight: 500 !default;
 $base-font-color: #333 !default;
 
-/* Border */
-/* ------ */
+// Border
 $base-radius: 2px !default;
 
-/* Colors */
-/* ------ */
+// Colors
 
-//Reds
+// Reds
 $red: #e74c3c !default;
 $dark-red: #c0392b !default;
 
-//Hipsters
+// Hipsters
 $info: #1ABC9C !default;
 $dark-info: #16A085 !default;
 
 $aqua: #00CA74;
 $dark-aqua: #03AE72;
 
-//Inverse
+// Inverse
 $dark-inverse: #242730 !default;
 $inverse: #2E323E !default;
 
-//Blues
+// Blues
 $dark-blue: #2980b9 !default;
 $blue: #3498db !default;
 
-//Grays
+// Grays
 $dark-gray: #7F8C8D !default;
 $gray: #95a5a6 !default;
 $light-gray: #ecf0f1 !default;
 
-//Purples
+// Purples
 $purple: #9B59B6 !default;
 $dark-purple: #8E44AD !default;
 
-//Greens
+// Greens
 $green: #2ecc71 !default;
 $dark-green: #27ae60 !default;
 
-//Yellows
+// Yellows
 $yellow: #FFD02C !default;
 $dark-yellow: #DCB334 !default;
 
-//Orange
+// Orange
 $dark-orange: #d35400 !default;
 $orange: #e67e22 !default;
 
-//Blacks
+// Blacks
 $black: #191C20 !default;
 $dark-black: #262626 !default;
 
-//White
+// White
 $white: #FFF !default;
 
-//Muted
+// Muted
 $muted-color: #555 !default;
 
-//Light
+// Light
 $light-color: #6F6F6F;
 
-//All colors
-$colors: info $blue $dark-blue, //class name, bg color, hover bg color
+// All colors
+$colors: info $blue $dark-blue, // class name, bg color, hover bg color
          success $green $dark-green,
          danger $red $dark-red,
          warning $orange $dark-orange,
@@ -89,14 +84,11 @@ $colors: info $blue $dark-blue, //class name, bg color, hover bg color
          funky $purple $dark-purple,
          highlight $aqua $dark-aqua;
 
-/* Jumbo */
-/* ------- */
-
+// Jumbo
 $jumbo-container-bg-color: #3498d9;
 $jumbo-container-bg-gradient: #67b2e3;
 
-/* Buttons */
-/* ------- */
+// Buttons
 $font-size-large: $base-font-size * 1.25 !default; // ~18px
 $font-size-xlarge: $base-font-size * 1.50 !default; // ~24px
 $font-size-small: $base-font-size * 0.85 !default; // ~12px
@@ -108,18 +100,15 @@ $padding-mini:   0 6px !default;   // 22px
 $padding-xlarge: 20px 30px !default; // 44px
 $padding-xxlarge: 20px 50px !default; // 44px
 
-/* HR     */
-/* ------ */
+// HR
 $hr-color: #DDD;
 
-/* BLOCKQUOTE */
-/* ---------- */
+// BLOCKQUOTE
 $blockquote-color: #777;
 $blockquote-border-color: #DDD;
 
 
-/* Alerts */
-/* ------ */
+// Alerts
 $warning-alert-color: $orange !default;
 $warning-header-color: $dark-orange !default;
 
@@ -132,8 +121,7 @@ $info-header-color: $dark-blue !default;
 $danger-alert-color: $dark-red !default;
 $danger-header-color: $dark-red !default;
 
-/* Navbar */
-/* ------ */
+// Navbar 
 $navbar-height: 51px !default;
 $navbar-bg-color: #2d313d !default;
 $navbar-border: #38393a !default;
@@ -143,16 +131,14 @@ $navbar-link-color-active: #FFF !default;
 $navbar-inverse-bg-color: #FFF !default;
 $navbar-inverse-text: #0088cc !default; 
 
-/* Panel */
-/* ------ */
+// Panel
 $panel-inverse-bg: $white !default;
 $panel-inverse-active-color: #555 !default;
 $panel-inverse-active-bg: #EFEFEF !default;
 $panel-inverse-link-color: #0088cc !default;
 
 
-/* Vertical Navbar */
-/* --------------- */
+// Vertical Navbar
 $vrt-navbar-background: #232323 !default;
 $vrt-navbar-width: 4em !default;
 $vrt-navbar-height: $vrt-navbar-width !default;
@@ -162,46 +148,38 @@ $vrt-navbar-links-bg: $blue !default;
 $vrt-navbar-links-color: #FFF !default;
 $vrt-navbar-li-hover: $blue !default;
 
-/* Inputs */
-/* ------ */
+// Inputs
 $input-color: #34495e !default;
 $input-border-radius: 4px !default;
 $input-bg: #FFF !default;
 $input-border-color: #CCC !default;
 $input-focus-color: $blue !default;
 
-/* Tables */
-/* ------ */
+// Tables
 $table-color: #FFF !default;
 $table-header-primary: $dark-blue !default;
 $table-border-color: #d2d2d2 !default;
 $table-striped-color: #f9f9f9 !default;
 
-/* Responsive Navbar */
-/* ----------------- */
+// Responsive Navbar
 $nav-bar-collapse-width: 979px !default;
 $nav-bar-collapse-width-desktop: $nav-bar-collapse-width + 1 !default;
 
-/* Images */
-/* ------ */
+// Images
 $img-border: $dark-green !default;
 
-/* Select */
-/* ------ */
+// Select
 $select-bg: $dark-info !default;
 $select-text-color: #FFF !default;
 $select-options-bg: $inverse;
 
-/* Checkbox and radio buttons */
-/* -------------------------- */
+// Checkbox and radio buttons
 $ch-rb-color: $dark-info !default;
 
-/* Forms */
-/* ----- */
+// Forms
 $input-height: $base-line-height + 10px !default; // base line-height + 8px vertical padding + 2px top/bottom border
 
-/* Dashboard */
-/* --------- */
+// Dashboard
 $dashboard-primary-bg-color: $inverse;
 $dashboard-info-bg-color: $blue;
 $dashboard-funky-bg-color: $purple;
@@ -210,16 +188,13 @@ $dashboard-warning-bg-color: $orange;
 $dashboard-success-bg-color: $green;
 $dashboard-inverse-bg-color: #34495e;
 
-
-/* Footer */
-/* ------ */
+// Footer
 $footer-text-color: #232323 !default;
 $footer-anchor-color: #777 !default;
 $footer-height: 80px !default;
 $footer-anchor-size: 13px !default;
 
-/* Icons */
-/* ----- */
+// Icons
 $icon-base-color: $dark-inverse !default;
 $icon-base-inverse-color: #FFF !default;
 $icon-small-size: 2em !default;
@@ -228,26 +203,20 @@ $icon-large-size: 6em !default;
 $icon-xlarge-size: 8em !default;
 $icon-xxlarge-size: 10em !default;
 
-
-/* Links */
-/* ----- */
+// Links
 $link-color: #0088cc !default;
 
-/* Headings */
-/* -------- */
+// Headings
 $headings-color: #222 !default;
 
 
-/* Pagination */
-/* ---------- */
+// Pagination
 $pagination-color: desaturate(lighten($inverse, 57.5%), 17%) !default;
 
-/* Toolbars */
-/* -------- */
+// Toolbars
 $toolbar-bg-color: #232323 !default;
 
-/* Dropdown */
-/* -------- */
+// Dropdown
 $zindex-dropdown: 1000 !default;
 $dropdown-bg: $white !default;
 $dropdown-border: rgba(0,0,0,0.2) !default;
@@ -255,8 +224,7 @@ $dropdown-link-color: $dark-gray !default;
 $dropdown-link-color-hover: $white !default;
 $dropdown-link-color-hover-bg: lighten($blue, 10%) !default;
 
-/* Code */
-/*---------------------*/
+// Code
 $code-bg: #f7f7f9 !default;
 $code-font-size: 0.8em !default;
 $code-comment-color: #999;
@@ -264,23 +232,20 @@ $code-tag-color: #2f6f9f;
 $code-css-property-color: #333;
 $code-color: #d44950;
 
-/* Calendar */
-/*---------------------*/
+// Calendar
 $calendar-highlight-color: #b1dcfb !default;
 $calendar-highlighted-color: #0089ec !default;
 
 
-/* Container center */
-/*---------------------*/
+// Container center
 $container-center-width: 90% !default;
 
-/* Modal */
-/*---------------------*/
+// Modal
 $modal-max-width: 630px;
 $modal-min-width: 320px;
 
-/* Responsive widths */
-/*---------------------*/
+// Responsive widths
+
 // Extra small screen / phone
 // Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
 $screen-xs:                  480px;
@@ -309,8 +274,8 @@ $screen-lg-desktop:          $screen-lg-min;
 $screen-xs-max:              ($screen-sm-min - 1);
 $screen-sm-max:              ($screen-md-min - 1);
 $screen-md-max:              ($screen-lg-min - 1);
-/* Font Awesome Icons */
-/* ------------------ */
+
+// Font Awesome Icons
 
 $FontAwesomePath: "../fonts/fontawesome" !default;
 $FontAwesomeVersion: "3.2.1" !default;
