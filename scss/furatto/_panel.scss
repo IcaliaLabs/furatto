@@ -66,6 +66,7 @@
 	background: $navbar-bg-color;
 }
 
+
 .panel {
 
   .nav + .nav {
@@ -79,6 +80,10 @@
     font-size: $base-font-size;
     margin-top: 0px;
     float: none;
+
+    li.dropdown {
+      border-bottom: none;
+    }
 
     [class^="icon-"], [class*=" icon-"] {
       margin-right: 5px;
@@ -130,6 +135,7 @@
 
       * {
         color: #eaeaea;
+        font-weight: 400;
       }
 
       li.divider {
@@ -154,7 +160,6 @@
 
     a {
       color: #0088cc;
-      /*text-shadow: 0 0 0;*/
     }
 
     &:before {
@@ -186,11 +191,35 @@
     float: none;
     margin-bottom: 10px;
 
-    .search-text-input {
-      margin: 0 auto;
+    .form-fields {
+      margin: 0 auto 10px auto;
       display: block;
-      width: 80%;
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
     }
+
+    input[type="submit"], .btn {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.panel-inverse {
+  .nav {
+    .dropdown-menu {
+      * {
+        color: #0088cc;
+      }
+    }
+  }
+
+  li {
+    border-bottom: 1px solid #CCC;
   }
 }
 
@@ -199,14 +228,13 @@
   display: none;
 }
 
-
 .panel li > a {
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px;
   font-weight: bold;
   text-decoration: none;
-  color: #ccc;
+  color: #FFF;
   text-indent: 20px;
 }
 
@@ -236,7 +264,6 @@
 
 .panel-inverse .nav > li > a {
   color: $panel-inverse-link-color;
-  /*text-shadow: 0 0 0;*/
   font-weight: 400;
 }
 
