@@ -1,0 +1,11 @@
+{
+  "name": "furatto",
+  "version": "1.0.1",
+  "main": ["./documentation/assets/css/furatto.css", "./documentation/assets/js/furatto.js", "./documentation/assets/fonts/*"],
+  "ignore":[
+    "**/.*"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  }
+}
