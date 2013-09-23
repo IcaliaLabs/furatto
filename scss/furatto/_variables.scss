@@ -30,8 +30,8 @@ $dark-red: #c0392b !default;
 $info: #1ABC9C !default;
 $dark-info: #16A085 !default;
 
-$aqua: #00CA74;
-$dark-aqua: #03AE72;
+$aqua: #00CA74 !default;
+$dark-aqua: #03AE72 !default;
 
 // Inverse
 $dark-inverse: #242730 !default;
@@ -72,8 +72,8 @@ $white: #FFF !default;
 // Muted
 $muted-color: #555 !default;
 
-// Light
-$light-color: #6F6F6F;
+// Light1
+$light-color: #6F6F6F !default;
 
 // All colors
 $colors: info $blue $dark-blue, // class name, bg color, hover bg color
@@ -85,8 +85,8 @@ $colors: info $blue $dark-blue, // class name, bg color, hover bg color
          highlight $aqua $dark-aqua;
 
 // Jumbo
-$jumbo-container-bg-color: #3498d9;
-$jumbo-container-bg-gradient: #67b2e3;
+$jumbo-container-bg-color: #3498d9 !default;
+$jumbo-container-bg-gradient: #67b2e3 !default;
 
 // Buttons
 $font-size-large: $base-font-size * 1.25 !default; // ~18px
@@ -101,11 +101,11 @@ $padding-xlarge: 20px 30px !default; // 44px
 $padding-xxlarge: 20px 50px !default; // 44px
 
 // HR
-$hr-color: #DDD;
+$hr-color: #DDD !default;
 
 // BLOCKQUOTE
-$blockquote-color: #777;
-$blockquote-border-color: #DDD;
+$blockquote-color: #777 !default;
+$blockquote-border-color: #DDD !default;
 
 
 // Alerts
@@ -137,17 +137,6 @@ $panel-inverse-active-color: #555 !default;
 $panel-inverse-active-bg: #EFEFEF !default;
 $panel-inverse-link-color: #0088cc !default;
 
-
-// Vertical Navbar
-$vrt-navbar-background: #232323 !default;
-$vrt-navbar-width: 4em !default;
-$vrt-navbar-height: $vrt-navbar-width !default;
-$vrt-navbar-lineheight: 2em !default;
-$vrt-navbar-border: #000 !default;
-$vrt-navbar-links-bg: $blue !default;
-$vrt-navbar-links-color: #FFF !default;
-$vrt-navbar-li-hover: $blue !default;
-
 // Inputs
 $input-color: #34495e !default;
 $input-border-radius: 4px !default;
@@ -168,25 +157,17 @@ $nav-bar-collapse-width-desktop: $nav-bar-collapse-width + 1 !default;
 // Images
 $img-border: $dark-green !default;
 
-// Select
-$select-bg: $dark-info !default;
-$select-text-color: #FFF !default;
-$select-options-bg: $inverse;
-
-// Checkbox and radio buttons
-$ch-rb-color: $dark-info !default;
-
 // Forms
 $input-height: $base-line-height + 10px !default; // base line-height + 8px vertical padding + 2px top/bottom border
 
 // Dashboard
-$dashboard-primary-bg-color: $inverse;
-$dashboard-info-bg-color: $blue;
-$dashboard-funky-bg-color: $purple;
-$dashboard-danger-bg-color: $red;
-$dashboard-warning-bg-color: $orange;
-$dashboard-success-bg-color: $green;
-$dashboard-inverse-bg-color: #34495e;
+$dashboard-primary-bg-color: $inverse !default;
+$dashboard-info-bg-color: $blue !default;
+$dashboard-funky-bg-color: $purple !default;
+$dashboard-danger-bg-color: $red !default;
+$dashboard-warning-bg-color: $orange !default;
+$dashboard-success-bg-color: $green !default;
+$dashboard-inverse-bg-color: #34495e !default;
 
 // Footer
 $footer-text-color: #232323 !default;
@@ -227,10 +208,10 @@ $dropdown-link-color-hover-bg: lighten($blue, 10%) !default;
 // Code
 $code-bg: #f7f7f9 !default;
 $code-font-size: 0.8em !default;
-$code-comment-color: #999;
-$code-tag-color: #2f6f9f;
-$code-css-property-color: #333;
-$code-color: #d44950;
+$code-comment-color: #999 !default;
+$code-tag-color: #2f6f9f !default;
+$code-css-property-color: #333 !default;
+$code-color: #d44950 !default;
 
 // Calendar
 $calendar-highlight-color: #b1dcfb !default;
@@ -241,39 +222,36 @@ $calendar-highlighted-color: #0089ec !default;
 $container-center-width: 90% !default;
 
 // Modal
-$modal-max-width: 630px;
-$modal-min-width: 320px;
+$modal-max-width: 630px !default;
+$modal-min-width: 320px !default;
 
 // Responsive widths
 
 // Extra small screen / phone
-// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
-$screen-xs:                  480px;
-$screen-xs-min:              $screen-xs;
-$screen-phone:               $screen-xs-min;
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
 
 // Small screen / tablet
-// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
-$screen-sm:                  768px;
-$screen-sm-min:              $screen-sm;
-$screen-tablet:              $screen-sm-min;
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
-// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
-$screen-md:                  992px;
-$screen-md-min:              $screen-md;
-$screen-desktop:             $screen-md-min;
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
 // Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
-$screen-lg:                  1200px;
-$screen-lg-min:              $screen-lg;
-$screen-lg-desktop:          $screen-lg-min;
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
 
 // So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1);
-$screen-sm-max:              ($screen-md-min - 1);
-$screen-md-max:              ($screen-lg-min - 1);
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
 
 // Font Awesome Icons
 
