@@ -31,10 +31,6 @@
       if navigator.userAgent.match(/(iPad|iPhone|iPod)/g)
         $('.panel-content').css 'overflow':'visible'
 
-    toggle_scroll: ->
-      @snapper.on 'close', ->
-        $('html, body').toggleClass 'noscroll'
-
     append_menu_to_panel: ->
       $('.panel-left').html(@menu.html())
 
@@ -58,10 +54,5 @@
   $(document).on 'click', '[data-toggle="panel"]', (e) ->
     e.preventDefault()
     $('.panel-content').panel 'toggle'
-    $('html, body').toggleClass 'noscroll'
-
-  $(document).ready ->
-    $('.panel-content').panel 'toggle_scroll'
-
 
 ) window.jQuery, window
