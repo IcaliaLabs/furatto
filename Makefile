@@ -29,7 +29,7 @@ build:
 	@echo "Lov @kurenn and @icalialabs\n"
 
 # Build Furatto directory #
-furatto: furatto-img furatto-js furatto-css furatto-font furatto-examples
+furatto: furatto-img furatto-js furatto-css furatto-font furatto-examples furatto-sass
 
 # JS #
 furatto-js: furatto/js/*.js
@@ -44,6 +44,10 @@ furatto-css: furatto/css/*.css
 furatto/css/*.css:
 	mkdir -p furatto/css
 	cp documentation/assets/css/*.css furatto/css
+
+# SASS #
+furatto-sass:
+	cp -r scss furatto
 
 # IMAGES #
 furatto-img: furatto/img/*
