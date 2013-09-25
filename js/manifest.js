@@ -29,22 +29,8 @@ jQuery(function() {
     e.preventDefault();
     return swiper.swipePrev();
   });
-  $('.swiper-control.right').on('click', function(e) {
+  return $('.swiper-control.right').on('click', function(e) {
     e.preventDefault();
     return swiper.swipeNext();
-  });
-  return $('.navbar [data-furatto="search"]').each(function() {
-    var current_width;
-    current_width = $(this).width();
-    $(this).focus(function() {
-      return $(this).animate({
-        width: current_width + 20
-      }, 'slow');
-    });
-    return $(this).blur(function() {
-      return $(this).animate({
-        width: current_width
-      }, 'slow');
-    });
   });
 });

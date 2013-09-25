@@ -25,10 +25,9 @@
       this.options = $.extend(options, {
         element: el
       });
-      this.snapper = new Snap(this.options);
       this.menu = $($('[data-toggle="panel"]').data('target'));
-      this.apply_ios_devices_fix();
       this.append_menu_to_panel();
+      this.snapper = new Snap(this.options);
     }
 
     Panel.prototype.apply_ios_devices_fix = function() {
@@ -39,17 +38,12 @@
       }
     };
 
-    Panel.prototype.toggle_scroll = function() {
-      return this.snapper.on('close', function() {
-        return $('html, body').toggleClass('noscroll');
-      });
-    };
-
     Panel.prototype.append_menu_to_panel = function() {
       return $('.panel-left').html(this.menu.html());
     };
 
     Panel.prototype.toggle = function() {
+      $('.panel').css('display', 'block');
       if (this.snapper.state().state === "left") {
         return this.snapper.close();
       } else {
@@ -76,10 +70,9 @@
   };
   $(document).on('click', '[data-toggle="panel"]', function(e) {
     e.preventDefault();
-    $('.panel-content').panel('toggle');
-    return $('html, body').toggleClass('noscroll');
+    return $('.panel-content').panel('toggle');
   });
   return $(document).ready(function() {
-    return $('.panel-content').panel('toggle_scroll');
+    return $('.panel-content').panel('apply_ios_devices_fix');
   });
 })(window.jQuery, window);
