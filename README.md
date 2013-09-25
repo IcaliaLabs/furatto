@@ -1,4 +1,4 @@
-# [Furatto v1.0.1](https://github.com/IcaliaLabs/furatto)
+# [Furatto v2.0.0](https://github.com/IcaliaLabs/furatto)
 
 Furatto is a flat, fast and powerful front-end framework for 
 rapid web development, created and maintained by [Abraham Kuri](https://twitter.com/kurenn) from [Icalia Labs](http://twitter.com/icalialabs). It is based on other frameworks as a start point, such as [Twitter Bootstrap](http://twitter.github.io/bootstrap/), [Foundation](http://foundation.zurb.com/).
@@ -6,28 +6,28 @@ rapid web development, created and maintained by [Abraham Kuri](https://twitter.
 
 To get started, checkout:
 
-### [http://icalialabs.github.io/furatto/](http://icalialabs.github.io/furatto/) !
+#### [http://icalialabs.github.io/furatto/](http://icalialabs.github.io/furatto/) !
 
 
 ## Quick start
 
-Three quick start options are available:
+Using Furatto is easier than ever, we provided three quick start options:
 
 * [Download the latest release](http://icalialabs.github.io/furatto/).
 * Clone the repo: `git clone git@github.com:IcaliaLabs/furatto.git`.
+* Install via bower: `bower install furatto`.
+
+Read the [Getting started guide](http://icalialabs.github.io/furatto/getting_started.html) for information about the contents, caveats and more.
 
 
-## Bug tracker
+## Bug tracker & feature request
 
-Have a bug or a feature request? [Please open a new issue](https://github.com/IcaliaLabs/furatto/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines].
+Have a bug or a feature request? [Please open a new issue](https://github.com/IcaliaLabs/furatto/issues). Before opening any issue, please search for existing issues.
 
-##Community
 
-Keep track of new feautres, development issues and community news.
+## Documentation
 
-* Follow [@ifuratto](https://twitter.com/ifuratto)
-* Have a question about anything, email us at weare@icalialabs.com
-
+We still provide support for version 1.0 as it is a big change from one to another, you can visit the old docs [here](http://icalialabs.github.io/furatto/old_docs/index.html).
 
 ## Compiling CSS and JavaScript
 
@@ -60,6 +60,13 @@ Thanks to [@kurenn](https://twitter.com/kurenn) the [furatto-rails](https://gith
 Please submit all pull requests against a separate branch. Please follow the standard for naming the variables, mixins, etc.
 
 Thanks!
+
+##Community
+
+Keep track of new feautres, development issues and community news.
+
+* Follow [@ifuratto](https://twitter.com/ifuratto)
+* Have a question about anything, email us at weare@icalialabs.com
 
 
 ## Authors
