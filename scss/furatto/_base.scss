@@ -15,7 +15,6 @@
 
 html {
   font-family: $font-family;
-  overflow: hidden;
 }
 
 body {
@@ -40,6 +39,7 @@ a {
 html, body {
   background-color: $bg-color;
   height: 100%;
+  overflow: hidden;
 }
 
 hr {

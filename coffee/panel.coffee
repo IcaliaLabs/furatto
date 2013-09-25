@@ -28,6 +28,7 @@
       @append_menu_to_panel()
 
     apply_ios_devices_fix: ->
+      console.log 'Jalo'
       if navigator.userAgent.match(/(iPad|iPhone|iPod)/g)
         $('.panel-content').css 'overflow':'visible'
 
@@ -35,6 +36,7 @@
       $('.panel-left').html(@menu.html())
 
     toggle: ->
+      console.log 'Jalo'
       if( @snapper.state().state == "left" )
         @snapper.close()
       else
@@ -54,5 +56,8 @@
   $(document).on 'click', '[data-toggle="panel"]', (e) ->
     e.preventDefault()
     $('.panel-content').panel 'toggle'
+
+  $(document).ready ->
+    $('.panel-content').panel 'apply_ios_devices_fix'
 
 ) window.jQuery, window
