@@ -22,10 +22,9 @@
 
     constructor: (el, options) ->
       @options = $.extend options, { element: el }
-      @snapper = new Snap @options
       @menu = $($('[data-toggle="panel"]').data('target'))
-      @apply_ios_devices_fix()
       @append_menu_to_panel()
+      @snapper = new Snap @options
 
     apply_ios_devices_fix: ->
       if navigator.userAgent.match(/(iPad|iPhone|iPod)/g)
@@ -35,6 +34,7 @@
       $('.panel-left').html(@menu.html())
 
     toggle: ->
+      $('.panel').css 'display', 'block'
       if( @snapper.state().state == "left" )
         @snapper.close()
       else

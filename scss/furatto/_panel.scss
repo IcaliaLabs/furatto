@@ -29,6 +29,7 @@
   height: auto;
   overflow: auto;
   @include transition(width 0.3s ease);
+  display: none;
 }
 
 .panel-left {
