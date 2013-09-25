@@ -61,12 +61,17 @@ Please submit all pull requests against a separate branch. Please follow the sta
 
 Thanks!
 
-##Community
+## Community
 
 Keep track of new feautres, development issues and community news.
 
 * Follow [@ifuratto](https://twitter.com/ifuratto)
 * Have a question about anything, email us at weare@icalialabs.com
+
+## Using Furatto?
+
+We will love to hear wheter you are using Furatto for testing, prototyping or online sites, checkout who is in already [here](https://github.com/IcaliaLabs/furatto/blob/master/USING_FURATTO.md)
+
 
 
 ## Authors
