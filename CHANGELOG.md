@@ -1,3 +1,20 @@
+## 2.0.0 (September 25, 2013)
+### New features
+- **New and fresh documentation**
+- **Left panel optimized with css transitions**
+- **Responsive mobile first slider**
+- **Add-ons sections added**
+- **69 kb for the furatto min version**
+- **Grid class names changed**
+- **Isolate font-awesome css**
+- **Responsive utilities for a better mobile experience**
+- Adds inverse version for navbar
+- Alpha buttons added
+- Better modal with up to 13 intro effects
+- Adds better documentation for JS plugins
+- Adds examples page
+- Removes many css and save it to add-ons
+
 ## 1.0.1 (July 24, 2013)
 ### New features
 - **Search form support on navbar added**
