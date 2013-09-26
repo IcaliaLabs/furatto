@@ -1,20 +1,4 @@
 jQuery ->
-  jPM = $.jPanelMenu()
-  jPM.on()
-
-  # Custom selects
-  $("select[data-furatto='select']").dropkick()
-
-  #Custom checkboxes
-  $("input[data-furatto='checkbox'], input[data-furatto='radio']").each ->
-    input = $(@)
-    color = $(@).data('color')
-    if color isnt ''
-      checkbox_color = "checkbox-#{color}"
-      radiobutton_color = "radiobutton-#{color}"
-    input.iCheck
-      checkboxClass: "checkbox #{checkbox_color}"
-      radioClass: "radiobutton #{radiobutton_color}"
 
   #Pagination Demo
   $(".pagination a").click (e) ->
@@ -42,19 +26,6 @@ jQuery ->
       selectYears: input.data('select-years') || false
       selectMonths: input.data('select-months') || false
 
-  $('[data-toolbar]').each ->
-    $(@).toolbar
-      content: $(@).data('content')
-      position: $(@).data('position') || 'top'
-      hideOnClick: true
-
-  $('[data-toggle="modal"]').each ->
-    modal = $(@).data('target')
-    $(@).avgrund
-      showClose: true
-      showCloseText: 'close'
-      template: $(modal).html()
-    
   $(".rslides").responsiveSlides
     auto: true
     pager: true
@@ -73,8 +44,3 @@ jQuery ->
       $(@).animate({ width: current_width + 20}, 'slow')
     $(@).blur ->
       $(@).animate({ width: current_width }, 'slow')
-    
-  $('.dropdown-toggle').dropdown()
- 
-  $('.dropdown input, .dropdown label').click (e) ->
-    e.stopPropagation()

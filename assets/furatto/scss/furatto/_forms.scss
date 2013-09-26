@@ -1,0 +1,307 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/**
+ * Basic textfield structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+form {
+  margin: 0 0 $base-line-height;
+}
+
+//Labels
+label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+//Inputs
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: $base-line-height;
+  padding-left: 8px;
+  height: 30px;
+  margin-bottom: $base-line-height / 2;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $input-color;
+  @include border-radius($input-border-radius);
+  vertical-align: middle;
+}
+
+//Reset textarea height because of the rows
+textarea {
+  height: auto;
+}
+
+//Text inputs
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: $input-bg;
+  border: 1px solid $input-border-color;
+
+  /*Focus state*/
+  &:focus {
+    border-color: rgba($input-focus-color,.8);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    @include single-transition(border, 0.2s, linear)
+  }
+}
+
+//Input sizes
+.input-mini { 
+  width: 16.667%; 
+}
+
+.input-small { 
+  width: 33.34%; 
+}
+
+.input-medium { 
+  width: 50%; 
+}
+
+.input-large { 
+  width: 66.668%; 
+}
+
+.input-xlarge {
+  width: 83.335%; 
+}
+
+.input-block {
+  width: 100%;
+}
+
+/* Inline Forms */
+/* ------------ */
+.inline-form,
+.horizontal-form {
+  input,
+  textarea,
+  select,
+  .form-fields,
+  .checkbox-fields {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .form-fields {
+    margin-top: 4px;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  // Re-hide hidden elements due to specifity
+  .hide {
+    display: none;
+  }
+}
+
+/* Horizontal form */
+/* --------------- */
+.horizontal-form {
+  .form-fields {
+    display: block;
+    margin-bottom: 10px;
+
+    label {
+      width: 160px;
+      margin-right: 20px;
+      text-align: right;
+    }
+  }
+
+  .form-actions {
+    margin-left: 184px;
+  }
+}
+
+/* Centered forms */
+/* -------------- */
+.centered-form {
+  @include center-block;
+}
+
+/* Level up the label on for checkboxes */
+/* ------------------------------------ */
+label.checkbox-label {
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+label.radiobutton-label {
+  @extend .checkbox-label;
+}
+
+label {
+  @include touch-callout;
+}
+
+/* Uneditable inputs */
+/* ----------------- */
+
+input[disabled],
+textarea[disabled] {
+  color: $light-gray;
+  cursor: not-allowed;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #EEE;
+}
+
+/* Input states */
+/* ------------ */
+.form-fields-success{
+
+  .form-fields {
+    color: $dark-green;
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"]  {
+    color: $dark-green;
+    border: 1px solid $dark-green;
+  }
+}
+.form-fields-warning{
+  .form-fields {
+    color: $dark-orange;
+  }
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"]  {
+    color: $dark-orange;
+    border: 1px solid $dark-orange;
+  }
+}
+.form-fields-error{
+  .form-fields {
+    color: $dark-red;
+  }
+  
+   textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"]  {
+    color: $dark-red;
+    border: 1px solid $dark-red;
+  }
+}
+
+/* Form controls */
+/* ------------- */
+
+.form-fields {
+  margin: 8px 0;
+
+  .help-hint {
+    display: inline-block;
+  }
+
+
+  label {
+    font-weight: bold;
+  }
+}
+
+.checkbox-fields {
+  vertical-align: middle;
+  margin: 8px 0 15px 0;
+
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .horizontal-form {
+    .form-fields {
+      label {
+        display: block;
+        text-align: left;
+      }
+    }
+
+    .form-actions {
+      margin-left: 0;
+    }
+  }
+}

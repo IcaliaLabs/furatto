@@ -1,65 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 <head>
 <meta charset=utf-8 />
 <title>Furatto :: Tables</title>
 <link rel="stylesheet" href="assets/css/normalize.css" />
 <link rel="stylesheet" href="assets/css/furatto.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/img/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 </head>
-<body>
-<div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
-  <div class="navbar-inner">
-    <div class="container">
-      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-      <div class="nav-collapse collapse">
-        <nav id="menu">
-          <ul class="nav">
-            <li><a class="brand" href="index.html">Furatto</a></li>
-            <li class=""><a href="buttons.html">Buttons</a></li>
-            <li class=""><a href="images.html">Images</a></li>
-            <li class="active"><a href="tables.html">Tables</a></li>
-            <li class=""><a href="base.html">Base</a></li>
-            <li class=""><a href="grid.html">Grid</a></li>
-            <li class=""><a href="forms.html">Forms</a></li>
-            <li class=""><a href="components.html">Components</a></li>
-            <li class=""><a href="javascript.html">Javascript</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+<body class="">
+
+<div class="panels ">
+  <div class="panel panel-inverse panel-left docs-panel">
   </div>
 </div>
 
-<div class="main-container">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="furatto-block">
-        <div class="furatto-large-header">
-          <div class="furatto-large-container">
-            <h1 class="large-header">Tables</h1>
-            <p class="motto">
-            Simple CSS for simple tables
-            </p>
-            <hr/>
-          </div>
+<div class="panel-content ">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner docs-navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav docs-navbar-menu">
+              <li><a class="brand" href="index.html">Furatto</a></li>
+              <li class=""><a href="getting_started.html">Getting Started</a></li>
+              <li class=""><a href="docs.html">Docs</a></li>
+              <li class=""><a href="javascript.html">Javascript</a></li>
+              <li class=""><a href="components.html">Components</a></li>
+              <li class=""><a href="add_ons.html">Add-ons</a></li>
+              <li class=""><a href="examples.html">Examples</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-center">
-    <div class="row-fluid">
-      <h2>Default table</h2>
-      <p>To style an HTML table, just add the 'table' classname. The class normalizes the table and makes it look very clean</p>
-      <table class="table">
-        <thead>
+  <div class="row">
+    <div class="section-jumbo-container">
+      <h1 class="jumbo-header">Tables</h1> 
+      <p class="motto">
+        Simple CSS for simple tables
+      </p>
+    </div>
+  </div>
+  
+  <div class="main-container">
+    <div class="container-center">
+      <div class="row">
+        <h2>Default table</h2>
+        <p>To style an HTML table, just add the <span class="code html">table</span> classname. The class normalizes the table and makes it look very clean.</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Twitter</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
+            <td>1</td>
+            <td>Abraham Kuri</td>
+            <td>@kurenn</td>
           </tr>
-        </thead>
-        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Icalia Labs</td>
+            <td>@icalialabs</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Codeando Mexico</td>
+            <td>@codeandomexico</td>
+          </tr>
+          </tbody>
+        </table>
+        <pre data-language="html">
+  <code>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Twitter</th>
+      </tr>
+    </thead>
+      <tbody>
         <tr>
           <td>1</td>
           <td>Abraham Kuri</td>
@@ -75,50 +102,50 @@
           <td>Codeando Mexico</td>
           <td>@codeandomexico</td>
         </tr>
-        </tbody>
-      </table>
-      <pre data-language="html">
-         <code>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Twitter</th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Abraham Kuri</td>
-                  <td>@kurenn</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Icalia Labs</td>
-                  <td>@icalialabs</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Codeando Mexico</td>
-                  <td>@codeandomexico</td>
-                </tr>
-              </tbody>
-          </table>
-         </code>
-      </pre>
-      <br />
-      <h2>Condensed table</h2>
-      <p>A condensed table just look a little bit smaller by just reducing the padding on the headers a table data tags.</p>
-      <table class="table table-condensed">
-        <thead>
+      </tbody>
+  </table>
+  </code>
+        </pre>
+        <br />
+        <h2>Condensed table</h2>
+        <p>A condensed table just look a little bit smaller by just reducing the padding on the headers and table data tags.</p>
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Twitter</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
+            <td>1</td>
+            <td>Abraham Kuri</td>
+            <td>@kurenn</td>
           </tr>
-        </thead>
-        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Icalia Labs</td>
+            <td>@icalialabs</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Codeando Mexico</td>
+            <td>@codeandomexico</td>
+          </tr>
+          </tbody>
+        </table>
+        <pre data-language="html">
+  <code>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Twitter</th>
+      </tr>
+    </thead>
+      <tbody>
         <tr>
           <td>1</td>
           <td>Abraham Kuri</td>
@@ -134,50 +161,50 @@
           <td>Codeando Mexico</td>
           <td>@codeandomexico</td>
         </tr>
-        </tbody>
-      </table>
-      <pre data-language="html">
-         <code>
-          <table class="table table-condensed">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Twitter</th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Abraham Kuri</td>
-                  <td>@kurenn</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Icalia Labs</td>
-                  <td>@icalialabs</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Codeando Mexico</td>
-                  <td>@codeandomexico</td>
-                </tr>
-              </tbody>
-          </table>
-         </code>
-      </pre>
-      <br />
-      <h2>Striped table</h2>
-      <p>Large tables are easier to read when some rows are more visible than others. To do so just add the 'table-striped' classname to the table</p>
-      <table class="table table-striped">
-        <thead>
+      </tbody>
+  </table>
+  </code>
+        </pre>
+        <br />
+        <h2>Striped table</h2>
+        <p>Large tables are easier to read when some rows are more visible than others. To do so just add the <span class="code html">table-striped</span> classname to the table.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Twitter</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
+            <td>1</td>
+            <td>Abraham Kuri</td>
+            <td>@kurenn</td>
           </tr>
-        </thead>
-        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Icalia Labs</td>
+            <td>@icalialabs</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Codeando Mexico</td>
+            <td>@codeandomexico</td>
+          </tr>
+          </tbody>
+        </table>
+        <pre data-language="html">
+  <code>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Twitter</th>
+      </tr>
+    </thead>
+      <tbody>
         <tr>
           <td>1</td>
           <td>Abraham Kuri</td>
@@ -193,50 +220,50 @@
           <td>Codeando Mexico</td>
           <td>@codeandomexico</td>
         </tr>
-        </tbody>
-      </table>
-      <pre data-language="html">
-         <code>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Twitter</th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Abraham Kuri</td>
-                  <td>@kurenn</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Icalia Labs</td>
-                  <td>@icalialabs</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Codeando Mexico</td>
-                  <td>@codeandomexico</td>
-                </tr>
-              </tbody>
-          </table>
-         </code>
-      </pre>
-      <br />
-      <h2>Bordered table</h2>
-      <p>In order to add vertical and horizontal borders to all cells in a table, just add the 'table-bordered' classname</p>
-      <table class="table table-striped table-bordered">
-        <thead>
+      </tbody>
+  </table>
+  </code>
+        </pre>
+        <br />
+        <h2>Bordered table</h2>
+        <p>In order to add vertical and horizontal borders to all cells in a table, just add the <span class="code html">table-bordered</span> class name.</p>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Twitter</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
+            <td>1</td>
+            <td>Abraham Kuri</td>
+            <td>@kurenn</td>
           </tr>
-        </thead>
-        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Icalia Labs</td>
+            <td>@icalialabs</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Codeando Mexico</td>
+            <td>@codeandomexico</td>
+          </tr>
+          </tbody>
+        </table>
+        <pre data-language="html">
+  <code>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Twitter</th>
+      </tr>
+    </thead>
+      <tbody>
         <tr>
           <td>1</td>
           <td>Abraham Kuri</td>
@@ -252,49 +279,49 @@
           <td>Codeando Mexico</td>
           <td>@codeandomexico</td>
         </tr>
-        </tbody>
-      </table>
-      <pre data-language="html">
-         <code>
-          <table class="table table-striped table-bordered">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Twitter</th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Abraham Kuri</td>
-                  <td>@kurenn</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Icalia Labs</td>
-                  <td>@icalialabs</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Codeando Mexico</td>
-                  <td>@codeandomexico</td>
-                </tr>
-              </tbody>
-          </table>
-         </code>
-      </pre>
-      <br />
-      <h2>All together</h2>
-      <table class="table table-striped table-bordered table-condensed">
-        <thead>
+      </tbody>
+  </table>
+  </code>
+        </pre>
+        <br />
+        <h2>All together</h2>
+        <table class="table table-striped table-bordered table-condensed">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Twitter</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
+            <td>1</td>
+            <td>Abraham Kuri</td>
+            <td>@kurenn</td>
           </tr>
-        </thead>
-        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Icalia Labs</td>
+            <td>@icalialabs</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Codeando Mexico</td>
+            <td>@codeandomexico</td>
+          </tr>
+          </tbody>
+        </table>
+        <pre data-language="html">
+  <code>
+  <table class="table table-striped table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Twitter</th>
+      </tr>
+    </thead>
+      <tbody>
         <tr>
           <td>1</td>
           <td>Abraham Kuri</td>
@@ -310,52 +337,60 @@
           <td>Codeando Mexico</td>
           <td>@codeandomexico</td>
         </tr>
-        </tbody>
-      </table>
-      <pre data-language="html">
-         <code>
-          <table class="table table-striped table-bordered table-condensed">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Twitter</th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Abraham Kuri</td>
-                  <td>@kurenn</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Icalia Labs</td>
-                  <td>@icalialabs</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Codeando Mexico</td>
-                  <td>@codeandomexico</td>
-                </tr>
-              </tbody>
-          </table>
-         </code>
-      </pre>
-      <br />
-      <h2>Responsive Tables</h2>
-      <p>Thanks to the <a href="http://zurb.com/">Zurb</a> guys we have responsive tables ready to rock, just add the 'responsive' classname to the table</p>
-      <table class="table table-bordered table-condensed responsive">
-        <thead>
+      </tbody>
+  </table>
+  </code>
+        </pre>
+        <br />
+        <h2>Responsive Tables</h2>
+        <p>Thanks to the <a href="http://zurb.com/">Zurb</a> guys we have responsive tables ready to rock, just add the <span class="code html">responsive</span> class name to the table.</p>
+        <table class="table table-bordered table-condensed responsive">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Twitter</th>
+              <th>Github</th>
+              <th>Website</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
-            <th>Github</th>
-            <th>Website</th>
+            <td>1</td>
+            <td>Abraham Kuri</td>
+            <td>@kurenn</td>
+            <td>https://github.com/kurenn</td>
+            <td>http://kurenn.net</td>
           </tr>
-        </thead>
-        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Icalia Labs</td>
+            <td>@icalialabs</td>
+            <td>https://github.com/IcaliaLabs</td>
+            <td>http://icalialabs.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Codeando Mexico</td>
+            <td>@codeandomexico</td>
+            <td>https://github.com/CodeandoMexico</td>
+            <td>http://codeandomexico.org</td>
+          </tr>
+          </tbody>
+        </table>
+        <pre data-language="html">
+     <code>
+  <table class="table table-bordered table-condensed responsive">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Twitter</th>
+        <th>Github</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+      <tbody>
         <tr>
           <td>1</td>
           <td>Abraham Kuri</td>
@@ -377,58 +412,50 @@
           <td>https://github.com/CodeandoMexico</td>
           <td>http://codeandomexico.org</td>
         </tr>
-        </tbody>
-      </table>
-      <pre data-language="html">
-         <code>
-      <table class="table table-bordered table-condensed responsive">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
-            <th>Github</th>
-            <th>Website</th>
-          </tr>
-        </thead>
+      </tbody>
+  </table> 
+      </code>
+        </pre>
+        <br />
+        <h2>Pst, here is a bonus</h2>
+        <p>You can have colorful table rows by adding the correct class, watch!. Just a gotcha, don't add the <span class="code html">table-striped</span> classname</p>
+        <table class="table table-bordered table-condensed">
+          <thead>
+            <tr class="tr-inverse">
+              <th>#</th>
+              <th>Name</th>
+              <th>Twitter</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Abraham Kuri</td>
-              <td>@kurenn</td>
-              <td>https://github.com/kurenn</td>
-              <td>http://kurenn.net</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Icalia Labs</td>
-              <td>@icalialabs</td>
-              <td>https://github.com/IcaliaLabs</td>
-              <td>http://icalialabs.com</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Codeando Mexico</td>
-              <td>@codeandomexico</td>
-              <td>https://github.com/CodeandoMexico</td>
-              <td>http://codeandomexico.org</td>
-            </tr>
-          </tbody>
-      </table> 
-          </code>
-      </pre>
-      <br />
-      <h2>Pst, here is a bonus</h2>
-      <p>You can have colorful table rows by adding the correct class, watch!. Just a gotcha, don't add the 'table-striped' classname</p>
-      <table class="table table-bordered table-condensed">
-        <thead>
-          <tr class="tr-inverse">
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
+          <tr class="tr-warning">
+            <td>1</td>
+            <td>Abraham Kuri</td>
+            <td>@kurenn</td>
           </tr>
-        </thead>
-        <tbody>
+          <tr class="tr-primary">
+            <td>2</td>
+            <td>Icalia Labs</td>
+            <td>@icalialabs</td>
+          </tr>
+          <tr class="tr-success">
+            <td>3</td>
+            <td>Codeando Mexico</td>
+            <td>@codeandomexico</td>
+          </tr>
+          </tbody>
+        </table>
+        <pre data-language="html">
+     <code>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr class="tr-inverse">
+        <th>#</th>
+        <th>Name</th>
+        <th>Twitter</th>
+      </tr>
+    </thead>
+      <tbody>
         <tr class="tr-warning">
           <td>1</td>
           <td>Abraham Kuri</td>
@@ -444,65 +471,28 @@
           <td>Codeando Mexico</td>
           <td>@codeandomexico</td>
         </tr>
-        </tbody>
-      </table>
-      <pre data-language="html">
-         <code>
-      <table class="table table-bordered table-condensed">
-        <thead>
-          <tr class="tr-inverse">
-            <th>#</th>
-            <th>Name</th>
-            <th>Twitter</th>
-          </tr>
-        </thead>
-          <tbody>
-            <tr class="tr-warning">
-              <td>1</td>
-              <td>Abraham Kuri</td>
-              <td>@kurenn</td>
-            </tr>
-            <tr class="tr-primary">
-              <td>2</td>
-              <td>Icalia Labs</td>
-              <td>@icalialabs</td>
-            </tr>
-            <tr class="tr-success">
-              <td>3</td>
-              <td>Codeando Mexico</td>
-              <td>@codeandomexico</td>
-            </tr>
-          </tbody>
-      </table>
-
-          </code>
-      </pre>
-    </div>
-  </div>
-</div>
-
-
-<div class="footer">
-  <div class="footer-wrapper">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="span6">
-            <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="link">Apache License v2.0</a></p>
-          </div>
-          <div class="span6">
-            <ul class="hrz-nav pull-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="assets/furatto.zip">Download</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
-            </ul>
-          </div>
-        </div>      
+      </tbody>
+  </table>
+  
+      </code>
+        </pre>
       </div>
     </div>
   </div>
+  
+  <div class="row footer ">
+  <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="docs-license">Apache License v2.0</a></p>
+  <ul class="inline">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="assets/furatto.zip">Download</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+    <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+  </ul>
 </div>
+
+</div>
+
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -516,22 +506,8 @@
   </script>
 
 <script src="assets/js/jquery.js"></script>
-<script src="assets/js/jpanel.js"></script>
-<script src="assets/js/jquery.dropkick-1.0.0.js"></script>
-<script src="assets/js/jquery.icheck.js"></script>
-<script src="assets/js/rainbow-custom.min.js"></script>
-<script src="assets/js/tooltip.js"></script>
-<script src="assets/js/jquery.tagsinput.js"></script>
-<script src="assets/js/picker.js"></script>
-<script src="assets/js/picker.date.js"></script>
-<script src="assets/js/picker.time.js"></script>
-<script src="assets/js/legacy.js"></script>
-<script src="assets/js/jquery.toolbar.js"></script>
-<script src="assets/js/jquery.avgrund.js"></script>
-<script src="assets/js/responsiveslides.js"></script>
-<script src="assets/js/responsive-tables.js"></script>
-<script src="assets/js/dropdown.js"></script>
-<script src="assets/js/manifest.js"></script>
-
+<script src="assets/js/furatto.min.js"></script>
+<script src="assets/js/furatto-demo.js"></script>
+<!--<script src="assets/js/shell-rainbow.min.js"></script>-->
 </body>
 </html>

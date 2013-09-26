@@ -1,168 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 <head>
 <meta charset=utf-8 />
 <title>Furatto :: Images</title>
 <link rel="stylesheet" href="assets/css/normalize.css" />
 <link rel="stylesheet" href="assets/css/furatto.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/img/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 </head>
-<body>
-<div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
-  <div class="navbar-inner">
-    <div class="container">
-      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-      <div class="nav-collapse collapse">
-        <nav id="menu">
-          <ul class="nav">
-            <li><a class="brand" href="index.html">Furatto</a></li>
-            <li class=""><a href="buttons.html">Buttons</a></li>
-            <li class="active"><a href="images.html">Images</a></li>
-            <li class=""><a href="tables.html">Tables</a></li>
-            <li class=""><a href="base.html">Base</a></li>
-            <li class=""><a href="grid.html">Grid</a></li>
-            <li class=""><a href="forms.html">Forms</a></li>
-            <li class=""><a href="components.html">Components</a></li>
-            <li class=""><a href="javascript.html">Javascript</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+<body class="">
+
+<div class="panels ">
+  <div class="panel panel-inverse panel-left docs-panel">
   </div>
 </div>
 
-<div class="main-container">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="furatto-block">
-        <div class="furatto-large-header">
-          <div class="furatto-large-container">
-            <h1 class="large-header">Images</h1>
-            <p class="motto">
-            A collection of images behaviors 
-            </p>
-            <hr/>
-          </div>
+<div class="panel-content ">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner docs-navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav docs-navbar-menu">
+              <li><a class="brand" href="index.html">Furatto</a></li>
+              <li class=""><a href="getting_started.html">Getting Started</a></li>
+              <li class=""><a href="docs.html">Docs</a></li>
+              <li class=""><a href="javascript.html">Javascript</a></li>
+              <li class=""><a href="components.html">Components</a></li>
+              <li class=""><a href="add_ons.html">Add-ons</a></li>
+              <li class=""><a href="examples.html">Examples</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-center">
-    <div class="row-fluid">
-      <h2>Default image</h2>
-      <p>To make the images in your site become responsive, just add the 'img' class</p>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img" />
-      <pre data-language="html">
-         <code>
-            <img src="http://lorempixel.com/200/200/" alt="" class="img" />
-         </code>
-      </pre>
-      <br />
-      <h2>Circular Image</h2>
-      <p>If you ever want your images to be circles, just add the 'img-circular' class</p>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular" />
-      <pre data-language="html">
-         <code>
-            <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular" />
-         </code>
-      </pre>
-      <br />
-      <span class="label label-warning">Heads up!</span>
-      <p>Now whenever you want to display the polaroid or selected version for an image, you have to wrap the <span class="code">img</span> element into a div with the <span class="code">img-frame</span> class name and then the other class names, such as <span class="code">img-circular</span>.</p>
-      <p>The decision was made because iOS devices does not render correctly the border on circular or selected elements.</p>
-      <h2>Polaroid Image</h2>
-      <p>Old times never pass out, to get the polaroid effect on any image add the 'img-polaroid' class.</p>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid" />
-      <div class="img-frame img-circular">
-        <img src="http://lorempixel.com/200/200/" alt="" />
-      </div>
-      <pre data-language="html">
-         <code>
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid" />
-          <div class="img-frame img-circular">
-            <img src="http://lorempixel.com/200/200/" alt="" />
-          </div>
-         </code>
-      </pre>
-      <br />
-      <h2>Selected Image</h2>
-      <p>Whenever you want to highlight an image as if it were selected, you just need to add the 'img-selected' class</p>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-selected" />
-      <div class="img-frame img-circular img-selected">
-        <img src="http://lorempixel.com/200/200/" alt="" />
-      </div>
-      <pre data-language="html">
-         <code>
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-selected" />
-          <div class="img-frame img-circular img-selected">
-            <img src="http://lorempixel.com/200/200/" alt="" />
-          </div>
-         </code>
-      </pre>
-      <br />
-      <h2>Hover Image</h2>
-      <p>Furatto makes it very easy to add a hover effect on images with the class 'img-hover'</p>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid img-hover" />
-      <div class="img-frame img-circular img-hover">
-        <img src="http://lorempixel.com/200/200/" alt="" />
-      </div>
-      <pre data-language="html">
-         <code>
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid img-hover" />
-          <div class="img-frame img-circular img-hover">
-            <img src="http://lorempixel.com/200/200/" alt="" />
-          </div>
-         </code>
-      </pre>
-      <br />
-      <h2>Well Image</h2>
-      <p>Look mom!, I'm well</p>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-well" />
-      <pre data-language="html">
-         <code>
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-well" />
-         </code>
-      </pre>
-      <br />
-      <h2>All together, or at least many!</h2>
-      <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-polaroid img-hover" />
-      <div class="img-frame img-circular img-hover">
-        <img src="http://lorempixel.com/200/200/" alt="" />
-      </div>
-      <pre data-language="html">
-         <code>
-          <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid img-hover" />
-          <div class="img-frame img-circular img-hover">
-            <img src="http://lorempixel.com/200/200/" alt="" />
-          </div>
-         </code>
-      </pre>
+  <div class="row">
+    <div class="section-jumbo-container">
+      <h1 class="jumbo-header">Images</h1> 
+      <p class="motto">
+        A collection of images behaviors
+      </p>
     </div>
   </div>
-</div>
-
-
-<div class="footer">
-  <div class="footer-wrapper">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="span6">
-            <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="link">Apache License v2.0</a></p>
-          </div>
-          <div class="span6">
-            <ul class="hrz-nav pull-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="assets/furatto.zip">Download</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
-            </ul>
-          </div>
-        </div>      
+  <div class="main-container">
+    <div class="container-center">
+      <div class="row">
+        <h2>Default image</h2>
+        <p>To make the images in your site become responsive, just add the <span class="code html">img</span> class name.</p>
+        <img src="http://lorempixel.com/200/200/" alt="" class="img" />
+        <pre data-language="html">
+  <code>
+  <img src="http://lorempixel.com/200/200/" alt="" class="img" />
+  </code>
+        </pre>
+        <br />
+        <h2>Circular Image</h2>
+        <p>If you ever want your images to be circles, just add the <span class="code html">img-circular</span> class name.</p>
+        <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular" />
+        <pre data-language="html">
+  <code>
+  <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular" />
+  </code>
+        </pre>
+        <br />
+        <h2>Polaroid Image</h2>
+        <p>Old times never pass out, to get the polaroid effect on any image add the <span class="code html">img-polaroid</span> class.</p>
+        <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid" />
+        <div class="img-frame img-circular">
+          <img src="http://lorempixel.com/200/200/" alt="" />
+        </div>
+        <p>
+          <span class="label label-info">Heads up!</span>
+          <br />
+          The circular polaroid version for images need to be wrapped into a <span class="code html">div</span> element with the proper class names as shown in the example as a fix for iOS devices.</p>
+        <pre data-language="html">
+  <code>
+  <img src="http://lorempixel.com/200/200/" alt="" class="img img-polaroid" />
+  <div class="img-frame img-circular">
+    <img src="http://lorempixel.com/200/200/" alt="" />
+  </div>
+  </code>
+        </pre>
+        <br />
+        <h2>Selected Image</h2>
+        <p>Whenever you want to highlight an image as if it was selected, you just need to add the <span class="code html">img-selected</span> class.</p>
+        <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-selected" />
+        <div class="img-frame img-circular img-selected">
+          <img src="http://lorempixel.com/200/200/" alt="" />
+        </div>
+        <p>
+          <span class="label label-funky">Heads up!</span>
+          <br />
+          The circular selected version for images need to be wrapped into a <span class="code html">div</span> element with the proper class names as shown in the example as a fix for iOS devices.</p>
+        <pre data-language="html">
+  <code>
+  <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-selected" />
+  <div class="img-frame img-circular img-selected">
+    <img src="http://lorempixel.com/200/200/" alt="" />
+  </div>
+  </code>
+        </pre>
+        <br />
+        <h2>Well Image</h2>
+        <p>Look mom!, I'm well.</p>
+        <img src="http://lorempixel.com/200/200/" alt="" class="img img-well" />
+        <pre data-language="html">
+  <code>
+  <img src="http://lorempixel.com/200/200/" alt="" class="img img-well" />
+  </code>
+        </pre>
+        <br />
+        <h2>All together, or at least many!</h2>
+        <img src="http://lorempixel.com/200/200/" alt="" class="img img-well img-polaroid" />
+        <div class="img-frame img-circular">
+          <img src="http://lorempixel.com/200/200/" alt="" />
+        </div>
+        <pre data-language="html">
+  <code>
+  <img src="http://lorempixel.com/200/200/" alt="" class="img img-circular img-polaroid img-hover" />
+  <div class="img-frame img-circular img-hover">
+    <img src="http://lorempixel.com/200/200/" alt="" />
+  </div>
+  </code>
+        </pre>
       </div>
     </div>
   </div>
+  
+  <div class="row footer ">
+  <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="docs-license">Apache License v2.0</a></p>
+  <ul class="inline">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="assets/furatto.zip">Download</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+    <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+  </ul>
 </div>
+
+</div>
+
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -176,22 +155,8 @@
   </script>
 
 <script src="assets/js/jquery.js"></script>
-<script src="assets/js/jpanel.js"></script>
-<script src="assets/js/jquery.dropkick-1.0.0.js"></script>
-<script src="assets/js/jquery.icheck.js"></script>
-<script src="assets/js/rainbow-custom.min.js"></script>
-<script src="assets/js/tooltip.js"></script>
-<script src="assets/js/jquery.tagsinput.js"></script>
-<script src="assets/js/picker.js"></script>
-<script src="assets/js/picker.date.js"></script>
-<script src="assets/js/picker.time.js"></script>
-<script src="assets/js/legacy.js"></script>
-<script src="assets/js/jquery.toolbar.js"></script>
-<script src="assets/js/jquery.avgrund.js"></script>
-<script src="assets/js/responsiveslides.js"></script>
-<script src="assets/js/responsive-tables.js"></script>
-<script src="assets/js/dropdown.js"></script>
-<script src="assets/js/manifest.js"></script>
-
+<script src="assets/js/furatto.min.js"></script>
+<script src="assets/js/furatto-demo.js"></script>
+<!--<script src="assets/js/shell-rainbow.min.js"></script>-->
 </body>
 </html>

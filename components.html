@@ -1,554 +1,654 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 <head>
 <meta charset=utf-8 />
 <title>Furatto :: Components</title>
 <link rel="stylesheet" href="assets/css/normalize.css" />
 <link rel="stylesheet" href="assets/css/furatto.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/font-awesome.css" />
+<link rel="stylesheet" href="assets/css/docs.css" />
+<link rel="shortcut icon" href="assets/img/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 </head>
-<body>
-<div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
-  <div class="navbar-inner">
-    <div class="container">
-      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-      <div class="nav-collapse collapse">
-        <nav id="menu">
-          <ul class="nav">
-            <li><a class="brand" href="index.html">Furatto</a></li>
-            <li class=""><a href="buttons.html">Buttons</a></li>
-            <li class=""><a href="images.html">Images</a></li>
-            <li class=""><a href="tables.html">Tables</a></li>
-            <li class=""><a href="base.html">Base</a></li>
-            <li class=""><a href="grid.html">Grid</a></li>
-            <li class=""><a href="forms.html">Forms</a></li>
-            <li class="active"><a href="components.html">Components</a></li>
-            <li class=""><a href="javascript.html">Javascript</a></li>
-          </ul>
-            <form action="" method="get" accept-charset="utf-8" class="search-navbar-form pull-right">
-               <input type="text" name="" id="" value="" placeholder="Search" class="search-text-input" />
-            </form>
-        </nav>
-      </div>
-    </div>
+<body class="">
+
+<div class="panels ">
+  <div class="panel panel-inverse panel-left docs-panel">
   </div>
 </div>
 
-<div class="main-container">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="furatto-block">
-        <div class="furatto-large-header">
-          <div class="furatto-large-container">
-            <h1 class="large-header">Components</h1>
-            <p class="motto">
-            A collection of useful components.
-            </p>
-            <hr/>
-          </div>
+<div class="panel-content " id="body">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner docs-navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav docs-navbar-menu">
+              <li><a class="brand" href="index.html">Furatto</a></li>
+              <li class=""><a href="getting_started.html">Getting Started</a></li>
+              <li class=""><a href="docs.html">Docs</a></li>
+              <li class=""><a href="javascript.html">Javascript</a></li>
+              <li class="active"><a href="components.html">Components</a></li>
+              <li class=""><a href="examples.html">Examples</a></li>
+              <li class=""><a href="add_ons.html">Add-ons</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="section-jumbo-container">
+      <h1 class="jumbo-header">Components</h1> 
+      <p class="motto">
+      A collection of useful components to spice up the web.
+      </p>
+    </div>
+  </div>
+  
   <div class="container-center">
-    <div class="furatto-block">
-      <h3 class="light">Navbar</h3>
-      <p>Based on the <a href="http://twitter.github.io/bootstrap/components.html#navbar">Bootstrap</a> filosophy navbars are static and not fixed on the top </p>
-      <div class="navbar">
-        <div class="navbar-inner">
-          <div class="container">
-            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-            <div class="nav-collapse collapse">
-              <nav id="menu">
-                <ul class="nav">
-                  <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
-                  <li><a href="javascript:void(0)">Buttons</a></li>
-                  <li><a href="javascript:void(0)">Images</a></li>
-                  <li><a href="javascript:void(0)">Tables</a></li>
-                  <li><a href="javascript:void(0)">Base</a></li>
-                  <li><a href="javascript:void(0)">Forms</a></li>
-                  <li class="active"><a href="javascript:void(0)">Components</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+    <div class="row">
+       <div class="col-3">
+        <div class="docs-sidebar">
+          <!-- Navigation sidebar -->
+          <ul class="nav nav-bordered">
+            <li><a href="#icons">Icons</a></li>
+            <li><a href="#navbar">Navbar</a></li>
+            <li><a href="#labels_and_badges">Labels &amp; Badges</a></li>
+            <li><a href="#alerts">Alerts</a></li>
+          </ul>
+          <!-- Navigation sidebar -->
         </div>
-      </div>
-      <pre data-language="html">
-         <code>
-           <div class="navbar">
-             <div class="navbar-inner">
-               <div class="container">
-                 <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-                 <div class="nav-collapse collapse">
-                   <nav id="menu">
-                     <ul class="nav">
-                       <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
-                     </ul>
-                   </nav>
-                 </div>
-               </div>
-             </div>
+       </div>
+       <div class="col-9">
+        <div class="row">
+           <!-- Icons section -->
+           <div id="icons">
+             <h2 class="header">Icons</h2>
+             <h4 class="light">Furatto includes 361 icons in font format from <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>. Font awesome is an open-source project which provides you scalable vector icons that can be customized - size, color, or anything that you can do with CSS.</h4>
+             <p>We provide some examples of icons for you to kick off and get started. For the complete documentation check <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">Font Awesome</a>.</p>
+             <ul class="docs-icons">
+              <li>
+                <i class="icon-user"></i>
+                .icon-user
+              </li>
+              <li>
+                <i class="icon-cog"></i>
+                .icon-cog
+              </li>
+              <li>
+                <i class="icon-warning-sign"></i>
+                .icon-warning-sign
+              </li>
+              <li>
+                <i class="icon-thumbs-up"></i>
+                .icon-thumbs-up
+              </li>
+              <li>
+                <i class="icon-cogs"></i>
+                .icon-cogs
+              </li>
+              <li>
+                <i class="icon-comment"></i>
+                .icon-comment
+              </li>
+              <li>
+                <i class="icon-envelope"></i>
+                .icon-envelope
+              </li>
+              <li>
+                <i class="icon-flag"></i>
+                .icon-flag
+              </li>
+              <li>
+                <i class="icon-inbox"></i>
+                .icon-inbox
+              </li>
+              <li>
+                <i class="icon-info-sign"></i>
+                .icon-info-sign
+              </li>
+              <li>
+                <i class="icon-refresh"></i>
+                .icon-refresh
+              </li>
+              <li>
+                <i class="icon-remove"></i>
+                .icon-remove
+              </li>
+              <li>
+                <i class="icon-star"></i>
+                .icon-star
+              </li>
+              <li>
+                <i class="icon-tag"></i>
+                .icon-tag
+              </li>
+              <li>
+                <i class="icon-unlock-alt"></i>
+                .icon-unlock-alt
+              </li>
+              <li>
+                <i class="icon-file"></i>
+                .icon-file
+              </li>
+              <li>
+                <i class="icon-link"></i>
+                .icon-link
+              </li>
+              <li>
+                <i class="icon-desktop"></i>
+                .icon-desktop
+              </li>
+              <li>
+                <i class="icon-heart"></i>
+                .icon-heart
+              </li>
+              <li>
+                <i class="icon-off"></i>
+                .icon-off
+              </li>
+              <li>
+                <i class="icon-question-sign"></i>
+                .icon-question-sign
+              </li>
+              <li>
+                <i class="icon-trophy"></i>
+                .icon-trophy
+              </li>
+              <li>
+                <i class="icon-female"></i>
+                .icon-female
+              </li>
+              <li>
+                <i class="icon-male"></i>
+                .icon-male
+              </li>
+              <li>
+                <i class="icon-asterisk"></i>
+                .icon-asterisk
+              </li>
+              <li>
+                <i class="icon-camera"></i>
+                .icon-camera
+              </li>
+              <li>
+                <i class="icon-calendar"></i>
+                .icon-calendar
+              </li>
+              <li>
+                <i class="icon-cloud-upload"></i>
+                .icon-cloud-upload
+              </li>
+              <li>
+                <i class="icon-download-alt"></i>
+                .icon-download-alt
+              </li>
+              <li>
+                <i class="icon-home"></i>
+                .icon-home
+              </li>
+              <li>
+                <i class="icon-map-marker"></i>
+                .icon-map-marker
+              </li>
+              <li>
+                <i class="icon-ok"></i>
+                .icon-ok
+              </li>
+              <li>
+                <i class="icon-time"></i>
+                .icon-time
+              </li>
+              <li>
+                <i class="icon-wrench"></i>
+                .icon-wrench
+              </li>
+              <li>
+                <i class="icon-trash"></i>
+                .icon-trash
+              </li>
+              <li>
+                <i class="icon-group"></i>
+                .icon-group
+              </li>
+              <li>
+                <i class="icon-phone"></i>
+                .icon-phone
+              </li>
+              <li>
+                <i class="icon-facebook-sign"></i>
+                .icon-facebook-sign
+              </li>
+              <li>
+                <i class="icon-instagram"></i>
+                .icon-instagram
+              </li>
+              <li>
+                <i class="icon-twitter"></i>
+                .icon-twitter
+              </li>
+             </ul>
+             <h3>How to use</h3>
+             <p>Furatto plays well with <a href="#">Font Awesome</a>, to integrate it you just need to add the <span class="code">font-awesome.css</span> file.</p>
+             <pre data-language="html" class="hidden-xs">
+               <code>
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+              </code>
+             </pre>
+             <p>It is really easy to start using icons, just add the <span class="code">icon-</span> prefix and the icon name you want to display as in <span class="code">icon-user</span>.</p>
+             <pre data-language="html" class="hidden-xs">
+               <code>
+  <i class="icon-user"></i>
+              </code>
+             </pre>
            </div>
-         </code>
-      </pre>
-      <h4 class="light">Navbar with search form</h4>
-      <span class="label label-funky">Heads up!</span>
-      <p>When adding a search form to the navbar, just have in mind that is has to be inside the element with the id <span class="code">#menu</span>.</p>
-      <div class="navbar">
-        <div class="navbar-inner">
-          <div class="container">
-            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-            <div class="nav-collapse collapse">
-              <nav id="menu">
-                <ul class="nav">
-                  <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
-                </ul>
-                <form action="" method="get" accept-charset="utf-8" class="search-navbar-form pull-right">
-                   <input type="text" name="" id="" value="" placeholder="I'm a search form" class="search-text-input" />
-                </form>
-              </nav>
-            </div>
-          </div>
+           <!-- Icons section -->
+           <hr />
+           <!-- Navbar section -->
+           <div id="navbar" class="docs-section">
+             <h2 class="header">Navbar</h2>
+             <h4>Navbars are responsive elements that works like navigation headers for the whole application. They collapse in mobile views, providing a side panel menu like in many native apps.</h4>
+             <h3>Default navbar</h3>
+              <blockquote class="content-quote">
+                <h4>Absolute positioned</h4>    
+                <p>Furatto brand new navbar works differently from version 1. Version 2 uses hardware acceleration to provide a better experience on panel animation, 
+                this means the content and the panel are absolute positioned. Don't worry Furatto handles that for you by following the next layout.
+                </p>
+              </blockquote>
+             <div class="docs-example">
+               
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav">
+              <li><a class="brand" href="index.html">Brand</a></li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+              <ul class="dropdown-menu bottom-up pull-right">
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Software</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Business Planning</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Development and Research</a></li>
+              </ul>
+              </li>
+            </ul>
+            <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right search-navbar-form">
+              <div class="form-fields">
+                <input type="text" name="" id="" value="" placeholder="Search" class="">
+              </div>
+              <input type="submit" name="" id="" value="Search" class="btn btn-info">
+            </form>
+          </nav>
         </div>
       </div>
-      <span class="label label-success">Psst over here!</span>
-      <p>If you want a growing effect for the search input on the navbar, just add <span class="code">data-furatto="search"</span> and let the magic begins.</p>
-      <pre data-language="html">
-         <code>
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="container">
-                <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-                <div class="nav-collapse collapse">
-                  <nav id="menu">
-                    <ul class="nav">
-                      <li><a class="brand" href="javascript:void(0)">Furatto</a></li>
-                    </ul>
-                    <form action="" method="get" accept-charset="utf-8" class="search-navbar-form pull-right">
-                       <input type="text" name="" id="" value="" placeholder="I'm a search form" class="search-text-input" />
-                    </form>
-                  </nav>
+    </div>
+  </div>
+  
+             </div>
+             <div class="docs-code hidden-xs">
+              <pre data-language="html">
+                 <code>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav">
+              <li><a class="brand" href="index.html">Brand</a></li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+              <ul class="dropdown-menu bottom-up pull-right">
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Software</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Business Planning</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Development and Research</a></li>
+              </ul>
+              </li>
+            </ul>
+            <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right search-navbar-form">
+              <div class="form-fields">
+                <input type="text" name="" id="" value="" placeholder="Search" class="">
+              </div>
+              <input type="submit" name="" id="" value="Search" class="btn btn-info">
+            </form>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+                 </code>
+              </pre>
+              
+             </div>
+             <h3>Navbar buttons</h3>
+             <p>For buttons not linked to a form add the <span class="code">btn-navbar</span> class name.</p>
+             <div class="docs-example">
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="container">
+                    <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                    <div class="nav-collapse collapse">
+                      <nav id="menu">
+                        <ul class="nav">
+                          <li><a class="brand" href="index.html">Brand</a></li>
+                        </ul>
+                        <button type="button" class="btn btn-info btn-navbar visible-lg">Sign In</button>
+                      </nav>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-         </code>
-      </pre>
-      <h4>Optional Navbar variations</h4>
-      <p>Fix the navbar to the top or to the bottom, or perhaps add transparency</p>
-      <h5>Fixed Top</h5>
-      <pre data-language="html">
-        <code>
-           <div class="navbar navbar-fixed-top">
-              ...
-           </div>
-        </code>
-      </pre>
-      <h5>Fixed Bottom</h5>
-      <pre data-language="html">
-        <code>
-           <div class="navbar navbar-fixed-bottom">
-              ...
-           </div>
-        </code>
-      </pre>
-      <h5>Transparency</h5>
-      <pre data-language="html">
-        <code>
-           <div class="navbar navbar-alpha">
-              ...
-           </div>
-        </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Pagination</h3>
-      <p>Simple and sleek pagination. Great for apps and search results.</p>
-      <div class="pagination">
-        <ul>
-          <li class="previous"><a href="#"><img src="assets/img/previous.png" /></a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#">7</a></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li class="next"><a href="#"><img src="assets/img/next.png" /></a></li>
-        </ul>
-      </div>
-      <pre data-language="html">
-        <code>
-          <div class="pagination">
-            <ul>
-              <li class="previous"><a href="#"><img src="assets/img/previous.png" /></a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">6</a></li>
-              <li><a href="#">7</a></li>
-              <li><a href="#">8</a></li>
-              <li><a href="#">9</a></li>
-              <li class="next"><a href="#"><img src="assets/img/next.png" /></a></li>
+             </div>
+             <div class="docs-code hidden-xs">
+               <pre data-language="html">
+                 <code>
+  <button type="button" class="btn btn-info btn-navbar">Sign In</button>
+                 </code>
+               </pre>
+             </div>
+  
+            <h3>Navbar text</h3>
+            <p>Text on the navbar can be wrapped on an element with a class name of <span class="code">navbar-text</span>.</p>
+             <div class="docs-example">
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="container">
+                    <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                    <div class="nav-collapse collapse">
+                      <nav id="menu">
+                        <ul class="nav">
+                          <li><a class="brand" href="index.html">Brand</a></li>
+                        </ul>
+                        <p class="navbar-text visible-lg">Welcome, Abraham</p>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="docs-code hidden-xs">
+               <pre data-language="html">
+                 <code>
+  <p class="navbar-text">Welcome, Abraham</p>
+                 </code>
+               </pre>
+             </div>
+            <h3>Navbar top fixed</h3>
+            <h4 class="light">Add the <span class="code">navbar-fixed-top</span> class name.</h4>
+             <div class="docs-example">
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="container">
+                    <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                    <div class="nav-collapse collapse">
+                      <nav id="menu">
+                        <ul class="nav">
+                          <li><a class="brand" href="index.html">Brand</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="docs-code hidden-xs">
+               <pre data-language="html">
+                 <code>
+  <div class="navbar navbar-fixed-top">
+    ... 
+  </div>
+                 </code>
+               </pre>
+             </div>
+              <blockquote class="content-quote">
+                <h4>A note on Fixed navbar</h4>    
+                <p>
+                  For fixed top navbar you just need to add a padding on the top of <span class="code">51px</span> to the <span class="code">panel-content</span> element.
+                </p>
+              </blockquote>
+             
+            <h3>Navbar bottom fixed</h3>
+            <h4 class="light">Add the <span class="code">navbar-fixed-bottom</span> class name.</h4>
+             <div class="docs-example">
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="container">
+                    <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+                    <div class="nav-collapse collapse">
+                      <nav id="menu">
+                        <ul class="nav">
+                          <li><a class="brand" href="index.html">Brand</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="docs-code hidden-xs">
+               <pre data-language="html">
+                 <code>
+  <div class="navbar navbar-fixed-bottom">
+    ... 
+  </div>
+                 </code>
+               </pre>
+             </div>
+  
+            <h3>Inverse Navbar</h3>
+            <h4 class="light">Add the <span class="code">navbar-inverse</span> class name.</h4>
+             <div class="docs-example">
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav">
+              <li><a class="brand" href="index.html">Brand</a></li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
+              <ul class="dropdown-menu bottom-up pull-right">
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Software</a></li>
+                <li><a href="#">Industrial Design</a></li>
+                <li><a href="#">Business Planning</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Development and Research</a></li>
+              </ul>
+              </li>
             </ul>
-          </div>
-        </code>
-      </pre>
-      <h4>Alignment</h4>
-      <p>Add one of two optional classes to align the pagination.</p>
-      <h5>Center 'pagination-centered'</h5>
-      <div class="pagination pagination-centered">
-        <ul>
-          <li class="previous"><a href="#"><img src="assets/img/previous.png" /></a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#">7</a></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li class="next"><a href="#"><img src="assets/img/next.png" /></a></li>
-        </ul>
+            <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right visible-lg">
+              <div class="form-fields">
+                <input type="text" name="" id="" value="" placeholder="Search" class="" />
+              </div>
+              <input type="submit" name="" id="" value="Search" class="btn btn-info" />
+            </form>
+          </nav>
+        </div>
       </div>
-      <pre data-language="html">
-      <code>
-          <div class="pagination pagination-centered">
-            ...
-          </div>
-      </code>
-      </pre>
-      <h5>Right 'pagination-right'</h5>
-      <div class="pagination pagination-right">
-        <ul>
-          <li class="previous"><a href="#"><img src="assets/img/previous.png" /></a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#">7</a></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li class="next"><a href="#"><img src="assets/img/next.png" /></a></li>
-        </ul>
-      </div>
-      <pre data-language="html">
-      <code>
-          <div class="pagination pagination-right">
-            ...
-          </div>
-      </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Labels and badges</h3>
-      <h4>Labels</h4>
-      <table class="table table-bordered table-striped responsive">
-        <thead>
-          <tr>
-            <th>Label</th>
-            <th>Markup</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td><span class="label">Default</span></td>
-          <td><span class="code">&lt;span class="label"&gt;Default&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="label label-primary">Primary</span></td>
-          <td><span class="code">&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="label label-success">Success</span></td>
-          <td><span class="code">&lt;span class="label label-success"&gt;Success&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="label label-danger">Danger</span></td>
-          <td><span class="code">&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="label label-warning">Warning</span></td>
-          <td><span class="code">&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="label label-inverse">Inverse</span></td>
-          <td><span class="code">&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="label label-info">Info</span></td>
-          <td><span class="code">&lt;span class="label label-info"&gt;Info&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="label label-funky">Funky</span></td>
-          <td><span class="code">&lt;span class="label label-funky"&gt;Funky&lt;/span&gt;</span></td>
-        </tr>
-        </tbody>
-      </table>   
-      <h4>Badges</h4>
-      <table class="table table-bordered table-striped responsive">
-        <thead>
-          <tr>
-            <th>badge</th>
-            <th>Markup</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td><span class="badge">1</span></td>
-          <td><span class="code">&lt;span class="badge"&gt;1&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-primary">2</span></td>
-          <td><span class="code">&lt;span class="badge badge-primary"&gt;2&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-success">3</span></td>
-          <td><span class="code">&lt;span class="badge badge-success"&gt;3&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-danger">4</span></td>
-          <td><span class="code">&lt;span class="badge badge-danger"&gt;4&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-warning">5</span></td>
-          <td><span class="code">&lt;span class="badge badge-warning"&gt;5&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-inverse">6</span></td>
-          <td><span class="code">&lt;span class="badge badge-inverse"&gt;6&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-info">7</span></td>
-          <td><span class="code">&lt;span class="badge badge-info"&gt;7&lt;/span&gt;</span></td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-funky">8</span></td>
-          <td><span class="code">&lt;span class="badge badge-funky"&gt;8&lt;/span&gt;</span></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Alerts</h3>
-      <p>Alert any message in 4 different ways.</p>
-      <div class="alert">
-        <button type="button" class="close">x</button>
-        <h4 class="header">Hola mundo!</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </div>
-      <pre data-language="html">
-          <code>
-            <div class="alert">
-              <button type="button" class="close">x</button>
-              <h4 class="header">Hola mundo!</h4>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </code>
-      </pre>
-      <div class="alert alert-success">
-        <button type="button" class="close">x</button>
-        <h4 class="header">Hola mundo!</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </div>
-      <pre data-language="html">
-          <code>
-            <div class="alert alert-success">
-              <button type="button" class="close">x</button>
-              <h4 class="header">Hola mundo!</h4>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </code>
-      </pre>
-      <div class="alert alert-info">
-        <button type="button" class="close">x</button>
-        <h4 class="header">Hola mundo!</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </div>
-      <pre data-language="html">
-          <code>
-            <div class="alert alert-info">
-              <button type="button" class="close">x</button>
-              <h4 class="header">Hola mundo!</h4>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </code>
-      </pre>
-      <div class="alert alert-danger">
-        <button type="button" class="close">x</button>
-        <h4 class="header">Hola mundo!</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </div>
-      <pre data-language="html">
-          <code>
-            <div class="alert alert-danger">
-              <button type="button" class="close">x</button>
-              <h4 class="header">Hola mundo!</h4>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Tooltips</h3>
-      <p>Based on the tooltips from <a href="http://twitter.github.io/bootstrap/javascript.html#tooltips">Bootstrap</a>. Hover over the links below to see tooltips.</p>
-      <p>Tooltips can be place in four different positions: Top, Bottom, Right, Left.</p>
-      <ul class="color-list">
-        <li class="aero"  data-toggle="tooltip" data-placement="left" title="#9cc2cb"></li>
-        <li class="red" data-toggle="tooltip" data-placement="bottom" title="#ec7063"></li>
-        <li class="green"  data-toggle="tooltip" data-placement="top" title="#1abc9c"></li>
-        <li class="blue" data-toggle="tooltip" data-placement="right" title="#3498db"></li>
-      </ul>
-      <pre data-language="html">
-          <code>
-            <ul class="color-list">
-              <li class="aero"  data-toggle="tooltip" data-placement="left" title="#9cc2cb"></li>
-              <li class="red" data-toggle="tooltip" data-placement="bottom" title="#ec7063"></li>
-              <li class="green"  data-toggle="tooltip" data-placement="top" title="#1abc9c"></li>
-              <li class="blue" data-toggle="tooltip" data-placement="right" title="#3498db"></li>
-            </ul>
-          </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Tags</h3>
-      <p>Furatto integrates the tags jquery input plugin from <a href="http://xoxco.com/projects/code/tagsinput/">XOXCO</a>. Just add the data attribute tags.</p>
-      <input name="tagsinput" id="tagsinput" class="tagsinput" value="Clean,Fresh,Modern,Unique" data-tags />
-      <pre data-language="html">
-         <code>
-          &lt;input name="tagsinput" id="tagsinput" class="tagsinput" value="Clean,Fresh,Modern,Unique" data-tags /&gt;
-         </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Helper classes</h3>
-      <p>Simple and functional classes on behavior tweaks.</p>
-      <h4>.pull-left</h4>
-      <p>Float an element to the left.</p>
-      <pre data-language="html">
-         <code>
-            class="pull-left"
-         </code>
-      </pre>
-      <h4>.pull-right</h4>
-      <p>Float an element to the right.</p>
-      <pre data-language="html">
-         <code>
-            class="pull-right"
-         </code>
-      </pre>
-      <h4>.clearfix</h4>
-      <p>Clear the float on any element.</p>
-      <pre data-language="html">
-         <code>
-            class="clearfix"
-         </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Left Navbar</h3>
-      <p>Furatto offers an alternative for navbar, which sticks to the left.</p>
-      <p>
-        <span class="label label-warning">Heads up!</span>
-        The left navbar does not play well with the top navbar, so don't put them together. You may experience bad behavior on phones or tablets when toggling, but don't worry it will work fine alone. 
-      </p>
-      <a href="#" class="btn btn-success" id="js-show-left-navbar">Toggle navbar!</a>
-      <ul class="vrt-navbar nav hide">
-        <li>
-          <a href="index.html"><i class="icon-home"></i>Furatto</a>
-        </li>
-        <li>
-          <a href="buttons.html"><i class="icon-circle-blank"></i>Buttons</a>
-        </li>
-        <li>
-          <a href="images.html"><i class="icon-picture"></i>Images</a>
-        </li>
-        <li>
-          <a href="tables.html"><i class="icon-table"></i>Tables</a>
-        </li>
-        <li>
-          <a href="base.html"><i class="icon-lightbulb"></i>Base</a>
-        </li>
-        <li>
-          <a href="grid.html"><i class="icon-th-large"></i>Grid</a>
-        </li>
-        <li>
-          <a href="forms.html"><i class="icon-file"></i>Forms</a>
-        </li>
-        <li class="active">
-          <a href="components.html"><i class="icon-cog"></i>Components</a>
-        </li>
-        <li>
-          <a href="javascript.html"><i class="icon-coffee"></i>Javascript</a>
-        </li>
-      </ul>
-      <pre data-language="html">
-        <code>
-      <ul class="vrt-navbar nav hide">
-        <li>
-          <a href="index.html"><i class="icon-home"></i>Furatto</a>
-        </li>
-        <li>
-          <a href="buttons.html"><i class="icon-circle-blank"></i>Buttons</a>
-        </li>
-        <li>
-          <a href="images.html"><i class="icon-picture"></i>Images</a>
-        </li>
-        <li>
-          <a href="tables.html"><i class="icon-table"></i>Tables</a>
-        </li>
-        <li>
-          <a href="base.html"><i class="icon-lightbulb"></i>Base</a>
-        </li>
-        <li>
-          <a href="grid.html"><i class="icon-th-large"></i>Grid</a>
-        </li>
-        <li>
-          <a href="forms.html"><i class="icon-file"></i>Forms</a>
-        </li>
-        <li class="active">
-          <a href="components.html"><i class="icon-cog"></i>Components</a>
-        </li>
-        <li>
-          <a href="javascript.html"><i class="icon-coffee"></i>Javascript</a>
-        </li>
-      </ul>
-        </code>
-      </pre>
     </div>
   </div>
-</div>
+  
+             </div>
+             <div class="docs-code hidden-xs">
+               <pre data-language="html">
+                 <code>
+  <div class="navbar navbar-inverse">
+    ... 
+  </div>
+                 </code>
+               </pre>
+             </div>
+  
+           </div>
+           <!-- Navbar section -->
+           <hr />
+           <!-- Labels and Badges section -->
+           <div id="labels_and_badges" class="docs-section">
+             <h2 class="header">Labels &amp; Badges</h2>
+             <h4 class="light">Highlight important content, make notice of important announcements with labels or badges by adding the corresponding class name.</h4>
+              <h4>Labels</h4>
+              <table class="table table-bordered table-striped responsive">
+                 <thead>
+                   <tr>
+                     <th>Label variation</th>
+                     <th>Markup</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td><span class="label">Default</span></td>
+                      <td><span class="code">&lt;span class="label"&gt;Default&lt;/span&gt;</span></td>
+                   </tr>
+                  <tr>
+                    <td><span class="label label-primary">Primary</span></td>
+                    <td><span class="code">&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="label label-success">Success</span></td>
+                    <td><span class="code">&lt;span class="label label-success"&gt;Success&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="label label-danger">Danger</span></td>
+                    <td><span class="code">&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="label label-warning">Warning</span></td>
+                    <td><span class="code">&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="label label-inverse">Inverse</span></td>
+                    <td><span class="code">&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="label label-info">Info</span></td>
+                    <td><span class="code">&lt;span class="label label-info"&gt;Info&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="label label-funky">Funky</span></td>
+                    <td><span class="code">&lt;span class="label label-funky"&gt;Funky&lt;/span&gt;</span></td>
+                  </tr>
+                 </tbody>
+              </table>
+              <h4>Badges</h4>
+              <table class="table table-bordered table-striped responsive">
+                 <thead>
+                   <tr>
+                     <th>Badge variation</th>
+                     <th>Markup</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                  <tr>
+                    <td><span class="badge">1</span></td>
+                    <td><span class="code">&lt;span class="badge"&gt;1&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-primary">2</span></td>
+                    <td><span class="code">&lt;span class="badge badge-primary"&gt;2&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-success">3</span></td>
+                    <td><span class="code">&lt;span class="badge badge-success"&gt;3&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-danger">4</span></td>
+                    <td><span class="code">&lt;span class="badge badge-danger"&gt;4&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-warning">5</span></td>
+                    <td><span class="code">&lt;span class="badge badge-warning"&gt;5&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-inverse">6</span></td>
+                    <td><span class="code">&lt;span class="badge badge-inverse"&gt;6&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-info">7</span></td>
+                    <td><span class="code">&lt;span class="badge badge-info"&gt;7&lt;/span&gt;</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-funky">8</span></td>
+                    <td><span class="code">&lt;span class="badge badge-funky"&gt;8&lt;/span&gt;</span></td>
+                  </tr>
+                 </tbody>
+              </table>
+           </div>
+           <!-- Labels and Badges section -->
+           <hr />
+           <!-- Alerts section -->
+           <div id="alerts">
+            <h2 class="header">Alerts</h2>
+            <h4 class="light">Provide meaningful feedback messages across the website in response to user actions.</h4>
+            <p>Wrap any text and an optional close button and one of the modifier class names. The default alert is a notice message with a light orange as background.</p>
+            <div class="docs-example">
+              <div class="alert">
+                <button type="button" class="close">x</button>
+                <h4 class="header">Hola mundo!</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div> 
+              <div class="alert alert-success">
+                <button type="button" class="close">x</button>
+                <h4 class="header">Hola mundo!</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div> 
+              <div class="alert alert-info">
+                <button type="button" class="close">x</button>
+                <h4 class="header">Hola mundo!</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div> 
+              <div class="alert alert-danger">
+                <button type="button" class="close">x</button>
+                <h4 class="header">Hola mundo!</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div> 
+            </div>
+            <div class="docs-code hidden-xs">
+              <pre data-language="html">
+                <code>
+  <div class="alert">...</div> 
+  <div class="alert alert-success">...</div> 
+  <div class="alert alert-info">...</div> 
+  <div class="alert alert-danger">...</div> 
+                </code>
+              </pre>            
+            </div>
+           </div>
+           <!-- Alerts section -->
+        </div>  
+       </div>
+    </div>
+  </div>
+  <div class="row footer ">
+  <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="docs-license">Apache License v2.0</a></p>
+  <ul class="inline">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="assets/furatto.zip" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V2']);">Download</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+    <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+  </ul>
 </div>
 
-<div class="footer">
-  <div class="footer-wrapper">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="span6">
-            <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="link">Apache License v2.0</a></p>
-          </div>
-          <div class="span6">
-            <ul class="hrz-nav pull-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="assets/furatto.zip">Download</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
-            </ul>
-          </div>
-        </div>      
-      </div>
-    </div>
-  </div>
 </div>
+
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -562,22 +662,7 @@
   </script>
 
 <script src="assets/js/jquery.js"></script>
-<script src="assets/js/jpanel.js"></script>
-<script src="assets/js/jquery.dropkick-1.0.0.js"></script>
-<script src="assets/js/jquery.icheck.js"></script>
-<script src="assets/js/rainbow-custom.min.js"></script>
-<script src="assets/js/tooltip.js"></script>
-<script src="assets/js/jquery.tagsinput.js"></script>
-<script src="assets/js/picker.js"></script>
-<script src="assets/js/picker.date.js"></script>
-<script src="assets/js/picker.time.js"></script>
-<script src="assets/js/legacy.js"></script>
-<script src="assets/js/jquery.toolbar.js"></script>
-<script src="assets/js/jquery.avgrund.js"></script>
-<script src="assets/js/responsiveslides.js"></script>
-<script src="assets/js/responsive-tables.js"></script>
-<script src="assets/js/dropdown.js"></script>
-<script src="assets/js/manifest.js"></script>
-
+<script src="assets/js/furatto.min.js"></script>
+<script src="assets/js/furatto-demo.js"></script>
 </body>
 </html>

@@ -398,3 +398,7 @@
     });
   });
 })(jQuery, window, document);
+
+$(document).ready(function(){
+  $("select[data-furatto='select']").dropkick();
+});

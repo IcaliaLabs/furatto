@@ -1,187 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 <head>
 <meta charset=utf-8 />
 <title>Furatto :: Buttons</title>
 <link rel="stylesheet" href="assets/css/normalize.css" />
 <link rel="stylesheet" href="assets/css/furatto.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/img/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 </head>
-<body>
-<div class="navbar inverse-navbar navbar-fixed-top navbar-alpha">
-  <div class="navbar-inner">
-    <div class="container">
-      <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-      <div class="nav-collapse collapse">
-        <nav id="menu">
-          <ul class="nav">
-            <li><a class="brand" href="index.html">Furatto</a></li>
-            <li class="active"><a href="buttons.html">Buttons</a></li>
-            <li class=""><a href="images.html">Images</a></li>
-            <li class=""><a href="tables.html">Tables</a></li>
-            <li class=""><a href="base.html">Base</a></li>
-            <li class=""><a href="grid.html">Grid</a></li>
-            <li class=""><a href="forms.html">Forms</a></li>
-            <li class=""><a href="components.html">Components</a></li>
-            <li class=""><a href="javascript.html">Javascript</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+<body class="">
+
+<div class="panels ">
+  <div class="panel panel-inverse panel-left docs-panel">
   </div>
 </div>
 
-<div class="main-container">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="furatto-block">
-        <div class="furatto-large-header">
-          <div class="furatto-large-container">
-            <h1 class="large-header">Buttons</h1>
-            <p class="motto">
-            A collection of sleek buttons
-            </p>
-            <hr/>
-          </div>
+<div class="panel-content ">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner docs-navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav docs-navbar-menu">
+              <li><a class="brand" href="index.html">Furatto</a></li>
+              <li class=""><a href="getting_started.html">Getting Started</a></li>
+              <li class=""><a href="docs.html">Docs</a></li>
+              <li class=""><a href="javascript.html">Javascript</a></li>
+              <li class=""><a href="components.html">Components</a></li>
+              <li class=""><a href="add_ons.html">Add-ons</a></li>
+              <li class=""><a href="examples.html">Examples</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-center">
-    <div class="row-fluid">
-      <h2>Default buttons</h2>
-      <p>It is really simply to create a button, just the .btn class to any <span class="code html">&lt;a&gt;</span> or <span class="code html">&lt;button&gt;</span> element.</p>
-      <a href="javascript:void(0)" class="btn">Default button</a>
-      <pre data-language="html">
-         <code>
-            <a href="javascript:void(0)" class="btn">Default button</a>
-         </code>
-      </pre>
-      <button href="javascript:void(0)" class="btn">Default button</button>
-      <pre data-language="html">
-         <code>
-            <button href="javascript:void(0)" class="btn">Default button</button>
-         </code>
-      </pre>
-      <br />
-      <h2>Disable buttons</h2>
-      <p>You can mark a button as disabled just by adding the 'disabled' class</p>
-      <a href="javascript:void(0)" class="btn disabled">Default button</a>
-      <pre data-language="html">
-         <code>
-            <a href="javascript:void(0)" class="btn disabled">Default button</a>
-         </code>
-      </pre>
-      <button href="javascript:void(0)" class="btn disabled">Default button</button>
-      <pre data-language="html">
-         <code>
-            <button href="javascript:void(0)" class="btn disabled">Default button</button>
-         </code>
-      </pre>
-      <br />
-      <h2>Primary buttons</h2>
-      <p>This is the main button for primary actions across the website, just add the 'btn-primary' class</p>
-      <a href="javascript:void(0)" class="btn btn-primary">Primary button</a>
-      <pre data-language="html">
-         <code>
-            <a href="javascript:void(0)" class="btn btn-primary">Primary button</a>
-         </code>
-      </pre>
-      <button href="javascript:void(0)" class="btn btn-primary">Primary button</button>
-      <pre data-language="html">
-         <code>
-            <button href="javascript:void(0)" class="btn btn-primary">Primary button</button>
-         </code>
-      </pre>
-      <br />
-      <h2>Colorful buttons</h2>
-      <p>It is easy to switch between button colors</p>
-      <a href="javascript:void(0)" class="btn btn-success">Button</a>
-      <a href="javascript:void(0)" class="btn btn-danger">Button</a>
-      <a href="javascript:void(0)" class="btn btn-warning">Button</a>
-      <a href="javascript:void(0)" class="btn btn-inverse">Button</a>
-      <a href="javascript:void(0)" class="btn btn-info">Button</a>
-      <a href="javascript:void(0)" class="btn btn-funky">Button</a>
-      <pre data-language="html">
-         <code>
-           <a href="javascript:void(0)" class="btn btn-success">Button</a>
-           <a href="javascript:void(0)" class="btn btn-danger">Button</a>
-           <a href="javascript:void(0)" class="btn btn-warning">Button</a>
-           <a href="javascript:void(0)" class="btn btn-inverse">Button</a>
-           <a href="javascript:void(0)" class="btn btn-info">Button</a>
-           <a href="javascript:void(0)" class="btn btn-funky">Button</a>
-         </code>
-      </pre>       
-      <br />
-      <h2>Sizing buttons</h2>
-      <p>Furatto comes with 4 different button sizes for you to play around...</p>
-      <a href="javascript:void(0)" class="btn btn-primary btn-mini">Button</a>
-      <a href="javascript:void(0)" class="btn btn-primary btn-small">Button</a>
-      <a href="javascript:void(0)" class="btn btn-primary btn-large">Button</a>
-      <a href="javascript:void(0)" class="btn btn-primary btn-xlarge">Button</a>
-      <pre data-language="html">
-         <code>
-           <a href="javascript:void(0)" class="btn btn-primary btn-mini">Button</a>
-           <a href="javascript:void(0)" class="btn btn-primary btn-small">Button</a>
-           <a href="javascript:void(0)" class="btn btn-primary btn-large">Button</a>
-           <a href="javascript:void(0)" class="btn btn-primary btn-xlarge">Button</a>
-         </code>
-      </pre>
-      <br />
-      <h2>Block buttons</h2>
-      <a href="javascript:void(0)" class="btn btn-primary btn-block">Button</a>
-      <pre data-language="html">
-         <code>
-          <a href="javascript:void(0)" class="btn btn-primary btn-block">Button</a>
-         </code>
-      </pre>
-      <br />
-      <h2>Buttons with icons</h2>
-      <a href="javascript:void(0)" class="btn btn-primary">
-        <i class="icon-shopping-cart icon-white"></i>
-        Checkout
-      </a>
-      <a href="javascript:void(0)" class="btn btn-success btn-large">
-        <i class="icon-cog icon-white"></i>
-        Settings
-      </a>
-      <pre data-language="html">
-         <code>
-           <a href="javascript:void(0)" class="btn btn-primary">
-             <i class="icon-shopping-cart icon-white"></i>
-             Checkout
-           </a>
-           <a href="javascript:void(0)" class="btn btn-success btn-large">
-             <i class="icon-cog icon-white"></i>
-             Settings
-           </a>
-         </code>
+  <div class="row">
+    <div class="section-jumbo-container">
+      <h1 class="jumbo-header">Buttons</h1> 
+      <p class="motto">
+        A collection of sleek buttons
+      </p>
     </div>
   </div>
-</div>
-
-
-<div class="footer">
-  <div class="footer-wrapper">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="span6">
-            <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="link">Apache License v2.0</a></p>
-          </div>
-          <div class="span6">
-            <ul class="hrz-nav pull-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="assets/furatto.zip">Download</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
-              <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
-            </ul>
-          </div>
-        </div>      
+  
+  <div class="main-container">
+    <div class="container-center">
+  <div class="row">
+    <div class="col-3">
+      <ul class="nav nav-bordered">
+        <li class="nav-header">Item one</li>
+        <li><a href="#">Item one</a></li>
+        <li> 
+          <a href="#" data-toggle="nav">Toggle</a>
+          <ul>
+            <li><a href="#">Item one</a></li>
+            <li><a href="#">Item one</a></li>
+            <li><a href="#">Item one</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" data-toggle="nav">Toggle</a>
+          <ul>
+            <li><a href="#">Item one</a></li>
+            <li><a href="#">Item one</a></li>
+            <li><a href="#">Item one</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Item one</a></li>
+        <li><a href="#">Item one</a></li>
+        <li class="nav-divider"></li>
+        <li><a href="#">Item one</a></li>
+        <li><a href="#">Item one</a></li>
+        <li><a href="#">Item one</a></li>
+        <li><a href="#">Item one</a></li>
+      </ul>
+      <a href="assets/furatto.zip" class="btn btn-info btn-block btn-large"><i class="icon-download-alt"></i> Download Furatto</a>
+    </div>
+    <div class="col-9">
+      CONTENT
+    </div>
+  </div>
+      <div class="row">
+        <h2>Default buttons</h2>
+        <p>It is really simply to create a button, just the add <span class="code html">btn</span> class name to any <span class="code html">&lt;a&gt;</span> or <span class="code html">&lt;button&gt;</span> element.</p>
+        <a href="javascript:void(0)" class="btn">Default button</a>
+        <button href="javascript:void(0)" class="btn">Default button</button>
+        <pre data-language="html">
+  <code>
+  <a href="javascript:void(0)" class="btn">Default button</a>
+  <button href="javascript:void(0)" class="btn">Default button</button>
+  </code>
+        </pre>
+        <br />
+        <h2>Disable buttons</h2>
+        <p>You can mark a button as disabled just by adding the <span class="code html">disabled</span> class name.</p>
+        <a href="javascript:void(0)" class="btn disabled">Default button</a>
+        <button href="javascript:void(0)" class="btn disabled">Default button</button>
+        <pre data-language="html">
+  <code>
+  <a href="javascript:void(0)" class="btn disabled">Default button</a>
+  <button href="javascript:void(0)" class="btn disabled">Default button</button>
+  </code>
+        </pre>
+        <br />
+        <h2>Primary buttons</h2>
+        <p>This is the main button for primary actions across the website, just add the <span class="code html">btn-primary</span> class name.</p>
+        <a href="javascript:void(0)" class="btn btn-primary">Primary button</a>
+        <button href="javascript:void(0)" class="btn btn-primary">Primary button</button>
+        <pre data-language="html">
+  <code>
+  <a href="javascript:void(0)" class="btn btn-primary">Primary button</a>
+  <button href="javascript:void(0)" class="btn btn-primary">Primary button</button>
+  </code>
+        </pre>
+        <br />
+        <h2>Colorful buttons</h2>
+        <p>It is easy to switch between button colors.</p>
+        <a href="javascript:void(0)" class="btn btn-primary">Button</a>
+        <a href="javascript:void(0)" class="btn btn-success">Button</a>
+        <a href="javascript:void(0)" class="btn btn-danger">Button</a>
+        <a href="javascript:void(0)" class="btn btn-warning">Button</a>
+        <a href="javascript:void(0)" class="btn btn-info">Button</a>
+        <a href="javascript:void(0)" class="btn btn-funky">Button</a>
+        <a href="javascript:void(0)" class="btn btn-highlight">Button</a>
+        <pre data-language="html">
+  <code>
+  <a href="javascript:void(0)" class="btn btn-primary">Button</a>
+  <a href="javascript:void(0)" class="btn btn-success">Button</a>
+  <a href="javascript:void(0)" class="btn btn-danger">Button</a>
+  <a href="javascript:void(0)" class="btn btn-warning">Button</a>
+  <a href="javascript:void(0)" class="btn btn-info">Button</a>
+  <a href="javascript:void(0)" class="btn btn-funky">Button</a>
+  <a href="javascript:void(0)" class="btn btn-highlight">Button</a>
+  </code>
+        </pre>       
+        <br />
+        <h2>Sizing buttons</h2>
+        <p>Furatto comes with 5 different button sizes for you to play around...</p>
+        <a href="javascript:void(0)" class="btn btn-primary btn-mini">Button</a>
+        <a href="javascript:void(0)" class="btn btn-primary btn-small">Button</a>
+        <a href="javascript:void(0)" class="btn btn-primary btn-large">Button</a>
+        <a href="javascript:void(0)" class="btn btn-primary btn-xlarge">Button</a>
+        <a href="javascript:void(0)" class="btn btn-primary btn-xxlarge">Button</a>
+        <pre data-language="html">
+  <code>
+  <a href="javascript:void(0)" class="btn btn-primary btn-mini">Button</a>
+  <a href="javascript:void(0)" class="btn btn-primary btn-small">Button</a>
+  <a href="javascript:void(0)" class="btn btn-primary btn-large">Button</a>
+  <a href="javascript:void(0)" class="btn btn-primary btn-xlarge">Button</a>
+  <a href="javascript:void(0)" class="btn btn-primary btn-xxlarge">Button</a>
+  </code>
+        </pre>
+        <br />
+        <h2>Block buttons</h2>
+        <a href="javascript:void(0)" class="btn btn-primary btn-block">Button</a>
+        <pre data-language="html">
+  <code>
+  <a href="javascript:void(0)" class="btn btn-primary btn-block">Button</a>
+  </code>
+        </pre>
+        <br />
+        <h2>Buttons with icons</h2>
+        <a href="javascript:void(0)" class="btn btn-info">
+          <i class="icon-shopping-cart icon-white"></i>
+          Checkout
+        </a>
+        <a href="javascript:void(0)" class="btn btn-primary btn-large">
+          <i class="icon-cog icon-white"></i>
+          Settings
+        </a>
+        <pre data-language="html">
+  <code>
+  <a href="javascript:void(0)" class="btn btn-info">
+    <i class="icon-shopping-cart icon-white"></i>
+  Checkout
+  </a>
+  <a href="javascript:void(0)" class="btn btn-primary btn-large">
+    <i class="icon-cog icon-white"></i>
+  Settings
+  </a>
+  </code>
       </div>
     </div>
   </div>
+  
+  <div class="row footer ">
+  <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="docs-license">Apache License v2.0</a></p>
+  <ul class="inline">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="assets/furatto.zip">Download</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+    <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+  </ul>
 </div>
+
+</div>
+
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -195,22 +212,8 @@
   </script>
 
 <script src="assets/js/jquery.js"></script>
-<script src="assets/js/jpanel.js"></script>
-<script src="assets/js/jquery.dropkick-1.0.0.js"></script>
-<script src="assets/js/jquery.icheck.js"></script>
-<script src="assets/js/rainbow-custom.min.js"></script>
-<script src="assets/js/tooltip.js"></script>
-<script src="assets/js/jquery.tagsinput.js"></script>
-<script src="assets/js/picker.js"></script>
-<script src="assets/js/picker.date.js"></script>
-<script src="assets/js/picker.time.js"></script>
-<script src="assets/js/legacy.js"></script>
-<script src="assets/js/jquery.toolbar.js"></script>
-<script src="assets/js/jquery.avgrund.js"></script>
-<script src="assets/js/responsiveslides.js"></script>
-<script src="assets/js/responsive-tables.js"></script>
-<script src="assets/js/dropdown.js"></script>
-<script src="assets/js/manifest.js"></script>
-
+<script src="assets/js/furatto.min.js"></script>
+<script src="assets/js/furatto-demo.js"></script>
+<!--<script src="assets/js/shell-rainbow.min.js"></script>-->
 </body>
 </html>

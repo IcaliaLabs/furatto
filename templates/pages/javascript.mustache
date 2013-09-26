@@ -1,326 +1,583 @@
-<div class="main-container">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="furatto-block">
-        <div class="furatto-large-header">
-          <div class="furatto-large-container">
-            <h1 class="large-header">Javascript</h1>
-            <p class="motto">
-            A bunch of jquery plugins for a better life.
-            </p>
-            <hr/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-center">
-    <div class="furatto-block">
-      <h3 class="light">DatePicker</h3>
-      <p>A mobile-friendly, responsive and lightweight jquery date input picker. Based on <a href="http://amsul.ca/pickadate.js/index.htm">Pickadate.js</a></p>
-      <input type="text" data-datepicker />
-      <pre data-language="html">
-         <code>
-            &lt;input type="text" data-datepicker /&gt;
-          </code>
-      </pre>
-
-      <p>You can choose to have the select for years and months on the date picker by adding the 'select-years' and 'select-months' data attributes </p>
-      <input type="text" name="" id="" value="" data-datepicker data-select-years='true' data-select-months='true' />
-      <pre data-language="html">
-         <code>
-            &lt;input type="text" name="" id="" value="" data-datepicker data-select-years='true' data-select-months='true'/&gt;
-          </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Toolbars</h3>
-      <p>This jquery plugin from <a href="http://paulkinzett.github.io/toolbar/">@paul_kinzett</a> allows you to quickly create tooltip style toolbars for use in web applications and websites.</p>
-      <p>By default the position of the toolbar is top, but you can customize it by adding a 'position' data attribute.</p>
-      <a href="javascript:void(0)" class="btn btn-dark" data-toolbar data-position="top" data-content="#user-toolbar-options-top">
-        <i class="icon-cog icon-white nomargin"></i>
-      </a>
-      <div id="user-toolbar-options-top" style="display:none">
-        <a href="#"><i class="icon-user icon-white"></i></a>
-        <a href="#"><i class="icon-star icon-white"></i></a>
-        <a href="#"><i class="icon-edit icon-white"></i></a>
-        <a href="#"><i class="icon-trash icon-white"></i></a>
-        <a href="#"><i class="icon-map-marker icon-white"></i></a>
-      </div>
-      <a href="javascript:void(0)" class="btn btn-dark" data-toolbar data-position="bottom" data-content="#user-toolbar-options-bottom">
-        <i class="icon-cog icon-white nomargin"></i>
-      </a>
-      <div id="user-toolbar-options-bottom" style="display:none">
-        <a href="#"><i class="icon-user icon-white"></i></a>
-        <a href="#"><i class="icon-star icon-white"></i></a>
-        <a href="#"><i class="icon-edit icon-white"></i></a>
-        <a href="#"><i class="icon-trash icon-white"></i></a>
-        <a href="#"><i class="icon-map-marker icon-white"></i></a>
-      </div>
-      <a href="javascript:void(0)" class="btn btn-dark" data-toolbar data-position="left" data-content="#user-toolbar-options-left">
-        <i class="icon-cog icon-white nomargin"></i>
-      </a>
-      <div id="user-toolbar-options-left" style="display:none">
-        <a href="#"><i class="icon-user icon-white"></i></a>
-        <a href="#"><i class="icon-star icon-white"></i></a>
-        <a href="#"><i class="icon-edit icon-white"></i></a>
-        <a href="#"><i class="icon-trash icon-white"></i></a>
-        <a href="#"><i class="icon-map-marker icon-white"></i></a>
-      </div>
-      <a href="javascript:void(0)" class="btn btn-dark" data-toolbar data-position="right" data-content="#user-toolbar-options-right">
-        <i class="icon-cog icon-white nomargin"></i>
-      </a>
-      <div id="user-toolbar-options-right" style="display:none">
-        <a href="#"><i class="icon-user icon-white"></i></a>
-        <a href="#"><i class="icon-star icon-white"></i></a>
-        <a href="#"><i class="icon-edit icon-white"></i></a>
-        <a href="#"><i class="icon-trash icon-white"></i></a>
-        <a href="#"><i class="icon-map-marker icon-white"></i></a>
-      </div>
-      <pre data-language="html">
-         <code>
-           <a href="javascript:void(0)" class="btn btn-dark" data-toolbar data-position="right" data-content="#user-toolbar-options-right">
-             <i class="icon-cog icon-white nomargin"></i>
-           </a>
-           <div id="user-toolbar-options-right" style="display:none">
-             <a href="#"><i class="icon-user icon-white"></i></a>
-             <a href="#"><i class="icon-star icon-white"></i></a>
-             <a href="#"><i class="icon-edit icon-white"></i></a>
-             <a href="#"><i class="icon-trash icon-white"></i></a>
-             <a href="#"><i class="icon-map-marker icon-white"></i></a>
-           </div>
-        </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Modal</h3>
-      <p>Furatto comes with a great and sleek modal based on <a href="http://labs.voronianski.com/jquery.avgrund.js/">Avgrund</a> jquery plugin.</p>
-      <a href="javascript:void(0)" class="btn btn-primary btn-large" data-target="#myModal" data-toggle="modal">Show it</a>
-      <div id="myModal" class="hide">
-        <div class="modal-header">
-          <h4 class="header">Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="modal-footer">
-          <a href="javascript:void(0)" class="btn btn-primary pull-right">Save</a>
-          <a href="javascript:void(0)" class="btn pull-right">Save</a>
-        </div>
-      </div>
-      <pre data-language="html">
-        <code>
-         <div id="myModal" class="hide">
-           <div class="modal-header">
-             <h4 class="header">Header</h4>
-           </div>
-           <div class="modal-body">
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-           </div>
-           <div class="modal-footer">
-             <a href="javascript:void(0)" class="btn btn-primary pull-right">Save</a>
-             <a href="javascript:void(0)" class="btn pull-right">Save</a>
-           </div>
-         </div>
-        </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Carousel</h3>
-      <p>The slideshow below shows the generic cycling functionality through images just like in a carousel.</p>
-      <div class="row-fluid">
-        <div class="rslides_container center">
-          <ul class="rslides" id="slider1">
-            <li>
-            <img src="http://lorempixel.com/800/500/nightlife/1" alt="">
-            <div class="caption">
-              <h3 class="caption-header">Header</h3>
-              <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            </li>
-            <li>
-            <img src="http://lorempixel.com/800/500/nightlife/2" alt="">
-            <div class="caption">
-              <h3 class="caption-header">Header</h3>
-              <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            </li>
-            <li>
-            <img src="http://lorempixel.com/800/500/nightlife/3" alt="">
-            <div class="caption">
-              <h3 class="caption-header">Header</h3>
-              <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            </li>
-            <li>
-            <img src="http://lorempixel.com/800/500/nightlife/4" alt="">
-            <div class="caption">
-              <h3 class="caption-header">Header</h3>
-              <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            </li>
-            <li>
-            <img src="http://lorempixel.com/800/500/nightlife/5" alt="">
-            <div class="caption">
-              <h3 class="caption-header">Header</h3>
-              <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <pre data-language="html">
-        <code>
-          <div class="row-fluid">
-            <div class="rslides_container center">
-              &lt;ul class="rslides" id="slider1">
-                <li>
-                <img src="http://lorempixel.com/800/500/nightlife/1" alt="">
-                <div class="caption">
-                  <h3 class="caption-header">Header</h3>
-                  <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                </li>
-                <li>
-                <img src="http://lorempixel.com/800/500/nightlife/2" alt="">
-                <div class="caption">
-                  <h3 class="caption-header">Header</h3>
-                  <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                </li>
-                <li>
-                <img src="http://lorempixel.com/800/500/nightlife/3" alt="">
-                <div class="caption">
-                  <h3 class="caption-header">Header</h3>
-                  <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                </li>
-                <li>
-                <img src="http://lorempixel.com/800/500/nightlife/4" alt="">
-                <div class="caption">
-                  <h3 class="caption-header">Header</h3>
-                  <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                </li>
-                <li>
-                <img src="http://lorempixel.com/800/500/nightlife/5" alt="">
-                <div class="caption">
-                  <h3 class="caption-header">Header</h3>
-                  <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </code>
-      </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Dropdown Menu</h3>
-      <p>Furatto comes with a beautiful dropdown menu for grouping sub-navigations on the navbar, for now...</p>
-      <!-- The drop down menu -->
-      <div class="navbar">
-        <div class="navbar-inner">
-          <div class="container">
-            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-            <div class="nav-collapse collapse">
-              <nav id="menu">
-                <ul class="nav">
-                  <li><a class="brand" href="index.html">Furatto</a></li>
-                </ul>
-                <ul class="nav pull-right">
-                  <li class="divider-vertical"></li>
-                  <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
-                  <ul class="dropdown-menu bottom-up pull-right">
-                    <li><a href="#">Graphic Design</a></li>
-                    <li><a href="#">Software</a></li>
-                    <li><a href="#">Industrial Design</a></li>
-                    <li><a href="#">Business Planning</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Development and Research</a></li>
-                  </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Close DropDown menu -->
-    <pre data-language="html">
-    <code>
-      <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-              <div class="nav-collapse collapse">
-                <nav id="menu">
-                  <ul class="nav">
-                    <li><a class="brand" href="index.html">Furatto</a></li>
-                    <li class="active"><a href="javascript.html">Javascript</a></li>
-                  </ul>
-                  <ul class="nav pull-right">
-                    <li class="divider-vertical"></li>
-                    <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<b class="caret bottom-up"></b></a>
-                    <ul class="dropdown-menu bottom-up pull-right">
-                      <li><a href="#">Graphic Design</a></li>
-                      <li><a href="#">Software</a></li>
-                      <li><a href="#">Industrial Design</a></li>
-                      <li><a href="#">Business Planning</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Development and Research</a></li>
-                    </ul>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-    </code>
-    </pre>
-    </div>
-    <div class="furatto-block">
-      <h3 class="light">Dropdown Forms</h3>
-      <p>Furatto makes it easy to integrate a form into the navbar, for example a Sign In form...</p>
-      <span class="label label-inverse">Watch out!</span>
-      <p>The only gotcha here is that insted of adding a <span class="code">ul</span> element with class name <span class="code">dropdown-menu</span>, you just have to change it to a <span class="code">div</span> element.</p>
-      <!-- The drop down menu -->
-      <pre data-language="html">
-        <code>
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="container">
-                <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-                <div class="nav-collapse collapse">
-                  <nav id="menu">
-                    ...
-                    <ul class="nav pull-right">
-                      <li class="divider-vertical"></li>
-                      <li class="dropdown">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Sign in<b class="caret bottom-up"></b></a>
-                      <div class="dropdown-menu bottom-up pull-right">
-                        <form action="#" method="post" accept-charset="UTF-8">
-                          <input id="user_username" type="text" placeholder="username" />
-                          <input id="user_password" type="password" placeholder="***********" />
-                          <input type="checkbox" id="checkbox1" data-furatto='checkbox' data-color="blue">
-                          <label for="checkbox1" class="checkbox-label inline">Remember Me</label>
-                          <input class="btn btn-primary btn-block" type="submit" name="commit" value="Sign In" />
-                        </form>
-                      </div>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-        </code>
-      </pre>
-      <!-- Close DropDown menu -->
-    </div>
+<div class="row">
+  <div class="section-jumbo-container">
+    <h1 class="jumbo-header">Javascript</h1> 
+    <p class="motto">
+      A bunch of jquery plugins for a better life.
+    </p>
   </div>
 </div>
 
+<div class="container-center">
+  <div class="row">
+    <div class="col-3">
+      <!-- Navigation sidebar -->
+      <div class="docs-sidebar">
+        <ul class="nav nav-bordered">
+          <li><a href="#datepicker">Datepicker</a></li>
+          <li><a href="#toolbars">Toolbars</a></li>
+          <li><a href="#modal">Modal</a></li>
+          <li><a href="#carousel">Carousel</a></li>
+          <li><a href="#tooltips">Tooltips</a></li>
+        </ul>
+      </div>
+      <!-- Navigation sidebar -->
+    </div>
+    <div class="col-9">
+      <!-- Datepicker section -->
+      <div id="datepicker"> 
+        <h2 class="header">Datepicker</h2>
+        <h4 class="light">A mobile-friendly, responsive and lightweight jquery date input picker. Based on <a href="http://amsul.ca/pickadate.js/" target="_blank">Pickadate.js</a></h4>
+        <div class="docs-example">
+          <input type="text" data-datepicker /> 
+        </div>
+        <div class="docs-code hidden-xs">
+           <pre data-language="html">
+              <code>
+&lt;input type="text" data-datepicker /&gt;
+              </code>
+           </pre>
+        </div>
+        <h3>Usage</h3>
+        <h4>Via data attributes</h4>
+        <p>You can activate the date picker without writing any Javascript. Add the <span class="code">data-datepicker</span> to a text input.</p>
+        <pre data-language="html" class="hidden-xs">
+          <code>
+&lt;input type="text" data-datepicker /&gt;
+          </code>
+        </pre>
+        <h4>Via Javascript</h4>
+        <p>You can call the date picker by attaching the pickadate function to the jQuery element.</p>
+        <pre data-language="javascript" class="hidden-xs">
+          <code>
+$('#datePicker').pickadate(options)
+          </code>
+        </pre>
+        <blockquote>
+          <h4>Heads up!</h4>  
+          <p>Furatto covers some of this plugin features, but if you need a higher level of customization, refer to the official <a href="http://amsul.ca/pickadate.js/" target="_blank">site</a>.</p>
+        </blockquote>
+        <h4>Options</h4>
+        <p>There are several options you can pass via data attributes to the date picker plugin, just by appending the option name to <span class="code">data-</span>, as in <span class="code">data-format</span>.</p>
+        <table class="table table-bordered table-striped responsive">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>format</td>
+              <td>string</td>
+              <td>"d mmmm, yyyy"</td>
+              <td>This options set the format in which the date is displayed in the date picker, such as <span class="code">Urray!, you selected: d mmmm, yyyy</span></td>
+            </tr>
+            <tr>
+              <td>formatSubmit</td>
+              <td>string</td>
+              <td>undefined</td>
+              <td>This options sets the actual value to be submitted through the form.</td>
+            </tr>
+            <tr>
+              <td>select-years</td>
+              <td>boolean</td>
+              <td>false</td>
+              <td>With this option you should be able to select the year through a select element which is render on top of the picker.</td>
+            </tr>
+            <tr>
+              <td>select-months</td>
+              <td>boolean</td>
+              <td>false</td>
+              <td>With this option you should be able to select the months through a select element which is render on top of the picker.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Date formats</h4>
+        <p>According to the <a href="http://amsul.ca/pickadate.js/date.htm" target="_blank">piackdate.js</a> plugin the following rules can be use to format any date.</p>
+        <table class="table responsive table-bordered table-striped">
+           <thead>
+             <tr>
+               <th>Rule</th>
+               <th>Description</th>
+               <th>Result</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td><span class="code">d</span></td>
+               <td>Date of the month</td>
+               <td>1 - 31</td>
+             </tr>
+             <tr>
+               <td><span class="code">dd</span></td>
+               <td>Date of the month with a leading zero</td>
+               <td>01 - 31</td>
+             </tr>
+             <tr>
+               <td><span class="code">ddd</span></td>
+               <td>Day of the week in short form</td>
+               <td>Sun - Sat</td>
+             </tr>
+             <tr>
+               <td><span class="code">dddd</span></td>
+               <td>Date of the week in full form</td>
+               <td>Sunday - Saturday</td>
+             </tr>
+             <tr>
+               <td><span class="code">m</span></td>
+               <td>Month of the year</td>
+               <td>1 - 12</td>
+             </tr>
+             <tr>
+               <td><span class="code">mm</span></td>
+               <td>Month of the year with a leading zero</td>
+               <td>01 - 12</td>
+             </tr>
+             <tr>
+               <td><span class="code">mmm</span></td>
+               <td>Month name in short form</td>
+               <td>Jan - Dec</td>
+             </tr>
+             <tr>
+               <td><span class="code">mmmm</span></td>
+               <td>Month name in full form</td>
+               <td>January - December</td>
+             </tr>
+             <tr>
+               <td><span class="code">yy</span></td>
+               <td>Year in short form</td>
+               <td>00 - 99</td>
+             </tr>
+             <tr>
+               <td><span class="code">yyyy</span></td>
+               <td>Year in full form</td>
+               <td>2000 - 2999</td>
+             </tr>
+           </tbody>
+        </table>
+      </div>
+      <!-- Datepicker section -->
+      <hr />
+      <!-- Toolbars section -->
+      <div class="docs-section" id="toolbars">
+       <h2 class="header">Toolbars</h2>
+       <h4 class="light">This jquery plugin from <a href="https://twitter.com/paul_kinzett">@paul_kinzett</a> allows you to quickly create tooltip style toolbars for use in web applications and websites.</h4>
+       <p>By default the position of the toolbar is top, but you can customize it by adding a 'position' data attribute.</p>
+        <div class="docs-example">
+          <a href="javascript:void(0)" class="btn btn-dark" data-furatto="toolbar" data-position="top" data-content="#user-toolbar-options-top">
+            <i class="icon-cog icon-white nomargin"></i>
+          </a>
+          <div id="user-toolbar-options-top" style="display:none">
+            <a href="#"><i class="icon-user icon-white"></i></a>
+            <a href="#"><i class="icon-star icon-white"></i></a>
+            <a href="#"><i class="icon-edit icon-white"></i></a>
+            <a href="#"><i class="icon-trash icon-white"></i></a>
+            <a href="#"><i class="icon-map-marker icon-white"></i></a>
+          </div>
+        </div>
+        <div class="docs-code hidden-xs">
+          <pre data-language="html">
+             <code>
+<a href="javascript:void(0)" class="btn btn-dark" data-furatto="toolbar" data-position="top" data-content="#user-toolbar-options-top">
+  <i class="icon-cog icon-white nomargin"></i>
+</a>
+<div id="user-toolbar-options-top" style="display:none">
+  <a href="#"><i class="icon-user icon-white"></i></a>
+  <a href="#"><i class="icon-star icon-white"></i></a>
+  <a href="#"><i class="icon-edit icon-white"></i></a>
+  <a href="#"><i class="icon-trash icon-white"></i></a>
+  <a href="#"><i class="icon-map-marker icon-white"></i></a>
+</div>
+            </code>
+          </pre>
+        </div>
+        <h3>Usage</h3>
+        <h4>Via data attributes</h4>
+        <p>Add the <span class="code">data-furatto="toolbar"</span> to a link. You have add a a <span class="code">data-content="#idToToolbarContent"</span> for the toolbar pick up the right anchors.</p>
+        <pre data-language="html" class="hidden-xs">
+           <code>
+<a href="javascript:void(0)" class="btn btn-dark" data-furatto="toolbar" data-position="top" data-content="#user-toolbar-options-top">
+  <i class="icon-cog icon-white nomargin"></i>
+</a>
+           </code>
+        </pre>
+        <blockquote>
+          <h4>Heads up!</h4>  
+          <p>Furatto covers the basics, which should be enough to get up and running, but you are free to checkout the official site <a href="http://paulkinzett.github.io/toolbar/" target="_blank">documentation</a>.</p>
+        </blockquote>
+        <h4>Options</h4>
+        <p>There are several options you can pass via data attributes to the date picker plugin, just by appending the option name to <span class="code">data-</span>, as in <span class="code">data-position</span>.</p>
+        <table class="table table-bordered table-striped responsive">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>   
+          <tbody>
+            <tr>
+              <td>position</td>
+              <td>string</td>
+              <td>'top'</td>
+              <td>Sets the position for the toolbar. You can use <span class="code">top</span>, <span class="code">bottom</span>,<span class="code">left</span> and <span class="code">right</span></td>
+            </tr>
+            <tr>
+              <td>content</td>
+              <td>string</td>
+              <td>null</td>
+              <td>Id of the links container to display on the toolbar, it must have the <span class="code">#</span> symbol next to the id name, as in <span class="code">#idOfToolbarContent</span>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Toolbars section -->
+      <hr />
+      <!-- Modal section -->
+      <div class="docs-section" id="modal">
+         <h2 class="header">Modal</h2>
+         <h4 class="light">Furatto modal was rebuilt and now comes better than ever, it is truly responsive and all transitions are managed via hardware acceleration.</h4>
+         <div class="docs-example">
+           <button class="btn btn-info btn-large" data-furatto="modal" data-target="#modal-1" data-transition="8" data-theme="info">Launch modal</button>
+            <div class="modal" id="modal-1">
+              <div class="modal-content">
+                <h3 class="modal-header">Modal Dialog</h3>
+                <div>
+                  <p>This is a modal window. You can do the following things with it:</p>
+                  <ul>
+                    <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+                    <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+                    <li><strong>Close:</strong> click on the button below to close the modal.</li>
+                  </ul>
+                  <button class="modal-close btn btn-info btn-alpha btn-large">Close me!</button>
+                </div>
+              </div>
+            </div>
+         </div>
+         <div class="docs-code hidden-xs">
+          <pre data-language="html">
+             <code>
+&lt;button class="btn btn-info btn-large" data-furatto="modal" data-target="#modal-1" data-transition="1"&gt;Launch modal&lt;/button&gt;
+&lt;div class="odal" id="modal-1"&gt;
+  <div class="modal-content">
+    <h3>Modal Dialog</h3>
+    <div>
+      <p>This is a modal window. You can do the following things with it:</p>
+      <ul>
+        <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+        <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+        <li><strong>Close:</strong> click on the button below to close the modal.</li>
+      </ul>
+      <button class="modal-close btn btn-danger">Close me!</button>
+    </div>
+  </div>
+&lt;/div&gt;
+            </code>
+          </pre>
+         </div>
+         <h3>Usage</h3>
+         <h4>Via data attributes</h4>
+         <p>Add the <span class="code">data-furatto="modal"</span> attribute to a button or link. It is necessary that you add a <span class="code">data-target="#myModal"</span> attribute poiting to the modal.</p>
+          <pre data-language="html" class="hidden-xs">
+             <code>
+&lt;button class="btn btn-info btn-large" data-furatto="modal" data-target="#modal-1" data-transition="1"&gt;Launch modal&lt;/button&gt;
+            </code>
+          </pre>
+          <h4>Via javascript</h4>
+          <p>You can show or hide a modal by calling the <span class="code">show</span> or the <span class="code">hide</span> function, like so:</p>
+          <pre data-language="javascript" class="hidden-xs">
+             <code>
+$('#modal').modal('show');
+$('#modal').modal('hide');
+            </code>
+          </pre>
+          <h3>Options</h3>
+          <p>There are several options you can pass via data attributes to the modal plugin, just by appending the option name to <span class="code">data-</span>, as in <span class="code">data-target</span>.</p>
+          <table class="table table-bordered table-striped responsive">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>   
+            <tbody>
+              <tr>
+                <td>target</td>
+                <td>string</td>
+                <td>You should set it up.</td>
+                <td>Id of the modal with a <span class="code">#</span> symbol appended</td>
+              </tr>
+              <tr>
+                <td>transition</td>
+                <td>number</td>
+                <td>"1"</td>
+                <td>It's the transition you want in the modal, goes from <span class="code">1</span> to <span class="code">16</span></td>
+              </tr>
+              <tr>
+                <td>theme</td>
+                <td>string</td>
+                <td>"default"</td>
+                <td>It is the theme you want to use for the modal, currently Furatto comes with 7 different ones, <span class="code">primary</span>, <span class="code">danger</span>, <span class="code">info</span>, <span class="code">funky</span>, <span class="code">warning</span>, <span class="code">success</span>, <span class="code">inverse</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+      </div>
+      <!-- Modal section -->
+      <hr />
+      <!-- Carousel section -->
+      <div class="docs-section" id="carousel">
+        <h2 class="header">Slider</h2>        
+        <h4 class="light">Furatto comes with a better slider based on the Mobile First principle. It is built on top of <a href="http://www.idangero.us/sliders/swiper/" target="_blank">Swiper</a> by <a href="http://www.idangero.us/" target="_blank">iDangero.us</a>, which is a mobile touch slider & framework with hardware accelerated transitions.</h4>
+        <div class="docs-example">
+          <div class="swiper-container">
+            <a href="#" class="swiper-control left visible-lg">
+              <i class="arrow-left icon-angle-left"></i> 
+            </a>
+            <a href="#" class="swiper-control right visible-lg">
+              <i class="arrow-right icon-angle-right"></i>
+            </a>
+            <div class="swiper-wrapper">
+                <!--First Slide-->
+                <div class="swiper-slide"> 
+                  <!-- Any HTML content of the first slide goes here -->
+                  <img src="assets/img/1.png" alt="" class="img" />
+                  <div class="swiper-caption">
+                     <h3 class="light">Hello World!</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                
+                <!--Second Slide-->
+                <div class="swiper-slide">
+                  <!-- Any HTML content of the second slide goes here -->
+                  <img src="assets/img/2.png" alt="" class="img" />
+                  <div class="swiper-caption">
+                     <h3 class="light">Hello World!</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                
+                <!--Third Slide-->
+                <div class="swiper-slide"> 
+                  <!-- Any HTML content of the third slide goes here -->
+                  <img src="assets/img/3.png" alt="" class="img" />
+                  <div class="swiper-caption">
+                     <h3 class="light">Hello World!</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <!--Third Slide-->
+                <div class="swiper-slide"> 
+                  <!-- Any HTML content of the third slide goes here -->
+                  <img src="assets/img/4.png" alt="" class="img" />
+                  <div class="swiper-caption">
+                     <h3 class="light">Hello World!</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <!--Third Slide-->
+                <div class="swiper-slide"> 
+                  <!-- Any HTML content of the third slide goes here -->
+                  <img src="assets/img/5.png" alt="" class="img" />
+                  <div class="swiper-caption">
+                     <h3 class="light">Hello World!</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <!--Etc..-->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+         </div> 
+        <div class="docs-code hidden-xs">
+          <pre data-language="html">
+             <code>
+&lt;div class="swiper-container"&gt;
+  <!--Clickable arrow controls -->
+  <a href="#" class="swiper-control left visible-lg">
+    <i class="arrow-left icon-angle-left"></i> 
+  </a>
+  <a href="#" class="swiper-control right visible-lg">
+    <i class="arrow-right icon-angle-right"></i>
+  </a>
+  <div class="swiper-wrapper">
+      <!--First Slide-->
+      <div class="swiper-slide"> 
+        <!-- Any HTML content of the first slide goes here -->
+        <img src="assets/img/1.png" alt="" class="img" />
+        <div class="swiper-caption">
+           <h3 class="light">Hello World!</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <!-- Etc..-->
+  </div>
+  <div class="swiper-pagination"></div>
+&lt;/div&gt;
+             </code>
+          </pre>
+        </div>
+       <h3>Usage</h3>
+       <h4>Via data attributes</h4>
+       <p>Currently there is no support for the swiper via data attributes, but don't worry we are working on it. Sorry for any trouble.</p>
+       <h4>Via javascript</h4>
+       <p>You can call the swiper as described in the official plugin site, check it out at: <a href="http://www.idangero.us/sliders/swiper/" target="_blank">Swiper</a>. An initializer is provided by default in the compiled JS version of Furatto, it takes the <span class="code">swiper-container</span> class element, as in the example <a href="#carousel">above</a>.</p>
+       <h4>Options</h4>
+       <p>The default values used to invoke the swiper are described below.</p>
+       <table class="table table-bordered table-striped responsive">
+        <thead>
+           <tr>
+             <th>Name</th>
+             <th>Type</th>
+             <th>Default</th>
+             <th>Description</th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>mode</td>     
+            <td>string</td>     
+            <td>horizontal</td>     
+            <td>Sets the orientation for the swiper.</td>     
+          </tr>
+          <tr>
+            <td>loop</td>     
+            <td>boolean</td>     
+            <td>true</td>     
+            <td>Produces an infinite loop on the swiper.</td>     
+          </tr>
+          <tr>
+            <td>calculateHeight</td>     
+            <td>boolean</td>     
+            <td>true</td>     
+            <td>Swiper will calculate container's height depending on slides content. Useful in repsonsive layout or when you don't know height of your slides.</td>     
+          </tr>
+          <tr>
+            <td>grabCursor</td>     
+            <td>boolean</td>     
+            <td>true</td>     
+            <td>This option may a little improve usability of your swiper users. If true, user will see the "grab" cursor when hover on Swiper.</td>     
+          </tr>
+          <tr>
+            <td>paginationClickable</td>     
+            <td>boolean</td>     
+            <td>true</td>     
+            <td>If true then clicking on pagination button will cause transition to appropriate slide.</td>     
+          </tr>
+          <tr>
+            <td>speed</td>     
+            <td>integer</td>     
+            <td>600</td>     
+            <td>The interval of time the animation is going to take.</td>     
+          </tr>
+        </tbody>
+       </table>
+       <p>The javascript call is provided below:</p>
+       <pre data-language="javascript" class="hidden-xs">
+         <code>
+var swiper = new Swiper('.swiper-container', {
+  pagination: '.swiper-pagination',
+  mode: 'horizontal',
+  loop: true,
+  calculateHeight: true,
+  grabCursor: true,
+  paginationClickable: true,
+  speed: 600
+});
+        </code>
+       </pre>
+      </div>
+      <!-- Carousel section -->
+      <hr />
+      <!-- Tooltips section -->
+       <div id="tooltips" class="docs-section">
+          <h2 class="header">Tooltips</h2>  
+          <h4 class="light">Provide helpful messages through tooltips on icons menus, text hints with Furatto tooltips. Based on the <a href="http://getbootstrap.com/" target="_blank">Boostrap</a> tooltips. Four directions are available.</h4>
+          <div class="docs-example">
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
+             <a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
+          </div>
+          <div class="docs-code hidden-xs">
+             <pre data-language="html">
+               <code>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on bottom">Tooltip on bottom</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on right">Tooltip on right</a>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on left">Tooltip on left</a>
+               </code>
+             </pre>
+          </div>
+          <h3>Usage</h3>
+          <h4>Via data attributes</h4>
+          <p>Add the <span class="code">data-toggle="tooltip"</span> attribute to any element.</p>
+           <pre data-language="html" class="hidden-xs">
+             <code>
+<a href="#" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on top">Tooltip on top</a>
+             </code>
+           </pre>
+          <h4>Via javascript</h4>
+          <p>You can trigger the tooltip plugin via JS like so:</p>
+           <pre data-language="javascript" class="hidden-xs">
+             <code>
+  $('#tooltip').tooltip('show');
+             </code>
+           </pre>
+           <h3>Options</h3>
+           <table class="table table-bordered table-striped responsive">
+             <thead>
+               <tr>
+                 <th>Name</th>
+                 <th>Type</th>
+                 <th>Default</th>
+                 <th>Description</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>placemenet</td>
+                 <td>string</td>
+                 <td>top</td>
+                 <td>Where to display the tooltip, <span class="code">top</span>, <span class="code">bottom</span>, <span class="code">right</span>, <span class="code">left</span>.</td>
+               </tr>
+               <tr>
+                 <td>original-title</td>
+                 <td>string</td>
+                 <td>undefined</td>
+                 <td>Especifies the text to be displayed on the tooltip.</td>
+               </tr>
+             </tbody>
+           </table>
+          <h3>Methods</h3>
+          <table class="table table-bordered table-striped responsive">
+             <tbody>
+               <tr>
+                 <td><span class="code">$('#example').tooltip('show')</span></td>
+                 <td>Displays the tooltip.</td>
+               </tr>
+               <tr>
+                 <td><span class="code">$('#example').tooltip('hide')</span></td>
+                 <td>Hides the tooltip.</td>
+               </tr>
+               <tr>
+                 <td><span class="code">$('#example').tooltip('toggle')</span></td>
+                 <td>Toggles the tooltip.</td>
+               </tr>
+               <tr>
+                 <td><span class="code">$('#example').tooltip('show')</span></td>
+                 <td>Destroys the tooltip.</td>
+               </tr>
+             </tbody>
+          </table>
+       </div>
+      <!-- Tooltips section -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,224 @@
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Basic typograhy structural styling 
+ * 
+ * Designed and built @kurenn  
+ */
+
+p {
+  margin: 0 0 $base-line-height / 2;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+}
+
+/* Emphasis & miscelaneous */
+/* ----------------------- */
+
+em { 
+  font-style: italic; 
+}
+
+//Utility classes
+
+.muted {
+  color: $muted-color;
+}
+
+.text-warning {
+  color: $dark-orange;
+}
+
+.text-error {
+  color: $dark-red;
+}
+
+.text-success {
+  color: $dark-green;
+}
+
+.text-info {
+  color: $dark-blue;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+//Headings
+//--------------------------------
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0 0 10px 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: $base-line-height;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: $light-gray;
+  }
+}
+
+.light {
+  font-weight: 300;
+  color: $light-color;
+}
+
+/* Headers definition */
+/* ------------------ */
+
+h1, h2, h3 { 
+  line-height: $base-line-height * 2;
+}
+
+h4 {
+  line-height: $base-line-height + 10;
+}
+
+h1 { 
+  font-size: $base-font-size * 2.75; // ~44px
+} 
+
+h2 { 
+  font-size: $base-font-size * 2.25; // ~36px
+} 
+
+h3 { 
+  font-size: $base-font-size * 1.75; // ~28px
+} 
+
+h4 { 
+  font-size: $base-font-size * 1.25; // ~20px
+}
+
+h5 {
+  font-size: $base-font-size; // 16px
+}
+
+h6 { 
+  font-size: $base-font-size * 0.85; // ~13.6px
+} 
+
+/* Lists */
+/* ----- */
+
+// Unordered and Ordered lists
+ul, ol {
+  padding: 0;
+  margin: 0 0 $base-line-height / 2 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  line-height: $base-line-height;
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+   li {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    a.btn {
+      color: #FFF;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    a { 
+      color: $link-color;
+
+      &.active {
+        background: #efefef;
+        color: $muted-color;
+        padding: 10px;
+        @include border-radius(3px);
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Description Lists
+dl {
+  margin-bottom: $base-line-height;
+}
+dt,
+dd {
+  line-height: $base-line-height;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: $base-line-height / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+  @include clearfix(); // Ensure dl clears floats if empty dd elements present
+  dt {
+    float: left;
+    clear: left;
+    text-align: right;
+  }
+}
+
+//Inline code
+.code {
+  padding: 2px 4px;
+  color: $code-color;
+  white-space: nowrap;
+  background-color: $code-bg;
+  font-weight: normal;
+  font-size: $base-font-size;
+  @include border-radius(3px);
+}
+
+i.nomargin {
+  margin-right: 0 !important;
+}
+
+//Uppercase
+.text-uppercase {
+  text-transform: uppercase;
+}

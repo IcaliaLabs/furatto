@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    $CODE
+\*------------------------------------*/
+/**
+ * Basic code structural styling. 
+ * 
+ * Designed and built @kurenn based on the Baby Blue them for RainbowJS by tilomitra
+ */
+
+pre {
+    word-wrap: break-word;
+    padding: 6px 10;
+    line-height: 1.3em;
+    margin-bottom: 20;
+    border: 1px solid #ccc;
+}
+
+code {
+    border: none;
+    margin: 0 2px;
+    font-size: $code-font-size;
+    white-space: nowrap;
+}
+
+pre code {
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+    white-space: pre-wrap;
+}
+
+pre, code {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    color: #333;
+    background: $code-bg;
+    @include border-radius(4px);
+}
+
+pre .comment {
+    color: $code-comment-color;
+}
+
+pre .tag, pre .tag-name, pre .support.tag-name {
+    color: $code-tag-color;
+}
+
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+    font-weight: bold;
+}
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+    color: $code-css-property-color;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+    font-weight: normal;
+    color: #099;
+}
+
+pre .attribute, pre .variable, pre .support {
+    color:  #4f9fcf; /* skinbuilder block-page-text-normal with #1f8dd6 as primary */
+}
+
+pre .string, pre .support.value  {
+    font-weight: normal;
+    color: #d44950; /* skinbuilder block-mine-text-low with #1f8dd6 as primary */
+}

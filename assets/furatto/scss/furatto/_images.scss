@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+/**
+ * Images definition. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+
+.img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.img-block {
+  width: 100%;
+}
+
+.img-hover {
+  @include transition(all .4s ease);
+  &:hover {
+    border: 1px solid rgba($img-border, 1);
+  }
+}
+
+.img-circular {
+  @include border-radius(50%);
+}
+
+.img-well {
+  @include border-radius(2%);
+}
+
+.img-polaroid {
+  padding: 4px;
+  border: 1px solid rgba(#000, 0.2);
+  background: #FFF;
+}
+
+.img-frame {
+  display: inline-block;
+  border: 1px solid #ccc;
+
+  img {
+    @extend .img;
+    margin: 5px;
+  }
+
+  &.img-circular {
+    img {
+      @extend .img-circular;
+    }
+  }
+
+  &.img-selected {
+    @extend .img-selected;
+    img {
+      margin: 0;
+    }
+  }
+
+}

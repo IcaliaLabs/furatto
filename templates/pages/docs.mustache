@@ -1,0 +1,1313 @@
+<div class="row">
+  <div class="section-jumbo-container">
+    <h1 class="jumbo-header">Docs</h1> 
+    <p class="motto">
+      Global CSS settings, jQuery plugins and fundamental HTML elements.
+    </p>
+  </div>
+</div>
+
+<div class="container-center">
+  <div class="row">
+    <div class="col-3">
+      <div class="docs-sidebar" data-offset-top="80">
+        <!-- Navigation sidebar -->
+        <ul class="nav nav-bordered">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#helpful_classes">Helpful classes</a></li>
+          <li><a href="#responsive_utilities">Responsive utilities</a></li>
+        </ul>
+        <!-- Navigation sidebar -->
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="row"> 
+        <!-- Overview section -->
+        <div id="overview">
+          <h2 class="header">Overview</h2>
+          <h4 class="light">Get into Furatto bare bones structure, including the Mobile First approach we took.</h4>
+          <h3>HTML 5 doctype</h3>
+           <div class="hidden-xs">
+            <p>Motivated by the mobile first approach as well as some HTML elements and CSS may not work as expected, it is highly recommended that you use the HTML5 doctype.</p>
+            <pre data-language="html">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+...
+&lt;/html&gt;
+            </code>
+            </pre>
+           </div>
+          <h3>Mobile First</h3>
+          <p>Back in version 1, we added the meta tag for adjusting the viewport width for the current device. We have added some other patterns and baked it all together in order to be mobile friendly from the start.</p>
+          <div class="hidden-xs">
+            <pre data-language="html">
+            <code>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </code>
+            </pre>
+          </div>
+          <p>
+            You can disable the zooming capabilities on mobile devices by adding <span class="code">maximun-scale=1</span> and <span class="code">user-scalable=no</span>, this way your site will feel a bit more like a native application. Use it with care, as it is not always the best approach.
+          </p>
+          <div class="hidden-xs">
+            <pre data-language="html">
+            <code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1, user-scalable=no" /&gt;
+            </code>
+            </pre>
+          </div>
+          <h3>Global settings</h3>
+          <p>
+            Furatto applies some basic global settings for, typography, links, and body itself. Some of these:
+            <ul>
+              <li>Remove margin and padding on body.</li>
+              <li>Set a default background to the body.</li>
+              <li>Set a base font face (<a href="http://www.google.com/fonts#UsePlace:use/Collection:Lato" target="_blank">Lato</a>), font size and base line height.</li>
+              <li>Reset default link behavior via setting a color and apply underline on <span class="code">:hover</span>.</li>
+            </ul>
+          </p>
+          <p>Check out the typography and base <span class="code">SCSS</span> files for mor information.</p>
+          <h3>Absolute position</h3>
+          <p>Furatto uses two main containers for displaying the content, a <span class="code">.panels</span> container and a <span class="code">.panel-content</span> both are absolute positioned. This is important, because the <span class="code">.panel-content</span> element works now as your body, so if you plan to add a jQuery plugin, attach the event from the body to the <span class="code">.panel-content</span> class name element.</p>
+          <p>The <span class="code">.panels</span> element is the one in charge of the left sliding panel.</p>
+          <h3>Normalize</h3>
+          <p>
+            In order to improve cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a> which is an open-source project by <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> as an alternative for HTML 5 resets.
+          </p> 
+        </div>
+        <!-- Overview section -->
+        <hr />
+        <!-- Grid section -->
+        <div id="grid" class="docs-section">
+          <h2 class="header">Grid</h2>
+          <h4 class="light">Furatto comes with fully responsive fluid system which scales up to 12 columns. It is generated using predefined classes for more semantic layouts, as well as mixins. Below 767px viewports, the columns become fluid and stack vertically.</h4>
+          <p>The twelve columns are distributed with a equitable width and margin, which make it very easy to build dashboard. It is important to put the columns on a row div class element.</p>
+      <div class="grid-demo">
+        <div class="row">
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-1</div>
+        </div>
+      </div>
+      <div class="grid-demo">
+        <div class="row">
+          <div class="col-2">
+            2 
+          </div>
+          <div class="col-4">
+            4 
+          </div>
+          <div class="col-1">
+            1 
+          </div>
+          <div class="col-3">
+            3 
+          </div>
+          <div class="col-2">
+            2 
+          </div>
+        </div>
+      </div>
+      <div class="hidden-xs">
+        <pre data-language="html">
+        <code>
+<div class="row">
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+  <div class="col-1">col-1</div>
+</div>
+<div class="row">
+  <div class="col-2">col-2</div>
+  <div class="col-4">col-4</div>
+  <div class="col-1">col-1</div>
+  <div class="col-3">col-3</div>
+  <div class="col-2">col-2</div>
+</div>
+        </code>
+        </pre>
+      </div>
+          <h3>Building the markup</h3>
+          <p>For a simple three column layout just add the <span class="code html">row</span> class name and add the correct number of <span class="code html">col-*</span> columns. The <span class="code">col-*</span> class name for the columns comes from the 1 to the 12 as is a 12 column grid.</p>
+          <div class="hidden-xs">
+            <pre data-language="html">
+              <code>
+<div class="row">
+  <div class="col-4">...</div>
+  <div class="col-4">...</div>
+  <div class="col-4">...</div>
+</div>
+              </code>
+            </pre>
+          </div>
+          <h3>Nesting columns</h3>
+          <p>When comes to nesting Furatto helps you add multiple column div elements. You just have to add a <span class="code html">row</span> class into an existing <span class="code html">col-*</span> column. The nested rows should also match 12 columns, you can see it as if is another <span class="code html">row</span> element.</p>
+          <div class="nested-grid-demo">
+            <div class="row">
+              <div class="col-9">
+                <p>I'm a col-9 class column</p>
+                <div class="row">
+                  <div class="col-6">
+                    I'm a col-6 column 
+                  </div>
+                  <div class="col-6">
+                    I'm a col-6 column 
+                  </div>
+                  </div>
+                  </div>
+                <div class="col-3 text-center">
+                <p>I'm a col-3 class column</p>
+              </div>
+            </div>
+          </div>
+        <div class="hidden-xs">
+          <pre data-language="html">
+            <code>
+<div class="row">
+  <div class="col-9">
+    <p>I'm a col-9 class column</p>
+    <div class="row">
+      <div class="col-6">
+        I'm a col-6 column 
+      </div>
+      <div class="col-6">
+        I'm a col-6 column 
+      </div>
+    </div>
+  </div>
+  <div class="col-3 text-center">
+    <p>I'm a col-3 class column</p>
+  </div>
+</div>
+           </code>
+          </pre>
+       </div>
+
+        </div>
+        <!-- Grid section -->
+        <hr />
+        <!-- Typography section -->
+        <div id="typography" class="docs-section">
+          <h2 class="header">Typography</h2>
+          <h4 class="light">To keep Furatto as clean and extensible as possible, we did not add any typographic styles over what's on <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize</a>. This means that you get many elements, such as headings, lists, which style is easy to override.</h4>
+          <h3>Headings</h3>
+          <p>Headings from 1 to 6. Font size decreases from ~44px to ~13px.</p>
+          <div class="row">
+            <div class="col-6">
+              <h1>h1. heading</h1> 
+            </div>
+            <div class="col-6">
+              <h4 class="muted">Font size ~44px</h4>
+            </div>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h2>h2. heading</h2> 
+            </div>
+            <div class="col-6">
+              <h4 class="muted">Font size ~36px</h4>
+            </div>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h3>h3. heading</h3> 
+            </div>
+            <div class="col-6">
+              <h4 class="muted">Font size ~28px</h4>
+            </div>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h4>h4. heading</h4> 
+            </div>
+            <div class="col-6">
+              <h4 class="muted">Font size ~20px</h4>
+            </div>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h5>h5. heading</h5> 
+            </div>
+            <div class="col-6">
+              <h4 class="muted">Font size ~16px</h4>
+            </div>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h6>h6. heading</h6> 
+            </div>
+            <div class="col-6">
+              <h4 class="muted">Font size ~13.6px</h4>
+            </div>
+            <hr />
+          </div>
+          <div class="hidden-xs">
+          <pre data-language="html">
+            <code>
+<h1>...</h1>
+<h2>...</h2>
+<h3>...</h3>
+<h4>...</h4>
+<h5>...</h5>
+<h6>...</h6>
+            </code>
+          </pre>
+        </div>
+          <h3>Body copy</h3>
+          <p>Furatto comes with global default settings <span class="code">font-size</span> is 16px with a <span class="code">line-height</span> of 20px. In addition to that the body receives a 10px <span class="code">margin-bottom</span>.</p>
+          <div class="row docs-example">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="docs-code hidden-xs">
+             <pre data-language="html">
+               <code>
+&lt;p&gt;...&lt;/p&gt;
+               </code>
+             </pre>
+          </div>
+          <h3>Light body copy</h3>
+          <p>In order to hightlight a text </p>
+          <div class="row docs-example">
+            <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<p class="light">...</p>
+               </code>
+            </pre>
+          </div>
+          <h3>Sassy</h3>
+          <p>It is really easy to change this default settings, which are setup on <a href="https://github.com/IcaliaLabs/furatto/blob/master/scss/furatto/_variables.scss" target="_blank">_variables.scss</a> as <span class="code">$base-font-size</span> and <span class="code">$base-line-height</span>. We play around with these two values to set other values around the Furatto backbone, so you can customize them and see how the framework adapts.</p>
+          <h3>Small text</h3>
+          <p>For small inline texts or block of texts, you can use the <span class="code">&lt;small&gt;</span> tag, which is 85% the size of the parent.</p>
+          <div class="row docs-example">
+            <small>This is a small text, probably a good use is to highlight text.</small>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<small>This is a small text, probably a good use is to highlight text.</small>
+               </code>
+            </pre>
+          </div>
+          <h3>Bold text</h3>
+          <p>To give a <span class="code">bold</span> to a text, you can use the <span class="code">&lt;strong&gt;</span>.</p>
+          <div class="row docs-example">
+            This is a snippet to <strong>bold this chunk of text.</strong>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+This is a snippet to <strong>bold this chunk of text.</strong>
+               </code>
+            </pre>
+          </div>
+          <h3>Italic text</h3>
+          <p>To emphasize text you should use the <span class="code">em</span> tag.</p>
+          <div class="row docs-example">
+            This is a snippet to <em>emphasize a text.</em>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+This is a snippet to <em>emphasize a text.</em>
+               </code>
+            </pre>
+          </div>
+          <h3>Alignment classes</h3>
+          <p>In Furatto is really easy to align text with the alignment classes.</p>
+          <div class="row docs-example">
+            <p class="text-left">Left text</p>
+            <p class="text-center">Center text</p>
+            <p class="text-right">Right text</p>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<p class="text-left">Left text</p>
+<p class="text-center">Center text</p>
+<p class="text-right">Right text</p>
+               </code>
+            </pre>
+          </div>
+          <h3>Emphasis classes</h3>
+          <p>Convenient emphasis classes for a more meaningful end.</p>
+          <div class="row docs-example">
+            <p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+            <p class="text-warning">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+            <p class="text-error">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+            <p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+            <p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+<p class="text-warning">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+<p class="text-error">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+<p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+<p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+               </code>
+            </pre>
+          </div>
+          <h3>Lists</h3>
+          <h4 class="light">List comes in many flavors, ordered lists, unordered lists. Thanks to Normalize all these elements have a basic styling and cross-browser consistency. you can extend them in your application.</h4>
+          <h3>Unordered</h3>
+          <div class="row docs-example">
+            <ul>
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3
+              <ul>
+                <li>Sub list item 1</li>
+                <li>Sub list item 2</li>
+                <li>Sub list item 3
+                <ul>
+                  <li>Sub list item 1</li>
+                  <li>Sub list item 2</li>
+                  <li>Sub list item 3</li>
+                </ul>
+                </li>
+              </ul>
+              </li>
+            </ul>  
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<ul>
+  <li>...</li>
+</ul>
+               </code>
+            </pre>
+          </div>
+          <h3>Ordered</h3>
+          <div class="row docs-example">
+            <ol>
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3
+              <ol>
+                <li>Sub list item 1</li>
+                <li>Sub list item 2</li>
+                <li>Sub list item 3
+                <ol>
+                  <li>Sub list item 1</li>
+                  <li>Sub list item 2</li>
+                  <li>Sub list item 3</li>
+                </ol>
+                </li>
+              </ol>
+              </li>
+            </ol>  
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<ol>
+  <li>...</li>
+</ol>
+               </code>
+            </pre>
+          </div>
+          <h3>Unstyled</h3>
+          <p>Remove the <span class="code">list-style</span> and the left margin.</p>
+          <div class="row docs-example">
+            <ul class="unstyled">
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3
+              <ul>
+                <li>Sub list item 1</li>
+                <li>Sub list item 2</li>
+                <li>Sub list item 3</li>
+              </ul>
+              </li>
+            </ul>  
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<ul class="unstyled">
+   <li>...</li>
+</ul>
+               </code>
+            </pre>
+          </div>
+          <h3>Inline</h3>
+          <p>Place all list items into a single line with <span class="code">display: inline-block</span> and some padding added.</p>
+          <div class="row docs-example">
+            <ul class="inline">
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3</li>
+            </ul>  
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<ul class="inline">
+   <li>...</li>
+</ul>
+               </code>
+            </pre>
+          </div>
+          <h3>Definition lists</h3>
+          <p>A list of terms with their associated descriptions.</p>
+          <div class="row docs-example">
+            <dl>
+              <dt>Definition term</dt>
+              <dd>Definition description</dd>
+  
+              <dt>Definition term</dt>
+              <dd>Definition description</dd>
+              <dd>Definition description</dd>
+  
+              <dt>Definition term</dt>
+              <dt>Definition term</dt>
+              <dd>Definition description</dd>
+            </dl>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<dl>
+  <dt>...</dt>
+  <dd>...</dd>
+</dl>
+               </code>
+            </pre>
+          </div>
+          <h3>Blockquotes</h3>
+          <p>For quoting content you can use use the blockquoute with the <span class="code">content-quote</span> class name.</p>
+          <div class="row docs-example">
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>            
+            </blockquote>          
+         </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>            
+</blockquote>          
+               </code>
+            </pre>
+          </div>
+        </div>
+        <!-- Typography section -->
+        <hr />
+        <!-- Tables section -->
+        <div id="tables" class="docs-section">
+          <h2 class="header">Tables</h2>
+          <h4 class="light">To style an HTML table, just add the <span class="code">table</span> class name. The class normalizes the table and makes it look very clean. The reason to add the class name, is to prevent other plugins such as calendars and date pickers to break.</h4>
+          <div class="row docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Twitter</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abraham Kuri</td>
+                    <td>@kurenn</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Icalia Labs</td>
+                    <td>@icalialabs</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Furatto</td>
+                    <td>@ifuratto</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<table class="table"></table>
+               </code>
+            </pre>
+          </div>
+          <h3>Condensed table</h3>
+          <p>A condensed table just look a little bit smaller by just reducing the padding on the headers a table data tags. Just add the <span class="code">table-condensed</span> class name.</p>
+          <div class="row docs-example">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Twitter</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abraham Kuri</td>
+                    <td>@kurenn</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Icalia Labs</td>
+                    <td>@icalialabs</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Furatto</td>
+                    <td>@ifuratto</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<table class="table table-condensed"></table>
+               </code>
+            </pre>
+          </div>
+          <h3>Striped table</h3>
+          <p>Large tables are easier to read when some rows are more visible than others. To do so just add the 'table-striped' classname to the table. Just add the <span class="code">table-striped</span>.</p>
+          <div class="row docs-example">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Twitter</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abraham Kuri</td>
+                    <td>@kurenn</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Icalia Labs</td>
+                    <td>@icalialabs</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Furatto</td>
+                    <td>@ifuratto</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<table class="table table-striped"></table>
+               </code>
+            </pre>
+          </div>
+          <h3>Bordered table</h3>
+          <p>In order to add vertical and horizontal borders to all cells in a table, just add the <span class="code">table-bordered</span> class name.</p>
+          <div class="row docs-example">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Twitter</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abraham Kuri</td>
+                    <td>@kurenn</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Icalia Labs</td>
+                    <td>@icalialabs</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Furatto</td>
+                    <td>@ifuratto</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<table class="table table-bordered"></table>
+               </code>
+            </pre>
+          </div>
+          <h3>Responsive tables</h3>
+          <p>Thanks to the <a href='http://zurb.com/' target="_blank">Zurb</a> guys we have responsive tables ready to rock, just add the <span class="code">responsive</span> classname to the table</p>
+          <div class="row docs-example">
+            <table class="table table-bordered table-condensed responsive">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Twitter</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Abraham Kuri</td>
+                    <td>@kurenn</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Icalia Labs</td>
+                    <td>@icalialabs</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Furatto</td>
+                    <td>@ifuratto</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+               <code>
+<table class="table table-bordered responsive"></table>
+               </code>
+            </pre>
+          </div>
+          <h3>Emphasis classes</h3>
+          <p>You can have colorful table rows by adding the correct class name to the <span class="code">tr</span> element. Just a gotcha, don't add the <span class="code">table-striped</span> class name.</p>
+          <div class="row docs-example">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Class name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="code">tr-info<span></td>
+                  <td>Indicates a neutral state.</td>
+                </tr>
+                <tr>
+                  <td><span class="code">tr-success<span></td>
+                  <td>Indicates a successful state.</td>
+                </tr>
+                <tr>
+                  <td><span class="code">tr-warning<span></td>
+                  <td>Indicates a warning state that might need attention.</td>
+                </tr>
+                <tr>
+                  <td><span class="code">tr-danger<span></td>
+                  <td>Indicates a dangerous state.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Tables section -->
+        <hr />
+        <!-- Forms section -->
+        <div id="forms" class="docs-section">
+          <h2 class="header">Forms</h2>
+          <h4 class="light">Every elemento on a form receives a default behavior. All <span class="code">input</span>, <span class="code">textarea</span> with a <span class="code">input-block</span> have a 100% with. Wrap labels and inputs in a <span class="code">form-fields</span> class name for btter spacing.</h4>
+          <div class="row docs-example">
+            <form>
+              <div class="form-fields">
+                <label for="email">Email:</label>
+                <input type="email" class="input-block" id="email" />
+              </div>
+              <div class="form-fields">
+                <label for="password">Password:</label>
+                <input type="password" class="input-block" id="password" />
+              </div>
+              <div class="checkbox-fields">
+                <label for="check">
+                  <input type="checkbox" id="check" />Check me out!
+
+                </label>
+              </div>
+              <div class="form-fields">
+                <label for="select">Select</label>
+                <select>
+                  <option>Choose the languaue</option>
+                  <option>Ruby</option>
+                  <option>Python</option>
+                  <option>NodeJS</option>
+                </select>
+              </div>
+              <input type="submit">
+            </form>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<form>
+  <div class="form-fields">
+    <label for="email">Email:</label>
+    <input type="email" class="input-block" id="email" />
+  </div>
+  <div class="form-fields">
+    <label for="password">Password:</label>
+    <input type="password" class="input-block" id="password" />
+  </div>
+  <div class="checkbox-fields">
+    <label for="check">
+      <input type="checkbox" id="check" />Check me out!
+    </label>
+  </div>
+  <div class="form-fields">
+    <label for="select">Select</label>
+    <select>
+      <option>Choose the languaue</option>
+      <option>Ruby</option>
+      <option>Python</option>
+      <option>NodeJS</option>
+    </select>
+  </div>
+  <input type="submit">
+</form>
+            </code>
+            </pre>
+          </div>
+          <h3>Inline form</h3>
+          <p>To get an inline form, it is as simple as call <span class="code">inline-form</span>. Probably you want to use this as a search form for example.</p>
+          <div class="row docs-example">
+            <form class="inline-form">  
+              <div class="form-fields">
+                <input type="text" placeholder="Search by keryword..." />
+              </div>
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<form class="inline-form">  
+  <div class="form-fields">
+    <input type="text" placeholder="Search by keryword..." />
+  </div>
+  <input type="submit" value="Search" />
+</form>
+            </code>
+            </pre>
+          </div>
+          <h3>Horizontal form</h3>
+          <p>To get an horizontal form, it is as simple as call <span class="code">horizontal-form</span>.</p>
+          <div class="row docs-example">
+            <form class="horizontal-form">  
+              <div class="form-fields">
+                <label for="hzEmail">Email:</label>
+                <input type="text" id="hzEmail" placeholder="Type in your email..." />
+              </div>
+              <div class="form-fields">
+                <label for="hzPassword">Password:</label>
+                <input type="password" id="hzPassword" placeholder="Now your password..." />
+              </div>
+              <div class="form-actions">
+                <input type="submit" value="Sign in" />
+              </div>
+            </form>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<form class="horizontal-form">  
+  <div class="form-fields">
+    <label for="hzEmail">Email:</label>
+    <input type="text" placeholder="" id="hzEmail" placeholder="Type in your email..." />
+  </div>
+  <div class="form-fields">
+    <label for="hzPassword">Password:</label>
+    <input type="password" placeholder="" id="hzPassword" placeholder="Now your password..." />
+  </div>
+  <div class="form-actions">
+    <input type="submit" value="Sign in" />
+  </div>
+</form>
+            </code>
+            </pre>
+          </div>
+          <h3>Inputs</h3>
+          <h4 class="light">All native support for inputs are included in Furatto, including for all the HTML 5 types: <span class="code">datetime</span>,
+            <span class="code">datetime-local</span>, <span class="code">date</span>, <span class="code">month</span>, <span class="code">month</span>,
+            <span class="code">time</span>, <span class="code">week</span>, <span class="code">number</span>, <span class="code">email</span>,
+            <span class="code">url</span>, <span class="code">search</span>, <span class="code">tel</span>, <span class="code">color</span>.
+          </h4>
+          <div class="row docs-example">
+            <input type="text" placeholder="A text input" class="input-block"/>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<input type="text" placeholder="A text input" class="input-block"/>
+            </code>
+            </pre>
+          </div>
+          <h3>Input states</h3>
+          <h4 class="light">Furatto includes several input states to use them in the right cases.</h4>
+          <h3>Input focus</h3>
+          <p>The outline styles are removed and a blue border is applied in its place for <span class="code">:focus</span></p>
+          <div class="row docs-example">
+            <input type="text" class="docs-focus input-block", value="This is a focused input...">
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<input type="text" class="docs-focus input-block" value="This is a focused input...">
+            </code>
+            </pre>
+          </div>
+          <h3>Input disabled</h3>
+          <p>For disableing and input or make it not editable just add the disabled attribute.</p>
+          <div class="row docs-example">
+            <input type="text" class="input-block", placeholder="This is a disabled input..." disabled />
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<input type="text" class="input-block", value="This is a disabled input..." disabled />
+            </code>
+            </pre>
+          </div>
+          <h3>Validation states</h3>
+          <p>Furatto comes with validation styles, for error, warning, and success input forms. Any label, input or hint text will get the validation style.</p>
+          <div class="row docs-example">
+            <div class="form-fields-success">
+              <div class="form-fields">
+                <label for="">Success!</label>
+                <input type="text">
+                <span class="help-hint">This is correct!</span>
+              </div>
+            </div>
+            <div class="form-fields-warning">
+              <div class="form-fields">
+                <label for="">Warning!</label>
+                <input type="text">
+                <span class="help-hint">This is a warning!</span>
+              </div>
+            </div>
+            <div class="form-fields-error">
+              <div class="form-fields">
+                <label for="">Error!</label>
+                <input type="text">
+                <span class="help-hint">This is a error!</span>
+              </div>
+            </div>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<div class="form-fields-success">
+  <div class="form-fields">
+    <label for="">Success!</label>
+    <input type="text">
+    <span class="help-hint">This is correct!</span>
+  </div>
+</div>
+<div class="form-fields-warning">
+  <div class="form-fields">
+    <label for="">Warning!</label>
+    <input type="text">
+    <span class="help-hint">This is a warning!</span>
+  </div>
+</div>
+<div class="form-fields-error">
+  <div class="form-fields">
+    <label for="">Error!</label>
+    <input type="text">
+    <span class="help-hint">This is a error!</span>
+  </div>
+</div>
+            </code>
+            </pre>
+          </div>
+          <h3>Textarea</h3>
+          <p>You can add the <span class="code">input-block</span> class name to make the text area be 100% width and just change the <span class="code">rows</span> attribute as necessary.</p>
+          <div class="row docs-example">
+            <textarea class="input-block" rows="3"></textarea>
+          </div>
+          <div class="docs-code">
+            <pre data-language="html">
+            <code>
+<textarea class="input-block" rows="3"></textarea>
+            </code>
+            </pre>
+          </div>
+          <h3>Input sizes</h3>
+          <p>To change the width for an input, we added helpful class names for you to play around. The width of the input is limited by the parent container.</p>
+          <div class="row docs-example">
+            <input type="text" class="input-mini" placeholder="input-mini - 16.667% width"/><br />
+            <input type="text" class="input-small" placeholder="input-small - 33.34% width"/><br />
+            <input type="text" class="input-medium" placeholder="input-medium - 50% width" /><br />
+            <input type="text" class="input-large" placeholder="input-large - 66.668% width" /><br /> 
+            <input type="text" class="input-xlarge" placeholder="input-xlarge - 83.335% width" /><br />
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html"> 
+              <code>
+<input type="text" class="input-mini" placeholder="input-mini - 16.667% width"/><br />
+<input type="text" class="input-small" placeholder="input-small - 33.34% width"/><br />
+<input type="text" class="input-medium" placeholder="input-medium - 50% width" /><br />
+<input type="text" class="input-large" placeholder="input-large - 66.668% width" /><br /> 
+<input type="text" class="input-xlarge" placeholder="input-xlarge - 83.335% width" /><br />
+              </code>
+            </pre>
+          </div>
+          <h3>Help text</h3>
+          <p>Block level help text for inputs.</p>
+          <div class="row docs-example">
+            <input type="text" class="input-block" /><br />
+            <span class="help-block">This is a helping block for an input, which breaks into a new line.</span>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html"> 
+              <code>
+<input type="text" class="input-mini" placeholder="input-mini - 16.667% width"/><br />
+<input type="text" class="input-small" placeholder="input-small - 33.34% width"/><br />
+<input type="text" class="input-medium" placeholder="input-medium - 50% width" /><br />
+<input type="text" class="input-large" placeholder="input-large - 66.668% width" /><br /> 
+<input type="text" class="input-xlarge" placeholder="input-xlarge - 83.335% width" /><br />
+              </code>
+            </pre>
+          </div>
+         </div>
+         <!-- Forms section -->
+        <hr />
+        <!-- Buttons section -->
+        <div id="buttons" class="docs-section">
+          <h2 class="header">Buttons</h2>
+          <h4 class="light">It is really simply to create a button, just the <span class="code">btn</span> class name to any <span class="code">a</span> or <span class="code">button</span> element.</h4>
+          <p>You can use any of the buttons flavors furatto provides.</p>
+          <div class="row docs-example">
+            <a href="javascript:void(0)" class="btn">Button</a> 
+            <a href="javascript:void(0)" class="btn btn-info">Button</a> 
+            <a href="javascript:void(0)" class="btn btn-success">Button</a> 
+            <a href="javascript:void(0)" class="btn btn-danger">Button</a> 
+            <a href="javascript:void(0)" class="btn btn-warning">Button</a> 
+            <a href="javascript:void(0)" class="btn btn-primary">Button</a> 
+            <a href="javascript:void(0)" class="btn btn-funky">Button</a> 
+            <a href="javascript:void(0)" class="link">Link</a> 
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+              <code>
+<a href="javascript:void(0)" class="btn">Button</a> 
+<a href="javascript:void(0)" class="btn btn-info">Button</a> 
+<a href="javascript:void(0)" class="btn btn-success">Button</a> 
+<a href="javascript:void(0)" class="btn btn-danger">Button</a> 
+<a href="javascript:void(0)" class="btn btn-warning">Button</a> 
+<a href="javascript:void(0)" class="btn btn-primary">Button</a> 
+<a href="javascript:void(0)" class="btn btn-funky">Button</a> 
+<a href="javascript:void(0)" class="btn btn-highlight">Button</a> 
+<a href="javascript:void(0)" class="link">Link</a> 
+              </code>
+            </pre>
+          </div>
+          <h3>Button sizes</h3>
+          <p>Need bigger or smaller buttons?, Furatto comes with 5 different sizes to meet your needs.</p>
+          <div class="row docs-example">
+            <button class="btn btn-primary btn-mini">Mini</button>
+            <button class="btn btn-primary btn-small">Small</button>
+            <button class="btn btn-primary btn-large">Large</button>
+            <button class="btn btn-primary btn-xlarge">Extra large</button>
+            <button class="btn btn-primary btn-xxlarge">Extra extra large</button>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+              <code>
+<button class="btn btn-primary btn-mini">Mini</button>
+<button class="btn btn-primary btn-small">Small</button>
+<button class="btn btn-primary btn-large">Large</button>
+<button class="btn btn-primary btn-xlarge">Extra large</button>
+<button class="btn btn-primary btn-xxlarge">Extra extra large</button>
+              </code>
+            </pre>
+          </div>
+          <h3>Block level buttons</h3>
+          <div class="row docs-example">
+            <button class="btn btn-info btn-block">Block level button</button>
+            <button class="btn btn-success btn-block">Block level button</button>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+              <code>
+<button class="btn btn-info btn-block">Block level button</button>
+<button class="btn btn-success btn-block">Block level button</button>
+              </code>
+            </pre>
+          </div>
+          <h3>Disable buttons</h3>
+          <p>You can mark a button as disabled just by adding the <span class="code">btn-disabled</span> class or the <span class="code">disabled</span> attribute.</p>
+          <div class="docs-example">
+            <p>
+              <button class="btn btn-info btn-large btn-disabled">Disabled button</button>
+              <button class="btn btn-success btn-large" disabled>Disabled button</button>
+            </p>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+              <code>
+<button class="btn btn-info btn-large btn-disabled">Disabled button</button>
+<button class="btn btn-success btn-large" disabled>Disabled button</button>
+              </code>
+            </pre>
+          </div>
+          <h3>Alpha buttons</h3>
+          <p>Furatto provides an alpha version for each button, like the one you see in the <a href="index.html" target="_blank">landing</a>. It is necessary to add a background color on the button container. Just hover the buttons to see the effect running.</p>
+          <div class="row docs-example">
+            <div class="bg-primary docs-container">
+              <button class="btn btn-alpha">Alpha default button</button>
+              <button class="btn btn-success btn-alpha">Alpha success button</button>
+              <button class="btn btn-info btn-alpha">Alpha info button</button>
+              <button class="btn btn-funky btn-alpha">Alpha funky button</button>
+              <button class="btn btn-danger btn-alpha">Alpha danger button</button>
+              <button class="btn btn-warning btn-alpha">Alpha warning button</button>
+            </div>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+<button class="btn btn-alpha">Alpha default button</button>
+<button class="btn btn-success btn-alpha">Alpha success button</button>
+<button class="btn btn-info btn-alpha">Alpha info button</button>
+<button class="btn btn-funky btn-alpha">Alpha funky button</button>
+<button class="btn btn-danger btn-alpha">Alpha danger button</button>
+<button class="btn btn-warning btn-alpha">Alpha warning button</button>
+<button class="btn btn-highlight btn-alpha">Alpha highlight button</button>
+            </pre>
+          </div>
+          <h3>Buttons with icons</h3>
+          <div class="docs-example">
+            <p>
+              <a href="javascript:void(0)" class="btn btn-primary">
+                 <i class="icon-shopping-cart icon-white"></i>
+                 Checkout
+               </a>
+               <a href="javascript:void(0)" class="btn btn-success btn-large">
+                 <i class="icon-cog icon-white"></i>
+                 Settings
+               </a>
+            </p>
+          </div>
+          <div class="docs-code hidden-xs">
+           <pre data-language="html"> 
+            <code>
+<a href="javascript:void(0)" class="btn btn-primary">
+   <i class="icon-shopping-cart icon-white"></i>
+   Checkout
+ </a>
+ <a href="javascript:void(0)" class="btn btn-success btn-large">
+   <i class="icon-cog icon-white"></i>
+   Settings
+ </a>
+            </code>
+           </pre>
+          </div>
+        </div>
+        <!-- Buttons section -->
+        <hr />
+        <!-- Images section -->
+        <div id="images" class="docs-section">
+          <h2 class="header">Images</h2>
+          <h4 class="light">Images become responsive by just adding the <span class="code">img</span> class name. Just keep in mind the rounded corners on IE 8.</h4>
+          <div class="docs-example">
+              <img src="http://placehold.it/200x200" alt="" class="img" />
+              <img src="http://placehold.it/200x200" alt="" class="img img-circular" />
+              <img src="http://placehold.it/200x200" alt="" class="img img-polaroid" />
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+            <code>
+<img src="http://placehold.it/200x200" alt="" class="img" />
+<img src="http://placehold.it/200x200" alt="" class="img img-circular" />
+<img src="http://placehold.it/200x200" alt="" class="img img-polaroid" />
+            </code>
+            </pre>
+          </div>
+          <h3>iOS devices</h3>
+          <p>Whenever you want the circular image to be also polaroid, you will have to wrap the img element into a div with class name of <span class="code">img-frame</span> and add <span class="code">img-circular</span> to this element.</p>
+          <div class="docs-example">
+            <div class="img-frame img-circular">
+              <img src="http://placehold.it/200x200" alt="">
+            </div>
+          </div>
+          <div class="docs-code hidden-xs">
+            <pre data-language="html">
+              <code>
+<div class="img-frame img-circular">
+  <img src="http://placehold.it/200x200" alt="">
+</div>
+              </code>
+            </pre>
+          </div>
+        </div>
+        <hr />
+        <div id="helpful_classes" class="docs-section">
+          <h2 class="header">Helpful classes</h2>
+          <h4 class="light">Simple and functional classes on behavior tweaks.</h4>
+          <h3>.pull-left</h3>
+          <p>Floats an element to the left.</p>
+          <pre data-language="html" class="hidden-xs">
+            <code>
+<div class="pull-left">...</div>
+            </code>
+          </pre>
+          <h3>.pull-right</h3>
+          <p>Floats an element to the right.</p>
+          <pre data-language="html" class="hidden-xs">
+            <code>
+<div class="pull-right">...</div>
+            </code>
+          </pre>
+          <h3>.clearfix</h3>
+          <p>Clears the float on any element.</p>
+          <pre data-language="html" class="hidden-xs">
+            <code>
+<div class="clearfix">...</div>
+            </code>
+          </pre>
+          <h3>.text-uppercase</h3>
+          <p>Transforms the text to uppercase.</p>
+          <pre data-language="html" class="hidden-xs">
+            <code>
+<div class="text-uppercase">...</div>
+            </code>
+          </pre>
+        </div>
+        <!-- Images section -->
+        <hr />
+        <!-- Responsive utilities section -->
+        <div id="responsive_utilities" class="docs-section">
+          <h2 class="header">Responsive utilities</h2>
+          <h4 class="light">Furatto provides class names to accelerate the mobile-friendly development, by showing or hiding the content by device managed by media queries.</h4>
+          <h3>Available classes</h3>
+          <p>Furatto provides some responsive utilities for you to hide or show content depending on the screen size is rendering. Credits go to <a href="http://getbootstrap.com/css/#responsive-utilities" target="_blank">Bootstrap</a>.</p>
+          <table class="table table-bordered responsive">
+             <thead>
+               <tr>
+                  <th></th>
+                  <th>
+                    Extra small devices<br />
+                    <span class="muted">screen size &lt; 768px</span>
+                  </th>
+                  <th>
+                    Small devices<br />
+                    <span class="muted">screen size &lt; 992px</span>
+                  </th>
+                  <th>
+                    Medium devices<br />
+                    <span class="muted">screen size &lt; 1200px</span>
+                  </th>
+                  <th>
+                    Large devices<br />
+                    <span class="muted">screen size &gt; 1200px</span>
+                  </th>
+               </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="code">visible-xs</span></td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-invisible">Hidden</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">visible-sm</span></td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-invisible">Hidden</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">visible-md</span></td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-invisible">Hidden</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">visible-lg</span></td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-visible">Visible</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">hidden-xs</span></td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-visible">Visible</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">hidden-sm</span></td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-visible">Visible</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">hidden-md</span></td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-invisible">Hidden</td>
+                  <td class="docs-visible">Visible</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">hidden-lg</span></td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-visible">Visible</td>
+                  <td class="docs-invisible">Hidden</td>
+                </tr> 
+              </tbody>
+          </table>
+        </div>
+        <!-- Responsive utilities section -->
+      </div>
+    </div>
+  </div>
+</div>
