@@ -289,3 +289,19 @@ textarea[disabled] {
     margin-right: 5px;
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  .horizontal-form {
+    .form-fields {
+      label {
+        display: block;
+        text-align: left;
+      }
+    }
+
+    .form-actions {
+      margin-left: 0;
+    }
+  }
+}
