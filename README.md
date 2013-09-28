@@ -31,19 +31,15 @@ We still provide support for version 1.0 as it is a big change from one to anoth
 
 ## Compiling CSS and JavaScript
 
-Furatto includes a makefile to compile all the Sass code and start working with the framework. Before getting started you need to add the necessary dependencies:
+Furatto includes a Makefile to compile all the Sass code and start working with the framework. Before getting started you need to add the necessary dependencies:
 
 ```console
-	$ gem install compass
-```
-
-More information about [Compass](http://compass-style.org/install/)
-
-As furatto uses node.js to compile the assets, you need to add the locally:
-
-```console
+	$ bundle
 	$ npm install
 ```
+
+This will install some ruby dependencies like the [Compass](http://compass-style.org/install/) compiler,
+and other node.js packages used to compile the assets.
 
 When you are done, you should be able to run the makefile provided:
 
