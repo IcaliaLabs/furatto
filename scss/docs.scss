@@ -9,6 +9,7 @@
 
 @import "compass/css3/border-radius";
 @import "compass/css3/images";
+@import "compass/css3/box-shadow";
 
 //Variables
 @import "furatto/variables";
@@ -245,37 +246,6 @@
   font-size: 14px;
 }
 
-//Add-ons
-.add-on {
-  background: #efefef;
-}
-
-.add-on-title {
-  font-weight: bolder;
-
-  a {
-    color: #000;
-  }
-}
-
-.add-on-image {
-  float: left;
-  margin-right: 5px;
-}
-
-.add-on-details {
-  font-size: 11px;
-  font-style: italic;
-  color: #666;
-
-  a {
-    font-style: normal;
-  }
-}
-
-.add-on-description {
-  font-size: 14px;
-}
 
 //Adds a background to the columns for demo purposes
 .grid-demo {
@@ -310,4 +280,30 @@
 
 .panel-content {
   padding-top: $navbar-height;
+}
+
+//Add-ons
+
+.add-ons-wrapper {
+  .add-on {
+    background: #e74c3c;
+    color: #FFF;
+    @include border-radius(4px 4px 4px 4px);
+    height: 250px;
+    @include box-shadow(2px 2px 5px #CCC);
+
+    img {
+      @include border-radius(4px 4px 0px 0px);
+      margin-bottom: 20px;
+    }
+
+    .add-on-title,
+    .add-on-description {
+      padding-left: 8px;
+    }
+
+    .add-on-title {
+      letter-spacing: 0.1em;
+    }
+  }
 }
