@@ -285,17 +285,22 @@
 //Add-ons
 
 .add-ons-wrapper {
+  a {
+    display: block;
+  }
   .add-on {
     background: #e74c3c;
     color: #FFF;
     @include border-radius(4px 4px 4px 4px);
-    height: 250px;
     @include box-shadow(2px 2px 5px #CCC);
+    padding-bottom: 5px;
 
     img {
       @include border-radius(4px 4px 0px 0px);
       margin-bottom: 20px;
+      width: 100%;
     }
+
 
     .add-on-title,
     .add-on-description {
@@ -305,5 +310,9 @@
     .add-on-title {
       letter-spacing: 0.1em;
     }
+  }
+
+  .add-on-black {
+    background: #333;
   }
 }
