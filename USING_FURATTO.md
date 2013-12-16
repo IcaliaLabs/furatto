@@ -1,6 +1,9 @@
 ## Here is a list of sites using Furatto
 
-Oops, there is nothing here…yet!
+| Project Name        | Purpose           | URL  |
+| ------------------- |:-----------------:| -----:|
+| Vride | Your best ride to work | https://go.vride.io/ |
+| MoneyPool | La manera mas facil de recaudar dinero entre amigos | https://www.moneypool.mx/ |
 
 Be the first one and tell us about it! 
 
