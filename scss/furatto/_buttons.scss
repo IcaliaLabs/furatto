@@ -123,3 +123,10 @@
 .btn-block + .btn-block {
   margin-top: 5px;
 }
+
+@media (max-width: $screen-xs) {
+  .btn {
+    display: block;
+    width: 100%;
+  }
+}
