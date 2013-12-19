@@ -20,7 +20,7 @@
   vertical-align: middle;
   border: none;
   outline: none;
-  @include single-transition(all, 0.3s, ease-in-out);
+  @include single-transition(all, 0.2s, ease-in-out);
   @include border-radius(3px);
   font-weight: 300;
   margin: 5px 0;
@@ -56,6 +56,16 @@
     }
   }
 
+  &.btn-3d {
+    position: relative;
+    border-bottom: .2em solid  darken($dark-inverse, 10%);
+    @include single-transition(all, 0.1s, ease-in-out);
+
+    &:hover {
+      border-bottom: .1em solid darken($dark-inverse, 10%);
+      top: 1px;
+    }
+  }
 }
 
 /* Button colors definition */
@@ -78,6 +88,17 @@
       font-weight: 300;
       &:hover {
         color: nth($color, 3);
+      }
+    }
+
+    &.btn-3d {
+      position: relative;
+      border-bottom: .2em solid darken(nth($color, 2), 10%);
+      @include single-transition(all, 0.1s, ease-in-out);
+
+      &:hover {
+        border-bottom: .1em solid darken(nth($color, 2), 10%);
+        top: 1px;
       }
     }
   }
