@@ -116,7 +116,7 @@
     margin: 0;
     font-size: 60px;
     color: $white;
-    margin-bottom: 60px;
+    margin-bottom: 25px;
     font-weight: 300;
 
     .jumbo-header-version {
@@ -127,7 +127,7 @@
 
   .motto {
     color: $white;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 300;
     margin-bottom: 60px;
   }
@@ -244,6 +244,10 @@
 
 .docs-example-description {
   font-size: 14px;
+}
+
+.navbar {
+  -webkit-animation-delay: 1s;
 }
 
 
