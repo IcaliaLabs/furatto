@@ -1,142 +1,200 @@
-/*------------------------------------*\
-    $BUTTONS
-\*------------------------------------*/
-/**
- * Basic button structural styling. 
- * 
- * Designed and built @kurenn  
- */
+//Buttons
 
-.btn {
-  display: inline-block;
+//
+//@variables
+//
+@import "functions";
+
+//Padding sizes for buttons
+$button-default: 0.28571429rem 0.85714286rem !default;
+$button-mini: 0 0.42857143rem !default;
+$button-small: 0.14285714rem 0.71428571rem !default;
+$button-large: 0.78571429rem 1.35714286rem !default;
+$button-xlarge: 1.42857143rem 2.14285714rem !default;
+$button-xxlarge: 1.42857143rem 3.57142857rem !default;
+
+//Buttons disply style
+$button-display: inline-block !default;
+
+//Buttons general styles
+$button-font-family: $base-font-family !default;
+$button-font-color: #FFF !default;
+$button-font-weight: 300 !default;
+$button-font-default: px-to-rems(16) !default;
+$button-font-mini: px-to-rems(11) !default;
+$button-font-small: px-to-rems(12) !default;
+$button-font-large: px-to-rems(18) !default;
+$button-font-xlarge: px-to-rems(24) !default;
+$button-font-xxlarge: px-to-rems(24) !default;
+
+//Buttons variations
+$button-radius: 3px !default;
+$button-alpha-border: 1px solid #FFF !default;
+$button-3d-border-width: 0.2rem !default;
+$button-disabled-opacity: 0.65 !default;
+
+//
+//@mixin
+//
+// We use this mixin to create a default button base style
+//
+
+@mixin btn-base {
+  display: $button-display;
   *display: inline;
-  padding: 4px 12px;
-  line-height: 20px;
-  font-size: $base-font-size;
-  color: $white;
-  background-color: $inverse;
-  cursor: pointer;
+  line-height: normal;
+  font-weight: $button-font-weight;
   text-align: center;
-  vertical-align: middle;
-  border: none;
-  outline: none;
-  @include single-transition(all, 0.2s, ease-in-out);
-  @include border-radius(3px);
-  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
   margin: 5px 0;
-  border: 1px solid darken($dark-inverse, 5%);
+  outline: none;
+  color: $button-font-color;
+  vertical-align: middle;
+  @include single-transition(all, 0.2s, ease-in-out);
+  position: relative;
+
+  [class^="icon-"], [class*=" icon-"] {
+    margin-right: 5px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.btn-alpha {
+    color: #FFF;
+  }
+}
+
+//
+//@mixin
+//
+// We use this mixin to add style to buttons and their states
+//
+// $background-color - Is the background color for the button to create
+
+@mixin btn-style($background-color: $inverse) {
+
+  background-color: $background-color;
+  border: 1px solid darken($background-color, 5%);
 
   &:hover, &:focus {
-    zoom: 1;
-    text-decoration: none;
-    background: $dark-inverse;
+    background: darken($background-color, 3%);
   }
 
   &.btn-disabled, &[disabled] {
     cursor: no-drop;
-    background-color: $dark-inverse;
-    @include opacity(0.65);
+    @include opacity($button-disabled-opacity);
   }
 
   &.active, &:active {
     outline: 0;
   }
 
-  [class^="icon-"], [class*=" icon-"] {
-    margin-right: 5px;
-  }
-
   &.btn-alpha {
-    border: 1px solid $white;
-    background: rgba(0,0,0,0.0);
-
+    border: $button-alpha-border;
+    background: rgba(0,0,0,0);
     &:hover {
-      color: $inverse;
-      background: $white;
+      color: darken($background-color, 3%);
+      background: #FFF;
     }
   }
 
   &.btn-3d {
-    position: relative;
-    border-bottom: .2em solid  darken($dark-inverse, 10%);
+    border-bottom: $button-3d-border-width solid darken($background-color, 15%);
     @include single-transition(all, 0.1s, ease-in-out);
 
     &:hover {
-      border-bottom: .1em solid darken($dark-inverse, 10%);
+      border-bottom: ($button-3d-border-width - 0.1) solid darken($background-color, 10%);
       top: 1px;
     }
   }
 }
 
-/* Button colors definition */
-/*---------------------------*/
-@each $color in $colors {
-  .btn-#{nth($color, 1)} {
-    background-color: nth($color, 2);
-    border: 1px solid darken(nth($color, 2), 5%);
+//
+//@mixin
+//
+// We use this mixin to set the button size
+// $padding - The padding to give to the button. Default: $button-default
+// $font-size - The font size for the button. Default: $button-font-default
+//
 
-    &:hover, &:focus {
-      background-color: nth($color, 3);
+@mixin btn-size($padding: $button-default, $font-size: $button-font-default) {
+  padding: $padding;
+  font-size: $font-size;
+}
+
+//
+//@mixin
+//
+// We use this mixin to let the user create custom buttons
+// $background-color - Is the background color for the button to create. Default: $inverse
+// $padding - The padding to give to the button. Default: $button-default
+// $font-size - The font size for the button. Default: $button-font-default
+// $include-radius-style - Wheter or not to add the radius style on the custom button
+// $include-block-style - Wheter or not to add the block size style on the custom button
+// Example .custom-btn { @include btn($background-color: #1abc9c); }
+//
+
+@mixin btn($background-color: $inverse, $padding: $button-default, $font-size: $button-font-default, $include-radius-style: true, $include-block-style: true) {
+  @include btn-base;
+  @include btn-style($background-color);
+  @include btn-size($padding, $font-size);
+  
+  @if $include-radius-style {
+    &.radius {
+      @include border-radius($button-border-radius);
     }
+  }
 
-    &.btn-disabled, &[disabled] {
-      background-color: nth($color, 2);
-    }
-
-    &.btn-alpha {
-      color: $white;
-      font-weight: 300;
-      &:hover {
-        color: nth($color, 3);
-      }
-    }
-
-    &.btn-3d {
-      position: relative;
-      border-bottom: .2em solid darken(nth($color, 2), 10%);
-      @include single-transition(all, 0.1s, ease-in-out);
-
-      &:hover {
-        border-bottom: .1em solid darken(nth($color, 2), 10%);
-        top: 1px;
-      }
+  @if $include-block-style {
+    &.btn-block {
+      display: block;
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 }
 
-/* Button sizes */
-/*-----------------------------*/
+//Button style definition
+button, .btn {
+  @include btn-base;
+  @include btn-style;
+  @include btn-size;
 
-.btn-large {
-  padding: $padding-large;
-  font-size: $font-size-large;
-}
+  //Button sizes
+  //
+  //Default size
+  padding: $button-default;
+  font-size: $button-font-default;
 
-.btn-xlarge {
-  padding: $padding-xlarge;
-  font-size: $font-size-xlarge;
-}
+  //Custom sizes
+  &.btn-large { @include btn-size($padding: $button-large, $font-size: $button-font-large); }
+  &.btn-xlarge { @include btn-size($padding: $button-xlarge, $font-size: $button-font-xlarge); }
+  &.btn-xxlarge { @include btn-size($padding: $button-xxlarge, $font-size: $button-font-xxlarge); }
+  &.btn-small { @include btn-size($padding: $button-small, $font-size: $button-font-small); }
+  &.btn-mini { @include btn-size($padding: $button-mini, $font-size: $button-font-mini); }
 
-.btn-xxlarge {
-  padding: $padding-xxlarge;
-  font-size: $font-size-xlarge;
-}
+  &.btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
-.btn-small {
-  padding: $padding-small;
-  font-size: $font-size-small;
-}
+  //Button styles
+  &.btn-primary { @include btn-style($inverse); }
+  &.btn-info { @include btn-style($blue); }
+  &.btn-success { @include btn-style($green); }
+  &.btn-danger { @include btn-style($red); }
+  &.btn-warning { @include btn-style($orange); }
+  &.btn-funky { @include btn-style($purple); }
 
-.btn-mini {
-  padding: $padding-mini;
-  font-size: $font-size-mini;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
+  &.radius {
+    @include border-radius($button-border-radius);
+  }
 }
 
 /* Vertical separation */
