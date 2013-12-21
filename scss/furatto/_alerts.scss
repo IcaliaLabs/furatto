@@ -7,74 +7,77 @@
  * Designed and built @kurenn  
  */
 
+//
+//@variables
+//
+@import "functions";
+
+$alert-padding: 0.57142857rem 2.5rem 0.57142857rem 1rem !default;
+$alert-margin-bottom: 20px !default;
+$alert-font-size: px-to-rems(13) !default;
+$alert-font-weight: normal !default;
+
+$alert-close-font-size: px-to-rems(16) !default;
+$alert-close-opacity: 0.5 !default;
+
+$alert-radius: 3px !default;
+
+//
+//@mixin
+//
+//
+
+@mixin alert-base {
+  display: block;
+  padding: $alert-padding;
+  margin-bottom: $alert-margin-bottom;
+  font-size: $alert-font-size;
+  font-weight: $alert-font-weight;
+  position: relative;
+
+  &.radius {
+    @include border-radius($alert-radius);
+  }
+}
+
+@mixin alert-style($background-color: $orange) {
+  background: lighten($background-color, 40%); 
+  color: darken($background-color, 10%);
+
+  .close {
+    color: darken($background-color, 15%);
+  }
+}
+
+@mixin alert-close {
+  line-height: 0;
+  padding: 5px;
+  border: none;
+  background: none;
+  font-size: $alert-close-font-size;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  margin-top: -($alert-font-size / 2);
+  text-decoration: none;
+
+  &:hover, &:focus {
+    @include opacity($alert-close-opacity);
+  }
+}
+
 .alert {
-  padding: 8px 35px 8px 14px;
-  margin-bottom: $base-line-height;
-  background-color: lighten($orange, 40%);
-  @include border-radius($base-radius);
-  color: $warning-alert-color;
-  font-size: $base-font-size;
+  @include alert-base;
+  @include alert-style;
 
-  .header, strong {
-    color: $warning-header-color;
-    font-weight: 600;
-    font-size: $base-font-size;
-  }
+  .close { @include alert-close; }
 
-  .header {
-    margin: 0;
-  }
+  &.rounded { @include border-radius(1000px) }
 
-  .close {
-    position: relative;
-    top: -2px;
-    right: -21px;
-    line-height: $base-line-height;
-    color: darken($dark-orange, 10%);
-    float: right;
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
-  }
-}
+  &.alert-success { @include alert-style($green); }
+  &.alert-info{ @include alert-style($blue); }
+  &.alert-danger { @include alert-style($red); }
 
-.alert-success {
-  background-color: lighten($green, 40%);
-  color: $success-alert-color;
-
-  .header {
-    color: $success-header-color;
-  }
-
-  .close {
-    color: $dark-green;
-  }
-}
-
-.alert-info {
-  background-color: lighten($blue, 35%);
-  color: $info-alert-color;
-
-  .header, strong {
-    color: $info-header-color;
-  }
-
-  .close {
-    color: $dark-blue;
-  }
-}
-
-.alert-danger {
-  background-color: lighten($red, 35%);
-  color: $danger-alert-color;
-
-  .header, strong {
-    color: $danger-header-color;
-  }
-
-  .close {
-    color: $dark-red;
-  }
 }
