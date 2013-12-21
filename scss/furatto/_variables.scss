@@ -11,6 +11,7 @@
 $bg-color: #FFF !default;
 
 // Fonts
+$base-font-family: 'Open Sans', 'Helvetica Neue' !default;
 $font-family: 'Open Sans', 'Helvetica Neue' !default;
 $base-font-size: 16px !default;
 $base-line-height: 20px !default;
@@ -88,6 +89,8 @@ $jumbo-container-bg-color: #3498d9 !default;
 $jumbo-container-bg-gradient: #67b2e3 !default;
 
 // Buttons
+$button-border-radius: $base-radius;
+
 $font-size-large: $base-font-size * 1.25 !default; // ~18px
 $font-size-xlarge: $base-font-size * 1.50 !default; // ~24px
 $font-size-small: $base-font-size * 0.85 !default; // ~12px
