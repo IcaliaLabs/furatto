@@ -1,11 +1,13 @@
-/*------------------------------------*\
-    $BASE
-\*------------------------------------*/
-/**
- * Basic site structural styling. 
- * 
- * Designed and built @kurenn  
- */
+//Base
+
+//
+//@variables
+//
+
+$body-background-color: #FFF !default;
+$body-font-color: #333 !default;
+$base-link-color: #0088cc !default;
+$base-font-weight: 500 !default;
 
 *, 
 *:after, 
@@ -13,69 +15,41 @@
   @include box-sizing(border-box);
 }
 
-html {
-  font-family: $base-font-family;
+html, body {
+  font-size: $base-font-size;
 }
 
 body {
-  font-size: $base-font-size;
+  background: $body-background-color;
+  color: $body-font-color;
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
   line-height: $base-line-height;
-  color: $base-font-color;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
 }
 
 a {
-  text-decoration: none;
-  color: $link-color;
+  color: $base-link-color;
 }
 
-.noscroll {
-  overflow: hidden;
+img,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
 }
 
-html, body {
-  background-color: $bg-color;
+img,
+object {
   height: 100%;
-  overflow: hidden;
 }
 
-hr {
-  clear: both;
-  margin: 1.25em 0 1.875em;
-  height: 0;
-  border: solid $hr-color;
-  border-width: 1px 0 0;
+//Deprecated on IE9+
+img {
+  -ms-interpolation-mode: bicubic;
 }
 
-.link {
-  color: $link-color !important;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.container-center {
-  width: $container-center-width;
-  margin: 0 auto;
-  @include clearfix();
-}
-
-/* Blockquote */
-/*----------------------------*/
-blockquote {
-  color: $blockquote-color;
-  font-style: italic;
-  line-height: 1.8em;
-  border-left: 5px solid $blockquote-border-color;
-  padding-left: 1.5em
-}
-
-/* Helper classes */
-/*----------------------------*/
+//Helpful classes
 .clearfix {
   @include clearfix;
 }
@@ -89,11 +63,28 @@ blockquote {
   display: block;
 }
 
-//Floats
 .pull-right {
   float: right;
 }
 
 .pull-left {
   float: left;
+}
+
+hr {
+  clear: both;
+  margin: 1.25em 0 1.875em;
+  height: 0;
+  border: solid $hr-color;
+  border-width: 1px 0 0;
+}
+
+/* Blockquote */
+/*----------------------------*/
+blockquote {
+  color: $blockquote-color;
+  font-style: italic;
+  line-height: 1.8em;
+  border-left: 5px solid $blockquote-border-color;
+  padding-left: 1.5em
 }
