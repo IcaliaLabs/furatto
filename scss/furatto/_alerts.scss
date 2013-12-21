@@ -18,13 +18,16 @@ $alert-font-size: px-to-rems(13) !default;
 $alert-font-weight: normal !default;
 
 $alert-close-font-size: px-to-rems(16) !default;
-$alert-close-opacity: 0.5 !default;
+$alert-close-opacity: 0.3 !default;
+$alert-close-hover-opacity: 0.5 !default;
+$alert-close-padding: px-to-rems(5) !default;
 
 $alert-radius: 3px !default;
+$alert-round: 1000px !default;
 
 //
 //@mixin
-//
+// We use this mixin as to describe the alerts base
 //
 
 @mixin alert-base {
@@ -40,18 +43,31 @@ $alert-radius: 3px !default;
   }
 }
 
+
+//
+//@mixin
+// We use this to create the different styles of alerts
+// $background-color - The color for the alert background. Default: $orange
+//
+
 @mixin alert-style($background-color: $orange) {
-  background: lighten($background-color, 40%); 
+  background: lighten($background-color, 25%); 
   color: darken($background-color, 10%);
+  border: 1px solid lighten($background-color, 20%);
 
   .close {
     color: darken($background-color, 15%);
   }
 }
 
+//
+//@mixin
+// We use this to create the close link of alerts
+//
+
 @mixin alert-close {
   line-height: 0;
-  padding: 5px;
+  padding: $alert-close-padding;
   border: none;
   background: none;
   font-size: $alert-close-font-size;
@@ -62,22 +78,47 @@ $alert-radius: 3px !default;
   right: 0.2rem;
   margin-top: -($alert-font-size / 2);
   text-decoration: none;
+  @include opacity($alert-close-opacity);
 
   &:hover, &:focus {
-    @include opacity($alert-close-opacity);
+    @include opacity($alert-close-hover-opacity);
   }
 }
 
+
+//
+//@mixin
+// We use this to create custom alerts
+// $background-color - The color for the alert background. Default: $orange
+// $include-radius - Wheter or not to include radius variant. Default: true
+// $include-round - Wheter or not to include rounded variant. Default: true
+//
+
+@mixin alert($background-color: $orange, $include-radius: true, $include-round: true) {
+  @include alert-base;
+  @include alert-style($background-color);
+
+  .close { @include alert-close; }
+  @if $include-radius {
+    &.radius { @include border-radius($alert-radius); }
+  }
+
+  @if $include-rounded {
+  &.round { @include border-radius($alert-round) }
+  }
+}
+
+//Alert description
 .alert {
   @include alert-base;
   @include alert-style;
 
   .close { @include alert-close; }
 
-  &.rounded { @include border-radius(1000px) }
+  &.round { @include border-radius($alert-round) }
+  &.radius { @include border-radius($alert-radius); }
 
   &.alert-success { @include alert-style($green); }
   &.alert-info{ @include alert-style($blue); }
   &.alert-danger { @include alert-style($red); }
-
 }
