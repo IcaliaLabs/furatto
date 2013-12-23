@@ -1,90 +1,72 @@
-/*------------------------------------*\
-    $TABLES
-\*------------------------------------*/
-/**
- * Basic table structural styling. 
- * 
- * Designed and built @kurenn  
- */
+//Tables
 
-//Base tables
+//
+//@variables
+//
+@import "functions";
+
+$table-background-color: #FFF !default;
+$table-margin-bottom: px-to-rems(20) !default;
+$table-cell-padding: px-to-rems(10) !default;
+$table-line-height: px-to-rems(18) !default;
+$table-cell-alignment: left !default;
+$table-border-color: #d2d2d2 !default;
+$table-border-width: 1px !default;
+$table-border-style: solid !default;
+
+$table-head-font-weight: 500 !default;
+
+//Variations
+$table-condensed-padding: 0.28571429rem 0.35714286rem !default;
+$table-striped-background-color: #f9f9f9 !default;
+$table-bordered-border-width: 1px !default;
+$table-bordered-border-style: solid !default;
+
+//Base table style
 table {
-  max-width: 100%;
-  background-color: transparent;
-  border-collapse: collapse;
-  border-spacing: 0;
-  border: none;
-}
+  background-color: $table-background-color;
+  margin-bottom: $table-margin-bottom;
+  
+  tr {
+    //Cells
+    th, td {
+      padding: $table-cell-padding;
+      line-height: $table-line-height;
+      text-align: $table-cell-alignment;
+      vertical-align: top;
+      border-top: $table-border-width $table-border-style $table-border-color;
+    }
 
-.table {
-  width: 100%;
-  margin-bottom: $base-line-height;
-
-  /*Cells */
-  th, td {
-    padding: 10px;
-    line-height: $base-line-height;
-    text-align: left;
-    vertical-align: top;
-    border-top: 1px solid $table-border-color;
+    th {
+      font-weight: $table-head-font-weight;
+      border-bottom: $table-border-width $table-border-style $table-border-color;
+    }
   }
 
-  th {
-    font-weight: bold;
-    border-bottom: 1px solid $table-border-color;
-  }
-
-  thead th {
-    vertical-align: bottom;
-  }
+  thead tr th { vertical-align: bottom; }
 
   //Remove border top from thead
-  caption + thead tr:first-child th,
-  caption + thead tr:first-child td,
-  colgroup + thead tr:first-child th,
-  colgroup + thead tr:first-child td,
   thead:first-child tr:first-child th,
   thead:first-child tr:first-child td {
     border-top: 0;
   }
 
-  //Adjacents tbody support
-  tbody + tbody {
-    border-top: 2px solid $table-border-color;
-  }
-
-  //Table backgrounds
-  @each $color in $colors {
-    .tr-#{nth($color, 1)} {
-      background-color: lighten(nth($color, 3), 0.9);
-      color: #FFF;
+  //Table striped
+  &.table-striped {
+    tbody {
+      > tr:nth-child(odd) > td,
+      > tr:nth-child(odd) > th {
+        background-color: $table-striped-background-color;
+      }
     }
   }
-}
 
-//Condensed table
-.table-condensed {
-  th, td {
-    padding: 4px 5px;
-  }
-}
+  //Table bordered
+  .table-bordered {
+    border: $table-bordered-border-width $table-bordered-border-style $table-border-color;
 
-//Striped
-.table-striped {
-  tbody {
-    > tr:nth-child(odd) > td,
-    > tr:nth-child(odd) > th {
-      background-color: $table-striped-color;
+    th, td {
+      border: $table-bordered-border-width $table-bordered-border-style $table-border-color;
     }
-
-  }
-}
-
-//Table bordered
-.table-bordered {
-  border: 1px solid $table-border-color;
-
-  th, td {
-    border: 1px solid $table-border-color;
   }
 }
