@@ -1,50 +1,54 @@
-/*------------------------------------*\
-    $IMAGES
-\*------------------------------------*/
-/**
- * Images definition. 
- * 
- * Designed and built @kurenn  
- */
+//Images
 
+//
+//@variables
+//
 
-.img {
+//
+//@mixin
+//
+@mixin img-responsive($display: inline-block) {
   max-width: 100%;
   height: auto;
+  display: $display;
+}
+
+//General img styling
+//Deprecated on IE9+
+img {
+  -ms-interpolation-mode: bicubic;
   vertical-align: middle;
-}
 
-.img-block {
-  width: 100%;
-}
-
-.img-hover {
-  @include transition(all .4s ease);
-  &:hover {
-    border: 1px solid rgba($img-border, 1);
+  //Images responsive styling
+  &.img-responsive {
+    @include img-responsive;
   }
+
+  //Circular images
+  &.img-circular {
+    @include border-radius(50%);
+  }
+
+  //Well images
+  &.img-radius {
+    @include border-radius(2%);
+  }
+
+  //Images with borders
+  &.img-polaroid {
+    padding: 4px;
+    border: 1px solid rgba(#000, 0.2);
+    background: #FFF;
+  }
+
 }
 
-.img-circular {
-  @include border-radius(50%);
-}
-
-.img-well {
-  @include border-radius(2%);
-}
-
-.img-polaroid {
-  padding: 4px;
-  border: 1px solid rgba(#000, 0.2);
-  background: #FFF;
-}
-
+//iOS fix for rounded and polaroid images
 .img-frame {
   display: inline-block;
   border: 1px solid #ccc;
 
   img {
-    @extend .img;
     margin: 5px;
   }
 
@@ -53,12 +57,4 @@
       @extend .img-circular;
     }
   }
-
-  &.img-selected {
-    @extend .img-selected;
-    img {
-      margin: 0;
-    }
-  }
-
 }
