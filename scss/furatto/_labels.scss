@@ -1,44 +1,87 @@
-/*------------------------------------*\
-    $LABELS
-\*------------------------------------*/
-/**
- * Basic button structural styling. 
- * 
- * Designed and built @kurenn  
- */
+//Labels
 
-.label, .badge {
+//
+//@variables
+//
+@import "functions";
+
+//Label general settings
+$label-padding: 0.21428571rem 0.42857143rem !default;
+$label-font-size: px-to-rems(11) !default;
+$label-font-weight: normal !default;
+$label-font-color: #FFF !default;
+$label-font-shadow-alpha: 0.20 !default;
+$label-font-shadow-x: 0 !default;
+$label-font-shadow-y: -1px !default;
+
+//Label variations
+$label-radius: 3px !default;
+$label-round: 1000px !default;
+
+//
+//@mixin
+// We use this mixin to build the general settings for labels
+//
+@mixin label-base {
   @include inline-block;
-  padding: 2px 4px;
-  font-size: $base-font-size * .846;
-  font-weight: bold;
-  line-height: 14px;
-  color: #FFF;
+  padding: $label-padding;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  color: $label-font-color;
   vertical-align: baseline;
   white-space: nowrap;
-  /*text-shadow: 0 -1px 0 rgba(0,0,0,.20);*/
-  background: $gray;
-  @include border-radius(2px);
+  text-shadow: $label-font-shadow-x $label-font-shadow-y 0 rgba(0,0,0, $label-font-shadow-alpha);
 }
 
-//Badges border radius
-.badge {
-  @include border-radius(50%);
-  padding: 5px 8px;
+//
+//@mixin
+// We use this mixin to add styling to the labels
+//
+// $background-color - Is the background for the labels. Default: $gray
+
+@mixin label-style($background-color: $gray) {
+  background: $background-color;
 }
 
-//Labels and badges colors definitions
-@each $color in $colors {
-  .label-#{nth($color, 1)}, .badge-#{nth($color, 1)} {
-    background-color: nth($color, 2);
+
+//
+//@mixin
+//
+// We use this mixin to let the user create custom buttons
+// $background-color - Is the background color for the button to create. Default: $gray
+// $include-round - Wheter or not to add the round style on the custom button
+// $include-radius - Wheter or not to add the radius size style on the custom button
+// Example .custom-label { @include label($background-color: #1abc9c); }
+//
+
+@mixin label($background-color: $gray, $include-round: true, $include-radius: true) {
+  @include label-base;
+  @include label-style($background-color);
+
+  @if $include-round {
+    &.round { @include border-radius($label-round); }
+  }
+
+  @if $include-radius {
+    &.round { @include border-radius($label-radius); }
   }
 }
 
-a {
-  &.label:hover,
-  &.label:focus {
-    color: #FFF;
-    text-decoration: none;
-    cursor: pointer;
-  }
+//Label style definition
+.label {
+  @include label-base;
+  @include label-style;
+
+  &.round { @include border-radius($label-round); }
+  &.radius { @include border-radius($label-radius); }
+
+
+  //Label styles
+  &.label-primary { @include label-style($inverse); }
+  &.label-info { @include label-style($blue); }
+  &.label-success { @include label-style($green); }
+  &.label-danger { @include label-style($red); }
+  &.label-warning { @include label-style($orange); }
+  &.label-funky { @include label-style($purple); }
+
 }
