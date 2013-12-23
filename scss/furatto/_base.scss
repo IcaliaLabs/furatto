@@ -15,6 +15,10 @@ $base-font-weight: 500 !default;
   @include box-sizing(border-box);
 }
 
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 html, body {
   font-size: $base-font-size;
 }
@@ -44,10 +48,6 @@ object {
   height: 100%;
 }
 
-//Deprecated on IE9+
-img {
-  -ms-interpolation-mode: bicubic;
-}
 
 //Helpful classes
 .clearfix {
