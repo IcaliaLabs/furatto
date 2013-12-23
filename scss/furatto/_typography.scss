@@ -1,224 +1,236 @@
-/*------------------------------------*\
-    $TYPOGRAPHY
-\*------------------------------------*/
-/**
- * Basic typograhy structural styling 
- * 
- * Designed and built @kurenn  
- */
+//Typography
 
-p {
-  margin: 0 0 $base-line-height / 2;
-  text-rendering: optimizeLegibility;
-  line-height: 1.6;
-}
+//Reset
 
-/* Emphasis & miscelaneous */
-/* ----------------------- */
+//
+//@variables
+//
+@import 'functions';
 
-em { 
-  font-style: italic; 
-}
+$typography-line-height: 1.6 !default;
+$typography-reset: true !default;
 
-//Utility classes
+// Paragraphs settings
+$paragraph-font-weight: normal !default;
+$paragraph-font-size: 1rem !default;
+$paragraph-line-height: 1.2 !default;
+$paragraph-text-rendering: optimizeLegibility !default;
 
-.muted {
-  color: $muted-color;
-}
 
-.text-warning {
-  color: $dark-orange;
-}
+//Lists
+$list-font-size: $paragraph-font-size !default;
+$list-line-height: $paragraph-line-height !default;
+$list-margin-bottom: px-to-rems(20) !default;
 
-.text-error {
-  color: $dark-red;
-}
+//Data lists
+$data-list-margin-bottom: px-to-rems(20) !default;
+$data-list-line-height: 1.2 !default;
+$data-list-font-weight: bold !default;
+$data-list-data-margin-left: px-to-rems(10) !default;
 
-.text-success {
-  color: $dark-green;
-}
+// Anchors settings
+$anchor-color: #0088cc !default;
+$anchor-text-decoration: none !default;
+$anchor-text-decoration-hover: underline !default;
 
-.text-info {
-  color: $dark-blue;
-}
+// Headings settings
+$headings-margin-top: 0.35714286rem !default;
+$headings-margin-bottom: 0.35714286rem !default;
+$headings-font-weight: 300 !default;
+$headings-line-height: 1.4 !default;
+$headings-text-rendering: optimizeLegibility !default;
+$headings-color: #222 !default;
+$h1-font-size: px-to-rems(44) !default;
+$h2-font-size: px-to-rems(36) !default;
+$h3-font-size: px-to-rems(28) !default;
+$h4-font-size: px-to-rems(20) !default;
+$h5-font-size: px-to-rems(16) !default;
+$h6-font-size: px-to-rems(14) !default;
 
-.text-left {
-  text-align: left;
-}
+//small settings
+$small-color: #ecf0f1 !default;
+$small-font-size: 60% !default;
 
-.text-right {
-  text-align: right;
-}
+//hr settings
+$hr-color: #DDD !default;
+$hr-style: solid !default;
+$hr-border-width: 0.07142857rem !default;
+$hr-margin-top: 1.25em !default;
+$hr-margin-bottom: 1.875em !default;
 
-.text-center {
-  text-align: center;
-}
+//Blockquote
+$blockquote-color: #777 !default;
+$blockquote-background: lighten(#EFEFEF, 5%) !default;
+$blockquote-line-height: 1.8em !default;
+$blockquote-border-width: 5px !default;
+$blockquote-border-style: solid !default;
+$blockquote-border-color: #DDD !default;
+$blockquote-padding-left: 1.5em !default;
+$blockquote-padding-right: $blockquote-padding-left !default;
+$blockquote-padding-top: 1rem !default;
+$blockquote-padding-bottom: $blockquote-padding-top !default;
 
-//Headings
-//--------------------------------
+//Media queries
+$medium-screen: 70.85714286rem !default;
+$medium-screen-max: 70.78571429rem !default;
+$medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-screen-max})" !default;
 
-h1,h2,h3,h4,h5,h6 {
-  margin: 0 0 10px 0;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: $base-line-height;
-  text-rendering: optimizelegibility; // Fix the character spacing for headings
+@if ($typography-reset) {
+  a, abbr, acronym, address, 
+  b, big, cite, code, del, em, 
+  i, ins, kbd, mark, output, 
+  q, ruby, s, samp, small, 
+  strong, sub, sup, div,
+  time, u, dfn, dl, 
+  dt, dd, ol, ul, li, blockquote, 
+  h1, h2, h3, h4, h5, h6, p, pre,
+  table, caption, tbody, tfoot, 
+  thead, tr, th, td, canvas, 
+  embed, figure, iframe, 
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-weight: $paragraph-font-weight;
+    font-size: $paragraph-font-size;
+    margin-bottom: px-to-rems(20);
+    text-rendering: $paragraph-text-rendering;
+    line-height: $paragraph-line-height;
+  }
+
+  a {
+    color: $anchor-color;
+    line-height: inherit;
+    text-decoration: $anchor-text-decoration;
+
+    &:hover,
+    &:focus {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+
+    img {
+      border: none;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: $headings-margin-top 0 $headings-margin-bottom 0;
+    font-family: inherit;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    text-rendering: $headings-text-rendering; // Fix the character spacing for headings
+    font-style: normal;
+    color: $headings-color;
+
+    small {
+      font-weight: normal;
+      line-height: 0;
+      color: $small-color;
+      font-size: $small-font-size;
+    }
+  }
+
+  h1 { font-size: $h1-font-size - px-to-rems(8); } 
+  h2 { font-size: $h2-font-size - px-to-rems(8); } 
+  h3 { font-size: $h3-font-size - px-to-rems(3); } 
+  h4 { font-size: $h4-font-size - px-to-rems(3); } 
+  h5 { font-size: $h5-font-size; } 
+  h6 { font-size: $h6-font-size; } 
+
+  hr {
+    clear: both;
+    margin: $hr-margin-top 0 $hr-margin-bottom;
+    height: 0;
+    border: $hr-style $hr-color;
+    border-width: $hr-border-width 0 0;
+  }
+
+  //Emphasis & miscelaneous
+
+  em, strong, b, small {
+    line-height: inherit;
+  }
+
+  em { 
+    font-style: italic; 
+  }
+
+  strong, b {
+    font-weight: bold; 
+  }
 
   small {
-    font-weight: normal;
-    line-height: 1;
-    color: $light-gray;
+    font-size: $small-font-size;
   }
-}
 
-.light {
-  font-weight: 300;
-  color: $light-color;
-}
-
-/* Headers definition */
-/* ------------------ */
-
-h1, h2, h3 { 
-  line-height: $base-line-height * 2;
-}
-
-h4 {
-  line-height: $base-line-height + 10;
-}
-
-h1 { 
-  font-size: $base-font-size * 2.75; // ~44px
-} 
-
-h2 { 
-  font-size: $base-font-size * 2.25; // ~36px
-} 
-
-h3 { 
-  font-size: $base-font-size * 1.75; // ~28px
-} 
-
-h4 { 
-  font-size: $base-font-size * 1.25; // ~20px
-}
-
-h5 {
-  font-size: $base-font-size; // 16px
-}
-
-h6 { 
-  font-size: $base-font-size * 0.85; // ~13.6px
-} 
-
-/* Lists */
-/* ----- */
-
-// Unordered and Ordered lists
-ul, ol {
-  padding: 0;
-  margin: 0 0 $base-line-height / 2 25px;
-}
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-}
-
-li {
-  line-height: $base-line-height;
-}
-
-// Remove default list styles
-ul.unstyled,
-ol.unstyled {
-  margin-left: 0;
-  list-style: none;
-}
-
-// Single-line list items
-ul.inline,
-ol.inline {
-  margin-left: 0;
-  list-style: none;
-  margin-bottom: 10px;
-  margin-top: 10px;
-
-   li {
-    display: inline-block;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    a.btn {
-      color: #FFF;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    a { 
-      color: $link-color;
-
-      &.active {
-        background: #efefef;
-        color: $muted-color;
-        padding: 10px;
-        @include border-radius(3px);
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  //Lists
+  ul, 
+  ol,
+  dl {
+    font-size: $list-font-size;
+    padding: 0;
+    margin-bottom: $list-margin-bottom;
+    line-height: $list-line-height;
   }
-}
 
-// Description Lists
-dl {
-  margin-bottom: $base-line-height;
-}
-dt,
-dd {
-  line-height: $base-line-height;
-}
-dt {
-  font-weight: bold;
-}
-dd {
-  margin-left: $base-line-height / 2;
-}
-// Horizontal layout (like forms)
-.dl-horizontal {
-  @include clearfix(); // Ensure dl clears floats if empty dd elements present
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    margin-bottom: 0;
+  }
+
+  // Remove default list styles
+  ul.no-style,
+  ol.no-style {
+    margin-left: 0;
+    list-style: none;
+  }
+
+  // Description Lists
+  dl {
+    margin-bottom: $data-list-margin-bottom;
+  }
+  dt,
+  dd {
+    line-height: $data-list-line-height;
+  }
   dt {
-    float: left;
-    clear: left;
-    text-align: right;
+    font-weight: $data-list-font-weight;
   }
-}
+  dd {
+    margin-left: $data-list-data-margin-left / 2;
+  }
+  // Horizontal layout (like forms)
+  .dl-horizontal {
+    @include clearfix(); // Ensure dl clears floats if empty dd elements present
+    dt {
+      float: left;
+      clear: left;
+      text-align: right;
+    }
+  }
 
-//Inline code
-.code {
-  padding: 2px 4px;
-  color: $code-color;
-  white-space: nowrap;
-  background-color: $code-bg;
-  font-weight: normal;
-  font-size: $base-font-size;
-  @include border-radius(3px);
-}
+  //Blockquote
+  blockquote {
+    color: $blockquote-color;
+    font-style: italic;
+    line-height: $blockquote-line-height;
+    border-left: $blockquote-border-width $blockquote-border-style $blockquote-border-color;
+    padding: $blockquote-padding-top 0 $blockquote-padding-bottom $blockquote-padding-left;
+    background: $blockquote-background;
 
-i.nomargin {
-  margin-right: 0 !important;
-}
+    p {
+      margin-bottom: 0;
+    }
+  }
 
-//Uppercase
-.text-uppercase {
-  text-transform: uppercase;
+  @media #{$medium-screen-range} {
+    h1 { font-size: $h1-font-size; }
+    h2 { font-size: $h2-font-size; }
+    h3 { font-size: $h3-font-size; }
+    h4 { font-size: $h4-font-size; }
+  }
 }
