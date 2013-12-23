@@ -1,60 +1,92 @@
-/*------------------------------------*\
-    $GRID
-\*------------------------------------*/
-/**
- * Grid definition based on the bootstrap grid. 
- * http://twitter.github.io/bootstrap/scaffolding.html#gridSystem
- * 
- * Designed and built @kurenn based
- */
+//Grid
+
+// @compass dependencies
+@import "compass/css3";
+
+//
+//@variables
+//
+
+//Grid settings
+$number-of-columns: 12 !default;
+$column-separation-factor: 0.1833 !default;
+
+//Row config
+$row-text-rendering: optimizespeed !default;
+$row-next-to-row-separation: 0.14285714rem !default;
+
+//Columns settings
+$col-padding: 0.57142857rem !default;
+
+//Media
+$grid-max-width: 54.85714286rem !default;
+$grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 
 
-// Reset utility classes due to specificity
-[class*="col-"].hide,
-.row [class*="col-"].hide {
-  display: none;
+//
+//@mixin
+// We use this to add flex box support
+//
+@mixin flexbox-display {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
-[class*="col-"].pull-right,
-.row [class*="col-"].pull-right {
-  float: right;
+//
+//@mixin
+// We use this to add flex box flow support 
+//
+@mixin flexbox-flow {
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
-.row {
-  text-rendering: optimizespeed;
-  @include clearfix();
+//
+//@mixin
+//
+@mixin grid-columns($columns: $number-of-columns) {
+  $column-width: 100 / $columns;
+  $column-separation: 0.1833;
 
-  [class*="col-"]:first-child {
-    margin-left: 0px;
+  
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      $current-width: ($column-width * $i) - $column-separation;
+      width: percentage($current-width / 100);
+      margin-left: percentage($column-separation / 100);
+    }
   }
 }
 
+.row {
+  @include flexbox-display;
+  @include flexbox-flow;
+  text-rendering: $row-text-rendering;
+}
+
+//Separation between rows
 .row + .row {
-  margin-top: 2px;
+  margin-top: $row-next-to-row-separation;
 }
 
 //Borders and paddings are applied inside the div element
 //This prevents the columns to stack by a border or padding
 [class*="col-"] {
-  zoom: 1;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
-  text-rendering: auto;
-  float: left;
-  padding: 8px;
+  padding: $col-padding;
 }
 
-@include build-column-grids;
+/*@include build-column-grids;*/
+@include grid-columns;
 
-@media (max-width: 767px) {
+@media #{$grid-max-width-media} {
   .row > [class *= "col-"] {
     width: 100%;
     margin-left: 0;
     margin-bottom: 2px;
-  }
-
-  .container-center {
-    width: 95%;
   }
 }
