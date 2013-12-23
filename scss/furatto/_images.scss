@@ -4,6 +4,16 @@
 //@variables
 //
 
+//Images variations
+$img-radius: 0.3rem;
+$img-round: 50rem;
+
+$img-polaroid-padding: 0.28571429rem;
+$img-polaroid-background: #FFF;
+$img-polaroid-border-width: 0.07142857rem;
+$img-polaroid-border-style: solid;
+$img-polaroid-border-color: rgba(#000, 0.2);
+
 //
 //@mixin
 //
@@ -26,19 +36,19 @@ img {
 
   //Circular images
   &.img-circular {
-    @include border-radius(50%);
+    @include border-radius($img-round);
   }
 
   //Well images
   &.img-radius {
-    @include border-radius(2%);
+    @include border-radius($img-radius);
   }
 
   //Images with borders
   &.img-polaroid {
-    padding: 4px;
-    border: 1px solid rgba(#000, 0.2);
-    background: #FFF;
+    padding: $img-polaroid-padding;
+    border: $img-polaroid-border-width $img-polaroid-border-style $img-polaroid-border-color;
+    background: $img-polaroid-background;
   }
 
 }
