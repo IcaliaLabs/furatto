@@ -67,6 +67,11 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
   @include flexbox-display;
   @include flexbox-flow;
   text-rendering: $row-text-rendering;
+
+  div, p {
+    display: block;
+    width: 100%;
+  }
 }
 
 //Separation between rows
