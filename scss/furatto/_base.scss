@@ -9,6 +9,12 @@ $body-font-color: #333 !default;
 $base-link-color: #0088cc !default;
 $base-font-weight: 500 !default;
 
+//Text variations
+$muted-text-color: #555 !default;
+$warning-text-color: #d35400 !default;
+$error-text-color: #c0392b !default;
+$success-text-color: #27ae60 !default;
+
 *, 
 *:after, 
 *:before { 
@@ -32,9 +38,6 @@ body {
   line-height: $base-line-height;
 }
 
-a {
-  color: $base-link-color;
-}
 
 img,
 embed,
@@ -58,11 +61,6 @@ object {
   display: none;
 }
 
-.help-block {
-  color: #666;
-  display: block;
-}
-
 .pull-right {
   float: right;
 }
@@ -71,20 +69,39 @@ object {
   float: left;
 }
 
-hr {
-  clear: both;
-  margin: 1.25em 0 1.875em;
-  height: 0;
-  border: solid $hr-color;
-  border-width: 1px 0 0;
+//Text helpful classes
+.muted {
+  color: $muted-text-color;
 }
 
-/* Blockquote */
-/*----------------------------*/
-blockquote {
-  color: $blockquote-color;
-  font-style: italic;
-  line-height: 1.8em;
-  border-left: 5px solid $blockquote-border-color;
-  padding-left: 1.5em
+.text-warning {
+  color: $warning-text-color;
+}
+
+.text-error {
+  color: $error-text-color;
+}
+
+.text-success {
+  color: $success-text-color;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
