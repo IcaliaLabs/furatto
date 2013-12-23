@@ -21,6 +21,7 @@ $paragraph-text-rendering: optimizeLegibility !default;
 $list-font-size: $paragraph-font-size !default;
 $list-line-height: $paragraph-line-height !default;
 $list-margin-bottom: px-to-rems(20) !default;
+$list-margin-left: px-to-rems(15) !default;
 
 //Data lists
 $data-list-margin-bottom: px-to-rems(20) !default;
@@ -81,8 +82,7 @@ $medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-
   i, ins, kbd, mark, output, 
   q, ruby, s, samp, small, 
   strong, sub, sup, div,
-  time, u, dfn, dl, 
-  dt, dd, ol, ul, li, blockquote, 
+  time, u, dfn, 
   h1, h2, h3, h4, h5, h6, p, pre,
   table, caption, tbody, tfoot, 
   thead, tr, th, td, canvas, 
@@ -172,6 +172,7 @@ $medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-
     font-size: $list-font-size;
     padding: 0;
     margin-bottom: $list-margin-bottom;
+    margin-left: $list-margin-left;
     line-height: $list-line-height;
   }
 
