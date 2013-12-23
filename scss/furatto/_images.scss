@@ -5,14 +5,14 @@
 //
 
 //Images variations
-$img-radius: 0.3rem;
-$img-round: 50rem;
+$img-radius: 0.3rem !default;
+$img-round: 50rem !default;
 
-$img-polaroid-padding: 0.28571429rem;
-$img-polaroid-background: #FFF;
-$img-polaroid-border-width: 0.07142857rem;
-$img-polaroid-border-style: solid;
-$img-polaroid-border-color: rgba(#000, 0.2);
+$img-polaroid-padding: 0.28571429rem !default;
+$img-polaroid-background: #FFF !default;
+$img-polaroid-border-width: 0.07142857rem !default;
+$img-polaroid-border-style: solid !default;
+$img-polaroid-border-color: rgba(#000, 0.2) !default;
 
 //
 //@mixin
