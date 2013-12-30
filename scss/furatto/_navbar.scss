@@ -8,209 +8,177 @@
  * Designed and built @kurenn  
  */
 
-.navbar {
-  overflow: visible;
-  margin-bottom: $base-line-height;
-  font-weight: lighter;
+//
+//@variables
+//
 
-  .menu-trigger {
-    display: none;
-  } 
+//Navigation general settings
+$navigation-bar-background: #191818 !default;
+$navigation-bar-height: 45px !default;
+$navigation-margin-bottom: 10px !default;
+$navigation-bar-color: #FFF !default;
+$navigation-bar-font-weight: 300 !default;
+$navigation-font-size: 0.85714286rem !default;
+$navigation-fixed-z-index: 1030 !default;
 
-  /*Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar*/
-  *position: relative;
-  *z-index: 2;
-}
+//Brand section
+$navigation-bar-brand-section-font-size: 1.14285714rem !default;
 
-// Inner for background effects
-// Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
-.navbar-inner {
-  min-height: $navbar-height;
-  padding-left:  20px;
-  padding-right: 20px;
-  background: $navbar-bg-color;
+//Navigation links settings
+$navigation-bar-link-color: #FFF !default;
+$navigation-bar-link-hover-color: #999 !default;
+$navigation-bar-link-hover-decoration: none !default;
 
-  /*Prevent floats from breaking the navbar*/
-  @include clearfix;
-}
+//Buttons settings
+$navigation-bar-button-font-size: 0.75rem !default;
+$navigation-bar-button-height: $navigation-bar-height - 10 !default;
+$navigation-bar-button-margin-left: 0.5rem !default;
+$navigation-bar-button-margin-right: 0.5rem !default;
+$navigation-bar-menu-color: #FFF !default;
 
-// Override the default collapsed state
-.nav-collapse.collapse {
-  height: auto;
-  overflow: visible;
-}
+//Media queries
+$navigation-bar-collapse-query: "only screen and (max-width: 40.063em)" !default;
 
-// Set width to auto for default container
-// We then reset it for fixed navbars in the #gridSystem mixin
-.navbar .container {
-  width: auto;
-}
+//Icons settings
+$navigation-bar-icon-margin-right: 5px !default;
 
-.navbar .nav {
-  padding-left: 0px;
+//Text settings
+$navigation-bar-text-color: #CCC !default;
 
-  [class^="icon-"], [class*=" icon-"] {
-    margin-right: 5px;
-  }
-}
+//Active items
+$navigation-bar-active-color: #FFF !default;
+$navigation-bar-active-hover-color: darken($navigation-bar-active-color, 5%) !default;
 
-.navbar .brand {
-  float: left;
-  display: block;
-  margin-right: 20px;
-  font-weight: 500;
+//Menu toggle
+$navigation-bar-menu-toggle-text-transform: uppercase !default;
 
-  /*Vertically center the text given $navbar-height*/
-  padding: (($navbar-height - $base-line-height) / 2) 20px (($navbar-height - $base-line-height) / 2);
+.navigation-bar {
+  background: $navigation-bar-background;
+  height: $navigation-bar-height;
+  margin-bottom: $navigation-margin-bottom;
+  overflow: hidden;
+  font-weight: $navigation-bar-font-weight;
 
-  /*margin-left: -20px; [>negative indent to left-align the text down the page<]*/
-  font-size: 20px;
-  color: $navbar-brand-color;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-}
-
-// Plain text in topbar
-.navbar-text {
-  margin-bottom: 0;
-  line-height: $navbar-height;
-  color: $navbar-text;
-}
-
-// Links
-.navbar .nav > li > a {
-  float: none;
-  /*Vertically center the text given @navbarHeight*/
-  padding: (($navbar-height - $base-line-height) / 2) 15px (($navbar-height - $base-line-height) / 2);
-  color: $navbar-text;
-  text-decoration: none;
-}
-
-// Active nav items
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-  color: $navbar-link-color-active;
-  text-decoration: none;
-  background: lighten($navbar-bg-color, 10%);
-}
-
-// Navbar button for toggling navbar items in responsive layouts
-// These definitions need to come after '.navbar .btn'
-.navbar .btn-navbar {
-  padding: 7px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.navbar .navbar-text {
-  margin: 0;
-  display: inline-block;
-}
-
-//Navigation
-.navbar .nav {
-  position: relative;
-  left: 0;
-  display: block;
-  float: left;
-  margin: 0 10px 0 0;
-}
-
-.navbar .nav.pull-right {
-  float: right; /*redeclare due to specificity*/
-  margin-right: 0; /*remove margin on float right nav*/
-}
-
-.navbar .nav > li {
-  float: left;
-}
-
-// Dividers in navbar
-.divider-vertical {
-  height: $navbar-height; /*Fix for the navbar*/
-  margin: 0 9px;
-  border-left: 1px solid $navbar-border;
-}
-
-//Static Navbar
-.navbar-static-top {
-  position: static;
-  margin-bottom: 0; /*remove 18px margin for default navbar*/
-}
-
-//Fixed navbar
-
-//Navbar fixed top/bottom shared styles
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  margin-bottom: 0; /*remove 18px margin for default navbar*/
-}
-
-//Fixed to top
-.navbar-fixed-top {
-  top: 0;
-}
-
-//Fixed to bottom
-.navbar-fixed-bottom {
-  bottom: 0;
-}
-
-//Search navbar form
-.navbar-form {
-  vertical-align: middle;
-  padding: 10px 15px;
-  margin: 0;
-
-  .form-fields {
+  // Plain text in topbar
+  .navigation-bar-text {
     margin: 0;
+    line-height: $navigation-bar-height;
+    color: $navigation-bar-text-color;
     display: inline-block;
-    vertical-align: middle;
+    font-size: $navigation-font-size;
+  }
 
-    input {
-      margin: 0;
+  .btn {
+    font-size: $navigation-bar-button-font-size;
+    height: $navigation-bar-button-height;
+    line-height: $navigation-bar-button-height;
+    margin-left: $navigation-bar-button-margin-left;
+    margin-right: $navigation-bar-button-margin-right;
+
+    &:hover {
+      color: #FFF;
     }
   }
-  input {
+
+  [class^="icon-"], [class*=" icon-"] {
+    margin-right: $navigation-bar-icon-margin-right;
+  }
+
+  ul {
     margin: 0;
+    list-style: none;
+    font-size: $navigation-font-size;
+    float: left;
+
+
+    li {
+      float: left;
+
+      &.active > a {
+        color: $navigation-bar-active-color;
+        background: darken($navigation-bar-background, 10%);
+
+        &:hover {
+          color: $navigation-bar-active-hover-color;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 0 $navigation-bar-height / 3;
+        height: $navigation-bar-height;
+        line-height: $navigation-bar-height;
+        color: $navigation-bar-link-color;
+
+        &:hover { 
+          text-decoration: $navigation-bar-link-hover-decoration; 
+          color: $navigation-bar-link-hover-color;
+        }
+      }
+
+      &.divider {
+        height: $navigation-bar-height; 
+        border-left: 1px solid scale-color($navigation-bar-background, $lightness: 13%);
+      }
+    }
   }
+
+  ul.pull-right {
+    float: right;
+  }
+
+  .brand-section {
+    font-size: $navigation-bar-brand-section-font-size; 
+    position: relative;
+    li {
+      padding: 0;
+
+      &.menu-toggle {
+        display: none;
+        text-transform: $navigation-bar-menu-toggle-text-transform;
+        font-size: $navigation-font-size;
+        position: relative;
+        text-indent: -48px;
+        right: 20px;
+        width: 34px;
+
+        a:after {
+          content: '';
+          width: 16px;
+          height: 0;
+          position: absolute;
+          right: 0;
+          top: 6px;
+          @include box-shadow(0 10px 0 1px $navigation-bar-menu-color,
+                              0 16px 0 1px $navigation-bar-menu-color,
+                              0 22px 0 1px $navigation-bar-menu-color);
+        }
+      }
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $navigation-fixed-z-index;
+  }
+
 }
 
-/* Navbar Inverse */
-/* -------------- */
+@media #{$navigation-bar-collapse-query} {
+  .navigation-bar {
+    .brand-section {
+      width: 100%;
+      font-size: $navigation-bar-brand-section-font-size - 0.15; 
+      li {
 
-.navbar-inverse {
-  border: 1px solid #BBB;
-
-  .navbar-inner {
-    background: $navbar-inverse-bg-color;
+        &.menu-toggle {
+          display: block;
+          float: right;
+        }
+      }
+    }
   }
-
-  .nav > li > a {
-    font-weight: 400;
-    color: $navbar-inverse-text;
-  }
-
-  .brand {
-    color: $navbar-inverse-text;
-    font-weight: 400;
-  }
-
-  .divider-vertical {
-    border-left: 1px solid #EEE;
-  }
-
-  .navbar-text {
-    color: #0088cc;
-  }
-  
 }
-
