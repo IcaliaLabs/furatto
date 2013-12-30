@@ -1,0 +1,82 @@
+//Button groups
+
+//
+//@variables
+//
+
+
+
+//Compass dependencies
+@import "compass/css3/border-radius";
+
+//Variables
+$sm-device-width: 34.28571429rem !default;
+
+//Media queries
+$button-group-small-media-query: "only screen and (max-width: #{$sm-device-width})" !default;
+
+//Variations
+$button-radius: 0.21428571rem !default;
+$button-pill-radius: 71.42857143rem !default;
+
+
+.btn-group {
+  list-style: none;
+  margin: 0; 
+
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  li {
+    float: left;
+
+    .btn {
+      [class*="icon-"] {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &.btn-group-pill {
+    li:first-child .btn {
+      @include border-top-left-radius($button-pill-radius);
+      @include border-bottom-left-radius($button-pill-radius);
+    }
+
+    li:last-child .btn {
+      @include border-top-right-radius($button-pill-radius);
+      @include border-bottom-right-radius($button-pill-radius);
+    }
+  }
+
+  &.btn-group-radius {
+    li:first-child .btn {
+      @include border-top-left-radius($button-radius);
+      @include border-bottom-left-radius($button-radius);
+    }
+
+    li:last-child .btn {
+      @include border-top-right-radius($button-radius);
+      @include border-bottom-right-radius($button-radius);
+    }
+  }
+}
+
+@media #{$button-group-small-media-query} {
+  .btn-group {
+    li {
+      float: none;
+      display: block;
+
+      .btn {
+        display: block;
+      }
+    }
+  }
+}
