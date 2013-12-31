@@ -1,104 +1,124 @@
-/*------------------------------------*\
-    $NAV
-\*------------------------------------*/
-/**
- * Basic button structural styling. 
- * 
- * Designed and built @kurenn  
- */
+//Nav
 
-.nav {
-  margin-left: 0;
-  margin-bottom: $base-line-height;
-  list-style: none;
-}
+@import "compass/css3";
 
-// Make links block level
-.nav > li > a {
+//
+//@variables
+//
+
+//Navigation settings
+$navigation-style-type: none !default;
+$navigation-list-position: inside !default;
+$navigation-padding: 1rem 0 !default;
+
+//Navigation list items
+$navigation-list-item-font-size: 0.9rem !default;
+$navigation-list-item-margin-bottom: 0.1 !default;
+$navigation-list-item-active-color: #444 !default;
+$navigation-list-link-hover-color: $navigation-list-item-active-color !default;
+$navigation-list-link-hover-text-decoration: none !default;
+$navigation-list-link-padding: 0.333rem 0 !default;
+
+//Navigation list header
+$navigation-header-text-transform: uppercase !default;
+$navigation-header-padding: 0.333rem 0 !default;
+$navigation-header-color: #333 !default;
+$navigation-header-font-size: 0.85714286rem !default;
+
+//Navigation divider
+$navigation-divider-border-width: 1px !default;
+$navigation-divider-border-color: #EFEFEF !default;
+$navigation-divider-margin: 8px 0 !default;
+
+//Navigation variations
+$navigation-inline-margin-bottom: 0.55rem !default;
+$navigation-inline-list-item-margin-left: 0.8rem !default;
+$navigation-inline-active-background: #1abc9c !default;
+$navigation-inline-active-radius: 0.14285714rem !default;
+$navigation-inline-active-color: #FFF !default;
+$navigation-inline-active-padding: 0.21428571rem !default;
+$navigation-inline-link-color: #999 !default;
+$navigation-inline-link-hover: #08C !default;
+
+.navigation {
+  margin: 0;
   display: block;
-}
+  list-style-type: $navigation-style-type;
+  list-style-position: $navigation-list-position;
+  padding: $navigation-padding;
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-  text-decoration: none;
-}
+  li {
+    font-size: $navigation-list-item-font-size;
+    margin-bottom: $navigation-list-item-margin-bottom;
 
-// Prevent IE8 from misplacing imgs
-// See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
-.nav > li > a > img {
-  max-width: none;
-}
-
-// Redeclare pull classes because of specifity
-.nav > .pull-right {
-  float: right;
-}
-
-// DISABLED STATES
-// ---------------
-
-// Gray out text
-.nav > .disabled > a {
-  color: $light-gray;
-}
-// Nuke hover/focus effects
-.nav > .disabled > a:hover,
-.nav > .disabled > a:focus {
-  text-decoration: none;
-  background-color: transparent;
-  cursor: default;
-}
-
-//Bordered navigation
-.nav {
-  &.nav-bordered {
-    background: #efefef;
-    border: 1px solid #b7b7b7;
-    font-size: 16px;
-
-    li {
-      &:hover {
-        background: #e2e2e2;
-      }
-      a {
-        padding: 0.9375em;
-        color: #666;
-      }
-
-      &.nav-header {
-        color: #666;
-        padding: 0.9375em;
-        border-bottom: 1px solid #b7b7b7;
-        font-weight: bold;
-
-        &:hover {
-          background: #efefef;
-        }
-      }
-
-      ul {
-        @extend .nav;
-        display: none;
-        background: $white;
-        margin-bottom: 0px;
-
-        li {
-          padding-left: 0.8em;
-          &:hover {
-            background: $white;
-          }
-          a {
-            color: $link-color;
-            padding: 0.6em;
-          }
-        }
-      }
+    &.active,
+    &.active a {
+      color: $navigation-list-item-active-color;
+      cursor: text;
     }
 
-    li.nav-divider {
-      border-bottom: 1px solid #b7b7b7;
-      margin: 3px auto;
-      background: #b7b7b7;
+    &.header {
+      text-transform: $navigation-header-text-transform;
+      padding: $navigation-header-padding;
+      color: $navigation-header-color;
+      font-size: $navigation-header-font-size;
+    }
+
+    &.divider {
+      border-bottom: $navigation-divider-border-width solid $navigation-divider-border-color;
+      margin: $navigation-divider-margin;
+      height: 0;
+    }
+    
+    a {
+      display: block;
+      padding: $navigation-list-link-padding;
+
+      &:hover,
+      &:focus {
+        color: $navigation-list-link-hover-color;
+        text-decoration: $navigation-list-link-hover-text-decoration;
+      }
     }
   }
+
+  &.inline {
+    overflow: hidden;
+    margin-bottom: $navigation-inline-margin-bottom;
+
+    li {
+      float: left;
+      margin-left:$navigation-inline-list-item-margin-left;
+
+      &.divider {
+        display: none;
+      }
+
+      &.active,
+      &.active > a {
+        background: $navigation-inline-active-background;
+        @include border-radius($navigation-inline-active-radius); 
+        color: $navigation-inline-active-color;
+        padding: $navigation-inline-active-padding;
+
+        &:hover,
+        &:focus {
+          color: $navigation-inline-active-color;
+        }
+      }
+
+      &, & a {
+        color: $navigation-inline-link-color;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $navigation-inline-link-hover;
+        }
+      }
+
+    }
+  }
+
 }
