@@ -1,24 +1,108 @@
-/*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
-/**
- * Basic textfield structural styling. 
- * 
- * Designed and built @kurenn  
- */
+//Forms
+
+//
+//@variables
+//
+
+@import "compass/css3";
+
+//Form Label
+$form-label-display: block !default;
+$form-label-cursor: pointer !default;
+$form-label-font-size: 0.85rem !default;
+$form-label-color: scale-color(#000, $lightness: 30%) !default;
+$form-label-font-weight: 300 !default;
+$form-label-margin-bottom: 0.35714286rem !default;
+
+//Form inputs
+$form-input-radius: 0 !default;
+$form-input-height: 2rem !default;
+$form-input-color: rgba(0,0,0, 0.75) !default;
+$form-input-font-size: 0.85714286rem !default;
+$form-input-padding: 0.33rem !default;
+$form-input-margin-bottom: 0.71428571rem !default;
+$form-input-box-shadow: inset 0 1px 2px rgba(#ccc,0.35) !default;
+$form-input-focus-box-shadow: 0 0 5px rgba(#ccc, 1) !default;
+$form-input-focus-border-color: #999 !default;
+$form-input-background-color: #FFF !default;
+$form-input-border-color: #CCC !default;
+$form-input-disabled-color: #ECF0F1 !default;
+$form-input-disabled-background-color: #EEE !default;
+$form-input-mini-width: 20% !default;
+$form-input-small-width: $form-input-mini-width * 2 !default; 
+$form-input-medium-width: $form-input-mini-width * 3 !default;
+$form-input-large-width: $form-input-mini-width * 4 !default;
+
+//Validation states
+$form-label-success-color: #27ae60 !default;
+$form-label-error-color: #e74c3c !default;
+$form-input-success-border-color: $form-label-success-color !default;
+$form-input-error-border-color: $form-label-error-color !default;
+
+//Help hints
+$form-help-hint-color: #FFF !default;
+$form-help-hint-font-size: 0.71428571rem !default;
+$form-help-hint-font-style: italic !default;
+$form-help-hint-padding: 0.33rem !default;
+
+//Selects
+$form-select-background-color: #FFF !default;
+$form-select-border-style: solid !default;
+$form-select-border-width: 1px !default;
+$form-select-border-color: #CCC !default;
+$form-select-color: #555 !default;
+$form-select-font-size: 0.9rem !default;
+$form-select-hover-background: #F7F7F7 !default;
+$form-select-padding: 0.33rem 0.43rem !default;
+$form-select-radius: 2px !default;
+
+$include-form-select-transition: true !default;
+
+$form-input-media-query: "only screen and (max-width: #{$screen-xs})" !default;
 
 form {
-  margin: 0 0 $base-line-height;
+  display: block;
+
+
 }
 
 //Labels
 label {
-  display: block;
-  margin-bottom: 5px;
-  cursor: pointer;
+  display: $form-label-display;
+  margin-bottom: $form-label-margin-bottom;
+  cursor: $form-label-cursor;
+  font-size: $form-label-font-size;
+  font-weight: $form-label-font-weight;
+
+
+  &.error {
+    color: $form-label-error-color; 
+  }
+
+  &.success {
+    color: $form-label-success-color; 
+  }
 }
 
-//Inputs
+//Help hints
+.help-hint {
+  display: block;
+  margin-bottom: $form-input-margin-bottom;
+  color: $form-help-hint-color;
+  font-size: $form-help-hint-font-size;
+  padding: $form-help-hint-padding;
+  font-style: $form-help-hint-font-style;
+
+  &.error {
+    background: lighten($form-label-error-color, 6%); 
+  }
+
+  &.success {
+    background: lighten($form-label-success-color, 6%); 
+  }
+}
+
+//Inputs and textarea definition
 textarea,
 input[type="text"],
 input[type="password"],
@@ -34,274 +118,130 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-.uneditable-input {
-  display: inline-block;
-  height: $base-line-height;
-  padding-left: 8px;
-  height: 30px;
-  margin-bottom: $base-line-height / 2;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  color: $input-color;
-  @include border-radius($input-border-radius);
-  vertical-align: middle;
+{
+  @include border-radius($form-input-radius);
+  @include box-shadow($form-input-box-shadow);
+  @include single-transition(all 0.1s ease-in-out);
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: $form-input-height;
+  color: $form-input-color;
+  font-size: $form-input-font-size;
+  padding: $form-input-padding;
+  margin-bottom: $form-input-margin-bottom;
+  background-color: $form-input-background-color;
+  border: 1px solid $form-input-border-color;
+
+  //Focus state
+  &:focus {
+    @include box-shadow($form-input-focus-box-shadow);
+    border-color: rgba($form-input-focus-border-color, 0.8);
+    outline: 0;
+    background: darken($form-input-background-color, 2%);
+  }
+
+  //Disabled inputs
+  &[disabled] {
+    color: $form-input-disabled-color;
+    cursor: not-allowed;
+    overflow: hidden;
+    white-space: nowrap;
+    background: $form-input-disabled-background-color;
+  }
+
+  &.mini {
+    width: $form-input-mini-width; 
+  }
+
+  &.input-small { 
+    width: $form-input-small-width; 
+  }
+
+  &.input-medium { 
+    width: $form-input-medium-width; 
+  }
+
+  &.input-large { 
+    width: $form-input-large-width; 
+  }
+
+  &.input-block {
+    width: 100%;
+  }
+
+  &.success,
+  &.error {
+    margin-bottom: 0; 
+  }
+
+  &.success { 
+    border: 1px solid $form-input-success-border-color; 
+    color: $form-label-success-color;
+  }
+  &.error { 
+    border: 1px solid $form-input-error-border-color; 
+    color: $form-label-error-color;
+  }
 }
 
-//Reset textarea height because of the rows
 textarea {
   height: auto;
 }
 
-//Text inputs
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-  background-color: $input-bg;
-  border: 1px solid $input-border-color;
+select {
+  @include border-radius(0);
+  width: 100%;
+  display: block;
+  background: $form-select-background-color
+        url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat 99% center;
+  ; 
+  //Firefox fix
+  text-indent: 0.01px;
+  text-overflow: "";
+  -moz-appearance: none;
 
-  /*Focus state*/
-  &:focus {
-    border-color: rgba($input-focus-color,.8);
-    outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
-    @include single-transition(border, 0.2s, linear)
+  -webkit-appearance: none;
+  padding: $form-select-padding;
+  border: $form-select-border-width $form-select-border-style $form-select-border-color;
+  margin-bottom: $form-input-margin-bottom;
+  outline: none;
+  color: $form-select-color;
+  font-size: $form-select-font-size;
+
+  @if $include-form-select-transition {
+    @include single-transition(all 0.3s linear);
+  }
+
+  &.radius { @include border-radius($form-select-radius); }
+
+  &:hover {
+    background: $form-select-hover-background
+    url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat 99% center; 
   }
 }
 
-//Input sizes
-.input-mini { 
-  width: 16.667%; 
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"] {
+  margin-bottom: $form-input-margin-bottom; 
 }
 
-.input-small { 
-  width: 33.34%; 
+//Displays the label inline
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.21428571rem;
 }
 
-.input-medium { 
-  width: 50%; 
-}
-
-.input-large { 
-  width: 66.668%; 
-}
-
-.input-xlarge {
-  width: 83.335%; 
-}
-
-.input-block {
+input[type="file"] {
   width: 100%;
 }
 
-/* Inline Forms */
-/* ------------ */
-.inline-form,
-.horizontal-form {
+@media #{$form-input-media-query} {
   input,
-  textarea,
-  select,
-  .form-fields,
-  .checkbox-fields {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-
-  .form-fields {
-    margin-top: 4px;
-  }
-
-  label {
-    display: inline-block;
-  }
-
-  // Re-hide hidden elements due to specifity
-  .hide {
-    display: none;
-  }
-}
-
-/* Horizontal form */
-/* --------------- */
-.horizontal-form {
-  .form-fields {
-    display: block;
-    margin-bottom: 10px;
-
-    label {
-      width: 160px;
-      margin-right: 20px;
-      text-align: right;
-    }
-  }
-
-  .form-actions {
-    margin-left: 184px;
-  }
-}
-
-/* Centered forms */
-/* -------------- */
-.centered-form {
-  @include center-block;
-}
-
-/* Level up the label on for checkboxes */
-/* ------------------------------------ */
-label.checkbox-label {
-  display: inline-block;
-  position: relative;
-  top: -4px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-label.radiobutton-label {
-  @extend .checkbox-label;
-}
-
-label {
-  @include touch-callout;
-}
-
-/* Uneditable inputs */
-/* ----------------- */
-
-input[disabled],
-textarea[disabled] {
-  color: $light-gray;
-  cursor: not-allowed;
-  overflow: hidden;
-  white-space: nowrap;
-  background: #EEE;
-}
-
-/* Input states */
-/* ------------ */
-.form-fields-success{
-
-  .form-fields {
-    color: $dark-green;
-  }
-
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="color"]  {
-    color: $dark-green;
-    border: 1px solid $dark-green;
-  }
-}
-.form-fields-warning{
-  .form-fields {
-    color: $dark-orange;
-  }
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="color"]  {
-    color: $dark-orange;
-    border: 1px solid $dark-orange;
-  }
-}
-.form-fields-error{
-  .form-fields {
-    color: $dark-red;
-  }
-  
-   textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="color"]  {
-    color: $dark-red;
-    border: 1px solid $dark-red;
-  }
-}
-
-/* Form controls */
-/* ------------- */
-
-.form-fields {
-  margin: 8px 0;
-
-  .help-hint {
-    display: inline-block;
-  }
-
-
-  label {
-    font-weight: bold;
-  }
-}
-
-.checkbox-fields {
-  vertical-align: middle;
-  margin: 8px 0 15px 0;
-
-
-  input[type="checkbox"] {
-    margin-right: 5px;
-  }
-}
-
-
-@media only screen and (max-width: 768px) {
-  .horizontal-form {
-    .form-fields {
-      label {
-        display: block;
-        text-align: left;
-      }
-    }
-
-    .form-actions {
-      margin-left: 0;
-    }
+  textarea {
+    width: 100% !important;
   }
 }
