@@ -51,14 +51,13 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 //
 @mixin grid-columns($columns: $number-of-columns) {
   $column-width: 100 / $columns;
-  $column-separation: 0.1833;
 
   
   @for $i from 1 through $columns {
     .col-#{$i} {
-      $current-width: ($column-width * $i) - $column-separation;
+      $current-width: ($column-width * $i) - $column-separation-factor;
       width: percentage($current-width / 100);
-      margin-left: percentage($column-separation / 100);
+      margin-left: percentage($column-separation-factor / 100);
     }
   }
 }
@@ -68,10 +67,8 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
   @include flexbox-flow;
   text-rendering: $row-text-rendering;
 
-  div, p {
-    display: block;
-    width: 100%;
-  }
+  //Columns
+  @include grid-columns;
 }
 
 //Separation between rows
@@ -84,9 +81,6 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 [class*="col-"] {
   padding: $col-padding;
 }
-
-/*@include build-column-grids;*/
-@include grid-columns;
 
 @media #{$grid-max-width-media} {
   .row > [class *= "col-"] {
