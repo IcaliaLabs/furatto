@@ -52,6 +52,17 @@ $navigation-bar-active-hover-color: darken($navigation-bar-active-color, 5%) !de
 //Menu toggle
 $navigation-bar-menu-toggle-text-transform: uppercase !default;
 
+//Dropdown
+$navigation-bar-arrow-color: $navigation-bar-link-color !default;
+$navigation-bar-arrow-hover-color: $navigation-bar-link-hover-color !default;
+$navigation-bar-dropdown-z-index: $navigation-fixed-z-index + 10 !default;
+$navigation-bar-dropdown-header-text-transform: uppercase !default;
+$navigation-bar-dropdown-header-padding: 0.57142857rem 1.07142857rem 0.14285714rem !default;
+$navigation-bar-dropdown-header-color: #777 !default;
+$navigation-bar-dropdown-header-font-weight: bold !default;
+$navigation-bar-dropdown-header-font-size: 0.55556rem !default;
+$navigation-bar-dropdown-divider-height: 0.07142857rem !default; 
+
 .navigation-bar {
   background: $navigation-bar-background;
   height: $navigation-bar-height;
@@ -89,7 +100,7 @@ $navigation-bar-menu-toggle-text-transform: uppercase !default;
     list-style: none;
     font-size: $navigation-font-size;
     float: left;
-
+    width: auto;
 
     li {
       float: left;
@@ -121,6 +132,73 @@ $navigation-bar-menu-toggle-text-transform: uppercase !default;
         border-left: 1px solid scale-color($navigation-bar-background, $lightness: 13%);
       }
     }
+
+    li.with-dropdown {
+      position: relative;
+      &:hover {
+        ul.dropdown { display: block;}
+      }
+      & > a {
+        padding-right: $navigation-bar-height - 10;
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          border: inset 5px;
+          border-color: $navigation-bar-arrow-color transparent transparent transparent;
+          border-top-style: solid;
+          margin-top: -2.5px;
+          top: $navigation-bar-height / 2;
+          right: 0;
+          margin-right: 15px;
+        }
+        &:hover {
+          &:after {
+            border-color: $navigation-bar-arrow-hover-color transparent transparent transparent;
+          }
+        }
+      } 
+
+      &.opened {
+        .dropdown {
+          display: block;
+        }
+      }
+
+      .dropdown {
+        display: none; //hides the first time
+        position: absolute;
+        float: left;
+        top: auto;
+        left: 0;
+        z-index: $navigation-bar-dropdown-z-index;
+        min-width: 100%;
+
+        li {
+          width: 100%;
+          height: auto;
+          background: $navigation-bar-background;
+          white-space: nowrap;
+
+          &.dropdown-header {
+            text-transform: $navigation-bar-dropdown-header-text-transform;
+            padding: $navigation-bar-dropdown-header-padding;
+            margin-bottom: 0;
+            color: $navigation-bar-dropdown-header-color;
+            font-weight: $navigation-bar-dropdown-header-font-weight;
+            font-size: $navigation-bar-dropdown-header-font-size;
+          }
+
+          &.divider {
+            height: $navigation-bar-dropdown-divider-height; 
+            border-top: 1px solid scale-color($navigation-bar-background, $lightness: 13%);
+          }
+        }
+      }
+    }
+
   }
 
   ul.pull-right {
@@ -165,6 +243,10 @@ $navigation-bar-menu-toggle-text-transform: uppercase !default;
     z-index: $navigation-fixed-z-index;
   }
 
+}
+
+@media only screen and (min-width: 40.063em){
+  .navigation-bar { overflow: visible; }
 }
 
 @media #{$navigation-bar-collapse-query} {
