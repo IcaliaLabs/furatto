@@ -1,0 +1,235 @@
+//Off screen
+
+//
+//@variables
+//
+
+//General
+$off-screen-navigation-color: #EFEFEF !default;
+$off-screen-navigation-width: 80% !default;
+$off-screen-navigation-font-weight: 100 !default;
+$off-screen-navigation-background-color: #333 !default;
+$off-screen-z-index: 1 !default;
+$off-screen-left-padding: 1rem !default;
+$off-screen-vertical-padding: 0.7rem !default;
+$off-screen-text-shadow-color: $off-screen-navigation-color !default;
+$off-screen-text-shadow-alpha: 0.1 !default;
+
+//Links
+$off-screen-font-size: 1.2rem !default;
+$off-screen-include-link-hover-transition: true !default;
+$off-screen-link-padding: 1rem !default;
+$include-separator-to-links: true !default;
+
+//List Header
+$off-screen-list-header-transform: uppercase !default;
+$off-screen-list-header-font-weight: bold !default;
+$off-screen-list-header-font-size: 0.7rem !default;
+
+//Divider
+$off-screen-divider-color: lighten($off-screen-navigation-background-color, 10%) !default;
+$off-screen-divider-margin: 0.21428571rem !default;
+
+//Back link
+$off-screen-back-link-padding: 0.5rem 1rem !default;
+$off-screen-back-link-font-weight: 300 !default;
+$off-screen-back-link-letter-spacing: 1px !default;
+$off-screen-back-link-font-size: 0.9rem !default;
+$off-screen-back-link-background: rgba(#000, 0.1) !default;
+$off-screen-back-link-text-transform: uppercase !default;
+$off-screen-back-link-border-color: #000 !default;
+$off-screen-back-link-border-alpha: 0.2 !default;
+
+//Header
+$off-screen-header-padding: 1rem !default;
+$off-screen-header-font-weight: 200 !default;
+
+
+
+.off-screen {
+  position: relative;
+  left: 0;
+  height: 100%;
+
+  .navigation {
+    position: absolute; /* we can't use fixed here :( */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: $off-screen-z-index;
+    width: $off-screen-navigation-width;
+    height: 100%;
+    min-height: 100%;
+    @include transform( translate3d(-100%, 0, 0));
+    color: darken($off-screen-navigation-color, 10%);
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: $off-screen-navigation-background-color;
+      li {
+
+        & > a {
+          display: block;
+          padding: $off-screen-vertical-padding 0 $off-screen-vertical-padding $off-screen-left-padding;
+          outline: none;
+          font-size: $off-screen-font-size;
+          text-shadow: 0 0 1px rgba($off-screen-text-shadow-color, $off-screen-text-shadow-alpha);
+          @if($off-screen-include-link-hover-transition){
+            @include transition(background 0.3s, box-shadow 0.3s);
+          }
+        }
+
+        &.off-screen-list-header {
+          text-transform: $off-screen-list-header-transform;
+          padding-left: $off-screen-left-padding;
+          padding-top:  $off-screen-left-padding;
+          padding-bottom:  $off-screen-left-padding / 2;
+          font-weight: $off-screen-list-header-font-weight;
+          font-size: $off-screen-list-header-font-size;
+        }
+
+        &.off-screen-divider {
+          border-bottom: 1px solid $off-screen-divider-color;
+          margin: $off-screen-divider-margin auto;
+        }
+
+        a {
+          color: $off-screen-navigation-color; 
+          padding: $off-screen-link-padding;
+        }
+      }
+    }
+
+    a {
+      font-weight: $off-screen-navigation-font-weight;
+      @if($include-separator-to-links) {
+        border-bottom: 1px solid rgba($off-screen-navigation-color, 0.1);
+      }
+
+      &.navigation-back {
+        padding: $off-screen-back-link-padding;
+        background: $off-screen-back-link-background;
+        outline: none;
+        color: $off-screen-navigation-color;
+        text-transform: $off-screen-back-link-text-transform;
+        letter-spacing: $off-screen-back-link-letter-spacing;
+        font-weight: $off-screen-back-link-font-weight;
+        display: block;
+        font-size: $off-screen-back-link-font-size;
+        position: relative;
+        @include transition(none);
+        border-top: 1px solid rgba($off-screen-back-link-border-color, $off-screen-back-link-border-alpha);
+        border-bottom: 1px solid rgba($off-screen-back-link-border-color, $off-screen-back-link-border-alpha);
+
+        &:hover {
+          background: rgba($off-screen-back-link-border-color,0.1);
+        }
+      }
+
+      &:hover {
+        color: darken($off-screen-navigation-color, 10%);
+        background: rgba($off-screen-navigation-background-color, $off-screen-back-link-border-alpha);
+      }
+    }
+  }
+
+}
+
+
+.off-screen-level {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $off-screen-navigation-background-color;
+  @include translate3d(-100%, 0, 0);
+
+  .off-screen-header {
+    padding: $off-screen-header-padding;
+    font-weight: $off-screen-header-font-weight;
+    text-align: center;
+
+    .header {
+      color: $off-screen-navigation-color;
+    }
+  }
+}
+
+/* overlays for pusher and for level that gets covered */
+.off-screen::after,
+.off-screen-level::after,
+.off-screen-level::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	content: '';
+	opacity: 0;
+}
+
+.off-screen::after,
+.off-screen-level::after {
+  @include transition(opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s);
+}
+
+.off-screen-level::after {
+	z-index: -1;
+}
+
+.off-screen.off-screen-pushed::after,
+.off-screen-level.off-screen-level-overlay::after {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+  @include transition(opacity 0.3s);
+}
+
+.off-screen,
+.off-screen-level {
+  @include transition(all 0.5s);
+}
+
+/* overlap */
+.off-screen-overlap .off-screen-level.off-screen-level-open {
+  @include translate3d(-40px, 0, 0);
+}
+
+/* First level */
+.navigation > .off-screen-level,
+.navigation > .off-screen-level.off-screen-level-open,
+.navigation.off-screen-overlap > .off-screen-level,
+.navigation.off-screen-overlap > .off-screen-level.off-screen-level-open {
+  @include translate3d(0, 0, 0);
+	@include box-shadow(none);
+}
+
+/* cover */
+.off-screen-cover .off-screen-level.off-screen-level-open {
+  @include translate3d(0, 0, 0);
+}
+
+.off-screen-cover .off-screen-level.off-screen-level-open > ul > li > .off-screen-level:not(.off-screen-level-open) {
+  @include translate3d(-100%, 0, 0);
+}
+
+/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
+/* We'll show the first level only */
+.no-csstransforms3d .off-screen,
+.no-js .off-screen {
+	padding-left: 300px;
+}
+
+.no-csstransforms3d .navigation .off-screen-level,
+.no-js .navigation .off-screen-level {
+	display: none;
+}
+
+.no-csstransforms3d .navigation > .off-screen-level,
+.no-js .navigation > .off-screen-level {
+	display: block;
+}
+
