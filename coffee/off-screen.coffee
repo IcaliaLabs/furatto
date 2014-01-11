@@ -62,6 +62,7 @@
       #trigger menu element
       @trigger = $('#trigger')
 
+      #bind events
       @_bindEvents()
 
     _setLevels: ->
@@ -102,6 +103,8 @@
               $(closest(el, 'off-screen-level')).addClass 'off-screen-level-overlay'
               @_openMenu subLevel
 
+    _hideOnEsc: (event) =>
+      @_resetMenu() if event.keyCode is 27
 
     _setupLevelsClosing: =>
       for levelEl in @levels
@@ -122,8 +125,6 @@
             @level = closest(el, 'off-screen-level').getAttribute('data-level') - 1
             if @level is 0 then @_resetMenu() else @_closeMenu()
 
-    _hideOnEsc: (event) =>
-      @_hideMenu() if event.keyCode is 27
 
     #resets the menu
     _resetMenu: =>
@@ -134,6 +135,7 @@
       $(@wrapper).removeClass 'off-screen-pushed'
       @_toggleLevels()
       @open = false
+      $(document).unbind 'keyup', @_hideOnEsc
 
     _closeMenu: =>
       translateVal = if @options.type is 'overlap' then @el.offsetWidth + (@level - 1) * @options.levelSpacing else @el.offsetWidth
@@ -142,7 +144,6 @@
 
     #opens the menu
     _openMenu: (subLevel) =>
-      console.log 'openMenu function'
       ++@level
 
       levelFactor = (@level - 1) * @options.levelSpacing
@@ -165,6 +166,8 @@
         $(subLevel).addClass 'off-screen-level-open'
       else
         $(@levels[0]).addClass 'off-screen-level-open'
+
+      $(document).bind 'keyup', @_hideOnEsc
 
 
     _toggleLevels: ->

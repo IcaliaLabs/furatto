@@ -56,9 +56,9 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       this._openMenu = __bind(this._openMenu, this);
       this._closeMenu = __bind(this._closeMenu, this);
       this._resetMenu = __bind(this._resetMenu, this);
-      this._hideOnEsc = __bind(this._hideOnEsc, this);
       this._setupLevelBack = __bind(this._setupLevelBack, this);
       this._setupLevelsClosing = __bind(this._setupLevelsClosing, this);
+      this._hideOnEsc = __bind(this._hideOnEsc, this);
       this._setupMenuItems = __bind(this._setupMenuItems, this);
       this._bindEvents = __bind(this._bindEvents, this);
       this.options = $.extend({}, defaults, options);
@@ -132,6 +132,12 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       });
     };
 
+    OffScreen.prototype._hideOnEsc = function(event) {
+      if (event.keyCode === 27) {
+        return this._resetMenu();
+      }
+    };
+
     OffScreen.prototype._setupLevelsClosing = function() {
       var levelEl, _i, _len, _ref, _results;
       _ref = this.levels;
@@ -171,19 +177,14 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       });
     };
 
-    OffScreen.prototype._hideOnEsc = function(event) {
-      if (event.keyCode === 27) {
-        return this._hideMenu();
-      }
-    };
-
     OffScreen.prototype._resetMenu = function() {
       console.log('reset function');
       this._setTransform('translate3d(0,0,0)');
       this.level = 0;
       $(this.wrapper).removeClass('off-screen-pushed');
       this._toggleLevels();
-      return this.open = false;
+      this.open = false;
+      return $(document).unbind('keyup', this._hideOnEsc);
     };
 
     OffScreen.prototype._closeMenu = function() {
@@ -195,7 +196,6 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
 
     OffScreen.prototype._openMenu = function(subLevel) {
       var level, levelFactor, translateVal, _i, _len, _ref;
-      console.log('openMenu function');
       ++this.level;
       levelFactor = (this.level - 1) * this.options.levelSpacing;
       translateVal = this.options.type === 'overlap' ? this.el.offsetWidth + levelFactor : this.el.offsetWidth;
@@ -215,10 +215,11 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
         this.open = true;
       }
       if (subLevel) {
-        return $(subLevel).addClass('off-screen-level-open');
+        $(subLevel).addClass('off-screen-level-open');
       } else {
-        return $(this.levels[0]).addClass('off-screen-level-open');
+        $(this.levels[0]).addClass('off-screen-level-open');
       }
+      return $(document).bind('keyup', this._hideOnEsc);
     };
 
     OffScreen.prototype._toggleLevels = function() {
