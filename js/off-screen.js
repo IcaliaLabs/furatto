@@ -152,27 +152,23 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
     };
 
     OffScreen.prototype._setupLevelBack = function() {
-      var backLink, _i, _len, _ref, _results;
-      _ref = this.levelBack;
-      _results = [];
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        backLink = _ref[_i];
-        _results.push(backLink.addEventListener(this.eventType, function(event) {
+      var _this = this;
+      return this.levelBack.forEach(function(el, i) {
+        return el.addEventListener(_this.eventType, function(event) {
           var level;
           event.preventDefault();
-          level = closest(backLink, 'off-screen-level').getAttribute('data-level');
-          if (this.level <= level) {
+          level = closest(el, 'off-screen-level').getAttribute('data-level');
+          if (_this.level <= level) {
             event.stopPropagation();
-            this.level = closest(backLink, 'off-screen-level').getAttribute('data-level') - 1;
-            if (this.level === 0) {
-              return this._resetMenu();
+            _this.level = closest(el, 'off-screen-level').getAttribute('data-level') - 1;
+            if (_this.level === 0) {
+              return _this._resetMenu();
             } else {
-              return this._closeMenu();
+              return _this._closeMenu();
             }
           }
-        }));
-      }
-      return _results;
+        });
+      });
     };
 
     OffScreen.prototype._hideOnEsc = function(event) {
@@ -191,7 +187,10 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
     };
 
     OffScreen.prototype._closeMenu = function() {
-      return console.log('closeMenu function');
+      var translateVal;
+      translateVal = this.options.type === 'overlap' ? this.el.offsetWidth + (this.level - 1) * this.options.levelSpacing : this.el.offsetWidth;
+      this._setTransform("translate3d(" + translateVal + "px, 0, 0");
+      return this._toggleLevels();
     };
 
     OffScreen.prototype._openMenu = function(subLevel) {
@@ -223,7 +222,22 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
     };
 
     OffScreen.prototype._toggleLevels = function() {
-      return console.log('toggleLevels function');
+      var level, _i, _len, _ref, _results;
+      console.log('toggleLevels function');
+      _ref = this.levels;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        level = _ref[_i];
+        if (level.getAttribute('data-level') >= this.level + 1) {
+          $(level).removeClass('off-screen-level-open');
+          _results.push($(level).removeClass('off-screen-level-overlay'));
+        } else if (Number(level.getAttribute('data-level') === this.level)) {
+          _results.push($(level).removeClass('off-screen-level-overlay'));
+        } else {
+          _results.push(void 0);
+        }
+      }
+      return _results;
     };
 
     OffScreen.prototype._setTransform = function(value, element) {

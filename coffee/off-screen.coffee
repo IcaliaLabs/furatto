@@ -113,13 +113,13 @@
             @_closeMenu()
 
     _setupLevelBack: =>
-      for backLink in @levelBack
-        backLink.addEventListener @eventType, (event) ->
+      @levelBack.forEach (el, i) =>
+        el.addEventListener @eventType, (event) =>
           event.preventDefault()
-          level = closest(backLink, 'off-screen-level').getAttribute('data-level')
+          level = closest(el, 'off-screen-level').getAttribute('data-level')
           if @level <= level
             event.stopPropagation()
-            @level = closest(backLink, 'off-screen-level').getAttribute('data-level') - 1
+            @level = closest(el, 'off-screen-level').getAttribute('data-level') - 1
             if @level is 0 then @_resetMenu() else @_closeMenu()
 
     _hideOnEsc: (event) =>
@@ -136,10 +136,9 @@
       @open = false
 
     _closeMenu: =>
-      console.log 'closeMenu function'
-      #translateVal = if @options.type is 'overlap' then @self.outerWidth() + (@level - 1) * @options.levelSpacing else @self.outerWidth()
-      #@_setTransform("translate3d(#{translateVal}px, 0, 0")
-      #@_toggleLevels()
+      translateVal = if @options.type is 'overlap' then @el.offsetWidth + (@level - 1) * @options.levelSpacing else @el.offsetWidth
+      @_setTransform("translate3d(#{translateVal}px, 0, 0")
+      @_toggleLevels()
 
     #opens the menu
     _openMenu: (subLevel) =>
@@ -170,13 +169,12 @@
 
     _toggleLevels: ->
       console.log 'toggleLevels function'
-      #for level in @levels
-        #if $(level).data('level') >= @level + 1
-          #$(level).removeClass 'off-screen-level-open'
-          #$(level).removeClass 'off-screen-level-overlay'
-        #else
-          #if Number $(level).data('level') is @level
-            #$(level).removeClass 'off-screen-level-overlay'
+      for level in @levels
+        if level.getAttribute('data-level') >= @level + 1
+          $(level).removeClass 'off-screen-level-open'
+          $(level).removeClass 'off-screen-level-overlay'
+        else if Number level.getAttribute('data-level') is @level
+          $(level).removeClass 'off-screen-level-overlay'
 
 
     _setTransform: (value, element = @wrapper) ->
@@ -198,14 +196,4 @@
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
       
-    ##Setup default values
-    #defaults:
-      #type: 'overlap'
-      #levelSpacing: 40
-      #backClass: 'navigation-back'
-
-    ##Overwrite default options
-    ##with the user provided ones
-    #options = $.extend({}, defaults, options)
-
 ) jQuery, window, document
