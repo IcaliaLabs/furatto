@@ -63,6 +63,34 @@ $navigation-bar-dropdown-header-font-weight: bold !default;
 $navigation-bar-dropdown-header-font-size: 0.55556rem !default;
 $navigation-bar-dropdown-divider-height: 0.07142857rem !default; 
 
+//Offscreen
+$off-screen-toggle-menu-left-position: 0.71428571rem !default;
+$off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-position + 1.42857143rem !default;
+
+
+.off-screen {
+  .navigation-bar {
+    .brand-section {
+      .brand-name {
+        a {
+          &:before {
+            content: '';
+            width: 16px;
+            height: 0;
+            position: absolute;
+            left: $off-screen-toggle-menu-left-position;
+            top: 6px;
+            -webkit-box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
+            -moz-box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
+            box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 .navigation-bar {
   background: $navigation-bar-background;
   height: $navigation-bar-height;
@@ -77,6 +105,7 @@ $navigation-bar-dropdown-divider-height: 0.07142857rem !default;
     color: $navigation-bar-text-color;
     display: inline-block;
     font-size: $navigation-font-size;
+    padding: 0 $navigation-bar-height / 3;
   }
 
   .btn {
@@ -135,9 +164,6 @@ $navigation-bar-dropdown-divider-height: 0.07142857rem !default;
 
     li.with-dropdown {
       position: relative;
-      &:hover {
-        ul.dropdown { display: block;}
-      }
       & > a {
         padding-right: $navigation-bar-height - 10;
         &:after {
@@ -208,6 +234,11 @@ $navigation-bar-dropdown-divider-height: 0.07142857rem !default;
   .brand-section {
     font-size: $navigation-bar-brand-section-font-size; 
     position: relative;
+    .brand-name {
+      a {
+        display: block !important;
+      }
+    }
     li {
       padding: 0;
 
@@ -250,10 +281,28 @@ $navigation-bar-dropdown-divider-height: 0.07142857rem !default;
 }
 
 @media #{$navigation-bar-collapse-query} {
+  .off-screen {
+    .navigation-bar {
+      .brand-section {
+        .brand-name {
+          a {
+            &:before {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .navigation-bar {
     .brand-section {
       width: 100%;
       font-size: $navigation-bar-brand-section-font-size - 0.15; 
+
+      .brand-name a {
+        padding-left: $off-screen-toggle-menu-brand-name-padding-left;
+      }
       li {
 
         &.menu-toggle {
