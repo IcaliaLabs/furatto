@@ -22,12 +22,17 @@ $success-text-color: #27ae60 !default;
   @include box-sizing(border-box);
 }
 
+html, body, .off-screen {
+  height: 100%;
+}
+
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 html, body {
   font-size: $base-font-size;
+  overflow-x: hidden;
 }
 
 body {
