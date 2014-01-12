@@ -13,10 +13,18 @@ $label-font-color: #FFF !default;
 $label-font-shadow-alpha: 0.20 !default;
 $label-font-shadow-x: 0 !default;
 $label-font-shadow-y: -1px !default;
+$label-hover-decoration: none !default;
+$label-default-background:  #95A5A6 !default;
 
 //Label variations
 $label-radius: 3px !default;
 $label-round: 1000px !default;
+
+//Label background variations
+$label-primary-background: #3498db !default;
+$label-success-background: #2ecc71 !default;
+$label-danger-background: #e74c3c !default;
+$label-warning-background: #e67e22 !default;
 
 //
 //@mixin
@@ -31,15 +39,19 @@ $label-round: 1000px !default;
   vertical-align: baseline;
   white-space: nowrap;
   text-shadow: $label-font-shadow-x $label-font-shadow-y 0 rgba(0,0,0, $label-font-shadow-alpha);
+
+  &:hover {
+    text-decoration: $label-hover-decoration;
+  }
 }
 
 //
 //@mixin
 // We use this mixin to add styling to the labels
 //
-// $background-color - Is the background for the labels. Default: $gray
+// $background-color - Is the background for the labels. Default: $label-default-background
 
-@mixin label-style($background-color: $gray) {
+@mixin label-style($background-color: $label-default-background) {
   background: $background-color;
 }
 
@@ -48,13 +60,13 @@ $label-round: 1000px !default;
 //@mixin
 //
 // We use this mixin to let the user create custom buttons
-// $background-color - Is the background color for the button to create. Default: $gray
+// $background-color - Is the background color for the button to create. Default: $label-default-background
 // $include-round - Wheter or not to add the round style on the custom button
 // $include-radius - Wheter or not to add the radius size style on the custom button
 // Example .custom-label { @include label($background-color: #1abc9c); }
 //
 
-@mixin label($background-color: $gray, $include-round: true, $include-radius: true) {
+@mixin label($background-color: $label-default-background, $include-round: true, $include-radius: true) {
   @include label-base;
   @include label-style($background-color);
 
@@ -77,11 +89,8 @@ $label-round: 1000px !default;
 
 
   //Label styles
-  &.label-primary { @include label-style($inverse); }
-  &.label-info { @include label-style($blue); }
-  &.label-success { @include label-style($green); }
-  &.label-danger { @include label-style($red); }
-  &.label-warning { @include label-style($orange); }
-  &.label-funky { @include label-style($purple); }
-
+  &.label-primary { @include label-style($label-primary-background); }
+  &.label-success { @include label-style($label-success-background); }
+  &.label-danger { @include label-style($label-danger-background); }
+  &.label-warning { @include label-style($label-warning-background); }
 }
