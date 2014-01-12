@@ -72,16 +72,16 @@
     _bindEvents: =>
 
       bodyClickBinding = (el) =>
-        @_resetMenu()
+        @resetMenu()
         el.removeEventListener @eventType, bodyClickBinding
 
       @trigger.bind @eventType, (event) =>
         event.stopPropagation()
         event.preventDefault()
         if @open
-          @_resetMenu()
+          @resetMenu()
         else
-          @_openMenu()
+          @openMenu()
           document.addEventListener @eventType, (event) =>
             if @open and not hasParent(event.target, @el.id)
               bodyClickBinding document
@@ -101,10 +101,10 @@
             if @level <= level
               event.stopPropagation()
               $(closest(el, 'off-screen-level')).addClass 'off-screen-level-overlay'
-              @_openMenu subLevel
+              @openMenu subLevel
 
     _hideOnEsc: (event) =>
-      @_resetMenu() if event.keyCode is 27
+      @resetMenu() if event.keyCode is 27
 
     _setupLevelsClosing: =>
       for levelEl in @levels
@@ -123,11 +123,11 @@
           if @level <= level
             event.stopPropagation()
             @level = closest(el, 'off-screen-level').getAttribute('data-level') - 1
-            if @level is 0 then @_resetMenu() else @_closeMenu()
+            if @level is 0 then @resetMenu() else @_closeMenu()
 
 
     #resets the menu
-    _resetMenu: =>
+    resetMenu: =>
       console.log 'reset function'
       @_setTransform('translate3d(0,0,0)')
       @level = 0
@@ -143,7 +143,7 @@
       @_toggleLevels()
 
     #opens the menu
-    _openMenu: (subLevel) =>
+    openMenu: (subLevel) =>
       ++@level
 
       levelFactor = (@level - 1) * @options.levelSpacing
@@ -171,7 +171,6 @@
 
 
     _toggleLevels: ->
-      console.log 'toggleLevels function'
       for level in @levels
         if level.getAttribute('data-level') >= @level + 1
           $(level).removeClass 'off-screen-level-open'
