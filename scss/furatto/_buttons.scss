@@ -13,8 +13,11 @@ $button-large: 0.78571429rem 1.35714286rem !default;
 $button-xlarge: 1.42857143rem 2.14285714rem !default;
 $button-xxlarge: 1.42857143rem 3.57142857rem !default;
 
-//Buttons disply style
+//Buttons style
 $button-display: inline-block !default;
+$button-border-width: 1px !default;
+$button-border-style: solid !default;
+$button-default-background-color: #2E323E !default;
 
 //Buttons general styles
 $button-font-family: $base-font-family !default;
@@ -26,12 +29,26 @@ $button-font-small: px-to-rems(12) !default;
 $button-font-large: px-to-rems(16) !default;
 $button-font-xlarge: px-to-rems(22) !default;
 $button-font-xxlarge: px-to-rems(22) !default;
+$button-vertical-separation: 5px !default;
 
 //Buttons variations
 $button-radius: 3px !default;
 $button-alpha-border: 1px solid #FFF !default;
+$button-alpha-color: #FFF !default;
 $button-3d-border-width: 0.2rem !default;
 $button-disabled-opacity: 0.65 !default;
+
+//Icons
+$button-icon-separation: 5px !default;
+
+//Background variations
+$button-primary-background: #3498db !default;
+$button-success-background: #2ecc71 !default;
+$button-danger-background: #e74c3c !default;
+$button-warning-background: #e67e22 !default;
+
+//Media queries
+$button-block-media-query-width: 480px !default;
 
 //
 //@mixin
@@ -55,7 +72,7 @@ $button-disabled-opacity: 0.65 !default;
   position: relative;
 
   [class^="icon-"], [class*=" icon-"] {
-    margin-right: 5px;
+    margin-right: $button-icon-separation;
   }
 
   &:hover {
@@ -63,7 +80,7 @@ $button-disabled-opacity: 0.65 !default;
   }
 
   &.btn-alpha {
-    color: #FFF;
+    color: $button-alpha-color;
   }
 }
 
@@ -74,10 +91,10 @@ $button-disabled-opacity: 0.65 !default;
 //
 // $background-color - Is the background color for the button to create
 
-@mixin btn-style($background-color: $inverse) {
+@mixin btn-style($background-color: $button-default-background-color) {
 
   background-color: $background-color;
-  border: 1px solid darken($background-color, 5%);
+  border: $button-border-width $button-border-style darken($background-color, 5%);
 
   &:hover, &:focus {
     background: darken($background-color, 3%);
@@ -125,11 +142,16 @@ $button-disabled-opacity: 0.65 !default;
   font-size: $font-size;
 }
 
+@mixin btn-size($padding: $button-default, $font-size: $button-font-default) {
+  padding: $padding;
+  font-size: $font-size;
+}
+
 //
 //@mixin
 //
 // We use this mixin to let the user create custom buttons
-// $background-color - Is the background color for the button to create. Default: $inverse
+// $background-color - Is the background color for the button to create. Default: $button-default-background-color
 // $padding - The padding to give to the button. Default: $button-default
 // $font-size - The font size for the button. Default: $button-font-default
 // $include-radius-style - Wheter or not to add the radius style on the custom button
@@ -137,7 +159,7 @@ $button-disabled-opacity: 0.65 !default;
 // Example .custom-btn { @include btn($background-color: #1abc9c); }
 //
 
-@mixin btn($background-color: $inverse, $padding: $button-default, $font-size: $button-font-default, $include-radius-style: true, $include-block-style: true) {
+@mixin btn($background-color: $button-default-background-color, $padding: $button-default, $font-size: $button-font-default, $include-radius-style: true, $include-block-style: true) {
   @include btn-base;
   @include btn-style($background-color);
   @include btn-size($padding, $font-size);
@@ -154,6 +176,13 @@ $button-disabled-opacity: 0.65 !default;
       width: 100%;
       padding-left: 0px;
       padding-right: 0px;
+    }
+  }
+
+  @media (max-width: $button-block-media-query-width) {
+    & {
+      display: block;
+      width: 100%;
     }
   }
 }
@@ -185,27 +214,25 @@ button, .btn {
   }
 
   //Button styles
-  &.btn-primary { @include btn-style($inverse); }
-  &.btn-info { @include btn-style($blue); }
-  &.btn-success { @include btn-style($green); }
-  &.btn-danger { @include btn-style($red); }
-  &.btn-warning { @include btn-style($orange); }
-  &.btn-funky { @include btn-style($purple); }
+  &.btn-primary { @include btn-style($button-primary-background); }
+  &.btn-success { @include btn-style($button-success-background); }
+  &.btn-danger { @include btn-style($button-danger-background); }
+  &.btn-warning { @include btn-style($button-warning-background); }
 
   &.radius {
     @include border-radius($button-border-radius);
+  }
+
+  @media (max-width: $button-block-media-query-width) {
+    & {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
 /* Vertical separation */
 /*----------------------*/
 .btn-block + .btn-block {
-  margin-top: 5px;
-}
-
-@media (max-width: $screen-xs) {
-  .btn {
-    display: block;
-    width: 100%;
-  }
+  margin-top: $button-vertical-separation;
 }
