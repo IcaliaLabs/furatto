@@ -45,7 +45,7 @@ body {
 }
 
 div, p {
-  width: 100%;
+  width: 100%; //Flexbox fix
 }
 
 img,
@@ -78,8 +78,8 @@ object {
   float: left;
 }
 
-//Text helpful classes
-.muted {
+//Text color variations 
+.text-muted {
   color: $muted-text-color;
 }
 
@@ -95,6 +95,7 @@ object {
   color: $success-text-color;
 }
 
+//Text alignment
 .text-left {
   text-align: left;
 }
@@ -111,6 +112,7 @@ object {
   text-align: justify;
 }
 
+//Text variations
 .text-uppercase {
   text-transform: uppercase;
 }
