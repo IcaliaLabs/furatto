@@ -13,6 +13,9 @@ $form-label-font-size: 0.85rem !default;
 $form-label-color: scale-color(#000, $lightness: 30%) !default;
 $form-label-font-weight: 300 !default;
 $form-label-margin-bottom: 0.35714286rem !default;
+$form-input-border-width: 1px !default;
+$form-input-border-style: solid !default;
+$form-inline-label-margin-left: 0.21428571rem !default;
 
 //Form inputs
 $form-input-radius: 0 !default;
@@ -55,6 +58,9 @@ $form-select-font-size: 0.9rem !default;
 $form-select-hover-background: #F7F7F7 !default;
 $form-select-padding: 0.33rem 0.43rem !default;
 $form-select-radius: 2px !default;
+$form-select-transition-time: 2s !default;
+$form-select-transition-style: linear !default;
+$form-select-backgroun-x-position: 97% !default;
 
 $include-form-select-transition: true !default;
 
@@ -62,8 +68,7 @@ $form-input-media-query: "only screen and (max-width: #{$screen-xs})" !default;
 
 form {
   display: block;
-
-
+  width: 100%;
 }
 
 //Labels
@@ -73,7 +78,6 @@ label {
   cursor: $form-label-cursor;
   font-size: $form-label-font-size;
   font-weight: $form-label-font-weight;
-
 
   &.error {
     color: $form-label-error-color; 
@@ -122,7 +126,7 @@ input[type="color"],
   @include border-radius($form-input-radius);
   @include box-shadow($form-input-box-shadow);
   @include single-transition(all 0.1s ease-in-out);
-  -webkit-appearance: none;
+  @include appearance($ap: none);
   display: block;
   width: 100%;
   height: $form-input-height;
@@ -131,7 +135,7 @@ input[type="color"],
   padding: $form-input-padding;
   margin-bottom: $form-input-margin-bottom;
   background-color: $form-input-background-color;
-  border: 1px solid $form-input-border-color;
+  border: $form-input-border-width $form-input-border-style $form-input-border-color;
 
   //Focus state
   &:focus {
@@ -176,11 +180,11 @@ input[type="color"],
   }
 
   &.success { 
-    border: 1px solid $form-input-success-border-color; 
+    border-color: $form-input-success-border-color; 
     color: $form-label-success-color;
   }
   &.error { 
-    border: 1px solid $form-input-error-border-color; 
+    border-color: $form-input-error-border-color; 
     color: $form-label-error-color;
   }
 }
@@ -194,14 +198,14 @@ select {
   width: 100%;
   display: block;
   background: $form-select-background-color
-        url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat 99% center;
+        url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat $form-select-backgroun-x-position center;
   ; 
+
   //Firefox fix
   text-indent: 0.01px;
   text-overflow: "";
-  -moz-appearance: none;
+  @include appearance($ap: none);
 
-  -webkit-appearance: none;
   padding: $form-select-padding;
   border: $form-select-border-width $form-select-border-style $form-select-border-color;
   margin-bottom: $form-input-margin-bottom;
@@ -210,14 +214,14 @@ select {
   font-size: $form-select-font-size;
 
   @if $include-form-select-transition {
-    @include single-transition(all 0.3s linear);
+    @include single-transition(all $form-select-transition-time $form-select-transition-style);
   }
 
   &.radius { @include border-radius($form-select-radius); }
 
   &:hover {
     background: $form-select-hover-background
-    url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat 99% center; 
+    url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat $form-select-backgroun-x-position center; 
   }
 }
 
@@ -232,7 +236,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
   vertical-align: baseline;
-  margin-left: 0.21428571rem;
+  margin-left: $form-inline-label-margin-left;
 }
 
 input[type="file"] {
