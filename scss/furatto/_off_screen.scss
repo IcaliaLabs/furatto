@@ -51,7 +51,7 @@ $off-screen-header-font-weight: 200 !default;
   left: 0;
   height: 100%;
 
-  .navigation {
+  .off-screen-navigation {
     position: absolute; /* we can't use fixed here :( */
     top: 0;
     left: 0;
@@ -62,6 +62,10 @@ $off-screen-header-font-weight: 200 !default;
     min-height: 100%;
     @include transform( translate3d(-100%, 0, 0));
     color: darken($off-screen-navigation-color, 10%);
+
+    a {
+      text-decoration: none;
+    }
 
     ul {
       margin: 0;
@@ -199,10 +203,10 @@ $off-screen-header-font-weight: 200 !default;
 }
 
 /* First level */
-.navigation > .off-screen-level,
-.navigation > .off-screen-level.off-screen-level-open,
-.navigation.off-screen-overlap > .off-screen-level,
-.navigation.off-screen-overlap > .off-screen-level.off-screen-level-open {
+.off-screen-navigation > .off-screen-level,
+.off-screnn-navigation > .off-screen-level.off-screen-level-open,
+.off-screen-navigation.off-screen-overlap > .off-screen-level,
+.off-screen-navigation.off-screen-overlap > .off-screen-level.off-screen-level-open {
   @include translate3d(0, 0, 0);
 	@include box-shadow(none);
 }
@@ -223,13 +227,13 @@ $off-screen-header-font-weight: 200 !default;
 	padding-left: 300px;
 }
 
-.no-csstransforms3d .navigation .off-screen-level,
-.no-js .navigation .off-screen-level {
+.no-csstransforms3d .off-screen-navigation .off-screen-level,
+.no-js .off-screen-navigation .off-screen-level {
 	display: none;
 }
 
-.no-csstransforms3d .navigation > .off-screen-level,
-.no-js .navigation > .off-screen-level {
+.no-csstransforms3d .off-screen-navigation > .off-screen-level,
+.no-js .off-screen-navigation > .off-screen-level {
 	display: block;
 }
 
