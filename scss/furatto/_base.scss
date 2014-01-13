@@ -24,6 +24,7 @@ $success-text-color: #27ae60 !default;
 
 html, body, .off-screen {
   height: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 html {
