@@ -80,9 +80,7 @@ $off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-po
             position: absolute;
             left: $off-screen-toggle-menu-left-position;
             top: 6px;
-            -webkit-box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
-            -moz-box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
-            box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
+            @include box-shadow(0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff);
             display: none;
           }
         }
@@ -97,6 +95,34 @@ $off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-po
   margin-bottom: $navigation-margin-bottom;
   overflow: hidden;
   font-weight: $navigation-bar-font-weight;
+
+  &.opened {
+    height: auto;
+
+    .brand-section .menu-toggle a {
+      color: $navigation-bar-link-hover-color;
+    } 
+
+    ul:not(.brand-section) {
+      width: 100%;
+
+      li.with-dropdown {
+        .dropdown {
+          position: static;
+        }
+      }
+
+      li {
+        width: 100%;
+
+        &.divider {
+          height: auto;
+          border-bottom: 1px solid scale-color($navigation-bar-background, $lightness: 13%);
+        }
+      }
+    }
+
+  }
 
   // Plain text in topbar
   .navigation-bar-text {
