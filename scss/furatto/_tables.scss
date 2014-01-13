@@ -5,6 +5,7 @@
 //
 @import "functions";
 
+//General settings
 $table-background-color: #FFF !default;
 $table-margin-bottom: px-to-rems(20) !default;
 $table-cell-padding: px-to-rems(10) !default;
@@ -13,8 +14,12 @@ $table-cell-alignment: left !default;
 $table-border-color: #d2d2d2 !default;
 $table-border-width: 1px !default;
 $table-border-style: solid !default;
+$table-color: #666 !default;
+$table-font-weight: 300 !default;
 
 $table-head-font-weight: 500 !default;
+$table-head-letter-spacing: 2px !default;
+$headers-with-uppercase: false !default;
 
 //Variations
 $table-condensed-padding: 0.28571429rem 0.35714286rem !default;
@@ -26,6 +31,8 @@ $table-bordered-border-style: solid !default;
 table {
   background-color: $table-background-color;
   margin-bottom: $table-margin-bottom;
+  color: $table-color;
+  font-weight: $table-font-weight;
   
   tr {
     //Cells
@@ -40,6 +47,10 @@ table {
     th {
       font-weight: $table-head-font-weight;
       border-bottom: $table-border-width $table-border-style $table-border-color;
+      letter-spacing: $table-head-letter-spacing;
+      @if($headers-with-uppercase) {
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -62,7 +73,7 @@ table {
   }
 
   //Table bordered
-  .table-bordered {
+  &.table-bordered {
     border: $table-bordered-border-width $table-bordered-border-style $table-border-color;
 
     th, td {
