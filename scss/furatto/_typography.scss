@@ -70,6 +70,9 @@ $blockquote-padding-left: 1.5em !default;
 $blockquote-padding-right: $blockquote-padding-left !default;
 $blockquote-padding-top: 1rem !default;
 $blockquote-padding-bottom: $blockquote-padding-top !default;
+$blockquote-border-primary-color: lighten(#3498d9, 20%) !default;
+$blockquote-border-success-color: lighten(#2ECC71, 20%) !default;
+$blockquote-border-danger-color: lighten(#E74C3C, 20%) !default;
 
 //Media queries
 $medium-screen: 70.85714286rem !default;
@@ -222,6 +225,10 @@ $medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-
     border-left: $blockquote-border-width $blockquote-border-style $blockquote-border-color;
     padding: $blockquote-padding-top 0 $blockquote-padding-bottom $blockquote-padding-left;
     background: $blockquote-background;
+
+    &.primary { border-color: $blockquote-border-primary-color; }
+    &.success { border-color: $blockquote-border-success-color; }
+    &.danger { border-color: $blockquote-border-danger-color; }
 
     p {
       margin-bottom: 0;
