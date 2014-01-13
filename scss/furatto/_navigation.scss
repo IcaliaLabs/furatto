@@ -10,11 +10,12 @@
 $navigation-style-type: none !default;
 $navigation-list-position: inside !default;
 $navigation-padding: 1rem 0 !default;
+$navigation-link-color: #777 !default;
 
 //Navigation list items
 $navigation-list-item-font-size: 0.9rem !default;
 $navigation-list-item-margin-bottom: 0.1 !default;
-$navigation-list-item-active-color: #444 !default;
+$navigation-list-item-active-color: #08C !default;
 $navigation-list-link-hover-color: $navigation-list-item-active-color !default;
 $navigation-list-link-hover-text-decoration: none !default;
 $navigation-list-link-padding: 0.333rem 0 !default;
@@ -73,6 +74,7 @@ $navigation-inline-link-hover: #08C !default;
     a {
       display: block;
       padding: $navigation-list-link-padding;
+      color: $navigation-link-color;
 
       &:hover,
       &:focus {
