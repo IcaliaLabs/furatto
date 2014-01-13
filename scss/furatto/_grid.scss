@@ -17,6 +17,7 @@ $row-next-to-row-separation: 0.14285714rem !default;
 
 //Columns settings
 $col-padding: 0.57142857rem !default;
+$stack-column-separation: 2px !default;
 
 //Media
 $grid-max-width: 54.85714286rem !default;
@@ -52,7 +53,6 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 @mixin grid-columns($columns: $number-of-columns) {
   $column-width: 100 / $columns;
 
-  
   @for $i from 1 through $columns {
     .col-#{$i} {
       $current-width: ($column-width * $i) - $column-separation-factor;
@@ -86,6 +86,6 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
   .row > [class *= "col-"] {
     width: 100%;
     margin-left: 0;
-    margin-bottom: 2px;
+    margin-bottom: $stack-column-separation;
   }
 }
