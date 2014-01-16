@@ -9,7 +9,7 @@
       @transition = @$el.data('transition') || "1"
       @theme = @$el.data('theme') || "default"
       @modal.addClass "modal-effect-#{@transition}"
-      @modal.find('.modal-content').addClass "modal-content-#{@theme}"
+      @modal.addClass "#{@theme}"
 
     init: =>
       @$el.click @show
@@ -57,7 +57,7 @@
         data[option]()
 
   $(document).ready ->
-    $('.panel-content').append('<div class="modal-overlay"></div>')
+    $('body').append('<div class="modal-overlay"></div>')
     $('[data-furatto="modal"]').each ->
       modal = $(@)
       modal.modal('init')

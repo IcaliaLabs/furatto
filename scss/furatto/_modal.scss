@@ -1,220 +1,298 @@
 //Modal
 
-.modal {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 50%;
-	max-width: $modal-max-width;
-	min-width: $modal-min-width;
-	height: auto;
-	z-index: 2000;
-	visibility: hidden;
+//
+//@variables
+//
+
+//General settings
+$modal-width: 80% !default;
+$modal-z-index: 1050 !default;
+$modal-color: #FFF !default;
+$modal-top-position: 5rem !default;
+$modal-position: absolute !default;
+
+//Modal styles
+$modal-primary-background-color: #3498DB !default;
+$modal-default-background-color: #F0F0F0 !default;
+$modal-danger-background-color: #E74C3C !default;
+$modal-funky-background-color: #9b59b6 !default;
+$modal-warning-background-color: #e67e22 !default;
+$modal-success-background-color: #2ecc71 !default;
+$modal-info-background-color: #34495e !default;
+
+//Modal content
+$modal-content-padding: 15px 40px 30px !default;
+$modal-content-font-weight: 300 !default;
+$modal-content-font-size: 1.15rem !default;
+$modal-content-ul-padding: 0 0 30px 20px !default;
+$modal-content-list-item-padding: 5px 0 !default;
+
+//Overlay
+$modal-overlay-z-index: $modal-z-index - 10 !default;
+$modal-overlay-background: #000 !default;
+$modal-overlay-background-opacity: 0.8 !default;
+$modal-overlay-show-opacity: 1 !default;
+
+//Header
+$modal-header-padding: 0.4rem !default;
+$modal-header-text-align: center !default;
+$modal-header-font-size: 2.4rem !default;
+$modal-header-font-weight: $modal-content-font-weight !default;
+$modal-header-background-color: #000 !default;
+$modal-header-opacity: 0.8 !default;
+
+//Modal variations
+$modal-radius: 3px !default;
+
+//Modal footer
+$modal-footer-padding: 10px 0 !default;
+
+//Modal extra themes
+$include-modal-extra-themes: false !default;
+$include-fade-in-scale-up-effect: true !default;
+$include-slide-from-right-effect: true !default;
+$include-slide-from-bottom-effect: true !default;
+$include-fall-effect: true !default;
+$include-slide-stick-effect: true !default;
+$include-super-scaled-effect: true !default;
+
+//
+//@mixin
+//
+// We use this mixin to define the base modal styling
+//
+
+@mixin modal-base {
+  position: $modal-position;
+  height: auto;
+  z-index: $modal-z-index;
   @include backface-visibility();
   @include transform(translateX(-50%) translateY(-50%));
+  visibility: hidden;
+  color: $modal-color;
+  top: $modal-top-position;
+  width: $modal-width;
+  margin-left: -40%;
+  left: 50%;
+
+  &.modal-show {
+    visibility: visible;
+  }
+
+  &.radius {
+    .modal-content {
+      @include border-radius($modal-radius);
+    }
+  }
 }
 
-.modal-show {
-	visibility: visible;
-}
+//
+//@mixin
+//
+// We us this mixin to define the overlay styling
+//
 
-.modal-overlay {
+@mixin modal-overlay {
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	visibility: hidden;
 	top: 0;
 	left: 0;
-	z-index: 1040;
+	z-index: $modal-overlay-z-index;
 	opacity: 0;
-	background: rgba(0,0,0,0.8);
+	background: rgba($modal-overlay-background, $modal-overlay-background-opacity);
   @include transition(all 0.3s);
 }
 
-.modal-show-overlay {
-	opacity: 1;
-	visibility: visible;
+//
+//@mixin
+//
+// We use this mixin to define the modal themes
+//
+
+@mixin modal-theme($background) {
+	background: $background;
 }
 
-/* Content styles */
-.modal-content {
-	color: rgba(#222, 0.8);
-	background: #f0f0f0;
-	position: relative;
-  @include border-radius(3px);
-	margin: 0 auto;
-  color: $white;
-}
+//
+//@mixin
+// We us this mixin to define the modal header 
+//
 
-.modal-content-primary {
-	background: $dashboard-primary-bg-color;
-}
-
-.modal-content-danger {
-	background: $dashboard-danger-bg-color;
-}
-
-.modal-content-info {
-  background: $dashboard-info-bg-color;
-}
-
-.modal-content-funky {
-  background: $dashboard-funky-bg-color;
-}
-
-.modal-content-warning {
-  background: $dashboard-warning-bg-color;
-}
-
-.modal-content-success {
-  background: $dashboard-success-bg-color;
-}
-
-.modal-content-inverse {
-  background: $dashboard-inverse-bg-color;
-}
-
-.modal-content .modal-header {
+@mixin modal-header {
 	margin: 0;
-	padding: 0.4em;
-	text-align: center;
-	font-size: 2.4em;
-	font-weight: 300;
-	opacity: 0.8;
-	background: rgba(0,0,0,0.1);
-  @include border-radius(3px 3px 0 0);
+	padding: $modal-header-padding;
+	text-align: $modal-header-text-align;
+	font-size: $modal-header-font-size;
+	font-weight: $modal-header-font-weight;
+	opacity: $modal-header-opacity;
+	background: rgba($modal-header-background-color ,0.1);
+  color: $modal-color;
 }
 
-.modal-content > div {
-	padding: 15px 40px 30px;
-	margin: 0;
-	font-weight: 300;
-	font-size: 1.15em;
+//
+//@mixin
+// We use this mixin to define the model content styling
+//
+//
+@mixin model-content {
+  padding: $modal-content-padding;
+  font-weight: $modal-content-font-weight;
+  font-size: $modal-content-font-size;
+
+  & > ul {
+    padding: $modal-content-ul-padding;
+    margin: 0;
+
+    li {
+      padding: $modal-content-list-item-padding;
+    }
+  }
 }
 
-.modal-content > div p {
-	margin: 0;
-	padding: 10px 0;
+//
+//@mixin
+// We use this mixin to define de model footer styling
+//
+//
+@mixin modal-footer {
+  padding: $modal-footer-padding;
 }
 
-.modal-content > div ul {
-	margin: 0;
-	padding: 0 0 30px 20px;
+.modal {
+  @include modal-base;
+
+  //modal styles
+  .modal-content {
+    @include model-content;
+
+    .modal-footer {
+      @include modal-footer;
+    }
+  }
+    &.alpha { @include modal-theme(transparent) }
+    &.default { @include modal-theme($modal-default-background-color)}
+    &.primary { @include modal-theme($modal-primary-background-color)}
+    &.danger { @include modal-theme($modal-danger-background-color)}
+
+    @if($include-modal-extra-themes) {
+      &.funky { @include modal-theme($modal-funky-background-color)}
+      &.warning { @include modal-theme($modal-warning-background-color)}
+      &.success { @include modal-theme($modal-success-background-color)}
+      &.info { @include modal-theme($modal-info-background-color) }
+    }
+
+  .modal-header {
+    @include modal-header;
+  }
 }
 
-.modal-content > div ul li {
-	padding: 5px 0;
+.modal-overlay {
+  @include modal-overlay;
+
+  &.modal-show-overlay {
+    opacity: $modal-overlay-show-opacity;
+    visibility: visible;
+  }
 }
 
-/* Individual modal styles with animations/transitions */
+//Animations
 
-/* Effect 1: Fade in and scale up */
-.modal-effect-1 .modal-content {
-  @include transform(scale(0.7));
-	opacity: 0;
-  @include transition(all 0.3s);
+@if($include-fade-in-scale-up-effect) {
+  // Effect 1: Fade in and scale up
+  .modal-effect-1 {
+    @include transform(scale(0.7));
+    opacity: 0;
+    @include transition(all 0.3s);
+  }
+
+  .modal-show.modal-effect-1 {
+    @include transform(scale(1));
+    opacity: 1;
+  }
 }
 
-.modal-show.modal-effect-1 .modal-content {
-  @include transform(scale(1));
-	opacity: 1;
+@if($include-slide-from-right-effect) {
+  // Effect 2: Slide from the right
+  .modal-effect-2  {
+    @include transform(translateX(20%));
+    opacity: 0;
+    @include transition(all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9));
+  }
+
+  .modal-show.modal-effect-2  {
+    @include transform(translateX(0));
+    opacity: 1;
+  }
 }
 
-/* Effect 2: Slide from the right */
-.modal-effect-2 .modal-content {
-  @include transform(translateX(20%));
-	opacity: 0;
-  @include transition(all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9));
+@if($include-slide-from-bottom-effect) {
+  /* Effect 3: Slide from the bottom */
+  .modal-effect-3 {
+    @include transform(translateY(20%));
+    opacity: 0;
+    @include transition(all 0.3s);
+  }
+
+  .modal-show.modal-effect-3 {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
 }
 
-.modal-show.modal-effect-2 .modal-content {
-  @include transform(translateX(0));
-	opacity: 1;
+@if($include-fall-effect) {
+  /* Effect 4: fall */
+  .modal-effect-4.modal-modal {
+    @include perspective($p: 1300px);
+  }
+
+  .modal-effect-4  {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    @include transform(translateZ(600px) rotateX(20deg));
+    opacity: 0;
+  }
+
+  .modal-show.modal-effect-4  {
+    @include transition(all 0.3s ease-in);
+    @include transform(translateZ(0px) rotatex(0deg));
+    opacity: 1;
+  }
 }
 
-/* Effect 3: Slide from the bottom */
-.modal-effect-3 .modal-content {
-  @include transform(translateY(20%));
-	opacity: 0;
-  @include transition(all 0.3s);
+@if($include-slide-stick-effect) {
+  /* Effect 5:  slide and stick to top */
+  .modal-effect-5 {
+    top: 0;
+    @include transform(translateX(-50%));
+  }
+
+  .modal-effect-5 {
+    @include transform(translateY(-200%));
+    @include transition(all 0.3s);
+    opacity: 0;
+  }
+
+  .modal-show.modal-effect-5 {
+    @include transform(translateY(0%));
+    @include border-radius(0 0 3px 3px);
+    border-radius: 0 0 3px 3px;
+    opacity: 1;
+  }
 }
 
-.modal-show.modal-effect-3 .modal-content {
-  @include transform(translateY(0));
-	opacity: 1;
-}
+@if($include-super-scaled-effect) {
+  /* Effect 6: Super scaled */
+  .modal-effect-6  {
+    @include transform(scale(2));
+    opacity: 0;
+    @include transition(all 0.3s);
+  }
 
-/* Effect 5: fall */
-.modal-effect-5.modal-modal {
-  @include perspective();
-}
-
-.modal-effect-5 .modal-content {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-  @include transform(translateZ(600px) rotateX(20deg));
-	opacity: 0;
-}
-
-.modal-show.modal-effect-5 .modal-content {
-  @include transition(all 0.3s ease-in);
-  @include transform(translateZ(0px) rotatex(0deg));
-	opacity: 1;
-}
-
-/* Effect 7:  slide and stick to top */
-.modal-effect-7{
-	top: 0;
-  @include transform(translateX(-50%));
-}
-
-.modal-effect-7 .modal-content {
-	-webkit-transform: translateY(-200%);
-	-moz-transform: translateY(-200%);
-	-ms-transform: translateY(-200%);
-	transform: translateY(-200%);
-  @include transform(translateY(-200%));
-  @include transition(all 0.3s);
-	opacity: 0;
-}
-
-.modal-show.modal-effect-7 .modal-content {
-  @include transform(translateY(0%));
-  @include border-radius(0 0 3px 3px);
-	border-radius: 0 0 3px 3px;
-	opacity: 1;
-}
-
-/* Effect 11: Super scaled */
-.modal-effect-11 .modal-content {
-  @include transform(scale(2));
-	opacity: 0;
-  @include transition(all 0.3s);
-}
-
-.modal-show.modal-effect-11 .modal-content {
-  @include transform(scale(1));
-	opacity: 1;
-}
-
-/* Effect 12:  Just me */
-.modal-effect-12 .modal-content {
-  @include transform(scale(0.8));
-	opacity: 0;
-  @include transition(all 0.3s);
-}
-
-.modal-show.modal-effect-12 ~ .modal-overlay {
-	background: #e74c3c;
-} 
-
-.modal-effect-12 .modal-content h3,
-.modal-effect-12 .modal-content {
-	background: transparent;
-}
-
-.modal-show.modal-effect-12 .modal-content {
-  @include transform(scale(1));
-	opacity: 1;
+  .modal-show.modal-effect-6 {
+    @include transform(scale(1));
+    opacity: 1;
+  }
 }
