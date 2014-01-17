@@ -44,10 +44,6 @@ body {
   line-height: $base-line-height;
 }
 
-div, p {
-  width: 100%; //Flexbox fix
-}
-
 img,
 embed,
 object {
@@ -115,4 +111,10 @@ object {
 //Text variations
 .text-uppercase {
   text-transform: uppercase;
+}
+
+//Content alignment
+.vertical-align {
+  //The parent container must have height
+  @include vertical-alignment;
 }
