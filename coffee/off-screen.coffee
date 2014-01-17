@@ -64,10 +64,28 @@
 
       #bind events
       @_bindEvents()
+      @_shouldPreventOffScreenMenuFromOpening()
 
     _setLevels: ->
       for level in @levels
         level.setAttribute('data-level', getLevelDepth(level, @el.id, 'off-screen-level'))
+
+    _shouldPreventOffScreenMenuFromOpening: =>
+      @trigger.unbind(@eventType) if $(window).width() > 768
+      $(window).resize =>
+        if $(window).width() > 768
+          @trigger.unbind(@eventType, @resetMenu)
+        else
+          @trigger.bind @eventType, (event) =>
+            event.stopPropagation()
+            event.preventDefault()
+            if @open
+              @resetMenu()
+            else
+              @openMenu()
+              document.addEventListener @eventType, (event) =>
+                if @open and not hasParent(event.target, @el.id)
+                  bodyClickBinding document
 
     _bindEvents: =>
 
@@ -128,7 +146,6 @@
 
     #resets the menu
     resetMenu: =>
-      console.log 'reset function'
       @_setTransform('translate3d(0,0,0)')
       @level = 0
       # remove class off-screen-pushed from main wrapper
