@@ -33,6 +33,23 @@ html {
 html, body {
   font-size: $base-font-size;
   overflow-x: hidden;
+  @include hyphens(auto);
+}
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+	@include hyphens(none);
 }
 
 body {
