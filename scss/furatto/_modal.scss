@@ -192,7 +192,7 @@ $include-super-scaled-effect: true !default;
   @include modal-overlay;
 
   &.modal-show-overlay {
-    opacity: $modal-overlay-show-opacity;
+    @include opacity($modal-overlay-show-opacity);
     visibility: visible;
   }
 }
@@ -203,13 +203,13 @@ $include-super-scaled-effect: true !default;
   // Effect 1: Fade in and scale up
   .modal-effect-1 {
     @include transform(scale(0.7));
-    opacity: 0;
+    @include opacity(0);
     @include transition(all 0.3s);
   }
 
   .modal-show.modal-effect-1 {
     @include transform(scale(1));
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -217,13 +217,13 @@ $include-super-scaled-effect: true !default;
   // Effect 2: Slide from the right
   .modal-effect-2  {
     @include transform(translateX(20%));
-    opacity: 0;
+    @include opacity(0);
     @include transition(all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9));
   }
 
   .modal-show.modal-effect-2  {
     @include transform(translateX(0));
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -231,13 +231,13 @@ $include-super-scaled-effect: true !default;
   /* Effect 3: Slide from the bottom */
   .modal-effect-3 {
     @include transform(translateY(20%));
-    opacity: 0;
+    @include opacity(0);
     @include transition(all 0.3s);
   }
 
   .modal-show.modal-effect-3 {
     @include transform(translateY(0));
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -252,13 +252,13 @@ $include-super-scaled-effect: true !default;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     @include transform(translateZ(600px) rotateX(20deg));
-    opacity: 0;
+    @include opacity(0);
   }
 
   .modal-show.modal-effect-4  {
     @include transition(all 0.3s ease-in);
     @include transform(translateZ(0px) rotatex(0deg));
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -272,14 +272,14 @@ $include-super-scaled-effect: true !default;
   .modal-effect-5 {
     @include transform(translateY(-200%));
     @include transition(all 0.3s);
-    opacity: 0;
+    @include opacity(0);
   }
 
   .modal-show.modal-effect-5 {
     @include transform(translateY(0%));
     @include border-radius(0 0 3px 3px);
     border-radius: 0 0 3px 3px;
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -287,12 +287,12 @@ $include-super-scaled-effect: true !default;
   /* Effect 6: Super scaled */
   .modal-effect-6  {
     @include transform(scale(2));
-    opacity: 0;
+    @include opacity(0);
     @include transition(all 0.3s);
   }
 
   .modal-show.modal-effect-6 {
     @include transform(scale(1));
-    opacity: 1;
+    @include opacity(1);
   }
 }

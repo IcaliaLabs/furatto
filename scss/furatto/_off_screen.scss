@@ -172,7 +172,7 @@ $off-screen-header-font-weight: 200 !default;
 	width: 0;
 	height: 0;
 	content: '';
-	opacity: 0;
+	@include opacity(0);
 }
 
 .off-screen::after,
@@ -188,7 +188,7 @@ $off-screen-header-font-weight: 200 !default;
 .off-screen-level.off-screen-level-overlay::after {
 	width: 100%;
 	height: 100%;
-	opacity: 1;
+	@include opacity(1);
   @include transition(opacity 0.3s);
 }
 
