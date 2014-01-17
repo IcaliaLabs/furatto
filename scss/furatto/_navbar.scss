@@ -36,9 +36,6 @@ $navigation-bar-button-margin-left: 0.5rem !default;
 $navigation-bar-button-margin-right: 0.5rem !default;
 $navigation-bar-menu-color: #FFF !default;
 
-//Media queries
-$navigation-bar-collapse-query: "only screen and (max-width: 40.063em)" !default;
-
 //Icons settings
 $navigation-bar-icon-margin-right: 5px !default;
 
@@ -64,30 +61,13 @@ $navigation-bar-dropdown-header-font-size: 0.55556rem !default;
 $navigation-bar-dropdown-divider-height: 0.07142857rem !default; 
 
 //Offscreen
-$off-screen-toggle-menu-left-position: 0.71428571rem !default;
-$off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-position + 1.42857143rem !default;
+$off-screen-toggle-padding-left: 2.14285714rem !default;
 
-
-.off-screen {
-  .navigation-bar {
-    .brand-section {
-      .brand-name {
-        a {
-          &:before {
-            content: '';
-            width: 16px;
-            height: 0;
-            position: absolute;
-            left: $off-screen-toggle-menu-left-position;
-            top: 6px;
-            @include box-shadow(0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff);
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
+//Media
+$media-display: "only screen" !default;
+$media-collapse-width: 768px !default;
+$navigation-bar-collapse-query: "#{$media-display} and (max-width: #{$media-collapse-width})" !default;
+$navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-collapse-width})" !default;
 
 .navigation-bar {
   background: $navigation-bar-background;
@@ -114,6 +94,13 @@ $off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-po
 
       li {
         width: 100%;
+        display: block;
+
+        .btn {
+          width: 96%;
+          margin-left: auto;
+          margin-right: auto;
+        }
 
         &.divider {
           height: auto;
@@ -192,25 +179,6 @@ $off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-po
       position: relative;
       & > a {
         padding-right: $navigation-bar-height - 10;
-        &:after {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 0;
-          height: 0;
-          border: inset 5px;
-          border-color: $navigation-bar-arrow-color transparent transparent transparent;
-          border-top-style: solid;
-          margin-top: -2.5px;
-          top: $navigation-bar-height / 2;
-          right: 0;
-          margin-right: 15px;
-        }
-        &:hover {
-          &:after {
-            border-color: $navigation-bar-arrow-hover-color transparent transparent transparent;
-          }
-        }
       } 
 
       &.opened {
@@ -302,8 +270,13 @@ $off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-po
 
 }
 
-@media only screen and (min-width: 40.063em){
+@media #{$navigation-bar-uncollapse-query} {
   .navigation-bar { overflow: visible; }
+}
+
+//iPad fix
+@media only screen and (orientation: portrait) {
+  .navigation-bar { overflow: hidden; }
 }
 
 @media #{$navigation-bar-collapse-query} {
@@ -327,13 +300,17 @@ $off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-po
       font-size: $navigation-bar-brand-section-font-size - 0.15; 
 
       .brand-name a {
-        padding-left: $off-screen-toggle-menu-brand-name-padding-left;
+        padding-left: $off-screen-toggle-padding-left;
       }
       li {
 
         &.menu-toggle {
           display: block;
           float: right;
+
+          &.hidden {
+            display: none;
+          }
         }
       }
     }
