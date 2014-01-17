@@ -1,5 +1,5 @@
 jQuery ->
-  $('.with-dropdown').on 'click', (e) ->
+  $('.with-dropdown').on 'touchstart click', (e) ->
     e.preventDefault()
     $(@).toggleClass 'opened'
 
