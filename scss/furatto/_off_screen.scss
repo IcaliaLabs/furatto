@@ -44,6 +44,35 @@ $off-screen-back-link-border-alpha: 0.2 !default;
 $off-screen-header-padding: 1rem !default;
 $off-screen-header-font-weight: 200 !default;
 
+$off-screen-toggle-menu-left-position: 0.71428571rem !default;
+$off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-position + 1.42857143rem !default;
+$off-screen-toggle-color: #FFF !default;
+
+
+.off-screen {
+  .navigation-bar {
+    .brand-section {
+      .brand-name {
+        a {
+          &:before {
+            content: '';
+            width: 16px;
+            height: 0;
+            position: absolute;
+            left: $off-screen-toggle-menu-left-position;
+            top: 6px;
+            @include box-shadow(0 10px 0 1px $off-screen-toggle-color,
+                                0 16px 0 1px $off-screen-toggle-color,
+                                0 22px 0 1px $off-screen-toggle-color);
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 
 .off-screen {
