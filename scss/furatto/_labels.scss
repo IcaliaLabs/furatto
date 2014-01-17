@@ -31,7 +31,8 @@ $label-warning-background: #e67e22 !default;
 // We use this mixin to build the general settings for labels
 //
 @mixin label-base {
-  @include inline-block;
+  display: inline-block;
+  *display: inline-block;
   padding: $label-padding;
   font-size: $label-font-size;
   font-weight: $label-font-weight;
