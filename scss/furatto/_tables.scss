@@ -27,6 +27,18 @@ $table-striped-background-color: #f9f9f9 !default;
 $table-bordered-border-width: 1px !default;
 $table-bordered-border-style: solid !default;
 
+//Media queries
+$media-display: "only screen" !default;
+$media-max-width: 768px !default; //~ 768px
+$media-table-responsive-query: "#{$media-display} and (max-width: #{$media-max-width})" !default;
+
+//Responsive tables
+$include-responsive-tables: true !default;
+$table-responsive-pinned-background: #FFF !default; 
+$table-responsive-pinned-border-right: 1px solid #CCC !default;
+$table-responsive-pinned-border-left: $table-responsive-pinned-border-right !default;
+$table-responsive-wrapper-border-right: $table-responsive-pinned-border-right !default;
+
 //Base table style
 table {
   background-color: $table-background-color;
@@ -81,3 +93,65 @@ table {
     }
   }
 }
+
+@if($include-responsive-tables) {
+  //Responsive tables
+  @media #{$media-table-responsive-query} {
+    table.responsive { 
+      margin-bottom: 0; 
+
+      td, th { 
+        position: relative; 
+        white-space: nowrap; 
+        overflow: hidden; 
+      }
+
+      th:first-child, 
+      td:first-child, 
+      &.pinned td { 
+        display: none; 
+      }
+    }
+
+    .pinned { 
+      position: absolute; 
+      left: 0; 
+      top: 0; 
+      background: $table-responsive-pinned-background; 
+      width: 35%; 
+      overflow: hidden; 
+      overflow-x: scroll; 
+      border-right: $table-responsive-pinned-border-right; 
+      border-left: $table-responsive-pinned-border-left; 
+
+      table {
+        border-right: none; 
+        border-left: none; 
+        width: 100%;
+
+        th,
+        td {
+          white-space: nowrap;
+        }
+      }
+
+      td:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    div.table-wrapper { 
+      position: relative; 
+      margin-bottom: 20px; 
+      overflow: hidden; 
+      border-right: $table-responsive-wrapper-border-right; 
+
+      div.scrollable {
+        margin-left: 35%;
+        overflow: scroll;
+        overflow-y: hidden;
+      }
+    }
+  }
+}
+
