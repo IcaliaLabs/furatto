@@ -19,10 +19,11 @@
   }
 }
 
-@mixin inline-block {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
+@mixin vertical-alignment {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+  margin: 0;
 }
 
 @mixin center-block {
@@ -63,19 +64,6 @@
   th, td {
     display: table-cell !important;
   }
-}
-@mixin opacity ( $opacity ) {
-  opacity: $opacity;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $opacity * 100 ")";
-  filter: alpha(opacity= $opacity* 100 );
-  zoom: 1;
-}
-
-
-@mixin img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 // FORMS
@@ -170,31 +158,4 @@
       *line-height: #{$height / $base-font-size}em;
     }
   }
-}
-
-@mixin build-column-grids($columns: 12) {
-  $unit-width: (100 / $columns);  
-  $column-factor: 0.1833;
-
-
-  @for $i from 1 through $columns {
-    .col-#{$i} {
-      $current-width: ($unit-width * $i) - $column-factor;
-      width: percentage($current-width / 100);
-      margin-left: percentage($column-factor / 100);
-    }
-  }
-
-}
-
-@mixin backface-visibility($property: hidden) {
-	-webkit-backface-visibility: $property;
-	-moz-backface-visibility: $property;
-	backface-visibility: $property;
-}
-
-@mixin perspective($value: 1300px) {
-	-webkit-perspective: $value;
-	-moz-perspective: $value;
-	perspective: $value;
 }
