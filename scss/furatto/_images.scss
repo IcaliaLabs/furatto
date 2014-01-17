@@ -17,6 +17,10 @@ $img-polaroid-border-color: rgba(#000, 0.2) !default;
 $img-display: inline-block !default;
 $img-frame-margin: 5px !default;
 
+//Experimental
+$include-img-experimental: true !default;
+$include-img-flexible-ratios: true !default;
+
 //
 //@mixin
 //
@@ -69,5 +73,46 @@ img {
     img {
       @extend .img-circular;
     }
+  }
+}
+
+//Experimental
+@if($include-img-experimental) {
+  .cover-image {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto 1em;
+    max-height: 300px;
+    max-width: 100%;
+
+    @if($include-img-flexible-ratios == false) {
+      padding-bottom: 50%;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width:100%;
+    }
+
+    @if($include-img-flexible-ratios) {
+      &.ratio-2by1:before {
+        padding-bottom: 50%;
+      }
+      &.ratio-3by1:before {
+        padding-bottom: 33.33%;
+      }
+      &.ratio-4by1:before {
+        padding-bottom: 25%%;
+      }
+      &.ratio-4by3:before {
+        padding-bottom: 75%%;
+      }
+    }
+
   }
 }
