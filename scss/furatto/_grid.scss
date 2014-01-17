@@ -23,30 +23,6 @@ $stack-column-separation: 2px !default;
 $grid-max-width: 54.85714286rem !default;
 $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 
-
-//
-//@mixin
-// We use this to add flex box support
-//
-@mixin flexbox-display {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-
-//
-//@mixin
-// We use this to add flex box flow support 
-//
-@mixin flexbox-flow {
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
 //
 //@mixin
 //
@@ -63,8 +39,8 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 }
 
 .row {
-  @include flexbox-display;
-  @include flexbox-flow;
+  @include clearfix;
+  display: block;
   text-rendering: $row-text-rendering;
 
   //Columns
@@ -80,6 +56,7 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 //This prevents the columns to stack by a border or padding
 [class*="col-"] {
   padding: $col-padding;
+  float: left;
 }
 
 @media #{$grid-max-width-media} {
