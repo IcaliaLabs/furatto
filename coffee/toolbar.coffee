@@ -4,3 +4,4 @@ $(document).ready ->
       content: $(@).data('content')
       position: $(@).data('position') || 'top'
       hideOnClick: true
+      theme: $(@).data('theme')

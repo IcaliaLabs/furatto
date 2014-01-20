@@ -30,11 +30,12 @@ if ( typeof Object.create !== 'function' ) {
             self.elem = elem;
             self.$elem = $( elem );
             self.options = $.extend( {}, $.fn.toolbar.options, options );
-            self.toolbar = $('<div class="tool-container gradient" />')
+            self.toolbar = $("<div class='tool-container gradient ' />")
                 .addClass('tool-'+self.options.position)
                 .addClass('tool-rounded')
+                .addClass(self.options.theme)
                 .append('<div class="tool-items" />')
-                .append('<div class="arrow" />')
+                .append("<div class='arrow " + self.options.theme + "' />")
                 .appendTo('body')
                 .css('opacity', 0)
                 .hide();
@@ -86,7 +87,7 @@ if ( typeof Object.create !== 'function' ) {
         populateContent: function() {
             var self = this;
             var location = self.toolbar.find('.tool-items');
-            var content = $(self.options.content).clone( true ).find('a').addClass('tool-item gradient');
+            var content = $(self.options.content).clone( true ).find('a').addClass('tool-item gradient').addClass(self.options.theme);
             location.html(content);
             location.find('.tool-item').on('click', function(event) {
                 event.preventDefault();
@@ -236,7 +237,8 @@ if ( typeof Object.create !== 'function' ) {
         content: '#myContent',
         position: 'top',
         hideOnClick: false,
-        zIndex: 120
+        zIndex: 120,
+        theme: ''
     };
 
 }) ( jQuery, window, document );

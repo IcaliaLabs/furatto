@@ -4,7 +4,8 @@ $(document).ready(function() {
     return $(this).toolbar({
       content: $(this).data('content'),
       position: $(this).data('position') || 'top',
-      hideOnClick: true
+      hideOnClick: true,
+      theme: $(this).data('theme')
     });
   });
 });
