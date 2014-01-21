@@ -1,0 +1,80 @@
+//Pagination
+
+//
+//@variables
+//
+
+$pagination-bg-color: #2980b9 !default;
+$pagination-margin: 0 !default;
+$pagination-color: #08c !default;
+$pagination-font-size: 0.85714286rem !default;
+$pagination-list-items-padding: 0.14285714rem 0.57142857rem !default;
+$pagination-border-radius: 0px !default;
+$pagination-active-items-bg-color: $pagination-bg-color !default;
+$pagination-active-items-color: #FFF !default;
+$pagination-disabled-color: #FFF !default;
+$pagination-disabled-cursor: not-allowed !default;
+
+$include-pagination-transition-list-items: true !default;
+
+$pagination-bg-color-inverse: #2d313d;
+$pagination-color-inverse: #FFF;
+
+//Pagination alignment
+$include-pagination-alignment-center: true !default;
+$include-pagination-alignment-right: true !default;
+
+
+ul.pagination {
+  margin: $pagination-margin;
+  font-size: $pagination-font-size;
+
+    display: block;
+    color: $pagination-color;
+
+    & > li {
+      display: inline-block;
+
+      & > a, 
+      & > span {
+        padding: $pagination-list-items-padding;
+        @if($include-pagination-transition-list-items) {
+          @include transition((background 0.3s ease-out, color 0.3s ease-out));
+        }
+        @include border-radius($pagination-border-radius);
+      }
+
+      & > a:hover, 
+      &.active > a,
+      &.active > span {
+        background: $pagination-active-items-bg-color;
+        @include border-radius($pagination-border-radius);
+        color: $pagination-active-items-color;
+        text-decoration: none;
+      }
+
+      &.disabled {
+        & > a, 
+        & > a:hover,
+        & > span {
+          background: lighten($pagination-bg-color, 35%);
+          color: $pagination-disabled-color;
+          cursor: $pagination-disabled-cursor;
+          @include border-radius($pagination-border-radius);
+        }
+      }
+    }
+  }
+
+//Pagination Alignment
+@if($include-pagination-alignment-center) {
+  .pagination-center {
+    text-align: center;
+  }
+}
+
+@if($include-pagination-alignment-right) {
+  .pagination-right {
+    text-align: right;
+  }
+}
