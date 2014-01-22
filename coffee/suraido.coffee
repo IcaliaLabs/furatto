@@ -74,16 +74,7 @@
       )
 
       #autoslide
-      if @options.autoplay
-        setTimeout(=>
-          if @options.delay | 0
-            @play()
-
-            if @options.pause
-              @$el.on 'mouseover, mouseout', (event) =>
-                @stop()
-                event.type is 'mouseout' && @play()
-        , @options.init | 0)
+      @_enablesAutoPlay() if @options.autoplay
 
       #keypresses binding
       @_enableBindKeys() if @options.enableKeys
@@ -91,24 +82,38 @@
       @options.dots and @_createPagination('dot')
       @options.arrows and @_createPagination('arrow')
 
-      if @options.fluid
-        $(window).resize(=>
-         @r and clearTimeout(@r)
-
-         @r = setTimeout( =>
-           style =
-             height: @items.eq(@currentItemIndex).outerHeight()
-           width = @$el.outerWidth()
-
-           @itemsWrapper.css style
-           style['width'] = "#{Math.min(Math.round((width / @$el.parent().width()) * 100), 100)}%"
-           @$el.css style
-           , 50)
-        ).resize()
+      #fluid behavior for responsive layouts
+      @_enablesFluidBehavior() if @options.fluid
 
       if $.event.special['swipe'] or $.Event 'swipe'
         @$el.on 'swipeleft swiperight swipeLeft swipeRight', (e) =>
          if e.type.toLowerCase() is 'swipeleft' then @next() else @prev()
+
+    _enablesAutoPlay: =>
+      setTimeout(=>
+         if @options.delay | 0
+           @play()
+
+           if @options.pause
+             @$el.on 'mouseover, mouseout', (event) =>
+               @stop()
+               event.type is 'mouseout' && @play()
+      , @options.autoPlayDelay | 0)
+
+    _enablesFluidBehavior: =>
+      $(window).resize(=>
+        @resize and clearTimeout(@resize)
+
+        @resize = setTimeout(=>
+          style =
+            height: @items.eq(@currentItemIndex).outerHeight()
+          width = @$el.outerWidth()
+
+          @itemsWrapper.css style
+          style['width'] = "#{Math.min(Math.round((width / @$el.parent().width()) * 100), 100)}%"
+          @$el.css style
+          , 50)
+      ).resize()
 
     _enableBindKeys: =>
       $(document).on 'keydown', (event) =>
