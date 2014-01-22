@@ -56,6 +56,8 @@
       #current item position
       @currentItemIndex = 0
 
+      #fix for alpha on captions
+      @items.find('.caption').css(width: "#{100 / @itemsLength}%")
 
       #set the main element
       @_setsMainElement()
