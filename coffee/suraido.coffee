@@ -7,12 +7,11 @@
   defaults =
     speed: 500
     delay: 3000
-    init: 0
     pause: false
     loop: false
     enableKeys: false
-    dots: false
-    arrows: false
+    enableDots: false
+    enableArrows: false
     prev: '<<'
     next: '>>'
     fluid: false
@@ -20,6 +19,10 @@
     completed: false
     easing: 'swing'
     autoplay: false
+    paginationClass: 'pagination'
+    paginationItemClass: 'dot'
+    arrowsClass: 'arrows'
+    arrowClass: 'arrow'
 
   class Suraido
     constructor: (@el, options) ->
@@ -73,11 +76,15 @@
       #keypresses binding
       @_enableBindKeys() if @options.enableKeys
 
-      @options.dots and @_createPagination('dot')
-      @options.arrows and @_createPagination('arrow')
+      @options.enableDots and @_createPagination()
+      @options.enableArrows and @_createArrows()
 
       #fluid behavior for responsive layouts
       @_enablesFluidBehavior() if @options.fluid
+
+      #chrome fix
+      if window.chrome
+        @items.css 'background-size', '100% 100%'
 
       if $.event.special['swipe'] or $.Event 'swipe'
         @$el.on 'swipeleft swiperight swipeLeft swipeRight', (e) =>
@@ -111,7 +118,7 @@
 
         @resize = setTimeout(=>
           style =
-            height: @items.eq(@currentItemIndex).outerHeight()
+            height: @items.eq(@currentItemIndex).outerHeight() + 30
           width = @$el.outerWidth()
 
           @itemsWrapper.css style
@@ -127,20 +134,28 @@
           when 39 then @next()
           when 27 || 32 then @stop()
 
-    _createPagination: (name, html) =>
-      if name is 'dot'
-        html = "<ol class='dots'>"
+    _createPagination: =>
+        html = "<ol class='#{@options.paginationClass}'>"
         $.each @items, (index) =>
-          html += "<li class='#{if index == @currentItemIndex then name + ' active' else name}'> #{++index}</li>"
+          html += "<li class='#{if index == @currentItemIndex then @options.paginationItemClass + ' active' else @options.paginationItemClass}'> #{++index}</li>"
         html += "</ol>"
-      else
-        html = "<div class=\""
-        html = html + name + "s\">" + html + name + " prev\">" + @options.prev + "</div>" + html + name + " next\">" + @options.next + "</div></div>"
 
+        @_bindPagination(@options.paginationClass, @options.paginationItemClass, html)
+
+    _createArrows: =>
+        html = "<div class=\""
+        html = html + @options.arrowsClass + "\">" + html + @options.arrowClass + " prev\">" + @options.prev + "</div>" + html + @options.arrowClass + " next\">" + @options.next + "</div></div>"
+
+        @_bindPagination(@options.arrowsClass, @options.arrowClass, html)
+
+    _bindPagination: (className, itemClassName, html) ->
       weakSelf = @
-      @$el.addClass("has-#{name}s").append(html).find(".#{name}").click ->
-        me = $(@)
-        if me.hasClass('dot') then weakSelf.stop().to(me.index()) else if me.hasClass('prev') then weakSelf.prev() else weakSelf.next()
+      @$el.addClass("has-#{className}").append(html).find(".#{itemClassName}").click ->
+        $this = $(@)
+        if $this.hasClass(weakSelf.options.paginationItemClass)
+          weakSelf.stop().to($this.index())
+        else if $this.hasClass('prev') then weakSelf.prev() else weakSelf.next()
+
 
     to: (index, callback) =>
       if @t
@@ -159,10 +174,10 @@
       speed = if callback then 5 else @options.speed | 0
       easing = @options.easing
       obj =
-        height: target.outerHeight()
+        height: target.outerHeight() + 30
 
       if not @itemsWrapper.queue('fx').length
-        @$el.find('.dot').eq(index).addClass('active').siblings().removeClass('active')
+        @$el.find(".#{@options.paginationItemClass}").eq(index).addClass('active').siblings().removeClass('active')
         @$el.animate(obj, speed, easing) and @itemsWrapper.animate($.extend(
           left: "-#{index}00%", obj), speed, easing, (data) =>
             @currentItemIndex = index
@@ -204,4 +219,5 @@
         plugin[_].apply plugin, args
 
   Suraido.version = "1.0.0"
+
 ) $, window, document
