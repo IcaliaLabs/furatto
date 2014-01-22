@@ -55,11 +55,7 @@
 
 
       #set the main element
-      @$el.css(
-        width: @maxSize.width
-        height: @items.first().outerHeight()
-        overflow: 'hidden'
-      )
+      @_setsMainElement()
 
       #Set relative widths
       @itemsWrapper.css(
@@ -68,10 +64,8 @@
         width: "#{@itemsLength * 100}%"
       )
 
-      @items.css(
-        float: 'left'
-        width: "#{(100 / @itemsLength)}%"
-      )
+      #sets the styling for each slider item
+      @_setsItems()
 
       #autoslide
       @_enablesAutoPlay() if @options.autoplay
@@ -88,6 +82,17 @@
       if $.event.special['swipe'] or $.Event 'swipe'
         @$el.on 'swipeleft swiperight swipeLeft swipeRight', (e) =>
          if e.type.toLowerCase() is 'swipeleft' then @next() else @prev()
+
+    _setsItems: =>
+      @items.css
+        float: 'left'
+        width: "#{100 / @itemsLength}%"
+
+    _setsMainElement: =>
+      @$el.css
+        width: @maxSize.width
+        height: @items.first().outerHeight()
+        overflow: 'hidden'
 
     _enablesAutoPlay: =>
       setTimeout(=>
