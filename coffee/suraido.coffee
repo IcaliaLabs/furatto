@@ -10,7 +10,7 @@
     init: 0
     pause: false
     loop: false
-    keys: false
+    enableKeys: false
     dots: false
     arrows: false
     prev: '<<'
@@ -85,16 +85,8 @@
                 event.type is 'mouseout' && @play()
         , @options.init | 0)
 
-      #keypresses
-      if @options.keys
-        $(document).keydown (event) =>
-          key = event.which
-          if key is 37
-            @prev()
-          else if key is 39
-            @next()
-          else if key is 27
-            @stop()
+      #keypresses binding
+      @_enableBindKeys() if @options.enableKeys
 
       @options.dots and @_createPagination('dot')
       @options.arrows and @_createPagination('arrow')
@@ -117,6 +109,13 @@
       if $.event.special['swipe'] or $.Event 'swipe'
         @$el.on 'swipeleft swiperight swipeLeft swipeRight', (e) =>
          if e.type.toLowerCase() is 'swipeleft' then @next() else @prev()
+
+    _enableBindKeys: =>
+      $(document).on 'keydown', (event) =>
+        switch event.which
+          when 37 then @prev()
+          when 39 then @next()
+          when 27 || 32 then @stop()
 
     _createPagination: (name, html) =>
       if name is 'dot'
