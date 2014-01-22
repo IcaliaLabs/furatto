@@ -25,29 +25,38 @@
     constructor: (@el, options) ->
       #jquery element wrapper
       @$el = $(@el)
+
       #merges options
       @options = $.extend {}, defaults, options
+
       #slider items wrapper
       @itemsWrapper = @$el.find('>ul')
+
       #max slider size 
-      @maxSize = [@$el.outerWidth() | 0, @$el.outerHeight() | 0]
+      @maxSize =
+        width: @$el.outerWidth() | 0
+        height: @$el.outerHeight() | 0
+
       #items definition
       weakSelf = @
       @items = $(@itemsWrapper).find('>li').each (index) ->
-        me = $(@)
-        width = me.outerWidth()
-        height = me.outerHeight()
+        $this = $(@)
+        width = $this.outerWidth()
+        height = $this.outerHeight()
 
-        weakSelf.maxSize[0] = width if width > weakSelf.maxSize[0]
-        weakSelf.maxSize[1] = height if height > weakSelf.maxSize[1]
+        weakSelf.maxSize.width = width if width > weakSelf.maxSize.width
+        weakSelf.maxSize.height = height if height > weakSelf.maxSize.height
+
       #items on the wrapper
-      @itemsSize = @items.length
+      @itemsLength = @items.length
+
+      #current item position
       @currentItemIndex = 0
 
 
       #set the main element
       @$el.css(
-        width: @maxSize[0]
+        width: @maxSize.width
         height: @items.first().outerHeight()
         overflow: 'hidden'
       )
@@ -56,12 +65,12 @@
       @itemsWrapper.css(
         position: "relative"
         left: 0
-        width: "#{@itemsSize * 100}%"
+        width: "#{@itemsLength * 100}%"
       )
 
       @items.css(
         float: 'left'
-        width: "#{(100 / @itemsSize)}%"
+        width: "#{(100 / @itemsLength)}%"
       )
 
       #autoslide
@@ -78,7 +87,6 @@
 
       #keypresses
       if @options.keys
-        console.log 'keys'
         $(document).keydown (event) =>
           key = event.which
           if key is 37
@@ -102,7 +110,6 @@
 
            @itemsWrapper.css style
            style['width'] = "#{Math.min(Math.round((width / @$el.parent().width()) * 100), 100)}%"
-           console.log style
            @$el.css style
            , 50)
         ).resize()
@@ -164,8 +171,7 @@
       @
     
     next: =>
-      console.log @currentItemIndex
-      if @currentItemIndex == (@itemsSize - 1)
+      if @currentItemIndex == (@itemsLength - 1)
         @stop().to(0)
       else
         @stop().to(@currentItemIndex + 1)
