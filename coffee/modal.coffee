@@ -56,6 +56,8 @@
       if typeof option is 'string'
         data[option]()
 
+  Modal.version = "1.0.0"
+
   $(document).ready ->
     $('body').append('<div class="modal-overlay"></div>')
     $('[data-furatto="modal"]').each ->

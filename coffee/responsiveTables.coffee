@@ -83,4 +83,6 @@
         $.data @, "plugin_#{pluginName}", new ResponsiveTables(@, a, options)
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
+
+  ResponsiveTables.version = "1.0.0"
 ) $, window, document
