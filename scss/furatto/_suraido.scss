@@ -1,0 +1,214 @@
+//Suraido slider
+//
+
+//
+//@variables
+//
+
+//General
+$suraido-slider-min-height: 330px !default;
+
+$suraido-item-min-height: 25rem !default;
+
+//Pagination
+$suraido-pagination-position: 0 !default;
+$suraido-list-width: 300% !default;
+$suraido-list-item-width: 33% !default;
+$suraido-pagination-z-index: 20 !default;
+
+//Dots
+$suraido-dot-size: 0.71428571rem !default;
+$suraido-dot-separation: 0.28571429rem !default;
+$suraido-dot-border-width: 0.14285714rem !default;
+$suraido-dot-border-style: solid !default;
+$suraido-dot-border-color: #CCC !default;
+$suraido-dot-radius: 0.42857143rem !default;
+$suraido-dot-opacity: 0.4 !default;
+$suraido-include-dot-transition: true !default;
+$suraido-dot-transition: background 0.5s, opacity 0.5s !default;
+$suraido-dot-active-background-color: #444 !default;
+$suraido-dot-active-opacity: 1 !default;
+$suraido-dot-background: #CCC;
+
+//Arrows
+$suraido-arrows-color: #FFF !default;
+$suraido-arrows-z-index: $suraido-pagination-z-index - 10 !default;
+$suraido-arrow-height: 60px !default;
+$suraido-arrow-line-height: $suraido-arrow-height !default;
+$suraido-next-arrow-padding: 15px !default;
+$suraido-prev-arrow-padding: 15px !default;
+
+//Caption
+$suraido-caption-font-size: 14px !default;
+$suraido-caption-bottom-position: 30px !default;
+$suraido-caption-height: 50px !default;
+$suraido-caption-color: #FFF !default;
+$suraido-caption-font-weight: lighter !default;
+$suraido-caption-padding-top: 10px !default;
+$suraido-caption-padding-left: 10px !default;
+$suraido-caption-background: #000 !default;
+$suraido-caption-background-alpha: 0.5 !default;
+
+
+
+//
+//@mixin slider-base
+//
+@mixin slider-base($list-width: $suraido-list-width, 
+                   $list-item-width: $suraido-list-item-width,
+                   $list-item-min-height: $suraido-item-min-height,
+                   $slider-min-height: $suraido-slider-min-height) {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  @include backface-visibility(hidden);
+  min-height: $slider-min-height;
+
+  ul {
+    margin: 0;
+    width: $list-width;
+    list-style: none;
+
+    li {
+      display: block;
+      float: left;
+      width: $list-item-width;
+      min-height: $list-item-min-height;
+      @include background-size(100% 100%);
+    }
+  }
+}
+
+//
+//@mixin slider-pagination
+//
+@mixin slider-pagination($pagination-position: $suraido-pagination-position) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: $pagination-position;
+  margin: 0;
+  text-align: center;
+  z-index: $suraido-pagination-z-index;
+}
+
+//
+//@mixin slider-dot
+//
+@mixin slider-pagination-dot($dot-size: $suraido-dot-size, $dot-separation: $suraido-dot-separation,
+                             $dot-border-width: $suraido-dot-border-width,
+                             $dot-border-style: $suraido-dot-border-style,
+                             $dot-border-color: $suraido-dot-border-color,
+                             $dot-radius: $suraido-dot-radius,
+                             $dot-opacity: $suraido-dot-opacity,
+                             $include-dot-transition: $suraido-include-dot-transition,
+                             $dot-active-background-color: $suraido-dot-active-background-color,
+                             $dot-active-opacity: $suraido-dot-active-opacity,
+                             $dot-background: $suraido-dot-background) {
+
+  display: inline-block;
+  width: $dot-size;
+  height: $dot-size;
+  margin: 0 $dot-separation;
+  text-indent: -999em;
+  @include border-radius($dot-radius);
+  @include opacity($dot-opacity);
+  cursor: pointer;
+  background: $dot-background;
+  @if($include-dot-transition) {
+    @include transition($suraido-dot-transition);
+  }
+
+  &.active {
+    background: $dot-active-background-color;
+    @include opacity($dot-active-opacity);
+  }
+}
+
+//
+//@mixin
+//
+@mixin slider-arrows($arrows-color: $suraido-arrows-color,
+                     $arrows-z-index: $suraido-arrows-z-index) {
+  position: absolute;
+  top: 0;
+  color: $arrows-color;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: $arrows-z-index;
+}
+
+//
+//@mixin
+//
+@mixin slider-arrow($arrow-height: $suraido-arrow-height,
+                    $arrow-line-height: $suraido-arrow-line-height,
+                    $prev-arrow-padding: $suraido-prev-arrow-padding,
+                    $next-arrow-padding: $suraido-next-arrow-padding) {
+    display: inline;
+    cursor: pointer;
+    position: relative;
+    height: $arrow-height;
+    line-height: $arrow-line-height;
+    top: 45%;
+
+    &.prev {
+      float: left;
+      padding-left: $prev-arrow-padding;
+    }
+
+    &.next {
+      padding-right: $next-arrow-padding;
+      float: right;
+    }
+}
+
+//
+//@mixin
+//
+@mixin slider-caption($caption-font-size: $suraido-caption-font-size,
+                      $caption-bottom-position: $suraido-caption-bottom-position,
+                      $caption-height: $suraido-caption-height,
+                      $caption-color: $suraido-caption-color,
+                      $caption-font-weight: $suraido-caption-font-weight,
+                      $caption-padding-top: $suraido-caption-padding-top,
+                      $caption-padding-left: $suraido-caption-padding-left,
+                      $caption-background: $suraido-caption-background,
+                      $caption-background-alpha: $suraido-caption-background-alpha) {
+    font-size: $caption-font-size;
+    position: absolute;
+    bottom: $caption-bottom-position;
+    height: $caption-height;
+    overflow: hidden;
+    background: rgba($caption-background, $caption-background-alpha);
+    color: $caption-color;
+    width: 100%;
+    padding-top: $caption-padding-top;
+    padding-left: $caption-padding-left;
+    font-weight: $caption-font-weight;
+}
+
+.suraido-container {
+  @include slider-base;
+
+  .caption {
+    @include slider-caption;
+  }
+
+  .pagination {
+    @include slider-pagination;
+
+    .dot {
+      @include slider-pagination-dot;
+    }
+  }
+
+  .arrows {
+    @include slider-arrows;
+
+    .arrow {
+      @include slider-arrow;
+    }
+  }
+}
