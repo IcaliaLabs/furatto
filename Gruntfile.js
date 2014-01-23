@@ -22,13 +22,13 @@ module.exports = function(grunt) {
       },
       furatto: {
         src: [
-          'js/modal.js',
-          'js/navigation-bar.js',
-          'js/off-screen.js',
-          'js/responsiveTables.js',
-          'js/suraido.js',
-          'js/toolbar.js',
-          'js/tooltip.js'
+          'js/<%= pkg.name%>.modal.js',
+          'js/<%= pkg.name%>.navigation-bar.js',
+          'js/<%= pkg.name%>.off-screen.js',
+          'js/<%= pkg.name%>.responsiveTables.js',
+          'js/<%= pkg.name%>.suraido.js',
+          'js/<%= pkg.name%>.toolbar.js',
+          'js/<%= pkg.name%>.tooltip.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -115,11 +115,11 @@ module.exports = function(grunt) {
           bare: true
         },
         files: {
-          'js/modal.js': 'coffee/modal.coffee',
-          'js/navigation-bar.js': 'coffee/navigation-bar.coffee',
-          'js/responsiveTables.js': 'coffee/responsiveTables.coffee',
-          'js/suraido.js': 'coffee/suraido.coffee',
-          'js/toolbar.js': 'coffee/toolbar.coffee'
+          'js/<%= pkg.name%>.modal.js': 'coffee/modal.coffee',
+          'js/<%= pkg.name%>.navigation-bar.js': 'coffee/navigation-bar.coffee',
+          'js/<%= pkg.name%>.responsiveTables.js': 'coffee/responsiveTables.coffee',
+          'js/<%= pkg.name%>.suraido.js': 'coffee/suraido.coffee',
+          'js/<%= pkg.name%>.toolbar.js': 'coffee/toolbar.coffee'
         }
       }
     },
