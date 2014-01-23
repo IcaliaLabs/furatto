@@ -122,23 +122,39 @@ module.exports = function(grunt) {
           'js/toolbar.js': 'coffee/toolbar.coffee'
         }
       }
+    },
+
+    compress: {
+      main: {
+        options: {
+          archive: '<%= pkg.name %>_<%= pkg.version %>.zip'
+        },
+        files: [
+          { src: ['dist/**'], dest: 'dist/'}
+        ]
+      }
     }
 
   });
 
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
+
   // CSS distribution task.
   grunt.registerTask('dist-css', ['compass:dist', 'cssmin']);
+
+  // JS distribution task
   grunt.registerTask('dist-js', ['coffee', 'concat', 'uglify']);
+
+  // Docs distribution task
   grunt.registerTask('dist-docs', ['copy:docs']);
 
-  // Docs distribution task.
-  //grunt.registerTask('dist-docs', 'copy:docs');
+  // Dist compression task
+  grunt.registerTask('dist-compress', ['compress']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-docs', 'usebanner']);
 
   // Default task.
-  //grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer']);
+  grunt.registerTask('default', ['dist']);
 
 };
