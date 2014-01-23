@@ -1,37 +1,6 @@
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/**
- * MIXINS COLLECTION
- * 
- * Designed and built @kurenn  
- */
+//Mixins
 
-//Clears the float from any element
-@mixin clearfix {
-  &:before, &:after {
-    display: table;
-    content: "";
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
-@mixin vertical-alignment {
-  position: relative;
-  top: 50%;
-  @include transform(translateY(-50%));
-  margin: 0;
-}
-
-@mixin center-block {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+//Hyphens mixin
 @mixin hyphens($mode: auto) {
   word-wrap: break-word;
   -webkit-hyphens: $mode;
@@ -41,7 +10,7 @@
   hyphens: $mode;
 }
 
-//Credits to bootstrap
+//Mixins to define the visibility media queries support
 @mixin responsive-invisibility {
   display: none !important;
 
@@ -66,96 +35,33 @@
   }
 }
 
-// FORMS
-// --------------------------------------------------
 
-// Block level inputs
-@mixin input-block-level {
-  display: block;
-  width: 100%;
-  min-height: $input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
+// Mixin to set the touch callout actions for different vendors
+@mixin touch-callout($value: none) {
+  -webkit-touch-callout: $value;
+  -webkit-user-select: $value;
+  -khtml-user-select: $value;
+  -moz-user-select: moz-#{$value};
+  -ms-user-select: $value;
+  user-select: $value;
 }
 
-@mixin dropdown-arrow($color: $select-options-bg, $top: 5px, $left: 15px, $size: 9px) {
-
-  &:before {
-    content: '';
-    border-style: solid;
-    border-width: 0 $size $size $size;
-    border-color: transparent transparent $color transparent;
-    height: 0px;
-    position: absolute;
-    left: $left;
-    top: $top;
-    width: 0px;
-    // Make corners smooth
-    -webkit-transform: rotate(360deg);
+// Mixin to add support for retina display on images
+@mixin retina-image($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
   }
 }
 
-@mixin nav-divider($top: #e5e5e5, $bottom: #FFF) {
-  // IE7 needs a set width since we gave a height. Restricting just
-  // to IE7 to keep the 1px left/right space in other browsers.
-  // It is unclear where IE is getting the extra space that we need
-  // to negative-margin away, but so it goes.
-  *width: 100%;
-  height: 1px;
-  margin: (($base-line-height / 2) - 1) 1px; // 8px 1px
-  *margin: -5px 0 5px;
+// Mixin that will truncate text
+@mixin truncate-text {
   overflow: hidden;
-  background-color: $top;
-  border-bottom: 1px solid $bottom;
-}
-
-@mixin touch-callout {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: moz-none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-// Font Awesome Mixins 
-// --------------------------
-
-@mixin icon($icon) {
-  @include icon-FontAwesome();
-  content: $icon;
-}
-
-@mixin icon-FontAwesome() {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  *margin-right: .3em; // fixes ie7 issues
-}
-
-@mixin icon-stack($width: 2em, $height: 2em, $top-font-size: 1em, $base-font-size: 2em) {
-  .icon-stack {
-    position: relative;
-    display: inline-block;
-    width: $width;
-    height: $height;
-    line-height: $width;
-    vertical-align: -35%;
-    [class^="icon-"],
-    [class*=" icon-"] {
-      display: block;
-      text-align: center;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      font-size: $top-font-size;
-      line-height: inherit;
-      *line-height: $height;
-    }
-    .icon-stack-base {
-      font-size: $base-font-size;
-      *line-height: #{$height / $base-font-size}em;
-    }
-  }
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
