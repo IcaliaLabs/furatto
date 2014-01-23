@@ -65,3 +65,62 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// Mixin to set the abs position of any element
+@mixin absPosition($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Hidden text - by Nicolas Gallagher
+@mixin hidden-text {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+// Font-size mixin, with IE7 & IE8 support, CSS tricks courtesy
+@mixin font-size($size: 1.6, $line: $size * 1.25) {
+  font-size: ($size * 10) + px;
+  line-height: ($line * 10) + px;
+  font-size: $size + rem;
+  line-height: $line + rem;
+}
+
+// Animation keyframes
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+
+// Animation mixin
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -ms-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+
+// Embossing and letterpress effect
+@mixin box-emboss($outerOpacity, $innerOpacity) {
+  @include box-shadow(rgba(white, $outerOpacity) 0 1p 0,
+                      rgba(black, $innerOpacity) 0 1px 0 inset);
+}
