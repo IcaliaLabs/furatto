@@ -1,4 +1,25 @@
+# Sass cached files
 .sass-cache/*
+
+# Documentation files
+_gh_pages
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+
+# OS specific files
 .DS_Store
-node_modules
 .netrc
+
+# Folders
+bower_components
+node_modules
