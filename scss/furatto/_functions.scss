@@ -1,8 +1,7 @@
 $remBase: 16 !default;
 
-@function px-to-rems($px: 1) {
-  $value: $px / $remBase * 1rem;
-  @if ($px == 0) { $value: 0rem; }
+@function px-to-rems($size: 24) {
+  $value: ($size / $remBase) * 1rem;
 
   @return $value;
 }
