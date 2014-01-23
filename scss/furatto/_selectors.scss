@@ -1,0 +1,36 @@
+//Selectors
+
+%text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  display: inline-block; //ensures element has block properties
+}
+
+//Clears the float from any element
+%clearfix {
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Centers a block
+%center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Aligns the content vertically speaking
+%vertical-alignment {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+  margin: 0;
+}
