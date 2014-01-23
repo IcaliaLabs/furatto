@@ -76,6 +76,9 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
   overflow: hidden;
   font-weight: $navigation-bar-font-weight;
 
+  a {
+    @include touch-callout;
+  }
   &.opened {
     height: auto;
 
