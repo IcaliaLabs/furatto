@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 
     watch: {
       sass: {
-        files: 'scss/furatto/*.scss',
+        files: ['scss/furatto.scss', 'scss/furatto/*.scss'],
         tasks: 'compass:dist'
       },
       coffee: {
