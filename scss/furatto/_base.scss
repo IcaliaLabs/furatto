@@ -76,7 +76,7 @@ object {
 
 //Helpful classes
 .clearfix {
-  @include clearfix;
+  @extend %clearfix;
 }
 
 .hidden {
@@ -133,5 +133,5 @@ object {
 //Content alignment
 .vertical-align {
   //The parent container must have height
-  @include vertical-alignment;
+  @extend %vertical-alignment;
 }

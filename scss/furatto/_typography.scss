@@ -209,7 +209,7 @@ $medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-
   }
   // Horizontal layout (like forms)
   .dl-horizontal {
-    @include clearfix(); // Ensure dl clears floats if empty dd elements present
+    @extend %clearfix; // Ensure dl clears floats if empty dd elements present
     dt {
       float: left;
       clear: left;

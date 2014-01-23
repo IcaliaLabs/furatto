@@ -39,7 +39,7 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 }
 
 .row {
-  @include clearfix;
+  @extend %clearfix;
   display: block;
   text-rendering: $row-text-rendering;
 
