@@ -124,3 +124,20 @@
   @include box-shadow(rgba(white, $outerOpacity) 0 1p 0,
                       rgba(black, $innerOpacity) 0 1px 0 inset);
 }
+
+// Flexbox
+
+@mixin flexbox-display {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex($value: 1) {
+  -webkit-flex: $value;
+  -moz-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
