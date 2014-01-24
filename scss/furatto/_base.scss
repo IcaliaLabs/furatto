@@ -5,9 +5,12 @@
 //
 
 $body-background-color: #FFF !default;
-$body-font-color: #333 !default;
+$base-font-color: #333 !default;
 $base-link-color: #0088cc !default;
-$base-font-weight: 500 !default;
+$base-font-weight: normal !default;
+$base-font-size: px-to-rems(16) !default;
+$base-font-family: 'Open Sans', 'Helvetica Neue' !default;
+$base-line-height: 1 !default;
 
 //Text variations
 $muted-text-color: #555 !default;
@@ -33,6 +36,7 @@ html {
 html, body {
   font-size: $base-font-size;
   overflow-x: hidden;
+  font-weight: $base-font-weight;
   @include hyphens(auto);
 }
 
@@ -54,7 +58,7 @@ xmp {
 
 body {
   background: $body-background-color;
-  color: $body-font-color;
+  color: $base-font-color;
   padding: 0;
   margin: 0;
   font-family: $base-font-family;
