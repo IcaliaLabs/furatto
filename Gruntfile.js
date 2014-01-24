@@ -28,7 +28,8 @@ module.exports = function(grunt) {
           'js/<%= pkg.name%>.responsiveTables.js',
           'js/<%= pkg.name%>.suraido.js',
           'js/<%= pkg.name%>.toolbar.js',
-          'js/<%= pkg.name%>.tooltip.js'
+          'js/<%= pkg.name%>.tooltip.js',
+          'js/<%= pkg.name%>.tabs.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -74,11 +75,11 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['scss/furatto.scss', 'scss/furatto/*.scss'],
-        tasks: 'compass:dist'
+        tasks: ['dist']
       },
       coffee: {
         files: 'coffee/*.coffee',
-        tasks: ['coffee', 'concat', 'uglify']
+        tasks: ['coffee', 'concat', 'uglify', 'copy:docs']
       }
     },
 
@@ -119,7 +120,8 @@ module.exports = function(grunt) {
           'js/<%= pkg.name%>.navigation-bar.js': 'coffee/navigation-bar.coffee',
           'js/<%= pkg.name%>.responsiveTables.js': 'coffee/responsiveTables.coffee',
           'js/<%= pkg.name%>.suraido.js': 'coffee/suraido.coffee',
-          'js/<%= pkg.name%>.toolbar.js': 'coffee/toolbar.coffee'
+          'js/<%= pkg.name%>.toolbar.js': 'coffee/toolbar.coffee',
+          'js/<%= pkg.name%>.tabs.js': 'coffee/tabs.coffee'
         }
       }
     },
@@ -150,6 +152,9 @@ module.exports = function(grunt) {
 
   // Dist compression task
   grunt.registerTask('dist-compress', ['compress']);
+
+  // Dist dev
+  grunt.registerTask('dist-dev', ['dist-css', 'dist-js', 'dist-docs'])
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-docs', 'usebanner']);

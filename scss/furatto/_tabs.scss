@@ -1,0 +1,26 @@
+//Tabs
+
+//
+//@variables
+//
+
+$tabu-content-margin-left: $navigation-inline-list-item-margin-left !default;
+
+//
+//@mixin tabu
+//
+@mixin tab-content($content-margin-left: $tabu-content-margin-left,
+$content-class-name: "content") {
+  margin-left: $content-margin-left;
+  .#{$content-class-name} {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  } 
+}
+
+.tabu-content {
+  @include tab-content;
+}
