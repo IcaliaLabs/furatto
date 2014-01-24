@@ -75,7 +75,10 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['scss/furatto.scss', 'scss/furatto/*.scss'],
-        tasks: ['dist']
+        tasks: ['dist'],
+        options: {
+          livereload: true
+        }
       },
       coffee: {
         files: 'coffee/*.coffee',
