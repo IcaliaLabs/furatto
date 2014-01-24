@@ -1,20 +1,12 @@
-/*------------------------------------*\
-    $ALERTS
-\*------------------------------------*/
-/**
- * Basic alert structural styling. 
- * 
- * Designed and built @kurenn  
- */
+//Alerts
 
 //
 //@variables
 //
-@import "functions";
 
 //General settings
-$alert-padding: 0.57142857rem 2.5rem 0.57142857rem 1rem !default;
-$alert-margin-bottom: 20px !default;
+$alert-padding: px-to-rems(9) px-to-rems(40) px-to-rems(9) px-to-rems(16) !default;
+$alert-margin-bottom: px-to-rems(20) !default;
 $alert-font-size: px-to-rems(13) !default;
 $alert-font-weight: normal !default;
 $alert-default-background: #e67e22 !default;
@@ -27,11 +19,11 @@ $alert-close-padding: px-to-rems(5) !default;
 $alert-close-color: #333 !default;
 
 //Variations
-$alert-radius: 3px !default;
-$alert-round: 1000px !default;
+$alert-radius: px-to-rems(3) !default;
+$alert-round: px-to-rems(1000) !default;
 
 //Alert styles
-$alert-border-width: 1px !default;
+$alert-border-width: px-to-rems(1) !default;
 $alert-border-style: solid !default;
 
 //Background variations
