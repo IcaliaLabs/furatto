@@ -1,0 +1,81 @@
+// Experimental - Use of edge and modern cases that may work or not on
+// certain browsers
+
+//
+//@variables
+//
+
+$input-addon-margin-bottom: 1rem !default;
+$addon-border-width: 1px !default;
+$addon-border-style: solid !default;
+$addon-border-color: rgba(147, 128, 108, 0.25) !default;
+$addon-padding: 0.5rem !default;
+$addon-background-color: rgba(147, 148, 108, 0.1) !default;
+$addon-font-color: #666 !default;
+$addon-font-weight: 400 !default;
+$addon-font-size: 14px !default;
+$include-addon-radius: false !default;
+$addon-radius: 2px !default;
+
+//Addon color variations
+$addon-warning-bg-color: rgba(211, 84, 0, 0.6);
+$addon-danger-bg-color: rgba(231, 76, 60, 0.6);
+$addon-primary-bg-color: rgba(52, 152, 219, 0.6);
+
+@mixin addon-variation($background-color, $color: #FFF) {
+  background-color: $background-color;
+  color: $color;
+}
+
+@if($include-flexible-addons) {
+  .input-addon {
+    @include flexbox-display;
+    margin-bottom: $input-addon-margin-bottom;
+  }
+
+  .addon-field {
+    @include flex;
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+      border-left: 0;
+    }
+    &:not(:last-child) {
+      border-right: 0;
+    }
+  }
+
+  a.addon {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .addon {
+    margin: 0;
+    border: $addon-border-width $addon-border-style $addon-border-color;
+    padding: $addon-padding;
+    background-color: $addon-background-color;
+    color: $addon-font-color;
+    font-weight: $addon-font-weight;
+    font-size: $addon-font-size;
+
+    &.warning { @include addon-variation($addon-warning-bg-color); } 
+    &.danger { @include addon-variation($addon-danger-bg-color); } 
+    &.primary { @include addon-variation($addon-primary-bg-color); }
+
+    &:first-child {
+      @if($include-addon-radius) {
+        @include border-radius($addon-radius 0 0 $addon-radius);
+      }
+    }
+
+    &:last-child {
+      @if($include-addon-radius) {
+        @include border-radius(0 $addon-radius $addon-radius 0); 
+      }
+    }
+  }
+}
