@@ -4,26 +4,24 @@
 //@variables
 //
 
-@import "compass/css3";
-
 //Form Label
 $form-label-display: block !default;
 $form-label-cursor: pointer !default;
-$form-label-font-size: 0.85rem !default;
+$form-label-font-size: px-to-rems(13) !default;
 $form-label-color: scale-color(#000, $lightness: 30%) !default;
 $form-label-font-weight: 300 !default;
-$form-label-margin-bottom: 0.35714286rem !default;
+$form-label-margin-bottom: px-to-rems(5) !default;
 $form-input-border-width: 1px !default;
 $form-input-border-style: solid !default;
-$form-inline-label-margin-left: 0.21428571rem !default;
+$form-inline-label-margin-left: px-to-rems(3) !default;
 
 //Form inputs
 $form-input-radius: 0 !default;
-$form-input-height: 2rem !default;
+$form-input-height: px-to-rems(32) !default;
 $form-input-color: rgba(0,0,0, 0.75) !default;
-$form-input-font-size: 0.85714286rem !default;
-$form-input-padding: 0.33rem !default;
-$form-input-margin-bottom: 0.71428571rem !default;
+$form-input-font-size: px-to-rems(13) !default;
+$form-input-padding: px-to-rems(5) !default;
+$form-input-margin-bottom: px-to-rems(11) !default;
 $form-input-box-shadow: inset 0 1px 2px rgba(#ccc,0.35) !default;
 $form-input-focus-box-shadow: 0 0 5px rgba(#ccc, 1) !default;
 $form-input-focus-border-color: #999 !default;
@@ -44,9 +42,9 @@ $form-input-error-border-color: $form-label-error-color !default;
 
 //Help hints
 $form-help-hint-color: #FFF !default;
-$form-help-hint-font-size: 0.71428571rem !default;
+$form-help-hint-font-size: px-to-rems(11) !default;
 $form-help-hint-font-style: italic !default;
-$form-help-hint-padding: 0.33rem !default;
+$form-help-hint-padding: px-to-rems(5) !default;
 
 //Selects
 $form-select-background-color: #FFF !default;
@@ -54,9 +52,9 @@ $form-select-border-style: solid !default;
 $form-select-border-width: 1px !default;
 $form-select-border-color: #CCC !default;
 $form-select-color: #555 !default;
-$form-select-font-size: 0.9rem !default;
+$form-select-font-size: px-to-rems(14) !default;
 $form-select-hover-background: #F7F7F7 !default;
-$form-select-padding: 0.33rem 0.43rem !default;
+$form-select-padding: px-to-rems(5) px-to-rems(7) !default;
 $form-select-radius: 2px !default;
 $form-select-transition-time: 2s !default;
 $form-select-transition-style: linear !default;
@@ -64,7 +62,7 @@ $form-select-backgroun-x-position: 97% !default;
 
 $include-form-select-transition: true !default;
 
-$form-input-media-query: "only screen and (max-width: #{$screen-xs})" !default;
+$form-input-media-query: "#{$media-display} and (max-width: #{$screen-xs})" !default;
 
 form {
   display: block;
@@ -136,12 +134,19 @@ input[type="color"],
   margin-bottom: $form-input-margin-bottom;
   background-color: $form-input-background-color;
   border: $form-input-border-width $form-input-border-style $form-input-border-color;
+  outline: none;
+
+  @if($include-flexible-addons) {
+    &.addon-field {
+      margin-bottom: 0;
+    }
+  }
 
   //Focus state
   &:focus {
     @include box-shadow($form-input-focus-box-shadow);
     border-color: rgba($form-input-focus-border-color, 0.8);
-    outline: 0;
+    outline: none;
     background: darken($form-input-background-color, 2%);
   }
 
@@ -158,19 +163,19 @@ input[type="color"],
     width: $form-input-mini-width; 
   }
 
-  &.input-small { 
+  &.small { 
     width: $form-input-small-width; 
   }
 
-  &.input-medium { 
+  &.medium { 
     width: $form-input-medium-width; 
   }
 
-  &.input-large { 
+  &.large { 
     width: $form-input-large-width; 
   }
 
-  &.input-block {
+  &.block {
     width: 100%;
   }
 
@@ -198,7 +203,7 @@ select {
   width: 100%;
   display: block;
   background: $form-select-background-color
-        url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat $form-select-backgroun-x-position center;
+  url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat $form-select-backgroun-x-position center;
   ; 
 
   //Firefox fix
@@ -244,8 +249,21 @@ input[type="file"] {
 }
 
 @media #{$form-input-media-query} {
-  input,
-  textarea {
-    width: 100% !important;
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    width: 100%;
   }
 }
