@@ -215,6 +215,7 @@
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
 
-   OffScreen.version = "1.0.0"
+  $('.off-screen-navigation').offScreen()
+  OffScreen.version = "1.0.0"
       
 ) jQuery, window, document
