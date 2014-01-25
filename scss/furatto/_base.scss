@@ -33,9 +33,12 @@ html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 html, body {
   font-size: $base-font-size;
-  overflow-x: hidden;
   font-weight: $base-font-weight;
   @include hyphens(auto);
 }

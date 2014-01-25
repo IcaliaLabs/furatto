@@ -93,6 +93,7 @@ $include-super-scaled-effect: true !default;
 //
 
 @mixin modal-overlay {
+  overflow-x: hidden;
   position: fixed;
   width: 100%;
   height: 100%;
