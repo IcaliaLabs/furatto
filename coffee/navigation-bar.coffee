@@ -38,6 +38,8 @@
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
 
+  $('.navigation-bar').responsiveNavBar()
+
   ResponsiveNavBar.version = "1.0.0"
 
 ) jQuery, window, document
