@@ -124,7 +124,7 @@ $alert-danger-background: #e74c3c !default;
   &.round { @include border-radius($alert-round) }
   &.radius { @include border-radius($alert-radius); }
 
-  &.alert-primary{ @include alert-style($alert-primary-background); }
-  &.alert-success { @include alert-style($alert-success-background); }
-  &.alert-danger { @include alert-style($alert-danger-background); }
+  &.primary{ @include alert-style($alert-primary-background); }
+  &.success { @include alert-style($alert-success-background); }
+  &.danger { @include alert-style($alert-danger-background); }
 }
