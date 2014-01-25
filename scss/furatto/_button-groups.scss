@@ -1,8 +1,5 @@
 //Button groups
 
-//Compass dependencies
-@import "compass/css3/border-radius";
-
 //
 //@variables
 //
@@ -10,13 +7,13 @@
 $sm-device-width: 480px !default;
 
 //Media queries
-$button-group-small-media-query: "only screen and (max-width: #{$sm-device-width})" !default;
+$button-group-small-media-query: "#{$media-display} and (max-width: #{$sm-device-width})" !default;
 
 //Variations
-$button-radius: 0.21428571rem !default;
-$button-pill-radius: 71.42857143rem !default;
+$button-radius: px-to-rems(3) !default;
+$button-pill-radius: px-to-rems(1000) !default;
 
-.btn-group {
+.button-group {
   list-style: none;
   margin: 0; 
   @extend %clearfix;
@@ -26,32 +23,47 @@ $button-pill-radius: 71.42857143rem !default;
   li {
     float: left;
 
-    .btn {
+    .button,
+    button {
       [class*="icon-"] {
         margin-right: 0px;
       }
     }
+
+    &:first-child {
+      .button,
+      button {
+        border-right-width: 0;
+      }
+    }
+
+    &:last-child {
+      .button,
+      button {
+        border-left-width: 0;
+      }
+    }
   }
 
-  &.btn-group-pill {
-    li:first-child .btn {
+  &.pill {
+    li:first-child .button {
       @include border-top-left-radius($button-pill-radius);
       @include border-bottom-left-radius($button-pill-radius);
     }
 
-    li:last-child .btn {
+    li:last-child .button {
       @include border-top-right-radius($button-pill-radius);
       @include border-bottom-right-radius($button-pill-radius);
     }
   }
 
-  &.btn-group-radius {
-    li:first-child .btn {
+  &.radius {
+    li:first-child .button {
       @include border-top-left-radius($button-radius);
       @include border-bottom-left-radius($button-radius);
     }
 
-    li:last-child .btn {
+    li:last-child .button {
       @include border-top-right-radius($button-radius);
       @include border-bottom-right-radius($button-radius);
     }
@@ -59,12 +71,13 @@ $button-pill-radius: 71.42857143rem !default;
 }
 
 @media #{$button-group-small-media-query} {
-  .btn-group {
+  .button-group {
     li {
       float: none;
       display: block;
 
-      .btn {
+      .button,
+      button {
         display: block;
       }
     }
