@@ -8,7 +8,7 @@
 $modal-width: 80% !default;
 $modal-z-index: 1050 !default;
 $modal-color: #FFF !default;
-$modal-top-position: 5rem !default;
+$modal-top-position: px-to-rems(80) !default;
 $modal-position: absolute !default;
 
 //Modal styles
@@ -21,11 +21,11 @@ $modal-success-background-color: #2ecc71 !default;
 $modal-info-background-color: #34495e !default;
 
 //Modal content
-$modal-content-padding: 15px 40px 30px !default;
+$modal-content-padding: px-to-rems(15) px-to-rems(40) px-to-rems(30) !default;
 $modal-content-font-weight: 300 !default;
-$modal-content-font-size: 1.15rem !default;
-$modal-content-ul-padding: 0 0 30px 20px !default;
-$modal-content-list-item-padding: 5px 0 !default;
+$modal-content-font-size: px-to-rems(18) !default;
+$modal-content-ul-padding: 0 0 px-to-rems(30) px-to-rems(20) !default;
+$modal-content-list-item-padding: px-to-rems(5) 0 !default;
 
 //Overlay
 $modal-overlay-z-index: $modal-z-index - 10 !default;
@@ -34,18 +34,18 @@ $modal-overlay-background-opacity: 0.8 !default;
 $modal-overlay-show-opacity: 1 !default;
 
 //Header
-$modal-header-padding: 0.4rem !default;
+$modal-header-padding: px-to-rems(6) !default;
 $modal-header-text-align: center !default;
-$modal-header-font-size: 2.4rem !default;
+$modal-header-font-size: px-to-rems(38) !default;
 $modal-header-font-weight: $modal-content-font-weight !default;
 $modal-header-background-color: #000 !default;
 $modal-header-opacity: 0.8 !default;
 
 //Modal variations
-$modal-radius: 3px !default;
+$modal-radius: px-to-rems(3) !default;
 
 //Modal footer
-$modal-footer-padding: 10px 0 !default;
+$modal-footer-padding: px-to-rems(10) 0 !default;
 
 //Modal extra themes
 $include-modal-extra-themes: false !default;
@@ -93,15 +93,15 @@ $include-super-scaled-effect: true !default;
 //
 
 @mixin modal-overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	visibility: hidden;
-	top: 0;
-	left: 0;
-	z-index: $modal-overlay-z-index;
-	opacity: 0;
-	background: rgba($modal-overlay-background, $modal-overlay-background-opacity);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: $modal-overlay-z-index;
+  opacity: 0;
+  background: rgba($modal-overlay-background, $modal-overlay-background-opacity);
   @include transition(all 0.3s);
 }
 
@@ -112,7 +112,7 @@ $include-super-scaled-effect: true !default;
 //
 
 @mixin modal-theme($background) {
-	background: $background;
+  background: $background;
 }
 
 //
@@ -121,13 +121,13 @@ $include-super-scaled-effect: true !default;
 //
 
 @mixin modal-header {
-	margin: 0;
-	padding: $modal-header-padding;
-	text-align: $modal-header-text-align;
-	font-size: $modal-header-font-size;
-	font-weight: $modal-header-font-weight;
-	opacity: $modal-header-opacity;
-	background: rgba($modal-header-background-color ,0.1);
+  margin: 0;
+  padding: $modal-header-padding;
+  text-align: $modal-header-text-align;
+  font-size: $modal-header-font-size;
+  font-weight: $modal-header-font-weight;
+  opacity: $modal-header-opacity;
+  background: rgba($modal-header-background-color ,0.1);
   color: $modal-color;
 }
 
@@ -171,17 +171,17 @@ $include-super-scaled-effect: true !default;
       @include modal-footer;
     }
   }
-    &.alpha { @include modal-theme(transparent) }
-    &.default { @include modal-theme($modal-default-background-color)}
-    &.primary { @include modal-theme($modal-primary-background-color)}
-    &.danger { @include modal-theme($modal-danger-background-color)}
+  &.alpha { @include modal-theme(transparent) }
+  &.default { @include modal-theme($modal-default-background-color)}
+  &.primary { @include modal-theme($modal-primary-background-color)}
+  &.danger { @include modal-theme($modal-danger-background-color)}
 
-    @if($include-modal-extra-themes) {
-      &.funky { @include modal-theme($modal-funky-background-color)}
-      &.warning { @include modal-theme($modal-warning-background-color)}
-      &.success { @include modal-theme($modal-success-background-color)}
-      &.info { @include modal-theme($modal-info-background-color) }
-    }
+  @if($include-modal-extra-themes) {
+    &.funky { @include modal-theme($modal-funky-background-color)}
+    &.warning { @include modal-theme($modal-warning-background-color)}
+    &.success { @include modal-theme($modal-success-background-color)}
+    &.info { @include modal-theme($modal-info-background-color) }
+  }
 
   .modal-header {
     @include modal-header;
@@ -248,9 +248,7 @@ $include-super-scaled-effect: true !default;
   }
 
   .modal-effect-4  {
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    @include transform-style(preserve-3d);
     @include transform(translateZ(600px) rotateX(20deg));
     @include opacity(0);
   }
