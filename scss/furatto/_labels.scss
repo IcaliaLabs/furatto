@@ -6,7 +6,7 @@
 @import "functions";
 
 //Label general settings
-$label-padding: 0.21428571rem 0.42857143rem !default;
+$label-padding: px-to-rems(3) px-to-rems(6) !default;
 $label-font-size: px-to-rems(11) !default;
 $label-font-weight: normal !default;
 $label-font-color: #FFF !default;
@@ -17,8 +17,8 @@ $label-hover-decoration: none !default;
 $label-default-background:  #95A5A6 !default;
 
 //Label variations
-$label-radius: 3px !default;
-$label-round: 1000px !default;
+$label-radius: px-to-rems(3) !default;
+$label-round: px-to-rems(1000) !default;
 
 //Label background variations
 $label-primary-background: #3498db !default;
@@ -76,7 +76,7 @@ $label-warning-background: #e67e22 !default;
   }
 
   @if $include-radius {
-    &.round { @include border-radius($label-radius); }
+    &.radius { @include border-radius($label-radius); }
   }
 }
 
@@ -90,8 +90,8 @@ $label-warning-background: #e67e22 !default;
 
 
   //Label styles
-  &.label-primary { @include label-style($label-primary-background); }
-  &.label-success { @include label-style($label-success-background); }
-  &.label-danger { @include label-style($label-danger-background); }
-  &.label-warning { @include label-style($label-warning-background); }
+  &.primary { @include label-style($label-primary-background); }
+  &.success { @include label-style($label-success-background); }
+  &.danger { @include label-style($label-danger-background); }
+  &.warning { @include label-style($label-warning-background); }
 }
