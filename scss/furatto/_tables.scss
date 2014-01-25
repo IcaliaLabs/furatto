@@ -75,7 +75,7 @@ table {
   }
 
   //Table striped
-  &.table-striped {
+  &.striped {
     tbody {
       > tr:nth-child(odd) > td,
       > tr:nth-child(odd) > th {
@@ -85,7 +85,7 @@ table {
   }
 
   //Table bordered
-  &.table-bordered {
+  &.bordered {
     border: $table-bordered-border-width $table-bordered-border-style $table-border-color;
 
     th, td {
