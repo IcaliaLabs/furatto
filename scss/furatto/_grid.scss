@@ -23,6 +23,12 @@ $stack-column-separation: 2px !default;
 $grid-max-width: 54.85714286rem !default;
 $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 
+//Row variations
+$primary-background-color: rgba(52, 152, 219, 0.6);
+$danger-background-color: rgba(231, 76, 60, 0.6);
+$warning-background-color: rgba(241, 196, 15, 0.6);
+$success-background-color: rgba(46, 204, 113, 0.6);
+
 //
 //@mixin
 //
@@ -42,6 +48,11 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
   @extend %clearfix;
   display: block;
   text-rendering: $row-text-rendering;
+
+  &.primary { background: $primary-background-color; }
+  &.danger { background: $danger-background-color; }
+  &.warning { background: $warning-background-color; }
+  &.success { background: $success-background-color; }
 
   //Columns
   @include grid-columns;
