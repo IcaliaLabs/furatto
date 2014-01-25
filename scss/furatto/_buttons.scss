@@ -6,12 +6,12 @@
 @import "functions";
 
 //Padding sizes for buttons
-$button-default: 0.28571429rem 0.85714286rem !default;
-$button-mini: 0 0.42857143rem !default;
-$button-small: 0.14285714rem 0.71428571rem !default;
-$button-large: 0.78571429rem 1.35714286rem !default;
-$button-xlarge: 1.42857143rem 2.14285714rem !default;
-$button-xxlarge: 1.42857143rem 3.57142857rem !default;
+$button-default: px-to-rems(4) px-to-rems(13) !default;
+$button-mini: 0 px-to-rems(6) !default;
+$button-small: px-to-rems(2) px-to-rems(11) !default;
+$button-large:  px-to-rems(12) px-to-rems(21) !default;
+$button-xlarge: px-to-rems(22) px-to-rems(34) !default;
+$button-xxlarge: px-to-rems(22.72) px-to-rems(22) px-to-rems(57) !default;
 
 //Buttons style
 $button-display: inline-block !default;
@@ -29,13 +29,14 @@ $button-font-small: px-to-rems(12) !default;
 $button-font-large: px-to-rems(16) !default;
 $button-font-xlarge: px-to-rems(22) !default;
 $button-font-xxlarge: px-to-rems(22) !default;
-$button-vertical-separation: 5px !default;
+$button-vertical-separation: px-to-rems(5) !default;
 
 //Buttons variations
-$button-radius: 3px !default;
+$button-radius: px-to-rems(3) !default;
 $button-alpha-border: 1px solid #FFF !default;
 $button-alpha-color: #FFF !default;
-$button-3d-border-width: 0.2rem !default;
+$button-3d-border-width: px-to-rems(3) !default;
+$button-pill-radius: px-to-rems(1000) !default;
 $button-disabled-opacity: 0.65 !default;
 
 //Icons
@@ -48,7 +49,7 @@ $button-danger-background: #e74c3c !default;
 $button-warning-background: #e67e22 !default;
 
 //Media queries
-$button-block-media-query-width: 480px !default;
+$button-block-media-query-width: px-to-rems(480) !default;
 
 //
 //@mixin
@@ -79,7 +80,7 @@ $button-block-media-query-width: 480px !default;
     text-decoration: none;
   }
 
-  &.btn-alpha {
+  &.alpha {
     color: $button-alpha-color;
   }
 }
@@ -100,7 +101,7 @@ $button-block-media-query-width: 480px !default;
     background: darken($background-color, 3%);
   }
 
-  &.btn-disabled, &[disabled] {
+  &.disabled, &[disabled] {
     cursor: no-drop;
     @include opacity($button-disabled-opacity);
   }
@@ -109,7 +110,7 @@ $button-block-media-query-width: 480px !default;
     outline: 0;
   }
 
-  &.btn-alpha {
+  &.alpha {
     border: $button-alpha-border;
     background: rgba(0,0,0,0);
     &:hover {
@@ -118,7 +119,7 @@ $button-block-media-query-width: 480px !default;
     }
   }
 
-  &.btn-3d {
+  &.three-d {
     border-bottom: $button-3d-border-width solid darken($background-color, 15%);
     @include single-transition(all, 0.1s, ease-in-out);
 
@@ -156,26 +157,38 @@ $button-block-media-query-width: 480px !default;
 // $font-size - The font size for the button. Default: $button-font-default
 // $include-radius-style - Wheter or not to add the radius style on the custom button
 // $include-block-style - Wheter or not to add the block size style on the custom button
+// $include-pill-style - Wheter or not to add the pill style on the custom button
 // Example .custom-btn { @include btn($background-color: #1abc9c); }
 //
 
-@mixin btn($background-color: $button-default-background-color, $padding: $button-default, $font-size: $button-font-default, $include-radius-style: true, $include-block-style: true) {
+@mixin btn($background-color: $button-default-background-color, 
+           $padding: $button-default, 
+           $font-size: $button-font-default, 
+           $include-radius-style: true, 
+           $include-block-style: true,
+           $include-pill-style: true) {
   @include btn-base;
   @include btn-style($background-color);
   @include btn-size($padding, $font-size);
   
   @if $include-radius-style {
     &.radius {
-      @include border-radius($button-border-radius);
+      @include border-radius($button-radius);
     }
   }
 
   @if $include-block-style {
-    &.btn-block {
+    &.block {
       display: block;
       width: 100%;
       padding-left: 0px;
       padding-right: 0px;
+    }
+  }
+
+  @if $include-pill-style {
+    &.pill {
+      @include border-radius($button-pill-radius);
     }
   }
 
@@ -188,7 +201,7 @@ $button-block-media-query-width: 480px !default;
 }
 
 //Button style definition
-button, .btn {
+button, .button {
   @include btn-base;
   @include btn-style;
   @include btn-size;
@@ -201,12 +214,12 @@ button, .btn {
 
   //Custom sizes
   &.btn-large { @include btn-size($padding: $button-large, $font-size: $button-font-large); }
-  &.btn-xlarge { @include btn-size($padding: $button-xlarge, $font-size: $button-font-xlarge); }
-  &.btn-xxlarge { @include btn-size($padding: $button-xxlarge, $font-size: $button-font-xxlarge); }
-  &.btn-small { @include btn-size($padding: $button-small, $font-size: $button-font-small); }
-  &.btn-mini { @include btn-size($padding: $button-mini, $font-size: $button-font-mini); }
+  &.xlarge { @include btn-size($padding: $button-xlarge, $font-size: $button-font-xlarge); }
+  &.xxlarge { @include btn-size($padding: $button-xxlarge, $font-size: $button-font-xxlarge); }
+  &.small { @include btn-size($padding: $button-small, $font-size: $button-font-small); }
+  &.mini { @include btn-size($padding: $button-mini, $font-size: $button-font-mini); }
 
-  &.btn-block {
+  &.block {
     display: block;
     width: 100%;
     padding-left: 0px;
@@ -214,13 +227,23 @@ button, .btn {
   }
 
   //Button styles
-  &.btn-primary { @include btn-style($button-primary-background); }
-  &.btn-success { @include btn-style($button-success-background); }
-  &.btn-danger { @include btn-style($button-danger-background); }
-  &.btn-warning { @include btn-style($button-warning-background); }
+  &.primary { @include btn-style($button-primary-background); }
+  &.success { @include btn-style($button-success-background); }
+  &.danger { @include btn-style($button-danger-background); }
+  &.warning { @include btn-style($button-warning-background); }
 
   &.radius {
-    @include border-radius($button-border-radius);
+    @include border-radius($button-radius);
+  }
+
+  &.pill {
+    @include border-radius($button-pill-radius);
+  }
+
+  /* Vertical separation */
+  /*----------------------*/
+  &.block + &.block {
+    margin-top: $button-vertical-separation;
   }
 
   @media (max-width: $button-block-media-query-width) {
@@ -231,8 +254,3 @@ button, .btn {
   }
 }
 
-/* Vertical separation */
-/*----------------------*/
-.btn-block + .btn-block {
-  margin-top: $button-vertical-separation;
-}
