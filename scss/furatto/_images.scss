@@ -37,22 +37,22 @@ img {
   vertical-align: middle;
 
   //Images responsive styling
-  &.img-responsive {
+  &.responsive {
     @include img-responsive;
   }
 
   //Circular images
-  &.img-circular {
+  &.circular {
     @include border-radius($img-round);
   }
 
   //Well images
-  &.img-radius {
+  &.radius {
     @include border-radius($img-radius);
   }
 
   //Images with borders
-  &.img-polaroid {
+  &.polaroid {
     padding: $img-polaroid-padding;
     border: $img-polaroid-border-width $img-polaroid-border-style $img-polaroid-border-color;
     background: $img-polaroid-background;
@@ -69,14 +69,15 @@ img {
     margin: $img-frame-margin;
   }
 
-  &.img-circular {
+  &.circular {
     img {
-      @extend .img-circular;
+      @extend .circular;
     }
   }
 }
 
 //Experimental
+// Kudos to Nicolas Gallagher
 @if($include-img-experimental) {
   .cover-image {
     display: block;
