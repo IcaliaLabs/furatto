@@ -2,28 +2,23 @@
 @charset "UTF-8";
 
 //Compass Utilities
-@import "compass/css3/transition";
-@import "compass/css3/opacity";
-@import "compass/css3/border-radius";
-@import "compass/css3/box-sizing";
-@import "compass/css3/transform";
-@import "compass/css3/box-shadow";
-@import "compass/css3/images";
+@import "compass/css3";
 
-//Variables
-@import "furatto/variables";
+// Global settings
+@import "furatto/global";
 
 //Helpers
 @import "furatto/mixins";
-
-//Import the font file for the site
-@import "furatto/fonts";
+@import "furatto/selectors";
 
 //General css for layout
 @import 'furatto/base';
 
 //Buttons
 @import 'furatto/buttons';
+
+//Button groups
+@import 'furatto/button-groups';
 
 //Labels
 @import 'furatto/labels';
@@ -32,55 +27,49 @@
 @import 'furatto/alerts';
 
 //Navs
-@import 'furatto/nav';
-
-//Navbar
-@import 'furatto/navbar';
+@import 'furatto/navigation';
 
 //Forms
 @import 'furatto/forms';
 
-//Tables
-@import 'furatto/tables';
-@import 'furatto/responsive_tables';
-
 //Images
 @import 'furatto/images';
 
-//Footer
-@import 'furatto/footer';
+//Off screen
+@import 'furatto/off_screen';
 
-//Code
-@import 'furatto/code';
+//Navbar
+@import 'furatto/navigation_bar';
 
 //Base
 @import 'furatto/typography';
 
-//Tooltips
-@import 'furatto/tooltips';
+//Grid
+@import 'furatto/grid';
 
-//DatePicker
-@import 'furatto/date_picker';
-@import 'furatto/date_picker.date';
+//Tables
+@import 'furatto/tables';
 
-//Toolbar
-@import 'furatto/toolbars';
+//Responsive utilities
+@import 'furatto/responsive_utilities';
 
 //Modal
 @import 'furatto/modal';
 
-//Drowpdowns
-@import 'furatto/dropdown';
+//Tooltips
+@import 'furatto/tooltips';
 
-//Panel Menu
-@import 'furatto/panel';
+//Pagination
+@import 'furatto/pagination';
 
-//Grid
-@import 'furatto/grid';
-@import 'furatto/responsive_navbar';
-
-@import 'furatto/dashboard';
-@import 'furatto/responsive_utilities';
+/*//Toolbar*/
+@import 'furatto/toolbars';
 
 //Slider
-@import 'furatto/responsiveslides';
+@import 'furatto/suraido';
+
+//Tabs
+@import 'furatto/tabs';
+
+//Experimental
+@import 'furatto/experimental';
