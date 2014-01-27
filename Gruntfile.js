@@ -29,10 +29,10 @@ module.exports = function(grunt) {
           'js/<%= pkg.name%>.responsiveTables.js',
           'js/<%= pkg.name%>.suraido.js',
           'js/<%= pkg.name%>.toolbar.js',
-          'js/<%= pkg.name%>.tooltip.js',
           'js/<%= pkg.name%>.off-screen.js',
           'js/<%= pkg.name%>.tabs.js',
-          'js/tooltip.js'
+          'js/<%= pkg.name %>.tooltip.js',
+          'js/<%= pkg.name %>.dropdown.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -58,6 +58,15 @@ module.exports = function(grunt) {
           outputStyle: 'expanded',
           raw: 'preferred_syntax = :scss\n'
         } 
+      },
+      fontAwesome: {
+        options: {
+          sassDir: 'fontawesome/scss',
+          cssDir: 'docs/assets/css',
+          environment: 'production',
+          outputStyle: 'compressed',
+          raw: 'preferred_syntax = :scss\n'
+        }
       }
     },
 
@@ -112,7 +121,15 @@ module.exports = function(grunt) {
           'dist/js/*'
         ],
         dest: 'docs'
-          
+      },
+      fontAwesome: {
+        expand: true,
+        cwd: 'fontawesome/fonts/',
+        src: [
+          '**'
+        ],
+        dest: 'docs/assets/fonts/',
+        flatten: true
       } 
     },
 
@@ -156,7 +173,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['coffee', 'concat', 'uglify']);
 
   // Docs distribution task
-  grunt.registerTask('dist-docs', ['copy:docs']);
+  grunt.registerTask('dist-docs', ['compass:fontAwesome', 'copy:fontAwesome', 'copy:docs']);
 
   // Dist compression task
   grunt.registerTask('dist-compress', ['compress']);
