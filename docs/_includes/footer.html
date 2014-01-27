@@ -19,5 +19,5 @@
 </script>
 
 {% if site.env == 'development' %}
-<script src="http://localhost:35729/livereload.js"></script>
+<script src="http://{{ site.current_ip }}:35729/livereload.js"></script>
 {% endif %}

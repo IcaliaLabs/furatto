@@ -15,3 +15,4 @@ encoding: UTF-8
 current_version: 3.0.0
 repo: https://github.com/IcaliaLabs/furatto
 
+current_ip: 192.168.0.10
