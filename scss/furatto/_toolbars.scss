@@ -11,7 +11,9 @@ $toolbar-border-radius: 0px !default;
 $toolbar-item-height: 34px !default;
 $toolbar-item-line-height: $toolbar-item-height !default;
 $toolbar-item-width: 44px !default;
+$toolbar-item-color: #FFF !default;
 $toolbar-arrow-border-width: 7px !default;
+
 
 //Toolbar variations
 $include-toolbar-variations: false !default;
@@ -50,6 +52,10 @@ $include-toolbar-right-position: true !default;
 
 .tool-items {
 	height: 100%;	
+
+  a {
+    color: $toolbar-item-color;
+  }
 }
 
 .tool-top .tool-item, .tool-bottom .tool-item {
