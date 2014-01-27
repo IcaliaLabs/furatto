@@ -22,6 +22,7 @@ module.exports = function(grunt) {
       },
       furatto: {
         src: [
+          'js/<%= pkg.name%>.tmp.js',
           'js/<%= pkg.name%>.modal.js',
           'js/<%= pkg.name%>.navigation-bar.js',
           'js/<%= pkg.name%>.off-screen.js',
@@ -29,7 +30,9 @@ module.exports = function(grunt) {
           'js/<%= pkg.name%>.suraido.js',
           'js/<%= pkg.name%>.toolbar.js',
           'js/<%= pkg.name%>.tooltip.js',
-          'js/<%= pkg.name%>.tabs.js'
+          'js/<%= pkg.name%>.off-screen.js',
+          'js/<%= pkg.name%>.tabs.js',
+          'js/tooltip.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -119,11 +122,13 @@ module.exports = function(grunt) {
           bare: true
         },
         files: {
+          'js/<%= pkg.name%>.tmp.js': 'coffee/furatto.coffee',
           'js/<%= pkg.name%>.modal.js': 'coffee/modal.coffee',
           'js/<%= pkg.name%>.navigation-bar.js': 'coffee/navigation-bar.coffee',
           'js/<%= pkg.name%>.responsiveTables.js': 'coffee/responsiveTables.coffee',
           'js/<%= pkg.name%>.suraido.js': 'coffee/suraido.coffee',
           'js/<%= pkg.name%>.toolbar.js': 'coffee/toolbar.coffee',
+          'js/<%= pkg.name%>.off-screen.js': 'coffee/off-screen.coffee',
           'js/<%= pkg.name%>.tabs.js': 'coffee/tabs.coffee'
         }
       }
