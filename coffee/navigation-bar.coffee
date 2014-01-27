@@ -3,7 +3,7 @@
 
   pluginName = 'responsiveNavBar'
 
-  class ResponsiveNavBar
+  class Furatto.ResponsiveNavBar
     constructor: (@el, a, options) ->
       #navbar elements
       @navbarElements = $('.navigation-bar ul:not(.brand-section)')
@@ -34,12 +34,12 @@
       plugin = $.data @, "plugin_#{pluginName}"
 
       unless plugin
-        $.data @, "plugin_#{pluginName}", new ResponsiveNavBar(@, a, options)
+        $.data @, "plugin_#{pluginName}", new Furatto.ResponsiveNavBar(@, a, options)
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
 
   $('.navigation-bar').responsiveNavBar()
 
-  ResponsiveNavBar.version = "1.0.0"
+  Furatto.ResponsiveNavBar.version = "1.0.0"
 
 ) jQuery, window, document

@@ -8,7 +8,7 @@
     tabContentClass: 'tabu-content'
     tabContentsClass: 'content'
 
-  class Tabu
+  class Furatto.Tabu
     constructor: (@el, options) ->
       #jquery element
       @$el = $(@el)
@@ -60,12 +60,12 @@
 
       unless plugin
         key = "tabu#{if tabsLength > 1 then '-' + ++index else ''}"
-        instance = new Tabu(@, options)
+        instance = new Furatto.Tabu(@, options)
         me.data(key, instance).data('key', key)
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
 
-  Tabu.version = "1.0.0"
+  Furatto.Tabu.version = "1.0.0"
 
   $(document).ready ->
     $('[data-tabu]').each ->

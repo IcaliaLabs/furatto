@@ -24,7 +24,7 @@
     arrowsClass: 'arrows'
     arrowClass: 'arrow'
 
-  class Suraido
+  class Furatto.Suraido
     constructor: (@el, options) ->
       #jquery element wrapper
       @$el = $(@el)
@@ -215,11 +215,11 @@
 
       unless plugin
         key = "suraido#{if sliders > 1 then '-' + ++index else ''}"
-        instance = new Suraido(@, options)
+        instance = new Furatto.Suraido(@, options)
         me.data(key, instance).data('key', key)
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
 
-  Suraido.version = "1.0.0"
+  Furatto.Suraido.version = "1.0.0"
 
 ) $, window, document

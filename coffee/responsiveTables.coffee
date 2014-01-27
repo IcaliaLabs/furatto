@@ -6,7 +6,7 @@
   defaults =
     widthToCollapse: 768
 
-  class ResponsiveTables
+  class Furatto.ResponsiveTables
     constructor: (@el, a, options) ->
       #merges options
       @options = $.extend {}, defaults, options
@@ -80,9 +80,9 @@
       plugin = $.data @, "plugin_#{pluginName}"
 
       unless plugin
-        $.data @, "plugin_#{pluginName}", new ResponsiveTables(@, a, options)
+        $.data @, "plugin_#{pluginName}", new Furatto.ResponsiveTables(@, a, options)
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
 
-  ResponsiveTables.version = "1.0.0"
+  Furatto.ResponsiveTables.version = "1.0.0"
 ) $, window, document

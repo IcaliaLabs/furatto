@@ -37,7 +37,7 @@
     check
 
 
-  class OffScreen
+  class Furatto.OffScreen
     constructor: (@el, a, options) ->
       #merges options
       @options = $.extend {}, defaults, options
@@ -211,11 +211,12 @@
       plugin = $.data @, "plugin_#{pluginName}"
 
       unless plugin
-        $.data @, "plugin_#{pluginName}", new OffScreen(@, a, options)
+        $.data @, "plugin_#{pluginName}", new Furatto.OffScreen(@, a, options)
       else if plugin[_]? and $.type(plugin[_]) == 'function'
         plugin[_].apply plugin, args
 
   $('.off-screen-navigation').offScreen()
-  OffScreen.version = "1.0.0"
+
+  Furatto.OffScreen.version = "1.0.0"
       
 ) jQuery, window, document

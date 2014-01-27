@@ -1,6 +1,6 @@
 (($, window) ->
 
-  class Modal
+  class Furatto.Modal
     constructor: (el, options) ->
       @options = $.extend {}, options
       @$el = $(el)
@@ -52,11 +52,11 @@
       options = $.extend {}, $this.data(), typeof option is 'object' and option
 
       if not data
-        $this.data 'modal', ( data = new Modal(this, options) )
+        $this.data 'modal', ( data = new Furatto.Modal(this, options) )
       if typeof option is 'string'
         data[option]()
 
-  Modal.version = "1.0.0"
+  Furatto.Modal.version = "1.0.0"
 
   $(document).ready ->
     $('body').append('<div class="modal-overlay"></div>')
