@@ -33,11 +33,10 @@ html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-body {
-  overflow-x: hidden;
-}
-
 html, body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   @include hyphens(auto);
