@@ -74,7 +74,8 @@ $off-screen-toggle-color: #FFF !default;
 .off-screen {
   position: relative;
   left: 0;
-  height: 100%;
+  @include backface-visibility(hidden);
+
 
   .off-screen-navigation {
     position: absolute; /* we can't use fixed here :( */
