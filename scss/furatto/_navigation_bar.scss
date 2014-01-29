@@ -61,6 +61,7 @@ $navigation-bar-dropdown-header-font-size: px-to-rems(8) !default;
 $navigation-bar-dropdown-divider-height: px-to-rems(1) !default; 
 $navigation-bar-dropdown-anchor-height: 45px !default;
 $navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
+$navigation-bar-dropdown-right-position: 0px !default;
 
 //Offscreen
 $off-screen-toggle-padding-left: px-to-rems(34) !default;
@@ -140,6 +141,15 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
 
   [class^="icon-"], [class*=" icon-"] {
     margin-right: $navigation-bar-icon-margin-right;
+  }
+
+  ul.pull-right {
+    li.with-dropdown {
+      .dropdown { 
+        right: $navigation-bar-dropdown-right-position; 
+        left: auto;
+      }
+    }
   }
 
   ul {
