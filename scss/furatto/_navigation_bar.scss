@@ -59,6 +59,8 @@ $navigation-bar-dropdown-header-color: #777 !default;
 $navigation-bar-dropdown-header-font-weight: bold !default;
 $navigation-bar-dropdown-header-font-size: px-to-rems(8) !default;
 $navigation-bar-dropdown-divider-height: px-to-rems(1) !default; 
+$navigation-bar-dropdown-anchor-height: 45px !default;
+$navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
 
 //Offscreen
 $off-screen-toggle-padding-left: px-to-rems(34) !default;
@@ -78,6 +80,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
   a {
     @include touch-callout;
   }
+
   &.opened {
     height: auto;
 
@@ -204,6 +207,11 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
           background: $navigation-bar-background;
           white-space: nowrap;
 
+          a {
+            height: $navigation-bar-dropdown-anchor-height;
+            line-height: $navigation-bar-dropdown-anchor-line-height;
+          }
+
           &.dropdown-header {
             text-transform: $navigation-bar-dropdown-header-text-transform;
             padding: $navigation-bar-dropdown-header-padding;
@@ -230,11 +238,6 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
   .brand-section {
     font-size: $navigation-bar-brand-section-font-size; 
     position: relative;
-    .brand-name {
-      a {
-        display: block !important;
-      }
-    }
     li {
       padding: 0;
 
