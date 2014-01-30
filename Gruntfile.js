@@ -67,6 +67,15 @@ module.exports = function(grunt) {
           outputStyle: 'compressed',
           raw: 'preferred_syntax = :scss\n'
         }
+      },
+      docs: {
+        options: {
+          sassDir: 'docs_scss',
+          cssDir: 'docs/assets/css',
+          environment: 'development',
+          outputStyle: 'expanded',
+          raw: 'preferred_syntax = :scss\n'
+        }
       }
     },
 
@@ -86,7 +95,7 @@ module.exports = function(grunt) {
 
     watch: {
       sass: {
-        files: ['scss/furatto.scss', 'scss/furatto/*.scss'],
+        files: ['scss/furatto.scss', 'scss/furatto/*.scss', 'docs_scss/docs.scss'],
         tasks: ['dist'],
         options: {
           livereload: true
@@ -173,7 +182,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['coffee', 'concat', 'uglify']);
 
   // Docs distribution task
-  grunt.registerTask('dist-docs', ['compass:fontAwesome', 'copy:fontAwesome', 'copy:docs']);
+  grunt.registerTask('dist-docs', ['compass:fontAwesome', 'copy:fontAwesome', 'compass:docs', 'copy:docs']);
 
   // Dist compression task
   grunt.registerTask('dist-compress', ['compress']);
