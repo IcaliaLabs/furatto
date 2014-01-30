@@ -48,18 +48,22 @@ $off-screen-toggle-menu-left-position: 0.71428571rem !default;
 $off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-position + 1.42857143rem !default;
 $off-screen-toggle-color: #FFF !default;
 
+//Menu toggle
+$off-screen-toggle-padding-left: px-to-rems(34) !default;
+
 .off-screen {
   .navigation-bar {
     .brand-section {
       .brand-name {
         a {
+          padding-left: $off-screen-toggle-padding-left;
           &:before {
             content: '';
             width: 16px;
             height: 0;
             position: absolute;
             left: $off-screen-toggle-menu-left-position;
-            top: 6px;
+            top: $navigation-bar-toggle-icon-top-position;
             @include box-shadow(0 10px 0 1px $off-screen-toggle-color,
                                 0 16px 0 1px $off-screen-toggle-color,
                                 0 22px 0 1px $off-screen-toggle-color);

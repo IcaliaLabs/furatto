@@ -14,7 +14,6 @@
 
 //Navigation general settings
 $navigation-bar-background: #191818 !default;
-$navigation-bar-height: 45px !default;
 $navigation-margin-bottom: 10px !default;
 $navigation-bar-color: #FFF !default;
 $navigation-bar-font-weight: 300 !default;
@@ -63,8 +62,6 @@ $navigation-bar-dropdown-anchor-height: 45px !default;
 $navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
 $navigation-bar-dropdown-right-position: 0px !default;
 
-//Offscreen
-$off-screen-toggle-padding-left: px-to-rems(34) !default;
 
 //Media
 $media-collapse-width: 768px !default;
@@ -266,7 +263,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
           height: 0;
           position: absolute;
           right: 0;
-          top: 6px;
+          top: $navigation-bar-toggle-icon-top-position;
           @include box-shadow(0 10px 0 1px $navigation-bar-menu-color,
                               0 16px 0 1px $navigation-bar-menu-color,
                               0 22px 0 1px $navigation-bar-menu-color);
@@ -314,9 +311,6 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
       width: 100%;
       font-size: $navigation-bar-brand-section-font-size - 0.15; 
 
-      .brand-name a {
-        padding-left: $off-screen-toggle-padding-left;
-      }
       li {
 
         &.menu-toggle {
