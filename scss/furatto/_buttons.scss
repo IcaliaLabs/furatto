@@ -57,7 +57,7 @@ $button-block-media-query-width: px-to-rems(480) !default;
 // We use this mixin to create a default button base style
 //
 
-@mixin btn-base {
+@mixin button-base {
   display: $button-display;
   *display: inline;
   line-height: normal;
@@ -72,8 +72,9 @@ $button-block-media-query-width: px-to-rems(480) !default;
   @include single-transition(all, 0.2s, ease-in-out);
   position: relative;
 
-  [class^="icon-"], [class*=" icon-"] {
+  .fa {
     margin-right: $button-icon-separation;
+    margin-left: $button-icon-separation;
   }
 
   &:hover {
@@ -92,7 +93,7 @@ $button-block-media-query-width: px-to-rems(480) !default;
 //
 // $background-color - Is the background color for the button to create
 
-@mixin btn-style($background-color: $button-default-background-color) {
+@mixin button-style($background-color: $button-default-background-color) {
 
   background-color: $background-color;
   border: $button-border-width $button-border-style darken($background-color, 5%);
@@ -119,6 +120,16 @@ $button-block-media-query-width: px-to-rems(480) !default;
     }
   }
 
+  &.inverse {
+    color: darken($background-color, 3%);
+    background: #FFF;
+    &:hover {
+      border: $button-alpha-border;
+      background: rgba(0,0,0,0);
+      color: #FFF;
+    }
+  }
+
   &.three-d {
     border-bottom: $button-3d-border-width solid darken($background-color, 15%);
     @include single-transition(all, 0.1s, ease-in-out);
@@ -138,12 +149,12 @@ $button-block-media-query-width: px-to-rems(480) !default;
 // $font-size - The font size for the button. Default: $button-font-default
 //
 
-@mixin btn-size($padding: $button-default, $font-size: $button-font-default) {
+@mixin button-size($padding: $button-default, $font-size: $button-font-default) {
   padding: $padding;
   font-size: $font-size;
 }
 
-@mixin btn-size($padding: $button-default, $font-size: $button-font-default) {
+@mixin button-size($padding: $button-default, $font-size: $button-font-default) {
   padding: $padding;
   font-size: $font-size;
 }
@@ -158,18 +169,18 @@ $button-block-media-query-width: px-to-rems(480) !default;
 // $include-radius-style - Wheter or not to add the radius style on the custom button
 // $include-block-style - Wheter or not to add the block size style on the custom button
 // $include-pill-style - Wheter or not to add the pill style on the custom button
-// Example .custom-btn { @include btn($background-color: #1abc9c); }
+// Example .custom-button { @include button($background-color: #1abc9c); }
 //
 
-@mixin btn($background-color: $button-default-background-color, 
+@mixin button($background-color: $button-default-background-color, 
            $padding: $button-default, 
            $font-size: $button-font-default, 
            $include-radius-style: true, 
            $include-block-style: true,
            $include-pill-style: true) {
-  @include btn-base;
-  @include btn-style($background-color);
-  @include btn-size($padding, $font-size);
+  @include button-base;
+  @include button-style($background-color);
+  @include button-size($padding, $font-size);
   
   @if $include-radius-style {
     &.radius {
@@ -202,9 +213,9 @@ $button-block-media-query-width: px-to-rems(480) !default;
 
 //Button style definition
 button, .button {
-  @include btn-base;
-  @include btn-style;
-  @include btn-size;
+  @include button-base;
+  @include button-style;
+  @include button-size;
 
   //Button sizes
   //
@@ -213,11 +224,11 @@ button, .button {
   font-size: $button-font-default;
 
   //Custom sizes
-  &.btn-large { @include btn-size($padding: $button-large, $font-size: $button-font-large); }
-  &.xlarge { @include btn-size($padding: $button-xlarge, $font-size: $button-font-xlarge); }
-  &.xxlarge { @include btn-size($padding: $button-xxlarge, $font-size: $button-font-xxlarge); }
-  &.small { @include btn-size($padding: $button-small, $font-size: $button-font-small); }
-  &.mini { @include btn-size($padding: $button-mini, $font-size: $button-font-mini); }
+  &.large { @include button-size($padding: $button-large, $font-size: $button-font-large); }
+  &.xlarge { @include button-size($padding: $button-xlarge, $font-size: $button-font-xlarge); }
+  &.xxlarge { @include button-size($padding: $button-xxlarge, $font-size: $button-font-xxlarge); }
+  &.small { @include button-size($padding: $button-small, $font-size: $button-font-small); }
+  &.mini { @include button-size($padding: $button-mini, $font-size: $button-font-mini); }
 
   &.block {
     display: block;
@@ -227,10 +238,10 @@ button, .button {
   }
 
   //Button styles
-  &.primary { @include btn-style($button-primary-background); }
-  &.success { @include btn-style($button-success-background); }
-  &.danger { @include btn-style($button-danger-background); }
-  &.warning { @include btn-style($button-warning-background); }
+  &.primary { @include button-style($button-primary-background); }
+  &.success { @include button-style($button-success-background); }
+  &.danger { @include button-style($button-danger-background); }
+  &.warning { @include button-style($button-warning-background); }
 
   &.radius {
     @include border-radius($button-radius);
