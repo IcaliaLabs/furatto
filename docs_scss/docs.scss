@@ -14,7 +14,7 @@ $button-primary-background: #2b3035;
 $navigation-bar-height: 50px;
 $navigation-bar-background: $primary-background-color;
 $navigation-bar-brand-section-font-size: px-to-rems(26);
-$navigation-font-size: px-to-rems(16);
+$navigation-font-size: px-to-rems(14);
 $navigation-margin-bottom: 0px;
 $navigation-bar-border-bottom: 2px solid #d75f2a;
 $navigation-bar-link-hover-color: #FFF;
@@ -28,9 +28,6 @@ $navigation-bar-link-hover-color: #FFF;
     & + .text-warning {
       font-size: px-to-rems(22);
     }
-  }
-
-  .button.download {
   }
 
   .navigation {
@@ -111,6 +108,18 @@ $navigation-bar-link-hover-color: #FFF;
 
   .navigation li a { font-weight: 100;}
 
+  .furatto-description {
+    .name-header {
+      font-weight: bold;
+      font-size: px-to-rems(20);
+      letter-spacing: 1.5px;
+    }
+    p {
+      line-height: 22px;
+      font-weight: 300;
+    }
+  }
+
   h4, h5, li, p, .fa, a {
     color: #FFF; 
   }
@@ -120,9 +129,6 @@ $navigation-bar-link-hover-color: #FFF;
     text-align: center;
     padding: 20px 8px;
 
-    .name-header {
-      letter-spacing: 1.5px;
-    }
 
     a {
       color: #FFF;
