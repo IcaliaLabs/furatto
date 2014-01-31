@@ -12,7 +12,7 @@ $typography-reset: true !default;
 
 // Paragraphs settings
 $paragraph-font-weight: inherit !default;
-$paragraph-font-size: 1rem !default;
+$paragraph-font-size: px-to-rems(14) !default;
 $paragraph-line-height: 1.2 !default;
 $paragraph-text-rendering: optimizeLegibility !default;
 
@@ -36,8 +36,8 @@ $anchor-text-decoration-hover: underline !default;
 
 // Headings settings
 $headings-margin-top: 0.35714286rem !default;
-$headings-margin-bottom: 0.35714286rem !default;
-$headings-font-weight: 300 !default;
+$headings-margin-bottom: px-to-rems(16) !default;
+$headings-font-weight: 400 !default;
 $headings-line-height: 1.4 !default;
 $headings-text-rendering: optimizeLegibility !default;
 $headings-color: #222 !default;
@@ -56,8 +56,8 @@ $small-font-size: 60% !default;
 $hr-color: #DDD !default;
 $hr-style: solid !default;
 $hr-border-width: 0.07142857rem !default;
-$hr-margin-top: 1.25em !default;
-$hr-margin-bottom: 1.875em !default;
+$hr-margin-top: px-to-rems(22) !default;
+$hr-margin-bottom: $hr-margin-top !default;
 
 //Blockquote
 $blockquote-color: #777 !default;
@@ -98,7 +98,7 @@ $medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-
   p {
     font-weight: $paragraph-font-weight;
     font-size: $paragraph-font-size;
-    margin-bottom: px-to-rems(20);
+    margin-bottom: px-to-rems(16);
     text-rendering: $paragraph-text-rendering;
     line-height: $paragraph-line-height;
   }
