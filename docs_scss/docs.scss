@@ -1,2 +1,167 @@
-@import "../scss/furatto";
+@import "../scss/furatto/functions";
 
+//Base config
+$body-background-color: #FFF;
+$warning-text-color: #e4652d;
+$error-text-color: #7c1717;
+
+//Grid config
+$primary-background-color: #e4652d;
+$success-background-color: #191818;
+$button-primary-background: #2b3035;
+
+//Navigation bar config
+$navigation-bar-height: 50px;
+$navigation-bar-background: $primary-background-color;
+$navigation-bar-brand-section-font-size: px-to-rems(26);
+$navigation-font-size: px-to-rems(16);
+$navigation-margin-bottom: 0px;
+$navigation-bar-border-bottom: 2px solid #d75f2a;
+$navigation-bar-link-hover-color: #FFF;
+
+.main-description-container {
+  padding: 50px 50px 0 50px;
+  .header {
+    font-weight: bold;
+    color: #FFF;
+
+    & + .text-warning {
+      font-size: px-to-rems(22);
+    }
+  }
+
+  .button.download {
+  }
+
+  .navigation {
+    padding: 0;
+  }
+}
+
+.skills-header-container {
+  text-align: center;
+  border-bottom: 1px solid #999;
+  padding: 10px 0;
+  
+  .header {
+    letter-spacing: 4px;
+    font-size: px-to-rems(22);
+  } 
+}
+
+//Documentation
+
+.main-content-wrapper {
+  padding: 10px;
+}
+
+.row .sidebar {
+  background: #FCFCFC;
+  height: 100%;
+  padding-left: 0.9375rem;
+  padding-top: px-to-rems(20);
+
+  .navigation {
+    li {
+      a {
+        display: block;
+      }
+      a:hover {
+        background: darken(#FCFCFC, 5%);
+        color: #333;
+      }
+    }
+  }
+
+  .header {
+    text-transform: uppercase;
+    font-size: px-to-rems(12);
+    font-weight: bold;
+    color: #666;
+  }
+}
+
+//Docs: Getting started
+.getting-started-descriptions {
+  .header {
+    color: #e4652d;
+    font-weight: bold;
+  }
+}
+
+.whats-included {
+  h4 {
+    font-weight: 600;
+  }
+}
+
+.examples {
+  h5 {
+    font-weight: 600;
+    margin-bottom: px-to-rems(6);
+  }
+
+  small {
+    font-size: px-to-rems(14);
+  }
+}
+
+//Footer
+.footer {
+
+  .navigation li a { font-weight: 100;}
+
+  h4, h5, li, p, .fa, a {
+    color: #FFF; 
+  }
+
+  .want-more {
+    background: darken($navigation-bar-background, 7%);
+    text-align: center;
+    padding: 20px 8px;
+
+    .name-header {
+      letter-spacing: 1.5px;
+    }
+
+    a {
+      color: #FFF;
+
+      &:hover {
+        color: #FFF;
+        text-decoration: underline;
+      }
+    }
+    
+    .fa.fa-2x {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        margin-bottom: 6px;
+      }
+    }
+
+    p, li {
+      font-size: px-to-rems(13);
+    }
+  }
+
+  .general-info {
+    background: rgb(48, 51, 56);
+    padding: 20px;
+    text-align: center;
+
+    .navigation.inline {
+      display: inline-block;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+@import "../scss/furatto";
