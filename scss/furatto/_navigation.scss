@@ -19,6 +19,7 @@ $navigation-list-item-active-color: #08C !default;
 $navigation-list-link-hover-color: $navigation-list-item-active-color !default;
 $navigation-list-link-hover-text-decoration: none !default;
 $navigation-list-link-padding: 0.333rem 0 !default;
+$navigation-list-link-display: inline-block !default;
 
 //Navigation list header
 $navigation-header-text-transform: uppercase !default;
@@ -71,7 +72,7 @@ $navigation-inline-link-hover: #08C !default;
     }
     
     a {
-      display: block;
+      display: $navigation-list-link-display;
       padding: $navigation-list-link-padding;
       color: $navigation-link-color;
 
@@ -110,6 +111,7 @@ $navigation-inline-link-hover: #08C !default;
 
       &, & a {
         color: $navigation-inline-link-color;
+        display: $navigation-list-link-display;
       }
 
       a {
