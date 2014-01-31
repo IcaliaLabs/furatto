@@ -141,3 +141,9 @@ object {
   //The parent container must have height
   @extend %vertical-alignment;
 }
+
+//Remove padding
+[class*="col-"].nopadding,
+.nopadding {
+  padding: 0;
+}
