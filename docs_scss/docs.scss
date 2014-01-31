@@ -13,7 +13,7 @@ $button-primary-background: #2b3035;
 //Navigation bar config
 $navigation-bar-height: 50px;
 $navigation-bar-background: $primary-background-color;
-$navigation-bar-brand-section-font-size: px-to-rems(26);
+$navigation-bar-brand-section-font-size: px-to-rems(18);
 $navigation-font-size: px-to-rems(14);
 $navigation-margin-bottom: 0px;
 $navigation-bar-border-bottom: 2px solid #d75f2a;
@@ -166,6 +166,23 @@ $navigation-bar-link-hover-color: #FFF;
       padding-top: 0;
       padding-bottom: 0;
     }
+  }
+}
+
+.inside-the-box {
+  p, li {
+    font-size: px-to-rems(16);
+    line-height: 28px;
+  }
+}
+
+.old-docs {
+  h4 {
+    color: #333;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: px-to-rems(14);
+    letter-spacing: 1px;
   }
 }
 

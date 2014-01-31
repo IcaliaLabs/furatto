@@ -23,6 +23,7 @@ $navigation-bar-border-bottom: transparent !default;
 
 //Brand section
 $navigation-bar-brand-section-font-size: px-to-rems(18) !default;
+$navigation-bar-brand-section-font-weight: 400 !default;
 
 //Navigation links settings
 $navigation-bar-link-color: #FFF !default;
@@ -251,6 +252,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
   .brand-section {
     font-size: $navigation-bar-brand-section-font-size; 
     position: relative;
+    font-weight: $navigation-bar-brand-section-font-weight;
     li {
       padding: 0;
 
