@@ -24,10 +24,14 @@ $grid-max-width: 54.85714286rem !default;
 $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 
 //Row variations
-$primary-background-color: rgba(52, 152, 219, 0.6);
-$danger-background-color: rgba(231, 76, 60, 0.6);
-$warning-background-color: rgba(241, 196, 15, 0.6);
-$success-background-color: rgba(46, 204, 113, 0.6);
+$primary-background-color: rgba(52, 152, 219, 0.6) !default;
+$danger-background-color: rgba(231, 76, 60, 0.6) !default;
+$warning-background-color: rgba(241, 196, 15, 0.6) !default;
+$success-background-color: rgba(46, 204, 113, 0.6) !default;
+
+//columns border
+$col-border-color: #FFF !default;
+$col-border-alpha: 0.5 !default;
 
 //
 //@mixin
@@ -68,9 +72,49 @@ $success-background-color: rgba(46, 204, 113, 0.6);
 [class*="col-"] {
   padding: $col-padding;
   float: left;
+
+  &.border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+
+    &.left {
+     border-left-color: rgba($col-border-color, $col-border-alpha);
+    }
+
+    &.right {
+     border-right-color: rgba($col-border-color, $col-border-alpha);
+    }
+
+    &.top {
+     border-top-color: rgba($col-border-color, $col-border-alpha);
+    }
+
+    &.bottom {
+     border-bottom-color: rgba($col-border-color, $col-border-alpha);
+    }
+  }
+
+  [class*="col-"] {
+    padding-left: 0; 
+  }
 }
 
 @media #{$grid-max-width-media} {
+  [class*="col-"] {
+    &.border {
+
+      &.left {
+        border-top-color: rgba($col-border-color, $col-border-alpha);
+        border-left-color: transparent;
+      }
+
+      &.right {
+        border-bottom-color: rgba($col-border-color, $col-border-alpha);
+        border-right-color: transparent;
+      }
+    }
+  }
   .row > [class *= "col-"] {
     width: 100%;
     margin-left: 0;
