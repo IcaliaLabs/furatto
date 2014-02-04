@@ -45,20 +45,29 @@ table {
   margin-bottom: $table-margin-bottom;
   color: $table-color;
   font-weight: $table-font-weight;
+  max-width: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+
+  thead {
+      border-bottom: $table-border-width $table-border-style $table-border-color;
+  }
   
   tr {
     //Cells
     th, td {
+      border-top: $table-border-width $table-border-style $table-border-color;
       padding: $table-cell-padding;
       line-height: $table-line-height;
       text-align: $table-cell-alignment;
       vertical-align: top;
-      border-top: $table-border-width $table-border-style $table-border-color;
     }
 
     th {
       font-weight: $table-head-font-weight;
-      border-bottom: $table-border-width $table-border-style $table-border-color;
       letter-spacing: $table-head-letter-spacing;
       @if($headers-with-uppercase) {
         text-transform: uppercase;
