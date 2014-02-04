@@ -13,9 +13,8 @@ $typography-reset: true !default;
 // Paragraphs settings
 $paragraph-font-weight: inherit !default;
 $paragraph-font-size: px-to-rems(14) !default;
-$paragraph-line-height: 1.2 !default;
+$paragraph-line-height: 1.5 !default;
 $paragraph-text-rendering: optimizeLegibility !default;
-
 
 //Lists
 $list-font-size: $paragraph-font-size !default;
