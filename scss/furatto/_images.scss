@@ -70,6 +70,7 @@ img {
   }
 
   &.circular {
+    @include border-radius($img-round);
     img {
       @extend .circular;
     }
