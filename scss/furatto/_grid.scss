@@ -60,6 +60,10 @@ $col-border-alpha: 0.5 !default;
 
   //Columns
   @include grid-columns;
+
+  [class*="col-"]:first-child {
+    margin-left: 0;
+  }
 }
 
 //Separation between rows
