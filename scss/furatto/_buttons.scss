@@ -154,11 +154,6 @@ $button-block-media-query-width: px-to-rems(480) !default;
   font-size: $font-size;
 }
 
-@mixin button-size($padding: $button-default, $font-size: $button-font-default) {
-  padding: $padding;
-  font-size: $font-size;
-}
-
 //
 //@mixin
 //
