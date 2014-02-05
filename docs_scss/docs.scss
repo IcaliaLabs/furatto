@@ -1,37 +1,80 @@
 @import "../scss/furatto/functions";
+@import "compass/css3";
+
+$primary-color: #e4652d;
 
 //Base config
-$body-background-color: #FFF;
+$body-background-color: rgb(236, 237, 237);
 $warning-text-color: #e4652d;
 $error-text-color: #7c1717;
 
 //Grid config
 $primary-background-color: #e4652d;
 $success-background-color: #191818;
-$button-primary-background: #2b3035;
+$button-primary-background: $primary-color;
+$button-warning-background: $primary-color;
 
 //Navigation bar config
-$navigation-bar-height: 50px;
-$navigation-bar-background: $primary-background-color;
+$navigation-bar-height: 70px;
+$navigation-bar-background: #FFF;
+$navigation-bar-color: $primary-color;
+$navigation-bar-link-color: $primary-color;
 $navigation-bar-brand-section-font-size: px-to-rems(18);
 $navigation-font-size: px-to-rems(14);
 $navigation-margin-bottom: 0px;
-$navigation-bar-border-bottom: 2px solid #d75f2a;
-$navigation-bar-link-hover-color: #FFF;
+$navigation-bar-link-hover-color: $primary-color;
+$navigation-bar-divider-color: rgba($primary-color, 0.1);
+$navigation-bar-hover-link-background-color: #FFF;
 
 .main-description-container {
-  padding: 50px 50px 0 50px;
+  padding: 100px 20px 0 20px;
+  background: #e4652d;
+  position: relative;
+  overflow: hidden;
+
   .header {
     font-weight: bold;
     color: #FFF;
+    margin-bottom: 0;
 
     & + .text-warning {
       font-size: px-to-rems(22);
     }
   }
 
+  .subheader {
+    color: rgb(120, 22, 26);
+    margin-top: 0;
+    font-weight: 200;
+    font-size: px-to-rems(20);
+  }
+
   .navigation {
     padding: 0;
+  }
+
+  .download {
+    font-weight: bold;
+  }
+
+  .social {
+    color: rgb(120, 22, 26);
+
+    a {
+      .fa {
+        color: rgb(120, 22, 26);
+      }
+    }
+  }
+
+  .row {
+    width: 80%;
+    @extend %center-block;
+  }
+
+  .computer-ninja {
+    position: relative;
+    top: 10px;
   }
 }
 
@@ -39,11 +82,123 @@ $navigation-bar-link-hover-color: #FFF;
   text-align: center;
   border-bottom: 1px solid #999;
   padding: 10px 0;
+  margin-bottom: 30px;
   
   .header {
-    letter-spacing: 4px;
-    font-size: px-to-rems(22);
+    color: rgb(54, 53, 53);
+    letter-spacing: 3px;
+    font-size: px-to-rems(18);
   } 
+}
+
+.skills {
+  .skills-motto {
+    margin-bottom: 40px;
+    padding-right: 100px;
+  }
+
+  .skills-header {
+    color: rgb(15, 17, 17);
+    font-size: px-to-rems(20);
+    margin: 0;
+
+    & + .skills-header {
+      color: rgb(125, 125, 125);
+    }
+  }
+
+  .skill {
+    img {
+      margin-bottom: 8px;
+    }
+
+    h6 {
+      color: $primary-color; 
+    }
+
+    text-align: center;
+  }
+}
+
+.examples {
+  background: rgb(43, 48, 53);
+  padding-bottom: 20px;
+
+  .examples-header {
+    text-align: center;
+    padding: 20px 0;
+    letter-spacing: 3px; 
+    border-bottom: 1px solid rgba(#CCC, 0.2);
+    margin-bottom: 20px;
+    .header {
+      color: #FFF;
+      margin: 0;
+      font-size: px-to-rems(18);
+    }
+  }
+
+  .examples-content {
+    .examples-motto {
+      margin: 0;
+      text-align: center;
+      color: rgb(130, 134, 139);
+      font-size: px-to-rems(18);
+      margin-bottom: 20px;
+    }
+
+    .example {
+      display: block;
+      padding: 20px 0;
+      @include border-radius(3px);
+      background: rgb(19, 22, 24);
+      color: #58606b;
+      width: 80%;
+      text-align: center;
+      @extend %center-block;
+
+      img {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.contribute {
+  padding-bottom: 20px;
+
+  .contribute-header {
+    text-align: center;
+    padding: 20px 0;
+    letter-spacing: 3px; 
+    border-bottom: 1px solid rgba(#333, 0.2);
+    margin-bottom: 20px;
+
+    .header {
+      color: rgb(27, 27, 27);
+      margin: 0;
+      font-size: px-to-rems(18);
+    }
+  }
+
+  .contribute-content {
+    .examples-motto {
+      margin: 0;
+      text-align: center;
+      color: rgb(130, 134, 139);
+      font-size: px-to-rems(18);
+      margin-bottom: 20px;
+    }
+
+    .contribution {
+      padding: 20px 30px;
+      @include border-radius(3px);
+      text-align: center;
+    }
+  }
 }
 
 //Documentation
@@ -125,7 +280,7 @@ $navigation-bar-link-hover-color: #FFF;
   }
 
   .want-more {
-    background: darken($navigation-bar-background, 7%);
+    background: darken($primary-color, 7%);
     text-align: center;
     padding: 20px 8px;
 
@@ -186,5 +341,11 @@ $navigation-bar-link-hover-color: #FFF;
   }
 }
 
+.code {
+  color: #d44950;
+  white-space: nowrap;
+  font-weight: bold;
+  @include border-radius(3px);
+}
 
 @import "../scss/furatto";
