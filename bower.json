@@ -1,9 +1,21 @@
 {
   "name": "furatto",
-  "version": "1.0.1",
-  "main": ["./documentation/assets/css/furatto.css", "./documentation/assets/js/furatto.js", "./documentation/assets/fonts/*"],
+  "version": "3.0.0",
+  "main": [
+    "./dist/css/furatto.css",
+    "./dist/css/furatto.min.css",
+    "./dist/css/normalize.css",
+    "./dist/js/furatto.js",
+    "./dist/js/furatto.min.js"
+  ],
   "ignore":[
-    "**/.*"
+    "**/.*",
+    "_config.yml",
+    "docs",
+    "fontawesome",
+    "coffee",
+    "img",
+    "docs_scss"
   ],
   "dependencies": {
     "jquery": ">= 1.9.0"
