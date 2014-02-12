@@ -32,7 +32,8 @@ module.exports = function(grunt) {
           'js/<%= pkg.name%>.off-screen.js',
           'js/<%= pkg.name%>.tabs.js',
           'js/<%= pkg.name %>.tooltip.js',
-          'js/<%= pkg.name %>.dropdown.js'
+          'js/<%= pkg.name %>.dropdown.js',
+          'js/classie.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
