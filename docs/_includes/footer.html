@@ -8,9 +8,9 @@
        <i class="fa fa-rocket fa-2x"></i>
        <h5>Need something else?</h5>
       <ul class="navigation">
-         <li><a href="mailto:weare@icalialabs.com">Looking for jobs</a></li>
+         <li><a href="mailto:weare@icalialabs.com">Looking for a job</a></li>
          <li><a href="mailto:weare@icalialabs.com">Have a business inquiry?</a></li>
-         <li><a href="/examples">Apps starter kits</a></li>
+         <li><a href="/examples">App starter kits</a></li>
       </ul>
      </div>
      <div class="col-3">
@@ -29,7 +29,7 @@
        <ul class="navigation">
          <li>Eduardo Higareda • <a href="https://twitter.com/eldelentes">@eldelentes</a></li>
          <li>Emmanuel Fuentes • <a href="https://twitter.com/dr_emm2">@Dr_Emm2</a></li>
-         <li>Patricio Beltran • <a href="https://twitter.com/pbeltran">@pbeltran</a></li>
+         <li>Patricio Beltran • <a href="https://twitter.com/patombeltran">@patombeltran</a></li>
        </ul>
      </div>
   </div>  
@@ -58,7 +58,9 @@
 
 <!--includes javascript at the bottom so the page loads faster-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="../dist/js/furatto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 <!--loads analytics-->
 <script async="" src="http://www.google-analytics.com/ga.js"></script>
@@ -74,19 +76,4 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
-
-{% if site.env == 'development' %}
-<!--<script src="http://{{ site.current_ip }}:35729/livereload.js"></script>-->
-{% endif %}
-
-<script>
-
-$('.suraido-container').suraido({
-    "fluid": true,
-    "enableKeys": true,
-    "enableDots": true,
-    "enableArrows": true,
-    "autoplay": false 
-    })
 </script>
