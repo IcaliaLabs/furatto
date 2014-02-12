@@ -5,6 +5,7 @@
   {% include header.html %}
 </head>
 <body >
+<div class="off-screen" id="off-screen">
   {% include navbar.html %}
 
   <div class="row">
@@ -16,11 +17,13 @@
      <div class="col-3 sidebar hidden-on-xsmall">
        {% include sidebar.html %}
      </div>
-     <hr />
+     <img src="/furatto/assets/img/updsidedownNinja.png" alt="" class="hidden-on-xsmall upside-down-ninja" />
   </div>
 
+  {% include off_screen_menu.html %}
 
-{% include footer.html %}
+  {% include footer.html %}
+</div>
 
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function(){
