@@ -59,7 +59,12 @@
   Furatto.Modal.version = "1.0.0"
 
   $(document).ready ->
-    $('body').append('<div class="modal-overlay"></div>')
+    if $('.off-screen').length > 0
+      elementToAppend = $('.off-screen')
+    else
+      elementToAppend = $('body')
+
+    elementToAppend.append('<div class="modal-overlay"></div>')
     $('[data-furatto="modal"]').each ->
       modal = $(@)
       modal.modal('init')
