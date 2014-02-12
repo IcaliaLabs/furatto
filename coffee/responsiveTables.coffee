@@ -85,4 +85,7 @@
         plugin[_].apply plugin, args
 
   Furatto.ResponsiveTables.version = "1.0.0"
+
+  $(document).ready ->
+    $('table.responsive').responsiveTables()
 ) $, window, document
