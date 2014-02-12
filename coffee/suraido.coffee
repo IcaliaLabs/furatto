@@ -9,12 +9,12 @@
     delay: 3000
     pause: false
     loop: false
-    enableKeys: false
-    enableDots: false
-    enableArrows: false
-    prev: '<<'
-    next: '>>'
-    fluid: false
+    enableKeys: true
+    enableDots: true
+    enableArrows: true
+    prev: '«'
+    next: '»'
+    fluid: true
     starting: false
     completed: false
     easing: 'swing'
@@ -221,5 +221,9 @@
         plugin[_].apply plugin, args
 
   Furatto.Suraido.version = "1.0.0"
+
+  $(document).ready ->
+    $('[data-suraido]').each ->
+      $(@).suraido()
 
 ) $, window, document
