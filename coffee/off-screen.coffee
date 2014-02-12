@@ -216,6 +216,9 @@
         plugin[_].apply plugin, args
 
   $('.off-screen-navigation').offScreen()
+  $(document).click ->
+    $('.off-screen-navigation').offScreen('resetMenu')
+
 
   Furatto.OffScreen.version = "1.0.0"
       
