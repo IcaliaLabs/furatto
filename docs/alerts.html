@@ -1,0 +1,163 @@
+---
+layout: default
+title: Furatto - Alerts
+---
+
+<h1>Alerts</h1>
+<p class="main-motto">Provide meaningful feedback messages across the website in response to user actions.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>Wrap any text and an optional close button and one of the modifier class names. The default alert is a notice message with a light orange as background.</p>
+
+<div class="row">
+   <div class="col-6">
+     <div class="alert">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+   </div>
+   <div class="col-6 nopadding">
+    <pre>
+      <code>
+&lt;div class=&quot;alert&quot;&gt;<br/>  &lt;a href=&quot;#&quot; class=&quot;close&quot;&gt;x&lt;/a&gt;<br/>  This is an alert<br/>&lt;/div&gt; 
+      </code>
+    </pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>Alert variations</h3>
+
+<p>You can change the <span class="code">.alert</span> element look & feel by appending class modifiers, such as for colors and appeareance.</p>
+
+<div class="row">
+   <div class="col-6">
+     <div class="alert primary">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+     <div class="alert success round">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+     <div class="alert danger radius">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+   </div>
+   <div class="col-6 nopadding">
+<pre>
+   <code>
+&lt;div class="alert [primary danger success]"&gt;This is an alert&lt;/div&gt;
+&lt;div class="alert [round radius]"&gt;This is an alert&lt;/div&gt;
+   </code>
+</pre>
+   </div>
+</div>
+
+<h3>Available sass variables</h3>
+
+<p>You can customize the alerts really easy by changing the our Sass variables.</p>
+
+<pre>
+  <code>
+//General settings
+$alert-padding: px-to-rems(9) px-to-rems(40) px-to-rems(9) px-to-rems(16) !default;
+$alert-margin-bottom: px-to-rems(20) !default;
+$alert-font-size: px-to-rems(13) !default;
+$alert-font-weight: normal !default;
+$alert-default-background: #e67e22 !default;
+
+//Close settings
+$alert-close-font-size: px-to-rems(16) !default;
+$alert-close-opacity: 0.3 !default;
+$alert-close-hover-opacity: 0.5 !default;
+$alert-close-padding: px-to-rems(5) !default;
+$alert-close-color: #333 !default;
+
+//Variations
+$alert-radius: px-to-rems(3) !default;
+$alert-round: px-to-rems(1000) !default;
+
+//Alert styles
+$alert-border-width: px-to-rems(1) !default;
+$alert-border-style: solid !default;
+
+//Background variations
+$alert-primary-background: #3498db !default;
+$alert-success-background: #2ecc71 !default;
+$alert-danger-background: #e74c3c !default;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Advance usage</h3>
+
+<p>Don't feel like using the built-in alerts work for you?, don't worry we have included a mixin for you to create your own.</p>
+
+<div class="row mixin">
+  <h4 class="code">@mixin alert</h4>
+  <ul class="params">
+    <li><strong>$background-color</strong> - Is the background color for the alert to create. <strong>Default:</strong> $alert-default-background
+</li>
+    <li><strong>$include-radius</strong> - Wheter or not to add the radius style on the custom alert. <strong>Default:</strong> true
+ </li>
+    <li><strong>$include-round</strong> -  Wheter or not to add the radius/pill style style on the custom alert. <strong>Default:</strong> true
+</li>
+</li>
+  </ul>
+
+  <span class="code">Sass</span>
+  <pre data-language="scss">
+     <code>
+@mixin alert($background-color: $alert-default-background, $include-radius: true, $include-round: true) {
+  @include alert-base;
+  @include alert-style($background-color);
+
+  .close { @include alert-close; }
+  @if $include-radius {
+    &.radius { @include border-radius($alert-radius); }
+  }
+
+  @if $include-round {
+  &.round { @include border-radius($alert-round) }
+  }
+}
+     </code>
+  </pre>
+</div>
+
+<hr />
+
+<h3>Creating your alerts</h3>
+<p>So to create your own alerts simply call the mixin like shown below, and send the variables you want to change to meet your needs.</p>
+
+<div class="row">
+   <div class="col-6">
+    <pre data-language="scss">
+       <code>
+ .my-super-alert {
+    @include alert;
+ } 
+       </code>
+    </pre>  
+   </div>
+   <div class="col-6">
+    <pre data-language="html">
+       <code>
+&lt;div class="my-super-alert"&gt;This is an alert&lt;/div&gt;
+       </code>
+    </pre>  
+   </div>
+</div>
+
+
+<blockquote class="primary">
+  <h4>Further usage...</h4>
+  <p>For a more advance usage for creating alerts, check out the <span class="code">_alerts.scss</span> file.</p>
+</blockquote>
