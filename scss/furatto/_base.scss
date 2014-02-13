@@ -14,7 +14,6 @@ $base-line-height: 1 !default;
 
 //Text variations
 $muted-text-color: #666666 !default;
-$warning-text-color: #d35400 !default;
 $error-text-color: #c0392b !default;
 $success-text-color: #27ae60 !default;
 
@@ -35,7 +34,6 @@ html {
 
 html, body {
   overflow-x: hidden;
-  overflow-y: scroll;
   height: 100%;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
@@ -102,21 +100,12 @@ object {
   color: $muted-text-color;
 }
 
-.text-warning {
-  color: $warning-text-color;
-}
-
 .text-error {
   color: $error-text-color;
 }
 
 .text-success {
   color: $success-text-color;
-}
-
-//Text alignment
-.text-left {
-  text-align: left;
 }
 
 .text-right {
