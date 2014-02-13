@@ -40,9 +40,9 @@ $headings-font-weight: 400 !default;
 $headings-line-height: 1.4 !default;
 $headings-text-rendering: optimizeLegibility !default;
 $headings-color: #222 !default;
-$h1-font-size: px-to-rems(44) !default;
-$h2-font-size: px-to-rems(36) !default;
-$h3-font-size: px-to-rems(28) !default;
+$h1-font-size: px-to-rems(36) !default;
+$h2-font-size: px-to-rems(28) !default;
+$h3-font-size: px-to-rems(25) !default;
 $h4-font-size: px-to-rems(20) !default;
 $h5-font-size: px-to-rems(16) !default;
 $h6-font-size: px-to-rems(14) !default;
@@ -134,10 +134,10 @@ $medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-
     }
   }
 
-  h1 { font-size: $h1-font-size - px-to-rems(8); } 
-  h2 { font-size: $h2-font-size - px-to-rems(8); } 
-  h3 { font-size: $h3-font-size - px-to-rems(3); } 
-  h4 { font-size: $h4-font-size - px-to-rems(3); } 
+  h1 { font-size: $h1-font-size } 
+  h2 { font-size: $h2-font-size } 
+  h3 { font-size: $h3-font-size } 
+  h4 { font-size: $h4-font-size } 
   h5 { font-size: $h5-font-size; } 
   h6 { font-size: $h6-font-size; } 
 
