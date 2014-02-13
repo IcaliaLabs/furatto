@@ -20,6 +20,7 @@ $navigation-bar-font-weight: 300 !default;
 $navigation-font-size: px-to-rems(13) !default;
 $navigation-fixed-z-index: 1030 !default;
 $navigation-bar-border-bottom: transparent !default;
+$navigation-bar-divider-color: scale-color($navigation-bar-background, $lightness: 13%) !default;
 
 //Brand section
 $navigation-bar-brand-section-font-size: px-to-rems(18) !default;
@@ -29,6 +30,7 @@ $navigation-bar-brand-section-font-weight: 400 !default;
 $navigation-bar-link-color: #FFF !default;
 $navigation-bar-link-hover-color: #999 !default;
 $navigation-bar-link-hover-decoration: none !default;
+$navigation-bar-hover-link-background-color: darken($navigation-bar-background, 5%) !default;
 
 //Buttons settings
 $navigation-bar-button-font-size: $navigation-font-size !default;
@@ -110,7 +112,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
 
         &.divider {
           height: auto;
-          border-bottom: 1px solid scale-color($navigation-bar-background, $lightness: 13%);
+          border-bottom: 1px solid $navigation-bar-divider-color;
         }
       }
     }
@@ -128,6 +130,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
   }
 
   .button {
+    color: #FFF;
     font-size: $navigation-bar-button-font-size;
     height: $navigation-bar-button-height;
     line-height: $navigation-bar-button-height;
@@ -175,7 +178,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
       }
 
       a:hover:not(.button) {
-        background: darken($navigation-bar-background, 5%); 
+        background: $navigation-bar-hover-link-background-color; 
       }
 
       a {
@@ -193,7 +196,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
 
       &.divider {
         height: $navigation-bar-height; 
-        border-left: 1px solid scale-color($navigation-bar-background, $lightness: 13%);
+        border-left: 1px solid $navigation-bar-divider-color;
       }
     }
 
@@ -237,7 +240,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
 
           &.divider {
             height: $navigation-bar-dropdown-divider-height; 
-            border-top: 1px solid scale-color($navigation-bar-background, $lightness: 13%);
+            border-top: 1px solid $navigation-bar-divider-color;
           }
         }
       }
