@@ -4,27 +4,42 @@
 $primary-color: #e4652d;
 
 //Base config
-$body-background-color: rgb(236, 237, 237);
-$warning-text-color: #e4652d;
+$warning-text-color: $primary-color;
 $error-text-color: #7c1717;
 
 //Grid config
-$primary-background-color: #e4652d;
-$success-background-color: #191818;
+$grid-primary-background-color: $primary-color;
+$grid-success-background-color: #191818;
 $button-primary-background: $primary-color;
 $button-warning-background: $primary-color;
 
 //Navigation bar config
 $navigation-bar-height: 70px;
-$navigation-bar-background: #FFF;
-$navigation-bar-color: $primary-color;
-$navigation-bar-link-color: $primary-color;
+$navigation-bar-background: $primary-color;
+$navigation-bar-color: #FFF;
+$navigation-bar-link-color: #FFF;
 $navigation-bar-brand-section-font-size: px-to-rems(18);
 $navigation-font-size: px-to-rems(14);
 $navigation-margin-bottom: 0px;
-$navigation-bar-link-hover-color: $primary-color;
-$navigation-bar-divider-color: rgba($primary-color, 0.1);
-$navigation-bar-hover-link-background-color: #FFF;
+$navigation-bar-link-hover-color: #FFF;
+$navigation-bar-divider-color: rgba(#FFF, 0.1);
+$navigation-bar-hover-link-background-color: transparent;
+$navigation-bar-border-bottom: 1px solid darken($primary-color, 5%);
+$col-border-alpha: 0.2;
+
+.upside-down-ninja {
+  float: right;
+  padding-right: 30px;
+}
+
+.main-motto {
+  font-size: px-to-rems(20);
+  color: #6F6F6F;
+}
+
+.white {
+  color: #FFF;
+}
 
 .main-description-container {
   padding: 100px 20px 0 20px;
@@ -36,9 +51,10 @@ $navigation-bar-hover-link-background-color: #FFF;
     font-weight: bold;
     color: #FFF;
     margin-bottom: 0;
+    font-size: px-to-rems(40);
 
     & + .text-warning {
-      font-size: px-to-rems(22);
+      font-size: px-to-rems(26);
     }
   }
 
@@ -63,6 +79,7 @@ $navigation-bar-hover-link-background-color: #FFF;
     a {
       .fa {
         color: rgb(120, 22, 26);
+        font-size: px-to-rems(38);
       }
     }
   }
@@ -81,13 +98,14 @@ $navigation-bar-hover-link-background-color: #FFF;
 .skills-header-container {
   text-align: center;
   border-bottom: 1px solid #999;
-  padding: 10px 0;
+  padding: 22px 0;
   margin-bottom: 30px;
   
   .header {
     color: rgb(54, 53, 53);
     letter-spacing: 3px;
     font-size: px-to-rems(18);
+    margin: 0;
   } 
 }
 
@@ -98,7 +116,7 @@ $navigation-bar-hover-link-background-color: #FFF;
   }
 
   .skills-header {
-    color: rgb(15, 17, 17);
+    color: #444;
     font-size: px-to-rems(20);
     margin: 0;
 
@@ -126,7 +144,7 @@ $navigation-bar-hover-link-background-color: #FFF;
 
   .examples-header {
     text-align: center;
-    padding: 20px 0;
+    padding: 22px 0;
     letter-spacing: 3px; 
     border-bottom: 1px solid rgba(#CCC, 0.2);
     margin-bottom: 20px;
@@ -138,12 +156,18 @@ $navigation-bar-hover-link-background-color: #FFF;
   }
 
   .examples-content {
-    .examples-motto {
+    padding: 30px 0 20px 0;
+    .examples-motto,
+    .examples-bottom-motto {
       margin: 0;
       text-align: center;
       color: rgb(130, 134, 139);
       font-size: px-to-rems(18);
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    .examples-wrapper {
+      margin-bottom: 50px;
     }
 
     .example {
@@ -172,7 +196,7 @@ $navigation-bar-hover-link-background-color: #FFF;
 
   .contribute-header {
     text-align: center;
-    padding: 20px 0;
+    padding: 22px 0;
     letter-spacing: 3px; 
     border-bottom: 1px solid rgba(#333, 0.2);
     margin-bottom: 20px;
@@ -185,17 +209,9 @@ $navigation-bar-hover-link-background-color: #FFF;
   }
 
   .contribute-content {
-    .examples-motto {
-      margin: 0;
-      text-align: center;
-      color: rgb(130, 134, 139);
-      font-size: px-to-rems(18);
-      margin-bottom: 20px;
-    }
-
+    padding: 40px 0;
     .contribution {
       padding: 20px 30px;
-      @include border-radius(3px);
       text-align: center;
     }
   }
@@ -253,15 +269,28 @@ $navigation-bar-hover-link-background-color: #FFF;
     margin-bottom: px-to-rems(6);
   }
 
+}
+
+.docs-examples {
+  h5 {
+    font-weight: 600;
+    margin-bottom: px-to-rems(6);
+  }
+
   small {
     font-size: px-to-rems(14);
   }
+  
 }
 
 //Footer
 .footer {
 
   .navigation li a { font-weight: 100;}
+
+  .navigation.inline {
+    margin-bottom: 0px;
+  }
 
   .furatto-description {
     .name-header {
@@ -313,7 +342,7 @@ $navigation-bar-hover-link-background-color: #FFF;
 
   .general-info {
     background: rgb(48, 51, 56);
-    padding: 20px;
+    padding: 80px 20px;
     text-align: center;
 
     .navigation.inline {
