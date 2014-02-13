@@ -4,8 +4,10 @@
 //@variables
 //
 
+@import "functions";
+
 //Images variations
-$img-radius: 0.3rem !default;
+$img-radius: px-to-rems(3) !default;
 $img-round: 50rem !default;
 
 //Image general settings
