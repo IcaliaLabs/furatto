@@ -1,0 +1,60 @@
+---
+layout: default
+title: Furatto - Docs::Overview
+---
+
+<h1>Overview</h1>
+
+<p class="main-motto">Get into Furatto bare bones structure, including the Mobile First approach we took.</p>
+<hr />
+
+<h3>HTML 5 doctype</h3>
+<div class="hidden-xs">
+  <p>Motivated by the mobile first approach as well as some HTML elements and CSS may not work as expected, it is highly recommended that you use the HTML5 doctype.</p>
+  <pre >
+            <code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  ...
+  &lt;/html&gt;
+            </code>
+  </pre>
+</div>
+<hr />
+<h3>Mobile First</h3>
+<p>In order to add responsiveness on your web site, you must add the correct <span class="code">meta</span> tag inside the <span class="code">&lt;head&gt;</span> of each of your HTML files.</p>
+<div class="hidden-xs">
+  <pre>
+            <code>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            </code>
+  </pre>
+</div>
+<p>
+You can disable the zooming capabilities on mobile devices by adding <span class="code">maximun-scale=1</span> and <span class="code">user-scalable=no</span>, this way your site will feel a bit more like a native application. Use it with care, as it is not always the best approach.
+</p>
+<div class="hidden-xs">
+  <pre>
+            <code>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1, user-scalable=no" /&gt;
+            </code>
+  </pre>
+</div>
+
+<hr />
+<h3>Global settings</h3>
+<p>
+Furatto applies some basic global settings for, typography, links, and body itself. Some of these:
+<ul>
+  <li>Remove margin and padding on body.</li>
+  <li>Set a default background to the body.</li>
+  <li>Set a base font face (<a href="http://www.google.com/fonts#UsePlace:use/Collection:Lato" target="_blank">Open Sans</a>), font size and base line height.</li>
+  <li>Reset default link behavior via setting a color and apply underline on <span class="code">:hover</span>.</li>
+</ul>
+</p>
+<p>Check out the <a href="#">_typography.scss</a> and <a href="#">_base.scss</a> files for more information.</p>
+<hr />
+<h3>Normalize</h3>
+<p>
+In order to improve cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a> which is an open-source project by <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> as an alternative for HTML 5 resets.
+</p> 

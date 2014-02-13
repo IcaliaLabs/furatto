@@ -1,0 +1,201 @@
+---
+layout: default
+title: Furatto - Docs::Buttons
+---
+
+<h1>Buttons</h1>
+<p class="main-motto">Buttons are a good way to present links or submission buttons on forms. Furatto makes it really easy to achieve it, by using the default ones or create your owns.</p>
+
+<hr />
+
+<h3>Buildng the markup</h3>
+
+<p>The markup to create a button is fairly simple, and short.</p>
+
+<a href="#" class="button">.button</a>
+
+<pre>
+   <code>
+&lt;a href="#" class="button"&gt;Button&lt;/a&gt;
+   </code>
+</pre>
+
+<hr />
+
+<h3>Button variations</h3>
+
+<p>You can change the <span class="code">.button</span> element look & feel by appending class modifiers, such as for colors, size, border.</p>
+
+<div class="row">
+   <div class="col-6">
+<a href="#" class="button danger">.button</a>
+<a href="#" class="button pill">.button</a>
+<a href="#" class="button xlarge">.button</a>
+<a href="#" class="button disabled success">.button</a>
+<a href="#" class="button block">.button</a>
+   </div>
+   <div class="col-6">
+<pre data-language="html">
+   <code>
+&lt;a href="#" class="button"&gt;Button&lt;/a&gt;
+&lt;a href="#" class="button [primary danger warning success]"&gt;Button&lt;/a&gt;
+&lt;a href="#" class="button [radius pill block disabled alpha]"&gt;Button&lt;/a&gt;
+&lt;a href="#" class="button [xxlarge xlarge large small mini]"&gt;Button&lt;/a&gt;
+   </code>
+</pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>You can customize the buttons really easy by changing the our Sass variables.</p>
+
+<pre>
+  <code>
+//Padding sizes for buttons
+$button-default: px-to-rems(4) px-to-rems(13) !default;
+$button-mini: 0 px-to-rems(6) !default;
+$button-small: px-to-rems(2) px-to-rems(11) !default;
+$button-large:  px-to-rems(12) px-to-rems(21) !default;
+$button-xlarge: px-to-rems(22) px-to-rems(34) !default;
+$button-xxlarge: px-to-rems(22.72) px-to-rems(22) px-to-rems(57) !default;
+
+//Buttons style
+$button-display: inline-block !default;
+$button-border-width: 1px !default;
+$button-border-style: solid !default;
+$button-default-background-color: #2E323E !default;
+
+//Buttons general styles
+$button-font-family: $base-font-family !default;
+$button-font-color: #FFF !default;
+$button-font-weight: 300 !default;
+$button-font-default: px-to-rems(14) !default;
+$button-font-mini: px-to-rems(11) !default;
+$button-font-small: px-to-rems(12) !default;
+$button-font-large: px-to-rems(16) !default;
+$button-font-xlarge: px-to-rems(22) !default;
+$button-font-xxlarge: px-to-rems(22) !default;
+$button-vertical-separation: px-to-rems(5) !default;
+
+//Buttons variations
+$button-radius: px-to-rems(3) !default;
+$button-alpha-border: 1px solid #FFF !default;
+$button-alpha-color: #FFF !default;
+$button-3d-border-width: px-to-rems(3) !default;
+$button-pill-radius: px-to-rems(1000) !default;
+$button-disabled-opacity: 0.65 !default;
+
+//Icons
+$button-icon-separation: 5px !default;
+
+//Background variations
+$button-primary-background: #3498db !default;
+$button-success-background: #2ecc71 !default;
+$button-danger-background: #e74c3c !default;
+$button-warning-background: #e67e22 !default;
+
+//Media queries
+$button-block-media-query-width: px-to-rems(480) !default;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Advance usage</h3>
+
+<p>Don't feel like using the built-in buttons work for you?, don't worry we have included a mixin for you to create your own.</p>
+
+<div class="row mixin">
+  <h4 class="code">@mixin button</h4>
+  <ul class="params">
+    <li><strong>$background-color</strong> - Is the background color for the button to create. <strong>Default:</strong> $button-default-background-color
+</li>
+<li><strong>$padding</strong> - The padding to give to the button. <strong>Default:</strong> $button-default
+</li>
+<li><strong>$font-size</strong> - The font size for the button. <strong>Default:</strong> $button-font-default
+</li>
+    <li><strong>$include-radius-style</strong> - Wheter or not to add the radius style on the custom button. <strong>Default:</strong> true
+ </li>
+    <li><strong>$include-block-style</strong> -  Wheter or not to add the block size style on the custom button. <strong>Default:</strong> true
+</li>
+    <li><strong>$include-pill-style</strong> - Wheter or not to add the pill style on the custom button. <strong>Default:</strong> true
+</li>
+  </ul>
+
+  <span class="code">Sass</span>
+  <pre data-language="scss">
+     <code>
+@mixin button($background-color: $button-default-background-color, 
+           $padding: $button-default, 
+           $font-size: $button-font-default, 
+           $include-radius-style: true, 
+           $include-block-style: true,
+           $include-pill-style: true) {
+  @include button-base;
+  @include button-style($background-color);
+  @include button-size($padding, $font-size);
+  
+  @if $include-radius-style {
+    &.radius {
+      @include border-radius($button-radius);
+    }
+  }
+
+  @if $include-block-style {
+    &.block {
+      display: block;
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  @if $include-pill-style {
+    &.pill {
+      @include border-radius($button-pill-radius);
+    }
+  }
+
+  @media (max-width: $button-block-media-query-width) {
+    & {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+     </code>
+  </pre>
+</div>
+
+<hr />
+
+<h3>Creating your buttons</h3>
+<p>So to create your own buttons simply call the mixin like shown below, and send the variables you want to change to meet your needs.</p>
+
+<div class="row">
+   <div class="col-6">
+    <pre data-language="scss">
+       <code>
+ .my-super-button {
+    @include button;
+ } 
+       </code>
+    </pre>  
+   </div>
+   <div class="col-6">
+    <pre data-language="html">
+       <code>
+&lt;a href="#" class="my-super-button"&gt;Button&lt;/a&gt;
+       </code>
+    </pre>  
+   </div>
+</div>
+
+
+<blockquote class="primary">
+  <h4>Further usage...</h4>
+  <p>For a more advance usage for creating buttons, check out the <span class="code">_buttons.scss</span> file.</p>
+</blockquote>

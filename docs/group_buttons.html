@@ -1,0 +1,94 @@
+---
+layout: default
+title: Furatto - Group Buttons
+---
+
+<h1>Group Buttons</h1>
+<p class="main-motto">Group buttons are great when you want to relate actions between items. A good exampe could be a text editor action items. They work similarly to buttons and look nice on small devices.</p>
+
+<hr />
+
+<h3>Buildng the markup</h3>
+
+<p>It is really somple to build the group buttons markup, as we try to make it really neat.</p>
+
+<ul class="button-group">
+  <li><a href="#" class="button">Button</a></li>
+  <li><a href="#" class="button">Button</a></li>
+  <li><a href="#" class="button">Button</a></li>
+</ul>
+
+<pre data-language="html">
+   <code>
+  &lt;ul class=&quot;button-group&quot;&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;
+   </code>
+</pre>
+
+<hr />
+
+<h3>Group buttons variations</h3>
+
+<p>There are two variations for button groups, <span class="code">.pill</span> and <span class="code">.radius</span>, but it is also possible to add some of the built in variations to the <span class="code">.button</span> class elements.</p>
+
+<div class="row">
+<ul class="button-group pill">
+  <li><a href="#" class="button">Button</a></li>
+  <li><a href="#" class="button danger">Button</a></li>
+  <li><a href="#" class="button">Button</a></li>
+</ul>
+<ul class="button-group radius">
+  <li><a href="#" class="button success">Button</a></li>
+  <li><a href="#" class="button">Button</a></li>
+  <li><a href="#" class="button primary">Button</a></li>
+</ul>
+<pre data-language="html">
+   <code>
+  &lt;ul class=&quot;button-group pill&quot;&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button danger&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;<br/>  &lt;ul class=&quot;button-group radius&quot;&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;butto success&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button primary&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;
+   </code>
+</pre>
+</div>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<pre data-language="scss">
+  <code>
+//Media device widths
+$sm-device-width: 480px !default;
+
+//Media queries
+$button-group-small-media-query: "#{$media-display} and (max-width: #{$sm-device-width})" !default;
+
+//Variations
+$button-radius: px-to-rems(3) !default;
+$button-pill-radius: px-to-rems(1000) !default;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Responsiveness</h3>
+
+<p>The buttons within group buttons will stack on small devices (<span class="code">480px</span> and down), this way it is still navigational for example on you brand new iPhone.</p>
+
+<pre>
+  <code>
+@media #{$button-group-small-media-query} {
+  .button-group {
+    li {
+      float: none;
+      display: block;
+
+      .button,
+      button {
+        display: block;
+      }
+    }
+  }
+}  
+</code>
+</pre>
+

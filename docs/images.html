@@ -1,0 +1,193 @@
+---
+layout: default
+title: Furatto - Images
+---
+
+<h1>Images</h1>
+<p class="main-motto">ll of the images on Furatto already have a predefined styling, just for a bette rendering. We would not want to ruin our awesome photos.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+<p>You don't have to add extra classes for the images, Yei!, simple invoke an <span class="code">img</span> element.</p>
+
+<img src="http://placehold.it/200x200" alt="" />
+
+<pre>
+  <code>
+  &lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;&quot; /&gt;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Images variations</h3>
+<p>We have provided three image variations for you to try on. The class names are <span class="code">.circular</span>, <span class="code">.radius</span> and <span class="code">.polaroid</span>.</p>
+
+<div class="row">
+  <img src="http://placehold.it/200x200" alt="" class="circular" />
+  <img src="http://placehold.it/200x200" alt="" class="radius" />
+  <img src="http://placehold.it/200x200" alt="" class="polaroid" />
+</div>
+
+<div class="row">
+   <pre>
+     <code>
+&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;&quot; class=&quot;circular&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;&quot; class=&quot;rounded&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;&quot; class=&quot;polaroid&quot; /&gt; 
+     </code>
+   </pre>
+</div>
+
+<blockquote class="danger">
+  <h4>IE support</h4>
+  <p>We use compass to support the majority of browsers, IE 8 and down does not support rounded corners. So <span class="code">.radius</span> and <span class="code">.circular</span> class names would not render properly.</p>
+</blockquote>
+
+<hr />
+
+<h3>iOS devices</h3>
+
+<p>There is an issue with circular and polaroid versions on <span class="code">iOS</span> devices, and the easiest workaround to solve this is by warpping the <span class="code">img</span> element into a div with an <span class="code">.img-frame</span> class name.</p>
+
+<p>Then you just have to append the modifier class to this div element instead of the img itself. This is shown below.</p>
+
+<div class="row">
+   <div class="img-frame circular">
+      <img src="http://placehold.it/200x200" alt="" />
+   </div>
+</div>
+
+<div class="row">
+   <pre>
+     <code>
+&lt;div class=&quot;img-frame circular&quot;&gt;
+  &lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;&quot; /&gt;<br/>&lt;/div&gt;
+     </code>
+   </pre>
+</div>
+
+<hr />
+
+<h3>Responsive images</h3>
+
+<p>We don't want to make images responsive by default, as is not always the desired behavior, so we are letting that to you. To achieve responsive images we just add a <span class="code">max-width: 100%</span> and <span class="code">height: auto</span>. This way the image will scale nicely to the parent element.</p>
+
+<div class="row">
+  <img src="http://placehold.it/200x200" alt="" class="responsive" />
+</div>
+
+<pre>
+  <code>
+  &lt;img src=&quot;http://placehold.it/200x200&quot; class=&quot;responsive&quot; /&gt;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>To customize the img element to meet your needs, you just have to simply change the corresponding Sass variables.</p>
+
+<pre>
+  <code>
+//Images variations
+$img-radius: px-to-rems(3) !default;
+$img-round: 50rem !default;
+
+//Image general settings
+$img-polaroid-padding: 0.28571429rem !default;
+$img-polaroid-background: #FFF !default;
+$img-polaroid-border-width: 0.07142857rem !default;
+$img-polaroid-border-style: solid !default;
+$img-polaroid-border-color: rgba(#000, 0.2) !default;
+$img-display: inline-block !default;
+$img-frame-margin: 5px !default;
+
+//Experimental
+$include-img-experimental: true !default;
+$include-img-flexible-ratios: true !default;
+  </code>
+</pre>
+
+<hr />
+
+<h3><i class="fa fa-flask"></i> Experimental</h3>
+
+<p>We like to experiment and live on the edge, so we provide some experimental features not just to images but some <a href="/experimental">others</a>.</p>
+
+<a href="/experimental" class="button primary">See experiments <i class="fa fa-long-arrow-right"></i></a>
+<br />
+<br />
+
+<p>This experimental feature builds responsive cover images with different aspect ratios, which you can see below. Remember just because looks good on your last updated browser, does not mean it will work nice everywhere. <strong>To see it i action, just resize your browser window.</strong></p>
+
+<div class="cover-image ratio-2by1" style="background-image:url(http://placehold.it/1000x1000)"></div>
+
+<pre>
+  <code>
+  &lt;div class=&quot;cover-image ratio-2by1&quot; style=&quot;background-image:url(http://placehold.it/1000x1000)&quot;&gt;&lt;/div&gt;
+  </code>
+</pre>
+
+<blockquote class="success">
+  <h4>A thought on ratios</h4>
+  <p>We have provided 4 different aspect ratios for you to try:</p>
+  <ul>
+    <li>.ratio-2by1</li>
+    <li>.ratio-3by1</li>
+    <li>.ratio-4by1</li>
+    <li>.ratio-4by3</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3>How cover image is built?</h3>
+
+<pre>
+  <code>
+//Experimental
+// Kudos to Nicolas Gallagher
+@if($include-img-experimental) {
+  .cover-image {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto 1em;
+    max-height: 300px;
+    max-width: 100%;
+
+    @if($include-img-flexible-ratios == false) {
+      padding-bottom: 50%;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width:100%;
+    }
+
+    @if($include-img-flexible-ratios) {
+      &.ratio-2by1:before {
+        padding-bottom: 50%;
+      }
+      &.ratio-3by1:before {
+        padding-bottom: 33.33%;
+      }
+      &.ratio-4by1:before {
+        padding-bottom: 25%;
+      }
+      &.ratio-4by3:before {
+        padding-bottom: 75%;
+      }
+    }
+
+  }
+}
+  </code>
+</pre>

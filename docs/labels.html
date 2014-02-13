@@ -1,0 +1,135 @@
+---
+layout: default
+title: Furatto -Labels
+---
+
+<h1>Labels</h1>
+<p class="main-motto">Highlight important content, make notice of important announcements with labels or badges by adding the corresponding class name.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>The markup to create labels is pretty straighforward, just add the <span class="code">label</span> class to a span or anchor element and you are good to go. Yeah you could probably can add it into another but nothing fancy is really gonna happen.</p>
+
+<span class="label">Label</span>
+
+<pre>
+   <code>
+  &lt;span class=&quot;label&quot;&gt;Label&lt;/span&gt;
+   </code>
+</pre>
+
+<hr />
+
+<h3>Label variations</h3>
+
+<p>Highlighting content is important, but to give a meaning is critical, that's why we provide 4 modifier class name which you can append to the label class elements.</p>
+
+<div class="row">
+   <div class="col-3">
+<span class="label success">Label</span>
+<span class="label danger">Label</span>
+<span class="label radius">Label</span>
+<span class="label round">1</span>
+   </div>
+   <div class="col-9">
+<pre data-language="html">
+   <code>
+&lt;span class=&quot;label success&quot;&gt;Label&lt;/span&gt;<br/>&lt;span class=&quot;label danger&quot;&gt;Label&lt;/span&gt;<br/>&lt;span class=&quot;label radius&quot;&gt;Label&lt;/span&gt;<br/>&lt;span class=&quot;label round&quot;&gt;1&lt;/span&gt;
+   </code>
+</pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>Don't like the default values?, yeah we get it, you can easily customize them with our sass variables.</p>
+
+<pre>
+  <code>
+//Label general settings
+$label-padding: px-to-rems(3) px-to-rems(6) !default;
+$label-font-size: px-to-rems(11) !default;
+$label-font-weight: normal !default;
+$label-font-color: #FFF !default;
+$label-font-shadow-alpha: 0.20 !default;
+$label-font-shadow-x: 0 !default;
+$label-font-shadow-y: -1px !default;
+$label-hover-decoration: none !default;
+$label-default-background:  #95A5A6 !default;
+
+//Label variations
+$label-radius: px-to-rems(3) !default;
+$label-round: px-to-rems(1000) !default;
+
+//Label background variations
+$label-primary-background: #3498db !default;
+$label-success-background: #2ecc71 !default;
+$label-danger-background: #e74c3c !default;
+$label-warning-background: #e67e22 !default;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Creating your labels</h3>
+<p>Don't o the mood to use the built in labels, that's fair, we have included a mixin for you to create your own, check it out!</p>
+
+<div class="row">
+   <div class="col-6">
+    <pre data-language="scss">
+       <code>
+ .my-super-label {
+    @include label;
+ } 
+       </code>
+    </pre>  
+   </div>
+   <div class="col-6">
+    <pre data-language="html">
+       <code>
+&lt;a href="#" class="my-super-label"&gt;Button&lt;/a&gt;
+       </code>
+    </pre>  
+   </div>
+</div>
+
+<div class="row mixin">
+  <h3>@mixin label</h3>
+  <ul class="params">
+    <li><strong>$background-color</strong> - Is the background color for the button to create. Default: $label-default-background
+</li>
+    <li><strong>$include-round</strong> - Wheter or not to add the round style on the custom button</li>
+    <li><strong>$include-radius</strong> - Wheter or not to add the radius size style on the custom button</li>
+  </ul>
+
+  <span class="code">Sass</span>
+  <pre data-language="scss">
+     <code>
+@mixin label($background-color: $label-default-background, $include-round: true, $include-radius: true) {
+  @include label-base;
+  @include label-style($background-color);
+
+  @if $include-round {
+    &.round { @include border-radius($label-round); }
+  }
+
+  @if $include-radius {
+    &.radius { @include border-radius($label-radius); }
+  }
+}
+
+     </code>
+  </pre>
+</div>
+
+<blockquote class="primary">
+  <h4>Further usage...</h4>
+  <p>For a more advance usage for creating labels, check out the <span class="code">_labels.scss</span> file.</p>
+</blockquote>
+
+
+

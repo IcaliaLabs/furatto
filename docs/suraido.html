@@ -1,0 +1,267 @@
+---
+layout: default
+title: Furatto - Suraido
+---
+
+<h1>Suraido</h1>
+<p class="main-motto">Suraido is a simple, yet powerful touch-enabled slider for small devices.</p>
+
+<hr />
+
+<div class="row">
+  <div class="suraido-container" data-suraido>
+    <ul>
+      <li style="background:url(/furatto/assets/img/1.jpg)">
+      <div class="caption">
+        <p>Posasda Villa de la Aldea, San Miguel de Allende, México.</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/2.jpg)">
+      <div class="caption">
+        <p>San Miguel de Allende Nightlife</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/3.jpg)">
+      <div class="caption">
+        <p>La Plaza Principal, San Miguel de Allende.</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/4.jpg)">
+      <div class="caption">
+        <p>San Miguel de Allende Cathedral.</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/5.jpg)">
+      <div class="caption">
+        <p>Rosewood Hotel, San Miguel de Allende.</p>
+      </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<hr />
+
+<h3>Setup Suraido</h3>
+
+<p>The HTML setup is pretty straightforward and Suraido takes all the hard work for you. You just need a <span class="code">div</span> container with a <span class="code">suraido</span> data attribute. You can easily add images, captions and pagination. Here is the markup for you to try.</p>
+
+<div class="row">
+   <pre>
+     <code>
+  &lt;div class=&quot;suraido-container&quot; data-suraido&gt;<br/>    &lt;ul&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/1.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;Posasda Villa de la Aldea, San Miguel de Allende, M&eacute;xico.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/2.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;San Miguel de Allende Nightlife&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/3.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;La Plaza Principal, San Miguel de Allende.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/4.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;San Miguel de Allende Cathedral.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/5.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;Rosewood Hotel, San Miguel de Allende.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>    &lt;/ul&gt;<br/>  &lt;/div&gt;
+     </code>
+   </pre>
+</div>
+
+<div class="row">
+  <span class="code">Javascript</span>
+  <p>In case you are wondering how would you make a call to suraido via Javascript.</p>
+   <pre>
+     <code>
+ &lt;script&gt;<br/><br/>  $('.suraido-container').suraido({<br/>    &quot;fluid&quot;: true,<br/>    &quot;enableKeys&quot;: true,<br/>    &quot;enableDots&quot;: true,<br/>    &quot;enableArrows&quot;: true,<br/>    &quot;autoplay&quot;: false <br/>  })<br/> &lt;/script&gt;
+     </code>
+   </pre>
+</div>
+
+<hr />
+
+<h3>Plugin usage</h3>
+
+<p>We don't currently provide customization through data attributes, we will in the near future, don't worry. In the mean time we provide the options you can send via javascript with its values.</p>
+
+<h4>Usage</h4>
+<p>You can invoke suraido via <span class="code">javascript</span> with many options.</p>
+
+<table class="responsive bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>speed</td>
+      <td>integer</td>
+      <td>500</td>
+      <td>The speed at which the images transition takes, this means 500 miliseconds.</td>
+    </tr>
+    <tr>
+      <td>delay</td>
+      <td>integer</td>
+      <td>3000</td>
+      <td>The time it takes from one slide to past to the next, this applies when <strong>autoplay</strong> is enabled.</td>
+    </tr>
+    <tr>
+      <td>loop</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Loops through all of the suraido sliding elements.</td>
+    </tr>
+    <tr>
+      <td>enableKeys</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Enable keys to move between the slider elements.</td>
+    </tr>
+    <tr>
+      <td>enableDots</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Enables pagination for the slider.</td>
+    </tr>
+    <tr>
+      <td>enableArrows</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Enable arows for navigation.</td>
+    </tr>
+    <tr>
+      <td>prev</td>
+      <td>string</td>
+      <td>«</td>
+      <td>The arrows to display on the slider previous control.</td>
+    </tr>
+    <tr>
+      <td>next</td>
+      <td>string</td>
+      <td>»</td>
+      <td>The arrows to display on the slider next control.</td>
+    </tr>
+    <tr>
+      <td>autoplay</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Autplays the slider as a the document loads.</td>
+    </tr>
+    <tr>
+      <td>paginationClass</td>
+      <td>string</td>
+      <td>pagination</td>
+      <td>The class for the pagination in the slider. Use for further customization.</td>
+    </tr>
+    <tr>
+      <td>paginationItemClass</td>
+      <td>string</td>
+      <td>dot</td>
+      <td>The class name for each element on the pagination.</td>
+    </tr>
+    <tr>
+      <td>arrowsClass</td>
+      <td>string</td>
+      <td>arrows</td>
+      <td>The arrows class name wrapper.</td>
+    </tr>
+    <tr>
+      <td>arrowClass</td>
+      <td>string</td>
+      <td>arrow</td>
+      <td>The class name for the arrows on the arrows wrapper.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3>Creating your slider</h3>
+<p>We provide some useful mixins for you to creare your own slider with minimal customization, just a sip of javascript and a bit of css.</p>
+
+<div class="row">
+  <div class="col-6">
+    <pre>
+      <code>
+.custom-slider {
+  @include slider-base;
+
+  .caption {
+    @include slider-caption;
+  }
+
+  .pages {
+    @include slider-pagination;
+
+    .page {
+      @include slider-pagination-dot;
+    }
+  }
+
+  .nav {
+    @include slider-arrows;
+
+    .nav-item {
+      @include slider-arrow;
+    }
+  }
+}
+      </code>
+    </pre>
+  </div>
+  <div class="col-6">
+     <pre>
+       <code>
+  &lt;script&gt;<br/>    $('.custom-slider').suraido({<br/>      paginationClass: 'pages',<br/>      paginationItemClass: 'page',<br/>      arrowsClass: 'nav',<br/>      arrowClass: 'nav-item'<br/>    });<br/>  &lt;/script&gt;
+       </code>
+     </pre>
+  </div>
+</div>
+<blockquote class="primary">
+  <h4>Extending your sliders</h4>
+  <p>Is fairly easy to create your own sliders, simply by including the <a href="#">mixins</a> and set the correct configuration on the JS plugin. For a more advance customization, check the <a href="#">sass source file</a>.</p>
+</blockquote>
+
+<hr />
+
+<h3>Availabale sass variables</h3>
+
+<p>You can customize the default suraido variables to meet your needs.</p>
+
+<pre>
+  <code>
+//General
+$suraido-slider-min-height: 330px !default;
+
+$suraido-item-min-height: 25rem !default;
+
+//Pagination
+$suraido-pagination-position: 0 !default;
+$suraido-list-width: 300% !default;
+$suraido-list-item-width: 33% !default;
+$suraido-pagination-z-index: 20 !default;
+
+//Dots
+$suraido-dot-size: 0.71428571rem !default;
+$suraido-dot-separation: 0.28571429rem !default;
+$suraido-dot-border-width: 0.14285714rem !default;
+$suraido-dot-border-style: solid !default;
+$suraido-dot-border-color: #CCC !default;
+$suraido-dot-radius: 0.42857143rem !default;
+$suraido-dot-opacity: 0.4 !default;
+$suraido-include-dot-transition: true !default;
+$suraido-dot-transition: background 0.5s, opacity 0.5s !default;
+$suraido-dot-active-background-color: #444 !default;
+$suraido-dot-active-opacity: 1 !default;
+$suraido-dot-background: #CCC;
+
+//Arrows
+$suraido-arrows-color: #FFF !default;
+$suraido-arrows-z-index: $suraido-pagination-z-index - 10 !default;
+$suraido-arrow-height: 60px !default;
+$suraido-arrow-line-height: $suraido-arrow-height !default;
+$suraido-next-arrow-padding: 15px !default;
+$suraido-prev-arrow-padding: 15px !default;
+
+//Caption
+$suraido-caption-font-size: 14px !default;
+$suraido-caption-bottom-position: 30px !default;
+$suraido-caption-height: 50px !default;
+$suraido-caption-color: #FFF !default;
+$suraido-caption-font-weight: lighter !default;
+$suraido-caption-padding-top: 10px !default;
+$suraido-caption-padding-left: 10px !default;
+$suraido-caption-background: #000 !default;
+$suraido-caption-background-alpha: 0.5 !default;
+  </code>
+</pre>

@@ -1,0 +1,73 @@
+---
+layout: default
+title: Furatto - Docs::Using Rails
+---
+
+<h1>Using Rails</h1>
+
+<p class="main-motto">As a web development shop which tech stack includes Rails as the main development tool, we provide a gem which plays well with any Rails app, you can check it out at <a href="https://github.com/IcaliaLabs/furatto-rails">https://github.com/IcaliaLabs/furatto-rails</a>, it includes all the styling and jQuery plugins.</p>
+
+<hr />
+
+<div class="row">
+  <p>Add the <span class="code">compass-rails</span> gem to the Gemfile.</p>
+  <pre>
+            <code>
+  gem 'compass-rails', '~> 1.1.2'
+            </code>
+  </pre>
+</div>
+<div class="row">
+  <p>After including the <span class="code">compass-rails</span> gem, you need to add the <span class="code">furatto</span> gem to your Gemfile.</p>
+  <pre>
+            <code>
+  gem 'furatto'
+            </code>
+  </pre>
+</div>
+<div class="row">
+  <h3>Configuring Furatto</h3>
+  <p>In order to add Furatto to the project, run the following command:</p>
+  <pre>
+  <code>
+  rails g furatto:install
+  </code>
+  </pre>
+</div>
+<hr />
+
+<h3>Manual installation</h3>
+<hr />
+<p>Add the following line to you <span class="code">app/assets/stylesheets/application.css</span> file:</p>
+<pre>
+  <code>
+  /*= require furatto */
+  </code>
+</pre>
+<p>If you want Sass support, you will have to change the <span class="code">application.css</span> to <span class="code">application.scss</span>, and add the following line:</p>
+<pre>
+  <code>
+  @import "furatto_and_overrides";
+  </code>
+</pre>
+<h3>Add Furatto to your JS manifest</h3>
+<p>Add the following line to you <span class="code">app/assets/javascripts/application.js</span> file:</p>
+<pre>
+  <code>
+  //= require furatto
+  </code>
+</pre>
+
+<hr />
+<h3>Set Viewport Width for responsiveness</h3>
+<p>Add the following line the <span class="code">&lt;head&gt;</span> tag of your layout:</p>
+<pre>
+  <code>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  </code>
+</pre>
+
+<blockquote class="primary">
+   <h4>Rails gem</h4>
+   <p>For more information on how to setup your Rails project checkout the <a href="https://github.com/IcaliaLabs/furatto-rails/blob/master/README.md">full documentation</a> or better yet, checkout the <a href="/examples">starter kit</a> we also use when kicking off a new project.</p>
+</blockquote>

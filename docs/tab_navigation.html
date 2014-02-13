@@ -1,0 +1,138 @@
+---
+layout: default
+title: Furatto - Tab Navigation
+---
+
+<h1>Tab navigation</h1>
+<p class="main-motto">This is an extension to the <a href="/inline_navigation">inline navigation</a> style which gives you a tab style navigation for you to display different content.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>Building the markup stays the same as building an inline navigation, you just need to add a <span class="code">tabu</span> data attribute and a bit of extra html for each tab content.</p>
+
+
+<div class="row">
+  <div class="col-4">
+    <ul class="navigation inline" data-tabu data-start-index="1">
+      <li><a href="#firstContent">I'm a tab</a></li>
+      <li><a href="#secondContent">I'm a tab to</a></li>
+      <li><a href="#thirdContent">Tab 3</a></li>
+    </ul>
+    <div class="tabu-content">
+      <div class="content" id="firstContent">
+        First Content  
+      </div>
+      <div class="content" id="secondContent">
+        Second Content
+      </div>
+      <div class="content" id="thirdContent">
+        Third Content 
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <pre>
+      <code>
+  &lt;ul class=&quot;navigation inline&quot; data-tabu data-start-index=&quot;1&quot;&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#firstContent&quot;&gt;I'm a tab&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#secondContent&quot;&gt;I'm a tab to&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#thirdContent&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;<br/>  &lt;div class=&quot;tabu-content&quot;&gt;<br/>      &lt;div class=&quot;content&quot; id=&quot;firstContent&quot;&gt;<br/>        First Content  <br/>      &lt;/div&gt;<br/>      &lt;div class=&quot;content&quot; id=&quot;secondContent&quot;&gt;<br/>        Second Content<br/>      &lt;/div&gt;<br/>      &lt;div class=&quot;content&quot; id=&quot;thirdContent&quot;&gt;<br/>        Third Content <br/>      &lt;/div&gt;<br/>  &lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</div>
+
+<hr />
+
+<h3>Setup</h3>
+
+<p>Here are simple steps for you to get a deeper insight:</p>
+
+<div class="row">
+   <div class="col-6">
+    <p class="text-warning">1. Create an inline navigation style. For more information visit the <a href="/inline_navigation">inline navigation</a> section.</p>  
+    <pre>
+      <code>
+&lt;ul class=&quot;navigation inline&quot;&gt;
+      </code>
+    </pre>
+   </div>
+   <div class="col-6">
+    <p class="text-warning">2. Add the tabu data attribute</p>  
+    <pre>
+      <code>
+&lt;ul class=&quot;navigation inline&quot; data-tabu &gt;      
+      </code>
+    </pre>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
+    <p class="text-warning">3. Add the list item elements with anchors, like so:</p>  
+    <pre>
+      <code>
+  &lt;ul class=&quot;navigation inline tabs&quot; data-tabu&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#firstContent&quot;&gt;I'm a tab&lt;/a&gt;&lt;/li&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#secondContent&quot;&gt;I'm a tab to&lt;/a&gt;&lt;/li&gt;<br/>   &lt;li&gt;&lt;a href=&quot;#thirdContent&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;    
+      </code>
+    </pre>
+   </div>
+   <div class="col-6">
+     <p class="text-warning">4. Add a tabu content div element, this will contain the information for each tab. Each content must match the anchor <span class="code">href</span> attribute.</p>  
+    <pre>
+      <code>
+ &lt;div class=&quot;tabu-content&quot;&gt;<br/>  &lt;div class=&quot;content&quot; id=&quot;firstContent&quot;&gt;<br/>    First Content  <br/>      &lt;/div&gt;<br/>  &lt;div class=&quot;content&quot; id=&quot;secondContent&quot;&gt;<br/>    Second Content<br/>  &lt;/div&gt;<br/>  &lt;div class=&quot;content&quot; id=&quot;thirdContent&quot;&gt;<br/>    Third Content <br/>  &lt;/div&gt;<br/> &lt;/div&gt;
+      </code>
+    </pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>Javascript usage</h3>
+
+<p>You can customize the tabu plugin behavior by Javascript or by data attributes.</p>
+
+<h4>Usage</h4>
+<p>The data attributes match the options you can send to the plugin. Below we provide a fully description on how to use them.</p>
+
+<table class="responsive">
+  <thead>
+    <tr>
+      <th>Option Name</th>
+      <th>Data attribute name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>startIndex</td>
+      <td><span class="code">data-start-index</span></td>
+      <td>integer</td>
+      <td>0</td>
+      <td>The start tab content to first display.</td>
+    </tr>
+    <tr>
+      <td>tabContentClass</td>
+      <td><span class="code">data-tab-content-class</span></td>
+      <td>string</td>
+      <td>tabu-content</td>
+      <td>The tbas wrapper container</td>
+    </tr>
+    <tr>
+      <td>tabContentsClass</td>
+      <td><span class="code">data-tab-contents-class</span></td>
+      <td>string</td>
+      <td>content</td>
+      <td>The class name for each tab</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<blockquote class="primary">
+  <h4>Under Tabu</h4>
+  <p>For a deeper look into the plugin you can check the <a href="#">furatto.tabs.js plugin file.</a> and the <a href="#">sass</a> file.</p>
+</blockquote>
+

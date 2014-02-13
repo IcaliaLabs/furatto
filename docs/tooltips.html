@@ -1,0 +1,123 @@
+---
+layout: default
+title: Furatto - Tooltips
+---
+
+<h1>Tooltips</h1>
+<p class="main-motto">Provide helpful messages through tooltips on icons menus, text hints with Furatto tooltips. Based on the <a href="http://getbootstrap.com/">Bootstrap</a> tooltips. Four directions are available.</p>
+
+<hr />
+
+<div class="row">
+  <ul class="navigation inline">
+    <li><a href="#"  data-toggle="tooltip" data-placement="top" title="" data-original-title="I'm on the top" id="tooltip-toggle1">Tooltip on top</a></li>
+    <li><a href="#"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="I'm on the bottom" id="tooltip-toggle2">Tooltip on the bottom</a></li>
+    <li><a href="#"  data-toggle="tooltip" data-placement="left" title="" data-original-title="I'm on the left" id="tooltip-toggle3">Tooltip on the left</a></i>
+    <li><a href="#"  data-toggle="tooltip" data-placement="right" title="" data-original-title="I'm on the right" id="tooltip-toggle4">Tooltip on the right</a></i>
+  </ul>
+</div>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>The tooltip markup is extremely easy and is all managed via data attributes, such as the <span class="code">placemenet</span>, <span class="code">original-title</span></p>
+
+<pre>
+  <code>
+&lt;a href=&quot;#&quot;  data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;I'm on the top&quot; id=&quot;tooltip-toggle1&quot;&gt;Tooltip on top&lt;/a&gt;<br/>&lt;a href=&quot;#&quot;  data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;&quot; data-original-title=&quot;I'm on the bottom&quot; id=&quot;tooltip-toggle2&quot;&gt;Tooltip on the bottom&lt;/a&gt;<br/>&lt;a href=&quot;#&quot;  data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;&quot; data-original-title=&quot;I'm on the left&quot; id=&quot;tooltip-toggle3&quot;&gt;Tooltip on the left&lt;/a&gt;<br/>&lt;a href=&quot;#&quot;  data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;&quot; data-original-title=&quot;I'm on the right&quot; id=&quot;tooltip-toggle4&quot;&gt;Tooltip on the right&lt;/a&gt;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Usage</h3>
+
+<h4>Via data attributes</h4>
+
+<p>Add the <span class="code">data-toggle="tooltip"</span> data attribute to any element really.</p>
+
+<pre>
+  <code>
+  &lt;a href=&quot;#&quot;  data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;I'm on the top&quot; id=&quot;tooltip-toggle1&quot;&gt;Tooltip on top&lt;/a&gt;
+  </code>
+</pre>
+
+<h4>Via javascript</h4>
+
+<p>You can trigger the tooltip plugin via JS like so:</p>
+
+<pre>
+  <code>
+ $('#tooltip').tooltip('show');
+  </code>
+</pre>
+
+<table class="responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>placemenet</td>
+    <td>string</td>
+    <td>top</td>
+    <td>Where to display the tooltip, <span class="code">top</span>, <span class="code">bottom</span>, <span class="code">right</span>, <span class="code">left</span>.</td>
+  </tr>
+  <tr>
+    <td>original-title</td>
+    <td>string</td>
+    <td>undefined</td>
+    <td>Especifies the text to be displayed on the tooltip.</td>
+  </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3>Methods</h3>
+
+<p>We offer some handy methods to manage the tooltips, such as making them appear or viceversa.</p>
+
+<table class="table table-bordered table-striped responsive">
+  <tbody>
+  <tr>
+    <td><span class="code">$('#example').tooltip('show')</span></td>
+    <td>Displays the tooltip.</td>
+  </tr>
+  <tr>
+    <td><span class="code">$('#example').tooltip('hide')</span></td>
+    <td>Hides the tooltip.</td>
+  </tr>
+  <tr>
+    <td><span class="code">$('#example').tooltip('toggle')</span></td>
+    <td>Toggles the tooltip.</td>
+  </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>You can always customize the tooltips styling by overwriting our sass variables.</p>
+
+<pre>
+  <code>
+$tooltip-font-size: 0.68571429rem !default;
+$tooltip-z-index: 1030 !default;
+$tooltip-padding: 0.25714286rem !default;
+$tooltip-inner-padding: 0.45714286rem !default;
+$tooltip-in-opacity: 1 !default;
+$tooltip-color: #2E323E !default;
+$tooltip-font-color: #FFF !default;
+$tooltip-alignment: center !default;
+$tooltip-radius: 0rem !default;
+$tooltip-border-width: 0.64285714rem !default;
+  </code>
+</pre>

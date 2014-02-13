@@ -1,0 +1,152 @@
+---
+layout: default
+title: Furatto - Pagination
+---
+
+<h1>Pagination</h1>
+<p class="main-motto">Furatto provides a super simple, sleek and beautiful pagination components to have a multi-page app. Great for large search results. Provides a nice transition when over.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>Building the pagination is really simple, a list of detailed steps are provided below. </p>
+<ol>
+  <li>Add the <span class="code">pagination</span> class to a <span class="code">ul</span> element.</li>
+  <li>For the current page, add the <span class="code">active</span> class name to the list item.</li>
+  <li>Add a <span class="code">disabled</span> class name to the list items that are not available for clicking.</li>
+  <li>For arrows just add the <span class="code">previous</span> or <span class="code">next</span> class name to the list items accordingly.</li>
+</ol>
+
+<div class="row">
+  <div class="col-5">
+    <ul class="pagination">
+      <li class="previous"><a href="#">«</a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li class="disabled"><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><span>6</span></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li class="next"><a href="#">»</a></li>
+    </ul>
+  </div>
+  <div class="col-7">
+    <pre>
+      <code>
+   &lt;ul class=&quot;pagination&quot;&gt;<br/>      &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;&#x00ab;&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;span&gt;6&lt;/span&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;7&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;8&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;9&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;&#x00bb;&lt;/a&gt;&lt;/li&gt;<br/>   &lt;/ul&gt;
+      </code>
+    </pre>
+  </div>
+</div>
+
+<hr />
+
+<h3>Pagination alignment</h3>
+<p>It is really easy to align the pagination add-on to the right or to the center, just by adding the correct class modifier name.</p>
+
+<div class="row">
+  <h5 class="code">Align to the center</h5>
+  <p>You just need to append the <span class="code">center</span> class to the pagination ul element.</p>
+   <div class="col-6">
+    <ul class="pagination center">
+      <li class="previous"><a href="#">«</a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li class="disabled"><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><span>6</span></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li class="next"><a href="#">»</a></li>
+    </ul>
+   </div>
+   <div class="col-6">
+     <pre>
+       <code>
+&lt;ul class=&quot;pagination center&quot;&gt;<br/>  ....<br/>&lt;/ul&gt;
+       </code>
+     </pre>
+   </div>
+
+   <h5>Customize it with Sass</h5>
+   <pre>
+     <code>
+//Pagination Alignment
+@if($include-pagination-alignment-center) {
+  &.center {
+    text-align: center;
+  }
+}
+     </code>
+   </pre>
+</div>
+<hr />
+<div class="row">
+  <h5 class="code">Align to the right</h5>
+  <p>You just need to append the <span class="code">right</span> class to the pagination ul element.</p>
+   <div class="col-6">
+    <ul class="pagination right">
+      <li class="previous"><a href="#">«</a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li class="disabled"><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><span>6</span></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li class="next"><a href="#">»</a></li>
+    </ul>
+   </div>
+   <div class="col-6">
+     <pre>
+       <code>
+&lt;ul class=&quot;pagination right&quot;&gt;<br/>  ....<br/>&lt;/ul&gt;
+       </code>
+     </pre>
+   </div>
+
+   <h5>Customize it with Sass</h5>
+   <pre>
+     <code>
+//Pagination Alignment
+@if($include-pagination-alignment-right) {
+  &.right {
+    text-align: right;
+  }
+}
+     </code>
+   </pre>
+</div>
+
+<hr />
+
+<h3>Available sass variables</h3>
+<p>Don't like the background for the pagination, nor the font size, just change the value of out variables to meet your needs.</p>
+<pre>
+  <code>
+$pagination-bg-color: #2980b9 !default;
+$pagination-margin: 0 !default;
+$pagination-color: #08c !default;
+$pagination-font-size: px-to-rems(13) !default;
+$pagination-list-items-padding: px-to-rems(2) px-to-rems(9) !default;
+$pagination-border-radius: 0px !default;
+$pagination-active-items-bg-color: $pagination-bg-color !default;
+$pagination-active-items-color: #FFF !default;
+$pagination-disabled-color: #FFF !default;
+$pagination-disabled-cursor: not-allowed !default;
+
+$include-pagination-transition-list-items: true !default;
+
+//Pagination alignment
+$include-pagination-alignment-center: true !default;
+$include-pagination-alignment-right: true !default;
+  </code>
+</pre>

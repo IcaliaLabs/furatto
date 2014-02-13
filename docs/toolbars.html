@@ -1,0 +1,120 @@
+---
+layout: default
+title: Furatto - Toolbars
+---
+
+<h1>Toolbars</h1>
+<p class="main-motto">Furatto lets you build tooltip style toolbars for group navigation icon items.</p>
+
+<hr />
+
+<div class="row text-center">
+  <a href="javascript:void(0)" class="button" data-furatto="toolbar" data-content="#user-toolbar-options-right">
+    <i class="fa fa-cog"></i>
+  </a>
+  <div id="user-toolbar-options-right" style="display:none">
+    <a href="#"><i class="fa fa-user"></i></a>
+    <a href="#"><i class="fa fa-star"></i></a>
+    <a href="#"><i class="fa fa-edit"></i></a>
+    <a href="#"><i class="fa fa-trash-o"></i></a>
+    <a href="#"><i class="fa fa-map-marker"></i></a>
+  </div> 
+</div>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>The toolbar navigation html is a bit long, but the result as you saw it is amazing!. It is composes by an <span class="code">anchor</span> element, and a <span class="code">div</span> element which contains the toolbar elements.</p>
+
+<pre>
+  <code>
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;button&quot; data-furatto=&quot;toolbar&quot; data-content=&quot;#user-toolbar-options-right&quot;&gt;<br/>    &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;<br/>  &lt;/a&gt;<br/>  &lt;div id=&quot;user-toolbar-options-right&quot; style=&quot;display:none&quot;&gt;<br/>    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-trash-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>  &lt;/div&gt;
+  </code>
+</pre>
+
+<blockquote class="primary">
+  <h4>A toolbar story</h4>
+  <p>The default position for a toolbar is on the top, but you can easily customize it via data attributes, keep reading...</p>
+</blockquote>
+
+<hr />
+
+<h3>Usage</h3>
+
+<h4>Via data attributes</h4>
+
+<p>Add the <span class="code">data-furatto="toolbar"</span> data attribute to a link element. The you have to add a <span class="code">data-content="#idToDiv"</span> attribute pointing to the div element id, for the toolbar plugin to pick up the right anchors.</p>
+
+<pre>
+  <code>
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;button&quot; data-furatto=&quot;toolbar&quot; data-content=&quot;#user-toolbar-options-right&quot;&gt;<br/>    &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;<br/>  &lt;/a&gt;
+  </code>
+</pre>
+
+<table class="responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>    
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>position</td>
+      <td>string</td>
+      <td>top</td>
+      <td>Sets the position for the toolbar. You can use <span class="code">top</span>, <span class="code">bottom</span>,<span class="code">left</span> and <span class="code">right</span></td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td>string</td>
+      <td>NULL</td>
+      <td>Id of the links container to display on the toolbar, it must have the <span class="code">#</span> symbol next to the id name, as in <span class="code">#idOfToolbarContent.</span></td>
+    </tr>
+    <tr>
+      <td>theme</td>
+      <td>string</td>
+      <td>NULL</td>
+      <td>Sets the theme for the toolbar. You can use <span class="code">primary</span>, <span class="code">danger</span> and <span class="code">warning</span>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>You can always customize the toolbars styling by overwriting our sass variables.</p>
+
+<pre>
+  <code>
+$toolbar-background-color: #232323 !default;
+$toolbar-border-radius: 0px !default;
+$toolbar-item-height: 34px !default;
+$toolbar-item-line-height: $toolbar-item-height !default;
+$toolbar-item-width: 44px !default;
+$toolbar-item-color: #FFF !default;
+$toolbar-arrow-border-width: 7px !default;
+
+
+//Toolbar variations
+$include-toolbar-variations: false !default;
+$toolbar-primary-background-color: #3498db !default;
+$toolbar-danger-background-color: #e74c3c !default;
+$toolbar-warning-background-color: #f39c12 !default;
+
+//Toolbar positions
+$include-toolbar-top-position: true !default;
+$include-toolbar-bottom-position: true !default;
+$include-toolbar-left-position: true !default;
+$include-toolbar-right-position: true !default;
+  </code>
+</pre>
+
+<blockquote class="success">
+  <p>You can always check out the source for the <span class="code">JS</span> <a href="#">toolbar</a> plugin for further customization.</p>
+</blockquote>

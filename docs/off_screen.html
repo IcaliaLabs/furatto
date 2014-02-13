@@ -1,0 +1,177 @@
+---
+layout: default
+title: Furatto - Off Screen
+---
+
+<h1>Off screen navigation</h1>
+<p class="main-motto">Off screen menu is an off canvas menu positioned outside the viewport, and slides in when activated. You'll be up and running in no time, seriously.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>You can create a simple off screen menu with a little bit of markup. You just need to wrap all of your content into one div with a class name <span class="code">off-screen</span> and a <span class="code">off-screen</span> id.</p>
+
+<div class="row">
+  <pre>
+     <code>
+&lt;div class=&quot;off-screen&quot;&gt;<br/>   &lt;nav class=&quot;navigation-bar&quot; id=&quot;off-screen&quot;&gt;<br/><br/>  &lt;/nav&gt;<br/>  &lt;!--all of your page content--&gt;<br/>&lt;/div&gt;
+     </code>
+  </pre>
+</div>
+
+<blockquote>
+   <h4>An off screen tip</h4>
+   <p>You will notice nothing really changed, you will have to add some more links and markup, so keep reading...</p>
+</blockquote>
+
+<hr />
+
+<h3>Off screen menu</h3>
+
+<p>Here is the tricky part, not so tricky but still, just a bunch of HTML. So we will add some navigation for the off screen menu.</p>
+
+<ol>
+  <li>Add an <span class="code">off-screen-navigation</span> nav class element. Also add an <span class="code">off-screen</span> id.</li>
+  <li>Add a <span class="code">off-screen-level</span> div class element. We support multiple levels for nesting, cool haa!?. We talk about them down below.</li>
+  <li>Start adding menu items wrapped on a <span class="code">ul</span> element.</li>
+</ol>
+
+
+<pre>
+  <code>
+&lt;nav class=&quot;off-screen-navigation&quot; id=&quot;off-screen&quot;&gt;<br/>  &lt;div class=&quot;off-screen-level&quot;&gt;<br/>     &lt;ul&gt;<br/>       &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>       &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>       &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>       &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>       &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>     &lt;/ul&gt;<br/>  &lt;/div&gt;<br/>&lt;/nav&gt; 
+  </code>
+</pre>
+
+<hr />
+
+<h3>Off screen multilevels</h3>
+
+<p>It is fairl easy to add multiple levels to the off screen menu, just like the one in here, just resize your window to see it.</p>
+
+<p>The HTML structure stays the same, you just need to wrap the <span class="code">ul</span> elements inside a list item with a <span class="code">off-screen-level</span> div element. Say what?!?</p>
+
+<h5 class="code">Example</h5>
+
+<pre>
+  <code>
+&lt;nav class=&quot;off-screen-navigation&quot; id=&quot;off-screen&quot;&gt;<br/>  &lt;div class=&quot;off-screen-level&quot;&gt;<br/>     &lt;ul&gt;<br/>      &lt;li&gt;<br/>        &lt;a href=&quot;#&quot;&gt;Setup&lt;/a&gt;<br/>        &lt;div class=&quot;off-screen-level&quot;&gt;<br/>          &lt;div class=&quot;off-screen-header&quot;&gt;<br/>            &lt;h3 class=&quot;header&quot;&gt;Setup&lt;/h3&gt;<br/>          &lt;/div&gt;<br/>          &lt;a class=&quot;navigation-back&quot; href=&quot;#&quot;&gt;back&lt;/a&gt;<br/>          &lt;ul&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/docs&quot;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/whats_included&quot;&gt;What's included?&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/basic_setup&quot;&gt;Basic Setup&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/browser_support&quot;&gt;Browser Support&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/using_rails&quot;&gt;Using Rails&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;/examples&quot;&gt;Apps Examples&lt;/a&gt;&lt;/li&gt;<br/>          &lt;/ul&gt;<br/>        &lt;/div&gt;<br/>      &lt;/li&gt;  <br/>     &lt;/ul&gt;<br/>  &lt;/div&gt;<br/>&lt;/nav&gt;
+  </code>
+</pre>
+
+<blockquote class="primary">
+  <h4>A brief on off screen</h4>
+  <p>You can nest as much as levels as you want, just keep in mind the basic structure we provided, and nest the necessary elements inside list items.</p>
+</blockquote>
+
+<p><em>If you feel like need a bit more help, check out the <a href="#">examples</a> we provided, there is a really cool one on off screen.</em></p>
+
+<hr />
+
+<h3>Off screen components</h3>
+
+<p>We provide a little bit of more functionality to the off screen, it is still a work in progress, so wait for more interesting things.</p>
+
+<div class="row">
+   <div class="col-6">
+    <h5 class="code">Back links</h5>  
+    <p>This are really useful when having multilevels, just put a <span class="code">navigation-back</span> anchor element inside a <span class="code">off-screen-level</span>. Here is a quick example.</p>
+   </div>
+   <div class="col-6">
+    <pre>
+      <code>
+&lt;li&gt;<br/>  &lt;a href=&quot;#&quot;&gt;Setup&lt;/a&gt;<br/>  &lt;div class=&quot;off-screen-level&quot;&gt;<br/>    &lt;div class=&quot;off-screen-header&quot;&gt;<br/>      &lt;h3 class=&quot;header&quot;&gt;Setup&lt;/h3&gt;<br/>    &lt;/div&gt;<br/>    &lt;!--back navigation link--&gt;<br/>    &lt;a class=&quot;navigation-back&quot; href=&quot;#&quot;&gt;back&lt;/a&gt;<br/>    &lt;!--back navigation link--&gt;<br/>    &lt;ul&gt;<br/>      &lt;li&gt;&lt;a href=&quot;/docs&quot;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;/whats_included&quot;&gt;What's included?&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;/basic_setup&quot;&gt;Basic Setup&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;/browser_support&quot;&gt;Browser Support&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;/using_rails&quot;&gt;Using Rails&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;/examples&quot;&gt;Apps Examples&lt;/a&gt;&lt;/li&gt;<br/>    &lt;/ul&gt;<br/>  &lt;/div&gt;<br/>&lt;/li&gt; 
+      </code>
+    </pre>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
+    <h5 class="code">Headers</h5>  
+    <p>It is really easy to add headers to the off screen, you just need a <span class="code">off-screen-header</span> div element and a <span class="code">header</span> class element.</p>
+   </div>
+   <div class="col-6">
+    <pre>
+      <code>
+&lt;div class=&quot;off-screen-level&quot;&gt;<br/>  &lt;div class=&quot;off-screen-header&quot;&gt;<br/>    &lt;h3 class=&quot;header&quot;&gt;Setup&lt;/h3&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;
+      </code>
+    </pre>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
+    <h5 class="code">List Headers</h5>  
+    <p>It is really easy to add headers to the off screen, you just need a <span class="code">off-screen-header</span> div element and a <span class="code">header</span> class element.</p>
+   </div>
+   <div class="col-6">
+    <pre>
+      <code>
+&lt;div class=&quot;off-screen-level&quot;&gt;<br/>  &lt;ul&gt;<br/>    &lt;li class=&quot;off-screen-list-header&quot;&gt;A header&lt;/li&gt;<br/>  &lt;/ul&gt;<br/>&lt;/div&gt;
+      </code>
+    </pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>Available sass variables</h3>
+<p>Furatto provides sass variables for you to customize the off screen default values.</p>
+<pre>
+  <code>
+//General
+$off-screen-navigation-color: #EFEFEF !default;
+$off-screen-navigation-width: 80% !default;
+$off-screen-navigation-font-weight: 100 !default;
+$off-screen-navigation-background-color: #333 !default;
+$off-screen-z-index: 1 !default;
+$off-screen-left-padding: 1rem !default;
+$off-screen-vertical-padding: 0.7rem !default;
+$off-screen-text-shadow-color: $off-screen-navigation-color !default;
+$off-screen-text-shadow-alpha: 0.1 !default;
+
+//Links
+$off-screen-font-size: 1.2rem !default;
+$off-screen-include-link-hover-transition: true !default;
+$off-screen-link-padding: 1rem !default;
+$include-separator-to-links: true !default;
+
+//List Header
+$off-screen-list-header-transform: uppercase !default;
+$off-screen-list-header-font-weight: bold !default;
+$off-screen-list-header-font-size: 0.7rem !default;
+
+//Divider
+$off-screen-divider-color: lighten($off-screen-navigation-background-color, 10%) !default;
+$off-screen-divider-margin: 0.21428571rem !default;
+
+//Back link
+$off-screen-back-link-padding: 0.5rem 1rem !default;
+$off-screen-back-link-font-weight: 300 !default;
+$off-screen-back-link-letter-spacing: 1px !default;
+$off-screen-back-link-font-size: 0.9rem !default;
+$off-screen-back-link-background: rgba(#000, 0.1) !default;
+$off-screen-back-link-text-transform: uppercase !default;
+$off-screen-back-link-border-color: #000 !default;
+$off-screen-back-link-border-alpha: 0.2 !default;
+
+//Header
+$off-screen-header-padding: 1rem !default;
+$off-screen-header-font-weight: 200 !default;
+
+$off-screen-toggle-menu-left-position: 0.71428571rem !default;
+$off-screen-toggle-menu-brand-name-padding-left: $off-screen-toggle-menu-left-position + 1.42857143rem !default;
+$off-screen-toggle-color: #FFF !default;
+
+//Menu toggle
+$off-screen-toggle-padding-left: px-to-rems(34) !default;
+
+  </code>
+</pre>
+
+<blockquote>
+  <h4>Using off screen plugin</h4>  
+  <p>Just add the <span class="code">furatto.off-screen.js</span> file or the <span class="code">furatto.js</span></p>
+</blockquote>

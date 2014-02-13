@@ -1,0 +1,109 @@
+---
+layout: default
+title: Furatto - Side Navigation
+---
+
+<h1>Side navigation</h1>
+<p class="main-motto">A simple but very extendable vertical navigation. One quick example is the side bar you see on the right.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>The side navigation is formed with a <span class="code">ul</span> element, but you can use a <span class="code">nav</span> tag if you feel a little bit more wild.</p>
+
+<div class="row">
+  <div class="col-6">
+    <ul class="navigation">
+      <li class="header">A header</li>
+      <li class="active"><a href="#">A link</a></li>
+      <li class="divider"></li>
+      <li class="header">Another header</li>
+      <li><a href="#">A link</a></li>
+    </ul>
+  </div>
+  <div class="col-6">
+<pre>
+  <code>
+  &lt;ul class=&quot;navigation&quot;&gt;<br/>      &lt;li class=&quot;header&quot;&gt;A header&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;header&quot;&gt;Another header&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;
+  </code>
+</pre>
+  </div>
+</div>
+
+<hr />
+
+<h3>Side navigation components</h3>
+
+<p>All right, and what is the special thing about this navigation?. Our experience tell us that the navigation should have several elements to make them fully functional.</p>
+
+<div class="row">
+  <h5 class="code">Navigation header</h5>
+
+  <p>This is really useful when you want to group a set of items into one category, like a navigation or plugins category.</p>
+
+  <pre>
+   <code>
+  &lt;ul class=&quot;navigation&quot;&gt;<br/>      &lt;li class=&quot;header&quot;&gt;A header&lt;/li&gt;<br/>  &lt;/ul&gt;
+   </code>
+  </pre>
+</div>
+
+<div class="row">
+  <h5 class="code">Navigation active state</h5>
+
+  <p>This essential feature is for telling the user where are they standing up, just by setting the link color to blue or highlighted with a background color.</p>
+
+  <pre data-language="html">
+   <code>
+  &lt;ul class=&quot;navigation&quot;&gt;<br/>      &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;
+   </code>
+  </pre>
+</div>
+
+<div class="row">
+  <h5 class="code">Navigation divider</h5>
+
+  <p>To add a simple divider for your navigation is really simple, just add the <span class="code">divider</span> class name to a list item and you are good to go.</p>
+
+  <pre>
+   <code>
+  &lt;ul class=&quot;navigation&quot;&gt;<br/>      &lt;li class=&quot;header&quot;&gt;A header&lt;/li&gt;<br/>      &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>      &lt;li class=&quot;header&quot;&gt;Another header&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;
+   </code>
+  </pre>
+</div>
+
+<hr />
+<div class="row">
+  <h3>Available sass variables</h3>
+  <p>Feel the navigation is to simple, try customize it with the sass variables we provide.</p>
+   <pre>
+     <code>
+//Navigation settings
+$navigation-style-type: none !default;
+$navigation-list-position: inside !default;
+$navigation-padding: 1rem 0 !default;
+$navigation-link-color: #777 !default;
+
+//Navigation list items
+$navigation-list-item-font-size: 0.9rem !default;
+$navigation-list-item-margin-bottom: 0.1 !default;
+$navigation-list-item-active-color: #08C !default;
+$navigation-list-link-hover-color: $navigation-list-item-active-color !default;
+$navigation-list-link-hover-text-decoration: none !default;
+$navigation-list-link-padding: 0.333rem 0 !default;
+$navigation-list-link-display: inline-block !default;
+
+//Navigation list header
+$navigation-header-text-transform: uppercase !default;
+$navigation-header-padding: 0.333rem 0 !default;
+$navigation-header-color: #333 !default;
+$navigation-header-font-size: 0.85714286rem !default;
+
+//Navigation divider
+$navigation-divider-border-width: 1px !default;
+$navigation-divider-border-color: #EFEFEF !default;
+$navigation-divider-margin: 8px 0 !default;
+     </code>
+   </pre>
+</div>

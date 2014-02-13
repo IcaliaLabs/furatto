@@ -1,0 +1,48 @@
+---
+layout: default
+title: Furatto - Docs::Basic Setup
+---
+
+<h1>Basic Setup</h1>
+
+<p class="main-motto">Our markup layout is pretty straight forward, and the example below shows a basic HTML template for you to start. We encourage you to go to the <a href="/examples">examples</a> or the <a href="/examples">app starter kits</a> section and look at some starting points.</p>
+<hr />
+
+<pre>
+  <code>
+&lt;!DOCTYPE html&gt;<br/>&lt;html lang=&quot;en&quot;&gt;<br/>  &lt;head&gt;<br/>    &lt;!--includes meta tags, title and more header definitions--&gt;<br/>    &lt;meta charset=&quot;utf-8&quot;&gt;<br/>    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;<br/>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no&quot;&gt;<br/>    &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'&gt;<br/>    &lt;title&gt;A page title&lt;/title&gt;<br/><br/>    &lt;!-- Furatto core CSS --&gt;<br/>    &lt;link href=&quot;/dist/css/furatto.css&quot; rel=&quot;stylesheet&quot;&gt;<br/><br/>    &lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;<br/>    &lt;!--[if lt IE 9]&gt;<br/>    &lt;script src=&quot;https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;<br/>    &lt;script src=&quot;https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;<br/>    &lt;![endif]--&gt;<br/>  &lt;/head&gt;<br/><br/>&lt;body&gt;<br/><br/>  &lt;h1&gt;Hello Furatto&lt;/h1&gt;<br/><br/>&lt;!--includes javascript at the bottom so the page loads faster--&gt;<br/>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;/dist/js/furatto.js&quot;&gt;&lt;/script&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/><br/>
+</code>
+</pre>
+
+<!-- basic setup headlines -->
+<div class="row">
+  <div class="col-4">
+    <h5 class="code"><strong>Meta Viewport tag</strong></h5>
+    <p>
+    This is used to make sure smaller devices use the correct width as the viewporth width, as well as it prevents the zoom in/out gesture. Also includes edge IE support. 
+    </p>
+  </div>
+  <div class="col-4">
+    <h5 class="code"><strong>CSS</strong></h5>
+    <p>
+    We included the <span class="text-success">normalize.css</span> and <span class="text-success">furatto.css</span> in the head tag. You can use wheter the minified or full version of the compiled CSS.
+    </p>
+  </div>
+  <div class="col-4">
+    <h5 class="code"><strong>Javascript</strong></h5>
+    <p>
+    The JS is linked up before the closing tag , in order to improve performance, as well as it contains all the necessary plugins and initializers to get up and running.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <h5 class="code"><strong>Plugins</strong></h5>
+    <p>The javascript plugins provided by Furatto use jQuery, so it is necessary for you to include jQuery in your layout. We invoke it through the google CDN.</p>
+  </div>
+  <div class="col-4">
+    <h5 class="code"><strong>Font</strong></h5>
+    <p>The default font family for Furatto is <a href="http://www.google.com/fonts/specimen/Open+Sans">Open Sans</a> which we included on the <span class="code">&lt;head&gt;</span> tag of the document in order to allow parallel downloads of the assets. <strong>And you should too.</strong>
+    </p>
+  </div>
+</div>

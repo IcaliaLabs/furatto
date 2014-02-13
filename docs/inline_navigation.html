@@ -1,0 +1,68 @@
+---
+layout: default
+title: Furatto - Inline Navigation
+---
+
+<h1>Inline navigation</h1>
+<p class="main-motto">Furatto comes with this helpful navigation, perfect for a sub-menu, or to act like a set of tabs.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>We use the <span class="code">.navigation</span> css rule to get a simple navigation, and by appending the inline class you get the beautiful inline menu shown below.</p>
+<div class="row">
+  <div class="col-6">
+    <ul class="navigation inline">
+      <li class="header">A header</li>
+      <li class="active"><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+      <li><a href="#">A link</a></li>
+    </ul>
+  </div>
+  <div class="col-6">
+<pre>
+  <code>
+  &lt;ul class=&quot;navigation inline&quot;&gt;<br/>      &lt;li class=&quot;header&quot;&gt;A header&lt;/li&gt;<br/>      &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;
+  </code>
+</pre>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <h5>Navigation active state</h5>
+
+  <p>To activate the <span class="code">active</span> state on a ist item, just add the <span class="code">active</span> class name to the list item. Duh!</p>
+
+  <pre data-language="html">
+   <code>
+  &lt;ul class=&quot;navigation inline&quot;&gt;<br/>      &lt;li class=&quot;header&quot;&gt;A header&lt;/li&gt;<br/>      &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A link&lt;/a&gt;&lt;/li&gt;<br/>  &lt;/ul&gt;
+   </code>
+  </pre>
+</div>
+
+<hr />
+
+<div class="row">
+  <h3>Available sass variables</h3>
+  <p>Customize our sass variables to meet your needs.</p>
+   <pre>
+     <code>
+//Navigation variations
+$navigation-inline-margin-bottom: 0.55rem !default;
+$navigation-inline-active-background: #1abc9c !default;
+$navigation-inline-active-radius: 0.14285714rem !default;
+$navigation-inline-active-color: #FFF !default;
+$navigation-inline-active-padding: 0.21428571rem !default;
+$navigation-inline-link-color: #999 !default;
+$navigation-inline-link-hover: #08C !default;
+     </code>
+   </pre>
+</div>
+
+<blockquote class="warning">
+   <h4>A thought on tabs</h4>
+   <p>Inline navigation is ideal for tabs usage, check the <a href="/tabs_navigation">tabs</a> section</p>
+</blockquote>

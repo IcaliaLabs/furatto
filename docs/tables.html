@@ -1,0 +1,209 @@
+---
+layout: default
+title: Furatto - Tables
+---
+
+<h1>Tables</h1>
+<p class="main-motto">Tables are the best way to present data, but the default values are not pretty. Furatto takes care of that by pulishing the default styling and taking it to the next level.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>The markup to build a table on Furatto is really simple, actually you don't have to do anything else if you already implement them on your site.</p>
+
+<blockquote>
+  <h4>A word on tables</h4>
+  <p>We enacourage you to have a well-formed markup. So <span class="code">thead</span> and <span class="code">tbody</span> are necessary tags on building your tables.It' all about semantics</p>
+</blockquote>
+
+<table>
+   <thead>
+     <tr>
+       <th>#</th>
+       <th>Name</th>
+       <th>Twitter</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>1</td>
+       <td>Abraham Kuri</td>
+       <td>@kurenn</td>
+     </tr>
+     <tr>
+       <td>2</td>
+       <td>Icalia Labs</td>
+       <td>@icalialabs</td>
+     </tr>
+     <tr>
+       <td>3</td>
+       <td>Furatto</td>
+       <td>@furattoicalia</td>
+     </tr>
+   </tbody>
+</table>
+
+<pre data-language="html">
+   <code>
+&lt;table&gt;<br/>   &lt;thead&gt;<br/>     &lt;tr&gt;<br/>       &lt;th&gt;#&lt;/th&gt;<br/>       &lt;th&gt;Name&lt;/th&gt;<br/>       &lt;th&gt;Twitter&lt;/th&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/thead&gt;<br/>   &lt;tbody&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;1&lt;/td&gt;<br/>       &lt;td&gt;Abraham Kuri&lt;/td&gt;<br/>       &lt;td&gt;@kurenn&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;2&lt;/td&gt;<br/>       &lt;td&gt;Icalia Labs&lt;/td&gt;<br/>       &lt;td&gt;@icalialabs&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;3&lt;/td&gt;<br/>       &lt;td&gt;Furatto&lt;/td&gt;<br/>       &lt;td&gt;@furattoicalia&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/tbody&gt;<br/>&lt;/table&gt;
+   </code>
+</pre>
+
+<hr />
+
+<h3>Table variations</h3>
+
+<p>We know the styling we provide is minimal, and you probably want more than that. We got you covered with these 2 tables variations built in Furatto.</p>
+
+<div class="row">
+   <div class="col-6">
+     <p class="code">Striped style</p>
+    <table class="striped">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Twitter</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Abraham Kuri</td>
+       <td>@kurenn</td>
+     </tr>
+     <tr>
+       <td>Icalia Labs</td>
+       <td>@icalialabs</td>
+     </tr>
+     <tr>
+       <td>Furatto</td>
+       <td>@furattoicalia</td>
+     </tr>
+   </tbody>
+</table> 
+   </div>
+   <div class="col-6">
+     <p class="code">Markup</p>
+    <pre data-language="html">
+   <code>
+&lt;table class=&quot;striped&quot;&gt;<br/>   &lt;thead&gt;<br/>     &lt;tr&gt;<br/>       &lt;th&gt;Name&lt;/th&gt;<br/>       &lt;th&gt;Twitter&lt;/th&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/thead&gt;<br/>   &lt;tbody&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Abraham Kuri&lt;/td&gt;<br/>       &lt;td&gt;@kurenn&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Icalia Labs&lt;/td&gt;<br/>       &lt;td&gt;@icalialabs&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Furatto&lt;/td&gt;<br/>       &lt;td&gt;@furattoicalia&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/tbody&gt;<br/>&lt;/table&gt;
+   </code>
+</pre> 
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
+     <p class="code">Bordered style</p>
+    <table class="bordered">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Twitter</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Abraham Kuri</td>
+       <td>@kurenn</td>
+     </tr>
+     <tr>
+       <td>Icalia Labs</td>
+       <td>@icalialabs</td>
+     </tr>
+     <tr>
+       <td>Furatto</td>
+       <td>@furattoicalia</td>
+     </tr>
+   </tbody>
+</table> 
+   </div>
+   <div class="col-6 nopadding">
+     <p class="code">Markup</p>
+    <pre data-language="html">
+   <code>
+&lt;table class=&quot;bordered&quot;&gt;<br/>   &lt;thead&gt;<br/>     &lt;tr&gt;<br/>       &lt;th&gt;Name&lt;/th&gt;<br/>       &lt;th&gt;Twitter&lt;/th&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/thead&gt;<br/>   &lt;tbody&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Abraham Kuri&lt;/td&gt;<br/>       &lt;td&gt;@kurenn&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Icalia Labs&lt;/td&gt;<br/>       &lt;td&gt;@icalialabs&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Furatto&lt;/td&gt;<br/>       &lt;td&gt;@furattoicalia&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/tbody&gt;<br/>&lt;/table&gt;
+   </code>
+</pre> 
+   </div>
+</div>
+
+<hr />
+
+<h3>Responsive tables</h3>
+
+<p>We rebuilt a <a href="#">Foundation</a> plugin on responsive tables, this way by just adding the <span class="code">responsive</span> class to the table, it will be fully navigational on small devices. Don't believe us?, try resizing the window or open it on your mobile.</p>
+
+<table class="responsive">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Twitter</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Abraham Kuri</td>
+       <td>@kurenn</td>
+     </tr>
+     <tr>
+       <td>Icalia Labs</td>
+       <td>@icalialabs</td>
+     </tr>
+     <tr>
+       <td>Furatto</td>
+       <td>@furattoicalia</td>
+     </tr>
+   </tbody>
+</table> 
+
+<pre data-language="html">
+   <code>
+&lt;table class=&quot;responsive&quot;&gt;<br/>   &lt;thead&gt;<br/>     &lt;tr&gt;<br/>       &lt;th&gt;Name&lt;/th&gt;<br/>       &lt;th&gt;Twitter&lt;/th&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/thead&gt;<br/>   &lt;tbody&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Abraham Kuri&lt;/td&gt;<br/>       &lt;td&gt;@kurenn&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Icalia Labs&lt;/td&gt;<br/>       &lt;td&gt;@icalialabs&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>     &lt;tr&gt;<br/>       &lt;td&gt;Furatto&lt;/td&gt;<br/>       &lt;td&gt;@furattoicalia&lt;/td&gt;<br/>     &lt;/tr&gt;<br/>   &lt;/tbody&gt;<br/>&lt;/table&gt;
+   </code>
+</pre> 
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>You can customize the tables very easy by just modifying the variables we provide.</p>
+
+<pre data-language="sass">
+  <code>
+//General settings
+$table-background-color: #FFF !default;
+$table-margin-bottom: px-to-rems(20) !default;
+$table-cell-padding: px-to-rems(10) !default;
+$table-line-height: px-to-rems(18) !default;
+$table-cell-alignment: left !default;
+$table-border-color: #d2d2d2 !default;
+$table-border-width: 1px !default;
+$table-border-style: solid !default;
+$table-color: #666 !default;
+$table-font-weight: 300 !default;
+
+$table-head-font-weight: 500 !default;
+$table-head-letter-spacing: 2px !default;
+$headers-with-uppercase: false !default;
+
+//Variations
+$table-condensed-padding: 0.28571429rem 0.35714286rem !default;
+$table-striped-background-color: #f9f9f9 !default;
+$table-bordered-border-width: 1px !default;
+$table-bordered-border-style: solid !default;
+
+//Media queries
+$media-display: "only screen" !default;
+$media-max-width: 768px !default; //~ 768px
+$media-table-responsive-query: "#{$media-display} and (max-width: #{$media-max-width})" !default;
+
+//Responsive tables
+$include-responsive-tables: true !default;
+$table-responsive-pinned-background: #FFF !default; 
+$table-responsive-pinned-border-right: 1px solid #CCC !default;
+$table-responsive-pinned-border-left: $table-responsive-pinned-border-right !default;
+$table-responsive-wrapper-border-right: $table-responsive-pinned-border-right !default;
+  </code>
+</pre>
+

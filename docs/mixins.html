@@ -1,0 +1,197 @@
+---
+layout: default
+title: Furatto - Docs::Mixins
+---
+
+<h1>Mixins</h1>
+<p class="main-motto">Furatto comes with many weapons under the hood, in this case mixins, that some of them are used on the core of compiling it, but other ones are just for you.</p>
+
+<hr />
+
+<div class="row mixin">
+  <h3 class="code">@mixin retina-image</h3>
+  <p>This mixin will help you generate the necessary css code to support retina images.</p>
+  <ul class="params">
+    <li><strong>$image</strong> - path or url of the retina image, <em>ej. /assets/images/retina@2x.png</em></li>
+    <li><strong>$width</strong> - the width for the image</li>
+    <li><strong>$height</strong> - the height for the image</li>
+  </ul>
+
+  <pre data-language="scss">
+     <code>
+// Mixin to add support for retina display on images
+@mixin retina-image($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+} 
+     </code>
+  </pre>
+</div>
+<hr />
+<div class="row mixin">
+  <h3 class="code">@mixin truncate-text</h3>
+  <p>Truncating the text can be made through css, and is even easier with this handy mixin.</p>
+  <pre data-language="scss">
+     <code>
+// Mixin that will truncate text
+@mixin truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+     </code>
+  </pre>
+</div>
+
+<hr />
+
+<div class="row mixin">
+  <h3 class="code">@mixin absPosition</h3>
+  <p>Thinking about position your elements with absolute values, this mixin is the way to go.</p>
+  <ul class="params">
+    <li><strong>$top</strong> - top value position</li>
+    <li><strong>$right</strong> - right value position</li>
+    <li><strong>$bottom</strong> - bottom value position</li>
+    <li><strong>$left</strong> - left value position</li>
+  </ul>
+
+  <pre>
+    <code>
+// Mixin to set the abs position of any element
+@mixin absPosition($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+    </code>
+  </pre>
+</div>
+
+<hr />
+
+<div class="row mixin">
+  <h3 class="code">@mixin hidden-text</h3>
+  <p>This reall helpful mixin will hide the text, but still be counting for SEO. Kudos to Nicolas Gallagher.</p>
+  <pre>
+    <code>
+// Hidden text - by Nicolas Gallagher
+@mixin hidden-text {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+    </code>
+  </pre>
+</div>
+
+<hr />
+
+<div class="row mixin">
+  <h3 class="code">@mixin font-size</h3>
+  <p>An easy way to support font-size on rem and pixel values to a better support for IE is this mixin.</p>
+  <ul class="params">
+    <li><strong>$size</strong> - the desired font size</li>
+    <li><strong>$line</strong> - the line height to that font size</li>
+  </ul>
+
+  <pre>
+    <code>
+// Font-size mixin, with IE7 & IE8 support, CSS tricks courtesy
+@mixin font-size($size: 1.6, $line: $size * 1.25) {
+  font-size: ($size * 10) + px;
+  line-height: ($line * 10) + px;
+  font-size: $size + rem;
+  line-height: $line + rem;
+}
+    </code>
+  </pre>
+</div>
+
+<hr />
+
+<div class="row mixin">
+  <h3 class="code">@mixin keyframes</h3>
+  <p>An easy way to handle keyframes for css animations is provided by this mixin.</p>
+  <ul class="params">
+    <li><strong>$name</strong> - animation class name</li>
+  </ul>
+
+  <pre>
+    <code>
+// Animation keyframes
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+    </code>
+  </pre>
+
+  <h3 class="code">@mixin animation</h3>
+  <p>This comes helpful when using keyframes to animate or just to give a little animation.</p>
+  <ul class="params">
+   <li><strong>$value</strong> - the animation property or properties to affect.</li>
+  </ul>
+
+  <pre>
+    <code>
+// Animation mixin
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -ms-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}   
+    </code>
+  </pre>
+</div>
+
+<hr />
+
+<div class="row">
+  <h3 class="code">@mixin box-emboss</h3>
+  <p>This mixin will help you build an embossing and letterpress effect.</p>
+
+  <ul>
+    <li><strong>$outerOpacity</strong> - the outer opacity, ej. 0.5</li>
+    <li><strong>$innerOpacity</strong> - the inner opacity, ej. 0.1</li>
+  </ul>
+
+  <pre>
+    <code>
+// Embossing and letterpress effect
+@mixin box-emboss($outerOpacity, $innerOpacity) {
+  @include box-shadow(rgba(white, $outerOpacity) 0 1p 0,
+                      rgba(black, $innerOpacity) 0 1px 0 inset);
+}
+    </code>
+  </pre>
+</div>
+
+
+<blockquote class="success">
+   <h4>Many more mixins...</h4>
+   <p>We did not covered every single mixin here, but you can check them out at <a href="#">_mixins.scss</a> source file.</p>
+</blockquote>

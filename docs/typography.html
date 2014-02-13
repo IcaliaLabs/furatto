@@ -1,0 +1,295 @@
+---
+layout: default
+title: Furatto - Typography
+---
+
+<h1>Typography</h1>
+<p class="main-motto">Furatto offers a simple reset for most used elements, such as <span class="code">ul</span>, <span class="code">p</span>, <span class="code">h1,h2...</span> and so much more...</p>
+
+<hr />
+
+<h3 class="header">Typography</h3>
+<p>To keep Furatto as clean and extensible as possible, we did not add any typographic styles over what's on <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize</a>. This means that you get many elements, such as headings, lists, which style is easy to override.</p>
+
+<h4 class="code">Headings</h4>
+<p>Headings from 1 to 6. Font size decreases from 36px to 14px.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Header</th>
+        <th>Font size</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>h1</td>
+      <td>36px</td>
+    </tr>
+    <tr>
+      <td>h2</td>
+      <td>28px</td>
+    </tr>
+    <tr>
+      <td>h3</td>
+      <td>25px</td>
+    </tr>
+    <tr>
+      <td>h4</td>
+      <td>20px</td>
+    </tr>
+    <tr>
+      <td>h5</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <td>h6</td>
+      <td>14px</td>
+    </tr>
+    </tbody>
+  </table>
+  <hr />
+<h3>Body copy</h3>
+<p>Furatto comes with global default settings <span class="code">font-size</span> is 14px with a <span class="code">line-height</span> of 1.6px.</p>
+
+<div class="row docs-example">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<hr />
+<h3>Emphasis, small & strong</h3>
+
+<div class="row">
+  <div class="col-4">
+    <p>For small inline texts or block of texts, you can use the <span class="code">&lt;small&gt;</span> tag, which is 60% the size of the parent.</p>
+    <small>This is a small text, probably a good use is to highlight text.</small>
+  </div>
+  <div class="col-4">
+    <p>To give a <span class="code">bold</span> to a text, you can use the <span class="code">&lt;strong&gt;</span>.</p>
+    This is a snippet to <strong>bold this chunk of text.</strong>
+  </div>
+  <div class="col-4">
+    <p>To emphasize text you should use the <span class="code">em</span> tag.</p>
+    This is a snippet to <em>emphasize a text.</em>
+  </div>
+</div>
+<hr />
+<h3>Alignment classes</h3>
+<p>In Furatto is really easy to align text with the alignment classes.</p>
+<div class="row">
+  <div class="col-4">
+    <p class="text-center">Center text</p>
+     <pre>
+       <code>
+  &lt;p class=&quot;text-center&quot;&gt;Center text&lt;/p&gt; 
+       </code>
+     </pre>
+  </div>
+  <div class="col-4">
+    <p class="text-justify">Justified text</p>
+     <pre>
+       <code>
+  &lt;p class=&quot;text-justify&quot;&gt;Justified text&lt;/p&gt; 
+       </code>
+     </pre> 
+  </div>
+  <div class="col-4">
+    <p class="text-right">Right text</p>
+     <pre>
+       <code>
+  &lt;p class=&quot;text-right&quot;&gt;Right text&lt;/p&gt; 
+       </code>
+     </pre>    
+  </div>
+</div>
+
+<hr />
+
+<h3>Emphasis classes</h3>
+<p>Convenient emphasis classes for a more meaningful end.</p>
+<div class="row">
+  <div class="col-4">
+    <p class="text-muted">.text-muted - #666666</p>
+     <pre>
+       <code>
+  &lt;p class=&quot;text-muted&quot;&gt;.text-muted&lt;/p&gt; 
+       </code>
+     </pre>    
+  </div>
+  <div class="col-4">
+    <p class="text-error">.text-error - #c0392b</p>
+     <pre>
+       <code>
+  &lt;p class=&quot;text-error&quot;&gt;.text-error&lt;/p&gt; 
+       </code>
+     </pre>    
+  </div>
+  <div class="col-4">
+    <p class="text-success">.text-success - #27ae60</p>
+     <pre>
+       <code>
+  &lt;p class=&quot;text-success&quot;&gt;.text-success&lt;/p&gt; 
+       </code>
+     </pre>    
+  </div>
+</div>
+
+<hr />
+
+<h3>Lists</h3>
+<p>List comes in many flavors, ordered lists, unordered lists. Thanks to Normalize all these elements have a basic styling and cross-browser consistency. you can extend them in your application.</p>
+<div class="row">
+  <div class="col-4">
+<h4 class="code">Unordered</h4>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3
+    <ul>
+      <li>Sub list item 1</li>
+      <li>Sub list item 2</li>
+      <li>Sub list item 3
+      <ul>
+        <li>Sub list item 1</li>
+        <li>Sub list item 2</li>
+        <li>Sub list item 3</li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  </ul>  
+  </div>
+  <div class="col-4">
+<h4 class="code">Ordered</h4>
+  <ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3
+    <ol>
+      <li>Sub list item 1</li>
+      <li>Sub list item 2</li>
+      <li>Sub list item 3
+      <ol>
+        <li>Sub list item 1</li>
+        <li>Sub list item 2</li>
+        <li>Sub list item 3</li>
+      </ol>
+      </li>
+    </ol>
+    </li>
+  </ol>  
+  </div>
+  <div class="col-4">
+<h4 class="code">Definition lists</h4>
+  <dl>
+    <dt>Definition term</dt>
+    <dd>Definition description</dd>
+
+    <dt>Definition term</dt>
+    <dd>Definition description</dd>
+    <dd>Definition description</dd>
+
+    <dt>Definition term</dt>
+    <dt>Definition term</dt>
+    <dd>Definition description</dd>
+  </dl>
+  </div>
+</div>
+<hr />
+<h3>Blockquotes</h3>
+<p>We modified the default render for blockquote in order to make it a bit prettier.</p>
+<div class="row">
+  <blockquote>
+    <h4>A header</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>            
+  </blockquote>          
+
+  <pre>
+    <code>
+  &lt;blockquote&gt;<br/>    &lt;h4&gt;A header&lt;/h4&gt;<br/>    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>    &lt;/p&gt;            <br/>  &lt;/blockquote&gt;
+    </code>
+  </pre>
+</div>
+
+<p>The blockquote comes with 3 modifier class names, <span class="code">primary</span>, <span class="code">success</span> and <span class="code">danger</span>.</p>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>Feel free to customize the default values for the typography by overwriting our sas variables.</p>
+
+<pre>
+  <code>
+$typography-line-height: 1.6 !default;
+$typography-reset: true !default;
+
+// Paragraphs settings
+$paragraph-font-weight: inherit !default;
+$paragraph-font-size: px-to-rems(14) !default;
+$paragraph-line-height: 1.5 !default;
+$paragraph-text-rendering: optimizeLegibility !default;
+
+//Lists
+$list-font-size: $paragraph-font-size !default;
+$list-line-height: $paragraph-line-height !default;
+$list-margin-bottom: px-to-rems(20) !default;
+$list-margin-left: px-to-rems(15) !default;
+
+//Data lists
+$data-list-margin-bottom: px-to-rems(20) !default;
+$data-list-line-height: 1.2 !default;
+$data-list-font-weight: bold !default;
+$data-list-data-margin-left: px-to-rems(10) !default;
+
+// Anchors settings
+$anchor-color: #0088cc !default;
+$anchor-text-decoration: none !default;
+$anchor-text-decoration-hover: underline !default;
+
+// Headings settings
+$headings-margin-top: 0.35714286rem !default;
+$headings-margin-bottom: px-to-rems(16) !default;
+$headings-font-weight: 400 !default;
+$headings-line-height: 1.4 !default;
+$headings-text-rendering: optimizeLegibility !default;
+$headings-color: #222 !default;
+$h1-font-size: px-to-rems(36) !default;
+$h2-font-size: px-to-rems(28) !default;
+$h3-font-size: px-to-rems(25) !default;
+$h4-font-size: px-to-rems(20) !default;
+$h5-font-size: px-to-rems(16) !default;
+$h6-font-size: px-to-rems(14) !default;
+
+//small settings
+$small-color: #ecf0f1 !default;
+$small-font-size: 60% !default;
+
+//hr settings
+$hr-color: #DDD !default;
+$hr-style: solid !default;
+$hr-border-width: 0.07142857rem !default;
+$hr-margin-top: px-to-rems(22) !default;
+$hr-margin-bottom: $hr-margin-top !default;
+
+//Blockquote
+$blockquote-color: #777 !default;
+$blockquote-background: lighten(#EFEFEF, 5%) !default;
+$blockquote-line-height: 1.8em !default;
+$blockquote-border-width: 5px !default;
+$blockquote-border-style: solid !default;
+$blockquote-border-color: #DDD !default;
+$blockquote-padding-left: 1.5em !default;
+$blockquote-padding-right: $blockquote-padding-left !default;
+$blockquote-padding-top: 1rem !default;
+$blockquote-padding-bottom: $blockquote-padding-top !default;
+$blockquote-border-primary-color: lighten(#3498d9, 20%) !default;
+$blockquote-border-success-color: lighten(#2ECC71, 20%) !default;
+$blockquote-border-danger-color: lighten(#E74C3C, 20%) !default;
+
+//Media queries
+$medium-screen: 70.85714286rem !default;
+$medium-screen-max: 70.78571429rem !default;
+$medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-screen-max})" !default;
+  </code>
+</pre>
