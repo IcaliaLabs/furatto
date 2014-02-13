@@ -24,10 +24,10 @@ $grid-max-width: 54.85714286rem !default;
 $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 
 //Row variations
-$primary-background-color: rgba(52, 152, 219, 0.6) !default;
-$danger-background-color: rgba(231, 76, 60, 0.6) !default;
-$warning-background-color: rgba(241, 196, 15, 0.6) !default;
-$success-background-color: rgba(46, 204, 113, 0.6) !default;
+$grid-primary-background-color: rgba(52, 152, 219, 0.8) !default;
+$grid-danger-background-color: rgba(231, 76, 60, 0.8) !default;
+$grid-warning-background-color: rgba(241, 196, 15, 0.8) !default;
+$grid-success-background-color: rgba(46, 204, 113, 0.8) !default;
 
 //columns border
 $col-border-color: #FFF !default;
@@ -53,10 +53,25 @@ $col-border-alpha: 0.5 !default;
   display: block;
   text-rendering: $row-text-rendering;
 
-  &.primary { background: $primary-background-color; }
-  &.danger { background: $danger-background-color; }
-  &.warning { background: $warning-background-color; }
-  &.success { background: $success-background-color; }
+  &.primary,
+  [class*="col-"].primary { 
+    background: $grid-primary-background-color; 
+  }
+
+  &.danger,
+  [class*="col-"].danger { 
+    background: $grid-danger-background-color; 
+  }
+
+  &.warning,
+  [class*="col-"].warning { 
+    background: $grid-warning-background-color; 
+  }
+
+  &.success,
+  [class*="col-"].success { 
+    background: $grid-success-background-color; 
+  }
 
   //Columns
   @include grid-columns;
