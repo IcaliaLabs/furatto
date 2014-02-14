@@ -10,3 +10,21 @@
     width: 90%;
   }
 }
+
+/*Blog styling*/
+
+.blog {
+  margin-top: 30px;
+  padding: 0 50px;
+}
+
+.featured {
+  color: #FFF;
+  padding: 15px;
+  font-weight: lighter;
+}
+
+.featured h5 {
+  margin-bottom: 0;
+  color: #FFF;
+}
