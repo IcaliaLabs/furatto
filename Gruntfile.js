@@ -144,6 +144,10 @@ module.exports = function(grunt) {
       compressed: {
         src: ['<%= pkg.name %>_<%= pkg.version %>.zip'],
         dest: '_gh_pages/assets/'
+      },
+      compressed_sass: {
+        src: ['<%= pkg.name %>_<%= pkg.version %>_sass.zip'],
+        dest: '_gh_pages/assets/'
       } 
     },
 
@@ -175,7 +179,15 @@ module.exports = function(grunt) {
           { src: ['robots.txt', 'humans.txt'], dest: '/'},
           { src: ['scss/**'], dest: 'src/'}
         ]
-      }
+      },
+      compress_sass: {
+        options: {
+          archive: '<%= pkg.name %>_<%= pkg.version %>_sass.zip'
+        },
+        files: [
+        { src: ['scss/**'], dest: 'furatto/'}
+        ]
+      },
     }
 
   });
@@ -192,13 +204,13 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-docs', ['compass:fontAwesome', 'copy:fontAwesome', 'compass:docs', 'copy:docs']);
 
   // Dist compression task
-  grunt.registerTask('dist-compress', ['compress']);
+  grunt.registerTask('dist-compress', ['compress', 'compress:compress_sass']);
 
   // Dist dev
   grunt.registerTask('dist-dev', ['dist-css', 'dist-js', 'dist-docs'])
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-docs', 'usebanner', 'dist-compress', 'copy:compressed']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-docs', 'usebanner', 'dist-compress', 'copy:compressed', 'copy:compressed_sass']);
 
   // Default task.
   grunt.registerTask('default', ['dist']);

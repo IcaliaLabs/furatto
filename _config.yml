@@ -19,3 +19,4 @@ current_ip: 192.168.0.10
 
 download:
   dist: http://icalialabs.github.io/furatto/assets/furatto_3.0.0.zip
+  source: http://icalialabs.github.io/furatto/assets/furatto_3.0.0_sass.zip
