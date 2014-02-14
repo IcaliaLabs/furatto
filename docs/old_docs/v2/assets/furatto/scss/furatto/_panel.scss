@@ -1,0 +1,277 @@
+.panel-content {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+
+.panels {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: auto;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 265px;
+  height: auto;
+  overflow: auto;
+  @include transition(width 0.3s ease);
+  display: none;
+}
+
+.panel-left {
+  left: 0;
+  z-index: 1;
+}
+
+.paneljs-left .panel-right,
+.paneljs-right .panel-left {
+  display: none;
+}
+
+.paneljs-expand-left .panel-left,
+.paneljs-expand-right .panel-right {
+  width: 100%;
+}
+
+/* Show "Left" drawer for the "Right" drawer in the demo */
+.paneljs-right .panel-left {
+	display: block;
+	right: 0;
+	left: auto;
+}
+
+/* Hide the actual "Right" drawer in the demo */
+.paneljs-right .panel-right {
+	display: none;
+}
+
+.panel-content {
+  background: $bg-color;
+}
+
+.panel {
+	background: $navbar-bg-color;
+}
+
+
+.panel {
+
+  .nav + .nav {
+    margin-bottom: 15px;
+  }
+
+  .nav {
+    overflow: hidden;
+    padding-left: 0;
+    color: $navbar-text;
+    font-size: $base-font-size;
+    margin-top: 0px;
+    float: none;
+
+    li.dropdown {
+      border-bottom: none;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+      margin-right: 5px;
+    }
+
+    .dropdown-toggle {
+      .caret {
+        display: none;
+      }
+    }
+
+    div.dropdown-menu {
+      padding: 0;
+      width: 100%;
+      display: block;
+      margin-left: 13px;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="datetime"],
+      input[type="datetime-local"],
+      input[type="date"],
+      input[type="month"],
+      input[type="time"],
+      input[type="week"],
+      input[type="number"],
+      input[type="email"],
+      input[type="url"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="color"] {
+        width: 80%;
+        display: block;
+
+      }
+
+      input[type="submit"] {
+        width: 85%; 
+      }
+      
+    }
+
+    .dropdown-menu {
+      position: static;
+      background: none;
+      border: none;
+      @include box-shadow(0 0px 0px $navbar-bg-color);
+      width: 100%;
+
+      * {
+        color: #eaeaea;
+        font-weight: 400;
+      }
+
+      li.divider {
+        border-bottom: 1px solid #CCC; 
+      }
+
+      li {
+        a {
+          &:hover {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .nav > .active,
+  .nav > .active,
+  .nav > .active {
+    background: #FFF;
+    color: #0088cc;
+
+    a {
+      color: #0088cc;
+    }
+
+    &:before {
+      content: ' ';
+      position: relative;
+      width: 0;
+      height: 0px;
+    }
+  }
+  
+
+  li.dropdown {
+    .dropdown-toggle {
+      display: none;
+    }
+  }
+
+  ul.dropdown-menu {
+    display: block;
+
+
+    .divider {
+      display: none;
+    }
+  }
+
+   //Form
+  .search-navbar-form {
+    float: none;
+    margin-bottom: 10px;
+
+    .form-fields {
+      margin: 0 auto 10px auto;
+      display: block;
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    input[type="submit"], .btn {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.panel-inverse {
+  .nav {
+    .dropdown-menu {
+      * {
+        color: #0088cc;
+      }
+    }
+  }
+
+  li {
+    border-bottom: 1px solid #CCC;
+  }
+}
+
+// Divider
+.panel .nav > li.divider-vertical {
+  display: none;
+}
+
+.panel li > a {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+  text-indent: 20px;
+}
+
+/* Inverse panel */
+/* ------------- */
+
+.panel-inverse {
+  background: $panel-inverse-bg;
+
+  .nav > li {
+    border-bottom: 1px solid #CCC;
+  }
+
+  .nav > .active {
+    color: $panel-inverse-active-color;
+    background: $panel-inverse-active-bg;
+
+    a {
+      color: $panel-inverse-active-color;
+    }
+  }
+
+  &.panel {
+    background: $panel-inverse-bg;
+  }
+}
+
+.panel-inverse .nav > li > a {
+  color: $panel-inverse-link-color;
+  font-weight: 400;
+}
+
+// Active nav items
+.navbar-inverse .nav > .active > a,
+.navbar-inverse .nav > .active > a:hover,
+.navbar-inverse .nav > .active > a:focus {
+  color: $panel-inverse-active-color;
+  background: $panel-inverse-active-bg;
+}

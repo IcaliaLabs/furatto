@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Basic site structural styling. 
+ * 
+ * Designed and built @kurenn  
+ */
+
+*, 
+*:after, 
+*:before { 
+  @include box-sizing(border-box);
+}
+
+html {
+  font-family: $font-family;
+}
+
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $base-font-weight;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+html, body {
+  background-color: $bg-color;
+  height: 100%;
+  overflow: hidden;
+}
+
+hr {
+  clear: both;
+  margin: 1.25em 0 1.875em;
+  height: 0;
+  border: solid $hr-color;
+  border-width: 1px 0 0;
+}
+
+.link {
+  color: $link-color !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container-center {
+  width: $container-center-width;
+  margin: 0 auto;
+  @include clearfix();
+}
+
+/* Blockquote */
+/*----------------------------*/
+blockquote {
+  color: $blockquote-color;
+  font-style: italic;
+  line-height: 1.8em;
+  border-left: 5px solid $blockquote-border-color;
+  padding-left: 1.5em
+}
+
+/* Helper classes */
+/*----------------------------*/
+.clearfix {
+  @include clearfix;
+}
+
+.hide {
+  display: none;
+}
+
+.help-block {
+  color: #666;
+  display: block;
+}
+
+//Floats
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}

@@ -1,0 +1,216 @@
+/*------------------------------------*\
+    $NAVBAR
+\*------------------------------------*/
+/**
+ * Basic navbar structural styling based on bootstrap. 
+ * http://twitter.github.io/bootstrap/components.html#navbar
+ * 
+ * Designed and built @kurenn  
+ */
+
+.navbar {
+  overflow: visible;
+  margin-bottom: $base-line-height;
+  font-weight: lighter;
+
+  .menu-trigger {
+    display: none;
+  } 
+
+  /*Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar*/
+  *position: relative;
+  *z-index: 2;
+}
+
+// Inner for background effects
+// Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
+.navbar-inner {
+  min-height: $navbar-height;
+  padding-left:  20px;
+  padding-right: 20px;
+  background: $navbar-bg-color;
+
+  /*Prevent floats from breaking the navbar*/
+  @include clearfix;
+}
+
+// Override the default collapsed state
+.nav-collapse.collapse {
+  height: auto;
+  overflow: visible;
+}
+
+// Set width to auto for default container
+// We then reset it for fixed navbars in the #gridSystem mixin
+.navbar .container {
+  width: auto;
+}
+
+.navbar .nav {
+  padding-left: 0px;
+
+  [class^="icon-"], [class*=" icon-"] {
+    margin-right: 5px;
+  }
+}
+
+.navbar .brand {
+  float: left;
+  display: block;
+  margin-right: 20px;
+  font-weight: 500;
+
+  /*Vertically center the text given $navbar-height*/
+  padding: (($navbar-height - $base-line-height) / 2) 20px (($navbar-height - $base-line-height) / 2);
+
+  /*margin-left: -20px; [>negative indent to left-align the text down the page<]*/
+  font-size: 20px;
+  color: $navbar-brand-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Plain text in topbar
+.navbar-text {
+  margin-bottom: 0;
+  line-height: $navbar-height;
+  color: $navbar-text;
+}
+
+// Links
+.navbar .nav > li > a {
+  float: none;
+  /*Vertically center the text given @navbarHeight*/
+  padding: (($navbar-height - $base-line-height) / 2) 15px (($navbar-height - $base-line-height) / 2);
+  color: $navbar-text;
+  text-decoration: none;
+}
+
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: $navbar-link-color-active;
+  text-decoration: none;
+  background: lighten($navbar-bg-color, 10%);
+}
+
+// Navbar button for toggling navbar items in responsive layouts
+// These definitions need to come after '.navbar .btn'
+.navbar .btn-navbar {
+  padding: 7px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.navbar .navbar-text {
+  margin: 0;
+  display: inline-block;
+}
+
+//Navigation
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.navbar .nav.pull-right {
+  float: right; /*redeclare due to specificity*/
+  margin-right: 0; /*remove margin on float right nav*/
+}
+
+.navbar .nav > li {
+  float: left;
+}
+
+// Dividers in navbar
+.divider-vertical {
+  height: $navbar-height; /*Fix for the navbar*/
+  margin: 0 9px;
+  border-left: 1px solid $navbar-border;
+}
+
+//Static Navbar
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0; /*remove 18px margin for default navbar*/
+}
+
+//Fixed navbar
+
+//Navbar fixed top/bottom shared styles
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0; /*remove 18px margin for default navbar*/
+}
+
+//Fixed to top
+.navbar-fixed-top {
+  top: 0;
+}
+
+//Fixed to bottom
+.navbar-fixed-bottom {
+  bottom: 0;
+}
+
+//Search navbar form
+.navbar-form {
+  vertical-align: middle;
+  padding: 10px 15px;
+  margin: 0;
+
+  .form-fields {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+
+    input {
+      margin: 0;
+    }
+  }
+  input {
+    margin: 0;
+  }
+}
+
+/* Navbar Inverse */
+/* -------------- */
+
+.navbar-inverse {
+  border: 1px solid #BBB;
+
+  .navbar-inner {
+    background: $navbar-inverse-bg-color;
+  }
+
+  .nav > li > a {
+    font-weight: 400;
+    color: $navbar-inverse-text;
+  }
+
+  .brand {
+    color: $navbar-inverse-text;
+    font-weight: 400;
+  }
+
+  .divider-vertical {
+    border-left: 1px solid #EEE;
+  }
+
+  .navbar-text {
+    color: #0088cc;
+  }
+  
+}
+

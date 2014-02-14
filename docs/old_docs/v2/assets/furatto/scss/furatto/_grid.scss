@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+/**
+ * Grid definition based on the bootstrap grid. 
+ * http://twitter.github.io/bootstrap/scaffolding.html#gridSystem
+ * 
+ * Designed and built @kurenn based
+ */
+
+
+// Reset utility classes due to specificity
+[class*="col-"].hide,
+.row [class*="col-"].hide {
+  display: none;
+}
+
+[class*="col-"].pull-right,
+.row [class*="col-"].pull-right {
+  float: right;
+}
+
+.row {
+  text-rendering: optimizespeed;
+  @include clearfix();
+
+  [class*="col-"]:first-child {
+    margin-left: 0px;
+  }
+}
+
+.row + .row {
+  margin-top: 2px;
+}
+
+//Borders and paddings are applied inside the div element
+//This prevents the columns to stack by a border or padding
+[class*="col-"] {
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  float: left;
+  padding: 8px;
+}
+
+@include build-column-grids;
+
+@media (max-width: 767px) {
+  .row > [class *= "col-"] {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2px;
+  }
+
+  .container-center {
+    width: 95%;
+  }
+}
