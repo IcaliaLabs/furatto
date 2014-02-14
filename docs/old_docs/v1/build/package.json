@@ -1,0 +1,6 @@
+{
+  "name": "furatto-doc-builder"
+, "version": "0.0.1"
+, "description": "build furatto docs"
+, "dependencies": { "hogan.js": "1.0.5-dev" }
+}
