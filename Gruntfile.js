@@ -140,6 +140,10 @@ module.exports = function(grunt) {
         ],
         dest: 'docs/assets/fonts/',
         flatten: true
+      },
+      compressed: {
+        src: ['<%= pkg.name %>_<%= pkg.version %>.zip'],
+        dest: '_gh_pages/assets/'
       } 
     },
 
@@ -167,7 +171,9 @@ module.exports = function(grunt) {
           archive: '<%= pkg.name %>_<%= pkg.version %>.zip'
         },
         files: [
-          { src: ['dist/**'], dest: 'dist/'}
+          { src: ['dist/**'], dest: '/'},
+          { src: ['robots.txt', 'humans.txt'], dest: '/'},
+          { src: ['scss/**'], dest: 'src/'}
         ]
       }
     }
@@ -192,7 +198,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-dev', ['dist-css', 'dist-js', 'dist-docs'])
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-docs', 'usebanner']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-docs', 'usebanner', 'dist-compress', 'copy:compressed']);
 
   // Default task.
   grunt.registerTask('default', ['dist']);
