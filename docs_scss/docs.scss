@@ -280,6 +280,13 @@ $col-border-alpha: 0.2;
   small {
     font-size: px-to-rems(14);
   }
+
+  .example-link {
+    color: #222;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   
 }
 

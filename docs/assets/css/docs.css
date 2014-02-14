@@ -252,81 +252,89 @@
 .docs-examples small {
   font-size: 0.875rem;
 }
+/* line 284, ../../../docs_scss/docs.scss */
+.docs-examples .example-link {
+  color: #222;
+}
+/* line 286, ../../../docs_scss/docs.scss */
+.docs-examples .example-link:hover {
+  text-decoration: none;
+}
 
-/* line 289, ../../../docs_scss/docs.scss */
+/* line 296, ../../../docs_scss/docs.scss */
 .footer .navigation li a {
   font-weight: 100;
 }
-/* line 291, ../../../docs_scss/docs.scss */
+/* line 298, ../../../docs_scss/docs.scss */
 .footer .navigation.inline {
   margin-bottom: 0px;
 }
-/* line 296, ../../../docs_scss/docs.scss */
+/* line 303, ../../../docs_scss/docs.scss */
 .footer .furatto-description .name-header {
   font-weight: bold;
   font-size: 1.25rem;
   letter-spacing: 1.5px;
 }
-/* line 301, ../../../docs_scss/docs.scss */
+/* line 308, ../../../docs_scss/docs.scss */
 .footer .furatto-description p {
   line-height: 22px;
   font-weight: 300;
 }
-/* line 307, ../../../docs_scss/docs.scss */
+/* line 314, ../../../docs_scss/docs.scss */
 .footer h4, .footer h5, .footer li, .footer p, .footer .fa, .footer a {
   color: #FFF;
 }
-/* line 311, ../../../docs_scss/docs.scss */
+/* line 318, ../../../docs_scss/docs.scss */
 .footer .want-more {
   background: #d2531b;
   text-align: center;
   padding: 20px 8px;
 }
-/* line 317, ../../../docs_scss/docs.scss */
+/* line 324, ../../../docs_scss/docs.scss */
 .footer .want-more a {
   color: #FFF;
 }
-/* line 320, ../../../docs_scss/docs.scss */
+/* line 327, ../../../docs_scss/docs.scss */
 .footer .want-more a:hover {
   color: #FFF;
   text-decoration: underline;
 }
-/* line 326, ../../../docs_scss/docs.scss */
+/* line 333, ../../../docs_scss/docs.scss */
 .footer .want-more .fa.fa-2x {
   margin-bottom: 20px;
 }
-/* line 330, ../../../docs_scss/docs.scss */
+/* line 337, ../../../docs_scss/docs.scss */
 .footer .want-more ul {
   padding: 0;
 }
-/* line 333, ../../../docs_scss/docs.scss */
+/* line 340, ../../../docs_scss/docs.scss */
 .footer .want-more ul li {
   margin-bottom: 6px;
 }
-/* line 338, ../../../docs_scss/docs.scss */
+/* line 345, ../../../docs_scss/docs.scss */
 .footer .want-more p, .footer .want-more li {
   font-size: 0.8125rem;
 }
-/* line 343, ../../../docs_scss/docs.scss */
+/* line 350, ../../../docs_scss/docs.scss */
 .footer .general-info {
   background: #303338;
   padding: 80px 20px;
   text-align: center;
 }
-/* line 348, ../../../docs_scss/docs.scss */
+/* line 355, ../../../docs_scss/docs.scss */
 .footer .general-info .navigation.inline {
   display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 357, ../../../docs_scss/docs.scss */
+/* line 364, ../../../docs_scss/docs.scss */
 .inside-the-box p, .inside-the-box li {
   font-size: 1rem;
   line-height: 28px;
 }
 
-/* line 364, ../../../docs_scss/docs.scss */
+/* line 371, ../../../docs_scss/docs.scss */
 .old-docs h4 {
   color: #333;
   margin-bottom: 0;
@@ -335,7 +343,7 @@
   letter-spacing: 1px;
 }
 
-/* line 373, ../../../docs_scss/docs.scss */
+/* line 380, ../../../docs_scss/docs.scss */
 .code {
   color: #d44950;
   white-space: nowrap;
