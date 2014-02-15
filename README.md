@@ -108,7 +108,7 @@ Keep track of new feautres, development issues and community news.
 We will love to hear wheter you are using Furatto for testing, prototyping or online sites, checkout who is in already [here](https://github.com/IcaliaLabs/furatto/blob/master/USING_FURATTO.md)
 
 
-## Authors
+## Heroes
 
 **Abraham Kuri**
 
