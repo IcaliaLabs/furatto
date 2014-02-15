@@ -100,7 +100,7 @@ Thanks!
 
 Keep track of new feautres, development issues and community news.
 
-* Follow [@ifuratto](https://twitter.com/furattoicalia)
+* Follow [@furattoicalia](https://twitter.com/furattoicalia)
 * Have a question about anything, email us at weare@icalialabs.com
 
 ## Using Furatto?
