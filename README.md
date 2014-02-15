@@ -86,7 +86,7 @@ We also include livereload to reload when the watch task is over, for more info 
 
 ## Using Rails?
 
-A gem to integrate with Furatto is well maintain by [@kurenn](https://twitter.com/kurenn), this will help you start coding your front end right away.
+A gem to integrate with Furatto is well maintain by [@kurenn](https://twitter.com/kurenn), this will help you start coding your front end right away. Here is the [gem](https://github.com/IcaliaLabs/furatto-rails)
 
 ## Contributing
 
