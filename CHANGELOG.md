@@ -1,3 +1,19 @@
+## 3.0.0 (February 17, 2014)
+### New features
+- **Core CSS and JS rebuilt**
+- **Optimized CSS**
+- **Encapsulate JS plugins into classes**
+- **58 kb for the furatto min version**
+- **Better mixins**
+- **Utility classes**
+- **Update some mixins to selectors**
+- **Add pagination to the Furatto core**
+- **Uses grunt for compilation instead of Makefile**
+- **Add tab support**
+- **Add group buttons to the Furatto core**
+- **Changes the api for every class modifiers**
+- **Add experimental features for images and inputs**
+
 ## 2.0.0 (September 25, 2013)
 ### New features
 - **New and fresh documentation**
