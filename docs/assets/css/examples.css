@@ -28,3 +28,45 @@
   margin-bottom: 0;
   color: #FFF;
 }
+
+/*Dashboard*/
+
+.dashboard {
+  background: #222;
+  overflow: hidden;
+}
+
+.dashboard-container {
+  padding: 25px 12px;
+  text-align: center;
+  vertical-align: middle;
+  height: 340px;
+  position: relative;
+  width: 100%;
+}
+
+.dashboard-container h1,
+.dashboard-container h2 {
+  color: #FFF;
+}
+
+.dashboard-container h1 {
+  font-weight: 400;
+  font-size: 33px;
+}
+
+.dashboard-container h2 {
+  font-weight: 700;
+  font-size: 76px;
+}
+
+.icon-background {
+  width: 100% !important;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.1;
+  font-size: 275px;
+  top: 15px;
+}
