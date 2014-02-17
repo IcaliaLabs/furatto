@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--includes meta tags, title and more header definitions-->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Furatto, a simple, yet powerful css framework for rapid web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, furatto, front-end, frontend, web development, responsive, mobile-first, mobile">
+<meta name="author" content="Abraham Kuri">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<title>
+  Furatto - Docs::Media Queries
+</title>
+
+<!-- Furatto core CSS -->
+<link href="/furatto/assets/css/docs.css" rel="stylesheet">
+<link href="/furatto/assets/css/github.css" rel="stylesheet">
+<link href="/furatto/assets/css/font-awesome.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body >
+<div class="off-screen" id="off-screen">
+  <nav class="navigation-bar">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/furatto/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#"></a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li class="divider"></li>
+     <li><a href="#">Add-ons</a></li>
+     <li class="divider"></li>
+     <li><a href="/furatto/docs">Docs</a></li>
+     <li class="divider"></li>
+     <li><a href="/furatto/docs" class="button three-d">Get Started <i class="fa fa-chevron-circle-right"></i></a></li>
+   </ul>
+</nav>
+
+
+  <div class="row">
+     <div class="col-9">
+       <div class="main-content-wrapper">
+        <h1>Media queries</h1>
+<p class="main-motto">When working with responsive media queries, Furatto will help you more than you may think. We have provided a set of helpful media query mixins with really cool names. Kudos to <a href="http://twitter.com/paranoida">Rafal Bromirski</a>.</p>
+
+<hr />
+
+<h3>Responsive queries at a glance.</h3>
+
+<p>We have been working with rsponsive design for a while now, and the problem alwats is, we don't always remember the full syntax for let's say a set fo rules for a phone. It is a really pain when building responsive websites, most of the times media queries are the same and is a pain to keep writing them.</p>
+
+<p>So based on <a href="http://twitter.com/paranoida">Rafal Bromirski</a> media queries we expose a set of handy media queries with more readable and rememberable names.</p>
+
+<p>A quick example to define a set of css rules for a phone is provided below.</p>
+
+<div class="row">
+   <div class="col-6">
+    <span class="code">Full media query</span>  
+    <pre>
+      <code>
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    //Your set of rules
+  } 
+      </code>
+    </pre>
+   </div>
+   <div class="col-6">
+    <span class="code">Furatto mixin</span>
+    <pre>
+      <code>
+  .class-name {
+    //Regular css rules
+    
+    @include phone {
+      //Your awesome respnsive rules. Cool isn't it?
+    }
+  } 
+      </code>
+    </pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>Getting to know them all</h3>
+
+<p>Here is a quick list on the media queries that Furatto supports, but if you feel brave, you can always follow the <a href="https://github.com/IcaliaLabs/furatto/blob/master/scss/furatto/_media_queries.scss">source</a>. Your responsive development would never be the same.</p>
+
+<table class="responsive">
+  <thead>
+    <tr>
+      <th>Mixin name</th>
+      <th>Params</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>screen</td>
+    <td>
+      <p><strong>$resMin</strong> - The minimal resolution width</p>
+      <p><strong>$resMax</strong> - The max resolution width</p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media #{$media-display} and (min-width: $resMin) and (max-width: $resMax)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>max-screen</td>
+    <td>
+      <p><strong>$res</strong> - The max resolution width</p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media #{$media-display} and (max-width: $res)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>min-screen</td>
+    <td>
+      <p><strong>$res</strong> - The minimal resolution width</p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media #{$media-display} and (min-width: $res)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>screen-height</td>
+    <td>
+      <p><strong>$resMin</strong> - The minimal resolution height</p>
+      <p><strong>$resMax</strong> - The max resolution height</p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media #{$media-display} and (min-height: $resMin) and (max-height: $resMax)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>max-screen-height</td>
+    <td>
+      <p><strong>$res</strong> - The max resolution height</p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media #{$media-display} and (max-height: $res)           
+          </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>min-screen-height</td>
+    <td>
+      <p><strong>$res</strong> - The minimal resolution height</p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media #{$media-display} and (min-height: $res)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>hdpi</td>
+    <td>
+      <p><strong>$ratio</strong> - The ratio value. <strong>Default: 1.3</strong></p>
+    </td>
+    <td>
+      <pre>
+           <code>
+ @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-resolution: #{round($ratio*96)}dpi),
+  only screen and (min-resolution: #{$ratio}dppx)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>phone</td>
+    <td>
+      N/A
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media #{$media-display} and (min-width: $deviceMinWidth) and (max-width: $deviceMaxWidth)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>iphone4</td>
+    <td>
+      <p><strong>$orientation</strong> - The iphone orientation. <strong>Default: all</strong></p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>iphone5</td>
+    <td>
+      <p><strong>$orientation</strong> - The iphone orientation. <strong>Default: all</strong></p>
+    </td>
+    <td>
+      <pre>
+           <code>
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>ipad</td>
+    <td>
+      <p><strong>$orientation</strong> - The iphone orientation. <strong>Default: all</strong></p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>ipad-retina</td>
+    <td>
+      <p><strong>$orientation</strong> - The iphone orientation. <strong>Default: all</strong></p>
+    </td>
+    <td>
+      <pre>
+           <code>
+  @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+  and (-webkit-device-pixel-ratio: $devicePixelRatio)
+           </code>
+      </pre>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<blockquote class="primary">
+  <h4>Follow the source</h4>
+  <p>We just scratch the surface of the media queries, for you to get started, but you ae always welcome to check out the <a href="https://github.com/IcaliaLabs/furatto/blob/master/scss/furatto/_media_queries.scss">source file</a>, for further functionality.</p>
+</blockquote>
+
+       </div>
+     </div>
+     <div class="col-3 sidebar hidden-on-xsmall">
+       <h6 class="header">Search for documentation</h6>
+<div class="row">
+  <input type="text" name="" id="search" value="" placeholder="Search for docs: e.g. buttons" />
+  <ul class="navigation searchable">
+    <li class="header">Setup</li>
+    <li><a href="/furatto/docs">Getting Started</a></li>
+    <li><a href="/furatto/whats_included">What's included?</a></li>
+    <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+    <li><a href="/furatto/browser_support">Browser Support</a></li>
+    <li><a href="/furatto/using_rails">Using Rails</a></li>
+    <li><a href="/furatto/examples">Apps Examples</a></li>
+    <li class="divider"></li>
+    <li class="header">Skeleton</li>
+    <li><a href="/furatto/overview">Overview</a></li>
+    <li><a href="/furatto/media_queries">Media queries</a></li>
+    <li><a href="/furatto/grid">Grid</a></li>
+    <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+    <li><a href="/furatto/utility_classes">Utility classes</a></li>
+    <li><a href="/furatto/mixins">Mixins</a></li>
+    <li class="divider"></li>
+    <li class="header">Navigation</li>
+    <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round warning">JS</span></a></li>
+    <li><a href="/furatto/off_screen">Off Screen <span class="label round warning">JS</span></a></li>
+    <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+    <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+    <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round warning">JS</span></a></li>
+    <li><a href="/furatto/pagination">Pagination</a></li>
+    <li class="divider"></li>
+    <li class="header">Plugins</li>
+    <li><a href="/furatto/suraido">Suraido <span class="label round warning">JS</span></a></li>
+    <li><a href="/furatto/toolbars">Toolbars <span class="label round warning">JS</span></a></li>
+    <li><a href="/furatto/modal">Modal <span class="label round warning">JS</span></a></li>
+    <li><a href="/furatto/tooltips">Tooltips <span class="label round warning">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Buttons</li>
+    <li><a href="/furatto/buttons">Buttons</a></li>
+    <li><a href="/furatto/group_buttons">Group buttons</a></li>
+    <li class="divider"></li>
+    <li class="header">Content</li>
+    <li><a href="/furatto/typography">Typography</a></li>
+    <li><a href="/furatto/forms">Forms</a></li>
+    <li><a href="/furatto/images">Images</a></li>
+    <li><a href="/furatto/tables">Tables</a></li>
+    <li><a href="/furatto/labels">Labels</a></li>
+    <li><a href="/furatto/alerts">Alerts <span class="label round warning">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Old docs</li>
+    <li><a href="/furatto/old_docs/v1" target="_blank">Version 1</a></li>
+    <li><a href="/furatto/old_docs/v2" target="_blank">Version 2</a></li>
+    <li class="divider"></li>
+    <li class="header">Get involved</li>
+    <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+    <li class="divider"></li>
+    <li class="header">Looking for a job?</li>
+    <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+    <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+  </ul>
+  <a href="http://icalialabs.github.io/furatto/assets/furatto_3.0.0.zip" class="button block primary large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V3']);">Download Furatto</a>
+</div>
+
+     </div>
+     <img src="/furatto/assets/img/updsidedownNinja.png" alt="" class="hidden-on-xsmall upside-down-ninja" />
+  </div>
+
+  <nav class="off-screen-navigation" id="off-screen">
+  <div class="off-screen-level">
+    <div class="off-screen-header">
+      <h3 class="header">Furatto</h3>
+    </div>
+    <ul>
+      <!--level one-->
+      <li>
+        <a href="#">Setup</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Setup</h3>
+          </div>
+          <!--back navigation link-->
+          <a class="navigation-back" href="#">back</a>
+          <!--back navigation link-->
+          <ul>
+            <li><a href="/furatto/docs">Getting Started</a></li>
+            <li><a href="/furatto/whats_included">What's included?</a></li>
+            <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+            <li><a href="/furatto/browser_support">Browser Support</a></li>
+            <li><a href="/furatto/using_rails">Using Rails</a></li>
+            <li><a href="/furatto/examples">Apps Examples</a></li>
+          </ul>
+        </div>
+      </li>      
+      <!--level one-->
+      <li>
+        <a href="#">Skeleton</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Skeleton</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/overview">Overview</a></li>
+            <li><a href="/furatto/media_queries">Media queries</a></li>
+            <li><a href="/furatto/grid">Grid</a></li>
+            <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+            <li><a href="/furatto/utility_classes">Utility classes</a></li>
+            <li><a href="/furatto/mixins">Mixins</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Navigation</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Navigation</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/off_screen">Off Screen <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+            <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+            <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/pagination">Pagination</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Plugins</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Plugins</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/suraido">Suraido <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/toolbars">Toolbars <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/modal">Modal <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/tooltips">Tooltips <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Buttons</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Buttons</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/buttons">Buttons</a></li>
+            <li><a href="/furatto/group_buttons">Group buttons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Content</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Content</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/typography">Typography</a></li>
+            <li><a href="/furatto/forms">Forms</a></li>
+            <li><a href="/furatto/images">Images</a></li>
+            <li><a href="/furatto/tables">Tables</a></li>
+            <li><a href="/furatto/labels">Labels</a></li>
+            <li><a href="/furatto/alerts">Alerts <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Old Docs</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Old Docs</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="http://icalialabs.github.io/furatto/v1">Version 1</a></li>
+            <li><a href="http://icalialabs.github.io/furatto/v2">Version 2</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Get Involved</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Get Involved</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+            <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Looking for a job</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Looking for a job</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+            <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="footer">
+  <div class="row want-more">
+     <div class="col-3 furatto-description">
+        <h4 class="name-header">Furatto</h4>
+        <p>Furatto is made by <strong><a href="http://icalialabs.com/">Icalia Labs</a></strong>, a software development shop company based in Monterrey, Mexico. We are a small but powerful team changing the way software is built.</p>
+     </div>
+     <div class="col-3 border left right">
+       <i class="fa fa-rocket fa-2x"></i>
+       <h5>Need something else?</h5>
+      <ul class="navigation">
+         <li><a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Looking Job']);">Looking for a job</a></li>
+         <li><a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Business inquiry']);">Have a business inquiry?</a></li>
+         <li><a href="/furatto/examples">App starter kits</a></li>
+      </ul>
+     </div>
+     <div class="col-3">
+       <i class="fa fa-bullhorn fa-2x"></i>
+       <h5>Keep in touch</h5>
+       <ul class="navigation">
+         <li><a href="https://twitter.com/icalialabs"><i class="fa fa-twitter"></i> icalialabs</a></li>
+         <li><a href="https://github.com/icalialabs"><i class="fa fa-github"></i> icalialabs</a></li>
+         <li><a href="https://twitter.com/furattoicalia"><i class="fa fa-twitter"></i> furattoicalia</a></li>
+         <li><a href="mailto:weare@icalialabs.com"><i class="fa fa-envelope"></i> weare@icaliabs.com</a></li>
+       </ul>
+     </div>
+     <div class="col-3 border left">
+       <i class="fa fa-thumbs-o-up fa-2x"></i>
+       <h5>Special thanks to</h5>
+       <ul class="navigation">
+         <li>Eduardo Higareda • <a href="https://twitter.com/eldelentes">@eldelentes</a></li>
+         <li>Emmanuel Fuentes • <a href="https://twitter.com/dr_emm2">@Dr_Emm2</a></li>
+         <li>Patricio Beltran • <a href="https://twitter.com/patombeltran">@patombeltran</a></li>
+       </ul>
+     </div>
+  </div>  
+  <div class="general-info">
+    <div class="row">
+        <p>Handcrafted by <a href="https://twitter.com/icalialabs">@icalialabs</a></p>
+        <ul class="navigation inline">
+          <li class="">• Furatto 3.0.0</li>
+          <li class="">• Created by  Abraham Kuri</li>
+          <li class="">• Code licensed under MIT License</li>
+        </ul>
+        <br />
+        <ul class="navigation inline">
+          <li class="header">Currently v3.0.0</li>
+          <li><a href="https://github.com/IcaliaLabs">• Github</a></li>
+          <li><a href="https://github.com/IcaliaLabs/furatto/releases/tag/v1.0.1" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V1']);">• V1</a></li>
+          <li><a href="https://github.com/IcaliaLabs/furatto/releases/tag/v2.0.0" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V2']);">• V2</a></li>
+          <li><a href="/furatto/examples">• Examples</a></li>
+          <li><a href="https://github.com/IcaliaLabs/furatto/issues?milestone=none&state=open">• Issues</a></li>
+          <li><a href="https://github.com/IcaliaLabs/furatto/releases">• Releases</a></li>
+          <li><a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Join Team']);">• Join the team</a></li>
+        </ul>
+    </div>
+  </div>  
+</div>
+
+<!--includes javascript at the bottom so the page loads faster-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!--loads analytics-->
+<script async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32608013-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    searchable = $('.searchable li')     
+
+    $('#search').keyup(function(){
+      text = $(this).val().toLowerCase();
+
+      searchable.each(function(){
+        if ($(this).text().search(new RegExp(text, "i")) < 0) {
+          $(this).hide(); 
+          } else {
+            $(this).show(); 
+          }
+      });
+    });
+
+  }); 
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--includes meta tags, title and more header definitions-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Furatto, a simple, yet powerful css framework for rapid web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, furatto, front-end, frontend, web development, responsive, mobile-first, mobile">
+<meta name="author" content="Abraham Kuri">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<title>
+  Furatto - Examples::Landing
+</title>
+
+<!-- Furatto core CSS -->
+<link href="/furatto/assets/css/normalize.css" rel="stylesheet">
+<link href="/furatto/dist/css/furatto.css" rel="stylesheet">
+<link href="/furatto/assets/css/font-awesome.css" rel="stylesheet">
+<link href="/furatto/assets/css/examples.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body >
+
+<nav class="navigation-bar landing-navbar">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/furatto/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#"></a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li class="divider"></li>
+     <li><a href="#">Login</a></li>
+     <li class="divider"></li>
+     <li><a href="#" class="button danger three-d">Sign Up</a></li>
+   </ul>
+</nav>
+
+
+<div class="landing">
+  <div class="row danger jumbo-container">
+     <h1>Brand Name</h1>
+     <h4>This is a template intended to work as a landing page.</h4>
+  </div>
+
+  <div class="row features">
+     <div class="col-3">
+      <h2>Header</h2>     
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="button danger large inverse">Read More</a>
+     </div>
+     <div class="col-3">
+      <h2>Header</h2>     
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="button danger large inverse">Read More</a>
+     </div>
+     <div class="col-3">
+      <h2>Header</h2>     
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="button danger large inverse">Read More</a>
+     </div>
+     <div class="col-3">
+      <h2>Header</h2>     
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="button danger large inverse">Read More</a>
+     </div>
+  </div>
+  <hr />
+  <div class="row text-center want-it">
+     <h1 class="text-error">Lorem ipsum dolor sit amet</h1>
+     <a href="#" class="button danger large three-d">Yes, I want it</a>
+  </div>
+  <div class="row footer text-center">
+    <div class="col-4">
+      <strong>Build by @kurenn</strong>  
+      <p>We have a lot of experience on web development.</p>
+    </div>
+    <div class="col-4">
+       <strong>Join the team!</strong>
+       <p>Check out the <a href="http://icalialabs.com">website</a></p>
+    </div>
+    <div class="col-4">
+       <strong>Need help?</strong>
+       <p>Tweet us at <a href="https://twitter.com/furattoicalia">@furattoicalia</a></p>
+    </div>
+  </div>
+</div>
+
+
+<!--includes javascript at the bottom so the page loads faster-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
+
+<!--loads analytics-->
+<script async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32608013-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+
+</body>
+</html>
