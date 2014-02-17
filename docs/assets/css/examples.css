@@ -70,3 +70,47 @@
   font-size: 275px;
   top: 15px;
 }
+
+/*Landing*/
+
+.landing-navbar {
+  margin-bottom: 0;
+}
+
+.landing .jumbo-container {
+  padding: 80px 0;
+}
+
+.landing .jumbo-container {
+  color: #FFF;
+  text-align: center;
+}
+
+.landing .jumbo-container h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.landing .jumbo-container h4 {
+  font-weight: 400;
+}
+
+.landing .jumbo-container h1,
+.landing .jumbo-container h4 {
+  color: #FFF;
+}
+
+.landing .features {
+  padding-top: 30px;
+}
+
+.landing .want-it {
+  padding: 40px 0;
+  margin-bottom: 50px;
+}
+
+.landing .footer {
+  background: #2c3e50;
+  color: #c4d2df;
+  padding: 20px;
+}
