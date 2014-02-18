@@ -57,6 +57,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       this.resetMenu = __bind(this.resetMenu, this);
       this._setupLevelBack = __bind(this._setupLevelBack, this);
       this._setupLevelsClosing = __bind(this._setupLevelsClosing, this);
+      this._hideOnDocumentClick = __bind(this._hideOnDocumentClick, this);
       this._hideOnEsc = __bind(this._hideOnEsc, this);
       this._setupMenuItems = __bind(this._setupMenuItems, this);
       this._bindEvents = __bind(this._bindEvents, this);
@@ -71,7 +72,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       this.levelBack = Array.prototype.slice.call(this.el.querySelectorAll('.navigation-back'));
       this.eventType = isFromMobile() ? 'touchstart' : 'click';
       $(this.el).addClass("off-screen-" + this.options.type);
-      this.trigger = $('#trigger');
+      this.trigger = document.getElementById('trigger');
       this._bindEvents();
       this._shouldPreventOffScreenMenuFromOpening();
     }
@@ -90,13 +91,13 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
     OffScreen.prototype._shouldPreventOffScreenMenuFromOpening = function() {
       var _this = this;
       if ($(window).width() > 768) {
-        this.trigger.unbind(this.eventType);
+        this.trigger.removeEventListener(this.eventType);
       }
       return $(window).resize(function() {
         if ($(window).width() > 768) {
-          return _this.trigger.unbind(_this.eventType, _this.resetMenu);
+          return $("#" + _this.trigger).unbind(_this.eventType, _this.resetMenu);
         } else {
-          return _this.trigger.bind(_this.eventType, function(event) {
+          return _this.trigger.addEventListener(_this.eventType, function(event) {
             event.stopPropagation();
             event.preventDefault();
             if (_this.open) {
@@ -105,7 +106,8 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
               _this.openMenu();
               return document.addEventListener(_this.eventType, function(event) {
                 if (_this.open && !hasParent(event.target, _this.el.id)) {
-                  return bodyClickBinding(document);
+                  console.log('jalo');
+                  return bodyClickBinding(_this);
                 }
               });
             }
@@ -121,7 +123,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
         _this.resetMenu();
         return el.removeEventListener(_this.eventType, bodyClickBinding);
       };
-      this.trigger.bind(this.eventType, function(event) {
+      this.trigger.addEventListener(this.eventType, function(event) {
         event.stopPropagation();
         event.preventDefault();
         if (_this.open) {
@@ -146,7 +148,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
         var subLevel;
         subLevel = el.querySelector('div.off-screen-level');
         if (subLevel) {
-          return el.querySelector('a').addEventListener(_this.eventType, function(event) {
+          return el.querySelector('a').addEventListener('click', function(event) {
             var level;
             event.preventDefault();
             level = closest(el, 'off-screen-level').getAttribute('data-level');
@@ -164,6 +166,10 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       if (event.keyCode === 27) {
         return this.resetMenu();
       }
+    };
+
+    OffScreen.prototype._hideOnDocumentClick = function(event) {
+      return this.resetMenu();
     };
 
     OffScreen.prototype._setupLevelsClosing = function() {
@@ -246,7 +252,8 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       } else {
         $(this.levels[0]).addClass('off-screen-level-open');
       }
-      return $(document).bind('keyup', this._hideOnEsc);
+      $(document).bind('keyup', this._hideOnEsc);
+      return $(document).on('touchstart', this._hideOnDocumentClick);
     };
 
     OffScreen.prototype._toggleLevels = function() {

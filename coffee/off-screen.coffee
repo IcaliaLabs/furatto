@@ -60,7 +60,7 @@
       # sets the offscreen type behavior
       $(@el).addClass "off-screen-#{@options.type}"
       #trigger menu element
-      @trigger = $('#trigger')
+      @trigger = document.getElementById('trigger')
 
       #bind events
       @_bindEvents()
@@ -71,12 +71,12 @@
         level.setAttribute('data-level', getLevelDepth(level, @el.id, 'off-screen-level'))
 
     _shouldPreventOffScreenMenuFromOpening: =>
-      @trigger.unbind(@eventType) if $(window).width() > 768
+      @trigger.removeEventListener(@eventType) if $(window).width() > 768
       $(window).resize =>
         if $(window).width() > 768
-          @trigger.unbind(@eventType, @resetMenu)
+          $("##{@trigger}").unbind(@eventType, @resetMenu)
         else
-          @trigger.bind @eventType, (event) =>
+          @trigger.addEventListener @eventType, (event) =>
             event.stopPropagation()
             event.preventDefault()
             if @open
@@ -85,7 +85,8 @@
               @openMenu()
               document.addEventListener @eventType, (event) =>
                 if @open and not hasParent(event.target, @el.id)
-                  bodyClickBinding document
+                  console.log 'jalo'
+                  bodyClickBinding @
 
     _bindEvents: =>
 
@@ -93,7 +94,7 @@
         @resetMenu()
         el.removeEventListener @eventType, bodyClickBinding
 
-      @trigger.bind @eventType, (event) =>
+      @trigger.addEventListener @eventType, (event) =>
         event.stopPropagation()
         event.preventDefault()
         if @open
@@ -113,7 +114,7 @@
       @menuItems.forEach (el, i) =>
         subLevel = el.querySelector('div.off-screen-level')
         if subLevel
-          el.querySelector('a').addEventListener @eventType, (event) =>
+          el.querySelector('a').addEventListener 'click', (event) =>
             event.preventDefault()
             level = closest(el, 'off-screen-level').getAttribute('data-level')
             if @level <= level
@@ -123,6 +124,9 @@
 
     _hideOnEsc: (event) =>
       @resetMenu() if event.keyCode is 27
+
+    _hideOnDocumentClick: (event) =>
+      @resetMenu()
 
     _setupLevelsClosing: =>
       for levelEl in @levels
@@ -185,6 +189,7 @@
         $(@levels[0]).addClass 'off-screen-level-open'
 
       $(document).bind 'keyup', @_hideOnEsc
+      $(document).on 'touchstart', @_hideOnDocumentClick
 
 
     _toggleLevels: ->
