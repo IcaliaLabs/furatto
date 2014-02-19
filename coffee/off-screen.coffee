@@ -63,7 +63,7 @@
       @trigger = document.getElementById('trigger')
 
       #bind events
-      @_bindEvents()
+      @_bindEvents() if $(window).width() <= 768
       @_shouldPreventOffScreenMenuFromOpening()
 
     _setLevels: ->
@@ -71,10 +71,10 @@
         level.setAttribute('data-level', getLevelDepth(level, @el.id, 'off-screen-level'))
 
     _shouldPreventOffScreenMenuFromOpening: =>
-      @trigger.removeEventListener(@eventType) if $(window).width() > 768
       $(window).resize =>
-        if $(window).width() > 768
-          $("##{@trigger}").unbind(@eventType, @resetMenu)
+        @resetMenu()
+        if $(window).width() >= 768
+          @trigger.removeEventListener @eventType
         else
           @trigger.addEventListener @eventType, (event) =>
             event.stopPropagation()
@@ -85,7 +85,6 @@
               @openMenu()
               document.addEventListener @eventType, (event) =>
                 if @open and not hasParent(event.target, @el.id)
-                  console.log 'jalo'
                   bodyClickBinding @
 
     _bindEvents: =>
