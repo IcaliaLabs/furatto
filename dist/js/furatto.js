@@ -250,7 +250,9 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       this.eventType = isFromMobile() ? 'touchstart' : 'click';
       $(this.el).addClass("off-screen-" + this.options.type);
       this.trigger = document.getElementById('trigger');
-      this._bindEvents();
+      if ($(window).width() <= 768) {
+        this._bindEvents();
+      }
       this._shouldPreventOffScreenMenuFromOpening();
     }
 
@@ -267,12 +269,10 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
 
     OffScreen.prototype._shouldPreventOffScreenMenuFromOpening = function() {
       var _this = this;
-      if ($(window).width() > 768) {
-        this.trigger.removeEventListener(this.eventType);
-      }
       return $(window).resize(function() {
-        if ($(window).width() > 768) {
-          return $("#" + _this.trigger).unbind(_this.eventType, _this.resetMenu);
+        _this.resetMenu();
+        if ($(window).width() >= 768) {
+          return _this.trigger.removeEventListener(_this.eventType);
         } else {
           return _this.trigger.addEventListener(_this.eventType, function(event) {
             event.stopPropagation();
@@ -283,7 +283,6 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
               _this.openMenu();
               return document.addEventListener(_this.eventType, function(event) {
                 if (_this.open && !hasParent(event.target, _this.el.id)) {
-                  console.log('jalo');
                   return bodyClickBinding(_this);
                 }
               });
