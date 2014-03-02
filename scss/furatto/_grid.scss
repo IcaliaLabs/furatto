@@ -16,8 +16,16 @@ $row-text-rendering: optimizespeed !default;
 $row-next-to-row-separation: 0.14285714rem !default;
 
 //Columns settings
-$col-padding: 0.57142857rem !default;
+$col-top-padding: 8px !default;
+$col-right-padding: 8px !default;
+$col-bottom-padding: 8px !default;
+$col-left-padding: 0 !default;
+$col-padding: $col-top-padding $col-right-padding $col-bottom-padding $col-left-padding !default;
+
+//Stack columns
 $stack-column-separation: 2px !default;
+$stack-column-padding-right: 0 !default;
+$stack-column-padding-left: 0 !default;
 
 //Media
 $grid-max-width: 54.85714286rem !default;
@@ -41,9 +49,7 @@ $col-border-alpha: 0.5 !default;
 
   @for $i from 1 through $columns {
     .col-#{$i} {
-      $current-width: ($column-width * $i) - $column-separation-factor;
-      width: percentage($current-width / 100);
-      margin-left: percentage($column-separation-factor / 100);
+      width: percentage(($column-width * $i) / 100);
     }
   }
 }
@@ -75,10 +81,6 @@ $col-border-alpha: 0.5 !default;
 
   //Columns
   @include grid-columns;
-
-  [class*="col-"]:first-child {
-    margin-left: 0;
-  }
 }
 
 //Separation between rows
@@ -134,9 +136,11 @@ $col-border-alpha: 0.5 !default;
       }
     }
   }
-  .row > [class *= "col-"] {
+  .row > [class*="col-"] {
     width: 100%;
     margin-left: 0;
     margin-bottom: $stack-column-separation;
+    padding-right: $stack-column-padding-right;
+    padding-left: $stack-column-padding-left;
   }
 }
