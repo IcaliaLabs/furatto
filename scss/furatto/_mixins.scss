@@ -141,3 +141,22 @@
   -ms-flex: $value;
   flex: $value;
 }
+
+//Inline navigation mixin
+
+@mixin inline-list($list-style: none,
+                   $list-style-position: inside,
+                   $padding: 10px,
+                   $left-list-item-margin: 10px) {
+  @extend %clearfix;
+  margin: 0;
+  display: block;
+  list-style: $list-style;
+  list-style-position: $list-style-position;
+  padding: $padding;
+
+  & > li {
+    float: left;
+    margin-left: $left-list-item-margin;
+  }
+}
