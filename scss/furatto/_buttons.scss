@@ -174,9 +174,9 @@ $button-block-media-query-width: px-to-rems(480) !default;
 @mixin button($background-color: $button-default-background-color, 
            $padding: $button-default, 
            $font-size: $button-font-default, 
-           $include-radius-style: true, 
-           $include-block-style: true,
-           $include-pill-style: true) {
+           $include-radius-style: false, 
+           $include-block-style: false,
+           $include-pill-style: false) {
   @include button-base;
   @include button-style($background-color);
   @include button-size($padding, $font-size);
