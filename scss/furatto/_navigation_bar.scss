@@ -65,6 +65,9 @@ $navigation-bar-dropdown-divider-height: px-to-rems(1) !default;
 $navigation-bar-dropdown-anchor-height: 45px !default;
 $navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
 $navigation-bar-dropdown-right-position: 0px !default;
+$navigation-bar-dropdown-border: 1px solid lighten($navigation-bar-background, 10%);
+$include-navigation-bar-dropdown-top-border: false;
+$navigation-bar-dropdown-radius: 3px;
 
 
 //Media
@@ -217,6 +220,13 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
         left: 0;
         z-index: $navigation-bar-dropdown-z-index;
         min-width: 100%;
+        @include border-radius(0px 0px $navigation-bar-dropdown-radius $navigation-bar-dropdown-radius);
+        border: $navigation-bar-dropdown-border;
+
+        //Handle the top border on dropdowns as not always should be there
+        @if $include-navigation-bar-dropdown-top-border == false {
+          border-top: none;
+        }
 
         li {
           width: 100%;
