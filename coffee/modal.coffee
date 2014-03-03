@@ -65,7 +65,7 @@
       elementToAppend = $('body')
 
     elementToAppend.append('<div class="modal-overlay"></div>')
-    $('[data-furatto="modal"]').each ->
+    $('[flat-ui-kit="modal"]').each ->
       modal = $(@)
       modal.modal('init')
 
