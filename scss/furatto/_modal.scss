@@ -6,6 +6,7 @@
 
 //General settings
 $modal-width: 80% !default;
+$modal-margin-left: ((40 * $modal-width) / 80) !default;
 $modal-z-index: 1050 !default;
 $modal-color: #FFF !default;
 $modal-top-position: px-to-rems(80) !default;
@@ -72,7 +73,7 @@ $include-super-scaled-effect: true !default;
   color: $modal-color;
   top: $modal-top-position;
   width: $modal-width;
-  margin-left: -40%;
+  margin-left: -$modal-margin-left;
   left: 50%;
 
   &.modal-show {
