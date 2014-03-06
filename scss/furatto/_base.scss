@@ -34,7 +34,6 @@ html {
 
 html, body {
   overflow-x: hidden;
-  height: 100%;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   @include hyphens(auto);
@@ -63,6 +62,7 @@ body {
   margin: 0;
   font-family: $base-font-family;
   line-height: $base-line-height;
+  height: 100%;
 }
 
 img,
