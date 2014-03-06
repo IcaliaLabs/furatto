@@ -1,3 +1,26 @@
+## 3.0.1 (March 6, 2014)
+### Features
+
+- Provides a settings file for configuring furatto variables
+- Add border to the drop down menu on navigation bar
+- Add a color variable for the labels on forms
+- Add height variable for select tag
+- Add a mixin for creating inline menus
+- Add margin left position for modal
+- Set default values on button mixin for variations to false
+
+### Bugs
+
+- Touchevent on iOS not fully working with off screen
+- Removes the margin left for first child and substituted with padding
+- Dropdown anchors on navigation bar not redirectinles
+
+### Milestone
+
+[https://github.com/IcaliaLabs/furatto/issues?milestone=2&page=1&state=closed](https://github.com/IcaliaLabs/furatto/issues?milestone=2&page=1&state=closed)
+
+
+
 ## 3.0.0 (February 17, 2014)
 ### New features
 - **Core CSS and JS rebuilt**
