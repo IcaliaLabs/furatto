@@ -32,7 +32,7 @@ module.exports = function(grunt) {
           'js/<%= pkg.name%>.off-screen.js',
           'js/<%= pkg.name%>.tabs.js',
           'js/<%= pkg.name %>.tooltip.js',
-          'js/<%= pkg.name %>.dropdown.js',
+          'js/<%= pkg.name %>.navigation-dropdown.js',
           'js/classie.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
@@ -164,7 +164,8 @@ module.exports = function(grunt) {
           'js/<%= pkg.name%>.suraido.js': 'coffee/suraido.coffee',
           'js/<%= pkg.name%>.toolbar.js': 'coffee/toolbar.coffee',
           'js/<%= pkg.name%>.off-screen.js': 'coffee/off-screen.coffee',
-          'js/<%= pkg.name%>.tabs.js': 'coffee/tabs.coffee'
+          'js/<%= pkg.name%>.tabs.js': 'coffee/tabs.coffee',
+          'js/<%= pkg.name%>.navigation-dropdown.js': 'coffee/navigation-dropdown.coffee'
         }
       }
     },
