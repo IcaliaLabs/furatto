@@ -1,9 +1,3 @@
-/*!
- * Furatto v3.0.0 (http://icalialabs.github.io/furatto/)
- * Copyright 2014-2014 Icalia Labs
- * Licensed under MIT (https://github.com/IcaliaLabs/furatto/blob/master/LICENSE)
- */
-
 /* line 13, ../../scss/furatto/_selectors.scss */
 .clearfix:before, .button-group:before, .dl-horizontal:before, .row:before, .clearfix:after, .button-group:after, .dl-horizontal:after, .row:after {
   display: table;
@@ -48,7 +42,6 @@ html {
 /* line 35, ../../scss/furatto/_base.scss */
 html, body {
   overflow-x: hidden;
-  height: 100%;
   font-size: 1rem;
   font-weight: normal;
   word-wrap: break-word;
@@ -59,7 +52,7 @@ html, body {
   hyphens: auto;
 }
 
-/* line 55, ../../scss/furatto/_base.scss */
+/* line 54, ../../scss/furatto/_base.scss */
 abbr,
 acronym,
 blockquote,
@@ -81,7 +74,7 @@ xmp {
   hyphens: none;
 }
 
-/* line 59, ../../scss/furatto/_base.scss */
+/* line 58, ../../scss/furatto/_base.scss */
 body {
   background: white;
   color: #333333;
@@ -89,6 +82,7 @@ body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue";
   line-height: 1;
+  height: 100%;
 }
 
 /* line 70, ../../scss/furatto/_base.scss */
@@ -837,17 +831,18 @@ label {
   cursor: pointer;
   font-size: 0.8125rem;
   font-weight: 300;
+  color: #4d4d4d;
 }
-/* line 80, ../../scss/furatto/_forms.scss */
+/* line 81, ../../scss/furatto/_forms.scss */
 label.error {
   color: #e74c3c;
 }
-/* line 84, ../../scss/furatto/_forms.scss */
+/* line 85, ../../scss/furatto/_forms.scss */
 label.success {
   color: #27ae60;
 }
 
-/* line 90, ../../scss/furatto/_forms.scss */
+/* line 91, ../../scss/furatto/_forms.scss */
 .help-hint {
   display: block;
   margin-bottom: 0.6875rem;
@@ -856,16 +851,16 @@ label.success {
   padding: 0.3125rem;
   font-style: italic;
 }
-/* line 98, ../../scss/furatto/_forms.scss */
+/* line 99, ../../scss/furatto/_forms.scss */
 .help-hint.error {
   background: #ea6557;
 }
-/* line 102, ../../scss/furatto/_forms.scss */
+/* line 103, ../../scss/furatto/_forms.scss */
 .help-hint.success {
   background: #2dc76e;
 }
 
-/* line 123, ../../scss/furatto/_forms.scss */
+/* line 124, ../../scss/furatto/_forms.scss */
 textarea,
 input[type="text"],
 input[type="password"],
@@ -907,7 +902,7 @@ input[type="color"] {
   border: 1px solid #cccccc;
   outline: none;
 }
-/* line 140, ../../scss/furatto/_forms.scss */
+/* line 141, ../../scss/furatto/_forms.scss */
 textarea.addon-field,
 input[type="text"].addon-field,
 input[type="password"].addon-field,
@@ -925,7 +920,7 @@ input[type="tel"].addon-field,
 input[type="color"].addon-field {
   margin-bottom: 0;
 }
-/* line 146, ../../scss/furatto/_forms.scss */
+/* line 147, ../../scss/furatto/_forms.scss */
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -948,7 +943,7 @@ input[type="color"]:focus {
   outline: none;
   background: #fafafa;
 }
-/* line 154, ../../scss/furatto/_forms.scss */
+/* line 155, ../../scss/furatto/_forms.scss */
 textarea[disabled],
 input[type="text"][disabled],
 input[type="password"][disabled],
@@ -970,7 +965,7 @@ input[type="color"][disabled] {
   white-space: nowrap;
   background: #eeeeee;
 }
-/* line 162, ../../scss/furatto/_forms.scss */
+/* line 163, ../../scss/furatto/_forms.scss */
 textarea.mini,
 input[type="text"].mini,
 input[type="password"].mini,
@@ -988,7 +983,7 @@ input[type="tel"].mini,
 input[type="color"].mini {
   width: 20%;
 }
-/* line 166, ../../scss/furatto/_forms.scss */
+/* line 167, ../../scss/furatto/_forms.scss */
 textarea.small,
 input[type="text"].small,
 input[type="password"].small,
@@ -1006,7 +1001,7 @@ input[type="tel"].small,
 input[type="color"].small {
   width: 40%;
 }
-/* line 170, ../../scss/furatto/_forms.scss */
+/* line 171, ../../scss/furatto/_forms.scss */
 textarea.medium,
 input[type="text"].medium,
 input[type="password"].medium,
@@ -1024,7 +1019,7 @@ input[type="tel"].medium,
 input[type="color"].medium {
   width: 60%;
 }
-/* line 174, ../../scss/furatto/_forms.scss */
+/* line 175, ../../scss/furatto/_forms.scss */
 textarea.large,
 input[type="text"].large,
 input[type="password"].large,
@@ -1042,7 +1037,7 @@ input[type="tel"].large,
 input[type="color"].large {
   width: 80%;
 }
-/* line 178, ../../scss/furatto/_forms.scss */
+/* line 179, ../../scss/furatto/_forms.scss */
 textarea.block,
 input[type="text"].block,
 input[type="password"].block,
@@ -1060,7 +1055,7 @@ input[type="tel"].block,
 input[type="color"].block {
   width: 100%;
 }
-/* line 183, ../../scss/furatto/_forms.scss */
+/* line 184, ../../scss/furatto/_forms.scss */
 textarea.success, textarea.error,
 input[type="text"].success,
 input[type="text"].error,
@@ -1092,7 +1087,7 @@ input[type="color"].success,
 input[type="color"].error {
   margin-bottom: 0;
 }
-/* line 187, ../../scss/furatto/_forms.scss */
+/* line 188, ../../scss/furatto/_forms.scss */
 textarea.success,
 input[type="text"].success,
 input[type="password"].success,
@@ -1111,7 +1106,7 @@ input[type="color"].success {
   border-color: #27ae60;
   color: #27ae60;
 }
-/* line 191, ../../scss/furatto/_forms.scss */
+/* line 192, ../../scss/furatto/_forms.scss */
 textarea.error,
 input[type="text"].error,
 input[type="password"].error,
@@ -1131,12 +1126,12 @@ input[type="color"].error {
   color: #e74c3c;
 }
 
-/* line 197, ../../scss/furatto/_forms.scss */
+/* line 198, ../../scss/furatto/_forms.scss */
 textarea {
   height: auto;
 }
 
-/* line 201, ../../scss/furatto/_forms.scss */
+/* line 202, ../../scss/furatto/_forms.scss */
 select {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1146,6 +1141,7 @@ select {
   width: 100%;
   display: block;
   background: white url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==") no-repeat 97% center;
+  height: 2rem;
   text-indent: 0.01px;
   text-overflow: "";
   -webkit-appearance: none;
@@ -1162,7 +1158,7 @@ select {
   -o-transition: all 2s linear, 1s;
   transition: all 2s linear, 1s;
 }
-/* line 225, ../../scss/furatto/_forms.scss */
+/* line 228, ../../scss/furatto/_forms.scss */
 select.radius {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -1170,19 +1166,19 @@ select.radius {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 227, ../../scss/furatto/_forms.scss */
+/* line 230, ../../scss/furatto/_forms.scss */
 select:hover {
   background: #f7f7f7 url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==") no-repeat 97% center;
 }
 
-/* line 235, ../../scss/furatto/_forms.scss */
+/* line 238, ../../scss/furatto/_forms.scss */
 input[type="checkbox"],
 input[type="radio"],
 input[type="file"] {
   margin-bottom: 0.6875rem;
 }
 
-/* line 241, ../../scss/furatto/_forms.scss */
+/* line 244, ../../scss/furatto/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
@@ -1190,13 +1186,13 @@ input[type="radio"] + label {
   margin-left: 0.1875rem;
 }
 
-/* line 247, ../../scss/furatto/_forms.scss */
+/* line 250, ../../scss/furatto/_forms.scss */
 input[type="file"] {
   width: 100%;
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 266, ../../scss/furatto/_forms.scss */
+  /* line 269, ../../scss/furatto/_forms.scss */
   textarea,
   input[type="text"],
   input[type="password"],
@@ -1575,7 +1571,7 @@ img.polaroid {
  * 
  * Designed and built @kurenn  
  */
-/* line 75, ../../scss/furatto/_navigation_bar.scss */
+/* line 78, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar {
   background: #191818;
   height: 45px;
@@ -1584,7 +1580,7 @@ img.polaroid {
   font-weight: 300;
   border-bottom: transparent;
 }
-/* line 83, ../../scss/furatto/_navigation_bar.scss */
+/* line 86, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1593,39 +1589,39 @@ img.polaroid {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 87, ../../scss/furatto/_navigation_bar.scss */
+/* line 90, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened {
   height: auto;
 }
-/* line 90, ../../scss/furatto/_navigation_bar.scss */
+/* line 93, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened .brand-section .menu-toggle a {
   color: #999999;
 }
-/* line 94, ../../scss/furatto/_navigation_bar.scss */
+/* line 97, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) {
   width: 100%;
 }
-/* line 98, ../../scss/furatto/_navigation_bar.scss */
+/* line 101, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-dropdown .dropdown {
   position: static;
 }
-/* line 103, ../../scss/furatto/_navigation_bar.scss */
+/* line 106, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li {
   width: 100%;
   display: block;
 }
-/* line 107, ../../scss/furatto/_navigation_bar.scss */
+/* line 110, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li .button {
   width: 96%;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 113, ../../scss/furatto/_navigation_bar.scss */
+/* line 116, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.divider {
   height: auto;
   border-bottom: 1px solid #383535;
 }
-/* line 123, ../../scss/furatto/_navigation_bar.scss */
+/* line 126, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .navigation-bar-text {
   margin: 0;
   line-height: 45px;
@@ -1634,7 +1630,7 @@ img.polaroid {
   font-size: 0.8125rem;
   padding: 0 15px;
 }
-/* line 132, ../../scss/furatto/_navigation_bar.scss */
+/* line 135, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .button {
   color: #FFF;
   font-size: 0.8125rem;
@@ -1644,22 +1640,22 @@ img.polaroid {
   margin-right: 0.5rem;
   margin-top: 5px;
 }
-/* line 141, ../../scss/furatto/_navigation_bar.scss */
+/* line 144, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .button:hover {
   color: #FFF;
 }
-/* line 147, ../../scss/furatto/_navigation_bar.scss */
+/* line 150, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar [class^="fa"],
 .navigation-bar [class*=" fa"] {
   margin-right: 5px;
   margin-left: 5px;
 }
-/* line 154, ../../scss/furatto/_navigation_bar.scss */
+/* line 157, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul.pull-right li.with-dropdown .dropdown {
   right: 0px;
   left: auto;
 }
-/* line 161, ../../scss/furatto/_navigation_bar.scss */
+/* line 164, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul {
   margin: 0;
   list-style: none;
@@ -1667,24 +1663,24 @@ img.polaroid {
   float: left;
   width: auto;
 }
-/* line 168, ../../scss/furatto/_navigation_bar.scss */
+/* line 171, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li {
   float: left;
 }
-/* line 171, ../../scss/furatto/_navigation_bar.scss */
+/* line 174, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a {
   color: white;
   background: black;
 }
-/* line 175, ../../scss/furatto/_navigation_bar.scss */
+/* line 178, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a:hover {
   color: #f2f2f2;
 }
-/* line 180, ../../scss/furatto/_navigation_bar.scss */
+/* line 183, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a:hover:not(.button) {
   background: #0c0c0c;
 }
-/* line 184, ../../scss/furatto/_navigation_bar.scss */
+/* line 187, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a {
   display: block;
   padding: 0 15px;
@@ -1692,25 +1688,25 @@ img.polaroid {
   line-height: 45px;
   color: white;
 }
-/* line 191, ../../scss/furatto/_navigation_bar.scss */
+/* line 194, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 197, ../../scss/furatto/_navigation_bar.scss */
+/* line 200, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.divider {
   height: 45px;
   border-left: 1px solid #383535;
 }
-/* line 203, ../../scss/furatto/_navigation_bar.scss */
+/* line 206, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown {
   position: relative;
 }
-/* line 207, ../../scss/furatto/_navigation_bar.scss */
+/* line 210, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown.opened .dropdown {
   display: block;
 }
-/* line 212, ../../scss/furatto/_navigation_bar.scss */
+/* line 215, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown {
   display: none;
   position: absolute;
@@ -1719,20 +1715,27 @@ img.polaroid {
   left: 0;
   z-index: 1040;
   min-width: 100%;
+  -webkit-border-radius: 0px 0px 3px 3px;
+  -moz-border-radius: 0px 0px 3px 3px;
+  -ms-border-radius: 0px 0px 3px 3px;
+  -o-border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 3px 3px;
+  border: 1px solid #333131;
+  border-top: none;
 }
-/* line 221, ../../scss/furatto/_navigation_bar.scss */
+/* line 231, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li {
   width: 100%;
   height: auto;
   background: #191818;
   white-space: nowrap;
 }
-/* line 227, ../../scss/furatto/_navigation_bar.scss */
+/* line 237, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li a {
   height: 45px;
   line-height: 45px;
 }
-/* line 232, ../../scss/furatto/_navigation_bar.scss */
+/* line 242, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li.dropdown-header {
   text-transform: uppercase;
   padding: 0.5625rem 1.0625rem 0.125rem;
@@ -1741,26 +1744,26 @@ img.polaroid {
   font-weight: bold;
   font-size: 0.5rem;
 }
-/* line 241, ../../scss/furatto/_navigation_bar.scss */
+/* line 251, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li.divider {
   height: 0.0625rem;
   border-top: 1px solid #383535;
 }
-/* line 251, ../../scss/furatto/_navigation_bar.scss */
+/* line 261, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul.pull-right {
   float: right;
 }
-/* line 255, ../../scss/furatto/_navigation_bar.scss */
+/* line 265, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section {
   font-size: 1.125rem;
   position: relative;
   font-weight: 400;
 }
-/* line 259, ../../scss/furatto/_navigation_bar.scss */
+/* line 269, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li {
   padding: 0;
 }
-/* line 262, ../../scss/furatto/_navigation_bar.scss */
+/* line 272, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li.menu-toggle {
   display: none;
   text-transform: uppercase;
@@ -1770,7 +1773,7 @@ img.polaroid {
   right: 20px;
   width: 34px;
 }
-/* line 271, ../../scss/furatto/_navigation_bar.scss */
+/* line 281, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li.menu-toggle a:after {
   content: '';
   width: 16px;
@@ -1782,7 +1785,7 @@ img.polaroid {
   -moz-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
   box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
 }
-/* line 286, ../../scss/furatto/_navigation_bar.scss */
+/* line 296, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.fixed {
   position: fixed;
   top: 0;
@@ -1792,34 +1795,34 @@ img.polaroid {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 297, ../../scss/furatto/_navigation_bar.scss */
+  /* line 307, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar {
     overflow: visible;
   }
 }
 @media only screen and (orientation: portrait) {
-  /* line 302, ../../scss/furatto/_navigation_bar.scss */
+  /* line 312, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar {
     overflow: hidden;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 311, ../../scss/furatto/_navigation_bar.scss */
+  /* line 321, ../../scss/furatto/_navigation_bar.scss */
   .off-screen .navigation-bar .brand-section .brand-name a:before {
     display: inline-block;
   }
 
-  /* line 321, ../../scss/furatto/_navigation_bar.scss */
+  /* line 331, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar .brand-section {
     width: 100%;
     font-size: 0.975rem;
   }
-  /* line 327, ../../scss/furatto/_navigation_bar.scss */
+  /* line 337, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar .brand-section li.menu-toggle {
     display: block;
     float: right;
   }
-  /* line 331, ../../scss/furatto/_navigation_bar.scss */
+  /* line 341, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar .brand-section li.menu-toggle.hidden {
     display: none;
   }
@@ -2041,150 +2044,136 @@ blockquote p {
     font-size: 1.25rem;
   }
 }
-/* line 51, ../../scss/furatto/_grid.scss */
+/* line 57, ../../scss/furatto/_grid.scss */
 .row {
   display: block;
   text-rendering: optimizespeed;
 }
-/* line 57, ../../scss/furatto/_grid.scss */
+/* line 63, ../../scss/furatto/_grid.scss */
 .row.primary,
 .row [class*="col-"].primary {
   background: rgba(52, 152, 219, 0.8);
 }
-/* line 62, ../../scss/furatto/_grid.scss */
+/* line 68, ../../scss/furatto/_grid.scss */
 .row.danger,
 .row [class*="col-"].danger {
   background: rgba(231, 76, 60, 0.8);
 }
-/* line 67, ../../scss/furatto/_grid.scss */
+/* line 73, ../../scss/furatto/_grid.scss */
 .row.warning,
 .row [class*="col-"].warning {
   background: rgba(241, 196, 15, 0.8);
 }
-/* line 72, ../../scss/furatto/_grid.scss */
+/* line 78, ../../scss/furatto/_grid.scss */
 .row.success,
 .row [class*="col-"].success {
   background: rgba(46, 204, 113, 0.8);
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-1 {
-  width: 8.15003%;
-  margin-left: 0.1833%;
+  width: 8.33333%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-2 {
-  width: 16.48337%;
-  margin-left: 0.1833%;
+  width: 16.66667%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-3 {
-  width: 24.8167%;
-  margin-left: 0.1833%;
+  width: 25%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-4 {
-  width: 33.15003%;
-  margin-left: 0.1833%;
+  width: 33.33333%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-5 {
-  width: 41.48337%;
-  margin-left: 0.1833%;
+  width: 41.66667%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-6 {
-  width: 49.8167%;
-  margin-left: 0.1833%;
+  width: 50%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-7 {
-  width: 58.15003%;
-  margin-left: 0.1833%;
+  width: 58.33333%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-8 {
-  width: 66.48337%;
-  margin-left: 0.1833%;
+  width: 66.66667%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-9 {
-  width: 74.8167%;
-  margin-left: 0.1833%;
+  width: 75%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-10 {
-  width: 83.15003%;
-  margin-left: 0.1833%;
+  width: 83.33333%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-11 {
-  width: 91.48337%;
-  margin-left: 0.1833%;
+  width: 91.66667%;
 }
-/* line 43, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-12 {
-  width: 99.8167%;
-  margin-left: 0.1833%;
-}
-/* line 79, ../../scss/furatto/_grid.scss */
-.row [class*="col-"]:first-child {
-  margin-left: 0;
+  width: 100%;
 }
 
-/* line 85, ../../scss/furatto/_grid.scss */
+/* line 87, ../../scss/furatto/_grid.scss */
 .row + .row {
   margin-top: 0.14286rem;
 }
 
-/* line 91, ../../scss/furatto/_grid.scss */
+/* line 93, ../../scss/furatto/_grid.scss */
 [class*="col-"] {
-  padding: 0.57143rem;
+  padding: 8px 8px 8px 0;
   float: left;
 }
-/* line 95, ../../scss/furatto/_grid.scss */
+/* line 97, ../../scss/furatto/_grid.scss */
 [class*="col-"].border {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
 }
-/* line 100, ../../scss/furatto/_grid.scss */
+/* line 102, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.left {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
-/* line 104, ../../scss/furatto/_grid.scss */
+/* line 106, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.right {
   border-right-color: rgba(255, 255, 255, 0.5);
 }
-/* line 108, ../../scss/furatto/_grid.scss */
+/* line 110, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.top {
   border-top-color: rgba(255, 255, 255, 0.5);
 }
-/* line 112, ../../scss/furatto/_grid.scss */
+/* line 114, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.bottom {
   border-bottom-color: rgba(255, 255, 255, 0.5);
 }
-/* line 117, ../../scss/furatto/_grid.scss */
+/* line 119, ../../scss/furatto/_grid.scss */
 [class*="col-"] [class*="col-"] {
   padding-left: 0;
 }
 
 @media (max-width: 54.85714rem) {
-  /* line 126, ../../scss/furatto/_grid.scss */
+  /* line 128, ../../scss/furatto/_grid.scss */
   [class*="col-"].border.left {
     border-top-color: rgba(255, 255, 255, 0.5);
     border-left-color: transparent;
   }
-  /* line 131, ../../scss/furatto/_grid.scss */
+  /* line 133, ../../scss/furatto/_grid.scss */
   [class*="col-"].border.right {
     border-bottom-color: rgba(255, 255, 255, 0.5);
     border-right-color: transparent;
   }
 
-  /* line 137, ../../scss/furatto/_grid.scss */
+  /* line 139, ../../scss/furatto/_grid.scss */
   .row > [class*="col-"] {
     width: 100%;
     margin-left: 0;
     margin-bottom: 2px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 /* line 43, ../../scss/furatto/_tables.scss */
@@ -2923,7 +2912,7 @@ table.bordered th, table.bordered td {
     display: none !important;
   }
 }
-/* line 164, ../../scss/furatto/_modal.scss */
+/* line 165, ../../scss/furatto/_modal.scss */
 .modal {
   position: absolute;
   height: auto;
@@ -2945,11 +2934,11 @@ table.bordered th, table.bordered td {
   margin-left: -40%;
   left: 50%;
 }
-/* line 78, ../../scss/furatto/_modal.scss */
+/* line 79, ../../scss/furatto/_modal.scss */
 .modal.modal-show {
   visibility: visible;
 }
-/* line 83, ../../scss/furatto/_modal.scss */
+/* line 84, ../../scss/furatto/_modal.scss */
 .modal.radius .modal-content {
   -webkit-border-radius: 0.1875rem;
   -moz-border-radius: 0.1875rem;
@@ -2957,42 +2946,42 @@ table.bordered th, table.bordered td {
   -o-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
 }
-/* line 168, ../../scss/furatto/_modal.scss */
+/* line 169, ../../scss/furatto/_modal.scss */
 .modal .modal-content {
   padding: 0.9375rem 2.5rem 1.875rem;
   font-weight: 300;
   font-size: 1.125rem;
 }
-/* line 145, ../../scss/furatto/_modal.scss */
+/* line 146, ../../scss/furatto/_modal.scss */
 .modal .modal-content > ul {
   padding: 0 0 1.875rem 1.25rem;
   margin: 0;
 }
-/* line 149, ../../scss/furatto/_modal.scss */
+/* line 150, ../../scss/furatto/_modal.scss */
 .modal .modal-content > ul li {
   padding: 0.3125rem 0;
 }
-/* line 171, ../../scss/furatto/_modal.scss */
+/* line 172, ../../scss/furatto/_modal.scss */
 .modal .modal-content .modal-footer {
   padding: 0.625rem 0;
 }
-/* line 175, ../../scss/furatto/_modal.scss */
+/* line 176, ../../scss/furatto/_modal.scss */
 .modal.alpha {
   background: transparent;
 }
-/* line 176, ../../scss/furatto/_modal.scss */
+/* line 177, ../../scss/furatto/_modal.scss */
 .modal.default {
   background: #f0f0f0;
 }
-/* line 177, ../../scss/furatto/_modal.scss */
+/* line 178, ../../scss/furatto/_modal.scss */
 .modal.primary {
   background: #3498db;
 }
-/* line 178, ../../scss/furatto/_modal.scss */
+/* line 179, ../../scss/furatto/_modal.scss */
 .modal.danger {
   background: #e74c3c;
 }
-/* line 187, ../../scss/furatto/_modal.scss */
+/* line 188, ../../scss/furatto/_modal.scss */
 .modal .modal-header {
   margin: 0;
   padding: 0.375rem;
@@ -3004,7 +2993,7 @@ table.bordered th, table.bordered td {
   color: white;
 }
 
-/* line 192, ../../scss/furatto/_modal.scss */
+/* line 193, ../../scss/furatto/_modal.scss */
 .modal-overlay {
   overflow-x: hidden;
   position: fixed;
@@ -3021,14 +3010,14 @@ table.bordered th, table.bordered td {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 195, ../../scss/furatto/_modal.scss */
+/* line 196, ../../scss/furatto/_modal.scss */
 .modal-overlay.modal-show-overlay {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   visibility: visible;
 }
 
-/* line 205, ../../scss/furatto/_modal.scss */
+/* line 206, ../../scss/furatto/_modal.scss */
 .modal-effect-1 {
   -webkit-transform: scale(0.7);
   -moz-transform: scale(0.7);
@@ -3043,7 +3032,7 @@ table.bordered th, table.bordered td {
   transition: all 0.3s;
 }
 
-/* line 211, ../../scss/furatto/_modal.scss */
+/* line 212, ../../scss/furatto/_modal.scss */
 .modal-show.modal-effect-1 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -3054,7 +3043,7 @@ table.bordered th, table.bordered td {
   opacity: 1;
 }
 
-/* line 219, ../../scss/furatto/_modal.scss */
+/* line 220, ../../scss/furatto/_modal.scss */
 .modal-effect-2 {
   -webkit-transform: translateX(20%);
   -moz-transform: translateX(20%);
@@ -3069,7 +3058,7 @@ table.bordered th, table.bordered td {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 
-/* line 225, ../../scss/furatto/_modal.scss */
+/* line 226, ../../scss/furatto/_modal.scss */
 .modal-show.modal-effect-2 {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -3081,7 +3070,7 @@ table.bordered th, table.bordered td {
 }
 
 /* Effect 3: Slide from the bottom */
-/* line 233, ../../scss/furatto/_modal.scss */
+/* line 234, ../../scss/furatto/_modal.scss */
 .modal-effect-3 {
   -webkit-transform: translateY(20%);
   -moz-transform: translateY(20%);
@@ -3096,7 +3085,7 @@ table.bordered th, table.bordered td {
   transition: all 0.3s;
 }
 
-/* line 239, ../../scss/furatto/_modal.scss */
+/* line 240, ../../scss/furatto/_modal.scss */
 .modal-show.modal-effect-3 {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -3108,7 +3097,7 @@ table.bordered th, table.bordered td {
 }
 
 /* Effect 4: fall */
-/* line 247, ../../scss/furatto/_modal.scss */
+/* line 248, ../../scss/furatto/_modal.scss */
 .modal-effect-4.modal-modal {
   -webkit-perspective: 1300px;
   -moz-perspective: 1300px;
@@ -3117,7 +3106,7 @@ table.bordered th, table.bordered td {
   perspective: 1300px;
 }
 
-/* line 251, ../../scss/furatto/_modal.scss */
+/* line 252, ../../scss/furatto/_modal.scss */
 .modal-effect-4 {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -3133,7 +3122,7 @@ table.bordered th, table.bordered td {
   opacity: 0;
 }
 
-/* line 257, ../../scss/furatto/_modal.scss */
+/* line 258, ../../scss/furatto/_modal.scss */
 .modal-show.modal-effect-4 {
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -3149,7 +3138,7 @@ table.bordered th, table.bordered td {
 }
 
 /* Effect 5:  slide and stick to top */
-/* line 266, ../../scss/furatto/_modal.scss */
+/* line 267, ../../scss/furatto/_modal.scss */
 .modal-effect-5 {
   top: 0;
   -webkit-transform: translateX(-50%);
@@ -3159,7 +3148,7 @@ table.bordered th, table.bordered td {
   transform: translateX(-50%);
 }
 
-/* line 271, ../../scss/furatto/_modal.scss */
+/* line 272, ../../scss/furatto/_modal.scss */
 .modal-effect-5 {
   -webkit-transform: translateY(-200%);
   -moz-transform: translateY(-200%);
@@ -3174,7 +3163,7 @@ table.bordered th, table.bordered td {
   opacity: 0;
 }
 
-/* line 277, ../../scss/furatto/_modal.scss */
+/* line 278, ../../scss/furatto/_modal.scss */
 .modal-show.modal-effect-5 {
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
@@ -3192,7 +3181,7 @@ table.bordered th, table.bordered td {
 }
 
 /* Effect 6: Super scaled */
-/* line 287, ../../scss/furatto/_modal.scss */
+/* line 288, ../../scss/furatto/_modal.scss */
 .modal-effect-6 {
   -webkit-transform: scale(2);
   -moz-transform: scale(2);
@@ -3207,7 +3196,7 @@ table.bordered th, table.bordered td {
   transition: all 0.3s;
 }
 
-/* line 293, ../../scss/furatto/_modal.scss */
+/* line 294, ../../scss/furatto/_modal.scss */
 .modal-show.modal-effect-6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
