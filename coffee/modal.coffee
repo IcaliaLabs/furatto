@@ -1,6 +1,6 @@
 (($, window) ->
 
-  class Furatto.Modal
+  class FlatUIKit.Modal
     constructor: (el, options) ->
       @options = $.extend {}, options
       @$el = $(el)
@@ -65,11 +65,11 @@
       elementToAppend = $('body')
 
     elementToAppend.append('<div class="modal-overlay"></div>')
-    $('[data-furatto="modal"]').each ->
+    $('[flat-ui-kit="modal"]').each ->
       modal = $(@)
       modal.modal('init')
 
-  $(document).on 'click', '[data-furatto="modal"]', (e) ->
+  $(document).on 'click', '[flat-ui-kit="modal"]', (e) ->
     $this = $(this)
     $this.modal('init')
 

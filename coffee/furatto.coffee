@@ -1,5 +1,5 @@
-window.Furatto =
-  name: 'Furatto'
+window.FlatUiKit =
+  name: 'FlatUIKit'
   version: '1.0.0'
 
 $('.alert .close').each ->
