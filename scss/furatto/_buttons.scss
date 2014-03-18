@@ -110,6 +110,7 @@ $button-block-media-query-width: px-to-rems(480) !default;
 
   &.active, &:active {
     outline: 0;
+    background: darken($background-color, 5%);
   }
 
   &.alpha {
