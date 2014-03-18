@@ -17,6 +17,8 @@ $muted-text-color: #666666 !default;
 $error-text-color: #c0392b !default;
 $success-text-color: #27ae60 !default;
 
+$include-hyphens: false !default;
+
 //Reset settings
 *, 
 *:after, 
@@ -36,23 +38,27 @@ html, body {
   overflow-x: hidden;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
-  @include hyphens(auto);
+  @if $include-hyphens {
+    @include hyphens(auto);
+  }
 }
 
-abbr,
-acronym,
-blockquote,
-code,
-dir,
-kbd,
-listing,
-plaintext,
-q,
-samp,
-tt,
-var,
-xmp {
-	@include hyphens(none);
+@if $include-hyphens {
+  abbr,
+  acronym,
+  blockquote,
+  code,
+  dir,
+  kbd,
+  listing,
+  plaintext,
+  q,
+  samp,
+  tt,
+  var,
+  xmp {
+    @include hyphens(none);
+  }
 }
 
 body {
