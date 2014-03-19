@@ -251,7 +251,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
 
       input[type="submit"] {
         float: left;
-        height: ($navigation-bar-with-form-input-height) + 1;
+        height: $navigation-bar-with-form-input-height;
         line-height: 0;
 
         &.button {
