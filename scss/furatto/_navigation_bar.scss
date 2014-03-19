@@ -65,9 +65,9 @@ $navigation-bar-dropdown-divider-height: px-to-rems(1) !default;
 $navigation-bar-dropdown-anchor-height: 45px !default;
 $navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
 $navigation-bar-dropdown-right-position: 0px !default;
-$navigation-bar-dropdown-border: 1px solid lighten($navigation-bar-background, 10%);
-$include-navigation-bar-dropdown-top-border: false;
-$navigation-bar-dropdown-radius: 3px;
+$navigation-bar-dropdown-border: 1px solid lighten($navigation-bar-background, 10%) !default;
+$include-navigation-bar-dropdown-top-border: false !default;
+$navigation-bar-dropdown-radius: 3px !default;
 $navigation-bar-dropdown-background: $navigation-bar-background !default;
 $navigation-bar-dropdown-divider-color: $navigation-bar-divider-color !default;
 
