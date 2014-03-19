@@ -69,8 +69,10 @@ $button-block-media-query-width: px-to-rems(480) !default;
   outline: none;
   color: $button-font-color;
   vertical-align: middle;
-  @include single-transition(all, 0.2s, ease-in-out);
   position: relative;
+  @include single-transition(all, 0.2s, ease-in-out);
+  @include appearance(none);
+  @include border-radius(0);
 
   .fa {
     margin-right: $button-icon-separation;
