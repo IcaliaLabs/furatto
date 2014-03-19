@@ -1,12 +1,18 @@
 jQuery ->
-  $('.with-dropdown').on 'touchstart click', (e) ->
-    e.preventDefault()
-    $(@).toggleClass 'opened'
 
-  $('.with-dropdown').mouseenter((e) ->
-    $('.with-dropdown .dropdown li a').click (e) ->
-      e.stopPropagation()
-    $(@).addClass 'opened'
-  ).mouseleave(->
-    $(@).removeClass 'opened'
-  )
+  $(document).mouseup (e) ->
+    dropdown_container = $('.with-dropdown')
+    if not dropdown_container.is(e.target) and dropdown_container.has(e.target).length is 0
+      dropdown_container.removeClass('opened')
+
+  $(document).on 'touchstart click', '.with-dropdown', (e) ->
+    e.preventDefault()
+
+    $container = $(e.target).parent()
+
+    $container.siblings('.with-dropdown').removeClass 'opened'
+    $container.toggleClass 'opened'
+
+
+  $(document).on 'touchstart click', '.with-dropdown > ul.dropdown', (e) ->
+    e.stopPropagation()
