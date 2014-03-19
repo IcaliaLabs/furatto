@@ -72,6 +72,10 @@ $navigation-bar-dropdown-background: $navigation-bar-background !default;
 $navigation-bar-dropdown-divider-color: $navigation-bar-divider-color !default;
 
 
+//Form support
+$navigation-bar-with-form-padding: $navigation-bar-height / 4 $navigation-bar-height / 3 !default;
+$navigation-bar-with-form-input-height: $navigation-bar-height / 2 !default;
+
 //Media
 $media-collapse-width: 768px !default;
 $navigation-bar-collapse-query: "#{$media-display} and (max-width: #{$media-collapse-width})" !default;
@@ -99,6 +103,30 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
     ul:not(.brand-section) {
       width: 100%;
 
+      li.with-form {
+        margin-bottom: 5px;
+
+        input[type="text"],
+        input[type="search"] {
+          width: 100%;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+          &.button {
+            &.pill {
+              @include border-radius($button-pill-radius); //variable extrated from _buttons.scss
+
+            }
+
+            &.radius {
+              @include border-radius($button-radius); //variable extrated from _buttons.scss
+            }
+          }
+        }
+      }
+
       li.with-dropdown {
         .dropdown {
           position: static;
@@ -108,9 +136,14 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
       li {
         width: 100%;
         display: block;
+        padding: 0 $navigation-bar-height / 3;
+
+        a {
+          padding: 0;
+        }
 
         .button {
-          width: 96%;
+          width: 100%;
           margin-left: auto;
           margin-right: auto;
         }
@@ -202,6 +235,38 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
       &.divider {
         height: $navigation-bar-height; 
         border-left: 1px solid $navigation-bar-divider-color;
+      }
+    }
+
+    li.with-form {
+      padding: $navigation-bar-with-form-padding; 
+
+      input[type="text"],
+      input[type="search"] {
+        margin: 0;
+        width: auto;
+        float: left;
+        height: $navigation-bar-with-form-input-height;
+      }
+
+      input[type="submit"] {
+        float: left;
+        height: ($navigation-bar-with-form-input-height) + 1;
+        line-height: 0;
+
+        &.button {
+          margin: 0;
+
+          &.pill {
+            @include border-radius(0 $button-pill-radius $button-pill-radius 0); //variable extrated from _buttons.scss
+
+          }
+
+          &.radius {
+            @include border-radius(0 $button-radius $button-radius 0); //variable extrated from _buttons.scss
+
+          }
+        }
       }
     }
 
