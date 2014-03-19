@@ -25,6 +25,8 @@ $toolbar-bg-color: #232323 !default;
 $media-display: "only screen" !default;
 
 // Extra small screen / phone
+$small-device-width: 480px !default;
+
 $screen-xs:                  480px !default;
 $screen-xs-min:              $screen-xs !default;
 $screen-phone:               $screen-xs-min !default;

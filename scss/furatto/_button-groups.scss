@@ -4,15 +4,6 @@
 //@variables
 //
 
-$sm-device-width: 480px !default;
-
-//Media queries
-$button-group-small-media-query: "#{$media-display} and (max-width: #{$sm-device-width})" !default;
-
-//Variations
-$button-radius: px-to-rems(3) !default;
-$button-pill-radius: px-to-rems(1000) !default;
-
 .button-group {
   list-style: none;
   margin: 0; 
@@ -43,6 +34,17 @@ $button-pill-radius: px-to-rems(1000) !default;
         border-left-width: 0;
       }
     }
+
+    //Media queries
+    @include max-screen($small-device-width) {
+      float: none;
+      display: block;
+
+      .button,
+      button {
+        display: block;
+      }
+    }
   }
 
   &.pill {
@@ -66,20 +68,6 @@ $button-pill-radius: px-to-rems(1000) !default;
     li:last-child .button {
       @include border-top-right-radius($button-radius);
       @include border-bottom-right-radius($button-radius);
-    }
-  }
-}
-
-@media #{$button-group-small-media-query} {
-  .button-group {
-    li {
-      float: none;
-      display: block;
-
-      .button,
-      button {
-        display: block;
-      }
     }
   }
 }
