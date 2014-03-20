@@ -1,3 +1,9 @@
+/*!
+ * Furatto v3.0.2 (http://icalialabs.github.io/furatto/)
+ * Copyright 2014-2014 Icalia Labs
+ * Licensed under MIT (https://github.com/IcaliaLabs/furatto/blob/master/LICENSE)
+ */
+
 /* line 14, ../../scss/furatto/_selectors.scss */
 .clearfix:before, .button-group:before, .dl-horizontal:before, .row:before, .clearfix:after, .button-group:after, .dl-horizontal:after, .row:after {
   display: table;
