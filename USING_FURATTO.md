@@ -4,6 +4,8 @@
 | ------------------- |:-----------------:| -----:|
 | Vride | Your best ride to work | https://go.vride.io/ |
 | MoneyPool | La manera mas facil de recaudar dinero entre amigos | https://www.moneypool.mx/ |
+| Icalia Wiki | Icalia Labs Wiki | http://wiki.icalialabs.com/ |
+| Landkom | The link to your vision | http://landkom-mx.com/ |
 
 Be the first one and tell us about it! 
 
