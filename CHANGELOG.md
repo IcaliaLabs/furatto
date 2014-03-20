@@ -1,3 +1,24 @@
+## 3.0.2 (March 20, 2014)
+### Features
+
+- Adds favicon to the documentation
+- Adds active state background on buttons
+- Refactor media queries for the ones provided by the core
+- Provides text alignment support for a more mobile-first approach
+- Adds search bar navigation bar support
+- Adds variables for handling the dropdown colors (divider, border, etc)
+- Adds the option to add hyphens to the whole html document through a
+  variable
+
+### Bugs
+
+- Improves the dropdown interaction on the navigation bar
+
+### Milestone
+
+[https://github.com/IcaliaLabs/furatto/issues?milestone=3&page=1&state=closed](https://github.com/IcaliaLabs/furatto/issues?milestone=3&page=1&state=closed)
+
+
 ## 3.0.1 (March 6, 2014)
 ### Features
 
