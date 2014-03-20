@@ -11,7 +11,7 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 <link rel="icon" type="image/png" href="/furatto/assets/img/favicon.png">
 <title>
-  Furatto - Forms
+  Furatto - Docs::Alignment Utilities
 </title>
 
 <!-- Furatto core CSS -->
@@ -51,269 +51,66 @@
   <div class="row">
      <div class="col-9">
        <div class="main-content-wrapper">
-        <h1>Forms</h1>
-<p class="main-motto">Furatto comes with beautiful and powerful form layouts. Once you combine them with the grid, you can build almost anything.</p>
+        <h1 class="text-center-sm text-right-md">Alignment utilities</h1>
+
+<p class="main-motto">Furatto provides class names to help you align text for different screen sizes and enhance mobile-friendly development, by deciding how to align the text at a class name scope.</p>
 
 <hr />
 
-<h3>Building the markup</h3>
+<h3>Alignment screen sizes</h3>
+<p>Furatto supports 3 width ranges, from 480px up to 1024px and higher. But you know it is really easy to customize it through the sass variables we provide.</p>
 
-<p>Creating forms with Furatto is really easy. We don't want to bother you with many modifier classes on inputs or nesting them into more elements. Rather than include class names on the inputs, we use the type attribute to style them.</p>
-
-<p>Here is a quick example:</p>
-
-<div class="row">
-   <div class="col-6">
-    <form action="" method="get" accept-charset="utf-8">
-       <label for="name">A label</label>
-       <input type="text" name="" id="name" value="" placeholder="A text field" />
-       <br />
-        <select name="" id="">
-          <option>Select a language</option>
-          <option>Ruby</option>
-          <option>Javascript</option>
-          <option>Objective-C</option>
-        </select>
-        <div class="row">
-          <div class="col-6">
-            <label for="radio">Choose an option</label>
-            <input type="radio" name="radio" id="option1" value="" />
-            <label for="option1">Option 1</label>
-            <input type="radio" name="radio" id="option2" value="" />
-            <label for="option2">Option 2</label>
-          </div>          
-          <div class="col-6">
-            <label for="">Check as many as you want</label>
-            <input type="checkbox" name="" id="check1" value="" />
-            <label for="check1">Check two</label>
-            <input type="checkbox" name="" id="check2" value="" />
-            <label for="check2">Check one</label>
-          </div>
-        </div>
-        <div class="row">
-            <label for="textarea">A textarea</label>
-           <textarea name="" id="textarea" rows="8" cols="40"></textarea>
-        </div>
-    </form>  
-   </div>
-   <div class="col-6">
-     <pre>
-       <code>
-  &lt;form action=&quot;&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;<br/>       &lt;label for=&quot;name&quot;&gt;A label&lt;/label&gt;<br/>       &lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;name&quot; value=&quot;&quot; placeholder=&quot;A text field&quot; /&gt;<br/>       &lt;br /&gt;<br/>        &lt;select name=&quot;&quot; id=&quot;&quot;&gt;<br/>          &lt;option&gt;Select a language&lt;/option&gt;<br/>          &lt;option&gt;Ruby&lt;/option&gt;<br/>          &lt;option&gt;Javascript&lt;/option&gt;<br/>          &lt;option&gt;Objective-C&lt;/option&gt;<br/>        &lt;/select&gt;<br/>        &lt;div class=&quot;row&quot;&gt;<br/>          &lt;div class=&quot;col-6&quot;&gt;<br/>            &lt;label for=&quot;radio&quot;&gt;Choose an option&lt;/label&gt;<br/>            &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;option1&quot; value=&quot;&quot; /&gt;<br/>            &lt;label for=&quot;option1&quot;&gt;Option 1&lt;/label&gt;<br/>            &lt;input type=&quot;radio&quot; name=&quot;radio&quot; id=&quot;option2&quot; value=&quot;&quot; /&gt;<br/>            &lt;label for=&quot;option2&quot;&gt;Option 2&lt;/label&gt;<br/>          &lt;/div&gt;          <br/>          &lt;div class=&quot;col-6&quot;&gt;<br/>            &lt;label for=&quot;&quot;&gt;Check as many as you want&lt;/label&gt;<br/>            &lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;check1&quot; value=&quot;&quot; /&gt;<br/>            &lt;label for=&quot;check1&quot;&gt;Check two&lt;/label&gt;<br/>            &lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;check2&quot; value=&quot;&quot; /&gt;<br/>            &lt;label for=&quot;check2&quot;&gt;Check one&lt;/label&gt;<br/>          &lt;/div&gt;<br/>        &lt;/div&gt;<br/>        &lt;div class=&quot;row&quot;&gt;<br/>            &lt;label for=&quot;textarea&quot;&gt;A textarea&lt;/label&gt;<br/>           &lt;textarea name=&quot;&quot; id=&quot;textarea&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;<br/>        &lt;/div&gt;<br/>    &lt;/form&gt;  
-       </code>
-     </pre>
-   </div>
-</div>
+<table class="responsive">
+   <thead>
+     <tr>
+       <th>
+         <span class="muted">Small width 480px to 767px</span>
+       </th>
+       <th>
+         <span class="muted">Medium width 768px to 1023px</span>
+       </th>
+       <th>
+         <span class="muted">Large width 1024px and up</span>
+       </th>
+     </tr>
+   </thead>
+   <tbody>
+   <tr>
+     <td class="docs-visible">text-center-sm</td>
+     <td class="docs-visible">text-center-md</td>
+     <td class="docs-visible">text-center-lg</td>
+   </tr>
+   <tr>
+     <td class="docs-visible">text-left-sm</td>
+     <td class="docs-visible">text-left-md</td>
+     <td class="docs-visible">text-left-lg</td>
+   </tr>
+   <tr>
+     <td class="docs-visible">text-right-sm</td>
+     <td class="docs-visible">text-right-md</td>
+     <td class="docs-visible">text-right-lg</td>
+   </tr>
+   <tr>
+     <td class="docs-visible">text-justify-sm</td>
+     <td class="docs-visible">text-justify-md</td>
+     <td class="docs-visible">text-justify-lg</td>
+   </tr>
+   </tbody>
+</table>
 
 <hr />
-
-<h3>Input Sizes</h3>
-<p>We provide class names to size up your inputs very easy, the smallest size, which is <span class="code">mini</span> starts at 20% width, and increases at a 20% range. So 4 sizes mate, <span class="code">mini</span>, <span class="code">small</span>, <span class="code">medium</span>, <span class="code">large</span>.</p>
-
-<div class="row">
-   <div class="col-6">
-     <input type="text" placeholder=".mini - 20% width" class="mini" />
-     <input type="text" placeholder=".small - 40% width" class="small" />
-     <input type="text" placeholder=".medium - 60% width" class="medium" />
-     <input type="text" placeholder=".large - 80% width" class="large" />
-     <input type="text" placeholder=".block - 100% width" class="block" />
-   </div>
-   <div class="col-6">
-     <pre>
-       <code>
- &lt;input type=&quot;text&quot; placeholder=&quot;.mini - 20% width&quot; class=&quot;mini&quot; /&gt;<br/> &lt;input type=&quot;text&quot; placeholder=&quot;.small - 40% width&quot; class=&quot;small&quot; /&gt;<br/> &lt;input type=&quot;text&quot; placeholder=&quot;.medium - 60% width&quot; class=&quot;medium&quot; /&gt;<br/> &lt;input type=&quot;text&quot; placeholder=&quot;.large - 80% width&quot; class=&quot;large&quot; /&gt;<br/> &lt;input type=&quot;text&quot; placeholder=&quot;.block - 100% width&quot; class=&quot;block&quot; /&gt;
-       </code>
-     </pre>
-   </div>
-</div>
-
-<hr />
-
-<div class="row">
-  <h3>Input supported states</h3>
-  <p>Furatto includes 2 validation states for your inputs, an <span class="code">error</span> state and a <span class="code">success</span> state. The markup is very simple:</p>
-
-  <div class="col-6">
-   <form action="" method="get" accept-charset="utf-8">
-    <label for="email">Email:</label>
-    <input type="text" class="error" name="" id="email" value="" />
-    <span class="help-hint error">It is not a well formed email...</span>
-    <label for="email_success">Email:</label>
-    <input type="text" class="success" name="" id="email_success" value="" />
-    <span class="help-hint success">Great on writing your name...</span>
-    <label for="bio">Bio:</label>
-    <textarea name="" id="bio" rows="4" cols="40" class="success"></textarea>
-    <span class="help-hint success">Impressive bio dude...</span>
-  </form>
-  </div>
-  <div class="col-6">
-    <pre>
-      <code>
-   &lt;form action=&quot;&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;<br/>    &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;<br/>    &lt;input type=&quot;text&quot; class=&quot;error&quot; name=&quot;&quot; id=&quot;email&quot; value=&quot;&quot; /&gt;<br/>    &lt;span class=&quot;help-hint error&quot;&gt;It is not a well formed email...&lt;/span&gt;<br/>    &lt;label for=&quot;email_success&quot;&gt;Email:&lt;/label&gt;<br/>    &lt;input type=&quot;text&quot; class=&quot;success&quot; name=&quot;&quot; id=&quot;email_success&quot; value=&quot;&quot; /&gt;<br/>    &lt;span class=&quot;help-hint success&quot;&gt;Great on writing your name...&lt;/span&gt;<br/>    &lt;label for=&quot;bio&quot;&gt;Bio:&lt;/label&gt;<br/>    &lt;textarea name=&quot;&quot; id=&quot;bio&quot; rows=&quot;4&quot; cols=&quot;40&quot; class=&quot;success&quot;&gt;&lt;/textarea&gt;<br/>    &lt;span class=&quot;help-hint success&quot;&gt;Impressive bio dude...&lt;/span&gt;<br/>  &lt;/form&gt;
-      </code>
-    </pre>
-  </div>
-</div>
-
-<hr />
-
-<h3>Available sass variables</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<h3>Available variables</h3>
+<p>You don't like the default width values?, you can easily customize them.</p>
 
 <pre>
   <code>
-//Form Label
-$form-label-display: block !default;
-$form-label-cursor: pointer !default;
-$form-label-font-size: px-to-rems(13) !default;
-$form-label-color: scale-color(#000, $lightness: 30%) !default;
-$form-label-font-weight: 300 !default;
-$form-label-margin-bottom: px-to-rems(5) !default;
-$form-input-border-width: 1px !default;
-$form-input-border-style: solid !default;
-$form-inline-label-margin-left: px-to-rems(3) !default;
+$small-min-width: 480px !default;
+$small-max-width: 767px !default;
 
-//Form inputs
-$form-input-radius: 0 !default;
-$form-input-height: px-to-rems(32) !default;
-$form-input-color: rgba(0,0,0, 0.75) !default;
-$form-input-font-size: px-to-rems(13) !default;
-$form-input-padding: px-to-rems(5) !default;
-$form-input-margin-bottom: px-to-rems(11) !default;
-$form-input-box-shadow: inset 0 1px 2px rgba(#ccc,0.35) !default;
-$form-input-focus-box-shadow: 0 0 5px rgba(#ccc, 1) !default;
-$form-input-focus-border-color: #999 !default;
-$form-input-background-color: #FFF !default;
-$form-input-border-color: #CCC !default;
-$form-input-disabled-color: #ECF0F1 !default;
-$form-input-disabled-background-color: #EEE !default;
-$form-input-mini-width: 20% !default;
-$form-input-small-width: $form-input-mini-width * 2 !default; 
-$form-input-medium-width: $form-input-mini-width * 3 !default;
-$form-input-large-width: $form-input-mini-width * 4 !default;
+$medium-min-width: $small-max-width + 1 !default;
+$medium-max-width: 1023px !default;
 
-//Validation states
-$form-label-success-color: #27ae60 !default;
-$form-label-error-color: #e74c3c !default;
-$form-input-success-border-color: $form-label-success-color !default;
-$form-input-error-border-color: $form-label-error-color !default;
-
-//Help hints
-$form-help-hint-color: #FFF !default;
-$form-help-hint-font-size: px-to-rems(11) !default;
-$form-help-hint-font-style: italic !default;
-$form-help-hint-padding: px-to-rems(5) !default;
-
-//Selects
-$form-select-background-color: #FFF !default;
-$form-select-border-style: solid !default;
-$form-select-border-width: 1px !default;
-$form-select-border-color: #CCC !default;
-$form-select-color: #555 !default;
-$form-select-font-size: px-to-rems(14) !default;
-$form-select-hover-background: #F7F7F7 !default;
-$form-select-padding: px-to-rems(5) px-to-rems(7) !default;
-$form-select-radius: 2px !default;
-$form-select-transition-time: 2s !default;
-$form-select-transition-style: linear !default;
-$form-select-backgroun-x-position: 97% !default;
-
-$include-form-select-transition: true !default;
-
-$form-input-media-query: "#{$media-display} and (max-width: #{$screen-xs})" !default;
-  </code>
-</pre>
-
-<hr />
-
-<h3><i class="fa fa-flask"></i> Experimental</h3>
-<p>We keep n the experiments all around Furatto, that's why we build really simple input add-ons solved by flex. It might not work well on IE.</p>
-
-<p>This experimental feature builds add on inputs with minimal HTML and Css. Keep in mind that this is edge features and not all browsers will fully support it.</p>
-
-<h4>Left addon</h4>
-
-<div class="row">
-   <div class="col-6">
-     <div class="input-addon">
-       <a class="addon warning">$</a>
-       <input class="addon-field" type="text">
-     </div>
-   </div>
-   <div class="col-6 nopadding">
-     <pre>
-       <code>
-  &lt;div class=&quot;input-addon&quot;&gt;<br/>       &lt;a class=&quot;addon warning&quot;&gt;$&lt;/a&gt;<br/>       &lt;input class=&quot;addon-field&quot; type=&quot;text&quot;&gt;<br/> &lt;/div&gt;<br/>
-       </code>
-     </pre>
-   </div>
-</div>
-
-<h4>Right addon</h4>
-
-<div class="row">
-   <div class="col-6">
-     <div class="input-addon">
-       <input class="addon-field" type="text">
-       <a class="addon">$</a>
-     </div>
-   </div>
-   <div class="col-6 nopadding">
-     <pre>
-       <code>
-    &lt;div class=&quot;input-addon&quot;&gt;<br/>       &lt;input class=&quot;addon-field&quot; type=&quot;text&quot;&gt;<br/>       &lt;a class=&quot;addon warning&quot;&gt;$&lt;/a&gt;<br/>     &lt;/div&gt;<br/>
-       </code>
-     </pre>
-   </div>
-</div>
-
-
-<h4>Right & left addon</h4>
-
-<div class="row">
-   <div class="col-6">
-     <div class="input-addon">
-       <span class="addon primary">Amount</span>
-       <input class="addon-field" type="text">
-       <span class="addon danger">Amount</span>
-     </div>
-   </div>
-   <div class="col-6 nopadding">
-     <pre>
-       <code>
-   &lt;div class=&quot;input-addon&quot;&gt;<br/>       &lt;span class=&quot;addon danger&quot;&gt;Amount&lt;/span&gt;<br/>       &lt;input class=&quot;addon-field&quot; type=&quot;text&quot;&gt;<br/>       &lt;span class=&quot;addon danger&quot;&gt;Amount&lt;/span&gt;<br/>   &lt;/div&gt;
-       </code>
-     </pre>
-   </div>
-</div>
-
-<p><em>There is currenctly support for 4 color, the <span class="code">default (rgba(147, 148, 108, 0.1))</span>, <span class="code">primary rgba(52, 152, 219, 0.6)</span>, <span class="code">danger rgba(231, 76, 60, 0.6)</span> and <span class="code">warning rgba(211, 84, 0, 0.6).</span></em></p>
-
-<hr />
-
-<h3>Available Sass variables</h3>
-
-<p>It is really easy to customize the addons experimental feature, by simply modifying our Sass variables.</p>
-
-<pre>
-  <code>
-$input-addon-margin-bottom: 1rem !default;
-$addon-border-width: 1px !default;
-$addon-border-style: solid !default;
-$addon-border-color: rgba(147, 128, 108, 0.25) !default;
-$addon-padding: 0.5rem !default;
-$addon-background-color: rgba(147, 148, 108, 0.1) !default;
-$addon-font-color: #666 !default;
-$addon-font-weight: 400 !default;
-$addon-font-size: 14px !default;
-$include-addon-radius: false !default;
-$addon-radius: 2px !default;
-
-//Addon color variations
-$addon-warning-bg-color: rgba(211, 84, 0, 0.6);
-$addon-danger-bg-color: rgba(231, 76, 60, 0.6);
-$addon-primary-bg-color: rgba(52, 152, 219, 0.6); 
+$large-min-width: $medium-max-width + 1 !default;
   </code>
 </pre>
 

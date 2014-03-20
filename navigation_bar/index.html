@@ -9,6 +9,7 @@
 <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, furatto, front-end, frontend, web development, responsive, mobile-first, mobile">
 <meta name="author" content="Abraham Kuri">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" href="/furatto/assets/img/favicon.png">
 <title>
   Furatto - Navigation Bar
 </title>
@@ -158,6 +159,20 @@
     </pre>
    </div>
    <div class="col-6">
+    <h5 class="code">Search bar</h5>  
+    <p>To add a search bar to the navigation bar, is fairly easy, just
+    add a <span class="code">.with-form</span> class name to a list item
+    and inside it add the form, just as shown below:</p>
+    <pre>
+      <code>
+&lt;ul&gt;<br/>  &lt;li class=&quot;with-form&quot;&gt;<br/>    &lt;form action=&quot;&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;<br/>      &lt;input type=&quot;search&quot; name=&quot;&quot; id=&quot;&quot; value=&quot;&quot; /&gt;<br/>      &lt;input type=&quot;submit&quot; name=&quot;&quot; id=&quot;&quot; value=&quot;Search&quot; class=&quot;button pill&quot; /&gt;<br/>    &lt;/form&gt;<br/>  &lt;/li&gt;<br/>&lt;/ul&gt;
+      </code>
+    </pre>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
     <h5 class="code">Dropdowns</h5>  
     <p>It is very easy to group menu items into dropdown menus on the navbar. You just need to add the <span class="code">with-dropdown</span> class to a list item, and inside of it add another <span class="code">ul</span> element.</p>
     <pre>
@@ -167,7 +182,6 @@
     </pre>
    </div>
 </div>
-
 
 <blockquote>
   <h4>Extra support</h4>
@@ -279,6 +293,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
     <li><a href="/furatto/media_queries">Media queries</a></li>
     <li><a href="/furatto/grid">Grid</a></li>
     <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+    <li><a href="/furatto/alignment_utilities">Alignment Utilities</a></li>
     <li><a href="/furatto/utility_classes">Utility classes</a></li>
     <li><a href="/furatto/mixins">Mixins</a></li>
     <li class="divider"></li>
@@ -320,7 +335,7 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
     <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
     <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
   </ul>
-  <a href="http://icalialabs.github.io/furatto/assets/furatto_3.0.1.zip" class="button block primary large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V3']);">Download Furatto</a>
+  <a href="http://icalialabs.github.io/furatto/assets/furatto_3.0.2.zip" class="button block primary large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V3']);">Download Furatto</a>
 </div>
 
      </div>
