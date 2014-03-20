@@ -1,0 +1,67 @@
+---
+layout: default
+title: Furatto - Docs::Alignment Utilities
+---
+
+<h1 class="text-center-sm text-right-md">Alignment utilities</h1>
+
+<p class="main-motto">Furatto provides class names to help you align text for different screen sizes and enhance mobile-friendly development, by deciding how to align the text at a class name scope.</p>
+
+<hr />
+
+<h3>Alignment screen sizes</h3>
+<p>Furatto supports 3 width ranges, from 480px up to 1024px and higher. But you know it is really easy to customize it through the sass variables we provide.</p>
+
+<table class="responsive">
+   <thead>
+     <tr>
+       <th>
+         <span class="muted">Small width 480px to 767px</span>
+       </th>
+       <th>
+         <span class="muted">Medium width 768px to 1023px</span>
+       </th>
+       <th>
+         <span class="muted">Large width 1024px and up</span>
+       </th>
+     </tr>
+   </thead>
+   <tbody>
+   <tr>
+     <td class="docs-visible">text-center-sm</td>
+     <td class="docs-visible">text-center-md</td>
+     <td class="docs-visible">text-center-lg</td>
+   </tr>
+   <tr>
+     <td class="docs-visible">text-left-sm</td>
+     <td class="docs-visible">text-left-md</td>
+     <td class="docs-visible">text-left-lg</td>
+   </tr>
+   <tr>
+     <td class="docs-visible">text-right-sm</td>
+     <td class="docs-visible">text-right-md</td>
+     <td class="docs-visible">text-right-lg</td>
+   </tr>
+   <tr>
+     <td class="docs-visible">text-justify-sm</td>
+     <td class="docs-visible">text-justify-md</td>
+     <td class="docs-visible">text-justify-lg</td>
+   </tr>
+   </tbody>
+</table>
+
+<hr />
+<h3>Available variables</h3>
+<p>You don't like the default width values?, you can easily customize them.</p>
+
+<pre>
+  <code>
+$small-min-width: 480px !default;
+$small-max-width: 767px !default;
+
+$medium-min-width: $small-max-width + 1 !default;
+$medium-max-width: 1023px !default;
+
+$large-min-width: $medium-max-width + 1 !default;
+  </code>
+</pre>
