@@ -3,12 +3,12 @@
 //
 
 $small-min-width: 480px !default;
-$small-max-width: 768px !default;
+$small-max-width: 767px !default;
 
-$medium-min-width: $small-max-width !default;
-$medium-max-width: 1024px !default;
+$medium-min-width: $small-max-width + 1 !default;
+$medium-max-width: 1023px !default;
 
-$large-min-width: $medium-max-width !default;
+$large-min-width: $medium-max-width + 1!default;
 
 .text-right {
   text-align: right;
@@ -63,19 +63,19 @@ $large-min-width: $medium-max-width !default;
 
 //Small screen sizes alignment
 @include screen($resMin: $small-min-width, $resMax: $small-max-width) {
-  .text-center-small {
+  .text-center-sm {
     text-align: center; 
   } 
 
-  .text-left-small {
+  .text-left-sm {
     text-align: left; 
   } 
 
-  .text-justify-small {
+  .text-justify-sm {
     text-align: justify; 
   } 
 
-  .text-right-small {
+  .text-right-sm {
     text-align: right; 
   } 
 }
