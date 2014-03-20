@@ -73,11 +73,6 @@ $blockquote-border-primary-color: lighten(#3498d9, 20%) !default;
 $blockquote-border-success-color: lighten(#2ECC71, 20%) !default;
 $blockquote-border-danger-color: lighten(#E74C3C, 20%) !default;
 
-//Media queries
-$medium-screen: 70.85714286rem !default;
-$medium-screen-max: 70.78571429rem !default;
-$medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-screen-max})" !default;
-
 @if ($typography-reset) {
   a, abbr, acronym, address, 
   b, big, cite, code, del, em, 
@@ -232,12 +227,5 @@ $medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-
     p {
       margin-bottom: 0;
     }
-  }
-
-  @media #{$medium-screen-range} {
-    h1 { font-size: $h1-font-size; }
-    h2 { font-size: $h2-font-size; }
-    h3 { font-size: $h3-font-size; }
-    h4 { font-size: $h4-font-size; }
   }
 }

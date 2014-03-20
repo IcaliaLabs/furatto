@@ -62,8 +62,6 @@ $form-select-backgroun-x-position: 97% !default;
 
 $include-form-select-transition: true !default;
 
-$form-input-media-query: "#{$media-display} and (max-width: #{$screen-xs})" !default;
-
 form {
   display: block;
   width: 100%;
@@ -176,6 +174,13 @@ input[type="color"],
     width: $form-input-large-width; 
   }
 
+  @include phone {
+    &.mini, &.small,
+    &.medium, &.large {
+      width: 100%;
+    }
+  }
+
   &.block {
     width: 100%;
   }
@@ -249,24 +254,4 @@ input[type="radio"] + label {
 
 input[type="file"] {
   width: 100%;
-}
-
-@media #{$form-input-media-query} {
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="color"] {
-    width: 100%;
-  }
 }

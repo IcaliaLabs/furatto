@@ -6,24 +6,22 @@
 
 // General settings
 
-$media-display: "only screen" !default;
-
 // Responsive screen sizes
-$extra-small-screen: 34.28571429rem !default;
-$extra-small-screen-max: 34.21428571rem !default;
-$extra-small-media: "(max-width: #{$extra-small-screen-max})" !default;
+$extra-small-screen: 480px !default;
+$extra-small-screen-max: $extra-small-screen - 1 !default;
+$extra-small-media: "#{$media-display} and (max-width: #{$extra-small-screen-max})" !default;
 
-$small-screen: 54.85714286rem !default;
-$small-screen-max: 54.78571429rem !default;
-$small-screen-media: "(max-width: #{$small-screen-max})" !default;
-$small-screen-range: "(min-width: #{$small-screen}) and (max-width: #{$small-screen-max})" !default;
+$small-screen: 768px !default;
+$small-screen-max: $small-screen - 1 !default;
+$small-screen-media: "#{$media-display} and (max-width: #{$small-screen-max})" !default;
+$small-screen-range: "#{$media-display} and (min-width: #{$small-screen}) and (max-width: #{$small-screen-max})" !default;
 
-$medium-screen: 70.85714286rem !default;
-$medium-screen-max: 70.78571429rem !default;
-$medium-screen-range: "(min-width: #{$medium-screen}) and (max-width: #{$medium-screen-max})" !default;
+$medium-screen: 992px !default;
+$medium-screen-max: $medium-screen - 1 !default;
+$medium-screen-range: "#{$media-display} and (min-width: #{$medium-screen}) and (max-width: #{$medium-screen-max})" !default;
 
-$large-screen: 85.71428571rem !default;
-$large-screen-range: "(min-width: #{$large-screen})" !default;
+$large-screen: 1200px !default;
+$large-screen-range: "#{$media-display} and (min-width: #{$large-screen})" !default;
 
 // Responsive screen orientations
 $portrait-media: "#{$media-display} and (orientation: portrait)" !default;

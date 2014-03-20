@@ -1,9 +1,5 @@
 //Button groups
 
-//
-//@variables
-//
-
 .button-group {
   list-style: none;
   margin: 0; 
@@ -34,7 +30,7 @@
     }
 
     //Media queries
-    @include max-screen($small-device-width) {
+    @include phone {
       float: none;
       display: block;
 

@@ -77,9 +77,7 @@ $navigation-bar-with-form-padding: $navigation-bar-height / 4 $navigation-bar-he
 $navigation-bar-with-form-input-height: $navigation-bar-height / 2 !default;
 
 //Media
-$media-collapse-width: 768px !default;
-$navigation-bar-collapse-query: "#{$media-display} and (max-width: #{$media-collapse-width})" !default;
-$navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-collapse-width})" !default;
+$navigation-bar-collapse-width: 768px !default;
 
 .navigation-bar {
   background: $navigation-bar-background;
@@ -370,16 +368,16 @@ $navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-co
 
 }
 
-@media #{$navigation-bar-uncollapse-query} {
+@include min-screen($navigation-bar-collapse-width) {
   .navigation-bar { overflow: visible; }
 }
 
 //iPad fix
-@media only screen and (orientation: portrait) {
+@include ipad($orientation: portrait) {
   .navigation-bar { overflow: hidden; }
 }
 
-@media #{$navigation-bar-collapse-query} {
+@include max-screen($navigation-bar-collapse-width) {
   .off-screen {
     .navigation-bar {
       .brand-section {

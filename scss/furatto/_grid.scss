@@ -28,8 +28,7 @@ $stack-column-padding-right: 0 !default;
 $stack-column-padding-left: 0 !default;
 
 //Media
-$grid-max-width: 54.85714286rem !default;
-$grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
+$grid-max-width: 768px !default;
 
 //Row variations
 $grid-primary-background-color: rgba(52, 152, 219, 0.8) !default;
@@ -121,7 +120,7 @@ $col-border-alpha: 0.5 !default;
   }
 }
 
-@media #{$grid-max-width-media} {
+@include max-screen($grid-max-width) {
   [class*="col-"] {
     &.border {
 

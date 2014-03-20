@@ -22,7 +22,7 @@
 @mixin responsive-visibility {
   display: block !important;
 
-  &.btn {
+  &.button {
     display: inline-block !important;
   }
 

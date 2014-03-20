@@ -28,9 +28,7 @@ $table-bordered-border-width: 1px !default;
 $table-bordered-border-style: solid !default;
 
 //Media queries
-$media-display: "only screen" !default;
-$media-max-width: 768px !default; //~ 768px
-$media-table-responsive-query: "#{$media-display} and (max-width: #{$media-max-width})" !default;
+$table-media-width: 768px !default; //~ 768px
 
 //Responsive tables
 $include-responsive-tables: true !default;
@@ -105,7 +103,7 @@ table {
 
 @if($include-responsive-tables) {
   //Responsive tables
-  @media #{$media-table-responsive-query} {
+  @include max-screen($table-media-width) {
     table.responsive { 
       margin-bottom: 0; 
 
