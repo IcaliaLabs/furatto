@@ -1,0 +1,81 @@
+//
+//@variables
+//
+
+$small-min-width: 480px !default;
+$small-max-width: 768px !default;
+
+$medium-min-width: $small-max-width !default;
+$medium-max-width: 1024px !default;
+
+$large-min-width: $medium-max-width !default;
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+//Large screen sizes alignment
+@include min-screen($large-min-width) {
+  .text-center-lg {
+    text-align: center; 
+  }
+
+  .text-left-lg {
+    text-align: center; 
+  }
+
+  .text-justify-lg {
+    text-align: center; 
+  }
+
+  .text-right-lg {
+    text-align: right; 
+  }
+}
+
+
+//Medium screen sizes alignment
+@include screen($resMin: $medium-min-width, $resMax: $medium-max-width) {
+  .text-center-md {
+    text-align: center; 
+  }
+
+  .text-left-md {
+    text-align: center; 
+  }
+
+  .text-justify-md {
+    text-align: center; 
+  }
+
+  .text-right-md {
+    text-align: right; 
+  }
+} 
+
+//Small screen sizes alignment
+@include screen($resMin: $small-min-width, $resMax: $small-max-width) {
+  .text-center-small {
+    text-align: center; 
+  } 
+
+  .text-left-small {
+    text-align: left; 
+  } 
+
+  .text-justify-small {
+    text-align: justify; 
+  } 
+
+  .text-right-small {
+    text-align: right; 
+  } 
+}
