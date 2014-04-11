@@ -24,8 +24,9 @@ $form-input-padding: px-to-rems(5) !default;
 $form-input-margin-bottom: px-to-rems(11) !default;
 $form-input-box-shadow: inset 0 1px 2px rgba(#ccc,0.35) !default;
 $form-input-focus-box-shadow: 0 0 5px rgba(#ccc, 1) !default;
-$form-input-focus-border-color: #999 !default;
+$form-input-focus-border-color: rgba(#999, 0.8) !default;
 $form-input-background-color: #FFF !default;
+$form-input-focus-background-color: darken($form-input-background-color, 2%) !default;
 $form-input-border-color: #CCC !default;
 $form-input-disabled-color: #ECF0F1 !default;
 $form-input-disabled-background-color: #EEE !default;
@@ -144,9 +145,9 @@ input[type="color"],
   //Focus state
   &:focus {
     @include box-shadow($form-input-focus-box-shadow);
-    border-color: rgba($form-input-focus-border-color, 0.8);
+    border-color: $form-input-focus-border-color; 
     outline: none;
-    background: darken($form-input-background-color, 2%);
+    background: $form-input-focus-background-color;
   }
 
   //Disabled inputs
