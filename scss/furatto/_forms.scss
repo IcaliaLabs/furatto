@@ -34,6 +34,7 @@ $form-input-mini-width: 20% !default;
 $form-input-small-width: $form-input-mini-width * 2 !default; 
 $form-input-medium-width: $form-input-mini-width * 3 !default;
 $form-input-large-width: $form-input-mini-width * 4 !default;
+$form-input-file-width: 100% !default;;
 
 //Validation states
 $form-label-success-color: #27ae60 !default;
@@ -254,5 +255,5 @@ input[type="radio"] + label {
 }
 
 input[type="file"] {
-  width: 100%;
+  width: $form-input-file-width;
 }
