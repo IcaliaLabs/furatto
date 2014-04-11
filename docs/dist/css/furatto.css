@@ -112,6 +112,11 @@ object {
   padding: 0;
 }
 
+/* line 136, ../../scss/furatto/_base.scss */
+.map img {
+  max-width: none;
+}
+
 /* line 214, ../../scss/furatto/_buttons.scss */
 button, .button {
   display: inline-block;
