@@ -9,6 +9,7 @@
 
 //Grid settings
 $number-of-columns: 12 !default;
+$offset-columns: $number-of-columns !default;
 $column-separation-factor: 0.1833 !default;
 
 //Row config
@@ -53,6 +54,20 @@ $col-border-alpha: 0.5 !default;
   }
 }
 
+//
+//@mixin
+//
+@mixin grid-columns-offset($columns: $offset-columns) {
+  $column-width: 100 / $columns;
+
+  @for $i from 1 through $columns {
+    .offset-#{$i} {
+      margin-left: percentage(($column-width * $i) / 100);
+    }
+  }
+
+}
+
 .row {
   @extend %clearfix;
   display: block;
@@ -80,6 +95,7 @@ $col-border-alpha: 0.5 !default;
 
   //Columns
   @include grid-columns;
+  @include grid-columns-offset;
 }
 
 //Separation between rows
@@ -141,5 +157,9 @@ $col-border-alpha: 0.5 !default;
     margin-bottom: $stack-column-separation;
     padding-right: $stack-column-padding-right;
     padding-left: $stack-column-padding-left;
+  }
+
+  [class*="offset-"] {
+    margin-left: 0; 
   }
 }

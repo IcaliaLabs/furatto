@@ -2116,136 +2116,189 @@ blockquote p {
   margin-bottom: 0;
 }
 
-/* line 56, ../../scss/furatto/_grid.scss */
+/* line 71, ../../scss/furatto/_grid.scss */
 .row {
   display: block;
   text-rendering: optimizespeed;
 }
-/* line 62, ../../scss/furatto/_grid.scss */
+/* line 77, ../../scss/furatto/_grid.scss */
 .row.primary,
 .row [class*="col-"].primary {
   background: rgba(52, 152, 219, 0.8);
 }
-/* line 67, ../../scss/furatto/_grid.scss */
+/* line 82, ../../scss/furatto/_grid.scss */
 .row.danger,
 .row [class*="col-"].danger {
   background: rgba(231, 76, 60, 0.8);
 }
-/* line 72, ../../scss/furatto/_grid.scss */
+/* line 87, ../../scss/furatto/_grid.scss */
 .row.warning,
 .row [class*="col-"].warning {
   background: rgba(241, 196, 15, 0.8);
 }
-/* line 77, ../../scss/furatto/_grid.scss */
+/* line 92, ../../scss/furatto/_grid.scss */
 .row.success,
 .row [class*="col-"].success {
   background: rgba(46, 204, 113, 0.8);
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-1 {
   width: 8.33333%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-2 {
   width: 16.66667%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-3 {
   width: 25%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-4 {
   width: 33.33333%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-5 {
   width: 41.66667%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-6 {
   width: 50%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-7 {
   width: 58.33333%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-8 {
   width: 66.66667%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-9 {
   width: 75%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-10 {
   width: 83.33333%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-11 {
   width: 91.66667%;
 }
-/* line 50, ../../scss/furatto/_grid.scss */
+/* line 51, ../../scss/furatto/_grid.scss */
 .row .col-12 {
   width: 100%;
 }
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-1 {
+  margin-left: 8.33333%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-2 {
+  margin-left: 16.66667%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-3 {
+  margin-left: 25%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-4 {
+  margin-left: 33.33333%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-5 {
+  margin-left: 41.66667%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-6 {
+  margin-left: 50%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-7 {
+  margin-left: 58.33333%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-8 {
+  margin-left: 66.66667%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-9 {
+  margin-left: 75%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-10 {
+  margin-left: 83.33333%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-11 {
+  margin-left: 91.66667%;
+}
+/* line 64, ../../scss/furatto/_grid.scss */
+.row .offset-12 {
+  margin-left: 100%;
+}
 
-/* line 86, ../../scss/furatto/_grid.scss */
+/* line 102, ../../scss/furatto/_grid.scss */
 .row + .row {
   margin-top: 0.14286rem;
 }
 
-/* line 92, ../../scss/furatto/_grid.scss */
+/* line 108, ../../scss/furatto/_grid.scss */
 [class*="col-"] {
   padding: 8px 8px 8px 0;
   float: left;
 }
-/* line 96, ../../scss/furatto/_grid.scss */
+/* line 112, ../../scss/furatto/_grid.scss */
 [class*="col-"].border {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
 }
-/* line 101, ../../scss/furatto/_grid.scss */
+/* line 117, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.left {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
-/* line 105, ../../scss/furatto/_grid.scss */
+/* line 121, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.right {
   border-right-color: rgba(255, 255, 255, 0.5);
 }
-/* line 109, ../../scss/furatto/_grid.scss */
+/* line 125, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.top {
   border-top-color: rgba(255, 255, 255, 0.5);
 }
-/* line 113, ../../scss/furatto/_grid.scss */
+/* line 129, ../../scss/furatto/_grid.scss */
 [class*="col-"].border.bottom {
   border-bottom-color: rgba(255, 255, 255, 0.5);
 }
-/* line 118, ../../scss/furatto/_grid.scss */
+/* line 134, ../../scss/furatto/_grid.scss */
 [class*="col-"] [class*="col-"] {
   padding-left: 0;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 127, ../../scss/furatto/_grid.scss */
+  /* line 143, ../../scss/furatto/_grid.scss */
   [class*="col-"].border.left {
     border-top-color: rgba(255, 255, 255, 0.5);
     border-left-color: transparent;
   }
-  /* line 132, ../../scss/furatto/_grid.scss */
+  /* line 148, ../../scss/furatto/_grid.scss */
   [class*="col-"].border.right {
     border-bottom-color: rgba(255, 255, 255, 0.5);
     border-right-color: transparent;
   }
 
-  /* line 138, ../../scss/furatto/_grid.scss */
+  /* line 154, ../../scss/furatto/_grid.scss */
   .row > [class*="col-"] {
     width: 100%;
     margin-left: 0;
     margin-bottom: 2px;
     padding-right: 0;
     padding-left: 0;
+  }
+
+  /* line 162, ../../scss/furatto/_grid.scss */
+  [class*="offset-"] {
+    margin-left: 0;
   }
 }
 /* line 41, ../../scss/furatto/_tables.scss */
