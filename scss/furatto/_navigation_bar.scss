@@ -21,6 +21,8 @@ $navigation-font-size: px-to-rems(13) !default;
 $navigation-fixed-z-index: 1030 !default;
 $navigation-bar-border-bottom: transparent !default;
 $navigation-bar-divider-color: scale-color($navigation-bar-background, $lightness: 13%) !default;
+$navigation-bar-divider-size: 1px !default;
+$navigation-bar-divider-style: solid !default;
 
 //Brand section
 $navigation-bar-brand-section-font-size: px-to-rems(18) !default;
@@ -71,6 +73,8 @@ $include-navigation-bar-dropdown-top-border: false !default;
 $navigation-bar-dropdown-radius: 3px !default;
 $navigation-bar-dropdown-background: $navigation-bar-background !default;
 $navigation-bar-dropdown-divider-color: $navigation-bar-divider-color !default;
+$navigation-bar-dropdown-divider-size: $navigation-bar-divider-size !default;
+$navigation-bar-dropdown-divider-style: $navigation-bar-divider-style !default;
 
 
 //Form support
@@ -149,7 +153,7 @@ $navigation-bar-collapse-width: 768px !default;
 
         &.divider {
           height: auto;
-          border-bottom: 1px solid $navigation-bar-divider-color;
+          border-bottom: $navigation-bar-divider-size $navigation-bar-divider-style $navigation-bar-divider-color;
         }
       }
     }
@@ -234,7 +238,7 @@ $navigation-bar-collapse-width: 768px !default;
 
       &.divider {
         height: $navigation-bar-height; 
-        border-left: 1px solid $navigation-bar-divider-color;
+        border-left: $navigation-bar-divider-size $navigation-bar-divider-style $navigation-bar-divider-color;
       }
     }
 
@@ -317,7 +321,7 @@ $navigation-bar-collapse-width: 768px !default;
 
           &.divider {
             height: $navigation-bar-dropdown-divider-height; 
-            border-top: 1px solid $navigation-bar-dropdown-divider-color;
+            border-top: $navigation-bar-dropdown-divider-size $navigation-bar-dropdown-divider-style $navigation-bar-dropdown-divider-color;
           }
         }
       }
