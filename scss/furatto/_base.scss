@@ -130,3 +130,10 @@ object {
 .nopadding {
   padding: 0;
 }
+
+//Google maps support
+.gmap {
+  img {
+    max-width: none;
+  }
+}

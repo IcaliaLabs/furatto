@@ -1,3 +1,22 @@
+## 3.0.3 (May 28, 2014)
+### Features
+
+- Add variables for input focus border color
+- Add variables for input file width
+- Adds support better for google maps
+- Add offset for columns
+- Add small tag font size as a variable for customization
+- Add divider border size variable for customization
+- Add dropdown top position css rule with custom variable
+- Add more flexibility for paddings on columns
+- Add color css variable for alerts
+
+
+### Milestone
+
+[https://github.com/IcaliaLabs/furatto/issues?milestone=4&page=1&state=closed](https://github.com/IcaliaLabs/furatto/issues?milestone=4&page=1&state=closed)
+
+
 ## 3.0.2 (March 20, 2014)
 ### Features
 
