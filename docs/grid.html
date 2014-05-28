@@ -60,6 +60,31 @@ title: Furatto - Docs::Grid
 </div>
 
 <hr />
+<h3>Offset on columns</h3>
+<p>Probably you will want to add some offset the columns of the grid, to put it more to the right, don't worry we have you covered.</p>
+<p>Let us explain this thing works. In a case where want blank space
+between columns, the fair solution was to add some blank columns
+actually, that is not necessary with the offsets though. Offset will add
+a margin to the left according to the 12 column grid Furatto offers.</p>
+<div class="nested-grid-demo text-center">
+  <div class="row">
+    <div class="col-2 offset-2 primary white">
+      I have a two column offset
+    </div>
+    <div class="col-2 offset-3 primary white">
+      I have a three column offset
+    </div>
+  </div>
+</div>
+<div class="hidden-xs">
+  <pre>
+            <code>
+&lt;div class=&quot;nested-grid-demo text-center&quot;&gt;<br/>  &lt;div class=&quot;row&quot;&gt;<br/>    &lt;div class=&quot;col-2 offset-2 primary white&quot;&gt;<br/>      I have a two column offset<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;col-2 offset-3 primary white&quot;&gt;<br/>      I have a three column offset<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;
+           </code>
+  </pre>
+</div>
+
+<hr />
 <h3>Customize with Sass</h3>
 
 <p>Don't want a 12 column grid?, you can customize the grid behavior fairly easy by modifying a few variables. Furatto will take care of the rest.</p>
