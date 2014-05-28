@@ -6,6 +6,7 @@
 | MoneyPool | La manera mas facil de recaudar dinero entre amigos | https://www.moneypool.mx/ |
 | Icalia Wiki | Icalia Labs Wiki | http://wiki.icalialabs.com/ |
 | Landkom | The link to your vision | http://landkom-mx.com/ |
+| Sabisu | A Rails api explorer | https://github.com/IcaliaLabs/sabisu-rails |
 
 Be the first one and tell us about it! 
 

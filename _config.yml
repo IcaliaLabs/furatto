@@ -12,11 +12,11 @@ url: http://localhost:9001
 encoding: UTF-8
 
 # Custom config
-current_version: 3.0.2
+current_version: 3.0.3
 repo: https://github.com/IcaliaLabs/furatto
 
 current_ip: 192.168.0.10
 
 download:
-  dist: http://icalialabs.github.io/furatto/assets/furatto_3.0.2.zip
-  source: http://icalialabs.github.io/furatto/assets/furatto_3.0.2_sass.zip
+  dist: http://icalialabs.github.io/furatto/assets/furatto_3.0.3.zip
+  source: http://icalialabs.github.io/furatto/assets/furatto_3.0.3_sass.zip
