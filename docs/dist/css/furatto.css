@@ -619,7 +619,7 @@ button.block + button.block, .button.block + .button.block {
   background: #e67e22;
 }
 
-/* line 118, ../../scss/furatto/_alerts.scss */
+/* line 132, ../../scss/furatto/_alerts.scss */
 .alert {
   display: block;
   padding: 0.5625rem 2.5rem 0.5625rem 1rem;
@@ -631,7 +631,7 @@ button.block + button.block, .button.block + .button.block {
   color: #bf6516;
   border: 0.0625rem solid #f0b37e;
 }
-/* line 47, ../../scss/furatto/_alerts.scss */
+/* line 59, ../../scss/furatto/_alerts.scss */
 .alert.radius {
   -webkit-border-radius: 0.1875rem;
   -moz-border-radius: 0.1875rem;
@@ -639,11 +639,11 @@ button.block + button.block, .button.block + .button.block {
   -o-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
 }
-/* line 64, ../../scss/furatto/_alerts.scss */
+/* line 78, ../../scss/furatto/_alerts.scss */
 .alert .close {
   color: #a85913;
 }
-/* line 122, ../../scss/furatto/_alerts.scss */
+/* line 136, ../../scss/furatto/_alerts.scss */
 .alert .close {
   line-height: 0;
   padding: 0.3125rem;
@@ -660,12 +660,12 @@ button.block + button.block, .button.block + .button.block {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
-/* line 89, ../../scss/furatto/_alerts.scss */
+/* line 103, ../../scss/furatto/_alerts.scss */
 .alert .close:hover, .alert .close:focus {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 124, ../../scss/furatto/_alerts.scss */
+/* line 138, ../../scss/furatto/_alerts.scss */
 .alert.round {
   -webkit-border-radius: 62.5rem;
   -moz-border-radius: 62.5rem;
@@ -673,7 +673,7 @@ button.block + button.block, .button.block + .button.block {
   -o-border-radius: 62.5rem;
   border-radius: 62.5rem;
 }
-/* line 125, ../../scss/furatto/_alerts.scss */
+/* line 139, ../../scss/furatto/_alerts.scss */
 .alert.radius {
   -webkit-border-radius: 0.1875rem;
   -moz-border-radius: 0.1875rem;
@@ -681,33 +681,33 @@ button.block + button.block, .button.block + .button.block {
   -o-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
 }
-/* line 127, ../../scss/furatto/_alerts.scss */
+/* line 141, ../../scss/furatto/_alerts.scss */
 .alert.primary {
   background: #a0cfee;
   color: #217dbb;
   border: 0.0625rem solid #8bc4ea;
 }
-/* line 64, ../../scss/furatto/_alerts.scss */
+/* line 78, ../../scss/furatto/_alerts.scss */
 .alert.primary .close {
   color: #1d6fa5;
 }
-/* line 128, ../../scss/furatto/_alerts.scss */
+/* line 142, ../../scss/furatto/_alerts.scss */
 .alert.success {
   background: #93e7b6;
   color: #25a25a;
   border: 0.0625rem solid #7ee2a8;
 }
-/* line 64, ../../scss/furatto/_alerts.scss */
+/* line 78, ../../scss/furatto/_alerts.scss */
 .alert.success .close {
   color: #208e4e;
 }
-/* line 129, ../../scss/furatto/_alerts.scss */
+/* line 143, ../../scss/furatto/_alerts.scss */
 .alert.danger {
   background: #f5b4ae;
   color: #d62c1a;
   border: 0.0625rem solid #f29f97;
 }
-/* line 64, ../../scss/furatto/_alerts.scss */
+/* line 78, ../../scss/furatto/_alerts.scss */
 .alert.danger .close {
   color: #bf2718;
 }

@@ -10,6 +10,7 @@ $alert-margin-bottom: px-to-rems(20) !default;
 $alert-font-size: px-to-rems(13) !default;
 $alert-font-weight: normal !default;
 $alert-default-background: #e67e22 !default;
+$alert-text-color: darken($alert-default-background, 10%) !default;
 
 //Close settings
 $alert-close-font-size: px-to-rems(16) !default;
@@ -30,6 +31,17 @@ $alert-border-style: solid !default;
 $alert-primary-background: #3498db !default;
 $alert-success-background: #2ecc71 !default;
 $alert-danger-background: #e74c3c !default;
+
+//Text color for background variations
+$alert-primary-text-color: darken($alert-primary-background, 10%) !default;
+$alert-success-text-color: darken($alert-success-background, 10%)!default;
+$alert-danger-text-color: darken($alert-danger-background, 10%) !default;
+
+//Text color for background variations
+$alert-primary-close-color: darken($alert-primary-background, 15%) !default;
+$alert-success-close-color: darken($alert-success-background, 15%)!default;
+$alert-danger-close-color: darken($alert-danger-background, 15%) !default;
+
 
 //
 //@mixin
@@ -54,15 +66,17 @@ $alert-danger-background: #e74c3c !default;
 //@mixin
 // We use this to create the different styles of alerts
 // $background-color - The color for the alert background. Default: $alert-default-background
+// $text-color- The color for the alert text. Default: $alert-text-color
+// $close-color The color for the alert close button. Default: darken($background-color, 15%)
 //
 
-@mixin alert-style($background-color: $alert-default-background) {
+@mixin alert-style($background-color: $alert-default-background, $text-color: $alert-text-color, $close-color: darken($background-color, 15%)) {
   background: lighten($background-color, 25%); 
-  color: darken($background-color, 10%);
+  color: $text-color;
   border: $alert-border-width $alert-border-style lighten($background-color, 20%);
 
   .close {
-    color: darken($background-color, 15%);
+    color: $close-color; 
   }
 }
 
@@ -124,7 +138,7 @@ $alert-danger-background: #e74c3c !default;
   &.round { @include border-radius($alert-round) }
   &.radius { @include border-radius($alert-radius); }
 
-  &.primary{ @include alert-style($alert-primary-background); }
-  &.success { @include alert-style($alert-success-background); }
-  &.danger { @include alert-style($alert-danger-background); }
+  &.primary{ @include alert-style($alert-primary-background, $alert-primary-text-color, $alert-primary-close-color); }
+  &.success { @include alert-style($alert-success-background, $alert-success-text-color, $alert-success-close-color); }
+  &.danger { @include alert-style($alert-danger-background, $alert-danger-text-color, $alert-danger-close-color); }
 }
