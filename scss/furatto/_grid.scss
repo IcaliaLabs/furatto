@@ -134,6 +134,22 @@ $col-border-alpha: 0.5 !default;
   [class*="col-"] {
     padding-left: 0; 
   }
+
+  &.nopaddingleft {
+    padding-left: 0; 
+  }
+
+  &.nopaddingtop {
+    padding-top: 0; 
+  }
+
+  &.nopaddingright {
+    padding-right: 0; 
+  }
+
+  &.nopaddingbottom {
+    padding-bottom: 0; 
+  }
 }
 
 @include max-screen($grid-max-width) {
