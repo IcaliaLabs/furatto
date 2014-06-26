@@ -51,7 +51,7 @@ Jekyll is a great way to work with static pages, we definitely recommend you tak
 
 ### Old documentation
 
-We still provide support for version 1 and 2 as it is a big change from one to another, you can visit the old docs [V1](http://icalialabs.github.io/furatto/old_docs/v1/) and [V2](http://icalialabs.github.io/furatto/old_docs/v2/). 
+We still provide support for version 1 and 2 as it is a big change from one to another, you can visit the old docs [V1](http://icalialabs.github.io/furatto/old_docs/v1/) and [V2](http://icalialabs.github.io/furatto/old_docs/v2/).
 
 We encourage you to migrate to version 3 as is a more stable, friendly and extendable version.
 
@@ -64,7 +64,7 @@ Furatto V3 now uses [Grunt](http://gruntjs.com/) to compile all the Sass code an
 From the command line:
 
 1. Install `grunt-cli` globally with `npm install -g grunt-cli`.
-2. Navigate to the root `/bootstrap` directory, then run `npm install`. npm will look at [package.json](https://github.com/icalialabs/furatto/blob/master/package.json) and automatically install the necessary local dependencies listed there.
+2. Navigate to the root `/furatto` directory, then run `npm install`. npm will look at [package.json](https://github.com/icalialabs/furatto/blob/master/package.json) and automatically install the necessary local dependencies listed there.
 
 If you need to install npm, or you are not quite sure what it is, here is a quick link for you to get started. [NPM](https://github.com/npm/npm)
 
