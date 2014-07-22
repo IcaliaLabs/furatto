@@ -1,7 +1,7 @@
 @import "../scss/furatto/functions";
 @import "compass/css3";
 
-$primary-color: #e4652d;
+$primary-color: #B565A7;
 
 //Base config
 $warning-text-color: $primary-color;
@@ -27,6 +27,12 @@ $navigation-bar-hover-link-background-color: transparent;
 $navigation-bar-border-bottom: 1px solid darken($primary-color, 5%);
 $col-border-alpha: 0.2;
 
+//label
+$label-warning-background: $primary-color;
+
+$blockquote-border-primary-color: $primary-color;
+$blockquote-border-color: $primary-color;
+
 .upside-down-ninja {
   float: right;
   padding-right: 30px;
@@ -43,7 +49,7 @@ $col-border-alpha: 0.2;
 
 .main-description-container {
   padding: 100px 20px 0 20px;
-  background: #e4652d;
+  background: $primary-color;
   position: relative;
   overflow: hidden;
 
@@ -59,7 +65,7 @@ $col-border-alpha: 0.2;
   }
 
   .subheader {
-    color: rgb(120, 22, 26);
+    color: darken($primary-color, 15%);
     margin-top: 0;
     font-weight: 200;
     font-size: px-to-rems(20);
@@ -74,11 +80,11 @@ $col-border-alpha: 0.2;
   }
 
   .social {
-    color: rgb(120, 22, 26);
+    color: darken($primary-color, 15%);
 
     a {
       .fa {
-        color: rgb(120, 22, 26);
+        color: darken($primary-color, 15%);
         font-size: px-to-rems(38);
       }
     }
@@ -102,7 +108,7 @@ $col-border-alpha: 0.2;
   margin-bottom: 30px;
   
   .header {
-    color: rgb(54, 53, 53);
+    color: darken($primary-color, 10%);
     letter-spacing: 3px;
     font-size: px-to-rems(18);
     margin: 0;
@@ -252,7 +258,7 @@ $col-border-alpha: 0.2;
 //Docs: Getting started
 .getting-started-descriptions {
   .header {
-    color: #e4652d;
+    color: darken($primary-color, 8%);
     font-weight: bold;
   }
 }
@@ -378,7 +384,7 @@ $col-border-alpha: 0.2;
 }
 
 .code {
-  color: #d44950;
+  color: darken($primary-color, 5%);
   white-space: nowrap;
   font-weight: bold;
   @include border-radius(3px);

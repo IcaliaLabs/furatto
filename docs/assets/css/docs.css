@@ -1,121 +1,121 @@
-/* line 30, ../../../docs_scss/docs.scss */
+/* line 36, ../../../docs_scss/docs.scss */
 .upside-down-ninja {
   float: right;
   padding-right: 30px;
 }
 
-/* line 35, ../../../docs_scss/docs.scss */
+/* line 41, ../../../docs_scss/docs.scss */
 .main-motto {
   font-size: 1.25rem;
   color: #6F6F6F;
 }
 
-/* line 40, ../../../docs_scss/docs.scss */
+/* line 46, ../../../docs_scss/docs.scss */
 .white {
   color: #FFF;
 }
 
-/* line 44, ../../../docs_scss/docs.scss */
+/* line 50, ../../../docs_scss/docs.scss */
 .main-description-container {
   padding: 100px 20px 0 20px;
-  background: #e4652d;
+  background: #b565a7;
   position: relative;
   overflow: hidden;
 }
-/* line 50, ../../../docs_scss/docs.scss */
+/* line 56, ../../../docs_scss/docs.scss */
 .main-description-container .header {
   font-weight: bold;
   color: #FFF;
   margin-bottom: 0;
   font-size: 2.5rem;
 }
-/* line 56, ../../../docs_scss/docs.scss */
+/* line 62, ../../../docs_scss/docs.scss */
 .main-description-container .header + .text-warning {
   font-size: 1.625rem;
 }
-/* line 61, ../../../docs_scss/docs.scss */
+/* line 67, ../../../docs_scss/docs.scss */
 .main-description-container .subheader {
-  color: #78161a;
+  color: #8b437e;
   margin-top: 0;
   font-weight: 200;
   font-size: 1.25rem;
 }
-/* line 68, ../../../docs_scss/docs.scss */
+/* line 74, ../../../docs_scss/docs.scss */
 .main-description-container .navigation {
   padding: 0;
 }
-/* line 72, ../../../docs_scss/docs.scss */
+/* line 78, ../../../docs_scss/docs.scss */
 .main-description-container .download {
   font-weight: bold;
 }
-/* line 76, ../../../docs_scss/docs.scss */
+/* line 82, ../../../docs_scss/docs.scss */
 .main-description-container .social {
-  color: #78161a;
+  color: #8b437e;
 }
-/* line 80, ../../../docs_scss/docs.scss */
+/* line 86, ../../../docs_scss/docs.scss */
 .main-description-container .social a .fa {
-  color: #78161a;
+  color: #8b437e;
   font-size: 2.375rem;
 }
-/* line 87, ../../../docs_scss/docs.scss */
+/* line 93, ../../../docs_scss/docs.scss */
 .main-description-container .row {
   width: 80%;
 }
-/* line 92, ../../../docs_scss/docs.scss */
+/* line 98, ../../../docs_scss/docs.scss */
 .main-description-container .computer-ninja {
   position: relative;
   top: 10px;
 }
 
-/* line 98, ../../../docs_scss/docs.scss */
+/* line 104, ../../../docs_scss/docs.scss */
 .skills-header-container {
   text-align: center;
   border-bottom: 1px solid #999;
   padding: 22px 0;
   margin-bottom: 30px;
 }
-/* line 104, ../../../docs_scss/docs.scss */
+/* line 110, ../../../docs_scss/docs.scss */
 .skills-header-container .header {
-  color: #363535;
+  color: #9c4b8e;
   letter-spacing: 3px;
   font-size: 1.125rem;
   margin: 0;
 }
 
-/* line 113, ../../../docs_scss/docs.scss */
+/* line 119, ../../../docs_scss/docs.scss */
 .skills .skills-motto {
   margin-bottom: 40px;
   padding-right: 100px;
 }
-/* line 118, ../../../docs_scss/docs.scss */
+/* line 124, ../../../docs_scss/docs.scss */
 .skills .skills-header {
   color: #444;
   font-size: 1.25rem;
   margin: 0;
 }
-/* line 123, ../../../docs_scss/docs.scss */
+/* line 129, ../../../docs_scss/docs.scss */
 .skills .skills-header + .skills-header {
   color: #7d7d7d;
 }
-/* line 128, ../../../docs_scss/docs.scss */
+/* line 134, ../../../docs_scss/docs.scss */
 .skills .skill {
   text-align: center;
 }
-/* line 129, ../../../docs_scss/docs.scss */
+/* line 135, ../../../docs_scss/docs.scss */
 .skills .skill img {
   margin-bottom: 8px;
 }
-/* line 133, ../../../docs_scss/docs.scss */
+/* line 139, ../../../docs_scss/docs.scss */
 .skills .skill h6 {
-  color: #e4652d;
+  color: #b565a7;
 }
 
-/* line 141, ../../../docs_scss/docs.scss */
+/* line 147, ../../../docs_scss/docs.scss */
 .examples {
   background: #2b3035;
   padding-bottom: 20px;
 }
-/* line 145, ../../../docs_scss/docs.scss */
+/* line 151, ../../../docs_scss/docs.scss */
 .examples .examples-header {
   text-align: center;
   padding: 22px 0;
@@ -123,17 +123,17 @@
   border-bottom: 1px solid rgba(204, 204, 204, 0.2);
   margin-bottom: 20px;
 }
-/* line 151, ../../../docs_scss/docs.scss */
+/* line 157, ../../../docs_scss/docs.scss */
 .examples .examples-header .header {
   color: #FFF;
   margin: 0;
   font-size: 1.125rem;
 }
-/* line 158, ../../../docs_scss/docs.scss */
+/* line 164, ../../../docs_scss/docs.scss */
 .examples .examples-content {
   padding: 30px 0 20px 0;
 }
-/* line 161, ../../../docs_scss/docs.scss */
+/* line 167, ../../../docs_scss/docs.scss */
 .examples .examples-content .examples-motto,
 .examples .examples-content .examples-bottom-motto {
   margin: 0;
@@ -142,11 +142,11 @@
   font-size: 1.125rem;
   margin-bottom: 40px;
 }
-/* line 169, ../../../docs_scss/docs.scss */
+/* line 175, ../../../docs_scss/docs.scss */
 .examples .examples-content .examples-wrapper {
   margin-bottom: 50px;
 }
-/* line 173, ../../../docs_scss/docs.scss */
+/* line 179, ../../../docs_scss/docs.scss */
 .examples .examples-content .example {
   display: block;
   padding: 20px 0;
@@ -160,20 +160,20 @@
   width: 80%;
   text-align: center;
 }
-/* line 183, ../../../docs_scss/docs.scss */
+/* line 189, ../../../docs_scss/docs.scss */
 .examples .examples-content .example img {
   margin-bottom: 10px;
 }
-/* line 187, ../../../docs_scss/docs.scss */
+/* line 193, ../../../docs_scss/docs.scss */
 .examples .examples-content .example:hover {
   text-decoration: none;
 }
 
-/* line 194, ../../../docs_scss/docs.scss */
+/* line 200, ../../../docs_scss/docs.scss */
 .contribute {
   padding-bottom: 20px;
 }
-/* line 197, ../../../docs_scss/docs.scss */
+/* line 203, ../../../docs_scss/docs.scss */
 .contribute .contribute-header {
   text-align: center;
   padding: 22px 0;
@@ -181,44 +181,44 @@
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   margin-bottom: 20px;
 }
-/* line 204, ../../../docs_scss/docs.scss */
+/* line 210, ../../../docs_scss/docs.scss */
 .contribute .contribute-header .header {
   color: #1b1b1b;
   margin: 0;
   font-size: 1.125rem;
 }
-/* line 211, ../../../docs_scss/docs.scss */
+/* line 217, ../../../docs_scss/docs.scss */
 .contribute .contribute-content {
   padding: 40px 0;
 }
-/* line 213, ../../../docs_scss/docs.scss */
+/* line 219, ../../../docs_scss/docs.scss */
 .contribute .contribute-content .contribution {
   padding: 20px 30px;
   text-align: center;
 }
 
-/* line 222, ../../../docs_scss/docs.scss */
+/* line 228, ../../../docs_scss/docs.scss */
 .main-content-wrapper {
   padding: 10px;
 }
 
-/* line 226, ../../../docs_scss/docs.scss */
+/* line 232, ../../../docs_scss/docs.scss */
 .row .sidebar {
   background: #FCFCFC;
   height: 100%;
   padding-left: 0.9375rem;
   padding-top: 1.25rem;
 }
-/* line 234, ../../../docs_scss/docs.scss */
+/* line 240, ../../../docs_scss/docs.scss */
 .row .sidebar .navigation li a {
   display: block;
 }
-/* line 237, ../../../docs_scss/docs.scss */
+/* line 243, ../../../docs_scss/docs.scss */
 .row .sidebar .navigation li a:hover {
   background: #efefef;
   color: #333;
 }
-/* line 244, ../../../docs_scss/docs.scss */
+/* line 250, ../../../docs_scss/docs.scss */
 .row .sidebar .header {
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -226,115 +226,115 @@
   color: #666;
 }
 
-/* line 254, ../../../docs_scss/docs.scss */
+/* line 260, ../../../docs_scss/docs.scss */
 .getting-started-descriptions .header {
-  color: #e4652d;
+  color: #a34e94;
   font-weight: bold;
 }
 
-/* line 261, ../../../docs_scss/docs.scss */
+/* line 267, ../../../docs_scss/docs.scss */
 .whats-included h4 {
   font-weight: 600;
 }
 
-/* line 267, ../../../docs_scss/docs.scss */
+/* line 273, ../../../docs_scss/docs.scss */
 .examples h5 {
   font-weight: 600;
   margin-bottom: 0.375rem;
 }
 
-/* line 275, ../../../docs_scss/docs.scss */
+/* line 281, ../../../docs_scss/docs.scss */
 .docs-examples h5 {
   font-weight: 600;
   margin-bottom: 0.375rem;
 }
-/* line 280, ../../../docs_scss/docs.scss */
+/* line 286, ../../../docs_scss/docs.scss */
 .docs-examples small {
   font-size: 0.875rem;
 }
-/* line 284, ../../../docs_scss/docs.scss */
+/* line 290, ../../../docs_scss/docs.scss */
 .docs-examples .example-link {
   color: #222;
 }
-/* line 286, ../../../docs_scss/docs.scss */
+/* line 292, ../../../docs_scss/docs.scss */
 .docs-examples .example-link:hover {
   text-decoration: none;
 }
 
-/* line 296, ../../../docs_scss/docs.scss */
+/* line 302, ../../../docs_scss/docs.scss */
 .footer .navigation li a {
   font-weight: 100;
 }
-/* line 298, ../../../docs_scss/docs.scss */
+/* line 304, ../../../docs_scss/docs.scss */
 .footer .navigation.inline {
   margin-bottom: 0px;
 }
-/* line 303, ../../../docs_scss/docs.scss */
+/* line 309, ../../../docs_scss/docs.scss */
 .footer .furatto-description .name-header {
   font-weight: bold;
   font-size: 1.25rem;
   letter-spacing: 1.5px;
 }
-/* line 308, ../../../docs_scss/docs.scss */
+/* line 314, ../../../docs_scss/docs.scss */
 .footer .furatto-description p {
   line-height: 22px;
   font-weight: 300;
 }
-/* line 314, ../../../docs_scss/docs.scss */
+/* line 320, ../../../docs_scss/docs.scss */
 .footer h4, .footer h5, .footer li, .footer p, .footer .fa, .footer a {
   color: #FFF;
 }
-/* line 318, ../../../docs_scss/docs.scss */
+/* line 324, ../../../docs_scss/docs.scss */
 .footer .want-more {
-  background: #d2531b;
+  background: #a65097;
   text-align: center;
   padding: 20px 8px;
 }
-/* line 324, ../../../docs_scss/docs.scss */
+/* line 330, ../../../docs_scss/docs.scss */
 .footer .want-more a {
   color: #FFF;
 }
-/* line 327, ../../../docs_scss/docs.scss */
+/* line 333, ../../../docs_scss/docs.scss */
 .footer .want-more a:hover {
   color: #FFF;
   text-decoration: underline;
 }
-/* line 333, ../../../docs_scss/docs.scss */
+/* line 339, ../../../docs_scss/docs.scss */
 .footer .want-more .fa.fa-2x {
   margin-bottom: 20px;
 }
-/* line 337, ../../../docs_scss/docs.scss */
+/* line 343, ../../../docs_scss/docs.scss */
 .footer .want-more ul {
   padding: 0;
 }
-/* line 340, ../../../docs_scss/docs.scss */
+/* line 346, ../../../docs_scss/docs.scss */
 .footer .want-more ul li {
   margin-bottom: 6px;
 }
-/* line 345, ../../../docs_scss/docs.scss */
+/* line 351, ../../../docs_scss/docs.scss */
 .footer .want-more p, .footer .want-more li {
   font-size: 0.8125rem;
 }
-/* line 350, ../../../docs_scss/docs.scss */
+/* line 356, ../../../docs_scss/docs.scss */
 .footer .general-info {
   background: #303338;
   padding: 80px 20px;
   text-align: center;
 }
-/* line 355, ../../../docs_scss/docs.scss */
+/* line 361, ../../../docs_scss/docs.scss */
 .footer .general-info .navigation.inline {
   display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 364, ../../../docs_scss/docs.scss */
+/* line 370, ../../../docs_scss/docs.scss */
 .inside-the-box p, .inside-the-box li {
   font-size: 1rem;
   line-height: 28px;
 }
 
-/* line 371, ../../../docs_scss/docs.scss */
+/* line 377, ../../../docs_scss/docs.scss */
 .old-docs h4 {
   color: #333;
   margin-bottom: 0;
@@ -343,9 +343,9 @@
   letter-spacing: 1px;
 }
 
-/* line 380, ../../../docs_scss/docs.scss */
+/* line 386, ../../../docs_scss/docs.scss */
 .code {
-  color: #d44950;
+  color: #ad549d;
   white-space: nowrap;
   font-weight: bold;
   -webkit-border-radius: 3px;
@@ -614,12 +614,12 @@ button.block, .button.block {
 }
 /* line 240, ../../../scss/furatto/_buttons.scss */
 button.primary, .button.primary {
-  background-color: #e4652d;
-  border: 1px solid #db571c;
+  background-color: #b565a7;
+  border: 1px solid #ad549d;
 }
 /* line 101, ../../../scss/furatto/_buttons.scss */
 button.primary:hover, button.primary:focus, .button.primary:hover, .button.primary:focus {
-  background: #e25b1f;
+  background: #b05ba1;
 }
 /* line 105, ../../../scss/furatto/_buttons.scss */
 button.primary.disabled, button.primary[disabled], .button.primary.disabled, .button.primary[disabled] {
@@ -630,33 +630,33 @@ button.primary.disabled, button.primary[disabled], .button.primary.disabled, .bu
 /* line 110, ../../../scss/furatto/_buttons.scss */
 button.primary.active, button.primary:active, .button.primary.active, .button.primary:active {
   outline: 0;
-  background: #db571c;
+  background: #ad549d;
 }
 /* line 115, ../../../scss/furatto/_buttons.scss */
 button.primary.alpha, .button.primary.alpha {
-  border: 1px solid #e4652d;
+  border: 1px solid #b565a7;
   background: rgba(0, 0, 0, 0);
-  color: #e4652d;
+  color: #b565a7;
 }
 /* line 120, ../../../scss/furatto/_buttons.scss */
 button.primary.alpha:hover, .button.primary.alpha:hover {
   color: #FFF;
-  background: #e4652d;
+  background: #b565a7;
 }
 /* line 126, ../../../scss/furatto/_buttons.scss */
 button.primary.inverse, .button.primary.inverse {
   background: #FFF;
-  color: #e4652d;
+  color: #b565a7;
 }
 /* line 130, ../../../scss/furatto/_buttons.scss */
 button.primary.inverse:hover, .button.primary.inverse:hover {
-  background: #e4652d;
+  background: #b565a7;
   color: #FFF;
   border: 1px solid #FFF;
 }
 /* line 137, ../../../scss/furatto/_buttons.scss */
 button.primary.three-d, .button.primary.three-d {
-  border-bottom: 0.1875rem solid #ae4516;
+  border-bottom: 0.1875rem solid #8b437e;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
@@ -664,7 +664,7 @@ button.primary.three-d, .button.primary.three-d {
 }
 /* line 141, ../../../scss/furatto/_buttons.scss */
 button.primary.three-d:hover, .button.primary.three-d:hover {
-  border-bottom: 0.0875rem solid #c54e19;
+  border-bottom: 0.0875rem solid #9c4b8e;
   top: 1px;
 }
 /* line 241, ../../../scss/furatto/_buttons.scss */
@@ -779,12 +779,12 @@ button.danger.three-d:hover, .button.danger.three-d:hover {
 }
 /* line 243, ../../../scss/furatto/_buttons.scss */
 button.warning, .button.warning {
-  background-color: #e4652d;
-  border: 1px solid #db571c;
+  background-color: #b565a7;
+  border: 1px solid #ad549d;
 }
 /* line 101, ../../../scss/furatto/_buttons.scss */
 button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
-  background: #e25b1f;
+  background: #b05ba1;
 }
 /* line 105, ../../../scss/furatto/_buttons.scss */
 button.warning.disabled, button.warning[disabled], .button.warning.disabled, .button.warning[disabled] {
@@ -795,33 +795,33 @@ button.warning.disabled, button.warning[disabled], .button.warning.disabled, .bu
 /* line 110, ../../../scss/furatto/_buttons.scss */
 button.warning.active, button.warning:active, .button.warning.active, .button.warning:active {
   outline: 0;
-  background: #db571c;
+  background: #ad549d;
 }
 /* line 115, ../../../scss/furatto/_buttons.scss */
 button.warning.alpha, .button.warning.alpha {
-  border: 1px solid #e4652d;
+  border: 1px solid #b565a7;
   background: rgba(0, 0, 0, 0);
-  color: #e4652d;
+  color: #b565a7;
 }
 /* line 120, ../../../scss/furatto/_buttons.scss */
 button.warning.alpha:hover, .button.warning.alpha:hover {
   color: #FFF;
-  background: #e4652d;
+  background: #b565a7;
 }
 /* line 126, ../../../scss/furatto/_buttons.scss */
 button.warning.inverse, .button.warning.inverse {
   background: #FFF;
-  color: #e4652d;
+  color: #b565a7;
 }
 /* line 130, ../../../scss/furatto/_buttons.scss */
 button.warning.inverse:hover, .button.warning.inverse:hover {
-  background: #e4652d;
+  background: #b565a7;
   color: #FFF;
   border: 1px solid #FFF;
 }
 /* line 137, ../../../scss/furatto/_buttons.scss */
 button.warning.three-d, .button.warning.three-d {
-  border-bottom: 0.1875rem solid #ae4516;
+  border-bottom: 0.1875rem solid #8b437e;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
@@ -829,7 +829,7 @@ button.warning.three-d, .button.warning.three-d {
 }
 /* line 141, ../../../scss/furatto/_buttons.scss */
 button.warning.three-d:hover, .button.warning.three-d:hover {
-  border-bottom: 0.0875rem solid #c54e19;
+  border-bottom: 0.0875rem solid #9c4b8e;
   top: 1px;
 }
 /* line 245, ../../../scss/furatto/_buttons.scss */
@@ -980,7 +980,7 @@ button.block + button.block, .button.block + .button.block {
 }
 /* line 96, ../../../scss/furatto/_labels.scss */
 .label.warning {
-  background: #e67e22;
+  background: #b565a7;
 }
 
 /* line 132, ../../../scss/furatto/_alerts.scss */
@@ -1954,12 +1954,12 @@ img.polaroid {
  */
 /* line 87, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar {
-  background: #e4652d;
+  background: #b565a7;
   height: 70px;
   margin-bottom: 0px;
   overflow: hidden;
   font-weight: 300;
-  border-bottom: 1px solid #db571c;
+  border-bottom: 1px solid #ad549d;
 }
 /* line 95, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar a {
@@ -2084,7 +2084,7 @@ img.polaroid {
 /* line 213, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a {
   color: white;
-  background: #c54e19;
+  background: #9c4b8e;
 }
 /* line 217, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a:hover {
@@ -2172,8 +2172,8 @@ img.polaroid {
   -ms-border-radius: 0px 0px 3px 3px;
   -o-border-radius: 0px 0px 3px 3px;
   border-radius: 0px 0px 3px 3px;
-  border: 1px solid #ea865a;
-  background: #e4652d;
+  border: 1px solid #c687bb;
+  background: #b565a7;
   border-top: none;
 }
 /* line 303, ../../../scss/furatto/_navigation_bar.scss */
@@ -2454,13 +2454,13 @@ blockquote {
   color: #777777;
   font-style: italic;
   line-height: 1.8em;
-  border-left: 5px solid #dddddd;
+  border-left: 5px solid #b565a7;
   padding: 1rem 0 1rem 1.5em;
   background: #fcfcfc;
 }
 /* line 223, ../../../scss/furatto/_typography.scss */
 blockquote.primary {
-  border-color: #8ac4e9;
+  border-color: #b565a7;
 }
 /* line 224, ../../../scss/furatto/_typography.scss */
 blockquote.success {
@@ -2483,7 +2483,7 @@ blockquote p {
 /* line 77, ../../../scss/furatto/_grid.scss */
 .row.primary,
 .row [class*="col-"].primary {
-  background: #e4652d;
+  background: #b565a7;
 }
 /* line 82, ../../../scss/furatto/_grid.scss */
 .row.danger,
