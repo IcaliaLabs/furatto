@@ -24,15 +24,18 @@ $navigation-bar-divider-color: scale-color($navigation-bar-background, $lightnes
 $navigation-bar-divider-size: 1px !default;
 $navigation-bar-divider-style: solid !default;
 
-//Brand section
-$navigation-bar-brand-section-font-size: px-to-rems(18) !default;
-$navigation-bar-brand-section-font-weight: 400 !default;
-
 //Navigation links settings
 $navigation-bar-link-color: #FFF !default;
 $navigation-bar-link-hover-color: #999 !default;
 $navigation-bar-link-hover-decoration: none !default;
 $navigation-bar-hover-link-background-color: darken($navigation-bar-background, 5%) !default;
+
+//Brand section
+$navigation-bar-brand-section-font-size: px-to-rems(18) !default;
+$navigation-bar-brand-section-font-weight: 400 !default;
+$navigation-bar-brand-name-color: $navigation-bar-link-color !default;
+$navigation-bar-brand-name-hover-text-decoration: none !default;
+$navigation-bar-brand-name-hover-color: $navigation-bar-brand-name-color !default;
 
 //Buttons settings
 $navigation-bar-button-font-size: $navigation-font-size !default;
@@ -337,6 +340,18 @@ $navigation-bar-collapse-width: 768px !default;
     font-size: $navigation-bar-brand-section-font-size; 
     position: relative;
     font-weight: $navigation-bar-brand-section-font-weight;
+
+    .brand-name {
+      a {
+        color: $navigation-bar-brand-name-color; 
+
+        &:hover {
+          text-decoration: $navigation-bar-brand-name-hover-text-decoration;
+          color: $navigation-bar-brand-name-hover-color;
+        }
+      }
+    }
+
     li {
       padding: 0;
 

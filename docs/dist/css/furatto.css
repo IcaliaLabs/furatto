@@ -1588,7 +1588,7 @@ img.polaroid {
  * 
  * Designed and built @kurenn  
  */
-/* line 87, ../../scss/furatto/_navigation_bar.scss */
+/* line 90, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar {
   background: #191818;
   height: 45px;
@@ -1597,7 +1597,7 @@ img.polaroid {
   font-weight: 300;
   border-bottom: transparent;
 }
-/* line 95, ../../scss/furatto/_navigation_bar.scss */
+/* line 98, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1606,30 +1606,30 @@ img.polaroid {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 99, ../../scss/furatto/_navigation_bar.scss */
+/* line 102, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened {
   height: auto;
 }
-/* line 102, ../../scss/furatto/_navigation_bar.scss */
+/* line 105, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened .brand-section .menu-toggle a {
   color: #999999;
 }
-/* line 106, ../../scss/furatto/_navigation_bar.scss */
+/* line 109, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) {
   width: 100%;
 }
-/* line 109, ../../scss/furatto/_navigation_bar.scss */
+/* line 112, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-form {
   margin-bottom: 5px;
 }
-/* line 113, ../../scss/furatto/_navigation_bar.scss */
+/* line 116, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-form input[type="text"],
 .navigation-bar.opened ul:not(.brand-section) li.with-form input[type="search"] {
   width: 100%;
   display: block;
   margin-bottom: 5px;
 }
-/* line 121, ../../scss/furatto/_navigation_bar.scss */
+/* line 124, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-form input[type="submit"].button.pill {
   -webkit-border-radius: 62.5rem;
   -moz-border-radius: 62.5rem;
@@ -1637,7 +1637,7 @@ img.polaroid {
   -o-border-radius: 62.5rem;
   border-radius: 62.5rem;
 }
-/* line 126, ../../scss/furatto/_navigation_bar.scss */
+/* line 129, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-form input[type="submit"].button.radius {
   -webkit-border-radius: 0.1875rem;
   -moz-border-radius: 0.1875rem;
@@ -1645,32 +1645,32 @@ img.polaroid {
   -o-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
 }
-/* line 134, ../../scss/furatto/_navigation_bar.scss */
+/* line 137, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-dropdown .dropdown {
   position: static;
 }
-/* line 139, ../../scss/furatto/_navigation_bar.scss */
+/* line 142, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li {
   width: 100%;
   display: block;
   padding: 0 15px;
 }
-/* line 144, ../../scss/furatto/_navigation_bar.scss */
+/* line 147, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li a {
   padding: 0;
 }
-/* line 148, ../../scss/furatto/_navigation_bar.scss */
+/* line 151, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li .button {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 154, ../../scss/furatto/_navigation_bar.scss */
+/* line 157, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.divider {
   height: auto;
   border-bottom: 1px solid #383535;
 }
-/* line 164, ../../scss/furatto/_navigation_bar.scss */
+/* line 167, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .navigation-bar-text {
   margin: 0;
   line-height: 45px;
@@ -1679,7 +1679,7 @@ img.polaroid {
   font-size: 0.8125rem;
   padding: 0 15px;
 }
-/* line 173, ../../scss/furatto/_navigation_bar.scss */
+/* line 176, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .button {
   color: #FFF;
   font-size: 0.8125rem;
@@ -1689,23 +1689,23 @@ img.polaroid {
   margin-right: 0.5rem;
   margin-top: 5px;
 }
-/* line 182, ../../scss/furatto/_navigation_bar.scss */
+/* line 185, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .button:hover {
   color: #FFF;
 }
-/* line 188, ../../scss/furatto/_navigation_bar.scss */
+/* line 191, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar [class^="fa"],
 .navigation-bar [class*=" fa"] {
   margin-right: 5px;
   margin-left: 5px;
 }
-/* line 195, ../../scss/furatto/_navigation_bar.scss */
+/* line 198, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul.pull-right li.with-dropdown .dropdown {
   right: 0px;
   left: auto;
   top: 45px;
 }
-/* line 203, ../../scss/furatto/_navigation_bar.scss */
+/* line 206, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul {
   margin: 0;
   list-style: none;
@@ -1713,24 +1713,24 @@ img.polaroid {
   float: left;
   width: auto;
 }
-/* line 210, ../../scss/furatto/_navigation_bar.scss */
+/* line 213, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li {
   float: left;
 }
-/* line 213, ../../scss/furatto/_navigation_bar.scss */
+/* line 216, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a {
   color: white;
   background: black;
 }
-/* line 217, ../../scss/furatto/_navigation_bar.scss */
+/* line 220, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a:hover {
   color: #f2f2f2;
 }
-/* line 222, ../../scss/furatto/_navigation_bar.scss */
+/* line 225, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a:hover:not(.button) {
   background: #0c0c0c;
 }
-/* line 226, ../../scss/furatto/_navigation_bar.scss */
+/* line 229, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a {
   display: block;
   padding: 0 15px;
@@ -1738,21 +1738,21 @@ img.polaroid {
   line-height: 45px;
   color: white;
 }
-/* line 233, ../../scss/furatto/_navigation_bar.scss */
+/* line 236, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 239, ../../scss/furatto/_navigation_bar.scss */
+/* line 242, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.divider {
   height: 45px;
   border-left: 1px solid #383535;
 }
-/* line 245, ../../scss/furatto/_navigation_bar.scss */
+/* line 248, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form {
   padding: 11.25px 15px;
 }
-/* line 249, ../../scss/furatto/_navigation_bar.scss */
+/* line 252, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form input[type="text"],
 .navigation-bar ul li.with-form input[type="search"] {
   margin: 0;
@@ -1760,17 +1760,17 @@ img.polaroid {
   float: left;
   height: 22.5px;
 }
-/* line 256, ../../scss/furatto/_navigation_bar.scss */
+/* line 259, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form input[type="submit"] {
   float: left;
   height: 22.5px;
   line-height: 0;
 }
-/* line 261, ../../scss/furatto/_navigation_bar.scss */
+/* line 264, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form input[type="submit"].button {
   margin: 0;
 }
-/* line 264, ../../scss/furatto/_navigation_bar.scss */
+/* line 267, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form input[type="submit"].button.pill {
   -webkit-border-radius: 0 62.5rem 62.5rem 0;
   -moz-border-radius: 0 62.5rem 62.5rem 0;
@@ -1778,7 +1778,7 @@ img.polaroid {
   -o-border-radius: 0 62.5rem 62.5rem 0;
   border-radius: 0 62.5rem 62.5rem 0;
 }
-/* line 269, ../../scss/furatto/_navigation_bar.scss */
+/* line 272, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form input[type="submit"].button.radius {
   -webkit-border-radius: 0 0.1875rem 0.1875rem 0;
   -moz-border-radius: 0 0.1875rem 0.1875rem 0;
@@ -1786,15 +1786,15 @@ img.polaroid {
   -o-border-radius: 0 0.1875rem 0.1875rem 0;
   border-radius: 0 0.1875rem 0.1875rem 0;
 }
-/* line 277, ../../scss/furatto/_navigation_bar.scss */
+/* line 280, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown {
   position: relative;
 }
-/* line 281, ../../scss/furatto/_navigation_bar.scss */
+/* line 284, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown.opened .dropdown {
   display: block;
 }
-/* line 286, ../../scss/furatto/_navigation_bar.scss */
+/* line 289, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown {
   display: none;
   position: absolute;
@@ -1812,18 +1812,18 @@ img.polaroid {
   background: #191818;
   border-top: none;
 }
-/* line 303, ../../scss/furatto/_navigation_bar.scss */
+/* line 306, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li {
   width: 100%;
   height: auto;
   white-space: nowrap;
 }
-/* line 308, ../../scss/furatto/_navigation_bar.scss */
+/* line 311, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li a {
   height: 45px;
   line-height: 45px;
 }
-/* line 313, ../../scss/furatto/_navigation_bar.scss */
+/* line 316, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li.dropdown-header {
   text-transform: uppercase;
   padding: 0.5625rem 1.0625rem 0.125rem;
@@ -1832,26 +1832,35 @@ img.polaroid {
   font-weight: bold;
   font-size: 0.5rem;
 }
-/* line 322, ../../scss/furatto/_navigation_bar.scss */
+/* line 325, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li.divider {
   height: 0.0625rem;
   border-top: 1px solid #383535;
 }
-/* line 332, ../../scss/furatto/_navigation_bar.scss */
+/* line 335, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul.pull-right {
   float: right;
 }
-/* line 336, ../../scss/furatto/_navigation_bar.scss */
+/* line 339, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section {
   font-size: 1.125rem;
   position: relative;
   font-weight: 400;
 }
-/* line 340, ../../scss/furatto/_navigation_bar.scss */
+/* line 345, ../../scss/furatto/_navigation_bar.scss */
+.navigation-bar .brand-section .brand-name a {
+  color: white;
+}
+/* line 348, ../../scss/furatto/_navigation_bar.scss */
+.navigation-bar .brand-section .brand-name a:hover {
+  text-decoration: none;
+  color: white;
+}
+/* line 355, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li {
   padding: 0;
 }
-/* line 343, ../../scss/furatto/_navigation_bar.scss */
+/* line 358, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li.menu-toggle {
   display: none;
   text-transform: uppercase;
@@ -1861,7 +1870,7 @@ img.polaroid {
   right: 20px;
   width: 34px;
 }
-/* line 352, ../../scss/furatto/_navigation_bar.scss */
+/* line 367, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li.menu-toggle a:after {
   content: '';
   width: 16px;
@@ -1873,7 +1882,7 @@ img.polaroid {
   -moz-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
   box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
 }
-/* line 367, ../../scss/furatto/_navigation_bar.scss */
+/* line 382, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.fixed {
   position: fixed;
   top: 0;
@@ -1883,34 +1892,34 @@ img.polaroid {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 378, ../../scss/furatto/_navigation_bar.scss */
+  /* line 393, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar {
     overflow: visible;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* line 383, ../../scss/furatto/_navigation_bar.scss */
+  /* line 398, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar {
     overflow: hidden;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 392, ../../scss/furatto/_navigation_bar.scss */
+  /* line 407, ../../scss/furatto/_navigation_bar.scss */
   .off-screen .navigation-bar .brand-section .brand-name a:before {
     display: inline-block;
   }
 
-  /* line 402, ../../scss/furatto/_navigation_bar.scss */
+  /* line 417, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar .brand-section {
     width: 100%;
     font-size: 0.975rem;
   }
-  /* line 408, ../../scss/furatto/_navigation_bar.scss */
+  /* line 423, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar .brand-section li.menu-toggle {
     display: block;
     float: right;
   }
-  /* line 412, ../../scss/furatto/_navigation_bar.scss */
+  /* line 427, ../../scss/furatto/_navigation_bar.scss */
   .navigation-bar .brand-section li.menu-toggle.hidden {
     display: none;
   }
