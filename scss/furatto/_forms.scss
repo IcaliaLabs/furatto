@@ -34,7 +34,12 @@ $form-input-mini-width: 20% !default;
 $form-input-small-width: $form-input-mini-width * 2 !default; 
 $form-input-medium-width: $form-input-mini-width * 3 !default;
 $form-input-large-width: $form-input-mini-width * 4 !default;
-$form-input-file-width: 100% !default;;
+$form-input-file-width: 100% !default;
+$form-input-transition-property: all !default;
+$form-input-transition-duration: 0.1s !default;
+$form-input-transition-timing-function: ease-in-out !default;
+$include-input-box-shadow-on-focus: true !default;
+$include-input-transition: true !default;
 
 //Validation states
 $form-label-success-color: #27ae60 !default;
@@ -124,8 +129,12 @@ input[type="color"],
 {
   @include border-radius($form-input-radius);
   @include box-shadow($form-input-box-shadow);
-  @include single-transition(all 0.1s ease-in-out);
   @include appearance($ap: none);
+
+  @if($include-input-transition) {
+    @include single-transition($form-input-transition-property $form-input-transition-duration $form-input-transition-timing-function);
+  }
+
   display: block;
   width: 100%;
   height: $form-input-height;
@@ -145,7 +154,9 @@ input[type="color"],
 
   //Focus state
   &:focus {
-    @include box-shadow($form-input-focus-box-shadow);
+    @if($include-input-box-shadow-on-focus) {
+      @include box-shadow($form-input-focus-box-shadow);
+    }
     border-color: $form-input-focus-border-color; 
     outline: none;
     background: $form-input-focus-background-color;
