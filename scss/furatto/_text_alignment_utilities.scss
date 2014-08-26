@@ -2,7 +2,10 @@
 //@variables
 //
 
-$small-min-width: 480px !default;
+$extra-small-min-width: 320px !default;
+$extra-small-max-width: 479px !default;
+
+$small-min-width: $extra-small-max-width + 1 !default;
 $small-max-width: 767px !default;
 
 $medium-min-width: $small-max-width + 1 !default;
@@ -76,6 +79,25 @@ $large-min-width: $medium-max-width + 1 !default;
   } 
 
   .text-right-sm {
+    text-align: right; 
+  } 
+}
+
+//Extra small screen sizes alignment
+@include screen($resMin: $extra-small-min-width, $resMax: $extra-small-max-width) {
+  .text-center-xsm {
+    text-align: center; 
+  } 
+
+  .text-left-xsm {
+    text-align: left; 
+  } 
+
+  .text-justify-xsm {
+    text-align: justify; 
+  } 
+
+  .text-right-xsm {
     text-align: right; 
   } 
 }

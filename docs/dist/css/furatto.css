@@ -3702,81 +3702,102 @@ ul.pagination.right {
   display: block;
 }
 
-/* line 13, ../../scss/furatto/_text_alignment_utilities.scss */
+/* line 16, ../../scss/furatto/_text_alignment_utilities.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 17, ../../scss/furatto/_text_alignment_utilities.scss */
+/* line 20, ../../scss/furatto/_text_alignment_utilities.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 21, ../../scss/furatto/_text_alignment_utilities.scss */
+/* line 24, ../../scss/furatto/_text_alignment_utilities.scss */
 .text-justify {
   text-align: justify;
 }
 
 @media only screen and (min-width: 1024px) {
-  /* line 27, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 30, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-center-lg {
     text-align: center;
   }
 
-  /* line 31, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 34, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-left-lg {
     text-align: center;
   }
 
-  /* line 35, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 38, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-justify-lg {
     text-align: center;
   }
 
-  /* line 39, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 42, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-right-lg {
     text-align: right;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 47, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 50, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-center-md {
     text-align: center;
   }
 
-  /* line 51, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 54, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-left-md {
     text-align: center;
   }
 
-  /* line 55, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 58, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-justify-md {
     text-align: center;
   }
 
-  /* line 59, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 62, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-right-md {
     text-align: right;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  /* line 66, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 69, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-center-sm {
     text-align: center;
   }
 
-  /* line 70, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 73, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-left-sm {
     text-align: left;
   }
 
-  /* line 74, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 77, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-justify-sm {
     text-align: justify;
   }
 
-  /* line 78, ../../scss/furatto/_text_alignment_utilities.scss */
+  /* line 81, ../../scss/furatto/_text_alignment_utilities.scss */
   .text-right-sm {
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  /* line 88, ../../scss/furatto/_text_alignment_utilities.scss */
+  .text-center-xsm {
+    text-align: center;
+  }
+
+  /* line 92, ../../scss/furatto/_text_alignment_utilities.scss */
+  .text-left-xsm {
+    text-align: left;
+  }
+
+  /* line 96, ../../scss/furatto/_text_alignment_utilities.scss */
+  .text-justify-xsm {
+    text-align: justify;
+  }
+
+  /* line 100, ../../scss/furatto/_text_alignment_utilities.scss */
+  .text-right-xsm {
     text-align: right;
   }
 }

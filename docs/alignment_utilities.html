@@ -16,6 +16,9 @@ title: Furatto - Docs::Alignment Utilities
    <thead>
      <tr>
        <th>
+         <span class="muted">Extra small width 320px to 479px</span>
+       </th>
+       <th>
          <span class="muted">Small width 480px to 767px</span>
        </th>
        <th>
@@ -28,22 +31,26 @@ title: Furatto - Docs::Alignment Utilities
    </thead>
    <tbody>
    <tr>
+     <td class="docs-visible">text-center-xsm</td>
      <td class="docs-visible">text-center-sm</td>
      <td class="docs-visible">text-center-md</td>
      <td class="docs-visible">text-center-lg</td>
    </tr>
    <tr>
+     <td class="docs-visible">text-left-xsm</td>
      <td class="docs-visible">text-left-sm</td>
      <td class="docs-visible">text-left-md</td>
      <td class="docs-visible">text-left-lg</td>
    </tr>
    <tr>
      <td class="docs-visible">text-right-sm</td>
+     <td class="docs-visible">text-right-xsm</td>
      <td class="docs-visible">text-right-md</td>
      <td class="docs-visible">text-right-lg</td>
    </tr>
    <tr>
      <td class="docs-visible">text-justify-sm</td>
+     <td class="docs-visible">text-justify-xsm</td>
      <td class="docs-visible">text-justify-md</td>
      <td class="docs-visible">text-justify-lg</td>
    </tr>
@@ -56,7 +63,10 @@ title: Furatto - Docs::Alignment Utilities
 
 <pre>
   <code>
-$small-min-width: 480px !default;
+$extra-small-min-width: 320px !default;
+$extra-small-max-width: 479px !default;
+
+$small-min-width: $extra-small-max-width + 1 !default;
 $small-max-width: 767px !default;
 
 $medium-min-width: $small-max-width + 1 !default;
