@@ -14,14 +14,14 @@ $extra-small-media: "#{$media-display} and (max-width: #{$extra-small-screen-max
 $small-screen: 768px !default;
 $small-screen-max: $small-screen - 1 !default;
 $small-screen-media: "#{$media-display} and (max-width: #{$small-screen-max})" !default;
-$small-screen-range: "#{$media-display} and (min-width: #{$small-screen}) and (max-width: #{$small-screen-max})" !default;
+$small-screen-range-media: "#{$media-display} and (min-width: #{$small-screen}) and (max-width: #{$small-screen-max})" !default;
 
 $medium-screen: 992px !default;
 $medium-screen-max: $medium-screen - 1 !default;
-$medium-screen-range: "#{$media-display} and (min-width: #{$medium-screen}) and (max-width: #{$medium-screen-max})" !default;
+$medium-screen-media: "#{$media-display} and (min-width: #{$medium-screen}) and (max-width: #{$medium-screen-max})" !default;
 
 $large-screen: 1200px !default;
-$large-screen-range: "#{$media-display} and (min-width: #{$large-screen})" !default;
+$large-screen-media: "#{$media-display} and (min-width: #{$large-screen})" !default;
 
 // Responsive screen orientations
 $portrait-media: "#{$media-display} and (orientation: portrait)" !default;
@@ -35,17 +35,17 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
     @include responsive-visibility();
   }
   &.visible-on-small {
-    @media #{$small-screen-range} {
+    @media #{$small-screen-range-media} {
       @include responsive-visibility();
     }
   }
   &.visible-on-medium {
-    @media #{$medium-screen-range} {
+    @media #{$medium-screen-media} {
       @include responsive-visibility();
     }
   }
   &.visible-on-large {
-    @media  #{$large-screen-range} {
+    @media  #{$large-screen-media} {
       @include responsive-visibility();
     }
   }
@@ -59,16 +59,16 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
       @include responsive-visibility();
     }
   }
-  @media #{$small-screen-range} {
+  @media #{$small-screen-range-media} {
     @include responsive-visibility();
   }
   &.visible-on-medium {
-    @media #{$medium-screen-range} {
+    @media #{$medium-screen-media} {
       @include responsive-visibility();
     }
   }
   &.visible-on-large {
-    @media  #{$large-screen-range} {
+    @media  #{$large-screen-media} {
       @include responsive-visibility();
     }
   }
@@ -84,15 +84,15 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
     }
   }
   &.visible-sm {
-    @media #{$small-screen-range} {
+    @media #{$small-screen-range-media} {
       @include responsive-visibility();
     }
   }
-  @media #{$medium-screen-range} {
+  @media #{$medium-screen-media} {
     @include responsive-visibility();
   }
   &.visible-lg {
-    @media  #{$large-screen-range} {
+    @media  #{$large-screen-media} {
       @include responsive-visibility();
     }
   }
@@ -107,16 +107,16 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
     }
   }
   &.visible-on-small {
-    @media #{$small-screen-range} {
+    @media #{$small-screen-range-media} {
       @include responsive-visibility();
     }
   }
   &.visible-on-medium {
-    @media #{$medium-screen-range} {      
+    @media #{$medium-screen-media} {      
       @include responsive-visibility();
     }
   }
-  @media #{$large-screen-range} {
+  @media #{$large-screen-media} {
     @include responsive-visibility();
   }
 }
@@ -128,17 +128,17 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
     @include responsive-invisibility();
   }
   &.hidden-on-small {
-    @media #{$small-screen-range} {
+    @media #{$small-screen-range-media} {
       @include responsive-invisibility();
     }
   }
   &.hidden-on-medium {
-    @media #{$medium-screen-range} {
+    @media #{$medium-screen-media} {
       @include responsive-invisibility();
     }
   }
   &.hidden-on-large {
-    @media #{$large-screen-range} {
+    @media #{$large-screen-media} {
       @include responsive-invisibility();
     }
   }
@@ -152,16 +152,16 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
       @include responsive-invisibility();
     }
   }
-  @media #{$small-screen-range} {
+  @media #{$small-screen-range-media} {
     @include responsive-invisibility();
   }
   &.hidden-on-medium {
-    @media #{$medium-screen-range} {
+    @media #{$medium-screen-media} {
       @include responsive-invisibility();
     }
   }
   &.hidden-on-large {
-    @media #{$large-screen-range} {
+    @media #{$large-screen-media} {
       @include responsive-invisibility();
     }
   }
@@ -176,15 +176,15 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
     }
   }
   &.hidden-on-small {
-    @media #{$small-screen-range} {
+    @media #{$small-screen-range-media} {
       @include responsive-invisibility();
     }
   }
-  @media #{$medium-screen-range} {
+  @media #{$medium-screen-media} {
     @include responsive-invisibility();
   }
   &.hidden-on-large {
-    @media #{$large-screen-range} {
+    @media #{$large-screen-media} {
       @include responsive-invisibility();
     }
   }
@@ -199,16 +199,16 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
     }
   }
   &.hidden-on-small {
-    @media #{$small-screen-range} {
+    @media #{$small-screen-range-media} {
       @include responsive-invisibility();
     }
   }
   &.hidden-on-medium {
-    @media #{$medium-screen-range} {
+    @media #{$medium-screen-media} {
       @include responsive-invisibility();
     }
   }
-  @media #{$large-screen-range} {
+  @media #{$large-screen-media} {
     @include responsive-invisibility();
   }
 }
