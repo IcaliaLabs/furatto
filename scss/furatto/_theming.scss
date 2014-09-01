@@ -1,0 +1,69 @@
+// Theming variables
+//
+
+//
+//@variables
+//
+
+@function set-smart-color($color) {
+  @if (lightness($color) > 60) {
+    @return #000000; // We return a dark color when the background is light
+  } @else {
+    @return #ffffff; // We return a light color when the background is dark 
+  }
+}
+
+$primary-color: #B565A7;
+
+// Navigation bar
+$navigation-bar-background: $primary-color;
+$navigation-bar-border-bottom: 1px solid darken($primary-color, 3%);
+$navigation-bar-color: set-smart-color($primary-color); 
+$navigation-bar-link-color: set-smart-color($primary-color);
+$navigation-bar-link-hover-color: darken(set-smart-color($primary-color), 5%);
+$navigation-bar-divider-color: rgba(set-smart-color($primary-color), 0.1);
+
+//Buttons
+$button-default-background-color: $primary-color;
+$button-primary-background: $primary-color;
+$button-font-color: set-smart-color($primary-color);
+
+//Labels
+$label-default-background: $primary-color;
+$label-primary-background: $primary-color;
+$label-font-color: set-smart-color($primary-color);
+
+//Pagination
+$pagination-bg-color: $primary-color;
+$pagination-color: lighten($primary-color, 3%);
+
+//Alerts
+$alert-primary-background: $primary-color;
+
+//Blockquote
+$blockquote-border-primary-color: $primary-color;
+$blockquote-border-color: $primary-color;
+
+//Grid
+$grid-primary-background-color: $primary-color;
+
+//Tooltip
+$tooltip-color: $primary-color;
+
+//Toolbar
+$toolbar-background-color: $primary-color;
+$toolbar-primary-background-color: $primary-color;
+
+//Offscreen
+$off-screen-navigation-background-color: lighten($primary-color, 5%);
+
+//Inline navigation
+$navigation-inline-active-background: $primary-color;
+$navigation-inline-link-hover: $primary-color;
+
+//Global
+$base-link-color: $primary-color;
+$anchor-color: $primary-color;
+
+
+

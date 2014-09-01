@@ -28,7 +28,7 @@ $navigation-bar-divider-style: solid !default;
 $navigation-bar-link-color: #FFF !default;
 $navigation-bar-link-hover-color: #999 !default;
 $navigation-bar-link-hover-decoration: none !default;
-$navigation-bar-hover-link-background-color: darken($navigation-bar-background, 5%) !default;
+$navigation-bar-hover-link-background-color: darken($navigation-bar-background, 1%) !default;
 
 //Brand section
 $navigation-bar-brand-section-font-size: px-to-rems(18) !default;

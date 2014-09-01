@@ -108,7 +108,7 @@ $include-toolbar-right-position: true !default;
 
 @if ($include-toolbar-top-position) {
   .tool-container.tool-top .arrow {
-    border-color: $toolbar-bg-color transparent transparent; 
+    border-color: $toolbar-background-color transparent transparent; 
     left: 50%;  
     bottom: calculate-toolbar-arrow-position($toolbar-arrow-border-width);
     margin-left: -1 * $toolbar-arrow-border-width;

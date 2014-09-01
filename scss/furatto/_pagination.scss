@@ -27,13 +27,13 @@ ul.pagination {
   font-size: $pagination-font-size;
 
   display: block;
-  color: $pagination-color;
 
   & > li {
     display: inline-block;
 
     & > a, 
     & > span {
+      color: $pagination-color;
       padding: $pagination-list-items-padding;
       @if($include-pagination-transition-list-items) {
         @include transition((background 0.3s ease-out, color 0.3s ease-out));

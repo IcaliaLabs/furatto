@@ -1734,7 +1734,7 @@ img.polaroid {
 }
 /* line 225, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a:hover:not(.button) {
-  background: #0c0c0c;
+  background: #161616;
 }
 /* line 229, ../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a {
@@ -3447,14 +3447,14 @@ ul.pagination {
   margin: 0;
   font-size: 0.8125rem;
   display: block;
-  color: #0088cc;
 }
-/* line 32, ../../scss/furatto/_pagination.scss */
+/* line 31, ../../scss/furatto/_pagination.scss */
 ul.pagination > li {
   display: inline-block;
 }
-/* line 36, ../../scss/furatto/_pagination.scss */
+/* line 35, ../../scss/furatto/_pagination.scss */
 ul.pagination > li > a, ul.pagination > li > span {
+  color: #0088cc;
   padding: 0.125rem 0.5625rem;
   -webkit-transition: background 0.3s ease-out, color 0.3s ease-out;
   -moz-transition: background 0.3s ease-out, color 0.3s ease-out;

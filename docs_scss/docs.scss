@@ -1,37 +1,23 @@
 @import "../scss/furatto/functions";
 @import "compass/css3";
 
-$primary-color: #B565A7;
+@import "../scss/furatto/theming";
 
-//Base config
-$warning-text-color: $primary-color;
+/*Base config*/
 $error-text-color: #7c1717;
 
 //Grid config
-$grid-primary-background-color: $primary-color;
 $grid-success-background-color: #191818;
-$button-primary-background: $primary-color;
-$button-warning-background: $primary-color;
 
 //Navigation bar config
 $navigation-bar-height: 70px;
-$navigation-bar-background: $primary-color;
-$navigation-bar-color: #FFF;
-$navigation-bar-link-color: #FFF;
 $navigation-bar-brand-section-font-size: px-to-rems(18);
 $navigation-font-size: px-to-rems(14);
 $navigation-margin-bottom: 0px;
-$navigation-bar-link-hover-color: #FFF;
-$navigation-bar-divider-color: rgba(#FFF, 0.1);
-$navigation-bar-hover-link-background-color: transparent;
-$navigation-bar-border-bottom: 1px solid darken($primary-color, 5%);
 $col-border-alpha: 0.2;
 
 //label
 $label-warning-background: $primary-color;
-
-$blockquote-border-primary-color: $primary-color;
-$blockquote-border-color: $primary-color;
 
 .upside-down-ninja {
   float: right;
