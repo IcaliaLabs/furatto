@@ -14,7 +14,8 @@ $navigation-bar-height: 80px;
 $navigation-bar-background: $primary-color;
 $navigation-bar-brand-name-color: #FFF;
 $navigation-bar-link-color: #FFF;
-$navigation-bar-link-hover-color: $navigation-bar-link-color;
+$navigation-bar-link-hover-color: #FAF9FF;
+$navigation-bar-brand-name-hover-color: #FAF9FF;
 $navigation-bar-hover-link-background-color: transparent;
 $navigation-bar-border-bottom: transparent;
 $navigation-bar-menu-color: #FFF;
@@ -33,6 +34,8 @@ $navigation-header-color: #272727;
 //Buttons
 $button-default-background-color: $primary-color;
 $button-primary-background: $primary-color;
+$button-radius: 2px;
+$button-border-width: 0px;
 
 //Global
 $anchor-color: darken($primary-color, 3%);
@@ -426,3 +429,7 @@ $label-primary-background: $primary-color;
 }
 
 @import "../scss/furatto";
+
+.button {
+  @include border-radius(2px);
+}

@@ -1,89 +1,91 @@
-/* line 36, ../../../docs_scss/landing.scss */
+/* line 40, ../../../docs_scss/landing.scss */
 .container {
   width: 90%;
 }
 
-/* line 41, ../../../docs_scss/landing.scss */
+/* line 45, ../../../docs_scss/landing.scss */
 .section {
   text-align: center;
   margin-bottom: 100px;
 }
-/* line 44, ../../../docs_scss/landing.scss */
+/* line 48, ../../../docs_scss/landing.scss */
 .section .motto {
   color: #635C7E;
   font-size: 24px;
   width: 40%;
   margin-bottom: 40px;
+  font-weight: 300;
 }
 @media only screen and (max-width: 768px) {
-  /* line 44, ../../../docs_scss/landing.scss */
+  /* line 48, ../../../docs_scss/landing.scss */
   .section .motto {
     width: 90%;
   }
 }
-/* line 56, ../../../docs_scss/landing.scss */
+/* line 61, ../../../docs_scss/landing.scss */
 .section .button {
   margin-bottom: 50px;
 }
-/* line 60, ../../../docs_scss/landing.scss */
+/* line 65, ../../../docs_scss/landing.scss */
 .section img.window {
   margin-bottom: 40px;
 }
-/* line 66, ../../../docs_scss/landing.scss */
+/* line 70, ../../../docs_scss/landing.scss */
+.section.skills, .section.examples {
+  width: 85%;
+}
+/* line 74, ../../../docs_scss/landing.scss */
 .section.skills .motto, .section.examples .motto {
   font-size: 20px;
   margin-bottom: 15px;
 }
-/* line 71, ../../../docs_scss/landing.scss */
+/* line 79, ../../../docs_scss/landing.scss */
 .section.skills .sub-motto, .section.examples .sub-motto {
   color: #87839A;
   font-size: 16px;
   margin-bottom: 80px;
 }
-/* line 78, ../../../docs_scss/landing.scss */
+/* line 86, ../../../docs_scss/landing.scss */
 .section.skills .skill h6, .section.examples .skill h6 {
   color: #87839A;
 }
-/* line 80, ../../../docs_scss/landing.scss */
+/* line 88, ../../../docs_scss/landing.scss */
 .section.skills .skill img, .section.examples .skill img {
   height: 79px;
   margin-bottom: 20px;
 }
-/* line 87, ../../../docs_scss/landing.scss */
+/* line 95, ../../../docs_scss/landing.scss */
 .section.contribute {
   background: #FAF9FF;
   padding: 30px 0;
 }
-/* line 91, ../../../docs_scss/landing.scss */
+/* line 99, ../../../docs_scss/landing.scss */
 .section.contribute .motto {
   font-size: 20px;
   margin-bottom: 15px;
 }
-/* line 96, ../../../docs_scss/landing.scss */
+/* line 104, ../../../docs_scss/landing.scss */
 .section.contribute .sub-motto {
   color: #87839A;
   font-size: 16px;
   margin-bottom: 40px;
 }
-/* line 105, ../../../docs_scss/landing.scss */
+/* line 113, ../../../docs_scss/landing.scss */
 .section .mobile-first {
   color: #635C7E;
+  font-weight: 300;
 }
 
-/* line 111, ../../../docs_scss/landing.scss */
+/* line 120, ../../../docs_scss/landing.scss */
 .medium {
   width: 60%;
 }
 
-/* line 116, ../../../docs_scss/landing.scss */
-.examples {
-  width: 85%;
-}
-/* line 121, ../../../docs_scss/landing.scss */
+/* line 128, ../../../docs_scss/landing.scss */
 .examples .example img {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
-/* line 125, ../../../docs_scss/landing.scss */
+/* line 132, ../../../docs_scss/landing.scss */
 .examples .example span {
   color: #A18EFF;
   padding: 12px 20px;
@@ -97,11 +99,11 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 132, ../../../docs_scss/landing.scss */
+/* line 139, ../../../docs_scss/landing.scss */
 .examples .example:hover {
   text-decoration: none;
 }
-/* line 134, ../../../docs_scss/landing.scss */
+/* line 141, ../../../docs_scss/landing.scss */
 .examples .example:hover span {
   color: #FFF;
   background: #A18EFF;
@@ -117,6 +119,10 @@
   margin: 0 3px 10px 3px;
 }
 /* line 11, ../../../docs_scss/_footer.scss */
+.footer a:hover {
+  color: #a18eff;
+}
+/* line 15, ../../../docs_scss/_footer.scss */
 .footer h4, .footer h5, .footer li, .footer p, .footer .fa, .footer a {
   color: #87839A;
 }
@@ -132,7 +138,7 @@
 }
 
 /* line 25, ../../../scss/furatto/_selectors.scss */
-.container, .section .motto, .section .mobile-first, .medium, .examples {
+.container, .section .motto, .section.skills, .section.examples, .section .mobile-first, .medium {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -600,11 +606,11 @@ button.warning.three-d:hover, .button.warning.three-d:hover {
 }
 /* line 245, ../../../scss/furatto/_buttons.scss */
 button.radius, .button.radius {
-  -webkit-border-radius: 0.1875rem;
-  -moz-border-radius: 0.1875rem;
-  -ms-border-radius: 0.1875rem;
-  -o-border-radius: 0.1875rem;
-  border-radius: 0.1875rem;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 /* line 249, ../../../scss/furatto/_buttons.scss */
 button.pill, .button.pill {
@@ -682,21 +688,21 @@ button.block + button.block, .button.block + .button.block {
 }
 /* line 57, ../../../scss/furatto/_button-groups.scss */
 .button-group.radius li:first-child .button {
-  -moz-border-radius-topleft: 0.1875rem;
-  -webkit-border-top-left-radius: 0.1875rem;
-  border-top-left-radius: 0.1875rem;
-  -moz-border-radius-bottomleft: 0.1875rem;
-  -webkit-border-bottom-left-radius: 0.1875rem;
-  border-bottom-left-radius: 0.1875rem;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 /* line 62, ../../../scss/furatto/_button-groups.scss */
 .button-group.radius li:last-child .button {
-  -moz-border-radius-topright: 0.1875rem;
-  -webkit-border-top-right-radius: 0.1875rem;
-  border-top-right-radius: 0.1875rem;
-  -moz-border-radius-bottomright: 0.1875rem;
-  -webkit-border-bottom-right-radius: 0.1875rem;
-  border-bottom-right-radius: 0.1875rem;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 /* line 84, ../../../scss/furatto/_labels.scss */
@@ -1769,11 +1775,11 @@ img.polaroid {
 }
 /* line 129, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-form input[type="submit"].button.radius {
-  -webkit-border-radius: 0.1875rem;
-  -moz-border-radius: 0.1875rem;
-  -ms-border-radius: 0.1875rem;
-  -o-border-radius: 0.1875rem;
-  border-radius: 0.1875rem;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 /* line 137, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.with-dropdown .dropdown {
@@ -1910,11 +1916,11 @@ img.polaroid {
 }
 /* line 272, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form input[type="submit"].button.radius {
-  -webkit-border-radius: 0 0.1875rem 0.1875rem 0;
-  -moz-border-radius: 0 0.1875rem 0.1875rem 0;
-  -ms-border-radius: 0 0.1875rem 0.1875rem 0;
-  -o-border-radius: 0 0.1875rem 0.1875rem 0;
-  border-radius: 0 0.1875rem 0.1875rem 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  -ms-border-radius: 0 2px 2px 0;
+  -o-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
 }
 /* line 280, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown {
@@ -1984,7 +1990,7 @@ img.polaroid {
 /* line 348, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section .brand-name a:hover {
   text-decoration: none;
-  color: #635c7e;
+  color: #624db4;
 }
 /* line 355, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li {

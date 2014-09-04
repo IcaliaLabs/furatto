@@ -7,6 +7,7 @@
 $navigation-bar-height: 80px;
 $navigation-bar-background: #FFF;
 $navigation-bar-brand-name-color: #635C7E;
+$navigation-bar-brand-name-hover-color: #624DB4;
 $navigation-bar-link-color: #A18EFF;
 $navigation-bar-link-hover-color: $navigation-bar-link-color;
 $navigation-bar-hover-link-background-color: transparent;
@@ -33,6 +34,9 @@ $hr-color: #F9F9F9;
 //Compass overrides
 $default-transition-duration: 0.5s;
 
+//Buttons
+$button-radius: 2px;
+
 .container {
   width: 90%;
   @extend %center-block;
@@ -46,6 +50,7 @@ $default-transition-duration: 0.5s;
     font-size: 24px;
     width: 40%;
     margin-bottom: 40px;
+    font-weight: 300;
     @extend %center-block;
 
     @include max-screen(768px) {
@@ -63,6 +68,9 @@ $default-transition-duration: 0.5s;
 
   &.skills,
   &.examples {
+    width: 85%;
+    @extend %center-block;
+
     .motto {
       font-size: 20px;
       margin-bottom: 15px;
@@ -104,6 +112,7 @@ $default-transition-duration: 0.5s;
 
   .mobile-first {
     color: #635C7E;
+    font-weight: 300;
     @extend %center-block;
   }
 }
@@ -114,12 +123,10 @@ $default-transition-duration: 0.5s;
 }
 
 .examples {
-  width: 85%;
-  @extend %center-block;
 
   .example {
     img {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
     span {
