@@ -107,6 +107,9 @@ $button-radius: 2px;
       margin-bottom: 40px;
     }
 
+    .button.alpha {
+      border-width: 2px;
+    }
 
   }
 
@@ -115,6 +118,7 @@ $button-radius: 2px;
     font-weight: 300;
     @extend %center-block;
   }
+
 }
 
 .medium {
@@ -149,3 +153,4 @@ $button-radius: 2px;
 @import 'footer';
 
 @import "../scss/furatto";
+

@@ -70,22 +70,26 @@
   font-size: 16px;
   margin-bottom: 40px;
 }
-/* line 113, ../../../docs_scss/landing.scss */
+/* line 110, ../../../docs_scss/landing.scss */
+.section.contribute .button.alpha {
+  border-width: 2px;
+}
+/* line 116, ../../../docs_scss/landing.scss */
 .section .mobile-first {
   color: #635C7E;
   font-weight: 300;
 }
 
-/* line 120, ../../../docs_scss/landing.scss */
+/* line 124, ../../../docs_scss/landing.scss */
 .medium {
   width: 60%;
 }
 
-/* line 128, ../../../docs_scss/landing.scss */
+/* line 132, ../../../docs_scss/landing.scss */
 .examples .example img {
   margin-bottom: 32px;
 }
-/* line 132, ../../../docs_scss/landing.scss */
+/* line 136, ../../../docs_scss/landing.scss */
 .examples .example span {
   color: #A18EFF;
   padding: 12px 20px;
@@ -99,11 +103,11 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 139, ../../../docs_scss/landing.scss */
+/* line 143, ../../../docs_scss/landing.scss */
 .examples .example:hover {
   text-decoration: none;
 }
-/* line 141, ../../../docs_scss/landing.scss */
+/* line 145, ../../../docs_scss/landing.scss */
 .examples .example:hover span {
   color: #FFF;
   background: #A18EFF;
