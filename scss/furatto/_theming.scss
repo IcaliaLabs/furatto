@@ -6,14 +6,14 @@
 //
 
 @function set-smart-color($color) {
-  @if (lightness($color) > 60) {
+  @if (lightness($color) > 80) {
     @return #000000; // We return a dark color when the background is light
   } @else {
     @return #ffffff; // We return a light color when the background is dark 
   }
 }
 
-$primary-color: #B565A7;
+$primary-color: #191818;
 
 // Navigation bar
 $navigation-bar-background: $primary-color;
