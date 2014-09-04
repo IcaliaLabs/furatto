@@ -1,0 +1,144 @@
+@import "../scss/furatto/functions";
+@import "../scss/furatto/global";
+@import "../scss/furatto/media_queries";
+@import "compass/css3";
+
+//Navigation bar config
+$navigation-bar-height: 80px;
+$navigation-bar-background: #FFF;
+$navigation-bar-brand-name-color: #635C7E;
+$navigation-bar-link-color: #A18EFF;
+$navigation-bar-link-hover-color: $navigation-bar-link-color;
+$navigation-bar-hover-link-background-color: transparent;
+$navigation-bar-menu-color: #A18EFF;
+$navigation-bar-toggle-icon-top-position: 22px;
+
+$navigation-bar-brand-section-font-size: px-to-rems(16);
+$navigation-font-size: px-to-rems(14);
+$navigation-margin-bottom: 40px;
+$col-border-alpha: 0.2;
+
+//Base configuration
+$base-font-family: 'Lato', 'Helvetica Neue';
+
+//Button configuration
+$button-default-background-color: #A18EFF;
+$button-border-width: 0;
+$button-xlarge: 20px 50px;;
+$button-font-xlarge: 16px;
+
+//Typography
+$hr-color: #F9F9F9;
+
+//Compass overrides
+$default-transition-duration: 0.5s;
+
+.container {
+  width: 90%;
+  @extend %center-block;
+}
+
+.section {
+  text-align: center;
+  margin-bottom: 100px;
+  .motto {
+    color: #635C7E;
+    font-size: 24px;
+    width: 40%;
+    margin-bottom: 40px;
+    @extend %center-block;
+
+    @include max-screen(768px) {
+      width: 90%;
+    }
+  } 
+
+  .button {
+    margin-bottom: 50px;
+  }
+
+  img.window {
+    margin-bottom: 40px;
+  }
+
+  &.skills,
+  &.examples {
+    .motto {
+      font-size: 20px;
+      margin-bottom: 15px;
+    } 
+
+    .sub-motto {
+      color: #87839A;
+      font-size: 16px;
+      margin-bottom: 80px;
+    }
+
+    .skill {
+      h6 { color: #87839A; }
+
+      img {
+        height: 79px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &.contribute {
+    background: #FAF9FF;
+    padding: 30px 0;
+
+    .motto {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .sub-motto {
+      color: #87839A;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+
+  }
+
+  .mobile-first {
+    color: #635C7E;
+    @extend %center-block;
+  }
+}
+
+.medium {
+  width: 60%;
+  @extend %center-block;
+}
+
+.examples {
+  width: 85%;
+  @extend %center-block;
+
+  .example {
+    img {
+      margin-bottom: 30px;
+    }
+
+    span {
+      color: #A18EFF;
+      padding: 12px 20px;
+      @include border-radius(1000px);
+      @include single-transition;
+    }
+
+    &:hover {
+      text-decoration: none;
+      span {
+        color: #FFF;
+        background: #A18EFF;
+      }
+    }
+  }
+}
+
+@import 'footer';
+
+@import "../scss/furatto";

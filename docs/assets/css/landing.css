@@ -1,381 +1,123 @@
-/*Base config*/
-/* line 47, ../../../docs_scss/docs.scss */
-.upside-down-ninja {
-  float: right;
-  padding-right: 30px;
+/* line 36, ../../../docs_scss/landing.scss */
+.container {
+  width: 90%;
 }
 
-/* line 52, ../../../docs_scss/docs.scss */
-.main-motto {
-  font-size: 1.25rem;
-  color: #6F6F6F;
-}
-
-/* line 57, ../../../docs_scss/docs.scss */
-.white {
-  color: #FFF;
-}
-
-/* line 61, ../../../docs_scss/docs.scss */
-.main-description-container {
-  padding: 100px 20px 0 20px;
-  /*background: $primary-color;*/
-  position: relative;
-  overflow: hidden;
-}
-/* line 67, ../../../docs_scss/docs.scss */
-.main-description-container .header {
-  font-weight: bold;
-  color: #FFF;
-  margin-bottom: 0;
-  font-size: 2.5rem;
-}
-/* line 73, ../../../docs_scss/docs.scss */
-.main-description-container .header + .text-warning {
-  font-size: 1.625rem;
-}
-/* line 78, ../../../docs_scss/docs.scss */
-.main-description-container .subheader {
-  /*color: darken($primary-color, 15%);*/
-  margin-top: 0;
-  font-weight: 200;
-  font-size: 1.25rem;
-}
-/* line 85, ../../../docs_scss/docs.scss */
-.main-description-container .navigation {
-  padding: 0;
-}
-/* line 89, ../../../docs_scss/docs.scss */
-.main-description-container .download {
-  font-weight: bold;
-}
-/* line 93, ../../../docs_scss/docs.scss */
-.main-description-container .social {
-  /*color: darken($primary-color, 15%);*/
-}
-/* line 97, ../../../docs_scss/docs.scss */
-.main-description-container .social a .fa {
-  /*color: darken($primary-color, 15%);*/
-  font-size: 2.375rem;
-}
-/* line 104, ../../../docs_scss/docs.scss */
-.main-description-container .row {
-  width: 80%;
-}
-/* line 109, ../../../docs_scss/docs.scss */
-.main-description-container .computer-ninja {
-  position: relative;
-  top: 10px;
-}
-
-/* line 115, ../../../docs_scss/docs.scss */
-.skills-header-container {
+/* line 41, ../../../docs_scss/landing.scss */
+.section {
   text-align: center;
-  border-bottom: 1px solid #999;
-  padding: 22px 0;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
-/* line 121, ../../../docs_scss/docs.scss */
-.skills-header-container .header {
-  /*color: darken($primary-color, 10%);*/
-  letter-spacing: 3px;
-  font-size: 1.125rem;
-  margin: 0;
-}
-
-/* line 130, ../../../docs_scss/docs.scss */
-.skills .skills-motto {
-  margin-bottom: 40px;
-  padding-right: 100px;
-}
-/* line 135, ../../../docs_scss/docs.scss */
-.skills .skills-header {
-  color: #444;
-  font-size: 1.25rem;
-  margin: 0;
-}
-/* line 140, ../../../docs_scss/docs.scss */
-.skills .skills-header + .skills-header {
-  color: #7d7d7d;
-}
-/* line 145, ../../../docs_scss/docs.scss */
-.skills .skill {
-  text-align: center;
-}
-/* line 146, ../../../docs_scss/docs.scss */
-.skills .skill img {
-  margin-bottom: 8px;
-}
-/* line 150, ../../../docs_scss/docs.scss */
-.skills .skill h6 {
-  /*color: $primary-color; */
-}
-
-/* line 158, ../../../docs_scss/docs.scss */
-.examples {
-  background: #2b3035;
-  padding-bottom: 20px;
-}
-/* line 162, ../../../docs_scss/docs.scss */
-.examples .examples-header {
-  text-align: center;
-  padding: 22px 0;
-  letter-spacing: 3px;
-  border-bottom: 1px solid rgba(204, 204, 204, 0.2);
-  margin-bottom: 20px;
-}
-/* line 168, ../../../docs_scss/docs.scss */
-.examples .examples-header .header {
-  color: #FFF;
-  margin: 0;
-  font-size: 1.125rem;
-}
-/* line 175, ../../../docs_scss/docs.scss */
-.examples .examples-content {
-  padding: 30px 0 20px 0;
-}
-/* line 178, ../../../docs_scss/docs.scss */
-.examples .examples-content .examples-motto,
-.examples .examples-content .examples-bottom-motto {
-  margin: 0;
-  text-align: center;
-  color: #82868b;
-  font-size: 1.125rem;
+/* line 44, ../../../docs_scss/landing.scss */
+.section .motto {
+  color: #635C7E;
+  font-size: 24px;
+  width: 40%;
   margin-bottom: 40px;
 }
-/* line 186, ../../../docs_scss/docs.scss */
-.examples .examples-content .examples-wrapper {
+@media only screen and (max-width: 768px) {
+  /* line 44, ../../../docs_scss/landing.scss */
+  .section .motto {
+    width: 90%;
+  }
+}
+/* line 56, ../../../docs_scss/landing.scss */
+.section .button {
   margin-bottom: 50px;
 }
-/* line 190, ../../../docs_scss/docs.scss */
-.examples .examples-content .example {
-  display: block;
-  padding: 20px 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  background: #131618;
-  color: #58606b;
-  width: 80%;
-  text-align: center;
+/* line 60, ../../../docs_scss/landing.scss */
+.section img.window {
+  margin-bottom: 40px;
 }
-/* line 200, ../../../docs_scss/docs.scss */
-.examples .examples-content .example img {
-  margin-bottom: 10px;
+/* line 66, ../../../docs_scss/landing.scss */
+.section.skills .motto, .section.examples .motto {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
-/* line 204, ../../../docs_scss/docs.scss */
-.examples .examples-content .example:hover {
-  text-decoration: none;
+/* line 71, ../../../docs_scss/landing.scss */
+.section.skills .sub-motto, .section.examples .sub-motto {
+  color: #87839A;
+  font-size: 16px;
+  margin-bottom: 80px;
 }
-
-/* line 211, ../../../docs_scss/docs.scss */
-.contribute {
-  padding-bottom: 20px;
+/* line 78, ../../../docs_scss/landing.scss */
+.section.skills .skill h6, .section.examples .skill h6 {
+  color: #87839A;
 }
-/* line 214, ../../../docs_scss/docs.scss */
-.contribute .contribute-header {
-  text-align: center;
-  padding: 22px 0;
-  letter-spacing: 3px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+/* line 80, ../../../docs_scss/landing.scss */
+.section.skills .skill img, .section.examples .skill img {
+  height: 79px;
   margin-bottom: 20px;
 }
-/* line 221, ../../../docs_scss/docs.scss */
-.contribute .contribute-header .header {
-  color: #1b1b1b;
-  margin: 0;
-  font-size: 1.125rem;
+/* line 87, ../../../docs_scss/landing.scss */
+.section.contribute {
+  background: #FAF9FF;
+  padding: 30px 0;
 }
-/* line 228, ../../../docs_scss/docs.scss */
-.contribute .contribute-content {
-  padding: 40px 0;
+/* line 91, ../../../docs_scss/landing.scss */
+.section.contribute .motto {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
-/* line 230, ../../../docs_scss/docs.scss */
-.contribute .contribute-content .contribution {
-  padding: 20px 30px;
-  text-align: center;
+/* line 96, ../../../docs_scss/landing.scss */
+.section.contribute .sub-motto {
+  color: #87839A;
+  font-size: 16px;
+  margin-bottom: 40px;
 }
-
-/* line 239, ../../../docs_scss/docs.scss */
-.main-container {
-  padding: 0 20px;
-}
-
-/* line 243, ../../../docs_scss/docs.scss */
-.main-content-wrapper {
-  padding: 10px;
-}
-
-/* line 247, ../../../docs_scss/docs.scss */
-.row .sidebar {
-  background: #FFF;
-  height: 100%;
-  padding-left: 0.9375rem;
-  padding-top: 1.25rem;
-}
-/* line 255, ../../../docs_scss/docs.scss */
-.row .sidebar .navigation li a {
-  display: block;
-}
-/* line 258, ../../../docs_scss/docs.scss */
-.row .sidebar .navigation li a:hover {
-  background: #efefef;
-  color: #333;
-}
-/* line 265, ../../../docs_scss/docs.scss */
-.row .sidebar .header {
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: #666;
-}
-
-/* line 275, ../../../docs_scss/docs.scss */
-.getting-started-descriptions .header {
-  /*color: darken($primary-color, 8%);*/
-  font-weight: bold;
-}
-
-/* line 282, ../../../docs_scss/docs.scss */
-.whats-included h4 {
-  font-weight: 600;
-}
-
-/* line 288, ../../../docs_scss/docs.scss */
-.examples h5 {
-  font-weight: 600;
-  margin-bottom: 0.375rem;
-}
-
-/* line 296, ../../../docs_scss/docs.scss */
-.docs-examples h5 {
-  font-weight: 600;
-  margin-bottom: 0.375rem;
-}
-/* line 301, ../../../docs_scss/docs.scss */
-.docs-examples small {
-  font-size: 0.875rem;
-}
-/* line 305, ../../../docs_scss/docs.scss */
-.docs-examples .example-link {
-  color: #222;
-}
-/* line 307, ../../../docs_scss/docs.scss */
-.docs-examples .example-link:hover {
-  text-decoration: none;
-}
-
-/* line 317, ../../../docs_scss/docs.scss */
-.footer .navigation li a {
-  font-weight: 100;
-}
-/* line 319, ../../../docs_scss/docs.scss */
-.footer .navigation.inline {
-  margin-bottom: 0px;
-}
-/* line 324, ../../../docs_scss/docs.scss */
-.footer .furatto-description .name-header {
-  font-weight: bold;
-  font-size: 1.25rem;
-  letter-spacing: 1.5px;
-}
-/* line 329, ../../../docs_scss/docs.scss */
-.footer .furatto-description p {
-  line-height: 22px;
-  font-weight: 300;
-}
-/* line 335, ../../../docs_scss/docs.scss */
-.footer h4, .footer h5, .footer li, .footer p, .footer .fa, .footer a {
-  color: #FFF;
-}
-/* line 339, ../../../docs_scss/docs.scss */
-.footer .want-more {
-  /*background: darken($primary-color, 7%);*/
-  text-align: center;
-  padding: 20px 8px;
-}
-/* line 345, ../../../docs_scss/docs.scss */
-.footer .want-more a {
-  color: #FFF;
-}
-/* line 348, ../../../docs_scss/docs.scss */
-.footer .want-more a:hover {
-  color: #FFF;
-  text-decoration: underline;
-}
-/* line 354, ../../../docs_scss/docs.scss */
-.footer .want-more .fa.fa-2x {
-  margin-bottom: 20px;
-}
-/* line 358, ../../../docs_scss/docs.scss */
-.footer .want-more ul {
-  padding: 0;
-}
-/* line 361, ../../../docs_scss/docs.scss */
-.footer .want-more ul li {
-  margin-bottom: 6px;
-}
-/* line 366, ../../../docs_scss/docs.scss */
-.footer .want-more p, .footer .want-more li {
-  font-size: 0.8125rem;
-}
-/* line 371, ../../../docs_scss/docs.scss */
-.footer .general-info {
-  background: #303338;
-  padding: 80px 20px;
-  text-align: center;
-}
-/* line 376, ../../../docs_scss/docs.scss */
-.footer .general-info .navigation.inline {
-  display: inline-block;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-/* line 385, ../../../docs_scss/docs.scss */
-.inside-the-box p, .inside-the-box li {
-  font-size: 1rem;
-  line-height: 28px;
-}
-
-/* line 392, ../../../docs_scss/docs.scss */
-.old-docs h4 {
-  color: #333;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-}
-
-/* line 401, ../../../docs_scss/docs.scss */
-.code {
-  /*color: darken($primary-color, 5%);*/
-  white-space: nowrap;
-  font-weight: bold;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-/* line 409, ../../../docs_scss/docs.scss */
-.sidebar .navigation .header {
-  letter-spacing: 1px;
-}
-
-/* line 415, ../../../docs_scss/docs.scss */
-.main-container h1 {
+/* line 105, ../../../docs_scss/landing.scss */
+.section .mobile-first {
   color: #635C7E;
 }
-/* line 419, ../../../docs_scss/docs.scss */
-.main-container h2, .main-container h3, .main-container h4, .main-container h5, .main-container h6 {
-  color: #726a73;
+
+/* line 111, ../../../docs_scss/landing.scss */
+.medium {
+  width: 60%;
 }
-/* line 423, ../../../docs_scss/docs.scss */
-.main-container p {
+
+/* line 116, ../../../docs_scss/landing.scss */
+.examples {
+  width: 85%;
+}
+/* line 121, ../../../docs_scss/landing.scss */
+.examples .example img {
+  margin-bottom: 30px;
+}
+/* line 125, ../../../docs_scss/landing.scss */
+.examples .example span {
+  color: #A18EFF;
+  padding: 12px 20px;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  -o-border-radius: 1000px;
+  border-radius: 1000px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 132, ../../../docs_scss/landing.scss */
+.examples .example:hover {
+  text-decoration: none;
+}
+/* line 134, ../../../docs_scss/landing.scss */
+.examples .example:hover span {
+  color: #FFF;
+  background: #A18EFF;
+}
+
+/* line 1, ../../../docs_scss/_footer.scss */
+.footer {
+  text-align: center;
+  margin-bottom: 100px;
+}
+/* line 6, ../../../docs_scss/_footer.scss */
+.footer p a, .footer p span {
+  margin: 0 3px 10px 3px;
+}
+/* line 11, ../../../docs_scss/_footer.scss */
+.footer h4, .footer h5, .footer li, .footer p, .footer .fa, .footer a {
   color: #87839A;
 }
 
@@ -390,7 +132,7 @@
 }
 
 /* line 25, ../../../scss/furatto/_selectors.scss */
-.main-description-container .row, .examples .examples-content .example {
+.container, .section .motto, .section .mobile-first, .medium, .examples {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -481,7 +223,7 @@ object {
 
 /* line 109, ../../../scss/furatto/_base.scss */
 .text-error {
-  color: #7c1717;
+  color: #c0392b;
 }
 
 /* line 113, ../../../scss/furatto/_base.scss */
@@ -532,7 +274,7 @@ button, .button {
   -o-border-radius: 0;
   border-radius: 0;
   background-color: #a18eff;
-  border: 1px solid #8c74ff;
+  border: 0 solid #8c74ff;
   padding: 0.25rem 0.8125rem;
   font-size: 0.875rem;
   padding: 0.25rem 0.8125rem;
@@ -611,8 +353,8 @@ button.large, .button.large {
 }
 /* line 227, ../../../scss/furatto/_buttons.scss */
 button.xlarge, .button.xlarge {
-  padding: 1.375rem 2.125rem;
-  font-size: 1.375rem;
+  padding: 20px 50px;
+  font-size: 16px;
 }
 /* line 228, ../../../scss/furatto/_buttons.scss */
 button.xxlarge, .button.xxlarge {
@@ -638,12 +380,12 @@ button.block, .button.block {
 }
 /* line 240, ../../../scss/furatto/_buttons.scss */
 button.primary, .button.primary {
-  background-color: #a18eff;
-  border: 1px solid #8c74ff;
+  background-color: #3498db;
+  border: 0 solid #258cd1;
 }
 /* line 101, ../../../scss/furatto/_buttons.scss */
 button.primary:hover, button.primary:focus, .button.primary:hover, .button.primary:focus {
-  background: #947fff;
+  background: #2791d9;
 }
 /* line 105, ../../../scss/furatto/_buttons.scss */
 button.primary.disabled, button.primary[disabled], .button.primary.disabled, .button.primary[disabled] {
@@ -654,33 +396,33 @@ button.primary.disabled, button.primary[disabled], .button.primary.disabled, .bu
 /* line 110, ../../../scss/furatto/_buttons.scss */
 button.primary.active, button.primary:active, .button.primary.active, .button.primary:active {
   outline: 0;
-  background: #8c74ff;
+  background: #258cd1;
 }
 /* line 115, ../../../scss/furatto/_buttons.scss */
 button.primary.alpha, .button.primary.alpha {
-  border: 1px solid #a18eff;
+  border: 1px solid #3498db;
   background: rgba(0, 0, 0, 0);
-  color: #a18eff;
+  color: #3498db;
 }
 /* line 120, ../../../scss/furatto/_buttons.scss */
 button.primary.alpha:hover, .button.primary.alpha:hover {
   color: #FFF;
-  background: #a18eff;
+  background: #3498db;
 }
 /* line 126, ../../../scss/furatto/_buttons.scss */
 button.primary.inverse, .button.primary.inverse {
   background: #FFF;
-  color: #a18eff;
+  color: #3498db;
 }
 /* line 130, ../../../scss/furatto/_buttons.scss */
 button.primary.inverse:hover, .button.primary.inverse:hover {
-  background: #a18eff;
+  background: #3498db;
   color: #FFF;
   border: 1px solid #FFF;
 }
 /* line 137, ../../../scss/furatto/_buttons.scss */
 button.primary.three-d, .button.primary.three-d {
-  border-bottom: 0.1875rem solid #6142ff;
+  border-bottom: 0.1875rem solid #1d6fa5;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
@@ -688,13 +430,13 @@ button.primary.three-d, .button.primary.three-d {
 }
 /* line 141, ../../../scss/furatto/_buttons.scss */
 button.primary.three-d:hover, .button.primary.three-d:hover {
-  border-bottom: 0.0875rem solid #775bff;
+  border-bottom: 0.0875rem solid #217dbb;
   top: 1px;
 }
 /* line 241, ../../../scss/furatto/_buttons.scss */
 button.success, .button.success {
   background-color: #2ecc71;
-  border: 1px solid #29b765;
+  border: 0 solid #29b765;
 }
 /* line 101, ../../../scss/furatto/_buttons.scss */
 button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
@@ -749,7 +491,7 @@ button.success.three-d:hover, .button.success.three-d:hover {
 /* line 242, ../../../scss/furatto/_buttons.scss */
 button.danger, .button.danger {
   background-color: #e74c3c;
-  border: 1px solid #e43725;
+  border: 0 solid #e43725;
 }
 /* line 101, ../../../scss/furatto/_buttons.scss */
 button.danger:hover, button.danger:focus, .button.danger:hover, .button.danger:focus {
@@ -804,7 +546,7 @@ button.danger.three-d:hover, .button.danger.three-d:hover {
 /* line 243, ../../../scss/furatto/_buttons.scss */
 button.warning, .button.warning {
   background-color: #e67e22;
-  border: 1px solid #d67118;
+  border: 0 solid #d67118;
 }
 /* line 101, ../../../scss/furatto/_buttons.scss */
 button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
@@ -968,7 +710,7 @@ button.block + button.block, .button.block + .button.block {
   vertical-align: baseline;
   white-space: nowrap;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background: #a18eff;
+  background: #95a5a6;
 }
 /* line 44, ../../../scss/furatto/_labels.scss */
 .label:hover {
@@ -992,7 +734,7 @@ button.block + button.block, .button.block + .button.block {
 }
 /* line 93, ../../../scss/furatto/_labels.scss */
 .label.primary {
-  background: #a18eff;
+  background: #3498db;
 }
 /* line 94, ../../../scss/furatto/_labels.scss */
 .label.success {
@@ -1122,7 +864,7 @@ button.block + button.block, .button.block + .button.block {
 .navigation li.header {
   text-transform: uppercase;
   padding: 0.333rem 0;
-  color: #272727;
+  color: #333333;
   font-size: 0.85714rem;
 }
 /* line 68, ../../../scss/furatto/_navigation.scss */
@@ -1250,10 +992,10 @@ input[type="color"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.1s ease-in-out, 1s;
-  -moz-transition: all 0.1s ease-in-out, 1s;
-  -o-transition: all 0.1s ease-in-out, 1s;
-  transition: all 0.1s ease-in-out, 1s;
+  -webkit-transition: all 0.1s ease-in-out, 0.5s;
+  -moz-transition: all 0.1s ease-in-out, 0.5s;
+  -o-transition: all 0.1s ease-in-out, 0.5s;
+  transition: all 0.1s ease-in-out, 0.5s;
   display: block;
   width: 100%;
   height: 2rem;
@@ -1578,10 +1320,10 @@ select {
   outline: none;
   color: #555555;
   font-size: 0.875rem;
-  -webkit-transition: all 2s linear, 1s;
-  -moz-transition: all 2s linear, 1s;
-  -o-transition: all 2s linear, 1s;
-  transition: all 2s linear, 1s;
+  -webkit-transition: all 2s linear, 0.5s;
+  -moz-transition: all 2s linear, 0.5s;
+  -o-transition: all 2s linear, 0.5s;
+  transition: all 2s linear, 0.5s;
 }
 /* line 246, ../../../scss/furatto/_forms.scss */
 select.radius {
@@ -1978,9 +1720,9 @@ img.polaroid {
  */
 /* line 90, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar {
-  background: #a18eff;
+  background: white;
   height: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   overflow: hidden;
   font-weight: 300;
   border-bottom: transparent;
@@ -2000,7 +1742,7 @@ img.polaroid {
 }
 /* line 105, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened .brand-section .menu-toggle a {
-  color: white;
+  color: #a18eff;
 }
 /* line 109, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) {
@@ -2056,7 +1798,7 @@ img.polaroid {
 /* line 157, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.opened ul:not(.brand-section) li.divider {
   height: auto;
-  border-bottom: 1px solid #ad9dff;
+  border-bottom: 1px solid white;
 }
 /* line 167, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .navigation-bar-text {
@@ -2108,7 +1850,7 @@ img.polaroid {
 /* line 216, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a {
   color: white;
-  background: #775bff;
+  background: #e6e6e6;
 }
 /* line 220, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.active > a:hover {
@@ -2124,17 +1866,17 @@ img.polaroid {
   padding: 0 26.66667px;
   height: 80px;
   line-height: 80px;
-  color: white;
+  color: #a18eff;
 }
 /* line 236, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li a:hover {
   text-decoration: none;
-  color: white;
+  color: #a18eff;
 }
 /* line 242, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.divider {
   height: 80px;
-  border-left: 1px solid #ad9dff;
+  border-left: 1px solid white;
 }
 /* line 248, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-form {
@@ -2196,8 +1938,8 @@ img.polaroid {
   -ms-border-radius: 0px 0px 3px 3px;
   -o-border-radius: 0px 0px 3px 3px;
   border-radius: 0px 0px 3px 3px;
-  border: 1px solid #cbc1ff;
-  background: #a18eff;
+  border: 1px solid white;
+  background: white;
   border-top: none;
 }
 /* line 306, ../../../scss/furatto/_navigation_bar.scss */
@@ -2223,7 +1965,7 @@ img.polaroid {
 /* line 325, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul li.with-dropdown .dropdown li.divider {
   height: 0.0625rem;
-  border-top: 1px solid #ad9dff;
+  border-top: 1px solid white;
 }
 /* line 335, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar ul.pull-right {
@@ -2237,12 +1979,12 @@ img.polaroid {
 }
 /* line 345, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section .brand-name a {
-  color: white;
+  color: #635c7e;
 }
 /* line 348, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section .brand-name a:hover {
   text-decoration: none;
-  color: white;
+  color: #635c7e;
 }
 /* line 355, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar .brand-section li {
@@ -2266,9 +2008,9 @@ img.polaroid {
   position: absolute;
   right: 0;
   top: 22px;
-  -webkit-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
-  -moz-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
-  box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
+  -webkit-box-shadow: 0 10px 0 1px #a18eff, 0 16px 0 1px #a18eff, 0 22px 0 1px #a18eff;
+  -moz-box-shadow: 0 10px 0 1px #a18eff, 0 16px 0 1px #a18eff, 0 22px 0 1px #a18eff;
+  box-shadow: 0 10px 0 1px #a18eff, 0 16px 0 1px #a18eff, 0 22px 0 1px #a18eff;
 }
 /* line 382, ../../../scss/furatto/_navigation_bar.scss */
 .navigation-bar.fixed {
@@ -2338,7 +2080,7 @@ p {
 
 /* line 100, ../../../scss/furatto/_typography.scss */
 a {
-  color: #947fff;
+  color: #0088cc;
   line-height: inherit;
   text-decoration: none;
 }
@@ -2531,7 +2273,7 @@ blockquote p {
 /* line 92, ../../../scss/furatto/_grid.scss */
 .row.success,
 .row [class*="col-"].success {
-  background: #191818;
+  background: rgba(46, 204, 113, 0.8);
 }
 /* line 51, ../../../scss/furatto/_grid.scss */
 .row .col-1 {

@@ -9,15 +9,14 @@
   {% include navbar.html %}
 
   <div class="row">
-     <div class="col-9">
-       <div class="main-content-wrapper">
+     <div class="col-2 sidebar hidden-on-xsmall">
+       {% include sidebar.html %}
+     </div>
+     <div class="col-10">
+       <div class="main-container">
         {{content}}
        </div>
      </div>
-     <div class="col-3 sidebar hidden-on-xsmall">
-       {% include sidebar.html %}
-     </div>
-     <img src="/furatto/assets/img/updsidedownNinja.png" alt="" class="hidden-on-xsmall upside-down-ninja" />
   </div>
 
   {% include off_screen_menu.html %}
