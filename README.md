@@ -1,4 +1,5 @@
 # [Furatto](https://github.com/IcaliaLabs/furatto)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/IcaliaLabs/furatto?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Furatto is a lightweight & friendly front-end framework got get the job done, created and maintained by [Abraham Kuri](https://twitter.com/kurenn) from [Icalia Labs](http://twitter.com/icalialabs).
 
