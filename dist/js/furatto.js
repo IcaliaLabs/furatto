@@ -1,5 +1,11 @@
 /*!
- * Furatto v3.0.3 (http://icalialabs.github.io/furatto/)
+ * Furatto v3.1.0 (http://icalialabs.github.io/furatto/)
+ * Copyright 2014-2014 Icalia Labs
+ * Licensed under MIT (https://github.com/IcaliaLabs/furatto/blob/master/LICENSE)
+ */
+
+/*!
+ * Furatto v3.1.0 (http://icalialabs.github.io/furatto/)
  * Copyright 2014-2014 Icalia Labs
  * Licensed under MIT (https://github.com/IcaliaLabs/furatto/blob/master/LICENSE)
  */

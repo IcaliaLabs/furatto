@@ -1,6 +1,6 @@
 {
   "name": "furatto",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "main": [
     "./dist/css/furatto.css",
     "./dist/css/furatto.min.css",
