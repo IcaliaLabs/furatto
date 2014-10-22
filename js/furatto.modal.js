@@ -90,7 +90,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       elementToAppend = $('body');
     }
     elementToAppend.append('<div class="modal-overlay"></div>');
-    return $('[data-furatto="modal"], .modal').each(function() {
+    return $('[data-furatto="modal"]').each(function() {
       var modal;
       modal = $(this);
       return modal.modal('init');
