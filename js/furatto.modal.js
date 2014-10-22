@@ -9,12 +9,16 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       this.init = __bind(this.init, this);
       this.options = $.extend({}, options);
       this.$el = $(el);
-      this.modal = $(this.$el.data('target'));
-      this.close = this.modal.find('.modal-close');
+      if (this.$el.is('.modal')) {
+        this.$modal = this.$el;
+      } else {
+        this.$modal = $(this.$el.data('target'));
+      }
+      this.close = this.$modal.find('.modal-close');
       this.transition = this.$el.data('transition') || "1";
       this.theme = this.$el.data('theme') || "default";
-      this.modal.addClass("modal-effect-" + this.transition);
-      this.modal.addClass("" + this.theme);
+      this.$modal.addClass("modal-effect-" + this.transition);
+      this.$modal.addClass("" + this.theme);
     }
 
     Modal.prototype.init = function() {
@@ -27,10 +31,10 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
     };
 
     Modal.prototype.show = function(ev) {
-      if (this.$el.is('div')) {
+      if (this.$el.is('.modal')) {
         this.$el.addClass('modal-show');
       } else {
-        this.modal.addClass('modal-show');
+        this.$modal.addClass('modal-show');
       }
       $('.modal-overlay').addClass('modal-show-overlay');
       $('body').bind('keyup', this.hideOnEsc);
@@ -51,10 +55,10 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
 
     Modal.prototype.hide = function() {
       $('.modal-overlay').removeClass('modal-show-overlay');
-      if (this.$el.is('div')) {
+      if (this.$el.is('.modal')) {
         this.$el.removeClass('modal-show');
       } else {
-        this.modal.removeClass('modal-show');
+        this.$modal.removeClass('modal-show');
       }
       $('body').unbind('keyup', this.hideOnEsc);
       return $('body').unbind('click', this.hideOnDocumentClick);
@@ -77,7 +81,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       }
     });
   };
-  Furatto.Modal.version = "1.0.0";
+  Furatto.Modal.version = "1.0.1";
   $(document).ready(function() {
     var elementToAppend;
     if ($('.off-screen').length > 0) {
@@ -86,7 +90,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
       elementToAppend = $('body');
     }
     elementToAppend.append('<div class="modal-overlay"></div>');
-    return $('[data-furatto="modal"]').each(function() {
+    return $('[data-furatto="modal"], .modal').each(function() {
       var modal;
       modal = $(this);
       return modal.modal('init');
