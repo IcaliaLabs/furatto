@@ -44,7 +44,7 @@ Furatto's documentation is built using [Jekyll](http://jekyllrb.com/) and publis
 
 ### Running documentation locally
 
-1. You need to install [Jekyll](http://jekyllrb.com/)
+1. You need to install [Jekyll](http://jekyllrb.com/) or run `bundle install`
 2. From the root of the project `furatto/` run `jekyll serve --watch` from the command line, this way if you change any file jekyll will generate that for you.
 3. Open <http://localhost:9001/furatto> and you are good to go.
 
