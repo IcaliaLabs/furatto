@@ -1,6 +1,6 @@
 /*!
- * Furatto v3.1.0 (http://icalialabs.github.io/furatto/)
- * Copyright 2014-2014 Icalia Labs
+ * Furatto v3.1.1 (http://icalialabs.github.io/furatto/)
+ * Copyright 2014-2015 Icalia Labs
  * Licensed under MIT (https://github.com/IcaliaLabs/furatto/blob/master/LICENSE)
  */
 window.Furatto = {
