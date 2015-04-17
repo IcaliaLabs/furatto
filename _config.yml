@@ -18,5 +18,5 @@ repo: https://github.com/IcaliaLabs/furatto
 current_ip: 192.168.0.10
 
 download:
-  dist: http://icalialabs.github.io/furatto/assets/furatto_3.1.0.zip
-  source: http://icalialabs.github.io/furatto/assets/furatto_3.1.0_sass.zip
+  dist: http://icalialabs.github.io/furatto/assets/furatto_3.1.1.zip
+  source: http://icalialabs.github.io/furatto/assets/furatto_3.1.1_sass.zip
