@@ -75,3 +75,4 @@ PLATFORMS
 DEPENDENCIES
   compass
   jekyll
+  sass
