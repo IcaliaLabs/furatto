@@ -129,7 +129,7 @@ input[type="color"],
 {
   @include border-radius($form-input-radius);
   @include box-shadow($form-input-box-shadow);
-  @include appearance($ap: none);
+  @include appearance(none);
 
   @if($include-input-transition) {
     @include single-transition($form-input-transition-property $form-input-transition-duration $form-input-transition-timing-function);
@@ -230,7 +230,7 @@ select {
   //Firefox fix
   text-indent: 0.01px;
   text-overflow: "";
-  @include appearance($ap: none);
+  @include appearance(none);
 
   padding: $form-select-padding;
   border: $form-select-border-width $form-select-border-style $form-select-border-color;
