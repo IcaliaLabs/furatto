@@ -1,0 +1,18 @@
+$remBase: 16 !default;
+
+@function px-to-rems($size: 24) {
+  $value: ($size / $remBase) * 1rem;
+
+  @return $value;
+}
+
+//
+//We use this function to calculate the toolbars position 
+//and width for different positions
+//
+//$width - the width from which to set the arrow position
+@function calculate-toolbar-arrow-position($width: 7px) {
+
+  @return $width * 2 * -1;
+
+}

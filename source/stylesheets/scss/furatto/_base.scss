@@ -1,0 +1,8 @@
+@import "compass";
+
+//Reset settings
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}

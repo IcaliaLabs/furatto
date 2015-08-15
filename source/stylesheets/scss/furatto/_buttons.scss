@@ -1,0 +1,247 @@
+//Buttons
+
+//
+//@variables
+//
+@import "compass";
+@import "functions";
+@import "media_queries";
+
+//Base styles
+$base-font-family: "Helvetica" !default;
+$button-base-margin: 5px 0 !default;
+
+//Padding sizes for buttons
+$button-default: px-to-rems(4) px-to-rems(13) !default;
+$button-mini: 0 px-to-rems(6) !default;
+$button-small: px-to-rems(2) px-to-rems(11) !default;
+$button-large:  px-to-rems(12) px-to-rems(21) !default;
+$button-xlarge: px-to-rems(22) px-to-rems(34) !default;
+
+//Buttons style
+$button-display: inline-block !default;
+$button-default-background-color: #009688 !default;
+
+//Buttons general styles
+$button-font-family: $base-font-family !default;
+$button-font-color: #FFF !default;
+$button-font-weight: 300 !default;
+$button-font-default: px-to-rems(14) !default;
+$button-font-mini: px-to-rems(11) !default;
+$button-font-small: px-to-rems(12) !default;
+$button-font-large: px-to-rems(16) !default;
+$button-font-xlarge: px-to-rems(22) !default;
+$button-vertical-separation: px-to-rems(5) !default;
+
+//Buttons variations
+$button-radius: px-to-rems(3) !default;
+$button-alpha-border: 1px solid #FFF !default;
+$button-alpha-color: #FFF !default;
+$button-3d-border-width: px-to-rems(3) !default;
+$button-disabled-opacity: 0.65 !default;
+
+//
+//@mixin
+//
+// We use this mixin to create a default button base style
+//
+
+@mixin button-base {
+  color: $button-font-color;
+  cursor: pointer;
+  display: $button-display;
+  font-weight: $button-font-weight;
+  line-height: normal;
+  margin: $button-base-margin;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  @include single-transition(all, 0.2s, ease-in-out);
+  @include appearance(none);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.alpha {
+    border: $button-alpha-border;
+    color: $button-alpha-color;
+  }
+}
+
+//
+//@mixin
+//
+// We use this mixin to add style to buttons and their states
+//
+// $background-color - Is the background color for the button to create
+
+@mixin button-style($background-color: $button-default-background-color) {
+
+  background-color: $background-color;
+
+  &:hover, &:focus {
+    background: darken($background-color, 3%);
+  }
+
+  &.disabled, &[disabled] {
+    cursor: no-drop;
+
+    @include opacity($button-disabled-opacity);
+  }
+
+  &.active, &:active {
+    background: darken($background-color, 5%);
+    outline: none;
+  }
+
+  &.alpha {
+    background: transparent;
+    border: 1px solid $background-color;
+    color: $background-color;
+
+    &:hover {
+      background: $background-color;
+      color: #FFF;
+    }
+  }
+
+  &.three-d {
+    position: relative;
+    border-bottom: $button-3d-border-width solid darken($background-color, 15%);
+
+    @include single-transition(all, 0.1s, ease-in-out);
+
+    &:hover {
+      border-bottom: ($button-3d-border-width - 0.1) solid darken($background-color, 10%);
+      top: 1px;
+    }
+  }
+}
+
+//
+//@mixin
+//
+// We use this mixin to set the button size
+// $padding - The padding to give to the button. Default: $button-default
+// $font-size - The font size for the button. Default: $button-font-default
+//
+
+@mixin button-size($padding: $button-default, $font-size: $button-font-default) {
+  font-size: $font-size;
+  padding: $padding;
+}
+
+//
+//@mixin
+//
+// We use this mixin to let the user create custom buttons
+// $background-color - Is the background color for the button to create. Default: $button-default-background-color
+// $padding - The padding to give to the button. Default: $button-default
+// $font-size - The font size for the button. Default: $button-font-default
+// $include-radius-style - Wheter or not to add the radius style on the custom button
+// $include-block-style - Wheter or not to add the block size style on the custom button
+// $include-pill-style - Wheter or not to add the pill style on the custom button
+// Example .custom-button { @include button($background-color: #1abc9c); }
+//
+
+@mixin button($background-color: $button-default-background-color,
+           $padding: $button-default,
+           $font-size: $button-font-default,
+           $include-radius-style: false,
+           $include-block-style: false,
+           $include-pill-style: false) {
+  @include button-base;
+  @include button-style($background-color);
+  @include button-size($padding, $font-size);
+
+  @if $include-radius-style {
+    &.radius {
+      @include border-radius($button-radius);
+    }
+  }
+
+  @if $include-block-style {
+    &.block {
+      display: block;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 100%;
+    }
+  }
+
+  @if $include-pill-style {
+    &.pill {
+      @include border-radius(1000px);
+    }
+  }
+
+  @include phone {
+    & {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+
+//Button style definition
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  border: none;
+}
+
+
+button,
+input[type="submit"],
+input[type="reset"],
+.button {
+  //Button sizes
+  //
+  //Default size
+  font-size: $button-font-default;
+  padding: $button-default;
+
+  //Custom sizes
+  &.large { @include button-size($padding: $button-large, $font-size: $button-font-large); }
+  &.xlarge { @include button-size($padding: $button-xlarge, $font-size: $button-font-xlarge); }
+  &.small { @include button-size($padding: $button-small, $font-size: $button-font-small); }
+  &.mini { @include button-size($padding: $button-mini, $font-size: $button-font-mini); }
+
+  &.block {
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+
+  &.radius {
+    @include border-radius($button-radius);
+  }
+
+  &.pill {
+    @include border-radius(1000px);
+  }
+
+  /* Vertical separation */
+  /*----------------------*/
+  &.block + &.block {
+    margin-top: $button-vertical-separation;
+  }
+
+  @include button-base;
+  @include button-style;
+  @include button-size;
+
+  @include phone {
+    & {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
