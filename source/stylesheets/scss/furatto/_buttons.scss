@@ -8,11 +8,11 @@
 @import "media_queries";
 
 //Base styles
-$base-font-family: "Helvetica" !default;
+$base-font-family: "Open Sans", "Helvetica", sans-serif !default;
 $button-base-margin: 5px 0 !default;
 
 //Padding sizes for buttons
-$button-default: px-to-rems(4) px-to-rems(13) !default;
+$button-default: px-to-rems(8) px-to-rems(32) !default;
 $button-mini: 0 px-to-rems(6) !default;
 $button-small: px-to-rems(2) px-to-rems(11) !default;
 $button-large:  px-to-rems(12) px-to-rems(21) !default;
@@ -20,13 +20,13 @@ $button-xlarge: px-to-rems(22) px-to-rems(34) !default;
 
 //Buttons style
 $button-display: inline-block !default;
-$button-default-background-color: #009688 !default;
+$button-default-background-color: #0092FC !default;
 
 //Buttons general styles
 $button-font-family: $base-font-family !default;
 $button-font-color: #FFF !default;
-$button-font-weight: 300 !default;
-$button-font-default: px-to-rems(14) !default;
+$button-font-weight: 400 !default;
+$button-font-size: px-to-rems(14) !default;
 $button-font-mini: px-to-rems(11) !default;
 $button-font-small: px-to-rems(12) !default;
 $button-font-large: px-to-rems(16) !default;
@@ -34,11 +34,12 @@ $button-font-xlarge: px-to-rems(22) !default;
 $button-vertical-separation: px-to-rems(5) !default;
 
 //Buttons variations
-$button-radius: px-to-rems(3) !default;
+$button-radius: px-to-rems(4) !default;
 $button-alpha-border: 1px solid #FFF !default;
 $button-alpha-color: #FFF !default;
 $button-3d-border-width: px-to-rems(3) !default;
 $button-disabled-opacity: 0.65 !default;
+$button-disabled-background: #CBCBCB !default;
 
 //
 //@mixin
@@ -50,6 +51,7 @@ $button-disabled-opacity: 0.65 !default;
   color: $button-font-color;
   cursor: pointer;
   display: $button-display;
+  font-family: $button-font-family;
   font-weight: $button-font-weight;
   line-height: normal;
   margin: $button-base-margin;
@@ -57,8 +59,6 @@ $button-disabled-opacity: 0.65 !default;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-
-  @include single-transition(all, 0.2s, ease-in-out);
   @include appearance(none);
 
   &:hover {
@@ -88,6 +88,7 @@ $button-disabled-opacity: 0.65 !default;
 
   &.disabled, &[disabled] {
     cursor: no-drop;
+    background: $button-disabled-background;
 
     @include opacity($button-disabled-opacity);
   }
@@ -126,10 +127,10 @@ $button-disabled-opacity: 0.65 !default;
 //
 // We use this mixin to set the button size
 // $padding - The padding to give to the button. Default: $button-default
-// $font-size - The font size for the button. Default: $button-font-default
+// $font-size - The font size for the button. Default: $button-font-size
 //
 
-@mixin button-size($padding: $button-default, $font-size: $button-font-default) {
+@mixin button-size($padding: $button-default, $font-size: $button-font-size) {
   font-size: $font-size;
   padding: $padding;
 }
@@ -140,7 +141,7 @@ $button-disabled-opacity: 0.65 !default;
 // We use this mixin to let the user create custom buttons
 // $background-color - Is the background color for the button to create. Default: $button-default-background-color
 // $padding - The padding to give to the button. Default: $button-default
-// $font-size - The font size for the button. Default: $button-font-default
+// $font-size - The font size for the button. Default: $button-font-size
 // $include-radius-style - Wheter or not to add the radius style on the custom button
 // $include-block-style - Wheter or not to add the block size style on the custom button
 // $include-pill-style - Wheter or not to add the pill style on the custom button
@@ -149,7 +150,7 @@ $button-disabled-opacity: 0.65 !default;
 
 @mixin button($background-color: $button-default-background-color,
            $padding: $button-default,
-           $font-size: $button-font-default,
+           $font-size: $button-font-size,
            $include-radius-style: false,
            $include-block-style: false,
            $include-pill-style: false) {
@@ -203,7 +204,7 @@ input[type="reset"],
   //Button sizes
   //
   //Default size
-  font-size: $button-font-default;
+  font-size: $button-font-size;
   padding: $button-default;
 
   //Custom sizes
