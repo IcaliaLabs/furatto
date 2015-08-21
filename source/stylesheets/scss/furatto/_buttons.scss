@@ -101,7 +101,7 @@ $button-active-background: darken($button-default-background-color, 5%) !default
 
   &.alpha {
     background: transparent;
-    border: 1px solid $background-color;
+    border: 3px solid $background-color;
     color: $background-color;
 
     &:hover {
