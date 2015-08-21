@@ -93,7 +93,9 @@ $button-circular-size: px-to-rems(50) !default;
     cursor: no-drop;
     background: $button-disabled-background;
 
-    @include opacity($button-disabled-opacity);
+    &:active, &:focus {
+      background: $button-disabled-background;
+    }
   }
 
   &.active, &:active, &:focus {
