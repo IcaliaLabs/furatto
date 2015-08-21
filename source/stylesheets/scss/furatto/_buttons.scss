@@ -109,6 +109,15 @@ $button-disabled-background: #CBCBCB !default;
     }
   }
 
+  &.responsive {
+    @include phone {
+      & {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
   &.three-d {
     position: relative;
     border-bottom: $button-3d-border-width solid darken($background-color, 15%);
@@ -178,13 +187,6 @@ $button-disabled-background: #CBCBCB !default;
       @include border-radius(1000px);
     }
   }
-
-  @include phone {
-    & {
-      display: block;
-      width: 100%;
-    }
-  }
 }
 
 
@@ -237,12 +239,5 @@ input[type="reset"],
   @include button-base;
   @include button-style;
   @include button-size;
-
-  @include phone {
-    & {
-      display: block;
-      width: 100%;
-    }
-  }
 }
 
