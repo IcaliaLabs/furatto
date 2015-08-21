@@ -6,6 +6,7 @@
 @import "compass";
 @import "functions";
 @import "media_queries";
+@import "pseudo_selectors";
 
 //Base styles
 $base-font-family: "Open Sans", "Helvetica", sans-serif !default;
@@ -41,6 +42,7 @@ $button-3d-border-width: px-to-rems(3) !default;
 $button-disabled-opacity: 0.65 !default;
 $button-disabled-background: #CBCBCB !default;
 $button-active-background: darken($button-default-background-color, 5%) !default;
+$button-circular-size: px-to-rems(50) !default;
 
 //
 //@mixin
@@ -107,6 +109,18 @@ $button-active-background: darken($button-default-background-color, 5%) !default
     &:hover {
       background: $background-color;
       color: #FFF;
+    }
+  }
+
+  &.circular {
+    height: $button-circular-size;
+    width: $button-circular-size;
+    padding: 0;
+    @include border-radius(50%);
+
+    i, span {
+      @extend %vertical-alignment;
+      display: inline-block;
     }
   }
 
@@ -207,10 +221,6 @@ button,
 input[type="submit"],
 input[type="reset"],
 .button {
-  //Button sizes
-  //Default size
-  font-size: $button-font-size;
-  padding: $button-default;
 
   //Custom sizes
   &.large { @include button-size($padding: $button-large, $font-size: $button-font-large); }

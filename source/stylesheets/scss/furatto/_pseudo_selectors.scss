@@ -1,0 +1,7 @@
+// Aligns the content vertically speaking
+%vertical-alignment {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+  margin: 0;
+}
