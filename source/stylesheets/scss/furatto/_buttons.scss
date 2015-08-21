@@ -110,29 +110,27 @@ $button-active-background: darken($button-default-background-color, 5%) !default
     }
   }
 
+  &.shadow {
+    @include box-shadow(1px 2px 4px 0px rgba(167, 167, 167, 0.5));
+  }
+
+  &.push {
+    position: relative;
+    @include box-shadow(inset 0px -3px 0px darken($background-color, 10%));
+    @include single-transition(all, 0.1s, ease-in-out);
+
+    &:hover {
+      top: 1px;
+      @include box-shadow(inset 0px 0px 0px darken($background-color, 10%));
+    }
+  }
+
   &.responsive {
     @include phone {
       & {
         display: block;
         width: 100%;
       }
-    }
-  }
-
-  &.shadow {
-    @include box-shadow(1px 2px 4px 0px rgba(167, 167, 167, 0.5));
-  }
-
-  &.three-d {
-    position: relative;
-
-    border-bottom: $button-3d-border-width solid darken($background-color, 15%);
-
-    @include single-transition(all, 0.1s, ease-in-out);
-
-    &:hover {
-      border-bottom: ($button-3d-border-width - 0.1) solid darken($background-color, 10%);
-      top: 1px;
     }
   }
 }
