@@ -12,11 +12,13 @@ $base-font-family: "Open Sans", "Helvetica", sans-serif !default;
 $button-base-margin: 5px 0 !default;
 
 //Padding sizes for buttons
-$button-default: px-to-rems(8) px-to-rems(32) !default;
-$button-mini: 0 px-to-rems(6) !default;
-$button-small: px-to-rems(2) px-to-rems(11) !default;
-$button-large:  px-to-rems(12) px-to-rems(21) !default;
-$button-xlarge: px-to-rems(22) px-to-rems(34) !default;
+$button-padding-bottom-top: 8 !default;
+$button-padding-right-left: 32 !default;
+
+//Padding sizes for buttons
+$button-small: px-to-rems($button-padding-bottom-top / 4) px-to-rems($button-padding-right-left / 3) !default;
+$button-default: px-to-rems($button-padding-bottom-top) px-to-rems($button-padding-right-left) !default;
+$button-large:  px-to-rems($button-padding-bottom-top * 2) px-to-rems($button-padding-right-left * 2) !default;
 
 //Buttons style
 $button-display: inline-block !default;
@@ -25,12 +27,10 @@ $button-default-background-color: #0092FC !default;
 //Buttons general styles
 $button-font-family: $base-font-family !default;
 $button-font-color: #FFF !default;
-$button-font-weight: 400 !default;
+$button-font-weight: 500 !default;
 $button-font-size: px-to-rems(14) !default;
-$button-font-mini: px-to-rems(11) !default;
 $button-font-small: px-to-rems(12) !default;
 $button-font-large: px-to-rems(16) !default;
-$button-font-xlarge: px-to-rems(22) !default;
 $button-vertical-separation: px-to-rems(5) !default;
 
 //Buttons variations
@@ -40,6 +40,7 @@ $button-alpha-color: #FFF !default;
 $button-3d-border-width: px-to-rems(3) !default;
 $button-disabled-opacity: 0.65 !default;
 $button-disabled-background: #CBCBCB !default;
+$button-active-background: darken($button-default-background-color, 5%) !default;
 
 //
 //@mixin
@@ -82,7 +83,7 @@ $button-disabled-background: #CBCBCB !default;
 
   background-color: $background-color;
 
-  &:hover, &:focus {
+  &:focus {
     background: darken($background-color, 3%);
   }
 
@@ -93,8 +94,8 @@ $button-disabled-background: #CBCBCB !default;
     @include opacity($button-disabled-opacity);
   }
 
-  &.active, &:active {
-    background: darken($background-color, 5%);
+  &.active, &:active, &:focus {
+    background: $button-active-background;
     outline: none;
   }
 
@@ -118,8 +119,13 @@ $button-disabled-background: #CBCBCB !default;
     }
   }
 
+  &.shadow {
+    @include box-shadow(1px 2px 4px 0px rgba(167, 167, 167, 0.5));
+  }
+
   &.three-d {
     position: relative;
+
     border-bottom: $button-3d-border-width solid darken($background-color, 15%);
 
     @include single-transition(all, 0.1s, ease-in-out);
@@ -204,16 +210,13 @@ input[type="submit"],
 input[type="reset"],
 .button {
   //Button sizes
-  //
   //Default size
   font-size: $button-font-size;
   padding: $button-default;
 
   //Custom sizes
   &.large { @include button-size($padding: $button-large, $font-size: $button-font-large); }
-  &.xlarge { @include button-size($padding: $button-xlarge, $font-size: $button-font-xlarge); }
   &.small { @include button-size($padding: $button-small, $font-size: $button-font-small); }
-  &.mini { @include button-size($padding: $button-mini, $font-size: $button-font-mini); }
 
   &.block {
     display: block;
