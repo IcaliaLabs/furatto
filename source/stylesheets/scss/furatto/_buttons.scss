@@ -1,18 +1,22 @@
-//Buttons
+// Buttons
 
 //
-//@variables
+// @imports
 //
 @import "compass";
 @import "functions";
 @import "media_queries";
 @import "pseudo_selectors";
 
-//Base styles
+//
+// @variables
+//
+
+//Base button styles
 $base-font-family: "Open Sans", "Helvetica", sans-serif !default;
 $button-base-margin: 5px 0 !default;
 
-//Padding sizes for buttons
+//Padding sizes for button
 $button-padding-bottom-top: 8 !default;
 $button-padding-right-left: 32 !default;
 
@@ -44,7 +48,7 @@ $button-active-background: darken($button-default-background-color, 5%) !default
 $button-circular-size: px-to-rems(50) !default;
 
 //
-//@mixin
+// @mixin
 //
 // We use this mixin to create a default button base style
 //
@@ -73,13 +77,26 @@ $button-circular-size: px-to-rems(50) !default;
 //
 //@mixin
 //
-// We use this mixin to add style to buttons and their states
+// We use this mixin to add the differente button variations
 //
-// $background-color - Is the background color for the button to create
+// $background-color - Is the background color for the button to create. Default: $button-default-background-color
 
 @mixin button-style($background-color: $button-default-background-color) {
 
   background-color: $background-color;
+
+  &.block {
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+
+  /* Vertical separation */
+  /*----------------------*/
+  &.block + &.block {
+    margin-top: $button-vertical-separation;
+  }
 
   &.disabled, &[disabled] {
     cursor: no-drop;
@@ -167,31 +184,31 @@ $button-circular-size: px-to-rems(50) !default;
 //
 //@mixin
 //
-// We use this mixin to let the user create custom buttons
-// $background-color - Is the background color for the button to create. Default: $button-default-background-color
+// We use this mixin to let the user create custom buttons nice and easy
+// $background-color - Is the background color for the button to create. Default: #0092FC
 // $padding - The padding to give to the button. Default: $button-default
 // $font-size - The font size for the button. Default: $button-font-size
-// $include-radius-style - Wheter or not to add the radius style on the custom button
-// $include-block-style - Wheter or not to add the block size style on the custom button
-// $include-pill-style - Wheter or not to add the pill style on the custom button
+// $font-weight - The font weight for the button. Default: 500
+// $font-family The font family for the button. Default: $base-font-family
+// $font-color The font color for the button. Default: #FFF
 // Example .custom-button { @include button($background-color: #1abc9c); }
 //
 
 @mixin button($background-color: #0092FC,
            $padding: px-to-rems($button-padding-bottom-top) px-to-rems($button-padding-right-left),
            $font-size: px-to-rems(14),
-           $button-font-family: "Open Sans",
-           $button-font-weight: 500) {
+           $font-family: $base-font-family,
+           $font-color: #FFF,
+           $font-weight: 500) {
 
-  @include button-base($button-font-color: #FFF,
-                       $button-font-family: "Open Sans",
-                       $button-font-weight: 500);
+  @include button-base($button-font-color: $font-color,
+                       $button-font-family: $font-family,
+                       $button-font-weight: $font-weight);
   @include button-style($background-color);
   @include button-size($padding, $font-size);
 }
 
-//Button style definition
-
+// Button style definition
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -203,25 +220,12 @@ button,
 input[type="submit"],
 input[type="reset"],
 .button {
-
-  //Custom sizes
-  &.large { @include button-size($padding: $button-large, $font-size: $button-font-large); }
-  &.small { @include button-size($padding: $button-small, $font-size: $button-font-small); }
-
-  &.block {
-    display: block;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 100%;
-  }
-
-  /* Vertical separation */
-  /*----------------------*/
-  &.block + &.block {
-    margin-top: $button-vertical-separation;
-  }
-
+  // We use the power of mixins
   @include button-base;
   @include button-style;
   @include button-size;
+
+  // Custom sizes
+  &.large { @include button-size($padding: $button-large, $font-size: $button-font-large); }
+  &.small { @include button-size($padding: $button-small, $font-size: $button-font-small); }
 }
