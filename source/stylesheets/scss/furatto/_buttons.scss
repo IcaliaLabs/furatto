@@ -36,10 +36,9 @@ $button-vertical-separation: px-to-rems(5) !default;
 
 //Buttons variations
 $button-radius: px-to-rems(4) !default;
-$button-alpha-border: 1px solid #FFF !default;
+$button-alpha-border: 3px solid #FFF !default;
 $button-alpha-color: #FFF !default;
 $button-3d-border-width: px-to-rems(3) !default;
-$button-disabled-opacity: 0.65 !default;
 $button-disabled-background: #CBCBCB !default;
 $button-active-background: darken($button-default-background-color, 5%) !default;
 $button-circular-size: px-to-rems(50) !default;
@@ -50,7 +49,9 @@ $button-circular-size: px-to-rems(50) !default;
 // We use this mixin to create a default button base style
 //
 
-@mixin button-base {
+@mixin button-base($button-font-color: #FFF,
+                   $button-font-family: "Open Sans",
+                   $button-font-weight: 500) {
   color: $button-font-color;
   cursor: pointer;
   display: $button-display;
@@ -67,11 +68,6 @@ $button-circular-size: px-to-rems(50) !default;
   &:hover {
     text-decoration: none;
   }
-
-  &.alpha {
-    border: $button-alpha-border;
-    color: $button-alpha-color;
-  }
 }
 
 //
@@ -84,10 +80,6 @@ $button-circular-size: px-to-rems(50) !default;
 @mixin button-style($background-color: $button-default-background-color) {
 
   background-color: $background-color;
-
-  &:focus {
-    background: darken($background-color, 3%);
-  }
 
   &.disabled, &[disabled] {
     cursor: no-drop;
@@ -141,6 +133,14 @@ $button-circular-size: px-to-rems(50) !default;
     }
   }
 
+  &.radius {
+    @include border-radius($button-radius);
+  }
+
+  &.pill {
+    @include border-radius(1000px);
+  }
+
   &.responsive {
     @include phone {
       & {
@@ -177,38 +177,18 @@ $button-circular-size: px-to-rems(50) !default;
 // Example .custom-button { @include button($background-color: #1abc9c); }
 //
 
-@mixin button($background-color: $button-default-background-color,
-           $padding: $button-default,
-           $font-size: $button-font-size,
-           $include-radius-style: false,
-           $include-block-style: false,
-           $include-pill-style: false) {
-  @include button-base;
+@mixin button($background-color: #0092FC,
+           $padding: px-to-rems($button-padding-bottom-top) px-to-rems($button-padding-right-left),
+           $font-size: px-to-rems(14),
+           $button-font-family: "Open Sans",
+           $button-font-weight: 500) {
+
+  @include button-base($button-font-color: #FFF,
+                       $button-font-family: "Open Sans",
+                       $button-font-weight: 500);
   @include button-style($background-color);
   @include button-size($padding, $font-size);
-
-  @if $include-radius-style {
-    &.radius {
-      @include border-radius($button-radius);
-    }
-  }
-
-  @if $include-block-style {
-    &.block {
-      display: block;
-      padding-left: 0px;
-      padding-right: 0px;
-      width: 100%;
-    }
-  }
-
-  @if $include-pill-style {
-    &.pill {
-      @include border-radius(1000px);
-    }
-  }
 }
-
 
 //Button style definition
 
@@ -235,14 +215,6 @@ input[type="reset"],
     width: 100%;
   }
 
-  &.radius {
-    @include border-radius($button-radius);
-  }
-
-  &.pill {
-    @include border-radius(1000px);
-  }
-
   /* Vertical separation */
   /*----------------------*/
   &.block + &.block {
@@ -253,4 +225,3 @@ input[type="reset"],
   @include button-style;
   @include button-size;
 }
-
