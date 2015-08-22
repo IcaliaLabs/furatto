@@ -87,27 +87,29 @@ $button-circular-size: px-to-rems(50) !default;
 
   &.block {
     display: block;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
+
+    & + & {
+      margin-top: $button-vertical-separation;
+    }
   }
 
-  /* Vertical separation */
-  /*----------------------*/
-  &.block + &.block {
-    margin-top: $button-vertical-separation;
-  }
-
-  &.disabled, &[disabled] {
+  &.disabled,
+  &[disabled] {
     cursor: no-drop;
     background: $button-disabled-background;
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       background: $button-disabled-background;
     }
   }
 
-  &.active, &:active, &:focus {
+  &.active,
+  &:active,
+  &:focus {
     background: $button-active-background;
     outline: none;
   }
@@ -124,29 +126,30 @@ $button-circular-size: px-to-rems(50) !default;
   }
 
   &.circular {
-    height: $button-circular-size;
-    width: $button-circular-size;
-    padding: 0;
     @include border-radius(50%);
+    height: $button-circular-size;
+    padding: 0;
+    width: $button-circular-size;
 
-    i, span {
+    i,
+    span {
       @extend %vertical-alignment;
       display: inline-block;
     }
   }
 
   &.shadow {
-    @include box-shadow(1px 2px 4px 0px rgba(167, 167, 167, 0.5));
+    @include box-shadow(1px 2px 4px 0 rgba(167, 167, 167, 0.5));
   }
 
   &.push {
-    position: relative;
-    @include box-shadow(inset 0px -3px 0px darken($background-color, 10%));
+    @include box-shadow(inset 0 -3px 0 darken($background-color, 10%));
     @include single-transition(all, 0.1s, ease-in-out);
+    position: relative;
 
     &:hover {
+      @include box-shadow(inset 0 0 0 darken($background-color, 10%));
       top: 1px;
-      @include box-shadow(inset 0px 0px 0px darken($background-color, 10%));
     }
   }
 
@@ -160,10 +163,8 @@ $button-circular-size: px-to-rems(50) !default;
 
   &.responsive {
     @include phone {
-      & {
-        display: block;
-        width: 100%;
-      }
+      display: block;
+      width: 100%;
     }
   }
 }
