@@ -1,6 +1,14 @@
 //Make sure the charset is set correctly
 @charset "UTF-8";
 
+//Dependencies
+@import "compass";
+@import "furatto/functions";
+@import "furatto/media_queries";
+@import "furatto/pseudo_selectors";
+//Mixins
+@import "furatto/mixins";
+
 //Base
 @import "furatto/base";
 
@@ -9,3 +17,10 @@
 
 //Text Alignment
 @import "furatto/text_alignment";
+
+//Forms
+@import "furatto/forms";
+
+//Experimental
+@import "furatto/experimental";
+
