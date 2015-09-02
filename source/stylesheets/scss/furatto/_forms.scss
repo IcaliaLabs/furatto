@@ -1,0 +1,336 @@
+//Forms
+
+//
+//@variables
+//
+
+$include-flexible-addons: true !default;
+
+//Form Label
+$form-label-display: block !default;
+$form-label-cursor: pointer !default;
+$form-label-font-size: px-to-rems(14) !default;
+$form-label-color: #0092FC !default;
+$form-label-font-weight: 400 !default;
+$form-label-margin-bottom: px-to-rems(5) !default;
+$form-input-border-width: 2px !default;
+$form-input-border-style: solid !default;
+$form-inline-label-margin-left: px-to-rems(3) !default;
+
+//Form inputs
+$form-input-radius: px-to-rems(4) !default;
+$form-input-height: px-to-rems(40) !default;
+$form-input-color: rgba(0,0,0, 0.75) !default;
+$form-input-font-size: px-to-rems(14) !default;
+$form-input-padding: px-to-rems(5) !default;
+$form-input-margin-bottom: px-to-rems(11) !default;
+$form-input-box-shadow: inset 0 1px 2px rgba(#DADADA,0.35) !default;
+$form-input-focus-box-shadow: 0 2px 12px rgba(#B6B4B4, 0.50) !default;
+$form-input-focus-border-color: rgba(#0092FC, 0.8) !default;
+$form-input-background-color: #FFF !default;
+$form-input-focus-background-color: darken($form-input-background-color, 2%) !default;
+$form-input-border-color: #DADADA !default;
+$form-input-disabled-color: #ECF0F1 !default;
+$form-input-disabled-background-color: #EEE !default;
+$form-input-mini-width: 20% !default;
+$form-input-small-width: $form-input-mini-width * 2 !default; 
+$form-input-medium-width: $form-input-mini-width * 3 !default;
+$form-input-large-width: $form-input-mini-width * 4 !default;
+$form-input-file-width: 100% !default;
+$form-input-transition-property: all !default;
+$form-input-transition-duration: 0.1s !default;
+$form-input-transition-timing-function: ease-in-out !default;
+$include-input-box-shadow-on-focus: true !default;
+$include-input-transition: true !default;
+
+//Validation states
+$form-label-success-color: #27ae60 !default;
+$form-label-error-color: #e74c3c !default;
+$form-input-success-border-color: $form-label-success-color !default;
+$form-input-error-border-color: $form-label-error-color !default;
+
+//Help hints
+$form-help-hint-color: #FFF !default;
+$form-help-hint-font-size: px-to-rems(11) !default;
+$form-help-hint-font-style: italic !default;
+$form-help-hint-padding: px-to-rems(5) !default;
+
+//Selects
+$form-select-background-color: #FFF !default;
+$form-select-border-style: solid !default;
+$form-select-border-width: 1px !default;
+$form-select-border-color: #DADADA !default;
+$form-select-color: #555 !default;
+$form-select-font-size: px-to-rems(14) !default;
+$form-select-hover-background: #F7F7F7 !default;
+$form-select-padding: px-to-rems(5) px-to-rems(7) !default;
+$form-select-radius: px-to-rems(4) !default;
+$form-select-transition-time: 1s !default;
+$form-select-transition-style: linear !default;
+$form-select-background-x-position: 97% !default;
+$form-select-box-shadow: $form-input-focus-box-shadow !default;
+
+//Radio buttons and Checkbox
+$radio-button-checkbox-border-color: #0092FC !default;
+$radio-button-checkbox-checked-color: $radio-button-checkbox-border-color !default;
+
+$include-form-select-transition: true !default;
+
+form {
+  display: block;
+  width: 100%;
+}
+
+//Labels
+label {
+  display: $form-label-display;
+  margin-bottom: $form-label-margin-bottom;
+  cursor: $form-label-cursor;
+  font-size: $form-label-font-size;
+  font-weight: $form-label-font-weight;
+  color: $form-label-color;
+
+  &.error {
+    color: $form-label-error-color; 
+  }
+
+  &.success {
+    color: $form-label-success-color; 
+  }
+}
+
+//Help hints
+.help-hint {
+  background: #fff;
+  border-width: 1px;
+  border-style: $form-input-border-style;
+  border-top: none;
+  display: block;
+  margin-bottom: $form-input-margin-bottom;
+  color: $form-help-hint-color;
+  font-size: $form-help-hint-font-size;
+  padding: $form-help-hint-padding;
+  font-style: $form-help-hint-font-style;
+  @include box-shadow($form-select-box-shadow);
+
+  &.error {
+    color: $form-label-error-color; 
+  }
+
+  &.success {
+    color: $form-label-success-color; 
+  }
+}
+
+//Inputs and textarea definition
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+{
+  @include border-radius($form-input-radius);
+  @include box-shadow($form-input-box-shadow);
+  @include appearance(none);
+
+  @if($include-input-transition) {
+    @include single-transition($form-input-transition-property $form-input-transition-duration $form-input-transition-timing-function);
+  }
+
+  display: block;
+  width: 100%;
+  height: $form-input-height;
+  color: $form-input-color;
+  font-size: $form-input-font-size;
+  padding: $form-input-padding;
+  margin-bottom: $form-input-margin-bottom;
+  background-color: $form-input-background-color;
+  border: $form-input-border-width $form-input-border-style $form-input-border-color;
+  outline: none;
+
+  @if($include-flexible-addons) {
+    &.addon-field {
+      margin-bottom: 0;
+    }
+  }
+
+  //Focus state
+  &:focus {
+    @if($include-input-box-shadow-on-focus) {
+      @include box-shadow($form-input-focus-box-shadow);
+    }
+    border-color: $form-input-focus-border-color; 
+    outline: none;
+    background: $form-input-focus-background-color;
+  }
+
+  //Disabled inputs
+  &[disabled] {
+    color: $form-input-disabled-color;
+    cursor: not-allowed;
+    overflow: hidden;
+    white-space: nowrap;
+    background: $form-input-disabled-background-color;
+  }
+
+  &.mini {
+    width: $form-input-mini-width; 
+  }
+
+  &.small { 
+    width: $form-input-small-width; 
+  }
+
+  &.medium { 
+    width: $form-input-medium-width; 
+  }
+
+  &.large { 
+    width: $form-input-large-width; 
+  }
+
+  @include phone {
+    &.mini, &.small,
+    &.medium, &.large {
+      width: 100%;
+    }
+  }
+
+  &.block {
+    width: 100%;
+  }
+
+  &.success,
+  &.error {
+    margin-bottom: 0; 
+  }
+
+  &.success { 
+    border-color: $form-input-success-border-color; 
+    color: $form-label-success-color;
+  }
+  &.error { 
+    border-color: $form-input-error-border-color; 
+    color: $form-label-error-color;
+  }
+}
+
+textarea {
+  height: auto;
+}
+
+select {
+  @include border-radius(0);
+  width: 100%;
+  display: block;
+  background: $form-select-background-color
+  url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat $form-select-background-x-position center;
+  ; 
+
+  height: $form-input-height;
+
+  //Firefox fix
+  text-indent: 0.01px;
+  text-overflow: "";
+  @include appearance(none);
+
+  padding: $form-select-padding;
+  border: $form-select-border-width $form-select-border-style $form-select-border-color;
+  margin-bottom: $form-input-margin-bottom;
+  outline: none;
+  color: $form-select-color;
+  font-size: $form-select-font-size;
+
+  @if $include-form-select-transition {
+    @include single-transition(all $form-select-transition-time $form-select-transition-style);
+  }
+
+  &.radius { @include border-radius($form-select-radius); }
+
+  &.shadow{ @include box-shadow($form-select-box-shadow);
+            border: none; }
+
+  &:hover {
+    background: $form-select-hover-background
+    url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat $form-select-background-x-position center; 
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"] {
+  margin-bottom: $form-input-margin-bottom; 
+}
+
+//Radio buttons and Checkbox style
+
+input[type=radio], input[type=checkbox] {
+    display: none;
+
+    & + label{
+      cursor: pointer; 
+      display: inline-block;
+      font-size: inherit;
+      margin-left: $form-inline-label-margin-left;
+      margin-right: 15px;
+      padding-left: 25px;
+      position: relative;
+      vertical-align: baseline;
+
+      &:before{
+        background-color: #fff;
+        border: 2px solid $radio-button-checkbox-border-color;
+        bottom: 0px;
+        content: "";
+        display: inline-block;
+        height: 20px; 
+        left: 0;   
+        margin-right: 10px;
+        position: absolute;
+        width: 20px;
+      }
+    }
+    &:checked + label:before{
+      color: $radio-button-checkbox-checked-color;
+    }
+
+}
+
+
+input[type=radio]{
+  & + label:before{
+    @include border-radius(10px);
+  }
+
+  &:checked + label:before{
+    content: "\2022";
+    font-size: 47px;
+    line-height: 18px;
+  }
+}
+
+input[type=checkbox] {
+  & + label:before{
+    @include border-radius(5px);
+  }
+  &:checked + label:before{
+    content: "✕";
+    font-size: 20px;
+    line-height: 17px;
+  }
+}
+
+//Displays the label inline
+input[type="file"] {
+  width: $form-input-file-width;
+}
