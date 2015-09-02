@@ -1,0 +1,150 @@
+// Buttons
+
+//
+// @imports
+//
+@import "compass";
+@import "functions";
+@import "media_queries";
+@import "pseudo_selectors";
+
+//
+// @variables
+//
+
+$base-font-family: "Open Sans", "Helvetica", sans-serif !default;
+
+//Padding sizes for tabs
+$tab-padding-bottom-top: 8 !default;
+
+$tabs-margin: 10 0 20 0 !default;
+
+$tab-view-default-padding: 15px 10px;
+
+$tab-option-link-padding: 8px;
+
+$border-radius-default: 4px;
+
+$tab-border-width: 1px;
+
+// General tabs section styles
+section.tabs {
+
+  margin: $tabs-margin;
+  width: 100%;
+
+  // Tab menu list
+  .tab.list {
+    display: table;
+    content: " ";
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    // tab menu element li
+    .tab.option {
+      display: table-cell;
+      float: none;
+      text-align: center;
+      width: 1%;
+
+
+      // option link
+      .tab.link {
+        cursor: pointer;
+        display: block;
+        padding: $tab-option-link-padding;
+      }
+      // when tab menu li is active
+      &.active { font-weight: bold; }
+
+    }
+
+    &.compact {
+      .tab.option {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+
+  // tab port
+  .port {
+    width: 100%;
+
+    // each tab view
+    .view {
+      display: none;
+      padding: $tab-view-default-padding;
+      // when is open
+      &.active { display: block; }
+    }
+
+  }
+
+  &.vertical {
+    display: table;
+    .tab.list {
+      display: table-cell;
+      float: none;
+      width: 20%;
+
+      .tab.option {
+        display: block;
+        text-align: right;
+        width: auto;
+
+        .tab.link { display: block;  }
+      }
+    }
+    .port {
+      display: table-cell;
+      float: none;
+      width: 80%;
+    }
+  }
+
+  &.bordered {
+    .tab.list {
+      .tab.option {
+        border:$tab-border-width solid #e8e8e8;
+        border-radius: $border-radius-default $border-radius-default 0 0;
+        &.active {
+          border-bottom-color: transparent;
+        }
+      }
+    }
+
+    .port {
+      border-top: none;
+      border-width: 0 $tab-border-width $tab-border-width $tab-border-width;
+      border-color: #e8e8e8;
+      border-radius: 0 0 $border-radius-default $border-radius-default;
+      border-style: solid;
+      box-shadow: 0 3px #e8e8e8;
+    }
+
+    &.vertical {
+      border: $tab-border-width solid #e8e8e8;
+      border-radius: $border-radius-default;
+      box-shadow: 0 3px #e8e8e8;
+
+      .tab.list {
+        .tab.option {
+          border:none;
+          border-radius: 0;
+          &.active {
+            border-bottom-color: transparent;
+          }
+        }
+      }
+      .tabs.port {
+        border-width: 0 0 0 $tab-border-width ;
+        border-radius: 0;
+      }
+
+
+    }
+  }
+}
