@@ -41,6 +41,8 @@ GEM
       uber (~> 0.0.4)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    jquery-middleman (3.1.2)
+      thor (>= 0.14, < 2.0)
     json (1.8.3)
     kramdown (1.8.0)
     listen (2.10.1)
@@ -123,6 +125,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jquery-middleman
   middleman (~> 3.3.12)
   middleman-livereload (~> 3.1.0)
   tzinfo-data
