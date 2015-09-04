@@ -1,0 +1,92 @@
+//Labels
+
+//
+//@variables
+//
+@import "functions";
+
+//Label general settings
+$label-padding: px-to-rems(3) px-to-rems(6) !default;
+$label-font-size: 75% !default;
+$label-font-weight: 400 !default;
+$label-font-color: #FFF !default;
+$label-default-background:  #0092FC !default;
+
+//Label variations
+$label-radius: px-to-rems(3) !default;
+$label-round: px-to-rems(1000) !default;
+
+//Label background variations
+$label-success-background: #4CAF50 !default;
+$label-danger-background: #F54336 !default;
+$label-warning-background: #FF9800 !default;
+
+//
+//@mixin
+// We use this mixin to build the general settings for labels
+// $padding - Is the padding for the label. Default: $label-padding
+// $font-size - The size of the label font. Default: $label-font-size
+// $font-weight - The font weight of the label. Default: $label-font-weight
+// $color - The label color of the text. Default: $label-font-color
+//
+@mixin label-base($padding: $label-padding,
+                  $font-size: $label-font-size,
+                  $font-weight: $label-font-weight,
+                  $color: $label-font-color
+                  ) {
+  color: $color;
+  display: inline-block;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  padding: $padding;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+//
+//@mixin
+// We use this mixin to add styling to the labels
+//
+// $background-color - Is the background for the label. Default: $label-default-background
+
+@mixin label-style($background-color: $label-default-background) {
+  background: $background-color;
+}
+
+//
+//@mixin
+//
+// We use this mixin to let the user create custom labels
+// $background-color - Is the background color for the button to create. Default: $label-default-background
+// $padding - Is the padding for the label. Default: $label-padding
+// $font-size - The size of the label font. Default: $label-font-size
+// $font-weight - The font weight of the label. Default: $label-font-weight
+// $color - The label color of the text. Default: $label-font-color
+// Example .custom-label { @include label($background-color: #1abc9c); }
+//
+
+@mixin label($background-color: $label-default-background,
+             $padding: $label-padding,
+             $font-size: $label-font-size,
+             $font-weight: $label-font-weight,
+             $color: $label-font-color
+             ) {
+  @include label-base($padding, $font-size, $font-weight, $color);
+  @include label-style($background-color);
+}
+
+//Label style definition
+.label {
+  @include label-base;
+  @include label-style;
+
+  &.round { @include border-radius($label-round); }
+  &.radius { @include border-radius($label-radius); }
+  &.shadow { @include box-shadow(1px 2px 4px 0 rgba(167, 167, 167, 0.5)); }
+
+  //Label styles
+  &.success { @include label-style($label-success-background); }
+  &.danger { @include label-style($label-danger-background); }
+  &.warning { @include label-style($label-warning-background); }
+}
