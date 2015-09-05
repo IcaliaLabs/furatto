@@ -5,3 +5,15 @@
   position: relative;
   top: 50%;
 }
+
+//Clears the float from any element
+%clearfix {
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
