@@ -121,7 +121,7 @@ $alert-danger-background: #f44336 !default;
 @mixin alert-close($font-size: $alert-close-font-size,
                    $padding: $alert-close-padding,
                    $hover-opacity: $alert-close-hover-opacity) {
-  a.close {
+  .close {
     background: none;
     border: none;
     cursor: pointer;
