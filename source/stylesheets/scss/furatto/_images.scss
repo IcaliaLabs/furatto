@@ -24,14 +24,13 @@ $img-box-shadow-spread: px-to-rems(0) !default;
 //General img styling
 //Deprecated on IE9+
 img {
-  -ms-interpolation-mode: bicubic;
   vertical-align: middle;
 
   //Images responsive styling
   &.responsive {
-    max-width: 100%;
-    height: auto;
     display: $img-display;
+    height: auto;
+    max-width: 100%;
   }
 
   &.radius {
