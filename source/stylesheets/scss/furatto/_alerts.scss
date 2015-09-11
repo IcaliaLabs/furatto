@@ -20,6 +20,7 @@ $alert-close-font-size: px-to-rems(16) !default;
 $alert-close-hover-opacity: 0.5 !default;
 $alert-close-padding: px-to-rems(5) !default;
 $alert-close-color: $alert-text-color !default;
+$alert-close-hover-color: #000 !default;
 
 //Variations
 $alert-radius: px-to-rems(3) !default;
@@ -31,7 +32,7 @@ $alert-border-style: solid !default;
 $alert-border-color: solid !default;
 
 //Background variations
-$alert-success-background: #4caf50 !default;
+$alert-success-background: #4CAF50 !default;
 $alert-danger-background: #f44336 !default;
 
 //
@@ -120,7 +121,8 @@ $alert-danger-background: #f44336 !default;
 
 @mixin alert-close($font-size: $alert-close-font-size,
                    $padding: $alert-close-padding,
-                   $hover-opacity: $alert-close-hover-opacity) {
+                   $hover-opacity: $alert-close-hover-opacity,
+                   $hover-color: $alert-close-hover-color) {
   .close {
     background: none;
     border: none;
@@ -130,15 +132,15 @@ $alert-danger-background: #f44336 !default;
     margin-top: -($font-size / 2);
     padding: $padding;
     position: absolute;
-    right: 0.2rem;
+    right: 0.5rem;
     top: 50%;
 
     &:hover,
     &:focus {
-      color: #000;
+      @include opacity($hover-opacity);
+      color: $hover-color;
       text-decoration: none;
       text-shadow: 0 1px 0 #fff;
-      @include opacity($hover-opacity);
     }
   }
 }
