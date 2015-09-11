@@ -12,8 +12,8 @@ $alert-padding: px-to-rems(15) px-to-rems(40) px-to-rems(15) px-to-rems(15) !def
 $alert-margin-bottom: px-to-rems(20) !default;
 $alert-font-size: px-to-rems(14) !default;
 $alert-font-weight: 300 !default;
-$alert-default-background: #0092FC !default;
-$alert-text-color: rgba(255,255,255,0.84) !default;
+$alert-default-background: #3FACE7 !default;
+$alert-text-color: #FFF !default;
 
 //Close settings
 $alert-close-font-size: px-to-rems(16) !default;
@@ -33,7 +33,7 @@ $alert-border-color: solid !default;
 
 //Background variations
 $alert-success-background: #4CAF50 !default;
-$alert-danger-background: #f44336 !default;
+$alert-danger-background: #F44336 !default;
 
 //
 // @mixin
