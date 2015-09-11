@@ -13,7 +13,7 @@ $alert-margin-bottom: px-to-rems(20) !default;
 $alert-font-size: px-to-rems(14) !default;
 $alert-font-weight: 300 !default;
 $alert-default-background: #0092FC !default;
-$alert-text-color: rgba(255,255,255,.84) !default;
+$alert-text-color: rgba(255,255,255,0.84) !default;
 
 //Close settings
 $alert-close-font-size: px-to-rems(16) !default;
