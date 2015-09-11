@@ -1,0 +1,47 @@
+// Images
+
+//
+// @imports
+//
+
+@import "compass";
+@import "functions";
+
+//
+// @variables
+//
+
+$img-display: inline-block !default;
+$img-radius: px-to-rems(4) !default;
+
+// Shadow Setup
+$img-box-shadow-color: rgba(167, 167, 167, 0.7) !default;
+$img-box-shadow-x: px-to-rems(1) !default;
+$img-box-shadow-y: px-to-rems(2) !default;
+$img-box-shadow-blur: px-to-rems(4) !default;
+$img-box-shadow-spread: px-to-rems(0) !default;
+
+//General img styling
+//Deprecated on IE9+
+img {
+  vertical-align: middle;
+
+  //Images responsive styling
+  &.responsive {
+    display: $img-display;
+    height: auto;
+    max-width: 100%;
+  }
+
+  &.radius {
+    @include border-radius($img-radius);
+  }
+
+  &.circular {
+    @include border-radius(50%);
+  }
+
+  &.shadow {
+    @include box-shadow($img-box-shadow-x $img-box-shadow-y $img-box-shadow-blur $img-box-shadow-spread $img-box-shadow-color);
+  }
+}
