@@ -5,26 +5,33 @@
   &.left {
     text-align: left;
   }
+
   &.right {
     text-align: right;
   }
+
   &.center {
     text-align: center;
   }
+
   &.justify {
     text-align: justify;
   }
 
   @include phone {
+
     &.left-on-phone {
       text-align: left;
     }
+
     &.right-on-phone {
       text-align: right;
     }
+
     &.center-on-phone {
       text-align: center;
     }
+
     &.justify-on-phone {
       text-align: justify;
     }
