@@ -39,113 +39,114 @@ $table-responsive-pinned-border-left: $table-responsive-pinned-border-right !def
 $table-responsive-wrapper-border-right: $table-responsive-pinned-border-right !default;
 
 //Basetable style
-table{
- background-color: $table-background-color;
- border: $table-border-width $table-border-style $table-border-color;
- border-collapse: collapse;
- border-spacing: 0;
- color: $table-color;
- font-size: $table-font-size;
- font-weight: $table-font-weight;
- margin-bottom: $table-margin-bottom;
- max-width: 100%;
- width: 100%;
+table {
+  background-color: $table-background-color;
+  border: $table-border-width $table-border-style $table-border-color;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: $table-color;
+  font-size: $table-font-size;
+  font-weight: $table-font-weight;
+  margin-bottom: $table-margin-bottom;
+  max-width: 100%;
+  width: 100%;
 
- tr {
-   &:hover {
-     background: $table-row-hover-background-color;
-   }
+  tr {
+    &:hover {
+      background: $table-row-hover-background-color;
+    }
 
-   //Cells
-   th, td {
-     border-top: $table-border-width $table-border-style $table-border-color;
-     line-height: $table-line-height;
-     padding: $table-cell-padding;
-     text-align: $table-cell-alignment;
-     vertical-align: top;
-   }
+    //Cells
+    th,
+    td {
+      border-top: $table-border-width $table-border-style $table-border-color;
+      line-height: $table-line-height;
+      padding: $table-cell-padding;
+      text-align: $table-cell-alignment;
+      vertical-align: top;
+    }
 
-   th {
-     font-weight: $table-head-font-weight;
-   }
- }
+    th {
+      font-weight: $table-head-font-weight;
+    }
+  }
 
- thead tr th {
-   vertical-align: bottom;
- }
+  thead tr th {
+    vertical-align: bottom;
+  }
 
- &.shadow {
-   @include box-shadow($table-shadow);
- }
+  &.shadow {
+    @include box-shadow($table-shadow);
+  }
 
- &.striped {
-   tbody {
-     > tr:nth-child(odd) > td,
-     > tr:nth-child(odd) > th {
-       background-color: $table-striped-background-color;
-     }
-   }
- }
+  &.striped {
+    tbody {
+      > tr:nth-child(odd) > td,
+      > tr:nth-child(odd) > th {
+        background-color: $table-striped-background-color;
+      }
+    }
+  }
 }
 
 @if($include-responsive-tables){
- //Responsive tables
- @include max-screen($table-media-width) {
-   table.responsive {
-     margin-bottom: 0;
+  //Responsive tables
+  @include max-screen($table-media-width) {
+    table.responsive {
+      margin-bottom: 0;
 
-     td, th {
-       overflow: hidden;
-       position: relative;
-       white-space: nowrap;
-     }
+      td, th {
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+      }
 
-     th:first-child,
-     td:first-child,
-     &.pinned td {
-       display: none;
-     }
-   }
+      th:first-child,
+      td:first-child,
+      &.pinned td {
+        display: none;
+      }
+    }
 
-   .pinned {
-     background: $table-responsive-pinned-background;
-     border-right: $table-responsive-pinned-border-right;
-     border-left: $table-responsive-pinned-border-left;
-     overflow: hidden;
-     overflow-x: scroll;
-     position: absolute;
-     left: 0;
-     top: 0;
-     width: 35%;
+    .pinned {
+      background: $table-responsive-pinned-background;
+      border-right: $table-responsive-pinned-border-right;
+      border-left: $table-responsive-pinned-border-left;
+      overflow: hidden;
+      overflow-x: scroll;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 35%;
 
-     table {
-       border-right: none;
-       border-left: none;
-       width: 100%;
+      table {
+        border-right: none;
+        border-left: none;
+        width: 100%;
 
-       th,
-       td {
-         white-space: nowrap;
-       }
-     }
+        th,
+        td {
+          white-space: nowrap;
+        }
+      }
 
-     td:last-child {
-       border-bottom: 0;
-     }
-   }
+      td:last-child {
+        border-bottom: 0;
+      }
+    }
 
-   div.table-wrapper {
-     border-right: $table-responsive-wrapper-border-right;
-     margin-bottom: 20px;
-     overflow: hidden;
-     position: relative;
+    div.table-wrapper {
+      border-right: $table-responsive-wrapper-border-right;
+      margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
 
-     div.scrollable {
-       margin-left: 35%;
-       overflow: scroll;
-       overflow-y: hidden;
-     }
-   }
- }
+      div.scrollable {
+        margin-left: 35%;
+        overflow: scroll;
+        overflow-y: hidden;
+      }
+    }
+  }
 }
 
