@@ -83,13 +83,13 @@ form {
 
 //Labels
 label {
-  display: $form-label-display;
-  margin-bottom: $form-label-margin-bottom;
+  color: $form-label-color;
   cursor: $form-label-cursor;
+  display: $form-label-display;
   font-size: $form-label-font-size;
   font-weight: $form-label-font-weight;
-  color: $form-label-color;
-
+  margin-bottom: $form-label-margin-bottom;
+  
   &.error {
     color: $form-label-error-color; 
   }
@@ -101,16 +101,11 @@ label {
 
 //Help hints
 .help-hint {
-  //background: #fff;
-  //border-width: 1px;
-  //border-style: $form-input-border-style;
-  //border-top: none;
-  display: block;
-  margin-bottom: $form-input-margin-bottom;
   color: $form-help-hint-color;
   font-size: $form-help-hint-font-size;
-  padding: $form-help-hint-padding;
   font-style: $form-help-hint-font-style;
+  margin-bottom: $form-input-margin-bottom;
+  padding: $form-help-hint-padding;  
   @include box-shadow($form-select-box-shadow);
 
   &.error {
@@ -146,16 +141,15 @@ input[type="color"],
   @if($include-input-transition) {
     @include single-transition($form-input-transition-property $form-input-transition-duration $form-input-transition-timing-function);
   }
-
-  display: block;
-  width: 100%;
-  height: $form-input-height;
-  color: $form-input-color;
-  font-size: $form-input-font-size;
-  padding: $form-input-padding;
-  margin-bottom: $form-input-margin-bottom;
   background-color: $form-input-background-color;
   border: $form-input-border-width $form-input-border-style $form-input-border-color;
+  color: $form-input-color;
+  display: block;
+  font-size: $form-input-font-size;
+  height: $form-input-height;
+  margin-bottom: $form-input-margin-bottom;
+  width: 100%;
+  padding: $form-input-padding;
   outline: none;
 
   @if($include-flexible-addons) {
@@ -169,18 +163,19 @@ input[type="color"],
     @if($include-input-box-shadow-on-focus) {
       @include box-shadow($form-input-focus-box-shadow);
     }
+    background: $form-input-focus-background-color;
     border-color: $form-input-focus-border-color; 
     outline: none;
-    background: $form-input-focus-background-color;
+    
   }
 
   //Disabled inputs
   &[disabled] {
+    background: $form-input-disabled-background-color;
     color: $form-input-disabled-color;
     cursor: not-allowed;
     overflow: hidden;
     white-space: nowrap;
-    background: $form-input-disabled-background-color;
   }
 
   &.mini {
@@ -231,25 +226,26 @@ textarea {
 
 select {
   @include border-radius(0);
-  width: 100%;
-  display: block;
   background: $form-select-background-color
   url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==') no-repeat $form-select-background-x-position center;
-  ; 
-
+  ;
+  display: block;
   height: $form-input-height;
+  width: 100%; 
 
   //Firefox fix
+  @include appearance(none);
   text-indent: 0.01px;
   text-overflow: "";
-  @include appearance(none);
-
-  padding: $form-select-padding;
+  
   border: $form-select-border-width $form-select-border-style $form-select-border-color;
-  margin-bottom: $form-input-margin-bottom;
-  outline: none;
   color: $form-select-color;
   font-size: $form-select-font-size;
+  margin-bottom: $form-input-margin-bottom;
+  padding: $form-select-padding;
+  outline: none;
+  
+  
 
   @if $include-form-select-transition {
     @include single-transition(all $form-select-transition-time $form-select-transition-style);
@@ -324,7 +320,7 @@ input[type=checkbox] {
     @include border-radius(5px);
   }
   &:checked + label:before {
-    content: "✔"; //✓
+    content: "✔";
     font-size: 18px;
     line-height: 17px;
   }

@@ -54,13 +54,13 @@ $addon-primary-bg-color: rgba(52, 152, 219, 0.6);
   }
 
   .addon {
-    margin: 0;
-    border: $addon-border-width $addon-border-style $addon-border-color;
-    padding: $addon-padding;
     background-color: $addon-background-color;
+    border: $addon-border-width $addon-border-style $addon-border-color;
     color: $addon-font-color;
-    font-weight: $addon-font-weight;
     font-size: $addon-font-size;
+    font-weight: $addon-font-weight;
+    margin: 0;
+    padding: $addon-padding;
 
     &.warning { @include addon-variation($addon-warning-bg-color); } 
     &.danger { @include addon-variation($addon-danger-bg-color); } 
