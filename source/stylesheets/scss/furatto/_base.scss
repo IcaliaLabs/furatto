@@ -1,8 +1,30 @@
 @import "compass";
 
+$body-background-color: #FFF !default;
+$base-font-color: #36363A !default;
+$base-font-weight: normal !default;
+$base-font-size: px-to-rems(16) !default;
+$base-font-family: 'Open Sans', sans-serif !default;
+$base-line-height: 1 !default;
+
 //Reset settings
 *,
 *:after,
 *:before {
   @include box-sizing(border-box);
+}
+
+html,
+body {
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+}
+
+body {
+  background: $body-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
 }
