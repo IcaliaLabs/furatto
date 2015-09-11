@@ -23,7 +23,7 @@ $alert-close-color: $alert-text-color !default;
 
 //Variations
 $alert-radius: px-to-rems(3) !default;
-$alert-box-shadow: 2px 3px 6px 0 rgba(167, 167, 167, 0.5);
+$alert-box-shadow: 2px 3px 6px 0 rgba(167, 167, 167, 0.5) !default;
 
 //Alert styles
 $alert-border-width: px-to-rems(1) !default;
