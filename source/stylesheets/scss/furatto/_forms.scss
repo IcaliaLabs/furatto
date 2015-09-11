@@ -101,10 +101,10 @@ label {
 
 //Help hints
 .help-hint {
-  background: #fff;
-  border-width: 1px;
-  border-style: $form-input-border-style;
-  border-top: none;
+  //background: #fff;
+  //border-width: 1px;
+  //border-style: $form-input-border-style;
+  //border-top: none;
   display: block;
   margin-bottom: $form-input-margin-bottom;
   color: $form-help-hint-color;
@@ -114,11 +114,11 @@ label {
   @include box-shadow($form-select-box-shadow);
 
   &.error {
-    color: $form-label-error-color; 
+    background: lighten($form-label-error-color, 6%); 
   }
 
   &.success {
-    color: $form-label-success-color; 
+    background: lighten($form-label-success-color, 6%); 
   }
 }
 
@@ -257,7 +257,7 @@ select {
 
   &.radius { @include border-radius($form-select-radius); }
 
-  &.shadow{ @include box-shadow($form-select-box-shadow);
+  &.shadow { @include box-shadow($form-select-box-shadow);
             border: none; }
 
   &:hover {
@@ -277,7 +277,7 @@ input[type="file"] {
 input[type=radio], input[type=checkbox] {
     display: none;
 
-    & + label{
+    & + label {
       cursor: pointer; 
       display: inline-block;
       font-size: inherit;
@@ -287,10 +287,10 @@ input[type=radio], input[type=checkbox] {
       position: relative;
       vertical-align: baseline;
 
-      &:before{
+      &:before {
         background-color: #fff;
         border: 2px solid $radio-button-checkbox-border-color;
-        bottom: 0px;
+        bottom: 0;
         content: "";
         display: inline-block;
         height: 20px; 
@@ -300,15 +300,15 @@ input[type=radio], input[type=checkbox] {
         width: 20px;
       }
     }
-    &:checked + label:before{
+    &:checked + label:before {
       color: $radio-button-checkbox-checked-color;
     }
 
 }
 
 
-input[type=radio]{
-  & + label:before{
+input[type=radio] {
+  & + label:before {
     @include border-radius(10px);
   }
 
@@ -320,12 +320,12 @@ input[type=radio]{
 }
 
 input[type=checkbox] {
-  & + label:before{
+  & + label:before {
     @include border-radius(5px);
   }
-  &:checked + label:before{
-    content: "✕";
-    font-size: 20px;
+  &:checked + label:before {
+    content: "✔"; //✓
+    font-size: 18px;
     line-height: 17px;
   }
 }
