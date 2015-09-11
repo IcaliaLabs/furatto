@@ -1,0 +1,9 @@
+// Mixin to set the touch callout actions for different vendors
+@mixin touch-callout($value: none) {
+  -webkit-touch-callout: $value;
+  -webkit-user-select: $value;
+  -khtml-user-select: $value;
+  -moz-user-select: moz-#{$value};
+  -ms-user-select: $value;
+  user-select: $value;
+}
