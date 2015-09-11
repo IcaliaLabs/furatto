@@ -1,0 +1,202 @@
+//Alerts
+
+//
+//@variables
+//
+
+@import "compass";
+@import "functions";
+
+//General settings
+$alert-padding: px-to-rems(15) px-to-rems(40) px-to-rems(15) px-to-rems(15) !default;
+$alert-margin-bottom: px-to-rems(20) !default;
+$alert-font-size: px-to-rems(14) !default;
+$alert-font-weight: 300 !default;
+$alert-default-background: #3FACE7 !default;
+$alert-text-color: #FFF !default;
+
+//Close settings
+$alert-close-font-size: px-to-rems(16) !default;
+$alert-close-hover-opacity: 0.5 !default;
+$alert-close-padding: px-to-rems(5) !default;
+$alert-close-color: $alert-text-color !default;
+$alert-close-hover-color: #000 !default;
+
+//Variations
+$alert-radius: px-to-rems(3) !default;
+$alert-box-shadow: 2px 3px 6px 0 rgba(167, 167, 167, 0.5) !default;
+
+//Alert styles
+$alert-border-width: px-to-rems(1) !default;
+$alert-border-style: solid !default;
+$alert-border-color: solid !default;
+
+//Background variations
+$alert-success-background: #4CAF50 !default;
+$alert-danger-background: #F44336 !default;
+
+//
+// @mixin
+// We use this mixin as to describe the alerts base
+// $padding - The alert base padding. Default: $alert-padding
+// $margin-bottom - Useful if you are using multiple alerts. Default: $alert-margin-bottom
+// $font-size - The alert base font-size. Default: $alert-font-size
+// $font-weight - The alert base font-weight. Default: $alert-font-weight
+//
+
+@mixin alert-base($padding: $alert-padding,
+                  $margin-bottom: $alert-margin-bottom,
+                  $font-size: $alert-font-size,
+                  $font-weight: $alert-font-weight) {
+  display: block;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  margin-bottom: $margin-bottom;
+  padding: $padding;
+  position: relative;
+}
+
+
+//
+// @mixin
+// We use this to create the different styles of alerts
+// $background-color - The color for the alert background. Default: $alert-default-background
+// $text-color- The color for the alert text. Default: $alert-text-color
+//
+
+@mixin alert-style($background-color: $alert-default-background,
+                   $text-color: $alert-text-color) {
+
+  background: $background-color;
+  border: $alert-border-width $alert-border-style lighten($background-color, 10%);
+  color: $text-color;
+}
+
+//
+// @mixin
+// We use this to create the different styles of alerts
+// $radius - The radius for the alert variation. Default: $alert-radius
+// $box-shadow - The box shadow for the variation. Default: $alert-box-shadow
+//
+
+@mixin alert-variations($radius: $alert-radius,
+                       $box-shadow: $alert-box-shadow) {
+
+  &.radius {
+    @include border-radius($radius);
+  }
+
+  &.shadow {
+    @include box-shadow($box-shadow);
+  }
+}
+
+//
+// @mixin
+// We use mixin this to style links on the alerts
+// $color - The color for the anchors. Default: $alert-text-color
+// $font-weight - The font weight for links on the alert. Default: 600
+//
+
+@mixin alert-links($color: $alert-text-color,
+                   $font-weight: 600) {
+  a {
+    color: $color;
+    font-weight: $font-weight;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//
+// @mixin
+// We use mixin this to style the close object for alerts
+// $font-size - The font-size for the alert close object. Default: $alert-close-font-size
+// $padding - The padding for the alert close object. Default: $alert-close-padding
+// $hover-opacity - The opacity when hovering the close object. Default: $alert-close-hover-opacity
+//
+
+@mixin alert-close($font-size: $alert-close-font-size,
+                   $padding: $alert-close-padding,
+                   $hover-opacity: $alert-close-hover-opacity,
+                   $hover-color: $alert-close-hover-color) {
+  .close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size;
+    line-height: 0;
+    margin-top: -($font-size / 2);
+    padding: $padding;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+
+    &:hover,
+    &:focus {
+      @include opacity($hover-opacity);
+      color: $hover-color;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+  }
+}
+
+//
+//@mixin
+// We use this to create custom alerts
+// $background-color - The color for the alert background. Default: $alert-default-background
+// $padding - The padding for the whole alert. Default: $alert-padding
+// $margin-bottom - Useful for multiple stacked alerts. Default: $alert-margin-bottom
+// $font-size - The base font-size for the alert. Default: $alert-font-size
+// $font-weight - The base font-weight for the alert. Default: $alert-font-weight
+// $links-color - The links color on the alert. Default: $alert-text-color
+// $links-font-weight - The links font-weight for the alert. Default: 600
+// $close-font-size - The close object font-size. Default: $alert-close-font-size
+// $close-padding - The close object padding. Default: $alert-close-padding
+// $close-hover-opacity - The close hover opacity. Default $alert-close-hover-opacity
+// $include-variations- Wheter or not to include variations. Default: false
+//
+//
+// .custom-alert {
+//   @include alert($background-color: #ff5722, $include-variations: true);
+// }
+
+@mixin alert($background-color: $alert-default-background,
+             $padding: $alert-padding,
+             $margin-bottom: $alert-margin-bottom,
+             $font-size: $alert-font-size,
+             $font-weight: $alert-font-weight,
+             $links-color: $alert-text-color,
+             $links-font-weight: 600,
+             $close-font-size: $alert-close-font-size,
+             $close-padding: $alert-close-padding,
+             $close-hover-opacity: $alert-close-hover-opacity,
+             $include-variations: false) {
+
+  @include alert-base($padding, $margin-bottom, $font-size, $font-weight);
+  @include alert-style($background-color);
+
+  @if $include-variations {
+    @include alert-variations;
+  }
+
+  @include alert-links;
+  @include alert-close($close-font-size, $close-padding, $close-hover-opacity);
+}
+
+// Alert description
+.alert {
+  @include alert-base;
+  @include alert-style;
+  @include alert-variations;
+  @include alert-links;
+  @include alert-close;
+
+  &.success { @include alert-style($alert-success-background); }
+  &.danger { @include alert-style($alert-danger-background); }
+}
+
