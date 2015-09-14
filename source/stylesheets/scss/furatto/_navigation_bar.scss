@@ -3,7 +3,7 @@
 //@variables
 //
 
-@import 'compass';
+@import "compass";
 
 //Navigation general settings
 $navigation-bar-height: 70px !default;
@@ -242,7 +242,7 @@ $navigation-bar-collapse-width: 768px !default;
           @include box-shadow(0 10px 0 1px $navigation-bar-menu-color,
                               0 16px 0 1px $navigation-bar-menu-color,
                               0 22px 0 1px $navigation-bar-menu-color);
-          content: '';
+          content: "";
           height: 0;
           position: absolute;
           right: 0;
