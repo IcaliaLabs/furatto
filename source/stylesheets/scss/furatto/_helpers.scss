@@ -1,3 +1,11 @@
+//Variables
+//
+
+$muted-text-color: #666666 !default;
+
+//
+//Class Names to handle content
+//
 .pull {
 
   &.right {
@@ -6,5 +14,41 @@
 
   &.left {
     float: left;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.column.nopadding,
+.columns.nopadding,
+.nopadding {
+  padding: 0;
+}
+
+//
+//Class Names to handle text
+//
+
+.text {
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .muted {
+    color: $muted-text-color;
+  }
+
+  .striked {
+    text-decoration: line-through;
   }
 }
