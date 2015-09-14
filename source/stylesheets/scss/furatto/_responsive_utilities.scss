@@ -31,19 +31,23 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
 //Visible on extra small style
 .visible-on-xsmall {
   @include responsive-invisibility();
+
   @media #{ $extra-small-media } {
     @include responsive-visibility();
   }
+
   &.visible-on-small {
     @media #{ $small-screen-range-media } {
       @include responsive-visibility();
     }
   }
+
   &.visible-on-medium {
     @media #{ $medium-screen-media } {
       @include responsive-visibility();
     }
   }
+
   &.visible-on-large {
     @media  #{ $large-screen-media } {
       @include responsive-visibility();
@@ -54,19 +58,23 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
 //Visible on small style
 .visible-on-small {
   @include responsive-invisibility();
+
   &.visible-on-xsmall {
     @media #{ $extra-small-media } {
       @include responsive-visibility();
     }
   }
+
   @media #{ $small-screen-range-media } {
     @include responsive-visibility();
   }
+
   &.visible-on-medium {
     @media #{ $medium-screen-media } {
       @include responsive-visibility();
     }
   }
+
   &.visible-on-large {
     @media  #{ $large-screen-media } {
       @include responsive-visibility();
@@ -83,14 +91,17 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
       @include responsive-visibility();
     }
   }
+
   &.visible-sm {
     @media #{ $small-screen-range-media } {
       @include responsive-visibility();
     }
   }
+
   @media #{ $medium-screen-media } {
     @include responsive-visibility();
   }
+
   &.visible-lg {
     @media  #{ $large-screen-media } {
       @include responsive-visibility();
@@ -101,21 +112,25 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
 //Visible on large style
 .visible-on-large {
   @include responsive-invisibility();
+
   &.visible-on-xsmall {
     @media #{ $extra-small-media } {
       @include responsive-visibility();
     }
   }
+
   &.visible-on-small {
     @media #{ $small-screen-range-media } {
       @include responsive-visibility();
     }
   }
+
   &.visible-on-medium {
     @media #{ $medium-screen-media } {
       @include responsive-visibility();
     }
   }
+
   @media #{ $large-screen-media } {
     @include responsive-visibility();
   }
@@ -124,19 +139,23 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
 //Hidden on extra small style
 .hidden-on-xsmall {
   @include responsive-visibility();
+
   @media #{ $small-screen-media } {
     @include responsive-invisibility();
   }
+
   &.hidden-on-small {
     @media #{ $small-screen-range-media } {
       @include responsive-invisibility();
     }
   }
+
   &.hidden-on-medium {
     @media #{ $medium-screen-media } {
       @include responsive-invisibility();
     }
   }
+
   &.hidden-on-large {
     @media #{ $large-screen-media } {
       @include responsive-invisibility();
@@ -152,14 +171,17 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
       @include responsive-invisibility();
     }
   }
+
   @media #{ $small-screen-range-media } {
     @include responsive-invisibility();
   }
+
   &.hidden-on-medium {
     @media #{ $medium-screen-media } {
       @include responsive-invisibility();
     }
   }
+
   &.hidden-on-large {
     @media #{ $large-screen-media } {
       @include responsive-invisibility();
@@ -170,19 +192,23 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
 //Hidden on medium style
 .hidden-on-medium {
   @include responsive-visibility();
+
   &.hidden-on-xsmall {
     @media #{ $extra-small-media } {
       @include responsive-invisibility();
     }
   }
+
   &.hidden-on-small {
     @media #{ $small-screen-range-media } {
       @include responsive-invisibility();
     }
   }
+
   @media #{ $medium-screen-media } {
     @include responsive-invisibility();
   }
+
   &.hidden-on-large {
     @media #{ $large-screen-media } {
       @include responsive-invisibility();
@@ -193,21 +219,25 @@ $landscape-media: "#{$media-display} and (orientation: landscape)" !default;
 //Hidden on large style
 .hidden-on-large {
   @include responsive-visibility();
+
   &.hidden-on-xsmall {
     @media #{ $extra-small-media } {
       @include responsive-invisibility();
     }
   }
+
   &.hidden-on-small {
     @media #{ $small-screen-range-media } {
       @include responsive-invisibility();
     }
   }
+
   &.hidden-on-medium {
     @media #{ $medium-screen-media } {
       @include responsive-invisibility();
     }
   }
+
   @media #{ $large-screen-media } {
     @include responsive-invisibility();
   }
