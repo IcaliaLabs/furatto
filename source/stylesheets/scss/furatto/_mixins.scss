@@ -1,0 +1,27 @@
+//Mixins to define the visibility media queries support
+@mixin responsive-invisibility {
+  display: none !important;
+
+  tr,
+  th,
+  td {
+    display: none !important;
+  }
+}
+
+@mixin responsive-visibility {
+  display: block !important;
+
+  &.button {
+    display: inline-block !important;
+  }
+
+  tr {
+    display: table-row !important;
+  }
+
+  th,
+  td {
+    display: table-cell !important;
+  }
+}
