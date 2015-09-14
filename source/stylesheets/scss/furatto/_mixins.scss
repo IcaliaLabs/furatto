@@ -2,7 +2,9 @@
 @mixin responsive-invisibility {
   display: none !important;
 
-  tr, th, td {
+  tr,
+  th,
+  td {
     display: none !important;
   }
 }
@@ -18,7 +20,8 @@
     display: table-row !important;
   }
 
-  th, td {
+  th,
+  td {
     display: table-cell !important;
   }
 }
