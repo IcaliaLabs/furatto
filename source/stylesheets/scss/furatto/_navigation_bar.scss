@@ -75,6 +75,14 @@ $navigation-bar-collapse-width: 768px !default;
   margin-bottom: $navigation-margin-bottom;
   overflow: hidden;
 
+  &.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: $navigation-fixed-z-index;
+  }
+
   &.opened {
     height: auto;
 
