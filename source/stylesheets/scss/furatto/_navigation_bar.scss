@@ -52,7 +52,7 @@ $navigation-bar-dropdown-header-font-weight: bold !default;
 $navigation-bar-dropdown-header-font-size: px-to-rems(8) !default;
 $navigation-bar-dropdown-anchor-height: 45px !default;
 $navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
-$navigation-bar-dropdown-right-position: 0px !default;
+$navigation-bar-dropdown-right-position: 0 !default;
 $navigation-bar-dropdown-top-position: $navigation-bar-height !default;
 $navigation-bar-dropdown-border: 1px solid lighten($navigation-bar-background, 10%) !default;
 $include-navigation-bar-dropdown-top-border: false !default;
@@ -181,11 +181,11 @@ $navigation-bar-collapse-width: 768px !default;
         z-index: $navigation-bar-dropdown-z-index;
 
         &.radius {
-          @include border-radius(0px 0px $navigation-bar-dropdown-radius $navigation-bar-dropdown-radius);
+          @include border-radius(0 0 $navigation-bar-dropdown-radius $navigation-bar-dropdown-radius);
         }
 
         &.shadow {
-          @include box-shadow(0px 2px 4px 0 rgba(167, 167, 167, 0.5));
+          @include box-shadow(0 2px 4px 0 rgba(167, 167, 167, 0.5));
         }
 
         li {
