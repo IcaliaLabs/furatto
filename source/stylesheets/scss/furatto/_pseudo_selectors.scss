@@ -6,6 +6,8 @@
   top: 50%;
 }
 
+//Will clearfix any the content,
+//to prevent floating objects to fly around
 %clearfix {
   &:before,
   &:after {
@@ -17,5 +19,3 @@
     clear: both;
   }
 }
-
-
