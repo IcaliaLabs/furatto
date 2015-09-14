@@ -3,7 +3,35 @@
   -webkit-touch-callout: $value;
   -webkit-user-select: $value;
   -khtml-user-select: $value;
-  -moz-user-select: moz-#{$value};
+  -moz-user-select: moz-#{ $value };
   -ms-user-select: $value;
   user-select: $value;
+}
+
+//Mixins to define the visibility media queries support
+@mixin responsive-invisibility {
+  display: none !important;
+
+  tr,
+  th,
+  td {
+    display: none !important;
+  }
+}
+
+@mixin responsive-visibility {
+  display: block !important;
+
+  &.button {
+    display: inline-block !important;
+  }
+
+  tr {
+    display: table-row !important;
+  }
+
+  th,
+  td {
+    display: table-cell !important;
+  }
 }
