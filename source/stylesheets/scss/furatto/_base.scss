@@ -28,3 +28,22 @@ body {
   margin: 0;
   padding: 0;
 }
+
+a {
+  @include touch-callout;
+  outline: none;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+//Lists
+ul,
+ol,
+dl {
+  padding: 0;
+}
+
