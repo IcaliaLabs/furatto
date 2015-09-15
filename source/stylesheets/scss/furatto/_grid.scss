@@ -77,7 +77,7 @@ $col-border-alpha: 0.5 !default;
   @include grid-columns-offset;
 
   .one.column {
-    width: percentage(100 / $number-of-columns);
+    width: percentage(100 / $number-of-columns) / 100;
   }
 
   display: block;

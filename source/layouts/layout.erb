@@ -15,24 +15,44 @@
   </head>
 
   <body>
-  <nav class="navigation-bar">
-    <ul class="brand-section">
-      <li class="brand-name">
-      <a href="/" class="menu-trigger" id="trigger"><strong>Furatto</strong></a>
-      </li>
-      <li class="menu-toggle">
-      <a href="#"></a>
-      </li>
-    </ul>
+    <nav class="navigation-bar">
+      <ul class="brand-section">
+        <li class="brand-name">
+          <a href="/" class="menu-trigger" id="trigger">
+            <strong>Furatto</strong>
+          </a>
+        </li>
+        <li class="menu-toggle">
+        <a href="#"></a>
+        </li>
+      </ul>
 
-    <ul class="pull right">
-      <li><a href="#">Docs</a></li>
-      <li><a href="#">Issues</a></li>
-      <li><a href="#">Github</a></li>
-      <li><a href="#">Download</a></li>
-    </ul>
-  </nav>
-    <%= yield %>
+      <ul class="pull right">
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Issues</a></li>
+        <li><a href="#">Github</a></li>
+        <li><a href="#">Download</a></li>
+      </ul>
+    </nav>
+
+    <div class="row">
+      <div class="two columns">
+        <ul class="navigation">
+          <li class="header">Setup</li>
+          <li><a href="#">Getting Started</a></li>
+          <li><a href="#">What's included?</a></li>
+          <li><a href="#">Basic Setup</a></li>
+          <li><a href="#">Browser support</a></li>
+          <li><a href="#">Using Rails</a></li>
+          <li><a href="#">Templates</a></li>
+          <li><a href="#">Old versions</a></li>
+        </ul>
+      </div>
+      <div class="ten columns no-padding">
+        <%= yield %>
+      </div>
+    </div>
+
 
     <%= javascript_include_tag  "all" %>
   </body>

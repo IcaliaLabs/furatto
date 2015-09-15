@@ -8,7 +8,7 @@
 //Navigation general settings
 $navigation-bar-height: 70px !default;
 $navigation-bar-background: #0092FC !default;
-$navigation-margin-bottom: 10px !default;
+$navigation-bar-margin-bottom: 10px !default;
 $navigation-bar-color: #FFF !default;
 $navigation-bar-font-weight: 300 !default;
 $navigation-font-size: px-to-rems(13) !default;
@@ -72,7 +72,7 @@ $navigation-bar-collapse-width: 768px !default;
   border-bottom: $navigation-bar-border-bottom;
   font-weight: $navigation-bar-font-weight;
   height: $navigation-bar-height;
-  margin-bottom: $navigation-margin-bottom;
+  margin-bottom: $navigation-bar-margin-bottom;
   overflow: hidden;
 
   &.fixed {
