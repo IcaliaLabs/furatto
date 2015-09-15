@@ -14,7 +14,24 @@
     <%= stylesheet_link_tag "normalize", "all" %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body>
+  <nav class="navigation-bar">
+    <ul class="brand-section">
+      <li class="brand-name">
+      <a href="/" class="menu-trigger" id="trigger"><strong>Furatto</strong></a>
+      </li>
+      <li class="menu-toggle">
+      <a href="#"></a>
+      </li>
+    </ul>
+
+    <ul class="pull right">
+      <li><a href="#">Docs</a></li>
+      <li><a href="#">Issues</a></li>
+      <li><a href="#">Github</a></li>
+      <li><a href="#">Download</a></li>
+    </ul>
+  </nav>
     <%= yield %>
 
     <%= javascript_include_tag  "all" %>
