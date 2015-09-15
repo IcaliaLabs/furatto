@@ -57,9 +57,9 @@ $badge-no-background-color: #212121 !default;
     @include flex-direction(row);
     @include justify-content(center);
 
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     background: $badge-background-color;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
     color: $badge-color;
     content: attr(data-badge);
     font-size: $badge-font-size;
