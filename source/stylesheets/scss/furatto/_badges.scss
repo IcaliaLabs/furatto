@@ -1,0 +1,80 @@
+//Badges
+
+//
+//@variables
+//
+
+@import "functions";
+
+$badge-text-font-size: px-to-rems(16) !default;
+$badge-text-color: #B6B6B6 !default;
+$badge-background-color: #FF4081 !default;
+$badge-width: px-to-rems(22) !default;
+$badge-height: $badge-width !default;
+$badge-font-weight: 600 !default;
+$badge-font-size: 75% !default;
+$badge-color: #FFF !default;
+$badge-right-position: px-to-rems(-22) !default;
+$badge-top-position: px-to-rems(-11) !default;
+$badge-no-background-color: #212121 !default;
+
+
+//
+// @mixin
+//
+// We use this mixin to add badges variations
+//
+// .badge {
+//   &.primary {
+//    @include badge-background-variation($background-color: #3F51B5);
+//   }
+// }
+//
+@mixin badge-background-variation($background-color,
+                                  $color: #FFF,
+                                  $font-weight: 600) {
+  &:after {
+    background: $background-color;
+    color: $color;
+    font-weight: $font-weight;
+  }
+}
+
+.badge {
+  color: $badge-text-color;
+  display: inline-block;
+  font-size: $badge-text-font-size;
+  margin-right: 24px;
+  position: relative;
+  white-space: nowrap;
+
+  &:after {
+    @include align-content(center);
+    @include align-items(center);
+    @include border-radius(50%);
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+
+    background: $badge-background-color;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    color: $badge-color;
+    content: attr(data-badge);
+    font-size: $badge-font-size;
+    font-weight: $badge-font-weight;
+    height: $badge-height;
+    position: absolute;
+    right: $badge-right-position;
+    top: $badge-top-position;
+    width: $badge-width;
+  }
+
+  &.no-background {
+    &:after {
+      background: transparent;
+      color: $badge-no-background-color;
+    }
+  }
+}
