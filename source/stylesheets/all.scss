@@ -4,21 +4,26 @@ $col-border-color: #F4F4F4;
 $row-next-to-row-separation: 0;
 
 @import "scss/furatto";
+@import "vendor/prism";
 
 .html {
   background: #FAFAFB;
 
   .result {
-    span {
+    & > span:first-child {
       color: #B6B6B6;
       display: block;
       font-size: px-to-rems(9);
+      margin-bottom: 50px;
       letter-spacing: 3px;
-      margin-bottom: 70px;
     }
 
     .wrapper {
       text-align: center;
+
+      .button {
+        margin-bottom: 27px;
+      }
     }
   }
 }
@@ -43,6 +48,10 @@ h2 {
   font-size: px-to-rems(20);
 }
 
+h3 {
+  font-size: px-to-rems(16);
+}
+
 .code-block {
   position: relative;
   z-index: 1000;
@@ -58,6 +67,10 @@ h2 {
     text-align: center;
     width: 40px;
     z-index: 900;
+  }
+
+  & + .code-block {
+    margin-top: 30px;
   }
 }
 
@@ -83,4 +96,11 @@ h2 {
   }
 }
 
-@import "vendor/prism";
+ul {
+  font-size: px-to-rems(14);
+  margin-left: 10px;
+}
+
+.unstyled {
+  list-style: none;
+}
