@@ -6,6 +6,7 @@ ruby "2.2.1"
 
 gem "middleman", "~>3.3.12"
 gem "compass"
+gem "celluloid", "~> 0.17"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
