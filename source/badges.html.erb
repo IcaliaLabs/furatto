@@ -1,7 +1,118 @@
-<div style="margin-top:30px;" class="text center">
-  <a href="#" class="badge" data-badge="25">Inbox</a>
-  <a href="#" class="badge primary" data-badge="25">Inbox</a>
-  <a href="#" class="badge no-background" data-badge="25">Inbox</a>
-  <span class="badge" data-badge="25">Inbox</span>
-  <h1 class="badge" data-badge="25">Inbox</h1>
+<div class="row">
+  <div class="eight columns no-padding border bottom left">
+    <div class="container">
+      <h1>Badges</h1>
+      <p>Badges are great for displaying counters, such as number of emails, likes for your social networks or even available servers on your monitoring tool.</p>
+    </div>
+  </div>
+  <div class="four columns html no-padding border left bottom">
+    <div class="container" style="height:166px;">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns no-padding border bottom left">
+    <div class="container">
+      <h2>Building the markup</h2>
+      <p>The markup to create badges is fairly simple, short and handle through data attributes.</p>
+      <div class="code-block">
+        <a href="#" class="code-copy">Copy</a>
+<pre>
+<code class="language-markup" data-language="markup">
+  &lt;a href="#" class="badge" data-badge="25">Inbox&lt;/a>
+</code>
+</pre>
+      </div>
+
+    </div>
+  </div>
+  <div class="four columns html no-padding border left bottom">
+    <div class="container result" style="height:198px;">
+      <span>RESULT</span>
+      <div class="wrapper">
+        <a href="#" class="badge" data-badge="25">Inbox</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<div class="row">
+    <div class="container">
+      <h2>Powerful mixin</h2>
+      <p>We only provide one color for the badge, but that does not mean you can't add all you want. A simple but powerful mixin was put together to achieve this.</p>
+
+      <div class="row">
+        <div class="six columns">
+<pre>
+<code class="language-scss" data-language="scss">
+  .badge.primary {
+    @include badge-background-variation($background-color: #3F51B5);
+  }
+</code>
+</pre>
+        </div>
+        <div class="six columns">
+<pre>
+<code class="language-markup" data-language="markup">
+  &lt;a href="#" class="badge primary" data-badge="25">Inbox&lt;/a>
+</code>
+</pre>
+        </div>
+      </div>
+
+      <h3>Available arguments</h3>
+
+      <table class="responsive striped shadow">
+        <thead>
+          <tr>
+            <th>Argument Name</th>
+            <th>Description</th>
+            <th>Default value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$background-color</td>
+            <td>Is the background color for the label to add.</td>
+            <td><span class="label">Required argument</span></td>
+          </tr>
+          <tr>
+            <td>$font-weight</td>
+            <td>The font weight for the badge.</td>
+            <td><span class="label">600</td>
+          </tr>
+          <tr>
+            <td>$color</td>
+            <td>The font color for the badge.</td>
+            <td><span class="label">#FFF</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+      <h2>Available Sass Variables</h2>
+      <p>You can customize the badge really easy by changing the our Sass variables.</p>
+
+<pre>
+<code class="language-scss" data-language="scss">
+  $badge-text-font-size: px-to-rems(16) !default;
+  $badge-text-color: #B6B6B6 !default;
+  $badge-background-color: #FF4081 !default;
+  $badge-width: px-to-rems(22) !default;
+  $badge-height: $badge-width !default;
+  $badge-font-weight: 600 !default;
+  $badge-font-size: 75% !default;
+  $badge-color: #FFF !default;
+  $badge-right-position: px-to-rems(-22) !default;
+  $badge-top-position: px-to-rems(-11) !default;
+  $badge-no-background-color: #212121 !default;
+</code>
+</pre>
+
+    </div>
 </div>
