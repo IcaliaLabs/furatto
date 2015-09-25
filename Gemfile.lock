@@ -33,6 +33,7 @@ GEM
     eventmachine (1.0.8)
     execjs (2.6.0)
     ffi (1.9.10)
+    git-version-bump (0.15.1)
     haml (4.0.7)
       tilt
     hike (1.2.3)
@@ -90,7 +91,11 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.5)
       activesupport (>= 3.1)
+    puma (2.12.3)
     rack (1.6.4)
+    rack-contrib (1.4.0)
+      git-version-bump (~> 0.15)
+      rack (~> 1.4)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
@@ -128,5 +133,7 @@ DEPENDENCIES
   jquery-middleman
   middleman (~> 3.3.12)
   middleman-livereload (~> 3.1.0)
+  puma
+  rack-contrib
   tzinfo-data
   wdm (~> 0.1.0)
