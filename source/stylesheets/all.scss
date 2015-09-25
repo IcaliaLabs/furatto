@@ -21,7 +21,8 @@ $row-next-to-row-separation: 0;
     .wrapper {
       text-align: center;
 
-      .button {
+      .button,
+      .label {
         margin-bottom: 27px;
       }
     }

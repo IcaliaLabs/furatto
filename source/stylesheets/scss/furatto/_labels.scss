@@ -6,7 +6,7 @@
 @import "functions";
 
 //Label general settings
-$label-padding: px-to-rems(3) px-to-rems(6) !default;
+$label-padding: px-to-rems(2) px-to-rems(4) !default;
 $label-font-size: 75% !default;
 $label-font-weight: 400 !default;
 $label-font-color: #FFF !default;
@@ -14,7 +14,7 @@ $label-default-background:  #0092FC !default;
 
 //Label variations
 $label-radius: px-to-rems(3) !default;
-$label-round: px-to-rems(1000) !default;
+$label-round: 50% !default;
 
 //Label background variations
 $label-success-background: #4CAF50 !default;
