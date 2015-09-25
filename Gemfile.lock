@@ -130,6 +130,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   jquery-middleman
   middleman (~> 3.3.12)
   middleman-livereload (~> 3.1.0)
