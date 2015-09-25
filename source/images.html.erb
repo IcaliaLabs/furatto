@@ -1,4 +1,121 @@
-<img src="http://lorempixel.com/1000/960/" class="responsive" />
-<img src="http://lorempixel.com/400/200/" class="radius shadow" />
-<img src="http://lorempixel.com/200/200/" class="circular" />
-<img src="http://lorempixel.com/200/200/" class="shadow circular" />
+<div class="row">
+  <div class="eight columns no-padding border bottom left">
+    <div class="container">
+      <h1>Images</h1>
+      <p>All of the images on Furatto already have a predefined styling, just for a bette rendering. We would not want to ruin our awesome photos.</p>
+    </div>
+  </div>
+  <div class="four columns html no-padding border left bottom">
+    <div class="container" style="height:166px;">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns no-padding border bottom left" style="height:350px">
+    <div class="container">
+      <h2>Building the markup</h2>
+      <p>You don't have to add extra classes for the images, Yei!, simple invoke an img element.</p>
+      <div class="code-block">
+        <a href="#" class="code-copy">Copy</a>
+<pre>
+<code class="language-markup" data-language="markup">
+  &lt;img src="http://lorempixel.com/200/200/" />
+</code>
+</pre>
+      </div>
+
+    </div>
+  </div>
+  <div class="four columns html no-padding border left bottom">
+    <div class="container result" style="height:348px;">
+      <span>RESULT</span>
+      <div class="wrapper">
+        <img src="http://lorempixel.com/200/200/" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight columns no-padding border bottom left" style="height:1050px;">
+    <div class="container">
+      <h2>Images styles</h2>
+      <p>We provide 4 class name modifiers to change the way your image is displayed or how it behaves.</p>
+      <br />
+      <div class="code-block">
+        <a href="#" class="code-copy">Copy</a>
+<pre>
+<code class="language-markup" data-language="markup">
+  &lt;img src="http://lorempixel.com/200/200/" class="responsive" />
+</code>
+</pre>
+      </div>
+      <div class="code-block">
+        <a href="#" class="code-copy">Copy</a>
+<pre>
+<code class="language-markup" data-language="markup">
+  &lt;img src="http://lorempixel.com/200/200/" class="radius" />
+</code>
+</pre>
+      </div>
+
+      <div class="code-block">
+        <a href="#" class="code-copy">Copy</a>
+<pre>
+<code class="language-markup" data-language="markup">
+  &lt;img src="http://lorempixel.com/200/200/" class="circular" />
+</code>
+</pre>
+      </div>
+
+      <div class="code-block">
+        <a href="#" class="code-copy">Copy</a>
+<pre>
+<code class="language-markup" data-language="markup">
+  &lt;img src="http://lorempixel.com/200/200/" class="shadow" />
+</code>
+</pre>
+      </div>
+
+    </div>
+  </div>
+  <div class="four columns html no-padding border left bottom">
+    <div class="container result" style="height:1048px;">
+      <span>RESULT</span>
+      <div class="wrapper">
+        <img src="http://lorempixel.com/200/200/" class="responsive" />
+        <img src="http://lorempixel.com/200/200/" class="radius" />
+        <img src="http://lorempixel.com/200/200/" class="circular" />
+        <img src="http://lorempixel.com/200/200/" class="shadow" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<div class="row">
+    <div class="container">
+      <h2>Available Sass Variables</h2>
+      <p>You can customize the img really easy by changing the our Sass variables.</p>
+
+<pre>
+<code class="language-scss" data-language="scss">
+  //
+  // @variables
+  //
+
+  $img-display: inline-block !default;
+  $img-radius: px-to-rems(4) !default;
+
+  // Shadow Setup
+  $img-box-shadow-color: rgba(167, 167, 167, 0.7) !default;
+  $img-box-shadow-x: px-to-rems(1) !default;
+  $img-box-shadow-y: px-to-rems(2) !default;
+  $img-box-shadow-blur: px-to-rems(4) !default;
+  $img-box-shadow-spread: px-to-rems(0) !default;
+</code>
+</pre>
+
+    </div>
+</div>
