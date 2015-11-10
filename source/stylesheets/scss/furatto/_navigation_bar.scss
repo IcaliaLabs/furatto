@@ -118,7 +118,7 @@ $navigation-bar-collapse-width: 768px !default;
     color: $navigation-bar-button-color;
     font-size: $navigation-bar-button-font-size;
     height: $navigation-bar-button-height;
-    line-height: $navigation-bar-button-height;
+    line-height: $navigation-bar-button-height - 3;
     margin-left: $navigation-bar-button-margin-left;
     margin-right: $navigation-bar-button-margin-right;
     margin-top: ($navigation-bar-height / 2) - ($navigation-bar-button-height / 2);

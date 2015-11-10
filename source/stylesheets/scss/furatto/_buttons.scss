@@ -116,7 +116,7 @@ $button-circular-size: px-to-rems(50) !default;
 
   &.alpha {
     background: transparent;
-    border: 3px solid $background-color;
+    border: 2px solid $background-color;
     color: $background-color;
 
     &:hover {
