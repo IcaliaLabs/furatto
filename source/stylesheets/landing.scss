@@ -34,7 +34,7 @@ $row-next-to-row-separation: 0;
 
 .devices-image {
   width: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 120px;
 }
 
 .main-section {
@@ -42,9 +42,17 @@ $row-next-to-row-separation: 0;
 
   .motto {
     color: #0092FB;
-    font-size: px-to-rems(46);
+    font-weight: 300;
+    font-size: px-to-rems(40);
     line-height: px-to-rems(46);
     margin-bottom: 20px;
+  }
+
+  .main-motto-wrapper {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -192px;
   }
 
   .sub-motto {
