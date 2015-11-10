@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,300,300italic,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Furatto" %></title>
+
+    <%= stylesheet_link_tag "normalize", "landing" %>
+  </head>
+
+  <body>
+    <nav class="navigation-bar">
+      <div class="container">
+        <ul class="brand-section">
+          <li class="brand-name">
+            <a href="/" class="menu-trigger" id="trigger">
+              <strong>F</strong>
+            </a>
+          </li>
+          <li class="menu-toggle">
+          <a href="#"></a>
+          </li>
+        </ul>
+
+        <ul class="main-navigation">
+          <li><a href="/getting_started.html">Docs</a></li>
+          <li><a href="https://github.com/IcaliaLabs/furatto/issues">Issues</a></li>
+          <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+        </ul>
+
+        <ul class="pull right">
+          <li><a href="#" class="button alpha pill">Download</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="footer text center">
+      <p>Handcrafted by <a href="https://twitter.com/icalialabs">@icalialabs</a></p>
+      <p>
+      <a href="#">Furatto 4.0</a>
+      —
+      <span>Created by Abraham Kuri</span>
+      —
+      <span>Code licensed under MIT License</span>
+      </p>
+      <p class="nomargin">
+      <a href="https://github.com/IcaliaLabs">Github</a>—
+      <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v1.0.1" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V1']);">V1</a>—
+      <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v2.0.0" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V2']);">V2</a>—
+      <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v3.0.0" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V3']);">V3</a>—
+      <a href="/furatto/examples">Examples</a>—
+      <a href="https://github.com/IcaliaLabs/furatto/issues?milestone=none&amp;state=open">Issues</a>—
+      <a href="https://github.com/IcaliaLabs/furatto/releases">Releases</a>—
+      <a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Join Team']);">Join the team</a>
+      </p>
+    </footer>
+
+    <%= javascript_include_tag  "all" %>
+  </body>
+</html>
+

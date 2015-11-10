@@ -1,0 +1,115 @@
+@import "scss/furatto/functions";
+
+//Navigation bar overrides
+$navigation-bar-background: #FFF;
+$navigation-bar-height: 80px;
+$navigation-bar-color: #0091FB;
+$navigation-bar-link-color: #0091FB;
+$navigation-bar-brand-section-font-size: px-to-rems(32);
+$navigation-bar-button-color: #0091FB;
+$navigation-bar-button-font-size: px-to-rems(12);
+$navigation-bar-margin-bottom: 30px;
+
+$col-border-color: #F4F4F4;
+$row-next-to-row-separation: 0;
+
+@import "scss/furatto";
+@import "font-awesome";
+
+.container {
+  @extend %clearfix;
+  margin: 0 auto;
+  width: 95%;
+}
+
+.navigation-bar {
+  position: relative;
+
+  .main-navigation {
+    position: absolute;
+    left: 50%;
+    margin-left: -122px;
+  }
+}
+
+.devices-image {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.main-section {
+  margin-bottom: 100px;
+
+  .motto {
+    color: #0092FB;
+    font-size: px-to-rems(46);
+    line-height: px-to-rems(46);
+    margin-bottom: 20px;
+  }
+
+  .sub-motto {
+    color: #9CA7AF;
+    font-size: px-to-rems(16);
+    margin: 0 auto;
+    width: 40%;
+  }
+}
+
+.sub-section {
+  text-align: center;
+
+  .header {
+    color: #0092FB;
+    font-size: px-to-rems(24);
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .motto {
+    color: #9CA7AF;
+    margin: 0;
+  }
+}
+
+a {
+  color: #0092FB;
+}
+
+.footer {
+  color: #9CA7BD;
+  margin-bottom: 100px;
+}
+
+.contribute {
+  margin: 20px auto 150px auto;
+  padding: 30px 0;
+  text-align: center;
+  width: 60%;
+
+  .motto {
+    color: #0092FB;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .sub-motto {
+    color: #9CA7AF;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 auto 35px auto;
+  }
+}
+
+.examples {
+  @extend .contribute;
+  width: 90%;
+
+  img {
+    margin-bottom: 32px;
+  }
+
+  .sub-motto {
+    margin: 0 auto 50px auto;
+  }
+}

@@ -1,54 +1,19 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.1.13)
-      i18n (~> 0.6, >= 0.6.9)
+    activesupport (4.2.4)
+      i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    celluloid (0.17.1.2)
-      bundler
-      celluloid-essentials
-      celluloid-extras
-      celluloid-fsm
-      celluloid-pool
-      celluloid-supervision
-      dotenv
-      nenv
-      rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.2.1)
-      bundler
-      dotenv
-      nenv
-      rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.1)
-      bundler
-      dotenv
-      nenv
-      rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.1)
-      bundler
-      dotenv
-      nenv
-      rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-pool (0.20.1)
-      bundler
-      dotenv
-      nenv
-      rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-supervision (0.20.1.1)
-      bundler
-      dotenv
-      nenv
-      rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    chunky_png (1.3.4)
+    capybara (2.4.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    chunky_png (1.3.5)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -65,7 +30,6 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    dotenv (2.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -73,11 +37,12 @@ GEM
     eventmachine (1.0.8)
     execjs (2.6.0)
     ffi (1.9.10)
+    font-awesome-middleman (4.4.1)
+      middleman-core (~> 3.0)
     git-version-bump (0.15.1)
     haml (4.0.7)
       tilt
     hike (1.2.3)
-    hitimes (1.2.3)
     hooks (0.4.1)
       uber (~> 0.0.14)
     http_parser.rb (0.6.0)
@@ -85,32 +50,31 @@ GEM
     jquery-middleman (3.1.2)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    kramdown (1.8.0)
-    listen (2.9.0)
-      celluloid (>= 0.15.2)
+    kramdown (1.9.0)
+    listen (3.0.4)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    middleman (3.3.12)
+    middleman (3.4.0)
       coffee-script (~> 2.2)
       compass (>= 1.0.0, < 2.0.0)
       compass-import-once (= 1.0.5)
       execjs (~> 2.0)
       haml (>= 4.0.5)
       kramdown (~> 1.2)
-      middleman-core (= 3.3.12)
+      middleman-core (= 3.4.0)
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
-    middleman-core (3.3.12)
-      activesupport (~> 4.1.0)
+    middleman-core (3.4.0)
+      activesupport (~> 4.1)
       bundler (~> 1.1)
+      capybara (~> 2.4.4)
       erubis
       hooks (~> 0.3)
       i18n (~> 0.7.0)
-      listen (>= 2.7.9, < 3.0)
+      listen (~> 3.0.3)
       padrino-helpers (~> 0.12.3)
       rack (>= 1.4.5, < 2.0)
-      rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
     middleman-livereload (3.1.1)
@@ -123,16 +87,19 @@ GEM
       sprockets (~> 2.12.1)
       sprockets-helpers (~> 1.1.0)
       sprockets-sass (~> 1.3.0)
-    minitest (5.8.1)
+    mime-types (2.6.2)
+    mini_portile (0.6.2)
+    minitest (5.8.2)
     multi_json (1.11.2)
-    nenv (0.2.0)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     padrino-helpers (0.12.5)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.12.5)
       tilt (~> 1.4.1)
     padrino-support (0.12.5)
       activesupport (>= 3.1)
-    puma (2.14.0)
+    puma (2.15.2)
     rack (1.6.4)
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
@@ -144,8 +111,7 @@ GEM
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rspec-logsplit (0.1.3)
-    sass (3.4.18)
+    sass (3.4.19)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -159,25 +125,28 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    timers (4.1.1)
-      hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.15)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  celluloid (~> 0.17)
   compass
+  font-awesome-middleman
   jquery-middleman
-  middleman (~> 3.3.12)
+  middleman (~> 3.4)
   middleman-livereload (~> 3.1.0)
   puma
   rack-contrib
   tzinfo-data
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.10.6
