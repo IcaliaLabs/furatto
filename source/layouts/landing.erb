@@ -11,6 +11,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Furatto" %></title>
 
+    <%= favicon_tag 'images/fav.ico' %>
     <%= stylesheet_link_tag "normalize", "landing" %>
   </head>
 
@@ -20,7 +21,7 @@
         <ul class="brand-section">
           <li class="brand-name">
             <a href="/" class="menu-trigger" id="trigger">
-              <strong>F</strong>
+              <strong>F<span class="brand-hidden-part" style="display:none;">uratto</span></strong>
             </a>
           </li>
           <li class="menu-toggle">
@@ -66,6 +67,15 @@
     </footer>
 
     <%= javascript_include_tag  "all" %>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        $('.brand-name').hover(function(e) {
+          $('.brand-hidden-part').fadeIn();
+        }, function(){
+          $('.brand-hidden-part').fadeOut();
+        });
+      });
+    </script>
   </body>
 </html>
 
