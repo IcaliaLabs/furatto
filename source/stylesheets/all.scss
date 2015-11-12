@@ -60,6 +60,11 @@ body {
     margin-bottom: 10px;
   }
 
+  h5 {
+    color: #7d7d7d;
+    font-weight: 400;
+  }
+
   ul,
   ol {
     margin-left: 20px;
@@ -109,6 +114,7 @@ h4 {
     background: #D9DDE3;
     color: #FFF;
     font-size: 9px;
+    line-height: 26px;
     position: absolute;
     right: 20px;
     top: -24px;
@@ -119,6 +125,10 @@ h4 {
 
   & + .code-block {
     margin-top: 30px;
+  }
+
+  pre {
+    overflow-y: hidden;
   }
 }
 
