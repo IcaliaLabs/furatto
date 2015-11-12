@@ -1,10 +1,19 @@
 
-$navigation-bar-margin-bottom: 0;
-$col-border-color: #F4F4F4;
+$navigation-bar-margin-bottom: 0px;
+$col-border-color: #dfdfdf;
+$col-border-alpha: 0.5;
 $row-next-to-row-separation: 0;
+
+$navigation-bar-link-color: rgba(#FFF, 0.6);
+$navigation-bar-brand-name-color: #FFF;
+$navigation-bar-height: 80px;
 
 @import "scss/furatto";
 @import "vendor/prism";
+
+body {
+  padding-bottom: 50px;
+}
 
 .html {
   background: #FAFAFB;
@@ -32,18 +41,51 @@ $row-next-to-row-separation: 0;
 
 .container {
   padding: px-to-rems(40);
+
+  &.no-padding-top {
+    padding-top: 0;
+  }
+
+  h1 {
+    border-bottom: 1px solid rgba(#dfdfdf, 0.5);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+
+  h4 {
+    color: #7d7d7d;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+    line-height: 26px;
+  }
+}
+
+.navigation-bar {
+  @include background(radial-gradient( circle at 50% 50%, lighten(#0092FC, 10%) 29%, #0092FC 120%));
 }
 
 p {
-  color: #36363A;
+  color: #474a54;
   font-size: px-to-rems(14);
-  font-weight: 300;
-  margin-bottom: 0;
+  line-height: 28px;
+  margin-bottom: 10px;
 }
 
 h1,
 h2 {
   margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-size: px-to-rems(25);
 }
 
 h2 {
@@ -52,6 +94,10 @@ h2 {
 
 h3 {
   font-size: px-to-rems(16);
+}
+
+h4 {
+  margin-top: 0;
 }
 
 .code-block {
@@ -81,28 +127,48 @@ h3 {
   padding-left: 30px;
 
   .header {
-    color: #000000;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    color: #bbb;
+    font-size: 11px;
+    font-weight: normal;
   }
 
   li {
     a {
-      color: #0092FC;
+      color: #4e5758;
       font-size: 14px;
-      font-weight: 300;
-      line-height: 34px;
-      padding-left: 10px;
+      font-weight: normal;
+
+      &:hover {
+        color: darken(#4e5758, 10%);
+      }
     }
   }
 }
 
-ul {
+ul,
+ol {
   font-size: px-to-rems(14);
   margin-left: 10px;
 }
 
 .unstyled {
   list-style: none;
+}
+
+hr {
+  clear: both;
+  margin: 1.375rem 0 1.375rem;
+  height: 0;
+  border: solid rgba(244, 244, 244, 0.5);
+  border-width: 0.07143rem 0 0;
+}
+
+a {
+  color: #0092FC;
+}
+
+.main-navigation {
+  a:hover {
+    color: rgba(#FFF, 1);
+  }
 }

@@ -40,15 +40,15 @@ $muted-text-color: #666666 !default;
 //
 
 .text {
-  .uppercase {
+  &.uppercase {
     text-transform: uppercase;
   }
 
-  .muted {
+  &.muted {
     color: $muted-text-color;
   }
 
-  .striked {
+  &.striked {
     text-decoration: line-through;
   }
 }
