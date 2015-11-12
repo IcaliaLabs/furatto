@@ -1,187 +1,160 @@
 <div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h1>Labels</h1>
-      <p>Highlight important content, make notice of important announcements with labels or badges by adding the corresponding class name.</p>
-    </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container" style="height:166px;">
-    </div>
-  </div>
-</div>
+  <div class="container">
+    <h1>Labels</h1>
+    <p>Highlight important content, make notice of important announcements with labels or badges by adding the corresponding class name.</p>
 
-<div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Building the markup</h2>
-      <p>The markup to create labels is pretty straighforward, just add the <strong>.label</strong> to an element and you are good to go.</p>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
-<code class="language-markup" data-language="markup">
-  &lt;span class="label">Default label&lt;/span>
-</code>
-</pre>
-      </div>
+    <br />
 
+    <div class="row">
+      <div class="eight columns">
+        <h4><em>Building the markup</em></h4>
+        <p>The markup to create labels is pretty straighforward, just add the <strong>.label</strong> to any element and you are good to go.</p>
+        <%= code_block do 
+          %q{&lt;span class="label">Default label&lt;/span>}
+        end %>
     </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container result" style="height:222px;">
-      <span>RESULT</span>
-      <div class="wrapper">
-        <span class="label">Default label</span>
+
+    <div class="four columns html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <span class="label">Default label</span>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    </div>
 
-<div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Labels sizing</h2>
+    <div class="row">
+      <h4><em>Labels sizing</em></h4>
       <p>
       Label class elements will now inherit the <strong>font size</strong> from their parents and apply a <strong>75%</strong> to its own size. So if you
       add a label inside a <strong>h1</strong> element for example with a font size of 36px, the label inside will have a 27px of size approximately.
       </p>
     </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container" style="height:190px;">
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Label colors</h2>
-      <p>You can easily change the label colors, by adding some class modifiers.</p>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
+    <div class="row">
+      <div class="eight columns">
+        <h4><em>Label colors</em></h4>
+        <p>You can easily change the label colors, by adding some class modifiers.</p>
+        <div class="code-block">
+          <a href="#" class="code-copy">Copy</a>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="label success">Success label&lt;/span>
 </code>
-</pre>
-      </div>
+          </pre>
+        </div>
 
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
+        <div class="code-block">
+          <a href="#" class="code-copy">Copy</a>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="label danger">Danger label&lt;/span>
 </code>
-</pre>
-      </div>
+          </pre>
+        </div>
 
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
+        <div class="code-block">
+          <a href="#" class="code-copy">Copy</a>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="label warning">Warning label&lt;/span>
 </code>
-</pre>
-      </div>
+          </pre>
+        </div>
 
-    </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container result" style="height:330px;">
-      <span>RESULT</span>
-      <div class="wrapper">
-        <span class="label success">Success label</span>
-        <br />
-        <span class="label danger">Danger label</span>
-        <br />
-        <span class="label warning">Warning label</span>
+      </div>
+      <div class="four columns html no-padding border top left bottom">
+        <div class="container result">
+          <span>RESULT</span>
+          <div class="wrapper">
+            <span class="label success">Success label</span>
+            <br />
+            <span class="label danger">Danger label</span>
+            <br />
+            <span class="label warning">Warning label</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Label styles</h2>
-      <p>We have added some class modifiers to give labels different look and feel.</p>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
+    <div class="row">
+      <div class="eight columns">
+        <h4><em>Label styles</em></h4>
+        <p>We have added some class modifiers to give labels different look and feel.</p>
+        <div class="code-block">
+          <a href="#" class="code-copy">Copy</a>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="label round">100&lt;/span>
 </code>
-</pre>
-      </div>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
+          </pre>
+        </div>
+        <div class="code-block">
+          <a href="#" class="code-copy">Copy</a>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="label radius">Radius label&lt;/span>
 </code>
-</pre>
-      </div>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
+          </pre>
+        </div>
+        <div class="code-block">
+          <a href="#" class="code-copy">Copy</a>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="label shadow">Shadow label&lt;/span>
 </code>
-</pre>
-      </div>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
+          </pre>
+        </div>
+        <div class="code-block">
+          <a href="#" class="code-copy">Copy</a>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="label shadow radius">Shadow radius label&lt;/span>
 </code>
-</pre>
+          </pre>
+        </div>
+      </div>
+      <div class="four columns html no-padding border left bottom">
+        <div class="container result" style="height:395px;">
+          <span>RESULT</span>
+          <div class="wrapper">
+            <span href="#" class="label round">100</span>
+            <br />
+            <span href="#" class="label radius">Radius label</span>
+            <br />
+            <span href="#" class="label shadow">Shadow label</span>
+            <br />
+            <span href="#" class="label shadow radius">Shadow radius label</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container result" style="height:395px;">
-      <span>RESULT</span>
-      <div class="wrapper">
-        <span href="#" class="label round">100</span>
-        <br />
-        <span href="#" class="label radius">Radius label</span>
-        <br />
-        <span href="#" class="label shadow">Shadow label</span>
-        <br />
-        <span href="#" class="label shadow radius">Shadow radius label</span>
-      </div>
-    </div>
-  </div>
-</div>
 
-<br />
-<div class="row">
-    <div class="container">
-      <h2>Powerful mixin</h2>
+    <div class="row">
+      <h4><em>Powerful mixin</em></h2>
       <p>Don't on the mood to use the built in labels?, that's fair, we have included a mixin to create your own, check it out!</p>
 
       <div class="row">
         <div class="six columns">
-<pre>
+          <pre>
 <code class="language-scss" data-language="scss">
   .custom-label {
     @include label($background-color: #1abc9c);
   }
 </code>
-</pre>
+          </pre>
         </div>
         <div class="six columns">
-<pre>
+          <pre>
 <code class="language-markup" data-language="markup">
   &lt;span class="custom-label">Custom Label&lt;/span>
 </code>
-</pre>
+          </pre>
         </div>
       </div>
 
-      <h3>Available arguments</h3>
+      <h4><em>Available arguments</em></h4>
 
       <table class="responsive striped shadow">
         <thead>
@@ -220,14 +193,12 @@
         </tbody>
       </table>
     </div>
-</div>
 
-<div class="row">
-    <div class="container">
-      <h2>Available Sass Variables</h2>
+    <div class="row">
+      <h4><em>Available Sass Variables</em></h4>
       <p>You can customize the labels really easy by changing the our Sass variables.</p>
 
-<pre>
+      <pre>
 <code class="language-scss" data-language="scss">
   //Label general settings
   $label-padding: px-to-rems(2) px-to-rems(4) !default;
@@ -245,7 +216,10 @@
   $label-danger-background: #F54336 !default;
   $label-warning-background: #FF9800 !default;
 </code>
-</pre>
+      </pre>
 
     </div>
+  </div>
 </div>
+
+
