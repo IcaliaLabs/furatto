@@ -1,68 +1,47 @@
 <div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h1>Badges</h1>
-      <p>Badges are great for displaying counters, such as number of emails, likes for your social networks or even available servers on your monitoring tool.</p>
-    </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container" style="height:166px;">
-    </div>
-  </div>
-</div>
+  <div class="container">
+    <h1>Badges</h1>
+    <p>Badges are great for displaying counters, such as number of emails, likes for your social networks or even available servers on your monitoring tool.</p>
 
-<div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Building the markup</h2>
-      <p>The markup to create badges is fairly simple, short and handle through data attributes.</p>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
-<code class="language-markup" data-language="markup">
-  &lt;a href="#" class="badge" data-badge="25">Inbox&lt;/a>
-</code>
-</pre>
-      </div>
-
+    <br />
+    <div class="row">
+      <div class="eight columns">
+        <h4><em>Building the markup</em></h4>
+        <p>The markup to create badges is fairly simple, short and handle through data attributes.</p>
+        <%= code_block do
+          %q{&lt;a href="#" class="badge" data-badge="25">Inbox&lt;/a>}
+        end %>
     </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container result" style="height:198px;">
-      <span>RESULT</span>
-      <div class="wrapper">
-        <a href="#" class="badge" data-badge="25">Inbox</a>
+    <div class="four columns html no-padding border bottom top">
+      <div class="container result">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <a href="#" class="badge" data-badge="25">Inbox</a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    </div>
 
-<br />
-<div class="row">
-    <div class="container">
-      <h2>Powerful mixin</h2>
-      <p>We only provide one color for the badge, but that does not mean you can't add all you want. A simple but powerful mixin was put together to achieve this.</p>
+    <div class="row">
+      <h4><em>Powerful mixin</em></h4>
+      <p>We only provide one color for the badge but that doesn't mean you can't add all you want. A simple but powerful mixin was put together to achieve this.</p>
 
       <div class="row">
         <div class="six columns">
-<pre>
-<code class="language-scss" data-language="scss">
-  .badge.primary {
+          <%= code_block "scss" do
+            %q{.badge.primary {
     @include badge-background-variation($background-color: #3F51B5);
-  }
-</code>
-</pre>
-        </div>
-        <div class="six columns">
-<pre>
-<code class="language-markup" data-language="markup">
-  &lt;a href="#" class="badge primary" data-badge="25">Inbox&lt;/a>
-</code>
-</pre>
-        </div>
+  }}
+          end %>
+      </div>
+      <div class="six columns">
+        <%= code_block do
+          %q{&lt;a href="#" class="badge primary" data-badge="25">Inbox&lt;/a>}
+        end %>
+    </div>
       </div>
 
-      <h3>Available arguments</h3>
+      <h4><em>Available arguments</em></h4>
 
       <table class="responsive striped shadow">
         <thead>
@@ -91,14 +70,10 @@
         </tbody>
       </table>
     </div>
-</div>
-
-<div class="row">
-    <div class="container">
-      <h2>Available Sass Variables</h2>
+    <div class="row">
+      <h4><em>Available Sass Variables</em></h2>
       <p>You can customize the badge really easy by changing the our Sass variables.</p>
-
-<pre>
+      <pre>
 <code class="language-scss" data-language="scss">
   $badge-text-font-size: px-to-rems(16) !default;
   $badge-text-color: #B6B6B6 !default;
@@ -112,7 +87,12 @@
   $badge-top-position: px-to-rems(-11) !default;
   $badge-no-background-color: #212121 !default;
 </code>
-</pre>
+      </pre>
 
     </div>
+
+  </div>
 </div>
+
+
+
