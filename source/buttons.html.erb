@@ -1,82 +1,54 @@
 <div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h1>Buttons</h1>
-      <p>Buttons are a good way to present links or submission buttons on forms. Furatto makes it really easy to achieve it, by using the default ones or create your owns.</p>
+  <div class="container">
+    <h1>Buttons</h1>
+    <p>Buttons are a good way to present links or submission buttons on forms. Furatto makes it really easy to achieve it, by using the default ones or create your owns.</p>
+
+    <br />
+
+    <div class="row">
+      <div class="eight columns">
+        <h4><em>Building the markup</em></h4>
+        <p>The markup to create a button is fairly simple and short.</p>
+        <%= code_block do 
+          %q{&lt;a href="#" class="button">Default button&lt;/a>}
+        end %>
+    </div>
+    <div class="four columns html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <a href="#" class="button">Default button</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container" style="height:166px;">
+
+  <div class="row">
+    <div class="eight columns">
+      <h4><em>Button sizing</em></h4>
+        <p>You can add two different class names to change the button size.</p>
+        <%= code_block do 
+          %q{&lt;a href="#" class="button small">Small button&lt;/a>}
+        end %>
+        <%= code_block do 
+          %q{&lt;a href="#" class="button large">Large button&lt;/a>}
+        end %>
+    </div>
+    <div class="four columns html no-padding border left bottom">
+      <div class="container result" style="height:264px;">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <a href="#" class="button small">Small button</a>
+          <a href="#" class="button large">Large button</a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
 <div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Building the markup</h2>
-      <p>The markup to create a button is fairly simple, and short.</p>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
-<code class="language-markup" data-language="markup">
-  &lt;a href="#" class="button">Default button&lt;/a>
-</code>
-</pre>
-      </div>
-
-    </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container result" style="height:198px;">
-      <span>RESULT</span>
-      <div class="wrapper">
-        <a href="#" class="button">Default button</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Button sizing</h2>
-      <p>You can add two different class names to change the button size.</p>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
-<code class="language-markup" data-language="markup">
-  &lt;a href="#" class="button small">Small button&lt;/a>
-</code>
-</pre>
-      </div>
-      <div class="code-block">
-        <a href="#" class="code-copy">Copy</a>
-<pre>
-<code class="language-markup" data-language="markup">
-  &lt;a href="#" class="button large">Large button&lt;/a>
-</code>
-</pre>
-      </div>
-
-    </div>
-  </div>
-  <div class="four columns html no-padding border left bottom">
-    <div class="container result" style="height:264px;">
-      <span>RESULT</span>
-      <div class="wrapper">
-        <a href="#" class="button small">Small button</a>
-        <a href="#" class="button large">Large button</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="eight columns no-padding border bottom left">
-    <div class="container">
-      <h2>Button styles</h2>
-      <p>We have added some class modifiers to give buttons different look and feel.</p>
+  <div class="eight columns">
+    <h4><em>Button styles</em></h4>
+    <p>We have added some class modifiers to give buttons different look and feel.</p>
       <div class="code-block">
         <a href="#" class="code-copy">Copy</a>
 <pre>
@@ -150,7 +122,6 @@
 </pre>
       </div>
 
-    </div>
   </div>
   <div class="four columns html no-padding border left bottom">
     <div class="container result" style="height:726px;">
@@ -170,14 +141,10 @@
     </a>
       </div>
     </div>
-  </div>
-</div>
-
-<br />
+    </div>
 <div class="row">
-    <div class="container">
-      <h2>Powerful mixin</h2>
-      <p>We provide a powerful mixin for you to create more buttons, so if you feel like going this way, you can just invoke the mixin like shown below, and send some variables to meet your needs.</p>
+  <h4><em>Powerful mixin</em></h2>
+  <p>We provide a powerful mixin for you to create more buttons, so if you feel like going this way, you can just invoke the mixin like shown below, and send some variables to meet your needs.</p>
 
       <div class="row">
         <div class="six columns">
@@ -198,7 +165,7 @@
         </div>
       </div>
 
-      <h3>Available arguments</h3>
+      <h4><em>Available arguments</em></h4>
 
       <table class="responsive striped shadow">
         <thead>
@@ -242,11 +209,9 @@
         </tbody>
       </table>
     </div>
-</div>
 
 <div class="row">
-    <div class="container">
-      <h2>Available Sass Variables</h2>
+  <h4><em>Available Sass Variables</em></h4>
       <p>You can customize the buttons really easy by changing the our Sass variables.</p>
 
 <pre>
@@ -289,4 +254,7 @@
 </pre>
 
     </div>
+</div>
+  </div>
+</div>
 </div>
