@@ -41,11 +41,19 @@
  end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+ helpers do
+   def code_block(language="markup", &block)
+     %Q{
+      <div class="code-block">
+        <a href="#" class="code-copy">Copy</a>
+        <pre>
+          <code class="language-#{language}" data-language="#{language}">
+  #{yield block}</code>
+        </pre>
+      </div>
+     }
+   end
+ end
 
 set :css_dir, 'stylesheets'
 

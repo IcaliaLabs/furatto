@@ -182,3 +182,8 @@ a {
     color: rgba(#FFF, 1);
   }
 }
+
+.code {
+  color: lighten(#d14, 10%);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
