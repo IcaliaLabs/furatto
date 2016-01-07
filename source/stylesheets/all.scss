@@ -46,6 +46,10 @@ body {
     padding-top: 0;
   }
 
+  &.no-padding-right {
+    padding-right: 0;
+  }
+
   h1 {
     border-bottom: 1px solid rgba(#dfdfdf, 0.5);
     padding-bottom: 15px;
