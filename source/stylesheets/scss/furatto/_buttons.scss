@@ -53,21 +53,21 @@ $button-circular-size: px-to-rems(50) !default;
 // We use this mixin to create a default button base style
 //
 
-@mixin button-base($button-font-color: #FFF,
-                   $button-font-family: "Open Sans",
-                   $button-font-weight: 500) {
-  color: $button-font-color;
+@mixin button-base($font-color: $button-font-color,
+                   $font-family: $base-font-family,
+                   $font-weight: $button-font-weight) {
+  @include appearance(none);
+  color: $font-color;
   cursor: pointer;
   display: $button-display;
-  font-family: $button-font-family;
-  font-weight: $button-font-weight;
+  font-family: $font-family;
+  font-weight: $font-weight;
   line-height: normal;
   margin: $button-base-margin;
   outline: none;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  @include appearance(none);
 
   &:hover {
     text-decoration: none;
