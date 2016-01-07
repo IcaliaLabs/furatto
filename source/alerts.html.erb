@@ -1,25 +1,254 @@
-<div class="alert radius shadow">
-  <a href="#" class="close">x</a>
+<div class="row">
+  <div class="container no-padding-right">
+    <h1>Alerts</h1>
+    <p>Provide meaningful feedback messages across the website in response to user actions.</p>
 
-  <strong>Heads up!</strong>
-  This
-  <a href="javascript:void(0)">alert needs your attention</a>
-  , but it's not super important.
+    <br />
+
+    <div class="row">
+      <div class="seven columns">
+        <h4><em>Building the markup</em></h4>
+        <p>Wrap any text and an optional close button and one of the modifier class names. The default alert is a notice message with a light orange as background.</p>
+        <%= code_block do 
+          %q{&lt;div class="alert">
+    &lt;a href="#" class="close">x&lt;/a>
+
+    &lt;strong>Heads up!&lt;/strong>
+    This &lt;a href="javascript:void(0)">alert needs your attention&lt;/a>
+    , but it's not super important.
+  &lt;/div>}
+        end %>
+    </div>
+    <div class="five columns html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <div class="alert">
+            <a href="#" class="close">x</a>
+
+            <strong>Heads up!</strong>
+            This
+            <a href="javascript:void(0)">alert needs your attention</a>
+            , but it's not super important.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="seven columns">
+        <h4><em>Alert styles</em></h4>
+        <p>You can change the .alert element look & feel by appending class modifiers, such as for colors and appeareance.</p>
+
+        <%= code_block do 
+          %q{&lt;div class="alert ">
+   &lt;a href="#" class="close">x&lt;/a>
+
+   &lt;strong>Heads up!&lt;/strong>
+   This &lt;a href="javascript:void(0)">alert needs your attention&lt;/a>
+   , but it's not super important.
+  &lt;/div>}
+        end %>
+      <%= code_block do 
+        %q{&lt;div class="alert success">
+   &lt;a href="#" class="close">x&lt;/a>
+
+   &lt;strong>Heads up!&lt;/strong>
+   This &lt;a href="javascript:void(0)">alert needs your attention&lt;/a>
+   , but it's not super important.
+  &lt;/div>}
+      end %>
+    <%= code_block do 
+      %q{&lt;div class="alert danger">
+   &lt;a href="#" class="close">x&lt;/a>
+
+   &lt;strong>Heads up!&lt;/strong>
+   This &lt;a href="javascript:void(0)">alert needs your attention&lt;/a>
+   , but it's not super important.
+  &lt;/div>}
+    end %>
+  <%= code_block do 
+    %q{&lt;div class="alert shadow radius">
+   &lt;a href="#" class="close">x&lt;/a>
+
+   &lt;strong>Heads up!&lt;/strong>
+   This &lt;a href="javascript:void(0)">alert needs your attention&lt;/a>
+   , but it's not super important.
+  &lt;/div>}
+  end %>
+    </div>
+    <div class="five columns html no-padding border left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <br />
+          <div class="alert ">
+            <a href="#" class="close">x</a>
+
+            <strong>Heads up!</strong>
+            This <a href="javascript:void(0)">alert needs your attention</a>
+            , but it's not super important.
+          </div>
+          <div class="alert success">
+            <a href="#" class="close">x</a>
+
+            <strong>Heads up!</strong>
+            This <a href="javascript:void(0)">alert needs your attention</a>
+            , but it's not super important.
+          </div>
+          <div class="alert danger">
+            <a href="#" class="close">x</a>
+
+            <strong>Heads up!</strong>
+            This <a href="javascript:void(0)">alert needs your attention</a>
+            , but it's not super important.
+          </div>
+          <div class="alert shadow radius">
+            <a href="#" class="close">x</a>
+
+            <strong>Heads up!</strong>
+            This <a href="javascript:void(0)">alert needs your attention</a>
+            , but it's not super important.
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+<div class="row">
+  <h4><em>Powerful mixin</em></h2>
+  <p>We provide a powerful mixin for you to create more alerts, let's say for a warning state. So if you feel like going this way, you can just invoke the mixin like shown below.</p>
+
+  <div class="row">
+    <div class="six columns">
+<pre>
+<code class="language-scss" data-language="scss">
+  .custom-alert {
+    @include alert($background-color: #1abc9c);
+  }
+</code>
+</pre>
+        </div>
+    <div class="six columns">
+  <%= code_block do 
+    %q{&lt;div class="custom-alert">
+    &lt;a href="#" class="close">x&lt;/a>
+
+    &lt;strong>Heads up!&lt;/strong>
+    This &lt;a href="javascript:void(0)">alert needs your attention&lt;/a>
+    , but it's not super important.
+  &lt;/div>}
+  end %>
+    </div>
+  </div>
+
+      <h4><em>Available arguments</em></h4>
+
+      <table class="responsive striped shadow">
+        <thead>
+          <tr>
+            <th>Argument Name</th>
+            <th>Description</th>
+            <th>Default value</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>$background-color</td>
+            <td>Is the background color for the alert to create.</td>
+            <td><span class="label">#3FACE7</span></td>
+          </tr>
+          <tr>
+            <td>$padding</td>
+            <td>The padding to give to the alert.</td>
+            <td><span class="label">15px 40px 15px 15px</span></td>
+          </tr>
+          <tr>
+            <td>$margin-bottom</td>
+            <td>The margin on the bottom for the alert.</td>
+            <td><span class="label">20px</span></td>
+          </tr>
+          <tr>
+            <td>$font-size</td>
+            <td>The font size for the button.</td>
+            <td><span class="label">14px</span></td>
+          </tr>
+          <tr>
+            <td>$font-weight</td>
+            <td>The font weight for the button.</td>
+            <td><span class="label">300</td>
+          </tr>
+          <tr>
+            <td>$links-color</td>
+            <td>The link colors inside alerts</td>
+            <td><span class="label">#FFF</span></td>
+          </tr>
+          <tr>
+            <td>$links-font-weight</td>
+            <td>The link font weight inside alerts</td>
+            <td><span class="label">600</span></td>
+          </tr>
+          <tr>
+            <td>$close-font-size</td>
+            <td>The font size for the close link</td>
+            <td><span class="label">16px</span></td>
+          </tr>
+          <tr>
+            <td>$close-padding</td>
+            <td>The padding for the close link</td>
+            <td><span class="label">5px</span></td>
+          </tr>
+          <tr>
+            <td>$close-hover-opacity</td>
+            <td>The opacity for the close link</td>
+            <td><span class="label">0.5</span></td>
+          </tr>
+          <tr>
+            <td>$include-variations</td>
+            <td>A boolean vaue to whether or not include alert variations</td>
+            <td><span class="label">false</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+<div class="row">
+  <h4><em>Available Sass Variables</em></h4>
+      <p>You can customize the buttons really easy by changing the our Sass variables.</p>
+
+<pre>
+<code class="language-scss" data-language="scss">
+  //General settings
+  $alert-padding: px-to-rems(15) px-to-rems(40) px-to-rems(15) px-to-rems(15) !default;
+  $alert-margin-bottom: px-to-rems(20) !default;
+  $alert-font-size: px-to-rems(14) !default;
+  $alert-font-weight: 300 !default;
+  $alert-default-background: #3FACE7 !default;
+  $alert-text-color: #FFF !default;
+
+  //Close settings
+  $alert-close-font-size: px-to-rems(16) !default;
+  $alert-close-hover-opacity: 0.5 !default;
+  $alert-close-padding: px-to-rems(5) !default;
+  $alert-close-color: $alert-text-color !default;
+  $alert-close-hover-color: #000 !default;
+
+  //Variations
+  $alert-radius: px-to-rems(3) !default;
+  $alert-box-shadow: 2px 3px 6px 0 rgba(167, 167, 167, 0.5) !default;
+
+  //Alert styles
+  $alert-border-width: px-to-rems(1) !default;
+  $alert-border-style: solid !default;
+  $alert-border-color: solid !default;
+
+  //Background variations
+  $alert-success-background: #4CAF50 !default;
+  $alert-danger-background: #F44336 !default;
+</code>
+</pre>
+
+    </div>
 </div>
-
-<div class="alert danger">
-  <a href="#" class="close">x</a>
-
-  <strong>Heads up!</strong>
-  This
-  <a href="javascript:void(0)">alert needs your attention</a>
-  , but it's not super important.
-</div>
-<div class="alert success shadow">
-  <a href="#" class="close">x</a>
-
-  <strong>Heads up!</strong>
-  This
-  <a href="javascript:void(0)" >alert needs your attention</a>
-  , but it's not super important.
+  </div>
 </div>
