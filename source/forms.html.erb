@@ -3,24 +3,98 @@
     <h1>Forms</h1>
     <p>Furatto comes with beautiful and powerful form layouts. Once you combine them with the grid, you can build almost anything.</p>
 
-    <br />
-
-    <div class="row">
+   <div class="row">
       <div class="eight columns">
         <h4><em>Building the markup</em></h4>
-        <p>The markup to create a button is fairly simple and short.</p>
-        <%= code_block do 
-          %q{&lt;a href="#" class="button">Default button&lt;/a>}
-        end %>
-    </div>
-    <div class="four columns html no-padding border top left bottom">
-      <div class="container result">
-        <span>RESULT</span>
-        <div class="wrapper">
-          <a href="#" class="button">Default button</a>
+        <p>Creating forms with Furatto is really easy. We don't want to bother you with many modifier classes on inputs or nesting them into more elements. Rather than include class names on the inputs, we use the type attribute to style them.</p>
+     	</div> 
+    	<div class="eight columns">
+        	<%= code_block do 
+          %q{&lt;label for="name">A label&lt;/label>}
+        	end %>
+        	<%= code_block do 
+          %q{&lt;label for="radio">Choose an option&lt;/label>}
+        	end %>
+        	<%= code_block do 
+          %q{&lt;label for="email_success">Email:&lt;/label>}
+        	end %>
+        	<%= code_block do 
+          %q{&lt;label for="bio">Bio:&lt;/label>}
+        	end %>
         </div>
-      </div>
-    </div>
+		<div class="four columns html no-padding border top left bottom">
+    		<div class="container result" style="height:850px;">
+    		<span>RESULT</span>
+    		<form action="" method="get" accept-charset="utf-8">
+				<label for="name">A label</label>
+   				<input type="text" name="" id="name" value="" placeholder="A text field" >
+   				<br />
+			<select name="" id="">
+      			<option>Select a language</option>
+      			<option>Ruby</option>
+      			<option>Javascript</option>
+      			<option>Objective-C</option>
+    		</select>
+		    <select name="" id="" class="shadow">	
+      			<option>Select a language</option>
+      			<option>Ruby</option>
+      			<option>Javascript</option>
+      			<option>Objective-C</option>
+    		</select>
+    		<label for="radio">Choose an option</label>
+    		<input type="radio" name="radio" id="option1" value="" />
+    		<label for="option1">Option 1</label>
+    		<input type="radio" name="radio" id="option2" value="" />
+    		<label for="option2">Option 2</label>
+    		<input type="radio" name="radio" id="option3" value="" />
+    		<label for="option3">Option 3</label>
+    		<input type="radio" name="radio" id="option4" value="" />
+    		<label for="option4">Option 4</label>
+    		<label for="">Check as many as you want</label>
+    		<input type="checkbox" name="" id="check1" value="" />
+    		<label for="check1">Check two</label>
+    		<input type="checkbox" name="" id="check2" value="" />
+    		<label for="check2">Check one</label>
+    		<label for="textarea">A textarea</label>
+   			<textarea name="" id="textarea" rows="8" cols="40"></textarea>
+			</form>
+		</div>
+	</div>		
+    <div class="row">
+      <div class="eight columns">
+        <h4><em>Input supported states</em></h4>
+        <p>Furatto includes 2 validation states for your inputs, an error state and a success state. The markup is very simple:</p>
+     	</div> 
+    	<div class="eight columns">
+        	<%= code_block do 
+          %q{&lt;label for="email">Email:&lt;/label>}
+        	end %>
+        	<%= code_block do 
+          %q{&lt;input type="text" class="error" name="" id="email" value="" >Error Email:&lt;/input>}
+        	end %>
+        	<%= code_block do 
+          %q{&lt;label for="email_success">Email:&lt;/label>}
+        	end %>
+        	<%= code_block do 
+          %q{&lt;label for="bio">Bio:&lt;/label>}
+        	end %>
+        </div>
+    	<div class="four columns html no-padding border top left bottom">
+    		<div class="container result" style="height:550px;">
+    		<span>RESULT</span>
+        	<form action="" method="get" accept-charset="utf-8">
+				<label for="email">Email:</label>
+				<input type="text" class="error" name="" id="email" value="" />
+				<span class="help-hint error">It is not a well formed email...</span>
+  				<label for="email_success">Email:</label>
+  				<input type="text" class="success" name="" id="email_success" value="" />
+  				<span class="help-hint success">Great on writing your name...</span>
+  				<label for="bio">Bio:</label>
+  				<textarea name="" id="bio" rows="4" cols="40" class="success"></textarea>
+  				<span class="help-hint success">Nice work...</span>
+			</form>	
+    	</div>
+	</div>   
   </div>
 
   <div class="row">
