@@ -1,0 +1,8 @@
+lib-cov
+node_modules
+test/test-coverage.html
+
+.idea
+*.iml
+
+.DS_Store

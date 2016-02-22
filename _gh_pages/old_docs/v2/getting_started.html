@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+<meta charset=utf-8 />
+<title>Furatto :: Getting_started</title>
+<link rel="stylesheet" href="assets/css/normalize.css" />
+<link rel="stylesheet" href="assets/css/furatto.css" />
+<link rel="stylesheet" href="assets/css/font-awesome.css" />
+<link rel="stylesheet" href="assets/css/docs.css" />
+<link rel="shortcut icon" href="assets/img/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<script async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32608013-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body class="">
+
+<div class="panels ">
+  <div class="panel panel-inverse panel-left docs-panel">
+  </div>
+</div>
+
+<div class="panel-content " id="body">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner docs-navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav docs-navbar-menu">
+              <li><a class="brand" href="index.html">Furatto</a></li>
+              <li class="active"><a href="getting_started.html">Getting Started</a></li>
+              <li class=""><a href="docs.html">Docs</a></li>
+              <li class=""><a href="javascript.html">Javascript</a></li>
+              <li class=""><a href="components.html">Components</a></li>
+              <li class=""><a href="examples.html">Examples</a></li>
+              <li class=""><a href="add_ons.html">Add-ons</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="section-jumbo-container">
+      <h1 class="jumbo-header">Getting started</h1> 
+      <p class="motto">A quick tour on Furatto, basic usage, examples and more.</p>
+    </div>
+  </div>
+  
+  <div class="container-center">
+    <div class="row">
+      <div class="col-3">
+        <!-- Navigation sidebar -->
+        <div class="docs-sidebar">
+          <ul class="nav nav-bordered">
+            <li><a href="#getting_started">Getting started</a></li>
+            <li><a href="#whats_included">What's included?</a></li>
+            <li><a href="#basic_setup">Basic setup</a></li>
+            <li><a href="#browser_support">Browser support</a></li>
+            <li><a href="#using_rails">Using rails</a></li>
+            <li><a href="#license">License</a></li>
+          </ul>
+          <a href="assets/furatto.zip" class="btn btn-info btn-block btn-large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V2']);"><i class="icon-download-alt"></i> Download V2</a>
+        </div>
+        <!-- Navigation sidebar -->
+      </div>
+      <!-- Content -->
+      <div class="col-9">
+        <div class="row">
+          <!-- Getting started section -->
+          <div id="getting_started">
+            <h2 class="header">Getting started</h2>
+            <h4 class="light">Whether you are using Scss or CSS, it is really easy to start a project and get things done in a short amount of time.</h4>
+            <p>
+              Furatto is developed in <a href="http://sass-lang.com/" target="_blank">Sass</a>, which is a CSS meta-language that helps you write cleaner and more elegant CSS so that is easier to maintain over time without the headaches of pure CSS. On top of the styling, we've written some Javascript plugins, developed in <a href="http://coffeescript.org/" target="_blank">Coffeescript</a> so that is easier to read and mantain along the way, and which are going to improve user interactions on multiple screen sizes.
+            <hr />
+            <h6><strong>Looking for version 1?</strong></h6>
+            <p>Many changes were made from version 1, but don't worry we still have support for it. You can view the old documentation or download it as a package.</p>
+            <p>
+              <a href="old_docs/assets/furatto.zip" class="btn btn-info" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V1']);"><i class="icon-download-alt"></i>Download</a>
+              <a href="old_docs/index.html" class="btn" target="_blank"><i class="icon-file-text-alt"></i> Documentation</a>
+            </p>
+          </div>
+          <!-- Getting started section -->
+          <hr />
+          <!-- Whats included section -->
+          <div id="whats_included" class="docs-section">
+            <h2 class="header">What's included?</h2>
+            <h4 class="light">Within the download Furatto comes with the following files and directories structure, based on a logical common pattern which makes the acces faster and easier to maintain.</h4>
+            <p>
+              Once you've downloaded and unzip the compressed folder, you should see something like this:
+              <pre data-language="shell"> 
+                <code>
+  furatto/
+  ├── css/
+  │   ├── furatto.css
+  │   ├── font-awesome.css
+  │   ├── docs.css
+  │   ├── examples.css
+  │   ├── normalize.css
+  ├── examples /
+  │   ├── basic_setup.html
+  │   ├── carousel.html
+  │   ├── landing.html
+  │   ├── login.html
+  │   ├── thumbnails.html
+  │   ├── assets /
+  ├── js/
+  │   ├── furatto.js
+  │   ├── furatto.min.js
+  │   ├── furatto-demo.js
+  │   ├── jquery.js
+  │   ├── shell-rainbow.min.js
+  ├── scss /
+  │   ├── docs.scss
+  │   ├── font-awesome.scss
+  │   ├── furatto.scss
+  │   ├── normalize.scss
+  │   ├── furatto /
+  ├── img/
+  │   ├── 1.png
+  │   ├── ...
+  └── fonts/
+      ├── meteocons-webfont.eot
+      ├── meteocons-webfont.svg
+      ├── meteocons-webfont.ttf
+      ├── meteocons-webfont.woff
+      └── fontawesome 
+          ├── fontawesome-webfont.eot
+          ├── fontawesome-webfont.svg
+          ├── fontawesome-webfont.ttf
+          ├── fontawesome-webfont.woff
+          └── FontAwesome.otf
+                </code>
+              </pre>
+            </p>
+            <p>
+              This is the basic structure of Furatto: it contains the compiled versions of css(<span class="code">furatto.*.css</span>) and javascript(<span class="code">furatto.*.js</span>) for a quick drop-in to almost any web project. <a href="http://fortawesome.github.io/Font-Awesome" target="_blank">Fonts Awesome</a> is included by default in the css file.
+            </p>
+            <blockquote class="content-quote">
+              <h4>
+                jQuery based plugins
+              </h4>    
+              <p>Note that all the furatto plugins require jQuery to be included. It is included by default.</p>
+            </blockquote>
+          </div>
+          <!-- Whats included section -->
+          <hr />
+          <!-- Basic setup section -->
+          <div id="basic_setup" class="docs-section">
+            <h2 class="header">Basic Setup</h2>
+            <h4 class="light">Our markup layout is pretty straight forward, and the example below shows a basic HTML template for you to start. We encourage you to go to the <a href="examples.html" target="_blank">Examples</a> section and look at some we provided.</h4>
+             <div class="hidden-xs">
+              <p>
+                You can copy and paste the HTML below to get started:
+              </p>
+              <pre data-language="html">
+              <code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      <title>Furatto</title>
+      &lt;link rel="stylesheet" href="assets/css/normalize.css" /&gt;
+      &lt;link rel="stylesheet" href="assets/css/furatto.min.css" /&gt;
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    &lt;/head&gt;
+    &lt;body&gt;
+      <!-- You better not move this -->
+      &lt;div class="panels"&gt;
+        &lt;div class="panel panel-inverse panel-left"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      <!-- Seriously don't move the code above -->
+      &lt;div class="panel-content"&gt;
+        <!-- All your content goes here -->
+        <h1>Hello Furatto!</h1>
+      &lt;/div&gt;
+      &lt;script src="assets/js/jquery.js"&gt;&lt;/script&gt;
+      &lt;script src="assets/js/furatto.min.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+              </code>
+              </pre>
+             </div>
+            <!-- basic setup headlines -->
+            <div class="row">
+              <div class="col-4">
+                <h5 class="text-error"><strong>Meta Viewport tag</strong></h5>
+                <p>
+                  This is used to make sure smaller devices use the correct width as the viewporth width, as well as it prevents the zoom in/out gesture.
+                </p>
+              </div>
+              <div class="col-4">
+                <h5 class="text-error"><strong>CSS</strong></h5>
+                <p>
+                  We included the <span class="text-success">normalize.css</span> and <span class="text-success">furatto.min.css</span> in the head tag. You can use wheter the minified or full version of the compiled CSS.
+                </p>
+              </div>
+              <div class="col-4">
+                <h5 class="text-error"><strong>Javascript</strong></h5>
+                <p>
+                  The JS is linked up before the closing tag , in order to improve performance, as well as it contains all the necessary plugins and initializers to get up and running.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+               <div class="col-4">
+                <h5 class="text-error"><strong>Absolute positioned</strong></h5>
+                <p>The layout is built using two main absolute elements <span class="code">panels</span> and <span class="code">panel-content</span> in order to
+                provide the left drawer slide effect on small devices.
+                </p>
+               </div>
+               <div class="col-4">
+                <h5 class="text-error"><strong>Plugins</strong></h5>
+                <p>The javascript plugins provided by Furatto use jQuery, so it is necessary for you to include jQuery in your layout. jQuery v2.0.2 is located under the 
+                 <span class="code">assets/js</span> directory.
+                </p>
+               </div>
+               <div class="col-4">
+                <h5 class="text-error"><strong>Assets</strong></h5>
+                <p>An assets directory with the necessary <span class="code">css</span>, <span class="code">js</span>, <span class="code">fonts</span>
+                  and <span class="code">images</span> is included in the <span class="code">furatto.zip</span> file you downloaded.
+                </p>
+               </div>
+            </div>
+            <!-- basic setup headlines -->
+          </div>
+          <!-- Basic setup section -->
+          <hr />
+          <!-- Browser support section -->
+          <div id="browser_support" class="docs-section">
+            <h2 class="header">Browser support</h2>
+            <h4 class="light">Furatto is developed to work best with the latest desktop and mobile browsers, meaning that legacy browsers might not render as nice as you might think, also some jQuery plugins may not work as expected.</h4>  
+            <br />
+            <h5>
+              <strong>Supported browsers</strong></h5>
+            </h5>
+            <ul>
+              <li>Chrome (Mac, Windows, iOS, and Android)</li>
+              <li>Safari (Mac, iOS)</li>
+              <li>FireFox (Mac, Windows, and Android)</li>
+              <li>Internet Explorer (Some issues may present)</li>
+              <li>Opera (Mac, Windows)</li>
+            </ul>
+            <blockquote class="content-quote">
+              <h4>
+                IE caveats
+              </h4>    
+              <p>Some CSS3 properties may not display correctly(border-radius), as well as hardware acceleration CSS transitions.</p>
+            </blockquote>
+          </div>
+          <!-- Browser support section -->
+          <hr />
+          <!-- Using rails section -->
+          <div id="using_rails" class="docs-section">
+            <h2 class="header">Using rails</h2>
+            <h4 class="light">We provide a gem which plays well with any Rails app, you can check it out at <a href="https://github.com/IcaliaLabs/furatto-rails" target="_blank">https://github.com/IcaliaLabs/furatto-rails</a>, it includes all the styling and jQuery plugins for a full integration. A quick tutorial is provided below:</h4>
+            <div class="hidden-xs">
+              <p>1. Add the compass-rails gem to the Gemfile</p>
+              <pre data-language="shell">
+              <code>
+    group :assets do
+      gem 'compass-rails'
+    end 
+              </code>
+              </pre>
+              <p>2. After including the compass-rails gem, you need to add the furatto gem to your application's Gemfile</p>
+              <pre data-language="shell">
+              <code>
+    gem 'compass-rails'
+              </code>
+              </pre>
+              <p>3. Run the bundle command to install it</p>
+              <pre data-language="shell">
+              <code>
+    bundle install
+              </code>
+              </pre>
+              <p>4. Add Furatto to your asset pipeline</p>
+              <span class="code">app/assets/stylesheets/application.css</span>
+              <pre data-language="shell">
+              <code>
+    *= require furatto
+              </code>
+              </pre>
+              <span class="code">app/assets/javascripts/application.js</span>
+              <pre data-language="shell">
+              <code>
+    //= require furatto
+              </code>
+              </pre>
+            </div>
+          </div>
+          <!-- Using rails section -->
+          <hr />
+          <!-- License section -->
+          <div id="license" class="docs-section"> 
+            <h2 class="header">License</h2>
+            <h4 class="light">Furatto is under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2 license</a>. In small words it can be described with the following conditions.</h4>
+            <div class="row">
+              <div class="col-6">
+                <h5><strong>It allows you to:</strong></h5> 
+                <ul>
+                  <li>Free to use and download Furatto, as a whole or in parts, for personal, company or commercial purposes</li>
+                  <li>You can use Furatto in distributions you create.</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <h5><strong>It forbids you to:</strong></h5> 
+                <ul>
+                  <li>Redistribute any piece of Furatto without proper attribution</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5><strong>It requires you to:</strong></h5> 
+                <ul>
+                  <li>Include a copy of the license in any redistribution you may make that includes Furatto.</li>
+                  <li>Provide clear attribution to the authors for any distributions that include Furatto.</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <h5><strong>It does not require you to:</strong></h5> 
+                <ul>
+                  <li>Include a source of Furatto itself, or of any modifications you may perform.</li>
+                  <li>Submit changes that you make to Furatto back to the <a href="http://icalialabs.github.io/furatto/" target="_blank">Furatto</a> project.</li>
+                </ul>
+              </div>
+            </div>
+            <p>The license section style was based on the one on <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>.</p>
+          </div>
+          <!-- License section -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row footer ">
+  <p class="copyright">Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="docs-license">Apache License v2.0</a></p>
+  <ul class="inline">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="assets/furatto.zip" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V2']);">Download</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto-rails">Rails</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto" target="_blank">Github</a></li>
+    <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+  </ul>
+</div>
+
+</div>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/furatto.min.js"></script>
+<script src="assets/js/furatto-demo.js"></script>
+</body>
+</html>

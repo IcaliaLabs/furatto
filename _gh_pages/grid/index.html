@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--includes meta tags, title and more header definitions-->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Furatto, a simple, yet powerful css framework for rapid web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, furatto, front-end, frontend, web development, responsive, mobile-first, mobile">
+<meta name="author" content="Abraham Kuri">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" href="/furatto/assets/img/favicon.png">
+<title>
+  Furatto - Docs::Grid
+</title>
+
+<!-- Furatto core CSS -->
+<link href="/furatto/assets/css/docs.css" rel="stylesheet">
+<link href="/furatto/assets/css/github.css" rel="stylesheet">
+<link href="/furatto/assets/css/font-awesome.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body >
+<div class="off-screen" id="off-screen">
+  <nav class="navigation-bar container">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/furatto/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#"></a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li><a href="/furatto/docs">Docs</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto/issues">Issues</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+   </ul>
+</nav>
+
+
+  <div class="row">
+     <div class="col-2 sidebar hidden-on-xsmall">
+       <h6 class="header">Search for documentation</h6>
+<div class="row">
+  <input type="text" name="" id="search" value="" placeholder="Search for docs: e.g. buttons" />
+  <ul class="navigation searchable">
+    <li class="header">Setup</li>
+    <li><a href="/furatto/docs">Getting Started</a></li>
+    <li><a href="/furatto/whats_included">What's included?</a></li>
+    <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+    <li><a href="/furatto/browser_support">Browser Support</a></li>
+    <li><a href="/furatto/using_rails">Using Rails</a></li>
+    <li><a href="/furatto/examples">Apps Examples</a></li>
+    <li class="divider"></li>
+    <li class="header">Skeleton</li>
+    <li><a href="/furatto/overview">Overview</a></li>
+    <li><a href="/furatto/media_queries">Media queries</a></li>
+    <li><a href="/furatto/grid">Grid</a></li>
+    <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+    <li><a href="/furatto/alignment_utilities">Alignment Utilities</a></li>
+    <li><a href="/furatto/utility_classes">Utility classes</a></li>
+    <li><a href="/furatto/mixins">Mixins</a></li>
+    <li class="divider"></li>
+    <li class="header">Navigation</li>
+    <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/off_screen">Off Screen <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+    <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+    <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/pagination">Pagination</a></li>
+    <li class="divider"></li>
+    <li class="header">Plugins</li>
+    <li><a href="/furatto/suraido">Suraido <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/toolbars">Toolbars <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/modal">Modal <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/tooltips">Tooltips <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Buttons</li>
+    <li><a href="/furatto/buttons">Buttons</a></li>
+    <li><a href="/furatto/group_buttons">Group buttons</a></li>
+    <li class="divider"></li>
+    <li class="header">Content</li>
+    <li><a href="/furatto/typography">Typography</a></li>
+    <li><a href="/furatto/forms">Forms</a></li>
+    <li><a href="/furatto/images">Images</a></li>
+    <li><a href="/furatto/tables">Tables</a></li>
+    <li><a href="/furatto/labels">Labels</a></li>
+    <li><a href="/furatto/alerts">Alerts <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Old docs</li>
+    <li><a href="/furatto/old_docs/v1" target="_blank">Version 1</a></li>
+    <li><a href="/furatto/old_docs/v2" target="_blank">Version 2</a></li>
+    <li class="divider"></li>
+    <li class="header">Get involved</li>
+    <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+    <li class="divider"></li>
+    <li class="header">Looking for a job?</li>
+    <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+    <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+  </ul>
+  <a href="http://icalialabs.github.io/furatto/assets/furatto_3.1.1.zip" class="button block primary large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V3']);">Download Furatto</a>
+</div>
+
+     </div>
+     <div class="col-10">
+       <div class="main-container">
+        <h1>Grid</h1>
+<p class="main-motto">Furatto comes with fully responsive fluid system which scales up to 12 columns. It is generated using predefined classes for more semantic layouts, as well as mixins. Below 767px viewports, the columns become fluid and stack vertically.</p>
+
+<hr />
+
+<h3>A 12 column grid.</h3>
+
+<p>The twelve columns are distributed with a equitable width and margin, for example a <span class="code">.col-1</span> width is close to 8.30%, a <span class="code">.col-2</span> is close to 16.60% and well you get the idea.This way it is very easy to build, let's say a dashboard or the two column layout you are right now. It is important to put the columns on a row div class element.</p>
+
+<pre>
+        <code>
+ &lt;div class=&quot;row&quot;&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/> &lt;/div&gt;<br/> &lt;div class=&quot;row&quot;&gt;<br/>   &lt;div class=&quot;col-2&quot;&gt;col-2&lt;/div&gt;<br/>   &lt;div class=&quot;col-4&quot;&gt;col-4&lt;/div&gt;<br/>   &lt;div class=&quot;col-1&quot;&gt;col-1&lt;/div&gt;<br/>   &lt;div class=&quot;col-3&quot;&gt;col-3&lt;/div&gt;<br/>   &lt;div class=&quot;col-2&quot;&gt;col-2&lt;/div&gt;<br/> &lt;/div&gt;<br/>
+        </code>
+</pre>
+
+<hr />
+
+<h3>Building the markup</h3>
+<p>For a simple three column layout just add the <span class="code html">row</span> class name and add the correct number of <span class="code html">col-*</span> columns. The <span class="code">col-*</span> class name for the columns comes from the 1 to the 12 as is a 12 column grid. This are te default values, you can customize it to support as many columns as you want, keep reading...</p>
+<div class="hidden-xs">
+  <pre>
+              <code>
+ &lt;div class=&quot;row&quot;&gt;<br/>   &lt;div class=&quot;col-4&quot;&gt;...&lt;/div&gt;<br/>   &lt;div class=&quot;col-4&quot;&gt;...&lt;/div&gt;<br/>   &lt;div class=&quot;col-4&quot;&gt;...&lt;/div&gt;<br/> &lt;/div&gt;
+              </code>
+  </pre>
+</div>
+
+<hr />
+<h3>Nesting columns</h3>
+<p>When comes to nesting, Furatto helps you add multiple column div elements. You just have to add a <span class="code html">row</span> class into an existing <span class="code html">col-*</span> column. The nested rows should also match 12 columns, or in case you define more, the nested rows should match that number.</p>
+<div class="nested-grid-demo text-center">
+  <div class="row">
+    <div class="col-9 success">
+      <p class="white">I'm a col-9 class column</p>
+      <div class="row">
+        <div class="col-6 primary white">
+          I'm a col-6 column 
+        </div>
+        <div class="col-6 primary white">
+          I'm a col-6 column 
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-center success">
+      <p class="white">I'm a col-3 class column</p>
+    </div>
+  </div>
+</div>
+<div class="hidden-xs">
+  <pre>
+            <code>
+  &lt;div class=&quot;row&quot;&gt;<br/>    &lt;div class=&quot;col-9&quot;&gt;<br/>      &lt;p&gt;I'm a col-9 class column&lt;/p&gt;<br/>      &lt;div class=&quot;row&quot;&gt;<br/>        &lt;div class=&quot;col-6&quot;&gt;<br/>          I'm a col-6 column <br/>        &lt;/div&gt;<br/>        &lt;div class=&quot;col-6&quot;&gt;<br/>          I'm a col-6 column <br/>        &lt;/div&gt;<br/>      &lt;/div&gt;<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;col-3&quot;&gt;<br/>      &lt;p&gt;I'm a col-3 class column&lt;/p&gt;<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;
+           </code>
+  </pre>
+</div>
+
+<hr />
+<h3>Offset on columns</h3>
+<p>Probably you will want to add some offset the columns of the grid, to put it more to the right, don't worry we have you covered.</p>
+<p>Let us explain this thing works. In a case where want blank space
+between columns, the fair solution was to add some blank columns
+actually, that is not necessary with the offsets though. Offset will add
+a margin to the left according to the 12 column grid Furatto offers.</p>
+<div class="nested-grid-demo text-center">
+  <div class="row">
+    <div class="col-2 offset-2 primary white">
+      I have a two column offset
+    </div>
+    <div class="col-2 offset-3 primary white">
+      I have a three column offset
+    </div>
+  </div>
+</div>
+<div class="hidden-xs">
+  <pre>
+            <code>
+&lt;div class=&quot;nested-grid-demo text-center&quot;&gt;<br/>  &lt;div class=&quot;row&quot;&gt;<br/>    &lt;div class=&quot;col-2 offset-2 primary white&quot;&gt;<br/>      I have a two column offset<br/>    &lt;/div&gt;<br/>    &lt;div class=&quot;col-2 offset-3 primary white&quot;&gt;<br/>      I have a three column offset<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;
+           </code>
+  </pre>
+</div>
+
+<hr />
+<h3>Customize with Sass</h3>
+
+<p>Don't want a 12 column grid?, you can customize the grid behavior fairly easy by modifying a few variables. Furatto will take care of the rest.</p>
+
+<pre data-language="scss">
+  <code>
+  //Grid settings
+  $number-of-columns: 12 !default;
+  $column-separation-factor: 0.1833 !default;
+
+  //Row config
+  $row-text-rendering: optimizespeed !default;
+  $row-next-to-row-separation: 0.14285714rem !default;
+
+  //Columns settings
+  $col-padding: 0.57142857rem !default;
+  $stack-column-separation: 2px !default;
+  </code>  
+</pre>
+
+<hr />
+
+<h3>Column variations</h3>
+
+<p>We know you all want to start building dashboard with the grid, that's why we make it even more easy for you. We provide class names to set the background of your row or column elements.</p>
+
+<div class="row">
+   <div class="col-6 text-center">
+    <div class="row primary">
+       <h5 class="white">rgba(52, 152, 219, 0.8)</h5>
+    </div>  
+    <div class="row danger">
+       <h5 class="white">rgba(231, 76, 60, 0.8)</h5>
+    </div>  
+    <div class="row warning">
+       <h5 class="white">rgba(241, 196, 15, 0.8)</h5>
+    </div>  
+    <div class="row success">
+       <h5 class="white">rgba(46, 204, 113, 0.8)</h5>
+    </div>  
+   </div>
+   <div class="col-6 nopadding">
+     <pre>
+       <code>
+  &lt;div class=&quot;row primary&quot;&gt;<br/>       &lt;h5 class=&quot;white&quot;&gt;Primary color&lt;/h5&gt;<br/>    &lt;/div&gt;  <br/>    &lt;div class=&quot;row danger&quot;&gt;<br/>       &lt;h5 class=&quot;white&quot;&gt;Danger color&lt;/h5&gt;<br/>    &lt;/div&gt;  <br/>    &lt;div class=&quot;row warning&quot;&gt;<br/>       &lt;h5 class=&quot;white&quot;&gt;Warning color&lt;/h5&gt;<br/>    &lt;/div&gt;  <br/>    &lt;div class=&quot;row success&quot;&gt;<br/>       &lt;h5 class=&quot;white&quot;&gt;Success color&lt;/h5&gt;<br/>    &lt;/div&gt;  
+       </code>
+     </pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>How grid is built?</h3>
+
+<p>We use the power of <a href="http://sass-lang.com/" target="_blank">Sass</a> to build the grid and let you customize it to meet your needs. Below is the mixin we use to generate the columns: </p>
+
+<pre>
+  <code>
+//
+//@mixin
+//
+@mixin grid-columns($columns: $number-of-columns) {
+  $column-width: 100 / $columns;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      $current-width: ($column-width * $i) - $column-separation-factor;
+      width: percentage($current-width / 100);
+      margin-left: percentage($column-separation-factor / 100);
+    }
+  }
+}
+  </code>
+</pre>
+
+<em>You could probably use this mixin to generate your own grid, but let's be honest, is that really necessary?</em>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<pre>
+  <code>
+//Grid settings
+$number-of-columns: 12 !default;
+$column-separation-factor: 0.1833 !default;
+
+//Row config
+$row-text-rendering: optimizespeed !default;
+$row-next-to-row-separation: 0.14285714rem !default;
+
+//Columns settings
+$col-padding: 0.57142857rem !default;
+$stack-column-separation: 2px !default;
+
+//Media
+$grid-max-width: 54.85714286rem !default;
+$grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
+
+//Row variations
+$primary-background-color: rgba(52, 152, 219, 0.6) !default;
+$danger-background-color: rgba(231, 76, 60, 0.6) !default;
+$warning-background-color: rgba(241, 196, 15, 0.6) !default;
+$success-background-color: rgba(46, 204, 113, 0.6) !default;
+
+//columns border
+$col-border-color: #FFF !default;
+$col-border-alpha: 0.5 !default; 
+  </code>
+</pre>
+
+       </div>
+     </div>
+  </div>
+
+  <nav class="off-screen-navigation" id="off-screen">
+  <div class="off-screen-level">
+    <div class="off-screen-header">
+      <h3 class="header">Furatto</h3>
+    </div>
+    <ul>
+      <!--level one-->
+      <li>
+        <a href="#">Setup</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Setup</h3>
+          </div>
+          <!--back navigation link-->
+          <a class="navigation-back" href="#">back</a>
+          <!--back navigation link-->
+          <ul>
+            <li><a href="/furatto/docs">Getting Started</a></li>
+            <li><a href="/furatto/whats_included">What's included?</a></li>
+            <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+            <li><a href="/furatto/browser_support">Browser Support</a></li>
+            <li><a href="/furatto/using_rails">Using Rails</a></li>
+            <li><a href="/furatto/examples">Apps Examples</a></li>
+          </ul>
+        </div>
+      </li>      
+      <!--level one-->
+      <li>
+        <a href="#">Skeleton</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Skeleton</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/overview">Overview</a></li>
+            <li><a href="/furatto/media_queries">Media queries</a></li>
+            <li><a href="/furatto/grid">Grid</a></li>
+            <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+            <li><a href="/furatto/utility_classes">Utility classes</a></li>
+            <li><a href="/furatto/mixins">Mixins</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Navigation</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Navigation</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/off_screen">Off Screen <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+            <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+            <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/pagination">Pagination</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Plugins</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Plugins</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/suraido">Suraido <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/toolbars">Toolbars <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/modal">Modal <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/tooltips">Tooltips <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Buttons</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Buttons</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/buttons">Buttons</a></li>
+            <li><a href="/furatto/group_buttons">Group buttons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Content</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Content</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/typography">Typography</a></li>
+            <li><a href="/furatto/forms">Forms</a></li>
+            <li><a href="/furatto/images">Images</a></li>
+            <li><a href="/furatto/tables">Tables</a></li>
+            <li><a href="/furatto/labels">Labels</a></li>
+            <li><a href="/furatto/alerts">Alerts <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Old Docs</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Old Docs</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="http://icalialabs.github.io/furatto/v1">Version 1</a></li>
+            <li><a href="http://icalialabs.github.io/furatto/v2">Version 2</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Get Involved</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Get Involved</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+            <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Looking for a job</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Looking for a job</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+            <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="footer">
+  <p>Handcrafted by <a href="https://twitter.com/icalialabs">@icalialabs</a></p>
+  <p>
+    <a href="#">Furatto 3.0.3</a>
+    &mdash;
+    <span>Created by Abraham Kuri</span>
+    &mdash;
+    <span>Code licensed under MIT License</span>
+  </p>
+  <p class="nomargin">
+    <a href="https://github.com/IcaliaLabs">Github</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v1.0.1" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V1']);">V1</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v2.0.0" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V2']);">V2</a>&mdash;
+    <a href="/furatto/examples">Examples</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/issues?milestone=none&state=open">Issues</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases">Releases</a>&mdash;
+    <a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Join Team']);">Join the team</a>
+  </p>
+</div>
+
+<!--includes javascript at the bottom so the page loads faster-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!--loads analytics-->
+<script async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32608013-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    searchable = $('.searchable li')     
+
+    $('#search').keyup(function(){
+      text = $(this).val().toLowerCase();
+
+      searchable.each(function(){
+        if ($(this).text().search(new RegExp(text, "i")) < 0) {
+          $(this).hide(); 
+          } else {
+            $(this).show(); 
+          }
+      });
+    });
+
+  }); 
+</script>
+</body>
+</html>

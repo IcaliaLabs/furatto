@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--includes meta tags, title and more header definitions-->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Furatto, a simple, yet powerful css framework for rapid web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, furatto, front-end, frontend, web development, responsive, mobile-first, mobile">
+<meta name="author" content="Abraham Kuri">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" href="/furatto/assets/img/favicon.png">
+<title>
+  Furatto - Navigation Bar
+</title>
+
+<!-- Furatto core CSS -->
+<link href="/furatto/assets/css/docs.css" rel="stylesheet">
+<link href="/furatto/assets/css/github.css" rel="stylesheet">
+<link href="/furatto/assets/css/font-awesome.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body >
+<div class="off-screen" id="off-screen">
+  <nav class="navigation-bar container">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/furatto/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#"></a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li><a href="/furatto/docs">Docs</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto/issues">Issues</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+   </ul>
+</nav>
+
+
+  <div class="row">
+     <div class="col-2 sidebar hidden-on-xsmall">
+       <h6 class="header">Search for documentation</h6>
+<div class="row">
+  <input type="text" name="" id="search" value="" placeholder="Search for docs: e.g. buttons" />
+  <ul class="navigation searchable">
+    <li class="header">Setup</li>
+    <li><a href="/furatto/docs">Getting Started</a></li>
+    <li><a href="/furatto/whats_included">What's included?</a></li>
+    <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+    <li><a href="/furatto/browser_support">Browser Support</a></li>
+    <li><a href="/furatto/using_rails">Using Rails</a></li>
+    <li><a href="/furatto/examples">Apps Examples</a></li>
+    <li class="divider"></li>
+    <li class="header">Skeleton</li>
+    <li><a href="/furatto/overview">Overview</a></li>
+    <li><a href="/furatto/media_queries">Media queries</a></li>
+    <li><a href="/furatto/grid">Grid</a></li>
+    <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+    <li><a href="/furatto/alignment_utilities">Alignment Utilities</a></li>
+    <li><a href="/furatto/utility_classes">Utility classes</a></li>
+    <li><a href="/furatto/mixins">Mixins</a></li>
+    <li class="divider"></li>
+    <li class="header">Navigation</li>
+    <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/off_screen">Off Screen <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+    <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+    <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/pagination">Pagination</a></li>
+    <li class="divider"></li>
+    <li class="header">Plugins</li>
+    <li><a href="/furatto/suraido">Suraido <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/toolbars">Toolbars <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/modal">Modal <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/tooltips">Tooltips <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Buttons</li>
+    <li><a href="/furatto/buttons">Buttons</a></li>
+    <li><a href="/furatto/group_buttons">Group buttons</a></li>
+    <li class="divider"></li>
+    <li class="header">Content</li>
+    <li><a href="/furatto/typography">Typography</a></li>
+    <li><a href="/furatto/forms">Forms</a></li>
+    <li><a href="/furatto/images">Images</a></li>
+    <li><a href="/furatto/tables">Tables</a></li>
+    <li><a href="/furatto/labels">Labels</a></li>
+    <li><a href="/furatto/alerts">Alerts <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Old docs</li>
+    <li><a href="/furatto/old_docs/v1" target="_blank">Version 1</a></li>
+    <li><a href="/furatto/old_docs/v2" target="_blank">Version 2</a></li>
+    <li class="divider"></li>
+    <li class="header">Get involved</li>
+    <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+    <li class="divider"></li>
+    <li class="header">Looking for a job?</li>
+    <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+    <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+  </ul>
+  <a href="http://icalialabs.github.io/furatto/assets/furatto_3.1.1.zip" class="button block primary large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V3']);">Download Furatto</a>
+</div>
+
+     </div>
+     <div class="col-10">
+       <div class="main-container">
+        <h1>Navigation Bar</h1>
+<p class="main-motto">Furatto provides a beautiful and extendable top navigation bar. It collapses on mobile views, providing a sliding down kind menu.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+<p>The navigation bar is a bit complex piece of HTML, but full with goodies. It has support for many elements such as buttons, links, and even dropdown menus for you to play around. It is highgly customizable, and we will add more features to it in the near future.</p>
+
+<nav class="navigation-bar">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#">Menu</a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li class="divider"></li>
+     <li><a href="#">Add-ons</a></li>
+     <li class="divider"></li>
+     <li><a href="/docs">Docs</a></li>
+     <li class="divider"></li>
+     <li><a href="#" class="button three-d">Get Started <i class="fa fa-chevron-circle-right"></i></a></li>
+   </ul>
+</nav>
+
+<pre data-language="html">
+   <code>
+&lt;nav class=&quot;navigation-bar&quot;&gt;<br/>   &lt;ul class=&quot;brand-section&quot;&gt;<br/>     &lt;li class=&quot;brand-name&quot;&gt;<br/>      &lt;a href=&quot;/&quot; class=&quot;menu-trigger&quot; id=&quot;trigger&quot;&gt;Furatto&lt;/a&gt;<br/>     &lt;/li&gt;<br/>     &lt;li class=&quot;menu-toggle&quot;&gt;<br/>      &lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;<br/>     &lt;/li&gt;<br/>   &lt;/ul&gt;<br/>   &lt;ul class=&quot;pull-right&quot;&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Add-ons&lt;/a&gt;&lt;/li&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;/docs&quot;&gt;Docs&lt;/a&gt;&lt;/li&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;button three-d&quot;&gt;Get Started &lt;i class=&quot;fa fa-chevron-circle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;<br/>   &lt;/ul&gt;<br/>&lt;/nav&gt;
+   </code>
+</pre>
+
+<hr />
+
+<h3>Navigation bar position</h3>
+
+<p>The navigation bar is build with a <span class="code">nav</span> or <span class="code">ul</span> element. It will cover the full browser width. By default it will stick on the top of the browser, and by just appending the <span class="code">fixed</span> class name to the <span class="code">navigation-bar</span> it follow as you scroll down.</p>
+
+<h5>Fixed navigation</h5>
+
+<p>For fixed top navbar you just need to add a <span class="code">padding-top</span> to the body which should be equal or bigger thant the height of your navigation bar element. The default value of the navigation bar is <span class="code">45px</span>.</p>
+
+<pre data-language="html">
+   <code>
+&lt;nav class="navigation-bar fixed"&gt;
+
+&lt;/nav&gt;
+   </code>
+</pre>
+
+<hr />
+
+<h3>Navigation bar components</h3>
+
+<p>We know adding more than just links to the navigation bar is important, that's why we added support to add different elements on it, such as <span class="code">buttons</span>, <span class="code">dividers</span> and much more...</p>
+
+<nav class="navigation-bar">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#">Menu</a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li class="divider"></li>
+     <li><a href="#">Add-ons</a></li>
+     <li class="divider"></li>
+     <li><a href="/docs">Docs</a></li>
+     <li class="divider"></li>
+     <li><a href="#" class="button three-d">Get Started <i class="fa fa-chevron-circle-right"></i></a></li>
+   </ul>
+</nav>
+<br />
+<div class="row">
+   <div class="col-6">
+    <h5 class="code">Links</h5>  
+    <p>Adding links to the navbar is fairly easy, you just have to wrap them inside a <span class="code">ul</span> element and you're good to go.</p>
+    <pre>
+      <code>
+&lt;nav class=&quot;navigation-bar&quot;&gt;<br/>   &lt;ul class=&quot;pull-right&quot;&gt;<br/>     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Add-ons&lt;/a&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;/docs&quot;&gt;Docs&lt;/a&gt;&lt;/li&gt;<br/>   &lt;/ul&gt;<br/>&lt;/nav&gt;
+      </code>
+    </pre>
+   </div>
+   <div class="col-6">
+    <h5 class="code">Dividers</h5>  
+    <p>To add dividers between links or elements on a <span class="code">ul</span> element, just add a <span class="code">divider</span> to a list element.</p>
+    <pre>
+      <code>
+&lt;nav class=&quot;navigation-bar&quot;&gt;<br/>   &lt;ul class=&quot;pull-right&quot;&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Add-ons&lt;/a&gt;&lt;/li&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;/docs&quot;&gt;Docs&lt;/a&gt;&lt;/li&gt;<br/>   &lt;/ul&gt;<br/>&lt;/nav&gt;
+      </code>
+    </pre>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
+    <h5 class="code">Buttons</h5>  
+    <p>You can add buttons to the navigation bar by just adding the <span class="code">button</span> class name to the anchor element. You can also add the class modifiers that Furatto offers by default.</p>
+    <pre>
+      <code>
+&lt;nav class=&quot;navigation-bar&quot;&gt;<br/>   &lt;ul class=&quot;pull-right&quot;&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Add-ons&lt;/a&gt;&lt;/li&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;/docs&quot;&gt;Docs&lt;/a&gt;&lt;/li&gt;<br/>     &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>     &lt;li&gt;&lt;a href=&quot;/docs&quot; class=&quot;button three-d&quot;&gt;Get Started &lt;i class=&quot;fa fa-chevron-circle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;<br/>   &lt;/ul&gt;<br/>&lt;/nav&gt;
+      </code>
+    </pre>
+   </div>
+   <div class="col-6">
+    <h5 class="code">Search bar</h5>  
+    <p>To add a search bar to the navigation bar, is fairly easy, just
+    add a <span class="code">.with-form</span> class name to a list item
+    and inside it add the form, just as shown below:</p>
+    <pre>
+      <code>
+&lt;ul&gt;<br/>  &lt;li class=&quot;with-form&quot;&gt;<br/>    &lt;form action=&quot;&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;<br/>      &lt;input type=&quot;search&quot; name=&quot;&quot; id=&quot;&quot; value=&quot;&quot; /&gt;<br/>      &lt;input type=&quot;submit&quot; name=&quot;&quot; id=&quot;&quot; value=&quot;Search&quot; class=&quot;button pill&quot; /&gt;<br/>    &lt;/form&gt;<br/>  &lt;/li&gt;<br/>&lt;/ul&gt;
+      </code>
+    </pre>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6">
+    <h5 class="code">Dropdowns</h5>  
+    <p>It is very easy to group menu items into dropdown menus on the navbar. You just need to add the <span class="code">with-dropdown</span> class to a list item, and inside of it add another <span class="code">ul</span> element.</p>
+    <pre>
+      <code>
+&lt;nav class=&quot;navigation-bar&quot;&gt;<br/>   &lt;ul&gt;<br/>    &lt;li class=&quot;with-dropdown&quot;&gt;<br/>      &lt;a href=&quot;#&quot;&gt;Settings &lt;i class=&quot;icon-arrow-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>      &lt;ul class=&quot;dropdown&quot;&gt;<br/>         &lt;li class=&quot;dropdown-header&quot;&gt;A header&lt;/li&gt;<br/>         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Abraham Kuri Vargas&lt;/a&gt;&lt;/li&gt;<br/>         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;A really long text to test the dropdown&lt;/a&gt;&lt;/li&gt;<br/>         &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Edit profile&lt;/a&gt;&lt;/li&gt;<br/>         &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;Edit profile&lt;/a&gt;&lt;/li&gt;<br/>         &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;<br/>         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sign out&lt;/a&gt;&lt;/li&gt;<br/>      &lt;/ul&gt;<br/>    &lt;/li&gt;<br/>   &lt;/ul&gt;<br/>&lt;/nav&gt;
+      </code>
+    </pre>
+   </div>
+</div>
+
+<blockquote>
+  <h4>Extra support</h4>
+  <p>We don't currently support forms on the navbar, or on the dropdowns, but we will, wait for them. For updates follow us at <a href="https://twitter.com/furattoicalia">@furattoicalia</a>.</p>
+</blockquote>
+
+<hr />
+
+<h3>Available sass variables</h3>
+
+<p>It is very common to change the default values for the navigation bar, you can achieve almost everything you want on it by just changing the our sass variables.</p>
+
+<pre data-language="scss">
+   <code>
+//Navigation general settings
+$navigation-bar-height: 45px !default;
+$navigation-bar-background: #191818 !default;
+$navigation-margin-bottom: 10px !default;
+$navigation-bar-color: #FFF !default;
+$navigation-bar-font-weight: 300 !default;
+$navigation-font-size: px-to-rems(13) !default;
+$navigation-fixed-z-index: 1030 !default;
+$navigation-bar-border-bottom: transparent !default;
+
+//Brand section
+$navigation-bar-brand-section-font-size: px-to-rems(18) !default;
+$navigation-bar-brand-section-font-weight: 400 !default;
+
+//Navigation links settings
+$navigation-bar-link-color: #FFF !default;
+$navigation-bar-link-hover-color: #999 !default;
+$navigation-bar-link-hover-decoration: none !default;
+
+//Buttons settings
+$navigation-bar-button-font-size: $navigation-font-size !default;
+$navigation-bar-button-height: 35px !default;
+$navigation-bar-button-margin-left: px-to-rems(8) !default;
+$navigation-bar-button-margin-right: px-to-rems(8) !default;
+$navigation-bar-menu-color: #FFF !default;
+
+//Icons settings
+$navigation-bar-icon-margin-right: 5px !default;
+
+//Text settings
+$navigation-bar-text-color: #CCC !default;
+
+//Active items
+$navigation-bar-active-color: #FFF !default;
+$navigation-bar-active-hover-color: darken($navigation-bar-active-color, 5%) !default;
+
+//Menu toggle
+$navigation-bar-menu-toggle-text-transform: uppercase !default;
+
+//Dropdown
+$navigation-bar-arrow-color: $navigation-bar-link-color !default;
+$navigation-bar-arrow-hover-color: $navigation-bar-link-hover-color !default;
+$navigation-bar-dropdown-z-index: $navigation-fixed-z-index + 10 !default;
+$navigation-bar-dropdown-header-text-transform: uppercase !default;
+$navigation-bar-dropdown-header-padding: px-to-rems(9) px-to-rems(17) px-to-rems(2) !default;
+$navigation-bar-dropdown-header-color: #777 !default;
+$navigation-bar-dropdown-header-font-weight: bold !default;
+$navigation-bar-dropdown-header-font-size: px-to-rems(8) !default;
+$navigation-bar-dropdown-divider-height: px-to-rems(1) !default; 
+$navigation-bar-dropdown-anchor-height: 45px !default;
+$navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
+$navigation-bar-dropdown-right-position: 0px !default;
+
+
+//Media
+$media-collapse-width: 768px !default;
+$navigation-bar-collapse-query: "#{$media-display} and (max-width: #{$media-collapse-width})" !default;
+$navigation-bar-uncollapse-query: "#{$media-display} and (min-width: #{$media-collapse-width})" !default;
+   </code>
+</pre>
+
+<hr />
+
+<h3>Using the javascript</h3>
+
+<blockquote>
+  <h4>Using navigation bar plugin</h4>  
+  <p>Just add the <span class="code">furatto.navigation-bar.js</span> file or the <span class="code">furatto.js</span></p>
+</blockquote>
+
+<p>An example is provided below:</p>
+<pre>
+  <code>
+&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;../dist/js/furatto.min.js&quot;&gt;&lt;/script&gt; 
+  </code>
+</pre>
+
+       </div>
+     </div>
+  </div>
+
+  <nav class="off-screen-navigation" id="off-screen">
+  <div class="off-screen-level">
+    <div class="off-screen-header">
+      <h3 class="header">Furatto</h3>
+    </div>
+    <ul>
+      <!--level one-->
+      <li>
+        <a href="#">Setup</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Setup</h3>
+          </div>
+          <!--back navigation link-->
+          <a class="navigation-back" href="#">back</a>
+          <!--back navigation link-->
+          <ul>
+            <li><a href="/furatto/docs">Getting Started</a></li>
+            <li><a href="/furatto/whats_included">What's included?</a></li>
+            <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+            <li><a href="/furatto/browser_support">Browser Support</a></li>
+            <li><a href="/furatto/using_rails">Using Rails</a></li>
+            <li><a href="/furatto/examples">Apps Examples</a></li>
+          </ul>
+        </div>
+      </li>      
+      <!--level one-->
+      <li>
+        <a href="#">Skeleton</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Skeleton</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/overview">Overview</a></li>
+            <li><a href="/furatto/media_queries">Media queries</a></li>
+            <li><a href="/furatto/grid">Grid</a></li>
+            <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+            <li><a href="/furatto/utility_classes">Utility classes</a></li>
+            <li><a href="/furatto/mixins">Mixins</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Navigation</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Navigation</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/off_screen">Off Screen <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+            <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+            <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/pagination">Pagination</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Plugins</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Plugins</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/suraido">Suraido <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/toolbars">Toolbars <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/modal">Modal <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/tooltips">Tooltips <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Buttons</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Buttons</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/buttons">Buttons</a></li>
+            <li><a href="/furatto/group_buttons">Group buttons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Content</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Content</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/typography">Typography</a></li>
+            <li><a href="/furatto/forms">Forms</a></li>
+            <li><a href="/furatto/images">Images</a></li>
+            <li><a href="/furatto/tables">Tables</a></li>
+            <li><a href="/furatto/labels">Labels</a></li>
+            <li><a href="/furatto/alerts">Alerts <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Old Docs</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Old Docs</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="http://icalialabs.github.io/furatto/v1">Version 1</a></li>
+            <li><a href="http://icalialabs.github.io/furatto/v2">Version 2</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Get Involved</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Get Involved</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+            <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Looking for a job</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Looking for a job</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+            <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="footer">
+  <p>Handcrafted by <a href="https://twitter.com/icalialabs">@icalialabs</a></p>
+  <p>
+    <a href="#">Furatto 3.0.3</a>
+    &mdash;
+    <span>Created by Abraham Kuri</span>
+    &mdash;
+    <span>Code licensed under MIT License</span>
+  </p>
+  <p class="nomargin">
+    <a href="https://github.com/IcaliaLabs">Github</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v1.0.1" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V1']);">V1</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v2.0.0" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V2']);">V2</a>&mdash;
+    <a href="/furatto/examples">Examples</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/issues?milestone=none&state=open">Issues</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases">Releases</a>&mdash;
+    <a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Join Team']);">Join the team</a>
+  </p>
+</div>
+
+<!--includes javascript at the bottom so the page loads faster-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!--loads analytics-->
+<script async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32608013-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    searchable = $('.searchable li')     
+
+    $('#search').keyup(function(){
+      text = $(this).val().toLowerCase();
+
+      searchable.each(function(){
+        if ($(this).text().search(new RegExp(text, "i")) < 0) {
+          $(this).hide(); 
+          } else {
+            $(this).show(); 
+          }
+      });
+    });
+
+  }); 
+</script>
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--includes meta tags, title and more header definitions-->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Furatto, a simple, yet powerful css framework for rapid web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, furatto, front-end, frontend, web development, responsive, mobile-first, mobile">
+<meta name="author" content="Abraham Kuri">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" href="/furatto/assets/img/favicon.png">
+<title>
+  Furatto - Alerts
+</title>
+
+<!-- Furatto core CSS -->
+<link href="/furatto/assets/css/docs.css" rel="stylesheet">
+<link href="/furatto/assets/css/github.css" rel="stylesheet">
+<link href="/furatto/assets/css/font-awesome.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body >
+<div class="off-screen" id="off-screen">
+  <nav class="navigation-bar container">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/furatto/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#"></a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li><a href="/furatto/docs">Docs</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto/issues">Issues</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+   </ul>
+</nav>
+
+
+  <div class="row">
+     <div class="col-2 sidebar hidden-on-xsmall">
+       <h6 class="header">Search for documentation</h6>
+<div class="row">
+  <input type="text" name="" id="search" value="" placeholder="Search for docs: e.g. buttons" />
+  <ul class="navigation searchable">
+    <li class="header">Setup</li>
+    <li><a href="/furatto/docs">Getting Started</a></li>
+    <li><a href="/furatto/whats_included">What's included?</a></li>
+    <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+    <li><a href="/furatto/browser_support">Browser Support</a></li>
+    <li><a href="/furatto/using_rails">Using Rails</a></li>
+    <li><a href="/furatto/examples">Apps Examples</a></li>
+    <li class="divider"></li>
+    <li class="header">Skeleton</li>
+    <li><a href="/furatto/overview">Overview</a></li>
+    <li><a href="/furatto/media_queries">Media queries</a></li>
+    <li><a href="/furatto/grid">Grid</a></li>
+    <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+    <li><a href="/furatto/alignment_utilities">Alignment Utilities</a></li>
+    <li><a href="/furatto/utility_classes">Utility classes</a></li>
+    <li><a href="/furatto/mixins">Mixins</a></li>
+    <li class="divider"></li>
+    <li class="header">Navigation</li>
+    <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/off_screen">Off Screen <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+    <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+    <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/pagination">Pagination</a></li>
+    <li class="divider"></li>
+    <li class="header">Plugins</li>
+    <li><a href="/furatto/suraido">Suraido <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/toolbars">Toolbars <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/modal">Modal <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/tooltips">Tooltips <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Buttons</li>
+    <li><a href="/furatto/buttons">Buttons</a></li>
+    <li><a href="/furatto/group_buttons">Group buttons</a></li>
+    <li class="divider"></li>
+    <li class="header">Content</li>
+    <li><a href="/furatto/typography">Typography</a></li>
+    <li><a href="/furatto/forms">Forms</a></li>
+    <li><a href="/furatto/images">Images</a></li>
+    <li><a href="/furatto/tables">Tables</a></li>
+    <li><a href="/furatto/labels">Labels</a></li>
+    <li><a href="/furatto/alerts">Alerts <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Old docs</li>
+    <li><a href="/furatto/old_docs/v1" target="_blank">Version 1</a></li>
+    <li><a href="/furatto/old_docs/v2" target="_blank">Version 2</a></li>
+    <li class="divider"></li>
+    <li class="header">Get involved</li>
+    <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+    <li class="divider"></li>
+    <li class="header">Looking for a job?</li>
+    <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+    <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+  </ul>
+  <a href="http://icalialabs.github.io/furatto/assets/furatto_3.1.1.zip" class="button block primary large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V3']);">Download Furatto</a>
+</div>
+
+     </div>
+     <div class="col-10">
+       <div class="main-container">
+        <h1>Alerts</h1>
+<p class="main-motto">Provide meaningful feedback messages across the website in response to user actions.</p>
+
+<hr />
+
+<h3>Building the markup</h3>
+
+<p>Wrap any text and an optional close button and one of the modifier class names. The default alert is a notice message with a light orange as background.</p>
+
+<div class="row">
+   <div class="col-6">
+     <div class="alert">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+   </div>
+   <div class="col-6 nopadding">
+    <pre>
+      <code>
+&lt;div class=&quot;alert&quot;&gt;<br/>  &lt;a href=&quot;#&quot; class=&quot;close&quot;&gt;x&lt;/a&gt;<br/>  This is an alert<br/>&lt;/div&gt; 
+      </code>
+    </pre>
+   </div>
+</div>
+
+<hr />
+
+<h3>Alert variations</h3>
+
+<p>You can change the <span class="code">.alert</span> element look & feel by appending class modifiers, such as for colors and appeareance.</p>
+
+<div class="row">
+   <div class="col-6">
+     <div class="alert primary">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+     <div class="alert success round">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+     <div class="alert danger radius">
+       <a href="#" class="close">x</a>
+       This is an alert
+     </div>
+   </div>
+   <div class="col-6 nopadding">
+<pre>
+   <code>
+&lt;div class="alert [primary danger success]"&gt;This is an alert&lt;/div&gt;
+&lt;div class="alert [round radius]"&gt;This is an alert&lt;/div&gt;
+   </code>
+</pre>
+   </div>
+</div>
+
+<h3>Available sass variables</h3>
+
+<p>You can customize the alerts really easy by changing the our Sass variables.</p>
+
+<pre>
+  <code>
+//General settings
+$alert-padding: px-to-rems(9) px-to-rems(40) px-to-rems(9) px-to-rems(16) !default;
+$alert-margin-bottom: px-to-rems(20) !default;
+$alert-font-size: px-to-rems(13) !default;
+$alert-font-weight: normal !default;
+$alert-default-background: #e67e22 !default;
+
+//Close settings
+$alert-close-font-size: px-to-rems(16) !default;
+$alert-close-opacity: 0.3 !default;
+$alert-close-hover-opacity: 0.5 !default;
+$alert-close-padding: px-to-rems(5) !default;
+$alert-close-color: #333 !default;
+
+//Variations
+$alert-radius: px-to-rems(3) !default;
+$alert-round: px-to-rems(1000) !default;
+
+//Alert styles
+$alert-border-width: px-to-rems(1) !default;
+$alert-border-style: solid !default;
+
+//Background variations
+$alert-primary-background: #3498db !default;
+$alert-success-background: #2ecc71 !default;
+$alert-danger-background: #e74c3c !default;
+  </code>
+</pre>
+
+<hr />
+
+<h3>Advance usage</h3>
+
+<p>Don't feel like using the built-in alerts work for you?, don't worry we have included a mixin for you to create your own.</p>
+
+<div class="row mixin">
+  <h4 class="code">@mixin alert</h4>
+  <ul class="params">
+    <li><strong>$background-color</strong> - Is the background color for the alert to create. <strong>Default:</strong> $alert-default-background
+</li>
+    <li><strong>$include-radius</strong> - Wheter or not to add the radius style on the custom alert. <strong>Default:</strong> true
+ </li>
+    <li><strong>$include-round</strong> -  Wheter or not to add the radius/pill style style on the custom alert. <strong>Default:</strong> true
+</li>
+</li>
+  </ul>
+
+  <span class="code">Sass</span>
+  <pre data-language="scss">
+     <code>
+@mixin alert($background-color: $alert-default-background, $include-radius: true, $include-round: true) {
+  @include alert-base;
+  @include alert-style($background-color);
+
+  .close { @include alert-close; }
+  @if $include-radius {
+    &.radius { @include border-radius($alert-radius); }
+  }
+
+  @if $include-round {
+  &.round { @include border-radius($alert-round) }
+  }
+}
+     </code>
+  </pre>
+</div>
+
+<hr />
+
+<h3>Creating your alerts</h3>
+<p>So to create your own alerts simply call the mixin like shown below, and send the variables you want to change to meet your needs.</p>
+
+<div class="row">
+   <div class="col-6">
+    <pre data-language="scss">
+       <code>
+ .my-super-alert {
+    @include alert;
+ } 
+       </code>
+    </pre>  
+   </div>
+   <div class="col-6">
+    <pre data-language="html">
+       <code>
+&lt;div class="my-super-alert"&gt;This is an alert&lt;/div&gt;
+       </code>
+    </pre>  
+   </div>
+</div>
+
+
+<blockquote class="primary">
+  <h4>Further usage...</h4>
+  <p>For a more advance usage for creating alerts, check out the <span class="code">_alerts.scss</span> file.</p>
+</blockquote>
+
+       </div>
+     </div>
+  </div>
+
+  <nav class="off-screen-navigation" id="off-screen">
+  <div class="off-screen-level">
+    <div class="off-screen-header">
+      <h3 class="header">Furatto</h3>
+    </div>
+    <ul>
+      <!--level one-->
+      <li>
+        <a href="#">Setup</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Setup</h3>
+          </div>
+          <!--back navigation link-->
+          <a class="navigation-back" href="#">back</a>
+          <!--back navigation link-->
+          <ul>
+            <li><a href="/furatto/docs">Getting Started</a></li>
+            <li><a href="/furatto/whats_included">What's included?</a></li>
+            <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+            <li><a href="/furatto/browser_support">Browser Support</a></li>
+            <li><a href="/furatto/using_rails">Using Rails</a></li>
+            <li><a href="/furatto/examples">Apps Examples</a></li>
+          </ul>
+        </div>
+      </li>      
+      <!--level one-->
+      <li>
+        <a href="#">Skeleton</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Skeleton</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/overview">Overview</a></li>
+            <li><a href="/furatto/media_queries">Media queries</a></li>
+            <li><a href="/furatto/grid">Grid</a></li>
+            <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+            <li><a href="/furatto/utility_classes">Utility classes</a></li>
+            <li><a href="/furatto/mixins">Mixins</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Navigation</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Navigation</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/off_screen">Off Screen <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+            <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+            <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/pagination">Pagination</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Plugins</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Plugins</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/suraido">Suraido <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/toolbars">Toolbars <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/modal">Modal <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/tooltips">Tooltips <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Buttons</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Buttons</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/buttons">Buttons</a></li>
+            <li><a href="/furatto/group_buttons">Group buttons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Content</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Content</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/typography">Typography</a></li>
+            <li><a href="/furatto/forms">Forms</a></li>
+            <li><a href="/furatto/images">Images</a></li>
+            <li><a href="/furatto/tables">Tables</a></li>
+            <li><a href="/furatto/labels">Labels</a></li>
+            <li><a href="/furatto/alerts">Alerts <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Old Docs</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Old Docs</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="http://icalialabs.github.io/furatto/v1">Version 1</a></li>
+            <li><a href="http://icalialabs.github.io/furatto/v2">Version 2</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Get Involved</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Get Involved</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+            <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Looking for a job</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Looking for a job</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+            <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="footer">
+  <p>Handcrafted by <a href="https://twitter.com/icalialabs">@icalialabs</a></p>
+  <p>
+    <a href="#">Furatto 3.0.3</a>
+    &mdash;
+    <span>Created by Abraham Kuri</span>
+    &mdash;
+    <span>Code licensed under MIT License</span>
+  </p>
+  <p class="nomargin">
+    <a href="https://github.com/IcaliaLabs">Github</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v1.0.1" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V1']);">V1</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v2.0.0" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V2']);">V2</a>&mdash;
+    <a href="/furatto/examples">Examples</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/issues?milestone=none&state=open">Issues</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases">Releases</a>&mdash;
+    <a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Join Team']);">Join the team</a>
+  </p>
+</div>
+
+<!--includes javascript at the bottom so the page loads faster-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!--loads analytics-->
+<script async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32608013-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    searchable = $('.searchable li')     
+
+    $('#search').keyup(function(){
+      text = $(this).val().toLowerCase();
+
+      searchable.each(function(){
+        if ($(this).text().search(new RegExp(text, "i")) < 0) {
+          $(this).hide(); 
+          } else {
+            $(this).show(); 
+          }
+      });
+    });
+
+  }); 
+</script>
+</body>
+</html>

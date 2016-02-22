@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="container">
+    <h1>Forms</h1>
+    <p>Furatto comes with beautiful and powerful form layouts. Once you combine them with the grid, you can build almost anything.</p>
+
+    <br />
+
+    <div class="row">
+      <div class="eight columns">
+        <h4><em>Building the markup</em></h4>
+        <p>The markup to create a button is fairly simple and short.</p>
+        <%= code_block do 
+          %q{&lt;a href="#" class="button">Default button&lt;/a>}
+        end %>
+    </div>
+    <div class="four columns html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <a href="#" class="button">Default button</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="eight columns">
+      <h4><em>Button sizing</em></h4>
+        <p>You can add two different class names to change the button size.</p>
+        <%= code_block do 
+          %q{&lt;a href="#" class="button small">Small button&lt;/a>}
+        end %>
+        <%= code_block do 
+          %q{&lt;a href="#" class="button large">Large button&lt;/a>}
+        end %>
+    </div>
+    <div class="four columns html no-padding border left bottom">
+      <div class="container result" style="height:264px;">
+        <span>RESULT</span>
+        <div class="wrapper">
+          <a href="#" class="button small">Small button</a>
+          <a href="#" class="button large">Large button</a>
+        </div>
+      </div>
+    </div>
+  </div>

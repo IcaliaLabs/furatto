@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--includes meta tags, title and more header definitions-->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Furatto, a simple, yet powerful css framework for rapid web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, furatto, front-end, frontend, web development, responsive, mobile-first, mobile">
+<meta name="author" content="Abraham Kuri">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" href="/furatto/assets/img/favicon.png">
+<title>
+  Furatto - Suraido
+</title>
+
+<!-- Furatto core CSS -->
+<link href="/furatto/assets/css/docs.css" rel="stylesheet">
+<link href="/furatto/assets/css/github.css" rel="stylesheet">
+<link href="/furatto/assets/css/font-awesome.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body >
+<div class="off-screen" id="off-screen">
+  <nav class="navigation-bar container">
+   <ul class="brand-section">
+     <li class="brand-name">
+      <a href="/furatto/" class="menu-trigger" id="trigger">Furatto</a>
+     </li>
+     <li class="menu-toggle">
+      <a href="#"></a>
+     </li>
+   </ul>
+   <ul class="pull-right">
+     <li><a href="/furatto/docs">Docs</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto/issues">Issues</a></li>
+     <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+   </ul>
+</nav>
+
+
+  <div class="row">
+     <div class="col-2 sidebar hidden-on-xsmall">
+       <h6 class="header">Search for documentation</h6>
+<div class="row">
+  <input type="text" name="" id="search" value="" placeholder="Search for docs: e.g. buttons" />
+  <ul class="navigation searchable">
+    <li class="header">Setup</li>
+    <li><a href="/furatto/docs">Getting Started</a></li>
+    <li><a href="/furatto/whats_included">What's included?</a></li>
+    <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+    <li><a href="/furatto/browser_support">Browser Support</a></li>
+    <li><a href="/furatto/using_rails">Using Rails</a></li>
+    <li><a href="/furatto/examples">Apps Examples</a></li>
+    <li class="divider"></li>
+    <li class="header">Skeleton</li>
+    <li><a href="/furatto/overview">Overview</a></li>
+    <li><a href="/furatto/media_queries">Media queries</a></li>
+    <li><a href="/furatto/grid">Grid</a></li>
+    <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+    <li><a href="/furatto/alignment_utilities">Alignment Utilities</a></li>
+    <li><a href="/furatto/utility_classes">Utility classes</a></li>
+    <li><a href="/furatto/mixins">Mixins</a></li>
+    <li class="divider"></li>
+    <li class="header">Navigation</li>
+    <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/off_screen">Off Screen <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+    <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+    <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/pagination">Pagination</a></li>
+    <li class="divider"></li>
+    <li class="header">Plugins</li>
+    <li><a href="/furatto/suraido">Suraido <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/toolbars">Toolbars <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/modal">Modal <span class="label round">JS</span></a></li>
+    <li><a href="/furatto/tooltips">Tooltips <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Buttons</li>
+    <li><a href="/furatto/buttons">Buttons</a></li>
+    <li><a href="/furatto/group_buttons">Group buttons</a></li>
+    <li class="divider"></li>
+    <li class="header">Content</li>
+    <li><a href="/furatto/typography">Typography</a></li>
+    <li><a href="/furatto/forms">Forms</a></li>
+    <li><a href="/furatto/images">Images</a></li>
+    <li><a href="/furatto/tables">Tables</a></li>
+    <li><a href="/furatto/labels">Labels</a></li>
+    <li><a href="/furatto/alerts">Alerts <span class="label round">JS</span></a></li>
+    <li class="divider"></li>
+    <li class="header">Old docs</li>
+    <li><a href="/furatto/old_docs/v1" target="_blank">Version 1</a></li>
+    <li><a href="/furatto/old_docs/v2" target="_blank">Version 2</a></li>
+    <li class="divider"></li>
+    <li class="header">Get involved</li>
+    <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+    <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+    <li class="divider"></li>
+    <li class="header">Looking for a job?</li>
+    <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+    <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+  </ul>
+  <a href="http://icalialabs.github.io/furatto/assets/furatto_3.1.1.zip" class="button block primary large" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Download', 'Download V3']);">Download Furatto</a>
+</div>
+
+     </div>
+     <div class="col-10">
+       <div class="main-container">
+        <h1>Suraido</h1>
+<p class="main-motto">Suraido is a simple, yet powerful touch-enabled slider for small devices.</p>
+
+<hr />
+
+<div class="row">
+  <div class="suraido-container" data-suraido>
+    <ul>
+      <li style="background:url(/furatto/assets/img/1.jpg)">
+      <div class="caption">
+        <p>Posasda Villa de la Aldea, San Miguel de Allende, México.</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/2.jpg)">
+      <div class="caption">
+        <p>San Miguel de Allende Nightlife</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/3.jpg)">
+      <div class="caption">
+        <p>La Plaza Principal, San Miguel de Allende.</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/4.jpg)">
+      <div class="caption">
+        <p>San Miguel de Allende Cathedral.</p>
+      </div>
+      </li>
+      <li style="background:url(/furatto/assets/img/5.jpg)">
+      <div class="caption">
+        <p>Rosewood Hotel, San Miguel de Allende.</p>
+      </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<hr />
+
+<h3>Setup Suraido</h3>
+
+<p>The HTML setup is pretty straightforward and Suraido takes all the hard work for you. You just need a <span class="code">div</span> container with a <span class="code">suraido</span> data attribute. You can easily add images, captions and pagination. Here is the markup for you to try.</p>
+
+<div class="row">
+   <pre>
+     <code>
+  &lt;div class=&quot;suraido-container&quot; data-suraido&gt;<br/>    &lt;ul&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/1.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;Posasda Villa de la Aldea, San Miguel de Allende, M&eacute;xico.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/2.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;San Miguel de Allende Nightlife&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/3.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;La Plaza Principal, San Miguel de Allende.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/4.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;San Miguel de Allende Cathedral.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>      &lt;li style=&quot;background:url(/assets/img/5.jpg)&quot;&gt;<br/>      &lt;div class=&quot;caption&quot;&gt;<br/>        &lt;p&gt;Rosewood Hotel, San Miguel de Allende.&lt;/p&gt;<br/>      &lt;/div&gt;<br/>      &lt;/li&gt;<br/>    &lt;/ul&gt;<br/>  &lt;/div&gt;
+     </code>
+   </pre>
+</div>
+
+<div class="row">
+  <span class="code">Javascript</span>
+  <p>In case you are wondering how would you make a call to suraido via Javascript.</p>
+   <pre>
+     <code>
+ &lt;script&gt;<br/><br/>  $('.suraido-container').suraido({<br/>    &quot;fluid&quot;: true,<br/>    &quot;enableKeys&quot;: true,<br/>    &quot;enableDots&quot;: true,<br/>    &quot;enableArrows&quot;: true,<br/>    &quot;autoplay&quot;: false <br/>  })<br/> &lt;/script&gt;
+     </code>
+   </pre>
+</div>
+
+<hr />
+
+<h3>Plugin usage</h3>
+
+<p>We don't currently provide customization through data attributes, we will in the near future, don't worry. In the mean time we provide the options you can send via javascript with its values.</p>
+
+<h4>Usage</h4>
+<p>You can invoke suraido via <span class="code">javascript</span> with many options.</p>
+
+<table class="responsive bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>speed</td>
+      <td>integer</td>
+      <td>500</td>
+      <td>The speed at which the images transition takes, this means 500 miliseconds.</td>
+    </tr>
+    <tr>
+      <td>delay</td>
+      <td>integer</td>
+      <td>3000</td>
+      <td>The time it takes from one slide to past to the next, this applies when <strong>autoplay</strong> is enabled.</td>
+    </tr>
+    <tr>
+      <td>loop</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Loops through all of the suraido sliding elements.</td>
+    </tr>
+    <tr>
+      <td>enableKeys</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Enable keys to move between the slider elements.</td>
+    </tr>
+    <tr>
+      <td>enableDots</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Enables pagination for the slider.</td>
+    </tr>
+    <tr>
+      <td>enableArrows</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Enable arows for navigation.</td>
+    </tr>
+    <tr>
+      <td>prev</td>
+      <td>string</td>
+      <td>«</td>
+      <td>The arrows to display on the slider previous control.</td>
+    </tr>
+    <tr>
+      <td>next</td>
+      <td>string</td>
+      <td>»</td>
+      <td>The arrows to display on the slider next control.</td>
+    </tr>
+    <tr>
+      <td>autoplay</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Autplays the slider as a the document loads.</td>
+    </tr>
+    <tr>
+      <td>paginationClass</td>
+      <td>string</td>
+      <td>pagination</td>
+      <td>The class for the pagination in the slider. Use for further customization.</td>
+    </tr>
+    <tr>
+      <td>paginationItemClass</td>
+      <td>string</td>
+      <td>dot</td>
+      <td>The class name for each element on the pagination.</td>
+    </tr>
+    <tr>
+      <td>arrowsClass</td>
+      <td>string</td>
+      <td>arrows</td>
+      <td>The arrows class name wrapper.</td>
+    </tr>
+    <tr>
+      <td>arrowClass</td>
+      <td>string</td>
+      <td>arrow</td>
+      <td>The class name for the arrows on the arrows wrapper.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3>Creating your slider</h3>
+<p>We provide some useful mixins for you to creare your own slider with minimal customization, just a sip of javascript and a bit of css.</p>
+
+<div class="row">
+  <div class="col-6">
+    <pre>
+      <code>
+.custom-slider {
+  @include slider-base;
+
+  .caption {
+    @include slider-caption;
+  }
+
+  .pages {
+    @include slider-pagination;
+
+    .page {
+      @include slider-pagination-dot;
+    }
+  }
+
+  .nav {
+    @include slider-arrows;
+
+    .nav-item {
+      @include slider-arrow;
+    }
+  }
+}
+      </code>
+    </pre>
+  </div>
+  <div class="col-6">
+     <pre>
+       <code>
+  &lt;script&gt;<br/>    $('.custom-slider').suraido({<br/>      paginationClass: 'pages',<br/>      paginationItemClass: 'page',<br/>      arrowsClass: 'nav',<br/>      arrowClass: 'nav-item'<br/>    });<br/>  &lt;/script&gt;
+       </code>
+     </pre>
+  </div>
+</div>
+<blockquote class="primary">
+  <h4>Extending your sliders</h4>
+  <p>Is fairly easy to create your own sliders, simply by including the <a href="https://github.com/IcaliaLabs/furatto/blob/master/scss/furatto/_suraido.scss">mixins</a> and set the correct configuration on the JS plugin. For a more advance customization, check the <a href="https://github.com/IcaliaLabs/furatto/blob/master/scss/furatto/_suraido.scss">sass source file</a>.</p>
+</blockquote>
+
+<hr />
+
+<h3>Availabale sass variables</h3>
+
+<p>You can customize the default suraido variables to meet your needs.</p>
+
+<pre>
+  <code>
+//General
+$suraido-slider-min-height: 330px !default;
+
+$suraido-item-min-height: 25rem !default;
+
+//Pagination
+$suraido-pagination-position: 0 !default;
+$suraido-list-width: 300% !default;
+$suraido-list-item-width: 33% !default;
+$suraido-pagination-z-index: 20 !default;
+
+//Dots
+$suraido-dot-size: 0.71428571rem !default;
+$suraido-dot-separation: 0.28571429rem !default;
+$suraido-dot-border-width: 0.14285714rem !default;
+$suraido-dot-border-style: solid !default;
+$suraido-dot-border-color: #CCC !default;
+$suraido-dot-radius: 0.42857143rem !default;
+$suraido-dot-opacity: 0.4 !default;
+$suraido-include-dot-transition: true !default;
+$suraido-dot-transition: background 0.5s, opacity 0.5s !default;
+$suraido-dot-active-background-color: #444 !default;
+$suraido-dot-active-opacity: 1 !default;
+$suraido-dot-background: #CCC;
+
+//Arrows
+$suraido-arrows-color: #FFF !default;
+$suraido-arrows-z-index: $suraido-pagination-z-index - 10 !default;
+$suraido-arrow-height: 60px !default;
+$suraido-arrow-line-height: $suraido-arrow-height !default;
+$suraido-next-arrow-padding: 15px !default;
+$suraido-prev-arrow-padding: 15px !default;
+
+//Caption
+$suraido-caption-font-size: 14px !default;
+$suraido-caption-bottom-position: 30px !default;
+$suraido-caption-height: 50px !default;
+$suraido-caption-color: #FFF !default;
+$suraido-caption-font-weight: lighter !default;
+$suraido-caption-padding-top: 10px !default;
+$suraido-caption-padding-left: 10px !default;
+$suraido-caption-background: #000 !default;
+$suraido-caption-background-alpha: 0.5 !default;
+  </code>
+</pre>
+
+       </div>
+     </div>
+  </div>
+
+  <nav class="off-screen-navigation" id="off-screen">
+  <div class="off-screen-level">
+    <div class="off-screen-header">
+      <h3 class="header">Furatto</h3>
+    </div>
+    <ul>
+      <!--level one-->
+      <li>
+        <a href="#">Setup</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Setup</h3>
+          </div>
+          <!--back navigation link-->
+          <a class="navigation-back" href="#">back</a>
+          <!--back navigation link-->
+          <ul>
+            <li><a href="/furatto/docs">Getting Started</a></li>
+            <li><a href="/furatto/whats_included">What's included?</a></li>
+            <li><a href="/furatto/basic_setup">Basic Setup</a></li>
+            <li><a href="/furatto/browser_support">Browser Support</a></li>
+            <li><a href="/furatto/using_rails">Using Rails</a></li>
+            <li><a href="/furatto/examples">Apps Examples</a></li>
+          </ul>
+        </div>
+      </li>      
+      <!--level one-->
+      <li>
+        <a href="#">Skeleton</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Skeleton</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/overview">Overview</a></li>
+            <li><a href="/furatto/media_queries">Media queries</a></li>
+            <li><a href="/furatto/grid">Grid</a></li>
+            <li><a href="/furatto/responsive_utilities">Responsive Utilities</a></li>
+            <li><a href="/furatto/utility_classes">Utility classes</a></li>
+            <li><a href="/furatto/mixins">Mixins</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Navigation</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Navigation</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/navigation_bar">Navigation bar <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/off_screen">Off Screen <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/side_navigation">Side Navigation</a></li>
+            <li><a href="/furatto/inline_navigation">Inline Navigation</a></li>
+            <li><a href="/furatto/tab_navigation">Tab Navigation <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/pagination">Pagination</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Plugins</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Plugins</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/suraido">Suraido <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/toolbars">Toolbars <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/modal">Modal <span class="label round warning">JS</span></a></li>
+            <li><a href="/furatto/tooltips">Tooltips <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Buttons</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Buttons</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/buttons">Buttons</a></li>
+            <li><a href="/furatto/group_buttons">Group buttons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Content</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Content</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="/furatto/typography">Typography</a></li>
+            <li><a href="/furatto/forms">Forms</a></li>
+            <li><a href="/furatto/images">Images</a></li>
+            <li><a href="/furatto/tables">Tables</a></li>
+            <li><a href="/furatto/labels">Labels</a></li>
+            <li><a href="/furatto/alerts">Alerts <span class="label round warning">JS</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Old Docs</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Old Docs</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="http://icalialabs.github.io/furatto/v1">Version 1</a></li>
+            <li><a href="http://icalialabs.github.io/furatto/v2">Version 2</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Get Involved</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Get Involved</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="https://github.com/IcaliaLabs/furatto/blob/master/CHANGELOG.md">Changelog</a></li>
+            <li><a href="https://github.com/IcaliaLabs/furatto">Github</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Looking for a job</a>
+        <div class="off-screen-level">
+          <div class="off-screen-header">
+            <h3 class="header">Looking for a job</h3>
+          </div>
+          <a class="navigation-back" href="#">back</a>
+          <ul>
+            <li><a href="mailto:weare@icalialabs.com">Email us</a></li>
+            <li><a href="https://twitter.com/icalialabs">Shout us at tweet</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <div class="footer">
+  <p>Handcrafted by <a href="https://twitter.com/icalialabs">@icalialabs</a></p>
+  <p>
+    <a href="#">Furatto 3.0.3</a>
+    &mdash;
+    <span>Created by Abraham Kuri</span>
+    &mdash;
+    <span>Code licensed under MIT License</span>
+  </p>
+  <p class="nomargin">
+    <a href="https://github.com/IcaliaLabs">Github</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v1.0.1" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V1']);">V1</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases/tag/v2.0.0" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Version', 'V2']);">V2</a>&mdash;
+    <a href="/furatto/examples">Examples</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/issues?milestone=none&state=open">Issues</a>&mdash;
+    <a href="https://github.com/IcaliaLabs/furatto/releases">Releases</a>&mdash;
+    <a href="mailto:weare@icalialabs.com" onclick="_gaq.push(['_trackEvent', 'Furatto Actions', 'Footer', 'Join Team']);">Join the team</a>
+  </p>
+</div>
+
+<!--includes javascript at the bottom so the page loads faster-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/furatto/assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!--loads analytics-->
+<script async="" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32608013-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    searchable = $('.searchable li')     
+
+    $('#search').keyup(function(){
+      text = $(this).val().toLowerCase();
+
+      searchable.each(function(){
+        if ($(this).text().search(new RegExp(text, "i")) < 0) {
+          $(this).hide(); 
+          } else {
+            $(this).show(); 
+          }
+      });
+    });
+
+  }); 
+</script>
+</body>
+</html>
