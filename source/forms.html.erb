@@ -2,16 +2,23 @@
   <div class="container">
     <h1>Forms</h1>
     <p>Furatto comes with beautiful and powerful form layouts. Once you combine them with the grid, you can build almost anything.</p>
-
+	<br>
    <div class="row">
       <div class="eight columns">
         <h4><em>Building the markup</em></h4>
-        <p>Creating forms with Furatto is really easy. We don't want to bother you with many modifier classes on inputs or nesting them into more elements. Rather than include class names on the inputs, we use the type attribute to style them.</p>
-     	</div> 
-    	<div class="eight columns">
+        <p>Creating forms with Furatto is really easy. We don't want to bother you with many modifier classes on inputs or nesting them into more elements. Rather than include class names on the inputs, we use the type attribute to style them.</p> 
+    	<div class="code-block">
         	<%= code_block do 
           %q{&lt;label for="name">A label&lt;/label>}
         	end %>
+        	<%= code_block do 
+          %q{&lt;input type="text" name="" id="name" value="" placeholder="A text field">A text field}
+        	end %>
+        	<pre class="language-markup" data-language="Markup">	
+        	<%= code_block do 
+          %q{&lt;select name="" id="">A text field&lt;/select>}
+        	end %>
+        	</pre>
         	<%= code_block do 
           %q{&lt;label for="radio">Choose an option&lt;/label>}
         	end %>
@@ -22,9 +29,10 @@
           %q{&lt;label for="bio">Bio:&lt;/label>}
         	end %>
         </div>
-		<div class="four columns html no-padding border top left bottom">
-    		<div class="container result" style="height:850px;">
-    		<span>RESULT</span>
+      </div>  
+   		<div class="four columns html no-padding border top left bottom">
+    	<div class="container result" style="height:850px;">
+    	<span>RESULT</span>
     		<form action="" method="get" accept-charset="utf-8">
 				<label for="name">A label</label>
    				<input type="text" name="" id="name" value="" placeholder="A text field" >
@@ -59,13 +67,49 @@
    			<textarea name="" id="textarea" rows="8" cols="40"></textarea>
 			</form>
 		</div>
-	</div>		
+	</div>	
+	</div>
+	<div class="row">
+    <div class="eight columns">
+      <h4><em>Input Sizes</em></h4>
+        <p>We provide class names to size up your inputs very easy, the smallest size, which is mini starts at 20% width, and increases at a 20% range. So 4 sizes mate, mini, small, medium, large.</p>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".mini - 20% width" class="mini">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".small - 40% width" class="small">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".medium - 60% width" class="medium">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".large - 80% width" class="large">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".block - 100% width" class="block">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".medium - 60% width" class="small" disabled="">}
+        end %>
+    </div>
+    <div class="four columns html no-padding border left bottom">
+      <div class="container result" style="height:600px;">
+        <span>RESULT</span>
+        <div class="wrapper">
+        	<input type="text" placeholder=".mini - 20% width" class="mini"/>
+			<input type="text" placeholder=".small - 40% width" class="small"/>
+			<input type="text" placeholder=".medium - 60% width" class="medium" />
+			<input type="text" placeholder=".large - 80% width" class="large"/>
+			<input type="text" placeholder=".block - 100% width" class="block" />
+			<input type="text" placeholder=".medium - 60% width" class="small" disabled="" />
+        </div>
+      </div>
+    </div>	
     <div class="row">
       <div class="eight columns">
         <h4><em>Input supported states</em></h4>
         <p>Furatto includes 2 validation states for your inputs, an error state and a success state. The markup is very simple:</p>
-     	</div> 
-    	<div class="eight columns">
+    	<div class="code-block">
         	<%= code_block do 
           %q{&lt;label for="email">Email:&lt;/label>}
         	end %>
@@ -79,8 +123,9 @@
           %q{&lt;label for="bio">Bio:&lt;/label>}
         	end %>
         </div>
-    	<div class="four columns html no-padding border top left bottom">
-    		<div class="container result" style="height:550px;">
+      </div>  
+      <div class="four columns html no-padding border top left bottom">
+    	<div class="container result" style="height:550px;">
     		<span>RESULT</span>
         	<form action="" method="get" accept-charset="utf-8">
 				<label for="email">Email:</label>
@@ -94,27 +139,50 @@
   				<span class="help-hint success">Nice work...</span>
 			</form>	
     	</div>
-	</div>   
-  </div>
-
-  <div class="row">
+	</div> 
+	<div class="row">
     <div class="eight columns">
-      <h4><em>Button sizing</em></h4>
-        <p>You can add two different class names to change the button size.</p>
+      <h4><em> Experimental</em></h4>
+        <p>We keep n the experiments all around Furatto, that's why we build really simple input add-ons solved by flex. It might not work well on IE.
+        This experimental feature builds add on inputs with minimal HTML and Css. Keep in mind that this is edge features and not all browsers will fully support it.</p>
         <%= code_block do 
-          %q{&lt;a href="#" class="button small">Small button&lt;/a>}
+          %q{&lt;input type="text" placeholder=".mini - 20% width" class="mini">}
         end %>
         <%= code_block do 
-          %q{&lt;a href="#" class="button large">Large button&lt;/a>}
+          %q{&lt;input type="text" placeholder=".small - 40% width" class="small">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".medium - 60% width" class="medium">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".large - 80% width" class="large">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".block - 100% width" class="block">}
+        end %>
+        <%= code_block do 
+          %q{&lt;input type="text" placeholder=".medium - 60% width" class="small" disabled="">}
         end %>
     </div>
     <div class="four columns html no-padding border left bottom">
-      <div class="container result" style="height:264px;">
+      <div class="container result" style="height:600px;">
         <span>RESULT</span>
-        <div class="wrapper">
-          <a href="#" class="button small">Small button</a>
-          <a href="#" class="button large">Large button</a>
-        </div>
+        
+        	<div class="input-addon">
+   				<a class="addon warning">$</a>
+   				<input class="addon-field" type="text">
+			</div>
+			<div class="input-addon">
+   				<input class="addon-field" type="text">
+   				<a class="addon warning">$</a>
+			</div>
+			<div class="input-addon">
+   				<span class="addon danger">Amount</span>
+   				<input class="addon-field" type="text">
+   				<span class="addon danger">Amount</span>
+			</div>        
+      
       </div>
-    </div>
+    </div>	  
+  </div>
   </div>
