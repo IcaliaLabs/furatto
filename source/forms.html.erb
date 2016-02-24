@@ -9,24 +9,51 @@
         <p>Creating forms with Furatto is really easy. We don't want to bother you with many modifier classes on inputs or nesting them into more elements. Rather than include class names on the inputs, we use the type attribute to style them.</p> 
     	<div class="code-block">
         	<%= code_block do 
-          %q{&lt;label for="name">A label&lt;/label>}
+         %q{&lt;form action="" method="get" accept-charset="utf-8">		
+     &lt;label for="name">A label&lt;/label>}
         	end %>
         	<%= code_block do 
           %q{&lt;input type="text" name="" id="name" value="" placeholder="A text field">A text field}
-        	end %>
-        	<pre class="language-markup" data-language="Markup">	
+        	end %>	
         	<%= code_block do 
-          %q{&lt;select name="" id="">A text field&lt;/select>}
-        	end %>
-        	</pre>
+          	%q{&lt;select name="" id="">
+    &lt;option>Select a language&lt;/option>
+	&lt;option>Ruby&lt;/option>
+	&lt;option>Javascript&lt;/option>
+	&lt;option>Objective-C&lt;/option>
+  &lt;/select>}
+        	end 
+        	%>
         	<%= code_block do 
-          %q{&lt;label for="radio">Choose an option&lt;/label>}
+          	%q{&lt;select name="" id="" class="shadow">
+    &lt;option>Select a language&lt;/option>
+	&lt;option>Ruby&lt;/option>
+	&lt;option>Javascript&lt;/option>
+	&lt;option>Objective-C&lt;/option>
+ &lt;/select>}
+        	end 
+        	%>
+        	<%= code_block do 
+          %q{&lt;label for="radio">Choose an option&lt;/label>
+     &lt;input type="radio" name="radio" id="option1" value="">
+     &lt;label for="option1">Option 1&lt;/label>
+     &lt;input type="radio" name="radio" id="option2" value="">
+     &lt;label for="option2">Option 2&lt;/label>
+     &lt;input type="radio" name="radio" id="option3" value="">
+     &lt;label for="option3">Option 3&lt;/label>
+     &lt;input type="radio" name="radio" id="option4" value="">
+     &lt;label for="option4">Option 4&lt;/label>}
         	end %>
         	<%= code_block do 
-          %q{&lt;label for="email_success">Email:&lt;/label>}
+        %q{&lt;label for="">Check as many as you want&lt;/label>
+    &lt;input type="checkbox" name="" id="check1" value="">
+   	&lt;label for="check1">Check 1&lt;/label>
+   	&lt;input type="checkbox" name="" id="check2" value="">
+   	&lt;label for="check2">Check 2&lt;/label>}
         	end %>
         	<%= code_block do 
-          %q{&lt;label for="bio">Bio:&lt;/label>}
+          %q{&lt;textarea name="" id="textarea" rows="8" cols="40">&lt;/textarea>
+   &lt;/form>}
         	end %>
         </div>
       </div>  
@@ -60,9 +87,9 @@
     		<label for="option4">Option 4</label>
     		<label for="">Check as many as you want</label>
     		<input type="checkbox" name="" id="check1" value="" />
-    		<label for="check1">Check two</label>
+    		<label for="check1">Check one</label>
     		<input type="checkbox" name="" id="check2" value="" />
-    		<label for="check2">Check one</label>
+    		<label for="check2">Check two</label>
     		<label for="textarea">A textarea</label>
    			<textarea name="" id="textarea" rows="8" cols="40"></textarea>
 			</form>
@@ -146,13 +173,23 @@
         <p>We keep n the experiments all around Furatto, that's why we build really simple input add-ons solved by flex. It might not work well on IE.
         This experimental feature builds add on inputs with minimal HTML and Css. Keep in mind that this is edge features and not all browsers will fully support it.</p>
         <%= code_block do 
-          %q{&lt;input type="text" placeholder=".mini - 20% width" class="mini">}
+        %q{&lt;div class="input-addon">
+    &lt;a href="#" class="addon warning">$&lt;/a>
+    &lt;input class="addon-field" type="text">
+  &lt;/div>}
         end %>
         <%= code_block do 
-          %q{&lt;input type="text" placeholder=".small - 40% width" class="small">}
+          %q{&lt;div class="input-addon">
+    &lt;input class="addon-field" type="text">
+    &lt;a href="#" class="addon warning">$&lt;/a>
+  &lt;/div>}
         end %>
         <%= code_block do 
-          %q{&lt;input type="text" placeholder=".medium - 60% width" class="medium">}
+          %q{&lt;div class="input-addon">
+    &lt;span class="addon danger">Amount&lt;/span>
+    &lt;input class="addon-field" type="text">
+    &lt;span class="addon danger">Amount&lt;/span>
+  &lt;/div>}
         end %>
         <%= code_block do 
           %q{&lt;input type="text" placeholder=".large - 80% width" class="large">}
