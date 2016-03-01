@@ -35,3 +35,57 @@
     12
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <h3>Nesting columns</h3>
+    <p>When comes to nesting, Furatto helps you add multiple column div elements. You just have to add a row class into an existing col-* column. The nested rows should also match 12 columns, or in case you define more, the nested rows should match that number.</p>
+      <div class="row">
+        <div class="code-block">
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="nine columns success">
+          <p>I'm a nine columns class</p>
+         </div> 
+        <div class="six columns">
+          <p>I'm a six columns class </p>
+        </div>        
+    </div>
+  </div>
+  <div class="row">
+    <h3>Offset on columns</h3>
+    <p>Probably you will want to add some offset the columns of the grid, to put it more to the right, don't worry we have you covered.</p>
+    <p>Let us explain this thing works. In a case where want blank space between columns, the fair solution was to add some blank columns actually, that is not necessary with the offsets though. Offset will add a margin to the left according to the 12 column grid Furatto offers.</p>
+    <div class="row">
+        <div class="code-block">
+          
+        </div>
+        <div class="nested-grid-demo text-center">
+          <div class="two columns offset-2 primary white">
+          I have a two column offset
+          </div>
+          <div class="two columns offset-3 primary white">
+          I have a three column offset
+          </div>
+        </div>
+    </div>
+  </div>      
+<div class="row">
+  <h3>Customize with Sass</h3>
+  <p>Don't want a 12 column grid?, you can customize the grid behavior fairly easy by modifying a few variables. Furatto will take care of the rest.</p>
+  <p>//Grid settings
+  $number-of-columns: 12 !default;
+  $column-separation-factor: 0.1833 !default;
+
+  //Row config
+  $row-text-rendering: optimizespeed !default;
+  $row-next-to-row-separation: 0.14285714rem !default;
+
+  //Columns settings
+  $col-padding: 0.57142857rem !default;
+  $stack-column-separation: 2px !default;</p>
+</div>
+      </div>
+  </div>
+</div>
