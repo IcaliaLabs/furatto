@@ -35,3 +35,20 @@
     display: table-cell !important;
   }
 }
+
+// Flexbox
+
+@mixin flexbox-display {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex($value: 1) {
+  -webkit-flex: $value;
+  -moz-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
