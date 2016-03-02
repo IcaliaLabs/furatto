@@ -168,6 +168,87 @@
     	</div>
 	</div> 
 	<div class="row">
+		<div class="eight columns">
+			<h4><em>Available sass variables</em></h4>
+			<p>You can customize forms really easy by changing our Sass variables.</p>
+			<pre>
+				<code class="language-scss" data-language="scss">
+$include-flexible-addons: true !default;
+
+//Form Label
+$form-label-display: block !default;
+$form-label-cursor: pointer !default;
+$form-label-font-size: px-to-rems(14) !default;
+$form-label-color: #0092FC !default;
+$form-label-font-weight: 400 !default;
+$form-label-margin-bottom: px-to-rems(5) !default;
+$form-input-border-width: 2px !default;
+$form-input-border-style: solid !default;
+$form-inline-label-margin-left: px-to-rems(3) !default;
+
+//Form inputs
+$form-input-radius: px-to-rems(4) !default;
+$form-input-height: px-to-rems(40) !default;
+$form-input-color: rgba(0,0,0, 0.75) !default;
+$form-input-font-size: px-to-rems(14) !default;
+$form-input-padding: px-to-rems(5) !default;
+$form-input-margin-bottom: px-to-rems(11) !default;
+$form-input-box-shadow: inset 0 1px 2px rgba(#DADADA,0.35) !default;
+$form-input-focus-box-shadow: 0 2px 12px rgba(#B6B4B4, 0.50) !default;
+$form-input-focus-border-color: rgba(#0092FC, 0.8) !default;
+$form-input-background-color: #FFF !default;
+$form-input-focus-background-color: darken($form-input-background-color, 2%) !default;
+$form-input-border-color: #DADADA !default;
+$form-input-disabled-color: #ECF0F1 !default;
+$form-input-disabled-background-color: #EEE !default;
+$form-input-mini-width: 20% !default;
+$form-input-small-width: $form-input-mini-width * 2 !default; 
+$form-input-medium-width: $form-input-mini-width * 3 !default;
+$form-input-large-width: $form-input-mini-width * 4 !default;
+$form-input-file-width: 100% !default;
+$form-input-transition-property: all !default;
+$form-input-transition-duration: 0.1s !default;
+$form-input-transition-timing-function: ease-in-out !default;
+$include-input-box-shadow-on-focus: true !default;
+$include-input-transition: true !default;
+
+//Validation states
+$form-label-success-color: #27ae60 !default;
+$form-label-error-color: #e74c3c !default;
+$form-input-success-border-color: $form-label-success-color !default;
+$form-input-error-border-color: $form-label-error-color !default;
+
+//Help hints
+$form-help-hint-color: #FFF !default;
+$form-help-hint-font-size: px-to-rems(11) !default;
+$form-help-hint-font-style: italic !default;
+$form-help-hint-padding: px-to-rems(5) !default;
+
+//Selects
+$form-select-background-color: #FFF !default;
+$form-select-border-style: solid !default;
+$form-select-border-width: 1px !default;
+$form-select-border-color: #DADADA !default;
+$form-select-color: #555 !default;
+$form-select-font-size: px-to-rems(14) !default;
+$form-select-hover-background: #F7F7F7 !default;
+$form-select-padding: px-to-rems(5) px-to-rems(7) !default;
+$form-select-radius: px-to-rems(4) !default;
+$form-select-transition-time: 1s !default;
+$form-select-transition-style: linear !default;
+$form-select-background-x-position: 97% !default;
+$form-select-box-shadow: $form-input-focus-box-shadow !default;
+
+//Radio buttons and Checkbox
+$radio-button-checkbox-border-color: #0092FC !default;
+$radio-button-checkbox-checked-color: $radio-button-checkbox-border-color !default;
+
+$include-form-select-transition: true !default;
+  				</code>
+  			</pre>
+		</div>
+	</div>
+	<div class="row">
     <div class="eight columns">
       <h4><em> Experimental</em></h4>
         <p>We keep n the experiments all around Furatto, that's why we build really simple input add-ons solved by flex. It might not work well on IE.
@@ -191,15 +272,6 @@
     &lt;span class="addon danger">Amount&lt;/span>
   &lt;/div>}
         end %>
-        <%= code_block do 
-          %q{&lt;input type="text" placeholder=".large - 80% width" class="large">}
-        end %>
-        <%= code_block do 
-          %q{&lt;input type="text" placeholder=".block - 100% width" class="block">}
-        end %>
-        <%= code_block do 
-          %q{&lt;input type="text" placeholder=".medium - 60% width" class="small" disabled="">}
-        end %>
     </div>
     <div class="four columns html no-padding border left bottom">
       <div class="container result" style="height:600px;">
@@ -216,10 +288,36 @@
 			<div class="input-addon">
    				<span class="addon danger">Amount</span>
    				<input class="addon-field" type="text">
-   				<span class="addon danger">Amount</span>
+   				<span class="addon primary">Amount</span>
 			</div>        
       
       </div>
     </div>	  
+  </div>
+  <div class="row">
+  	<div class="eight columns">
+  	<h4><em>Available Sass variables</em></h4>
+  		<p>It is really easy to customize the addons experimental feature, by simply modifying our Sass variables. Use of edge and modern cases that may work or not on certain browsers</p>
+  		<pre>
+			<code class="language-scss" data-language="scss">
+$input-addon-margin-bottom: 1rem !default;
+$addon-border-width: 1px !default;
+$addon-border-style: solid !default;
+$addon-border-color: rgba(147, 128, 108, 0.25) !default;
+$addon-padding: 0.5rem !default;
+$addon-background-color: rgba(147, 148, 108, 0.1) !default;
+$addon-font-color: #666 !default;
+$addon-font-weight: 400 !default;
+$addon-font-size: 14px !default;
+$include-addon-radius: false !default;
+$addon-radius: 1rem !default;
+
+//Addon color variations
+$addon-warning-bg-color: rgba(211, 84, 0, 0.6);
+$addon-danger-bg-color: rgba(231, 76, 60, 0.6);
+$addon-primary-bg-color: rgba(52, 152, 219, 0.6);
+			</code>
+		</pre>	
+  	</div>
   </div>
   </div>
