@@ -88,4 +88,125 @@
 </div>
       </div>
   </div>
+
+</div>
+<div class="row">
+  <div class="container">
+    <h3>Nesting columns</h3>
+    <p>When comes to nesting, Furatto helps you add multiple column div elements. You just have to add a row class into an existing col-* column. The nested rows should also match 12 columns, or in case you define more, the nested rows should match that number.</p>
+    <div class="row">
+      <div class="row">
+    <div class="nine columns">
+      <p>I'm a col-9 class column</p>
+      <div class="row">
+        <div class="six columns">
+          I'm a col-6 column 
+        </div>
+        <div class="six columns">
+          I'm a col-6 column 
+        </div>
+      </div>
+    </div>
+    <div class="three columns">
+      <p>I'm a col-3 class column</p>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <h3>Offset on columns</h3>
+    <p>Probably you will want to add some offset the columns of the grid, to put it more to the right, don't worry we have you covered.</p>
+    <p>Let us explain this thing works. In a case where want blank space between columns, the fair solution was to add some blank columns actually, that is not necessary with the offsets though. Offset will add a margin to the left according to the 12 column grid Furatto offers.</p>
+    <div class="nested-grid-demo text-center">
+      <div class="row">
+        <div class="two columns offset-2 primary white">
+        I have a two column offset
+        </div>
+        <div class="two columns offset-3 primary white">
+        I have a three column offset
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <h3>Customize with Sass</h3>
+    <p>Don't want a 12 column grid?, you can customize the grid behavior fairly easy by modifying a few variables. Furatto will take care of the rest.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <h3>Column variations</h3>
+    <p>We know you all want to start building dashboard with the grid, that's why we make it even more easy for you. We provide class names to set the background of your row or column elements.</p>
+    <div class="eight">
+      <div class="row primary">
+       <h5 class="white">Primary color</h5>
+    </div>  
+    <div class="row danger">
+       <h5 class="white">Danger color</h5>
+    </div>  
+    <div class="row warning">
+       <h5 class="white">Warning color</h5>
+    </div>  
+    <div class="row success">
+       <h5 class="white">Success color</h5>
+    </div>  
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <h3>How grid is built?</h3>
+    <p>We use the power of Sass to build the grid and let you customize it to meet your needs. Below is the mixin we use to generate the columns:</p>
+    //
+//@mixin
+//
+@mixin grid-columns($columns: $number-of-columns) {
+  $column-width: 100 / $columns;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      $current-width: ($column-width * $i) - $column-separation-factor;
+      width: percentage($current-width / 100);
+      margin-left: percentage($column-separation-factor / 100);
+    }
+  }
+}
+  
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <h3>Available sass variables</h3>
+
+    //Grid settings
+$number-of-columns: 12 !default;
+$column-separation-factor: 0.1833 !default;
+
+//Row config
+$row-text-rendering: optimizespeed !default;
+$row-next-to-row-separation: 0.14285714rem !default;
+
+//Columns settings
+$col-padding: 0.57142857rem !default;
+$stack-column-separation: 2px !default;
+
+//Media
+$grid-max-width: 54.85714286rem !default;
+$grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
+
+//Row variations
+$primary-background-color: rgba(52, 152, 219, 0.6) !default;
+$danger-background-color: rgba(231, 76, 60, 0.6) !default;
+$warning-background-color: rgba(241, 196, 15, 0.6) !default;
+$success-background-color: rgba(46, 204, 113, 0.6) !default;
+
+//columns border
+$col-border-color: #FFF !default;
+$col-border-alpha: 0.5 !default; 
+  
+  </div>
 </div>
