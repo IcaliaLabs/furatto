@@ -62,11 +62,19 @@
   <div class="row">
     <h3>Nesting columns</h3>
     <p>When comes to nesting, Furatto helps you add multiple column div elements. You just have to add a row class into an existing col-* column. The nested rows should also match 12 columns, or in case you define more, the nested rows should match that number.</p>
-      <div class="row">
-        <div class="code-block">
-          
-        </div>
+      <div class"row">
+      <div class="code-block">
+        <%= code_block do 
+            %q{&lt;div clas="row">
+    &lt;div class="nine columns success">&lt;/div>
+    &lt;p>I'm a nine columns class&lt;/p>
+    &lt;div class="six columns">&lt;/div>
+    &lt;p>I'm a six columns class&lt;/p>
+  &lt;/div>}
+          end 
+          %>
       </div>
+    </div>  
       <div class="row">
         <div class="nine columns success">
           <p>I'm a nine columns class</p>
