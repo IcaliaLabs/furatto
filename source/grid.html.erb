@@ -48,13 +48,18 @@
       <div class="code-block">
         <%= code_block do 
             %q{&lt;div clas="row">
-    &lt;div class="four columns">&lt;/div>
-    &lt;div class="four columns">&lt;/div>
-    &lt;div class="four columns">&lt;/div>
+    &lt;div class="four columns">FU&lt;/div>
+    &lt;div class="four columns">RA&lt;/div>
+    &lt;div class="four columns">TO&lt;/div>
   &lt;/div>}
           end 
           %>
       </div>
+    </div>
+    <div class"row">
+     <div class="four columns">FU</div>
+    <div class="four columns">RA</div>
+    <div class="four columns">TO</div>
     </div>  
   </div>
 </div>
@@ -66,23 +71,41 @@
       <div class="code-block">
         <%= code_block do 
             %q{&lt;div clas="row">
-    &lt;div class="nine columns success">&lt;/div>
+    &lt;div class="nine columns success">
     &lt;p>I'm a nine columns class&lt;/p>
-    &lt;div class="six columns">&lt;/div>
-    &lt;p>I'm a six columns class&lt;/p>
+      &lt;div class="row">
+        &lt;div class="six columns">
+          &lt;p>I'm a six columns class&lt;/p>
+        &lt;/div>
+        &lt;div class="six columns">
+          &lt;p>I'm a six columns class&lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="three columns success">
+      &lt;p>I'm a three columns class&lt;/p>
+    &lt;/div>
   &lt;/div>}
           end 
           %>
       </div>
     </div>  
       <div class="row">
-        <div class="nine columns success">
-          <p>I'm a nine columns class</p>
-         </div> 
+    <div class="nine columns success">
+      <p>I'm a nine columns class</p>
+      <div class="row">
         <div class="six columns">
-          <p>I'm a six columns class </p>
-        </div>        
+          <p>I'm a six columns class</p>
+        </div>
+        <div class="six columns">
+          <p>I'm six columns class </p> 
+        </div>
+      </div>
     </div>
+    <div class="three columns success">
+      <p>I'm a three columns class</p>
+    </div>
+  </div>
   </div>
   <div class="row">
     <h3>Offset on columns</h3>
@@ -90,7 +113,15 @@
     <p>Let us explain this thing works. In a case where want blank space between columns, the fair solution was to add some blank columns actually, that is not necessary with the offsets though. Offset will add a margin to the left according to the 12 column grid Furatto offers.</p>
     <div class="row">
         <div class="code-block">
-          
+          <%= code_block do 
+            %q{&lt;div clas="row">
+    &lt;div class="nine columns success">&lt;/div>
+    &lt;p>I'm a nine columns class&lt;/p>
+    &lt;div class="six columns">&lt;/div>
+    &lt;p>I'm a six columns class&lt;/p>
+  &lt;/div>}
+          end 
+          %>
         </div>
         <div class="nested-grid-demo text-center">
           <div class="two columns offset-2 primary white">
@@ -120,47 +151,6 @@
       </div>
   </div>
 
-</div>
-<div class="row">
-  <div class="container">
-    <h3>Nesting columns</h3>
-    <p>When comes to nesting, Furatto helps you add multiple column div elements. You just have to add a row class into an existing col-* column. The nested rows should also match 12 columns, or in case you define more, the nested rows should match that number.</p>
-    <div class="row">
-      <div class="row">
-    <div class="nine columns">
-      <p>I'm a col-9 class column</p>
-      <div class="row">
-        <div class="six columns">
-          I'm a col-6 column 
-        </div>
-        <div class="six columns">
-          I'm a col-6 column 
-        </div>
-      </div>
-    </div>
-    <div class="three columns">
-      <p>I'm a col-3 class column</p>
-    </div>
-  </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="container">
-    <h3>Offset on columns</h3>
-    <p>Probably you will want to add some offset the columns of the grid, to put it more to the right, don't worry we have you covered.</p>
-    <p>Let us explain this thing works. In a case where want blank space between columns, the fair solution was to add some blank columns actually, that is not necessary with the offsets though. Offset will add a margin to the left according to the 12 column grid Furatto offers.</p>
-    <div class="nested-grid-demo text-center">
-      <div class="row">
-        <div class="two columns offset-2 primary white">
-        I have a two column offset
-        </div>
-        <div class="two columns offset-3 primary white">
-        I have a three column offset
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 <div class="row">
   <div class="container">
@@ -233,7 +223,8 @@ $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 $primary-background-color: rgba(52, 152, 219, 0.6) !default;
 $danger-background-color: rgba(231, 76, 60, 0.6) !default;
 $warning-background-color: rgba(241, 196, 15, 0.6) !default;
-$success-background-color: rgba(46, 204, 113, 0.6) !default;
+$success-background-color: rgba(255, 51, 153, 0.6) !default;
+$success-height: 80px;
 
 //columns border
 $col-border-color: #FFF !default;
