@@ -72,18 +72,18 @@
         <%= code_block do 
             %q{&lt;div clas="row">
     &lt;div class="nine columns success">
-    &lt;p>I'm a nine columns class&lt;/p>
+    I'm a nine columns class
       &lt;div class="row">
-        &lt;div class="six columns">
-          &lt;p>I'm a six columns class&lt;/p>
+        &lt;div class="six columns primary">
+          I'm a six columns class
         &lt;/div>
-        &lt;div class="six columns">
-          &lt;p>I'm a six columns class&lt;/p>
+        &lt;div class="six columns primary">
+          I'm a six columns class
         &lt;/div>
       &lt;/div>
     &lt;/div>
     &lt;div class="three columns success">
-      &lt;p>I'm a three columns class&lt;/p>
+      I'm a three columns class
     &lt;/div>
   &lt;/div>}
           end 
@@ -92,18 +92,18 @@
     </div>  
       <div class="row">
     <div class="nine columns success">
-      <p>I'm a nine columns class</p>
+      I'm a nine columns class
       <div class="row">
-        <div class="six columns filled">
-          <p>I'm a six columns class</p>
+        <div class="six columns primary">
+          I'm a six columns class
         </div>
-        <div class="six columns filled">
-          <p>I'm six columns class </p> 
+        <div class="six columns primary">
+          I'm six columns class
         </div>
       </div>
     </div>
     <div class="three columns success">
-      <p>I'm a three columns class</p>
+      I'm a three columns class
     </div>
   </div>
   </div>
@@ -114,20 +114,18 @@
     <div class="row">
         <div class="code-block">
           <%= code_block do 
-            %q{&lt;div clas="row">
-    &lt;div class="nine columns success">&lt;/div>
-    &lt;p>I'm a nine columns class&lt;/p>
-    &lt;div class="six columns">&lt;/div>
-    &lt;p>I'm a six columns class&lt;/p>
+            %q{&lt;div class="nested-grid-demo text-center">
+    &lt;div class="two columns offset-2 primary">I have a two columns offset&lt;/div>
+    &lt;div class="two columns offset-3 primary">I have a three columns offset&lt;/div>
   &lt;/div>}
           end 
           %>
         </div>
         <div class="nested-grid-demo text-center">
-          <div class="two columns offset-2 primary filled">
+          <div class="two columns offset-2 primary">
           I have a two column offset
           </div>
-          <div class="two columns offset-3 primary filled">
+          <div class="two columns offset-3 primary">
           I have a three column offset
           </div>
         </div>
@@ -157,20 +155,32 @@
   <div class="container">
     <h3>Column variations</h3>
     <p>We know you all want to start building dashboard with the grid, that's why we make it even more easy for you. We provide class names to set the background of your row or column elements.</p>
-    <div class="eight">
-      <div class="row primary">
-       <h5 class="white">Primary color</h5>
-    </div>  
-    <div class="row danger">
-       <h5 class="white">Danger color</h5>
-    </div>  
-    <div class="row warning">
-       <h5 class="white">Warning color</h5>
-    </div>  
-    <div class="row success">
-       <h5 class="white">Success color</h5>
-    </div>  
+    <div class="six columns">
+      <div class="code-block">
+          <%= code_block do 
+    %q{&lt;div class="row primary">Primary&lt;/div>
+  &lt;div class="row danger">Danger&lt;/div>
+  &lt;div class="row warning">Warning&lt;/div>    
+  &lt;div class="row success">Success&lt;/div>}
+          end 
+          %>
+        </div>
     </div>
+    <div class="six columns">
+      <div class="row primary">
+       Primary
+      </div>  
+      <div class="row danger">
+       Danger
+      </div>  
+      <div class="row warning">
+       Warning
+      </div>  
+      <div class="row success">
+       Success
+      </div>  
+    </div>
+    
   </div>
 </div>
 <div class="row">
@@ -216,13 +226,6 @@ $stack-column-separation: 2px !default;
 //Media
 $grid-max-width: 54.85714286rem !default;
 $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
-
-//Row variations
-$primary-background-color: rgba(52, 152, 219, 0.6) !default;
-$danger-background-color: rgba(231, 76, 60, 0.6) !default;
-$warning-background-color: rgba(241, 196, 15, 0.6) !default;
-$success-background-color: rgba(255, 51, 153, 0.6) !default;
-$success-height: 80px;
 
 //columns border
 $col-border-color: #FFF !default;

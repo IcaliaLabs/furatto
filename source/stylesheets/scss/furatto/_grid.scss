@@ -21,6 +21,13 @@ $offset-columns: $number-of-columns !default;
 $row-text-rendering: optimizespeed !default;
 $row-next-to-row-separation: px-to-rems(3) !default;
 
+//Row variations
+$primary-background-color: rgba(255, 153, 51, 0.6) !default;
+$danger-background-color: rgba(51, 153, 255, 0.6) !default;
+$warning-background-color: rgba(51, 255, 153, 0.6) !default;
+$success-background-color: rgba(255, 51, 153, 0.6) !default;
+$success-height: 80px;
+
 //Columns settings
 $col-top-padding: px-to-rems(8) !default;
 $col-right-padding: px-to-rems(8) !default;
@@ -172,4 +179,27 @@ $col-border-alpha: 0.5 !default;
   [class*="offset-"] {
     margin-left: 0;
   }
+}
+.success{
+  background-color: $alert-success-background;
+  text-align: center;
+  color: #ffffff;
+}
+.danger{
+  background-color: $alert-danger-background;
+  text-align: center;
+  color: #ffffff;
+}
+.warning{
+  background-color: $label-warning-background;
+  text-align: center;
+  color: #ffffff;
+}
+.primary{
+  background-color: #3399ff;
+  text-align: center;
+  color: #ffffff;
+}
+.white{
+  color: #ffffff;
 }
