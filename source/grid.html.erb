@@ -94,10 +94,10 @@
     <div class="nine columns success">
       <p>I'm a nine columns class</p>
       <div class="row">
-        <div class="six columns">
+        <div class="six columns filled">
           <p>I'm a six columns class</p>
         </div>
-        <div class="six columns">
+        <div class="six columns filled">
           <p>I'm six columns class </p> 
         </div>
       </div>
@@ -124,10 +124,10 @@
           %>
         </div>
         <div class="nested-grid-demo text-center">
-          <div class="two columns offset-2 primary white">
+          <div class="two columns offset-2 primary filled">
           I have a two column offset
           </div>
-          <div class="two columns offset-3 primary white">
+          <div class="two columns offset-3 primary filled">
           I have a three column offset
           </div>
         </div>
@@ -136,7 +136,10 @@
 <div class="row">
   <h3>Customize with Sass</h3>
   <p>Don't want a 12 column grid?, you can customize the grid behavior fairly easy by modifying a few variables. Furatto will take care of the rest.</p>
-  <p>//Grid settings
+  <p>You can customize the buttons really easy by changing the our Sass variables.</p>
+  <pre>
+  <code class="language-scss" data-language="scss">
+  //Grid settings
   $number-of-columns: 12 !default;
   $column-separation-factor: 0.1833 !default;
 
@@ -146,17 +149,9 @@
 
   //Columns settings
   $col-padding: 0.57142857rem !default;
-  $stack-column-separation: 2px !default;</p>
-</div>
-      </div>
-  </div>
-
-</div>
-<div class="row">
-  <div class="container">
-    <h3>Customize with Sass</h3>
-    <p>Don't want a 12 column grid?, you can customize the grid behavior fairly easy by modifying a few variables. Furatto will take care of the rest.</p>
-  </div>
+  $stack-column-separation: 2px !default;
+  </code>
+  </pre>
 </div>
 <div class="row">
   <div class="container">
@@ -182,7 +177,8 @@
   <div class="container">
     <h3>How grid is built?</h3>
     <p>We use the power of Sass to build the grid and let you customize it to meet your needs. Below is the mixin we use to generate the columns:</p>
-    //
+    <pre>
+<code class="language-scss" data-language="scss">
 //@mixin
 //
 @mixin grid-columns($columns: $number-of-columns) {
@@ -196,13 +192,15 @@
     }
   }
 }
-  
+  </code>
+  </pre>
   </div>
 </div>
 <div class="row">
   <div class="container">
     <h3>Available sass variables</h3>
-
+    <pre>
+    <code class="language-scss" data-language="scss">
     //Grid settings
 $number-of-columns: 12 !default;
 $column-separation-factor: 0.1833 !default;
@@ -229,6 +227,7 @@ $success-height: 80px;
 //columns border
 $col-border-color: #FFF !default;
 $col-border-alpha: 0.5 !default; 
-  
+</code>
+</pre>  
   </div>
 </div>
