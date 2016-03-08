@@ -58,6 +58,7 @@ $navigation-bar-dropdown-border: 1px solid lighten($navigation-bar-background, 1
 $include-navigation-bar-dropdown-top-border: false !default;
 $navigation-bar-dropdown-radius: 3px !default;
 $navigation-bar-dropdown-background: $navigation-bar-background !default;
+$navigation-bar-dropdown-divider-height: px-to-rems(1) !default; 
 
 
 //Form support

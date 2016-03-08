@@ -61,7 +61,7 @@
       &lt;/li>
     &lt;/ul>
     &lt;ul>
-      &lt;li class="with-dropdown">Settings &lt;i class="icon-arrow-down"&lt;/i>&lt;/a>
+      &lt;li class="with-dropdown">Settings &lt;i class="icon-arrow-down">&lt;/i>&lt;/a>
         &lt;ul class="dropdown">
           &lt;li class="dropdown-header">A header&lt;/li>
           &lt;li>&lt;a href="#">Text&lt;/a>&lt;/li>
@@ -75,7 +75,7 @@
       &lt;ul class"pull right">
       &lt;li class="with-dropdown">
         &lt;ul class="dropdown">
-          &lt;li a href="#">Get Started &lt;i class="icon-arrow-down"&lt;/i>&lt;/a>
+          &lt;li a href="#">Get Started &lt;i class="icon-arrow-down">&lt;/i>&lt;/a>
           &lt;ul class="dropdown shadow">
           &lt;li class="dropdown-header">A header&lt;/li>
           &lt;li>&lt;a href="#">Abraham Kuri &lt;/a>&lt;/li>
@@ -89,10 +89,256 @@
       &lt;/ul>
       &lt;ul class="pull right">
       &lt;li>&lt;a href="#" class="active">Add-ons &lt;/a>&lt;/li>
-      lt;li class="divider">&lt;/li>
+      &lt;li class="divider">&lt;/li>
       &lt;li>&lt;a href="/docs">Docs&lt;/a>&lt;/li>
       &lt;ul>
       &lt;nav>}
         end %>
-       
 </div>
+<di class="row">
+  <div class="container">
+    <h4><em>Navigation bar position</em></h4>
+      <p>The navigation bar is build with a nav or ul element. It will cover the full browser width. By default it will stick on the top of the browser, and by just appending the fixed class name to the navigation-bar it follow as you scroll down.</p>
+    <h5>Fixed navigation</h5>
+    <p>For fixed top navbar you just need to add a <b>padding-top</b> to the body which should be equal or bigger thant the height of your navigation bar element. The default value of the navigation bar is 45px.</p>
+    <%= code_block do 
+          %q{&lt;nav class="navigation-bar fixed">
+        &lt;nav>}
+      end %>
+  </div>
+</di>
+<div class="row">
+  <div class="container">
+    <h4><em>Navigation bar components</em></h4>
+    <p>We know adding more than just links to the navigation bar is important, that's why we added support to add different elements on it, such as buttons, dividers and much more...</p>
+    <h5>Links</h5>
+    <p>Adding links to the navbar is fairly easy, you just have to wrap them inside a ul element and you're good to go.</p>
+    <%= code_block do 
+          %q{&lt;nav class="navigation-bar">
+    &lt;ul class="pull-right">
+      &lt;li>&lt;a href="#" class="active">Add-ons &lt;/a>&lt;/li>
+      &lt;li>&lt;a href="/docs">Docs &lt;/a>&lt;/li>
+    &lt;ul>
+  &lt;nav>}
+        end %> 
+    <div class="html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <nav class="navigation-bar">
+          <ul class="pull-right">
+            <li><a href="#">Add-ons</a></li>
+            <li><a href="/docs">Docs</a></li>
+          </ul>
+        </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <h5>Dividers</h5>
+    <p>To add dividers between links or elements on a ul element, just add a divider to a list element.</p>
+     <%= code_block do 
+          %q{&lt;nav class="navigation-bar">
+    &lt;ul class="pull-right">
+      &lt;li class="divider">&lt;/li>
+      &lt;li>&lt;a href="#">Add-ons &lt;/a>&lt;/li>
+      &lt;li class="divider">&lt;/li>
+      &lt;li>&lt;a href="/docs">Docs &lt;/a>&lt;/li>
+    &lt;ul>
+  &lt;nav>}
+        end %> 
+    <div class="html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <nav class="navigation-bar">
+          <ul class="pull-right">
+            <li class="divider"></li>
+            <li><a href="#">Add-ons</a></li>
+            <li class="divider"></li>
+            <li><a href="/docs">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
+     </div> 
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <h5>Buttons</h5>
+    <p>You can add buttons to the navigation bar by just adding the button class name to the anchor element. You can also add the class modifiers that Furatto offers by default.</p>
+     <%= code_block do 
+          %q{&lt;nav class="navigation-bar">
+    &lt;ul class="pull-right">
+      &lt;li class="divider">&lt;/li>
+      &lt;li>&lt;a href="#">Add-ons &lt;/a>&lt;/li>
+      &lt;li class="divider">&lt;/li>
+      &lt;li>&lt;a href="/docs">Docs &lt;/a>&lt;/li>
+      &lt;li class="divider">&lt;/li>
+      &lt;li>&lt;a href="/docs" class="button three-d">Get Started &lt;i class="fa fa-chevron-circle-right">&lt;/i>&lt;/a>&lt;/li>
+    &lt;ul>
+  &lt;nav>}
+        end %> 
+    <div class="html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <nav class="navigation-bar">
+          <ul class="pull-right">
+            <li class="divider"></li>
+            <li><a href="#">Add-ons</a></li>
+            <li class="divider"></li>
+            <li><a href="/docs">Docs</a></li>
+            <li class="divider"></li>
+            <li><a href="/docs" class="button three-d">Get Started <i class="fa fa-chevron-circle-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+     </div> 
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+      <h5>Search bar</h5>
+      <p>To add a search bar to the navigation bar, is fairly easy, just add a .with-form class name to a list item and inside it add the form, just as shown below:</p>
+      <div class="eight columns">
+        <%= code_block do 
+          %q{&lt;ul>
+      &lt;li class="with-form">
+      &lt;form action="" method"get" accept-charset="utf-8">
+      &lt;input type="search" name="" id="" value=""/>
+      &lt;input type="submit" name="" id="" value="Search" class="button pill"/>
+      &lt;/form>
+      &lt;/li>
+      &lt;/ul>}
+        end %> 
+    </div>
+    <div class="four columns">
+    <div class="html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+          <ul>
+            <li class="with-form">
+              <form action="" method="get" accept-charset="utf-8">
+                <input type="search" name="" id="" value="" />
+                <input type="submit" name="" id="" value="Search" class="button pill" />
+              </form>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div> 
+</div>
+</div>
+<div class="row">
+  <div class="container">
+    <h5>Dropdowns</h5>
+    <p>It is very easy to group menu items into dropdown menus on the navbar. You just need to add the <b>with-dropdown</b> class to a list item, and inside of it add another <b>ul</b> element.</p>
+     <%= code_block do 
+          %q{&lt;nav class="navigation-bar">
+    &lt;ul>
+      &lt;li class="with-dropdown">Settings&lt;i class="icon-arrow-down">&lt;/i>&lt;/a>
+        &lt;ul class="dropdown">
+          &lt;li class="dropdown-header">A header&lt;/li>
+          &lt;li>&lt;a href="#">Text&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">A really long text to test the dropdown&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#" class="btn btn-success">Edit profile&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#" class="btn btn-danger">Edit profile&lt;/a>&lt;/li>
+          &lt;li class="divider">&lt;/li>
+          &lt;li>&lt;a href="#">Sign out&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+    &lt;ul>
+  &lt;nav>}
+        end %> 
+    <div class="html no-padding border top left bottom">
+      <div class="container result">
+        <span>RESULT</span>
+        <nav class="navigation-bar">
+          <ul>
+            <li class="with-dropdown">
+              <a href="#">Settings <i class="icon-arrow-down"></i></a>
+              <ul class="dropdown">
+                <li class="dropdown-header">A header</li>
+                <li><a href="#">Abraham Kuri Vargas</a></li>
+                <li><a href="#">A really long text to test the dropdown</a></li>
+                <li><a href="#" class="btn btn-success">Edit profile</a></li>
+                <li><a href="#" class="btn btn-danger">Edit profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+     </div> 
+  </div>
+</div>
+<div class="row">
+      <h4><em>Available Sass Variables</em></h2>
+      <p>It is very common to change the default values for the navigation bar, you can achieve almost everything you want on it by just changing the our sass variables.</p>
+      <pre>
+<code class="language-scss" data-language="scss">
+  //Navigation general settings
+$navigation-bar-height: 70px !default;
+$navigation-bar-background: #0092FC !default;
+$navigation-bar-margin-bottom: 10px !default;
+$navigation-bar-color: #FFF !default;
+$navigation-bar-font-weight: 300 !default;
+$navigation-font-size: px-to-rems(13) !default;
+$navigation-fixed-z-index: 1030 !default;
+$navigation-bar-border-bottom: transparent !default;
+
+//Navigation links settings
+$navigation-bar-link-color: #FFF !default;
+$navigation-bar-link-hover-decoration: none !default;
+
+//Brand section
+$navigation-bar-brand-section-font-size: px-to-rems(18) !default;
+$navigation-bar-brand-section-font-weight: 400 !default;
+$navigation-bar-brand-name-color: $navigation-bar-link-color !default;
+$navigation-bar-brand-name-hover-text-decoration: none !default;
+$navigation-bar-brand-name-hover-color: $navigation-bar-brand-name-color !default;
+
+//Buttons settings
+$navigation-bar-button-color: #FFF !default;
+$navigation-bar-button-font-size: $navigation-font-size !default;
+$navigation-bar-button-height: 35px !default;
+$navigation-bar-button-margin-left: px-to-rems(8) !default;
+$navigation-bar-button-margin-right: px-to-rems(8) !default;
+
+$navigation-bar-menu-color: #FFF !default;
+
+//Active items
+$navigation-bar-active-color: #FFF !default;
+$navigation-bar-active-background-color: darken($navigation-bar-background, 10%);
+
+//Menu toggle
+$navigation-bar-toggle-icon-top-position: (($navigation-bar-height - 21) / 2) - 6 !default;
+
+//Dropdown
+$navigation-bar-arrow-color: $navigation-bar-link-color !default;
+$navigation-bar-dropdown-z-index: $navigation-fixed-z-index + 10 !default;
+$navigation-bar-dropdown-header-text-transform: uppercase !default;
+$navigation-bar-dropdown-header-padding: px-to-rems(9) px-to-rems(17) px-to-rems(2) !default;
+$navigation-bar-dropdown-header-color: #FFF !default;
+$navigation-bar-dropdown-header-font-weight: bold !default;
+$navigation-bar-dropdown-header-font-size: px-to-rems(8) !default;
+$navigation-bar-dropdown-anchor-height: 45px !default;
+$navigation-bar-dropdown-anchor-line-height: $navigation-bar-dropdown-anchor-height !default;
+$navigation-bar-dropdown-right-position: 0 !default;
+$navigation-bar-dropdown-top-position: $navigation-bar-height !default;
+$navigation-bar-dropdown-border: 1px solid lighten($navigation-bar-background, 10%) !default;
+$include-navigation-bar-dropdown-top-border: false !default;
+$navigation-bar-dropdown-radius: 3px !default;
+$navigation-bar-dropdown-background: $navigation-bar-background !default;
+$navigation-bar-dropdown-divider-height: px-to-rems(1) !default; 
+
+
+//Form support
+$navigation-bar-with-form-padding: $navigation-bar-height / 4 $navigation-bar-height / 3 !default;
+$navigation-bar-with-form-input-height: $navigation-bar-height / 2 !default;
+
+//Media
+$navigation-bar-collapse-width: 768px !default;
+</code>
+      </pre>
+
+    </div>
