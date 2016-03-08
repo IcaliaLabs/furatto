@@ -1,19 +1,26 @@
+<div class="row">
+  <div class="container">
+    <h1>Navigation Bar</h1>
+    <p>Furatto provides a beautiful and extendable top navigation bar. It collapses on mobile views, providing a sliding down kind menu.</p>
+    <div class="row">
+        <h4><em>Building the markup</em></h4>
+        <p>The navigation bar is a bit complex piece of HTML, but full with goodies. It has support for many elements such as buttons, links, and even dropdown menus for you to play around. It is highgly customizable, and we will add more features to it in the near future.</p>
+
 <nav class="navigation-bar">
    <ul class="brand-section">
      <li class="brand-name">
-      <a href="/" class="menu-trigger" id="trigger">Furatto</a>
+        <a href="/" class="menu-trigger" id="trigger">Furatto</a>
      </li>
      <li class="menu-toggle">
       <a href="#"></a>
      </li>
    </ul>
-
    <ul>
     <li class="with-dropdown">
       <a href="#">Settings <i class="icon-arrow-down"></i></a>
       <ul class="dropdown">
          <li class="dropdown-header">A header</li>
-         <li><a href="#">Abraham Kuri Vargas</a></li>
+         <li><a href="#">Text</a></li>
          <li><a href="#">A really long text to test the dropdown</a></li>
          <li><a href="#" class="btn btn-success">Edit profile</a></li>
          <li><a href="#" class="btn btn-danger">Edit profile</a></li>
@@ -22,10 +29,9 @@
       </ul>
     </li>
    </ul>
-
       <ul class="pull right">
     <li class="with-dropdown">
-      <a href="#">Settings <i class="icon-arrow-down"></i></a>
+      <a href="#">Get Started <i class="icon-arrow-down"></i></a>
       <ul class="dropdown shadow">
          <li class="dropdown-header">A header</li>
          <li><a href="#">Abraham Kuri Vargas</a></li>
@@ -37,10 +43,56 @@
       </ul>
     </li>
    </ul>
-
    <ul class="pull right">
      <li><a href="#" class="active">Add-ons</a></li>
      <li class="divider"></li>
-     <li><a href="/docs" class="button">Docs</a></li>
+     <li><a href="/docs">Docs</a></li>
    </ul>
 </nav>
+<div class="row">
+  <%= code_block do 
+          %q{&lt;nav class="navigation-bar">
+    &lt;ul class="brand-section">
+      &lt;li class="brand-name">
+        &lt;a href="/" class="menu-trigger" id="trigger">Furatto&lt;/a>
+      &lt;/li>
+      &lt;li class="menu-toggle">
+        &lt;a href="#">&lt;/a>
+      &lt;/li>
+    &lt;/ul>
+    &lt;ul>
+      &lt;li class="with-dropdown">Settings &lt;i class="icon-arrow-down"&lt;/i>&lt;/a>
+        &lt;ul class="dropdown">
+          &lt;li class="dropdown-header">A header&lt;/li>
+          &lt;li>&lt;a href="#">Text&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">A really long text to test the dropdown&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#" class="btn btn-success">Edit profile&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#" class="btn btn-danger">Edit profile&lt;/a>&lt;/li>
+          &lt;li class="divider">&lt;/li>
+          &lt;li>&lt;a href="#">Sign out&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+      &lt;ul class"pull right">
+      &lt;li class="with-dropdown">
+        &lt;ul class="dropdown">
+          &lt;li a href="#">Get Started &lt;i class="icon-arrow-down"&lt;/i>&lt;/a>
+          &lt;ul class="dropdown shadow">
+          &lt;li class="dropdown-header">A header&lt;/li>
+          &lt;li>&lt;a href="#">Abraham Kuri &lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">A really long text to test the dropdown&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#" class="btn btn-success">Edit profile&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#" class="btn btn-danger">Edit profile&lt;/a>&lt;/li>
+          &lt;li class="divider">&lt;/li>
+          &lt;li>&lt;a href="#">Sign out&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+      &lt;/ul>
+      &lt;ul class="pull right">
+      &lt;li>&lt;a href="#" class="active">Add-ons &lt;/a>&lt;/li>
+      lt;li class="divider">&lt;/li>
+      &lt;li>&lt;a href="/docs">Docs&lt;/a>&lt;/li>
+      &lt;ul>
+      &lt;nav>}
+        end %>
+       
+</div>
