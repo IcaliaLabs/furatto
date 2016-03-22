@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="container">
+    <h1>Media queries</h1>
+    <p>When working with responsive media queries, Furatto will help you more than you may think. We have provided a set of helpful media query mixins with really cool names. <a href="http://twitter.com/paranoida" target="_blank">Rafal Bromirski</a></p>
+	<hr>
+	<h3>Responsive queries at a glance.</h3>
+	<p>We have been working with rsponsive design for a while now, and the problem alwats is, we don't always remember the full syntax for let's say a set fo rules for a phone. It is a really pain when building responsive websites, most of the times media queries are the same and is a pain to keep writing them.</p>
+	<p>So based on Rafal Bromirski media queries we expose a set of handy media queries with more readable and rememberable names.</p>
+	<p>A quick example to define a set of css rules for a phone is provided below.</p>
+	<div class="row">
+		<div class="six columns">
+			<h5>Full media query</h5>
+			<pre>
+				<code class="language-scss" data-language="scss">
+ @media only screen and (min-width: 320px) and (max-width: 480px) {
+    //Your set of rules
+  } 
+    </code>
+    </pre>
+		</div>
+		<div class="six columns">
+		<h5>Furatto mixin</h5>
+		<pre>
+			<code class="language-scss" data-language="scss">
+ .class-name {
+    //Regular css rules
+    
+    @include phone {
+      //Your awesome respnsive rules. Cool isn't it?
+    }
+  } 
+  			</code>
+		</pre>
+		</div>
+	</div>
