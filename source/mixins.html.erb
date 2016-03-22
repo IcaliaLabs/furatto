@@ -41,7 +41,6 @@
 			</div>
    		</div>
 	<div class="row">
-		<div class="container">
 			<h4><em>@mixin truncate-text</em></h4>
         	<p>Truncating the text can be made through css, and is even easier with this handy mixin.</p>
         <pre>
@@ -60,10 +59,8 @@
 } 
 			</code>
 		</pre>
-		</div>
 	</div>
 	<div class="row">
-		<div class="container">
 			<h4><em>@mixin absPosition</em></h4>
         	<p>Thinking about position your elements with absolute values, this mixin is the way to go.</p>
         	<div class="four columns">
@@ -101,42 +98,39 @@
 					</code>
 				</pre>
 			</div>
-   		</div>
    	</div>
-<div class="row">
-<div class="eight columns">
-	<h4><em>@mixin hidden-text</em></h4>
-        <p>This reall helpful mixin will hide the text, but still be counting for SEO. Kudos to Nicolas Gallagher.</p>
-        <pre>
-<code class="language-scss" data-language="scss">
+	<div class="row">
+				<h4><em>@mixin hidden-text</em></h4>
+        		<p>This reall helpful mixin will hide the text, but still be counting for SEO. Kudos to Nicolas Gallagher.</p>
+        	<pre>
+				<code class="language-scss" data-language="scss">
 // Hidden text - by Nicolas Gallagher
 @mixin hidden-text {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
 }
-</code>
-</pre>
-</div>
-</div>
-<div class="row">
-	<div class="container">
-	<h4><em>@mixin font-size</em></h4>
+				</code>
+			</pre>
+	</div>
+	<div class="row">
+		<h4><em>@mixin font-size</em></h4>
         <p>An easy way to support font-size on rem and pixel values to a better support for IE is this mixin.</p>
         <div class="four columns">
-        <ul>
-        	<li>
-        		<strong>$size</strong>
-        		- the desired font size
-        	</li>
-        	<li>
-        		<strong>$line</strong>
-        		- the line height to that font size
-        	</li>
-        </ul>
+        	<ul>
+        		<li>
+        			<strong>$size</strong>
+        			- the desired font size
+        		</li>
+        		<li>
+        			<strong>$line</strong>
+        			- the line height to that font size
+        		</li>
+        	</ul>
         </div>
-        <pre>
-<code class="language-scss" data-language="scss">
+        <div class="eight columns">
+        	<pre>
+				<code class="language-scss" data-language="scss">
 // Font-size mixin, with IE7 & IE8 support, CSS tricks courtesy
 @mixin font-size($size: 1.6, $line: $size * 1.25) {
   font-size: ($size * 10) + px;
@@ -144,13 +138,11 @@
   font-size: $size + rem;
   line-height: $line + rem;
 }
-</pre>
-</code>
-</div>
+				</code>
+			</pre>
+		</div>
    </div>
-   </div>
-<div class="row">
-	<div class="container">
+	<div class="row">
 		<h4><em>@mixin keyframes</em></h4>
         <p>An easy way to handle keyframes for css animations is provided by this mixin.</p>
         <div class="four columns">
@@ -186,10 +178,8 @@
 			</pre>
 		</div>	
 	</div>
-</div>
  
 <div class="row">
-  	<div class="container">
 		<h4><em>@mixin box-emboss</em></h4>
         <p>This mixin will help you build an embossing and letterpress effect.</p>
         <div class="four columns">
@@ -215,5 +205,4 @@
 				</code>
 			</pre>
 		</div>
-   </div>
- </div>
+ 	</div>
