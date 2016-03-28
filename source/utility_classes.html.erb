@@ -37,7 +37,62 @@
           %q{&lt;p class="text-uppercase">...&lt;/p>}
         	end %>
         </div>
+        <div class="six columns">
+            <h3><em>.text-muted</em></h3>
+            <p>Slightly decreases the color for a text, which is <b>#666666</b>.</p>
+            <%= code_block do 
+          %q{&lt;p class="text-muted">...&lt;/p>}
+            end %>
+        </div>
+        <div class="row twelve columns">
+        <div class="six columns">
+            <h3><em>.text-error</em></h3>
+            <p>This is a helpful class to highlight a chunk of text that you want the user to notice, probably because of an error. The default color is <b>#C0392b</b>.</p>
+            <%= code_block do 
+          %q{&lt;p class="text-error">...&lt;/p>}
+            end %>
+        </div>
+        <div class="six columns">
+            <h3><em>.text-success</em></h3>
+            <p>This is a helpful class to highlight a chunk of text that you want the user to notice and let them know they are doing something right. The default color is <b>#27AE60</b>.</p>
+            <%= code_block do 
+          %q{&lt;p class="text-success">...&lt;/p>}
+            end %>
+        </div>
+        </div>
     </div>
+    <! --Text alignment finds in his own section. -->
+    <div class="row">
+        <h4><em>Content classes</em></h4>
+        <p>You can easily manage the content with these 3 handy class names that will rock you world.</p>
+        <div class="six columns">
+            <h3><em>.vertical-align</em></h3>
+            <p>This really helpful class will align any element vertically, yes is true. The only caveat is that the parent element has to have a height.</p>
+            <%= code_block do 
+          %q{&lt;div style="height:300px">
+    &lt;p class="vertical-align"> ...&lt;/p>
+  &lt;/div>}
+            end %>
+        </div>
+        <div class="six columns">
+            <h3><em>.nopadding</em></h3>
+            <p>Removes the padding from any element, we have been using this on some columns, just when it is necessary.</p>
+            <br>
+            <%= code_block do 
+          %q{&lt;div class="nopadding">...&lt;/div>}
+            end %>
+        </div>
+        <div class="twelve columns">
+        <div class="six columns">
+            <h3><em>.hidden</em></h3>
+            <p>Hides any element on the markup by adding the display: none css rule.</p>
+            <%= code_block do 
+          %q{&lt;div class="hidden">...&lt;/div>}
+            end %>
+        </div>
+        </div>
+
+
    
     </div>
     </div>
