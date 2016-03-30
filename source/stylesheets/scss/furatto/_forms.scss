@@ -11,7 +11,7 @@ $form-label-display: block !default;
 $form-label-cursor: pointer !default;
 $form-label-font-size: px-to-rems(14) !default;
 $form-label-color: #0092FC !default;
-$form-label-font-weight: 350 !default;
+$form-label-font-weight: 500 !default;
 $form-label-margin-bottom: px-to-rems(5) !default;
 $form-input-border-width: 2px !default;
 $form-input-border-style: solid !default;
@@ -286,14 +286,14 @@ input[type=radio], input[type=checkbox] {
       &:before {
         background-color: #fff;
         border: 2px solid $radio-button-checkbox-border-color;
-        bottom: 0;
+        bottom: 8px;
         content: "";
         display: inline-block;
-        height: 18px; 
+        height: 16px; 
         left: 0;   
         margin-right: 10px;
         position: absolute;
-        width: 18px;
+        width: 16px;
       }
     }
     &:checked + label:before {
@@ -311,8 +311,12 @@ input[type=radio] {
   &:checked + label:before{
     content: "\2022";
     display: inline-block;
-    font-size: 40px;
-    line-height: 13px; 
+    font-size: 31px;
+    line-height: 13px;
+    text-align: center;
+    padding:0;
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -322,8 +326,9 @@ input[type=checkbox] {
   }
   &:checked + label:before {
     content: "✔";
-    font-size: 18px;
-    line-height: 17px;
+    font-size: 15px;
+    line-height: 15px;
+
   }
 }
 
