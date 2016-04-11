@@ -151,86 +151,52 @@
   </code>
   </pre>
 </div>
+
 <div class="row">
-  <div class="container">
-    <h3>Column variations</h3>
-    <p>We know you all want to start building dashboard with the grid, that's why we make it even more easy for you. We provide class names to set the background of your row or column elements.</p>
-    <div class="six columns">
-      <div class="code-block">
-          <%= code_block do 
-    %q{&lt;div class="row primary">Primary&lt;/div>
-  &lt;div class="row danger">Danger&lt;/div>
-  &lt;div class="row warning">Warning&lt;/div>    
-  &lt;div class="row success">Success&lt;/div>}
-          end 
-          %>
-        </div>
-    </div>
-    <div class="six columns">
-      <div class="row primary">
-       Primary
-      </div>  
-      <div class="row danger">
-       Danger
-      </div>  
-      <div class="row warning">
-       Warning
-      </div>  
-      <div class="row success">
-       Success
-      </div>  
-    </div>
-    
-  </div>
-</div>
-<div class="row">
-  <div class="container">
+
     <h3>How grid is built?</h3>
     <p>We use the power of Sass to build the grid and let you customize it to meet your needs. Below is the mixin we use to generate the columns:</p>
     <pre>
 <code class="language-scss" data-language="scss">
-//@mixin
-//
-@mixin grid-columns($columns: $number-of-columns) {
+  //@mixin
+  @mixin grid-columns($columns: $number-of-columns) {
   $column-width: 100 / $columns;
 
-  @for $i from 1 through $columns {
+    @for $i from 1 through $columns {
     .col-#{$i} {
       $current-width: ($column-width * $i) - $column-separation-factor;
       width: percentage($current-width / 100);
       margin-left: percentage($column-separation-factor / 100);
+      }
     }
-  }
-}
-  </code>
-  </pre>
-  </div>
+  }</code>
+    </pre>
+</div>
 </div>
 <div class="row">
   <div class="container">
     <h3>Available sass variables</h3>
     <pre>
-    <code class="language-scss" data-language="scss">
-    //Grid settings
-$number-of-columns: 12 !default;
-$column-separation-factor: 0.1833 !default;
+      <code class="language-scss" data-language="scss">
+  //Grid settings
+  $number-of-columns: 12 !default;
+  $column-separation-factor: 0.1833 !default;
 
-//Row config
-$row-text-rendering: optimizespeed !default;
-$row-next-to-row-separation: 0.14285714rem !default;
+  //Row config
+  $row-text-rendering: optimizespeed !default;
+  $row-next-to-row-separation: 0.14285714rem !default;
 
-//Columns settings
-$col-padding: 0.57142857rem !default;
-$stack-column-separation: 2px !default;
+  //Columns settings
+  $col-padding: 0.57142857rem !default;
+  $stack-column-separation: 2px !default;
 
-//Media
-$grid-max-width: 54.85714286rem !default;
-$grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
+  //Media
+  $grid-max-width: 54.85714286rem !default;
+  $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
 
-//columns border
-$col-border-color: #FFF !default;
-$col-border-alpha: 0.5 !default; 
-</code>
-</pre>  
-  </div>
+  //Columns border
+  $col-border-color: #FFF !default;
+  $col-border-alpha: 0.5 !default; </code>
+  </pre>  
+</div>
 </div>
