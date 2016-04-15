@@ -1,37 +1,200 @@
 <div class="row">
-  <div class="two columns border right left">
-    2
+  <div class="container">
+    <h1>Grid</h1>
+    <p>Furatto comes with fully responsive fluid system which scales up to 12 columns. It is generated using predefined classes for more semantic layouts, as well as mixins. Below 767px viewports, the columns become fluid and stack vertically.
+    </p>
+    <h3>A 12 column grid.</h3>
+    <p>The twelve columns are distributed with a equitable width and margin, for example a .one column width is close to 8.30%, a .two columns is close to 16.60% and well you get the idea.This way it is very easy to build, let's say a dashboard or the two column layout you are right now. It is important to put the columns on a row div class element.</p>
+    <div class"row">
+      <div class="code-block">
+        <%= code_block do 
+            %q{&lt;div clas="row">
+    &lt;div class="one column border right left">I'm a one column class&lt;/div>
+    &lt;div class="two columns border right left">I'm a two columns class&lt;/div>
+    &lt;div class="two columns border right left">I'm a two columns class&lt;/div>
+    &lt;div class="three columns border right left">I'm a three columns class&lt;/div>
+    &lt;div class="four columns border right left">I'm a four columns class&lt;/div>
+  &lt;/div>}
+          end 
+          %>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="twelve columns text center">
+        <div class="one column border right left">
+          <p>I'm a one column class</p>
+        </div>
+        <div class="two columns border right">
+          <p>I'm a two columns class</p>
+        </div>
+        <div class="two columns border right">
+          <p>I'm a two columns class</p>
+        </div>
+        <div class="three columns border right">
+          <p>I'm a three columns class</p>
+        </div>
+        <div class="four columns border right">
+          <p>I'm a four columns class</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="two columns">
-    4
-  </div>
-  <div class="two columns">
-    6
-  </div>
-  <div class="two columns">
-    8
-  </div>
-  <div class="two columns">
-    10
-  </div>
-  <div class="two columns">
-    12
-  </div>
-</div>
+</div>    
 <div class="row">
-  <div class="two columns border bottom">
-    2
-  </div>
-  <div class="two columns">
-    4
-  </div>
-  <div class="two columns">
-    6
-  </div>
-  <div class="two columns offset-2">
-    8
-  </div>
-  <div class="two columns">
-    12
+  <div class="container">
+  <h3>Building the markup</h3>
+  <p>For a simple three column layout just add the row class name and add the correct number of col-* columns. The columns class name for the columns comes from the 1 to the 12 as is a 12 column grid. This are te default values, you can customize it to support as many columns as you want, keep reading...</p>
+    <div class"row">
+      <div class="code-block">
+        <%= code_block do 
+            %q{&lt;div clas="row">
+    &lt;div class="four columns">FU&lt;/div>
+    &lt;div class="four columns">RA&lt;/div>
+    &lt;div class="four columns">TO&lt;/div>
+  &lt;/div>}
+          end 
+          %>
+      </div>
+    </div>
+    <div class"row">
+     <div class="four columns">FU</div>
+    <div class="four columns">RA</div>
+    <div class="four columns">TO</div>
+    </div>  
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <h3>Nesting columns</h3>
+    <p>When comes to nesting, Furatto helps you add multiple column div elements. You just have to add a row class into an existing col-* column. The nested rows should also match 12 columns, or in case you define more, the nested rows should match that number.</p>
+      <div class"row">
+        <div class="code-block">
+          <%= code_block do 
+            %q{&lt;div clas="row">
+    &lt;div class="nine columns success complementary">
+        I'm a nine columns class
+      &lt;div class="row">
+        &lt;div class="six columns primary">
+            I'm a six columns class
+        &lt;/div>
+        &lt;div class="six columns primary">
+            I'm a six columns class
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="three columns success complementary">
+        I'm a three columns class
+    &lt;/div>
+  &lt;/div>}
+          end 
+          %>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="nine columns success complementary">
+          I'm a nine columns class
+          <div class="row">
+            <div class="six columns primary">
+              I'm a six columns class
+            </div>
+            <div class="six columns primary">
+              I'm six columns class
+            </div>
+          </div>
+        </div>
+        <div class="three columns success complementary">
+          I'm a three columns class
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h3>Offset on columns</h3>
+      <p>Probably you will want to add some offset the columns of the grid, to put it more to the right, don't worry we have you covered.</p>
+      <p>Let us explain this thing works. In a case where want blank space between columns, the fair solution was to add some blank columns actually, that is not necessary with the offsets though. Offset will add a margin to the left according to the 12 column grid Furatto offers.</p>
+      <div class="row">
+        <div class="code-block">
+          <%= code_block do 
+            %q{&lt;div class="nested-grid-demo text-center">
+    &lt;div class="two columns offset-2 primary">I have a two columns offset&lt;/div>
+    &lt;div class="two columns offset-3 primary">I have a three columns offset&lt;/div>
+  &lt;/div>}
+          end 
+          %>
+        </div>
+        <div class="nested-grid-demo text-center">
+          <div class="two columns offset-2 primary">
+            I have a two column offset
+          </div>
+          <div class="two columns offset-3 primary">
+            I have a three column offset
+          </div>
+        </div>
+      </div>
+    </div>      
+    <div class="row">
+      <h3>Customize with Sass</h3>
+      <p>Don't want a 12 column grid?, you can customize the grid behavior fairly easy by modifying a few variables. Furatto will take care of the rest.</p>
+      <p>You can customize the buttons really easy by changing the our Sass variables.</p>
+      <pre>
+        <code class="language-scss" data-language="scss">
+  //Grid settings
+  $number-of-columns: 12 !default;
+  $column-separation-factor: 0.1833 !default;
+
+  //Row config
+  $row-text-rendering: optimizespeed !default;
+  $row-next-to-row-separation: 0.14285714rem !default;
+
+  //Columns settings
+  $col-padding: 0.57142857rem !default;
+  $stack-column-separation: 2px !default;
+        </code>
+      </pre>
+    </div>
+    <div class="row">
+      <h3>How grid is built?</h3>
+      <p>We use the power of Sass to build the grid and let you customize it to meet your needs. Below is the mixin we use to generate the columns:</p>
+      <pre>
+        <code class="language-scss" data-language="scss">
+  //@mixin
+  @mixin grid-columns($columns: $number-of-columns) {
+  $column-width: 100 / $columns;
+
+    @for $i from 1 through $columns {
+    .col-#{$i} {
+      $current-width: ($column-width * $i) - $column-separation-factor;
+      width: percentage($current-width / 100);
+      margin-left: percentage($column-separation-factor / 100);
+      }
+    }
+  }</code>
+    </pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h3>Available sass variables</h3>
+      <pre>
+        <code class="language-scss" data-language="scss">
+  //Grid settings
+  $number-of-columns: 12 !default;
+  $column-separation-factor: 0.1833 !default;
+
+  //Row config
+  $row-text-rendering: optimizespeed !default;
+  $row-next-to-row-separation: 0.14285714rem !default;
+
+  //Columns settings
+  $col-padding: 0.57142857rem !default;
+  $stack-column-separation: 2px !default;
+
+  //Media
+  $grid-max-width: 54.85714286rem !default;
+  $grid-max-width-media: "(max-width: #{$grid-max-width})" !default;
+
+  //Columns border
+  $col-border-color: #FFF !default;
+  $col-border-alpha: 0.5 !default; </code>
+        </pre>  
+    </div>
+  </div>
