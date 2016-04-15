@@ -1,0 +1,216 @@
+//Docs
+
+
+@import "functions";
+@import "compass/css3";
+
+//Navigation bar config
+$navigation-bar-height: 80px;
+$navigation-bar-background: $primary-color;
+$navigation-bar-brand-name-color: #FFF;
+$navigation-bar-link-color: #FFF;
+$navigation-bar-link-hover-color: #FAF9FF;
+$navigation-bar-brand-name-hover-color: #FAF9FF;
+$navigation-bar-hover-link-background-color: transparent;
+$navigation-bar-border-bottom: transparent;
+$navigation-bar-menu-color: #FFF;
+$navigation-bar-toggle-icon-top-position: 22px;
+$navigation-bar-brand-section-font-size: px-to-rems(16);
+$navigation-font-size: px-to-rems(14);
+$navigation-margin-bottom: 20px;
+$col-border-alpha: 0.2;
+
+//Labels
+$label-default-background: $primary-color;
+$label-primary-background: $primary-color;
+
+.upside-down-ninja {
+  float: right;
+  padding-right: 30px;
+}
+
+.main-motto {
+  font-size: px-to-rems(20);
+  color: #6F6F6F;
+}
+
+.white {
+  color: #FFF;
+}
+
+.main-description-container {
+  padding: 100px 20px 0 20px;
+  /*background: $primary-color;*/
+  position: relative;
+  overflow: hidden;
+
+  .header {
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 0;
+    font-size: px-to-rems(40);
+
+    & + .text-warning {
+      font-size: px-to-rems(26);
+    }
+  }
+
+  .subheader {
+    /*color: darken($primary-color, 15%);*/
+    margin-top: 0;
+    font-weight: 200;
+    font-size: px-to-rems(20);
+  }
+
+  .navigation {
+    padding: 0;
+  }
+
+  .download {
+    font-weight: bold;
+  }
+
+  .social {
+    /*color: darken($primary-color, 15%);*/
+
+    a {
+      .fa {
+        /*color: darken($primary-color, 15%);*/
+        font-size: px-to-rems(38);
+      }
+    }
+  }
+
+  .row {
+    width: 80%;
+    @extend %center-block;
+  }
+
+  .computer-ninja {
+    position: relative;
+    top: 10px;
+  }
+}
+
+.skills-header-container {
+  text-align: center;
+  border-bottom: 1px solid #999;
+  padding: 22px 0;
+  margin-bottom: 30px;
+  
+  .header {
+    /*color: darken($primary-color, 10%);*/
+    letter-spacing: 3px;
+    font-size: px-to-rems(18);
+    margin: 0;
+  } 
+}
+
+.skills {
+  .skills-motto {
+    margin-bottom: 40px;
+    padding-right: 100px;
+  }
+
+  .skills-header {
+    color: #444;
+    font-size: px-to-rems(20);
+    margin: 0;
+
+    & + .skills-header {
+      color: rgb(125, 125, 125);
+    }
+  }
+
+  .skill {
+    img {
+      margin-bottom: 8px;
+    }
+
+    h6 {
+      /*color: $primary-color; */
+    }
+
+    text-align: center;
+  }
+}
+
+.examples {
+  background: rgb(43, 48, 53);
+  padding-bottom: 20px;
+
+  .examples-header {
+    text-align: center;
+    padding: 22px 0;
+    letter-spacing: 3px; 
+    border-bottom: 1px solid rgba(#CCC, 0.2);
+    margin-bottom: 20px;
+    .header {
+      color: #FFF;
+      margin: 0;
+      font-size: px-to-rems(18);
+    }
+  }
+
+  .examples-content {
+    padding: 30px 0 20px 0;
+    .examples-motto,
+    .examples-bottom-motto {
+      margin: 0;
+      text-align: center;
+      color: rgb(130, 134, 139);
+      font-size: px-to-rems(18);
+      margin-bottom: 40px;
+    }
+
+    .examples-wrapper {
+      margin-bottom: 50px;
+    }
+
+    .example {
+      display: block;
+      padding: 20px 0;
+      @include border-radius(3px);
+      background: rgb(19, 22, 24);
+      color: #58606b;
+      width: 80%;
+      text-align: center;
+      @extend %center-block;
+
+      img {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.contribute {
+  padding-bottom: 20px;
+
+  .contribute-header {
+    text-align: center;
+    padding: 22px 0;
+    letter-spacing: 3px; 
+    border-bottom: 1px solid rgba(#333, 0.2);
+    margin-bottom: 20px;
+
+    .header {
+      color: rgb(27, 27, 27);
+      margin: 0;
+      font-size: px-to-rems(18);
+    }
+  }
+
+  .contribute-content {
+    padding: 40px 0;
+    .contribution {
+      padding: 20px 30px;
+      text-align: center;
+    }
+  }
+}
+
