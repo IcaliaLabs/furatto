@@ -4,10 +4,7 @@
 @import "compass/css3";
 @import "functions";
 
-$number-to-text: one two three four five six
-                 seven eight nine ten eleven twelve
-                 thirteen fourtheen fiftheen sixtheen;
-
+$number-to-text: one two three four five six seven eight nine ten eleven twelve thirteen fourtheen fiftheen sixtheen;
 
 //
 //@variables
@@ -54,10 +51,9 @@ $col-border-alpha: 0.5 !default;
   $column-width: 100 / $columns;
 
   @for $i from 2 through $columns {
-
     .#{nth($number-to-text, $i)} {
       &.columns {
-        width: percentage(($column-width * $i) / 100);
+        width: percentage($column-width * $i / 100);
       }
     }
   }
@@ -71,17 +67,18 @@ $col-border-alpha: 0.5 !default;
 
   @for $i from 1 through $columns {
     .offset-#{$i} {
-      margin-left: percentage(($column-width * $i) / 100);
+      margin-left: percentage($column-width * $i / 100);
     }
   }
-
 }
 
 .row {
   @extend %clearfix;
+
   //Columns
 
   @include grid-columns;
+
   @include grid-columns-offset;
 
   .one.column {
@@ -110,19 +107,19 @@ $col-border-alpha: 0.5 !default;
     border-style: solid;
 
     &.left {
-     border-left-color: rgba($col-border-color, $col-border-alpha);
+      border-left-color: rgba($col-border-color, $col-border-alpha);
     }
 
     &.right {
-     border-right-color: rgba($col-border-color, $col-border-alpha);
+      border-right-color: rgba($col-border-color, $col-border-alpha);
     }
 
     &.top {
-     border-top-color: rgba($col-border-color, $col-border-alpha);
+      border-top-color: rgba($col-border-color, $col-border-alpha);
     }
 
     &.bottom {
-     border-bottom-color: rgba($col-border-color, $col-border-alpha);
+      border-bottom-color: rgba($col-border-color, $col-border-alpha);
     }
   }
 
@@ -152,7 +149,6 @@ $col-border-alpha: 0.5 !default;
   .row > .column,
   .row > .columns {
     &.border {
-
       &.left {
         border-top-color: rgba($col-border-color, $col-border-alpha);
         border-left-color: transparent;
@@ -166,7 +162,7 @@ $col-border-alpha: 0.5 !default;
   }
 
   $number-to-text-columns: slice($number-to-text, 2, $number-of-columns);
-  $row-columns: to-string($number-to-text-columns, '.columns,', '.row > .');
+  $row-columns: to-string($number-to-text-columns, ".columns,", ".row > .");
 
   #{".row > one.column,"}#{$row-columns} {
     width: 100%;
@@ -180,33 +176,41 @@ $col-border-alpha: 0.5 !default;
     margin-left: 0;
   }
 }
-.success{
+
+
+.success {
   background-color: $alert-success-background;
   text-align: center;
   color: #ffffff;
 }
-.danger{
+
+.danger {
   background-color: $alert-danger-background;
   text-align: center;
   color: #ffffff;
 }
-.warning{
+
+.warning {
   background-color: $label-warning-background;
   text-align: center;
   color: #ffffff;
 }
-.primary{
+
+.primary {
   background-color: #3399ff;
   text-align: center;
   color: #ffffff;
 }
+
 //complementary class is just to improve the visual html.
 .complementary {
-    background-color: #0066cc;
-  }
-.complementary2 {
-    background-color: #33ffff;
+  background-color: #0066cc;
 }
-.white{
+
+.complementary2 {
+  background-color: #33ffff;
+}
+
+.white {
   color: #ffffff;
 }
