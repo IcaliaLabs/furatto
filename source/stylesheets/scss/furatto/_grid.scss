@@ -176,30 +176,30 @@ $col-border-alpha: 0.5 !default;
     margin-left: 0;
   }
 }
-
+$white: #ffffff;
 
 .success {
   background-color: $alert-success-background;
   text-align: center;
-  color: #ffffff;
+  color: $white;
 }
 
 .danger {
   background-color: $alert-danger-background;
   text-align: center;
-  color: #ffffff;
+  color: $white;
 }
 
 .warning {
   background-color: $label-warning-background;
   text-align: center;
-  color: #ffffff;
+  color: $white;
 }
 
 .primary {
   background-color: #3399ff;
   text-align: center;
-  color: #ffffff;
+  color: $white;
 }
 
 //complementary class is just to improve the visual html.
@@ -212,5 +212,5 @@ $col-border-alpha: 0.5 !default;
 }
 
 .white {
-  color: #ffffff;
+  color: $white;
 }
