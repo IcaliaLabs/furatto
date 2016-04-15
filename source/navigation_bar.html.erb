@@ -5,53 +5,52 @@
     <div class="row">
         <h4><em>Building the markup</em></h4>
         <p>The navigation bar is a bit complex piece of HTML, but full with goodies. It has support for many elements such as buttons, links, and even dropdown menus for you to play around. It is highgly customizable, and we will add more features to it in the near future.</p>
-
-<nav class="navigation-bar">
-   <ul class="brand-section">
-     <li class="brand-name">
-        <a href="/" class="menu-trigger" id="trigger">Furatto</a>
-     </li>
-     <li class="menu-toggle">
-      <a href="#"></a>
-     </li>
-   </ul>
-   <ul>
-    <li class="with-dropdown">
-      <a href="#">Settings <i class="icon-arrow-down"></i></a>
-      <ul class="dropdown">
-         <li class="dropdown-header">A header</li>
-         <li><a href="#">Text</a></li>
-         <li><a href="#">A really long text to test the dropdown</a></li>
-         <li><a href="#" class="btn btn-success">Edit profile</a></li>
-         <li><a href="#" class="btn btn-danger">Edit profile</a></li>
-         <li class="divider"></li>
-         <li><a href="#">Sign out</a></li>
-      </ul>
-    </li>
-   </ul>
-      <ul class="pull right">
-    <li class="with-dropdown">
-      <a href="#">Get Started <i class="icon-arrow-down"></i></a>
-      <ul class="dropdown shadow">
-         <li class="dropdown-header">A header</li>
-         <li><a href="#">Abraham Kuri Vargas</a></li>
-         <li><a href="#">A really long text to test the dropdown</a></li>
-         <li><a href="#" class="btn btn-success">Edit profile</a></li>
-         <li><a href="#" class="btn btn-danger">Edit profile</a></li>
-         <li class="divider"></li>
-         <li><a href="#">Sign out</a></li>
-      </ul>
-    </li>
-   </ul>
-   <ul class="pull right">
-     <li><a href="#" class="active">Add-ons</a></li>
-     <li class="divider"></li>
-     <li><a href="/docs">Docs</a></li>
-   </ul>
-</nav>
+        <nav class="navigation-bar">
+          <ul class="brand-section">
+            <li class="brand-name">
+              <a href="/" class="menu-trigger" id="trigger">Furatto</a>
+            </li>
+            <li class="menu-toggle">
+              <a href="#"></a>
+            </li>
+          </ul>
+          <ul>
+            <li class="with-dropdown">
+              <a href="#">Settings <i class="icon-arrow-down"></i></a>
+              <ul class="dropdown">
+                <li class="dropdown-header">A header</li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">A really long text to test the dropdown</a></li>
+                <li><a href="#" class="btn btn-success">Edit profile</a></li>
+                <li><a href="#" class="btn btn-danger">Edit profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="pull right">
+            <li class="with-dropdown">
+              <a href="#">Get Started <i class="icon-arrow-down"></i></a>
+              <ul class="dropdown shadow">
+                <li class="dropdown-header">A header</li>
+                <li><a href="#">Abraham Kuri Vargas</a></li>
+                <li><a href="#">A really long text to test the dropdown</a></li>
+                <li><a href="#" class="btn btn-success">Edit profile</a></li>
+                <li><a href="#" class="btn btn-danger">Edit profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="pull right">
+            <li><a href="#" class="active">Add-ons</a></li>
+            <li class="divider"></li>
+            <li><a href="/docs">Docs</a></li>
+          </ul>
+        </nav>
 <br>
-<div class="row">
-  <%= code_block do 
+        <div class="row">
+          <%= code_block do 
           %q{&lt;nav class="navigation-bar">
     &lt;ul class="brand-section">
       &lt;li class="brand-name">
@@ -97,25 +96,22 @@
       &lt;/ul>
   &lt;/nav>}
         end %>
-</div>
-<di class="row">
-  <div class="container">
-    <h4><em>Navigation bar position</em></h4>
-      <p>The navigation bar is build with a nav or ul element. It will cover the full browser width. By default it will stick on the top of the browser, and by just appending the fixed class name to the navigation-bar it follow as you scroll down.</p>
-    <h5>Fixed navigation</h5>
-    <p>For fixed top navbar you just need to add a <b>padding-top</b> to the body which should be equal or bigger thant the height of your navigation bar element. The default value of the navigation bar is 45px.</p>
+      </div>
+      <div class="row">
+        <h4><em>Navigation bar position</em></h4>
+        <p>The navigation bar is build with a nav or ul element. It will cover the full browser width. By default it will stick on the top of the browser, and by just appending the fixed class name to the navigation-bar it follow as you scroll down.</p>
+        <h5>Fixed navigation</h5>
+        <p>For fixed top navbar you just need to add a <b>padding-top</b> to the body which should be equal or bigger thant the height of your navigation bar element. The default value of the navigation bar is 45px.</p>
     <%= code_block do 
           %q{&lt;nav class="navigation-bar fixed">
   &lt;/nav>}
       end %>
-  </div>
-</di>
-<div class="row">
-  <div class="container">
-    <h4><em>Navigation bar components</em></h4>
-    <p>We know adding more than just links to the navigation bar is important, that's why we added support to add different elements on it, such as buttons, dividers and much more...</p>
-    <h5>Links</h5>
-    <p>Adding links to the navbar is fairly easy, you just have to wrap them inside a ul element and you're good to go.</p>
+      </div>
+      <div class="row">
+        <h4><em>Navigation bar components</em></h4>
+        <p>We know adding more than just links to the navigation bar is important, that's why we added support to add different elements on it, such as buttons, dividers and much more...</p>
+        <h5>Links</h5>
+        <p>Adding links to the navbar is fairly easy, you just have to wrap them inside a ul element and you're good to go.</p>
     <%= code_block do 
           %q{&lt;nav class="navigation-bar">
     &lt;ul class="pull-right">
@@ -124,22 +120,21 @@
     &lt;/ul>
   &lt;/nav>}
         end %> 
-    <div class="html no-padding border top left bottom">
-      <div class="container result">
-        <span>RESULT</span>
-        <nav class="navigation-bar">
-          <ul class="pull-right">
-            <li><a href="#">Add-ons</a></li>
-            <li><a href="/docs">Docs</a></li>
-          </ul>
-        </nav>
-  </div>
-</div>
-<div class="row">
-  <div class="container">
-    <h5>Dividers</h5>
-    <p>To add dividers between links or elements on a ul element, just add a divider to a list element.</p>
-     <%= code_block do 
+        <div class="html no-padding border top left bottom">
+          <div class="container result">
+            <span>RESULT</span>
+            <nav class="navigation-bar">
+              <ul class="pull-right">
+                <li><a href="#">Add-ons</a></li>
+                <li><a href="/docs">Docs</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <h5>Dividers</h5>
+          <p>To add dividers between links or elements on a ul element, just add a divider to a list element.</p>
+            <%= code_block do 
           %q{&lt;nav class="navigation-bar">
     &lt;ul class="pull-right">
       &lt;li class="divider">&lt;/li>
@@ -149,26 +144,24 @@
     &lt;/ul>
   &lt;/nav>}
         end %> 
-    <div class="html no-padding border top left bottom">
-      <div class="container result">
-        <span>RESULT</span>
-        <nav class="navigation-bar">
-          <ul class="pull-right">
-            <li class="divider"></li>
-            <li><a href="#">Add-ons</a></li>
-            <li class="divider"></li>
-            <li><a href="/docs">Docs</a></li>
-          </ul>
-        </nav>
-      </div>
-     </div> 
-  </div>
-</div>
-<div class="row">
-  <div class="container">
-    <h5>Buttons</h5>
-    <p>You can add buttons to the navigation bar by just adding the button class name to the anchor element. You can also add the class modifiers that Furatto offers by default.</p>
-     <%= code_block do 
+          <div class="html no-padding border top left bottom">
+            <div class="container result">
+              <span>RESULT</span>
+              <nav class="navigation-bar">
+                <ul class="pull-right">
+                  <li class="divider"></li>
+                  <li><a href="#">Add-ons</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/docs">Docs</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div> 
+        </div>
+        <div class="row">
+          <h5>Buttons</h5>
+          <p>You can add buttons to the navigation bar by just adding the button class name to the anchor element. You can also add the class modifiers that Furatto offers by default.</p>
+          <%= code_block do 
           %q{&lt;nav class="navigation-bar">
     &lt;ul class="pull-right">
       &lt;li class="divider">&lt;/li>
@@ -180,63 +173,26 @@
     &lt;/ul>
   &lt;/nav>}
         end %> 
-    <div class="html no-padding border top left bottom">
-      <div class="container result">
-        <span>RESULT</span>
-        <nav class="navigation-bar">
-          <ul class="pull-right">
-            <li class="divider"></li>
-            <li><a href="#">Add-ons</a></li>
-            <li class="divider"></li>
-            <li><a href="/docs">Docs</a></li>
-            <li class="divider"></li>
-            <li><a href="/docs" class="button three-d">Get Started <i class="fa fa-chevron-circle-right"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-     </div> 
-  </div>
-</div>
-<!-- Kuri told me there isn't forms in nav-bar
-<div class="row">
-  <div class="container">
-      <h5>Search bar</h5>
-      <p>To add a search bar to the navigation bar, is fairly easy, just add a .with-form class name to a list item and inside it add the form, just as shown below:</p>
-      <div class="eight columns">
-        <%= code_block do 
-          %q{&lt;ul>
-      &lt;li class="with-form">
-      &lt;form action="" method"get" accept-charset="utf-8">
-      &lt;input type="search" name="" id="" value=""/>
-      &lt;input type="submit" name="" id="" value="Search" class="button pill"/>
-      &lt;/form>
-      &lt;/li>
-      &lt;/ul>}
-        end %> 
-    </div>
-    <div class="four columns">
-    <div class="html no-padding border top left bottom">
-      <div class="container result">
-        <span>RESULT</span>
-          <ul>
-            <li class="with-form">
-              <form action="" method="get" accept-charset="utf-8">
-                <input type="search" name="" id="" value="" />
-                <input type="submit" name="" id="" value="Search" class="button pill" />
-              </form>
-            </li>
-          </ul>
-      </div>
-    </div>
-  </div> 
-</div>
-</div>
--->
-<div class="row">
-  <div class="container">
-    <h5>Dropdowns</h5>
-    <p>It is very easy to group menu items into dropdown menus on the navbar. You just need to add the <b>with-dropdown</b> class to a list item, and inside of it add another <b>ul</b> element.</p>
-     <%= code_block do 
+          <div class="html no-padding border top left bottom">
+            <div class="container result">
+              <span>RESULT</span>
+              <nav class="navigation-bar">
+                <ul class="pull-right">
+                  <li class="divider"></li>
+                  <li><a href="#">Add-ons</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/docs">Docs</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/docs" class="button three-d">Get Started <i class="fa fa-chevron-circle-right"></i></a></li>
+                </ul>
+              </nav>
+            </div> 
+          </div>
+        </div>
+        <div class="row">
+          <h5>Dropdowns</h5>
+          <p>It is very easy to group menu items into dropdown menus on the navbar. You just need to add the <b>with-dropdown</b> class to a list item, and inside of it add another <b>ul</b> element.</p>
+          <%= code_block do 
           %q{&lt;nav class="navigation-bar">
     &lt;ul>
       &lt;li class="with-dropdown">Settings&lt;i class="icon-arrow-down">&lt;/i>&lt;/a>
@@ -253,34 +209,33 @@
     &lt;/ul>
   &lt;/nav>}
         end %> 
-    <div class="html no-padding border top left bottom">
-      <div class="container result">
-        <span>RESULT</span>
-        <nav class="navigation-bar">
-          <ul>
-            <li class="with-dropdown">
-              <a href="#">Settings <i class="icon-arrow-down"></i></a>
-              <ul class="dropdown">
-                <li class="dropdown-header">A header</li>
-                <li><a href="#">Abraham Kuri Vargas</a></li>
-                <li><a href="#">A really long text to test the dropdown</a></li>
-                <li><a href="#" class="btn btn-success">Edit profile</a></li>
-                <li><a href="#" class="btn btn-danger">Edit profile</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Sign out</a></li>
+        <div class="html no-padding border top left bottom">
+          <div class="container result">
+            <span>RESULT</span>
+            <nav class="navigation-bar">
+              <ul>
+                <li class="with-dropdown">
+                  <a href="#">Settings <i class="icon-arrow-down"></i></a>
+                  <ul class="dropdown">
+                    <li class="dropdown-header">A header</li>
+                    <li><a href="#">Abraham Kuri Vargas</a></li>
+                    <li><a href="#">A really long text to test the dropdown</a></li>
+                    <li><a href="#" class="btn btn-success">Edit profile</a></li>
+                    <li><a href="#" class="btn btn-danger">Edit profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Sign out</a></li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
-        </nav>
+            </nav>
+          </div>
+        </div> 
       </div>
-     </div> 
-  </div>
-</div>
-<div class="row">
-      <h4><em>Available Sass Variables</em></h2>
-      <p>It is very common to change the default values for the navigation bar, you can achieve almost everything you want on it by just changing the our sass variables.</p>
-      <pre>
-<code class="language-scss" data-language="scss">
+      <div class="row">
+        <h4><em>Available Sass Variables</em></h2>
+        <p>It is very common to change the default values for the navigation bar, you can achieve almost everything you want on it by just changing the our sass variables.</p>
+        <pre>
+          <code class="language-scss" data-language="scss">
   //Navigation general settings
   $navigation-bar-height: 70px !default;
   $navigation-bar-background: #0092FC !default;
