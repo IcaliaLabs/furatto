@@ -1,0 +1,16 @@
+version: "2"
+
+volumes:
+  gems:
+    driver: local
+services:
+  furatto:
+    image: ruby:2.3.0
+    entrypoint: /usr/src/furatto/development-entrypoint.sh  
+    command: bash
+    volumes:
+      - .:/usr/src/furatto
+      - gems:/usr/local/bundle
+    working_dir: /usr/src/furatto
+    tty: true
+    stdin_open: true
