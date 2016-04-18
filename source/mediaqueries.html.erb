@@ -2,12 +2,12 @@
   <div class="container">
     <h1>Media queries</h1>
     <p>When working with responsive media queries, Furatto will help you more than you may think. We have provided a set of helpful media query mixins with really cool names. <a href="http://twitter.com/paranoida" target="_blank">Rafal Bromirski</a></p>
-	<hr>
-	<h4>Responsive queries at a glance.</h4>
-	<p>We have been working with rsponsive design for a while now, and the problem alwats is, we don't always remember the full syntax for let's say a set fo rules for a phone. It is a really pain when building responsive websites, most of the times media queries are the same and is a pain to keep writing them.</p>
-	<p>So based on Rafal Bromirski media queries we expose a set of handy media queries with more readable and rememberable names.</p>
-	<p>A quick example to define a set of css rules for a phone is provided below.</p>
-	<div class="row">
+	 <hr>
+	 <h4>Responsive queries at a glance.</h4>
+	 <p>We have been working with rsponsive design for a while now, and the problem alwats is, we don't always remember the full syntax for let's say a set fo rules for a phone. It is a really pain when building responsive websites, most of the times media queries are the same and is a pain to keep writing them.</p>
+	 <p>So based on Rafal Bromirski media queries we expose a set of handy media queries with more readable and rememberable names.</p>
+	 <p>A quick example to define a set of css rules for a phone is provided below.</p>
+	 <div class="row">
 		<div class="six columns">
 			<h5>Full media query</h5>
 			<pre>
@@ -29,152 +29,152 @@
   }   </code>
 	   </pre>
     </div>
+  </div>
+  <table class="responsive">
+    <thead>
+      <tr>
+        <th>Mixin name</th>
+        <th>Params</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>screen</td>
+        <td><strong>$resMin-</strong> The minimal resolution width.<br>
+        <strong>$resMax - </strong>The max resolution width.</td>
+        <td>
+        	<pre>
+  			<code class="language-scss" data-language="scss">
+  	@media #{$media-display} and (min-width: $resMin) and (max-width: $resMax)</code>
+  		    </pre>	
+  	    </td>
+      </tr>
+      <tr>
+        <td>max-screen</td>
+        <td><strong>$res -</strong>The max resolution width</td>
+        <td>
+  		    <pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media #{$media-display} and (max-width: $res)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>min-screen</td>
+        <td><strong>$res -</strong>The minimal resolution width</td>
+        <td>
+  		    <pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media #{$media-display} and (min-width: $res)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>screen-height</td>
+        <td><strong>$resMin -</strong> The minimal resolution height.<br>
+        <strong>$resMax -</strong>The max resolution height.</td>
+        <td>
+  		    <pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media #{$media-display} and (min-height: $resMin) and (max-height: $resMax)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>max-screen-height</td>
+        <td><strong>$res -</strong>The max resolution height</td>
+        <td>
+  		    <pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media #{$media-display} and (max-height: $res) </code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>min-screen-height</td>
+        <td><strong>$res -</strong> The minimal resolution height</td>
+        <td>
+        	<pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media #{$media-display} and (min-height: $res)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>hdpi</td>
+        <td><strong>$ratio -</strong> The ratio value. <strong>Default: 1.3</strong></td>
+        <td>
+  		    <pre>
+  			     <code class="language-scss" data-language="scss">
+  	@media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+    			only screen and (min--moz-device-pixel-ratio: $ratio),
+    			only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+    			only screen and (min-resolution: #{round($ratio*96)}dpi),
+    			only screen and (min-resolution: #{$ratio}dppx)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>phone</td>
+        <td>N/A</td>
+        <td>
+        	<pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media #{$media-display} and (min-width: $deviceMinWidth) and (max-width: $deviceMaxWidth)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>iphone4</td>
+        <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
+        <td>
+  		    <pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+      		and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>iphone5</td>
+        <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
+        <td>
+        	<pre>
+  		    	<code class="language-scss" data-language="scss">
+  	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+      		and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>ipad</td>
+        <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
+        <td>
+        	<pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)</code>
+  		    </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>ipad-retina</td>
+        <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
+        <td>
+        	<pre>
+  			   <code class="language-scss" data-language="scss">
+  	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
+    			and (-webkit-device-pixel-ratio: $devicePixelRatio)</code>
+  		    </pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<table class="responsive">
-  <thead>
-    <tr>
-      <th>Mixin name</th>
-      <th>Params</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>screen</td>
-      <td><strong>$resMin-</strong> The minimal resolution width.<br>
-      <strong>$resMax - </strong>The max resolution width.</td>
-      <td>
-      	<pre>
-			<code class="language-scss" data-language="scss">
-	@media #{$media-display} and (min-width: $resMin) and (max-width: $resMax)</code>
-		    </pre>	
-	    </td>
-    </tr>
-    <tr>
-      <td>max-screen</td>
-      <td><strong>$res -</strong>The max resolution width</td>
-      <td>
-		    <pre>
-			   <code class="language-scss" data-language="scss">
-	@media #{$media-display} and (max-width: $res)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>min-screen</td>
-      <td><strong>$res -</strong>The minimal resolution width</td>
-      <td>
-		    <pre>
-			   <code class="language-scss" data-language="scss">
-	@media #{$media-display} and (min-width: $res)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>screen-height</td>
-      <td><strong>$resMin -</strong> The minimal resolution height.<br>
-      <strong>$resMax -</strong>The max resolution height.</td>
-      <td>
-		    <pre>
-			   <code class="language-scss" data-language="scss">
-	@media #{$media-display} and (min-height: $resMin) and (max-height: $resMax)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>max-screen-height</td>
-      <td><strong>$res -</strong>The max resolution height</td>
-      <td>
-		    <pre>
-			   <code class="language-scss" data-language="scss">
-	@media #{$media-display} and (max-height: $res) </code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>min-screen-height</td>
-      <td><strong>$res -</strong> The minimal resolution height</td>
-      <td>
-      	<pre>
-			   <code class="language-scss" data-language="scss">
-	@media #{$media-display} and (min-height: $res)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>hdpi</td>
-      <td><strong>$ratio -</strong> The ratio value. <strong>Default: 1.3</strong></td>
-      <td>
-		    <pre>
-			     <code class="language-scss" data-language="scss">
-	@media only screen and (-webkit-min-device-pixel-ratio: $ratio),
-  			only screen and (min--moz-device-pixel-ratio: $ratio),
-  			only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
-  			only screen and (min-resolution: #{round($ratio*96)}dpi),
-  			only screen and (min-resolution: #{$ratio}dppx)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>phone</td>
-      <td>N/A</td>
-      <td>
-      	<pre>
-			   <code class="language-scss" data-language="scss">
-	@media #{$media-display} and (min-width: $deviceMinWidth) and (max-width: $deviceMaxWidth)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>iphone4</td>
-      <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
-      <td>
-		    <pre>
-			   <code class="language-scss" data-language="scss">
-	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
-    		and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>iphone5</td>
-      <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
-      <td>
-      	<pre>
-		    	<code class="language-scss" data-language="scss">
-	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
-    		and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>ipad</td>
-      <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
-      <td>
-      	<pre>
-			   <code class="language-scss" data-language="scss">
-	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)</code>
-		    </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>ipad-retina</td>
-      <td><strong>$orientation -</strong> The iphone orientation. <strong>Default: all</strong></td>
-      <td>
-      	<pre>
-			   <code class="language-scss" data-language="scss">
-	@media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
-  			and (-webkit-device-pixel-ratio: $devicePixelRatio)</code>
-		    </pre>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<br>
 <blockquote class="primary">
 	<h4>Follow the source</h4>
 	<p>We just scratch the surface of the media queries, for you to get started, but you ae always welcome to check out the <a href= "https://github.com/IcaliaLabs/furatto/blob/master/scss/furatto/_media_queries.scss">source file</a>, for further functionality.</p>
 </blockquote>
-	</div>
 </div>
+
 
