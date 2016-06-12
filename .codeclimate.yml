@@ -1,0 +1,20 @@
+engines:
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+ratings:
+  paths:
+  - js/**
+  - "**.js"
+  - scss/**  
+exclude_paths:
+- "dist/**/*"
+- "docs/**/*"
+- "docs_scss/**/*"
+- "fontawesome/**/*"  
