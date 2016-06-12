@@ -14,7 +14,7 @@ ratings:
   - "**.js"
   - scss/**  
 exclude_paths:
-- "dist/**/*"
-- "docs/**/*"
-- "docs_scss/**/*"
-- "fontawesome/**/*"  
+- "dist"
+- "docs"
+- "docs_scss"
+- "fontawesome"  
