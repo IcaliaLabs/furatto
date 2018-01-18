@@ -1,5 +1,6 @@
 # [Furatto](https://github.com/IcaliaLabs/furatto)
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/IcaliaLabs/furatto?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/IcaliaLabs/furatto?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Code Climate](https://codeclimate.com/repos/5713ce158daddd00680007d9/badges/6c5f5bc27ef0c8718ced/gpa.svg)](https://codeclimate.com/repos/5713ce158daddd00680007d9/feed)
 [![Issue Count](https://codeclimate.com/repos/5713ce158daddd00680007d9/badges/6c5f5bc27ef0c8718ced/issue_count.svg)](https://codeclimate.com/repos/5713ce158daddd00680007d9/feed)
 
